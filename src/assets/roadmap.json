@@ -1,0 +1,119 @@
+{
+    "frontend": {
+      "title": "Frontend Development",
+      "levels": [
+        {
+          "level": "Beginner",
+          "skills": [
+            { "id": "html-css", "name": "HTML & CSS", "completed": false },
+            { "id": "git", "name": "Git & GitHub", "completed": false },
+            { "id": "js-basics", "name": "JavaScript Basics", "completed": false }
+          ]
+        },
+        {
+          "level": "Intermediate",
+          "skills": [
+            { "id": "js-advanced", "name": "Advanced JavaScript (ES6+)", "completed": false },
+            { "id": "react", "name": "React.js", "completed": false },
+            { "id": "webpack", "name": "Webpack & Module Bundlers", "completed": false }
+          ]
+        },
+        {
+          "level": "Advanced",
+          "skills": [
+            { "id": "testing", "name": "Testing (Jest, React Testing Library)", "completed": false },
+            { "id": "state-management", "name": "State Management (Redux, Context API)", "completed": false },
+            { "id": "performance", "name": "Performance Optimization", "completed": false }
+          ]
+        }
+      ]
+    },
+    "backend": {
+      "title": "Backend Development",
+      "levels": [
+        {
+          "level": "Beginner",
+          "skills": [
+            { "id": "linux", "name": "Linux Basics", "completed": false },
+            { "id": "git", "name": "Git & GitHub", "completed": false },
+            { "id": "database", "name": "SQL & NoSQL Databases", "completed": false }
+          ]
+        },
+        {
+          "level": "Intermediate",
+          "skills": [
+            { "id": "nodejs", "name": "Node.js & Express", "completed": false },
+            { "id": "api-design", "name": "REST & GraphQL APIs", "completed": false },
+            { "id": "auth", "name": "Authentication (JWT, OAuth)", "completed": false }
+          ]
+        },
+        {
+          "level": "Advanced",
+          "skills": [
+            { "id": "microservices", "name": "Microservices Architecture", "completed": false },
+            { "id": "cloud-deploy", "name": "Cloud Deployment (AWS, GCP, Azure)", "completed": false },
+            { "id": "scalability", "name": "System Design & Scalability", "completed": false }
+          ]
+        }
+      ]
+    },
+    "ai": {
+      "title": "AI & Machine Learning",
+      "levels": [
+        {
+          "level": "Beginner",
+          "skills": [
+            { "id": "python", "name": "Python Basics", "completed": false },
+            { "id": "math", "name": "Math for ML (Linear Algebra, Probability)", "completed": false },
+            { "id": "numpy-pandas", "name": "NumPy & Pandas", "completed": false }
+          ]
+        },
+        {
+          "level": "Intermediate",
+          "skills": [
+            { "id": "ml-models", "name": "Machine Learning Models (Scikit-Learn)", "completed": false },
+            { "id": "tensorflow", "name": "Deep Learning with TensorFlow/PyTorch", "completed": false },
+            { "id": "nlp", "name": "NLP & Computer Vision", "completed": false }
+          ]
+        },
+        {
+          "level": "Advanced",
+          "skills": [
+            { "id": "mlops", "name": "MLOps & Model Deployment", "completed": false },
+            { "id": "generative-ai", "name": "Generative AI & LLMs", "completed": false },
+            { "id": "ai-ethics", "name": "AI Ethics & Bias", "completed": false }
+          ]
+        }
+      ]
+    },
+    "cloud": {
+      "title": "Cloud & DevOps",
+      "levels": [
+        {
+          "level": "Beginner",
+          "skills": [
+            { "id": "networking", "name": "Networking Basics", "completed": false },
+            { "id": "linux", "name": "Linux & Shell Scripting", "completed": false },
+            { "id": "cloud-basics", "name": "Cloud Fundamentals (AWS, Azure, GCP)", "completed": false }
+          ]
+        },
+        {
+          "level": "Intermediate",
+          "skills": [
+            { "id": "docker", "name": "Docker & Containers", "completed": false },
+            { "id": "kubernetes", "name": "Kubernetes", "completed": false },
+            { "id": "ci-cd", "name": "CI/CD Pipelines (Jenkins, GitHub Actions)", "completed": false }
+          ]
+        },
+        {
+          "level": "Advanced",
+          "skills": [
+            { "id": "iac", "name": "Infrastructure as Code (Terraform, CloudFormation)", "completed": false },
+            { "id": "serverless", "name": "Serverless Computing", "completed": false },
+            { "id": "monitoring", "name": "Monitoring & Logging (Prometheus, ELK)", "completed": false }
+          ]
+        }
+      ]
+    }
+  }
+  
