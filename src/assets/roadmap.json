@@ -1,119 +1,578 @@
 {
-    "frontend": {
-      "title": "Frontend Development",
-      "levels": [
-        {
-          "level": "Beginner",
-          "skills": [
-            { "id": "html-css", "name": "HTML & CSS", "completed": false },
-            { "id": "git", "name": "Git & GitHub", "completed": false },
-            { "id": "js-basics", "name": "JavaScript Basics", "completed": false }
-          ]
-        },
-        {
-          "level": "Intermediate",
-          "skills": [
-            { "id": "js-advanced", "name": "Advanced JavaScript (ES6+)", "completed": false },
-            { "id": "react", "name": "React.js", "completed": false },
-            { "id": "webpack", "name": "Webpack & Module Bundlers", "completed": false }
-          ]
-        },
-        {
-          "level": "Advanced",
-          "skills": [
-            { "id": "testing", "name": "Testing (Jest, React Testing Library)", "completed": false },
-            { "id": "state-management", "name": "State Management (Redux, Context API)", "completed": false },
-            { "id": "performance", "name": "Performance Optimization", "completed": false }
-          ]
+  "frontend": {
+    "title": "Frontend Development",
+    "description": "Learn to build accessible, responsive web experiences and ship them to real users.",
+    "audience": "For learners interested in websites and browser-based applications.",
+    "goal": "Build and deploy a polished web application that solves a clearly defined problem.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Create and publish a responsive, accessible web page.",
+        "skills": [
+          {
+            "id": "html-css",
+            "name": "HTML & CSS",
+            "description": "Structure pages with semantic HTML and style responsive layouts with CSS.",
+            "outcomes": ["Use semantic elements and accessible labels", "Build layouts with Flexbox and Grid", "Adapt a page for mobile and desktop"],
+            "estimatedHours": 20,
+            "prerequisites": [],
+            "resources": [{"label": "MDN: Structuring content with HTML", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "git",
+            "name": "Git & GitHub",
+            "description": "Track changes, collaborate, and publish source code with Git and GitHub.",
+            "outcomes": ["Create commits and branches", "Use GitHub to host and share a project"],
+            "estimatedHours": 8,
+            "prerequisites": [],
+            "resources": [{"label": "GitHub Skills: Introduction to GitHub", "url": "https://github.com/skills/introduction-to-github"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "javascript-basics",
+            "name": "JavaScript Fundamentals",
+            "description": "Use JavaScript to add behavior and interactivity to web pages.",
+            "outcomes": ["Work with variables, functions, arrays, and objects", "Respond to user input and update the page"],
+            "estimatedHours": 24,
+            "prerequisites": ["html-css"],
+            "resources": [{"label": "MDN: JavaScript first steps", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Personal profile page",
+          "description": "Build and publish a responsive page introducing you and linking to your work.",
+          "demonstrates": ["html-css", "git", "javascript-basics"]
         }
-      ]
-    },
-    "backend": {
-      "title": "Backend Development",
-      "levels": [
-        {
-          "level": "Beginner",
-          "skills": [
-            { "id": "linux", "name": "Linux Basics", "completed": false },
-            { "id": "git", "name": "Git & GitHub", "completed": false },
-            { "id": "database", "name": "SQL & NoSQL Databases", "completed": false }
-          ]
-        },
-        {
-          "level": "Intermediate",
-          "skills": [
-            { "id": "nodejs", "name": "Node.js & Express", "completed": false },
-            { "id": "api-design", "name": "REST & GraphQL APIs", "completed": false },
-            { "id": "auth", "name": "Authentication (JWT, OAuth)", "completed": false }
-          ]
-        },
-        {
-          "level": "Advanced",
-          "skills": [
-            { "id": "microservices", "name": "Microservices Architecture", "completed": false },
-            { "id": "cloud-deploy", "name": "Cloud Deployment (AWS, GCP, Azure)", "completed": false },
-            { "id": "scalability", "name": "System Design & Scalability", "completed": false }
-          ]
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Build a multi-page application using reusable components and external data.",
+        "skills": [
+          {
+            "id": "modern-javascript",
+            "name": "Modern JavaScript",
+            "description": "Write maintainable JavaScript using modules, promises, and modern language features.",
+            "outcomes": ["Use ES modules and array methods", "Fetch data and handle asynchronous results", "Handle errors and loading states"],
+            "estimatedHours": 20,
+            "prerequisites": ["javascript-basics"],
+            "resources": [{"label": "MDN: JavaScript", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "react",
+            "name": "React",
+            "description": "Build interactive interfaces from reusable components and manage changing data.",
+            "outcomes": ["Compose components and pass props", "Manage state and user events", "Render collections with stable keys"],
+            "estimatedHours": 28,
+            "prerequisites": ["modern-javascript"],
+            "resources": [{"label": "React: Quick Start", "url": "https://react.dev/learn"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "web-accessibility",
+            "name": "Accessibility & Responsive Design",
+            "description": "Make interfaces usable with assistive technology, keyboard navigation, and different screen sizes.",
+            "outcomes": ["Use semantic controls and visible focus states", "Check color contrast and responsive behavior", "Test common flows without a mouse"],
+            "estimatedHours": 14,
+            "prerequisites": ["html-css"],
+            "resources": [{"label": "MDN: Accessibility", "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Data-driven web application",
+          "description": "Build a searchable directory or dashboard that loads data, handles empty and error states, and works on mobile.",
+          "demonstrates": ["modern-javascript", "react", "web-accessibility"]
         }
-      ]
-    },
-    "ai": {
-      "title": "AI & Machine Learning",
-      "levels": [
-        {
-          "level": "Beginner",
-          "skills": [
-            { "id": "python", "name": "Python Basics", "completed": false },
-            { "id": "math", "name": "Math for ML (Linear Algebra, Probability)", "completed": false },
-            { "id": "numpy-pandas", "name": "NumPy & Pandas", "completed": false }
-          ]
-        },
-        {
-          "level": "Intermediate",
-          "skills": [
-            { "id": "ml-models", "name": "Machine Learning Models (Scikit-Learn)", "completed": false },
-            { "id": "tensorflow", "name": "Deep Learning with TensorFlow/PyTorch", "completed": false },
-            { "id": "nlp", "name": "NLP & Computer Vision", "completed": false }
-          ]
-        },
-        {
-          "level": "Advanced",
-          "skills": [
-            { "id": "mlops", "name": "MLOps & Model Deployment", "completed": false },
-            { "id": "generative-ai", "name": "Generative AI & LLMs", "completed": false },
-            { "id": "ai-ethics", "name": "AI Ethics & Bias", "completed": false }
-          ]
+      },
+      {
+        "level": "Advanced",
+        "goal": "Test, optimize, and confidently deploy a production-quality frontend.",
+        "skills": [
+          {
+            "id": "frontend-testing",
+            "name": "Frontend Testing",
+            "description": "Verify important user-visible behavior with automated tests.",
+            "outcomes": ["Test components and user interactions", "Choose meaningful behavior-focused test cases", "Run tests as part of code changes"],
+            "estimatedHours": 18,
+            "prerequisites": ["react"],
+            "resources": [{"label": "Testing Library: Guiding Principles", "url": "https://testing-library.com/docs/guiding-principles/"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "frontend-performance",
+            "name": "Performance & Web Vitals",
+            "description": "Measure page performance and improve loading and interaction responsiveness.",
+            "outcomes": ["Measure performance with browser tools", "Reduce unnecessary work and oversized assets", "Explain the trade-offs of an optimization"],
+            "estimatedHours": 16,
+            "prerequisites": ["react"],
+            "resources": [{"label": "web.dev: Learn Performance", "url": "https://web.dev/learn/performance/"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "frontend-deployment",
+            "name": "Build & Deployment",
+            "description": "Prepare a frontend application for reliable hosting and future updates.",
+            "outcomes": ["Configure environment-specific settings safely", "Automate build and deployment checks", "Document how to run and deploy the project"],
+            "estimatedHours": 12,
+            "prerequisites": ["git", "react"],
+            "resources": [{"label": "Vite: Deploying a Static Site", "url": "https://vite.dev/guide/static-deploy"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Portfolio-ready frontend capstone",
+          "description": "Ship an accessible application with automated tests, a documented setup, and a live deployment.",
+          "demonstrates": ["frontend-testing", "frontend-performance", "frontend-deployment"]
         }
-      ]
-    },
-    "cloud": {
-      "title": "Cloud & DevOps",
-      "levels": [
-        {
-          "level": "Beginner",
-          "skills": [
-            { "id": "networking", "name": "Networking Basics", "completed": false },
-            { "id": "linux", "name": "Linux & Shell Scripting", "completed": false },
-            { "id": "cloud-basics", "name": "Cloud Fundamentals (AWS, Azure, GCP)", "completed": false }
-          ]
-        },
-        {
-          "level": "Intermediate",
-          "skills": [
-            { "id": "docker", "name": "Docker & Containers", "completed": false },
-            { "id": "kubernetes", "name": "Kubernetes", "completed": false },
-            { "id": "ci-cd", "name": "CI/CD Pipelines (Jenkins, GitHub Actions)", "completed": false }
-          ]
-        },
-        {
-          "level": "Advanced",
-          "skills": [
-            { "id": "iac", "name": "Infrastructure as Code (Terraform, CloudFormation)", "completed": false },
-            { "id": "serverless", "name": "Serverless Computing", "completed": false },
-            { "id": "monitoring", "name": "Monitoring & Logging (Prometheus, ELK)", "completed": false }
-          ]
+      }
+    ],
+    "capstone": {
+      "title": "A polished product experience",
+      "description": "Build a focused application, explain the problem it solves, and share a live demo and source code."
+    }
+  },
+  "backend": {
+    "title": "Backend Development",
+    "description": "Learn to design APIs, work with data, and operate reliable services.",
+    "audience": "For learners interested in server-side logic, databases, and application infrastructure.",
+    "goal": "Design, test, document, and deploy a secure API-backed application.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Understand how applications communicate and persist data.",
+        "skills": [
+          {
+            "id": "backend-linux",
+            "name": "Command Line & Linux Basics",
+            "description": "Navigate files and run development tools from a terminal.",
+            "outcomes": ["Navigate directories and manage files", "Run programs and inspect their output"],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [{"label": "The Linux Command Line", "url": "https://linuxcommand.org/tlcl.php"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "backend-git",
+            "name": "Git & GitHub",
+            "description": "Keep a clear history of code changes and collaborate through a hosted repository.",
+            "outcomes": ["Create commits and branches", "Share code and review changes on GitHub"],
+            "estimatedHours": 8,
+            "prerequisites": [],
+            "resources": [{"label": "GitHub Skills: Introduction to GitHub", "url": "https://github.com/skills/introduction-to-github"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "backend-databases",
+            "name": "Relational Databases & SQL",
+            "description": "Model related information and query it using a relational database.",
+            "outcomes": ["Write SELECT queries with filters and joins", "Design tables with keys and constraints", "Explain basic normalization"],
+            "estimatedHours": 20,
+            "prerequisites": [],
+            "resources": [{"label": "PostgreSQL: Tutorial", "url": "https://www.postgresql.org/docs/current/tutorial.html"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Command-line data tracker",
+          "description": "Create a small program that stores and retrieves structured records from a database.",
+          "demonstrates": ["backend-linux", "backend-git", "backend-databases"]
         }
-      ]
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Create an API that validates requests and stores application data.",
+        "skills": [
+          {
+            "id": "nodejs",
+            "name": "Node.js & Server Fundamentals",
+            "description": "Run JavaScript on the server and organize a small service.",
+            "outcomes": ["Build a server with routes and middleware", "Separate application logic into modules", "Handle configuration and errors"],
+            "estimatedHours": 20,
+            "prerequisites": ["backend-git"],
+            "resources": [{"label": "Node.js: Learn", "url": "https://nodejs.org/en/learn"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "api-design",
+            "name": "HTTP & REST API Design",
+            "description": "Design predictable endpoints and communicate with standard HTTP methods and status codes.",
+            "outcomes": ["Choose suitable methods and status codes", "Validate request data", "Document endpoints and example responses"],
+            "estimatedHours": 18,
+            "prerequisites": ["nodejs"],
+            "resources": [{"label": "MDN: HTTP Overview", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "backend-auth",
+            "name": "Authentication & Authorization",
+            "description": "Protect user accounts and enforce access rules for application resources.",
+            "outcomes": ["Distinguish authentication from authorization", "Use established password and session practices", "Check access on protected operations"],
+            "estimatedHours": 16,
+            "prerequisites": ["api-design", "backend-databases"],
+            "resources": [{"label": "OWASP: Authentication Cheat Sheet", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "API-backed application",
+          "description": "Build a documented API with persistent data, input validation, and authenticated user actions.",
+          "demonstrates": ["nodejs", "api-design", "backend-auth"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Improve the reliability, security, and scalability of a deployed service.",
+        "skills": [
+          {
+            "id": "backend-testing",
+            "name": "Backend Testing",
+            "description": "Test service behavior, data access, and API boundaries.",
+            "outcomes": ["Write unit and integration tests", "Test success, validation, and failure cases", "Use repeatable test data"],
+            "estimatedHours": 16,
+            "prerequisites": ["api-design"],
+            "resources": [{"label": "Node.js: Test Runner", "url": "https://nodejs.org/api/test.html"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "system-design",
+            "name": "System Design & Scalability",
+            "description": "Reason about service boundaries, bottlenecks, and the trade-offs in system architecture.",
+            "outcomes": ["Sketch a service and data-flow diagram", "Identify likely bottlenecks and failure modes", "Compare caching and scaling trade-offs"],
+            "estimatedHours": 20,
+            "prerequisites": ["api-design", "backend-databases"],
+            "resources": [{"label": "Google Cloud: System Design", "url": "https://cloud.google.com/architecture"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "backend-deployment",
+            "name": "Deployment & Observability",
+            "description": "Deploy a service and use logs and health signals to understand its behavior.",
+            "outcomes": ["Deploy an application with managed configuration", "Add useful health checks and logs", "Document recovery and operational steps"],
+            "estimatedHours": 18,
+            "prerequisites": ["nodejs", "backend-testing"],
+            "resources": [{"label": "12 Factor App", "url": "https://12factor.net/"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Production-minded service",
+          "description": "Deploy a tested API with clear documentation, health checks, and a short architecture overview.",
+          "demonstrates": ["backend-testing", "system-design", "backend-deployment"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A reliable API service",
+      "description": "Deliver a service with a documented API, persistent data, appropriate access controls, tests, and a live deployment."
+    }
+  },
+  "ai": {
+    "title": "AI & Machine Learning",
+    "description": "Build a foundation in data analysis and machine learning, then evaluate and deploy useful models.",
+    "audience": "For learners comfortable with basic programming and interested in data-driven systems.",
+    "goal": "Train, evaluate, and present a machine-learning solution with transparent limitations.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Prepare a dataset and explain the basic process of learning from data.",
+        "skills": [
+          {
+            "id": "python",
+            "name": "Python Fundamentals",
+            "description": "Write readable Python programs and work with common data structures.",
+            "outcomes": ["Use functions, collections, and modules", "Read and write simple data files", "Use a virtual environment and install packages"],
+            "estimatedHours": 24,
+            "prerequisites": [],
+            "resources": [{"label": "Python: Tutorial", "url": "https://docs.python.org/3/tutorial/"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ml-math",
+            "name": "Math for Machine Learning",
+            "description": "Develop practical intuition for vectors, probability, statistics, and model evaluation.",
+            "outcomes": ["Interpret vectors and matrices", "Summarize distributions and uncertainty", "Explain training and evaluation data"],
+            "estimatedHours": 24,
+            "prerequisites": [],
+            "resources": [{"label": "Khan Academy: Statistics and Probability", "url": "https://www.khanacademy.org/math/statistics-probability"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "data-analysis",
+            "name": "Data Analysis with NumPy & pandas",
+            "description": "Inspect, clean, and summarize structured datasets.",
+            "outcomes": ["Load and inspect tabular data", "Handle missing and inconsistent values", "Create summaries and visualizations"],
+            "estimatedHours": 20,
+            "prerequisites": ["python"],
+            "resources": [{"label": "pandas: Getting Started", "url": "https://pandas.pydata.org/docs/getting_started/index.html"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Exploratory data report",
+          "description": "Analyze a public dataset, explain how it was cleaned, and present findings with clear charts.",
+          "demonstrates": ["python", "ml-math", "data-analysis"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Train and compare models using a reproducible evaluation process.",
+        "skills": [
+          {
+            "id": "classical-ml",
+            "name": "Classical Machine Learning",
+            "description": "Train baseline models for common prediction tasks and compare their performance.",
+            "outcomes": ["Build a preprocessing and training pipeline", "Compare a baseline with alternative models", "Choose metrics suited to the task"],
+            "estimatedHours": 24,
+            "prerequisites": ["python", "data-analysis", "ml-math"],
+            "resources": [{"label": "scikit-learn: Getting Started", "url": "https://scikit-learn.org/stable/getting_started.html"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "model-evaluation",
+            "name": "Model Evaluation & Validation",
+            "description": "Assess whether a model generalizes and understand common sources of misleading results.",
+            "outcomes": ["Use train, validation, and test splits appropriately", "Recognize overfitting and data leakage", "Report limitations and uncertainty"],
+            "estimatedHours": 16,
+            "prerequisites": ["classical-ml"],
+            "resources": [{"label": "Google: Machine Learning Crash Course", "url": "https://developers.google.com/machine-learning/crash-course"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "deep-learning",
+            "name": "Deep Learning Fundamentals",
+            "description": "Understand neural-network basics and train a small model with a framework of choice.",
+            "outcomes": ["Explain layers, loss, and optimization at a high level", "Train and evaluate a small neural network", "Choose either PyTorch or TensorFlow to start"],
+            "estimatedHours": 28,
+            "prerequisites": ["python", "ml-math"],
+            "resources": [{"label": "PyTorch: Learn the Basics", "url": "https://pytorch.org/tutorials/beginner/basics/intro.html"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Reproducible prediction project",
+          "description": "Compare a simple baseline with a trained model and explain the evaluation, trade-offs, and limitations.",
+          "demonstrates": ["classical-ml", "model-evaluation", "deep-learning"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Deploy a model responsibly and monitor its quality over time.",
+        "skills": [
+          {
+            "id": "model-serving",
+            "name": "Model Serving & Deployment",
+            "description": "Package a trained model behind a simple interface for practical use.",
+            "outcomes": ["Expose model predictions through an API or application", "Validate inputs and handle failures", "Document intended use and limitations"],
+            "estimatedHours": 18,
+            "prerequisites": ["classical-ml", "backend-git"],
+            "resources": [{"label": "FastAPI: Tutorial", "url": "https://fastapi.tiangolo.com/tutorial/"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "mlops",
+            "name": "MLOps & Model Monitoring",
+            "description": "Make model experiments repeatable and identify when deployed behavior changes.",
+            "outcomes": ["Track data, code, and model versions", "Record key model and service metrics", "Describe a process for reviewing model changes"],
+            "estimatedHours": 20,
+            "prerequisites": ["model-evaluation", "model-serving"],
+            "resources": [{"label": "MLflow: Getting Started", "url": "https://mlflow.org/docs/latest/getting-started/"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "responsible-ai",
+            "name": "Responsible AI & Model Limitations",
+            "description": "Evaluate risks, fairness concerns, privacy, and appropriate use of model outputs.",
+            "outcomes": ["Identify affected users and potential harms", "Check data and evaluation for blind spots", "Communicate uncertainty and appropriate use"],
+            "estimatedHours": 12,
+            "prerequisites": ["model-evaluation"],
+            "resources": [{"label": "Google: Responsible AI Practices", "url": "https://ai.google/responsibility/responsible-ai-practices/"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Responsible model demo",
+          "description": "Deploy a small model with an evaluation summary, clear limitations, and a plan for monitoring quality.",
+          "demonstrates": ["model-serving", "mlops", "responsible-ai"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A documented machine-learning application",
+      "description": "Present the data, baseline, evaluation approach, deployment, and limitations so others can assess the result."
+    }
+  },
+  "cloud": {
+    "title": "Cloud & DevOps",
+    "description": "Learn to package, deploy, and operate software using cloud and automation fundamentals.",
+    "audience": "For learners interested in deployment, infrastructure, and reliable software delivery.",
+    "goal": "Automate deployment of a containerized application and explain how it is monitored.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Understand the building blocks of networks, operating systems, and cloud services.",
+        "skills": [
+          {
+            "id": "networking",
+            "name": "Networking Fundamentals",
+            "description": "Understand how devices and services communicate over common network protocols.",
+            "outcomes": ["Explain DNS, IP addresses, and ports", "Describe the role of HTTP and TLS", "Trace a basic request from client to server"],
+            "estimatedHours": 16,
+            "prerequisites": [],
+            "resources": [{"label": "MDN: How the Web Works", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "cloud-linux",
+            "name": "Linux & Shell Basics",
+            "description": "Use the command line to inspect a system and run basic development tasks.",
+            "outcomes": ["Navigate files and manage processes", "Use shell commands to inspect logs and files", "Explain basic permissions"],
+            "estimatedHours": 14,
+            "prerequisites": [],
+            "resources": [{"label": "The Linux Command Line", "url": "https://linuxcommand.org/tlcl.php"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "cloud-fundamentals",
+            "name": "Cloud Fundamentals",
+            "description": "Understand common cloud service models and the basics of deploying an application.",
+            "outcomes": ["Distinguish compute, storage, and managed services", "Explain regions and availability at a high level", "Deploy a small application using one cloud provider"],
+            "estimatedHours": 16,
+            "prerequisites": ["networking"],
+            "resources": [{"label": "AWS: Cloud Essentials", "url": "https://aws.amazon.com/getting-started/cloud-essentials/"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Deploy a static site",
+          "description": "Publish a small website and document its hosting, domain, and update process.",
+          "demonstrates": ["networking", "cloud-linux", "cloud-fundamentals"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Package an application and automate repeatable build and deployment steps.",
+        "skills": [
+          {
+            "id": "containers",
+            "name": "Containers with Docker",
+            "description": "Package an application and its runtime dependencies into a portable container.",
+            "outcomes": ["Build and run an image", "Use environment configuration appropriately", "Explain the difference between an image and a container"],
+            "estimatedHours": 18,
+            "prerequisites": ["cloud-linux"],
+            "resources": [{"label": "Docker: Get Started", "url": "https://docs.docker.com/get-started/"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ci-cd",
+            "name": "CI/CD with GitHub Actions",
+            "description": "Automate checks and deployments when code changes.",
+            "outcomes": ["Create a workflow triggered by repository events", "Run build or test checks automatically", "Protect deployment credentials"],
+            "estimatedHours": 16,
+            "prerequisites": ["backend-git"],
+            "resources": [{"label": "GitHub Actions: Understanding workflows", "url": "https://docs.github.com/en/actions/about-github-actions/understanding-github-actions"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "cloud-security",
+            "name": "Cloud Identity & Security Basics",
+            "description": "Apply basic security practices to cloud access, configuration, and application secrets.",
+            "outcomes": ["Use least-privilege access as a guiding principle", "Keep secrets out of source code", "Identify common public-exposure risks"],
+            "estimatedHours": 14,
+            "prerequisites": ["cloud-fundamentals"],
+            "resources": [{"label": "AWS: Security Best Practices", "url": "https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Automated application deployment",
+          "description": "Containerize an application and use a CI workflow to run checks and deploy it.",
+          "demonstrates": ["containers", "ci-cd", "cloud-security"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Manage infrastructure deliberately and operate deployed services with useful signals.",
+        "skills": [
+          {
+            "id": "infrastructure-as-code",
+            "name": "Infrastructure as Code",
+            "description": "Describe and manage cloud resources using version-controlled configuration.",
+            "outcomes": ["Define a small environment as code", "Review changes before applying them", "Keep environment configuration repeatable"],
+            "estimatedHours": 20,
+            "prerequisites": ["cloud-fundamentals"],
+            "resources": [{"label": "Terraform: Get Started", "url": "https://developer.hashicorp.com/terraform/tutorials"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "monitoring",
+            "name": "Monitoring & Observability",
+            "description": "Use logs, metrics, and health checks to understand an application's behavior.",
+            "outcomes": ["Choose useful service and application metrics", "Create a basic dashboard or alert", "Use logs to investigate a failure"],
+            "estimatedHours": 16,
+            "prerequisites": ["containers"],
+            "resources": [{"label": "Prometheus: Overview", "url": "https://prometheus.io/docs/introduction/overview/"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "reliability",
+            "name": "Reliability & Incident Readiness",
+            "description": "Plan for service failures and make recovery steps understandable.",
+            "outcomes": ["Identify key dependencies and failure modes", "Write a concise operational runbook", "Explain backup and recovery trade-offs"],
+            "estimatedHours": 14,
+            "prerequisites": ["monitoring", "ci-cd"],
+            "resources": [{"label": "Google SRE Book: Table of Contents", "url": "https://sre.google/sre-book/table-of-contents/"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Observable cloud application",
+          "description": "Deploy a containerized service with infrastructure configuration, a monitoring view, and a recovery runbook.",
+          "demonstrates": ["infrastructure-as-code", "monitoring", "reliability"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "An automated, observable deployment",
+      "description": "Show how the application is built, deployed, monitored, and recovered, with architecture and operations documentation."
     }
   }
-  
+}
