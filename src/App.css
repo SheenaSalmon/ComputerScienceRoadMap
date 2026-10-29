@@ -41,9 +41,8 @@ body {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(250px, 0.8fr);
   align-items: center;
-  min-height: 340px;
   overflow: hidden;
-  padding: clamp(2rem, 6vw, 4.5rem);
+  padding: 1.25rem clamp(1.25rem, 3vw, 2rem);
   border: 1px solid #253c34;
   border-radius: 12px;
   background-color: #20372f;
@@ -89,7 +88,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  margin-bottom: 1.5rem;
+  margin: 0 0 0.5rem;
   color: #e6b987;
 }
 
@@ -100,13 +99,17 @@ body {
 }
 
 .hero h1 {
-  margin: 0 0 1.15rem;
+  margin: 0 0 0.5rem;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
   font-weight: 400;
-  letter-spacing: -0.065em;
-  line-height: 0.98;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
 }
+
+/* Keep the title on one line so the banner stays short. */
+.hero h1 br { display: none; }
+.hero h1 em::before { content: " "; }
 
 .hero h1 em {
   color: #e7b27c;
@@ -117,17 +120,21 @@ body {
   max-width: 490px;
   margin: 0;
   color: #d3ddd3;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
+/* The decorative route is scaled down; negative margins remove the layout
+   space the unscaled box would otherwise reserve. */
 .route-illustration {
   position: relative;
   z-index: 1;
-  justify-self: center;
-  width: min(100%, 340px);
+  justify-self: end;
+  width: 340px;
   height: 205px;
-  margin: 0 0.5rem;
+  margin: -45px -50px -45px 0;
+  transform: scale(0.55);
+  transform-origin: center;
 }
 
 .route-node {
@@ -187,7 +194,7 @@ body {
 
 /* Track index: search, group accordions, and the selected-track state */
 .track-browser {
-  margin: 4.5rem 0 4.25rem;
+  margin: 2rem 0 3rem;
 }
 
 .browser-heading {
@@ -554,15 +561,10 @@ body {
 @media (max-width: 700px) {
   .hero {
     grid-template-columns: 1fr;
-    padding: 2.5rem 1.5rem;
+    padding: 1rem 1.25rem;
   }
 
-  .route-illustration {
-    justify-self: start;
-    width: min(100%, 310px);
-    height: 155px;
-    margin: 1.5rem 0 -0.5rem;
-  }
+  .route-illustration { display: none; }
 
   .browser-heading {
     align-items: start;
@@ -576,9 +578,8 @@ body {
 /* Tighten the timeline gutter and spacing on narrow phones. */
 @media (max-width: 576px) {
   .app-shell { padding: 0.75rem 0.75rem 3rem; }
-  .hero { min-height: 0; }
-  .hero h1 { font-size: clamp(2.65rem, 13vw, 4rem); }
-  .route-illustration { height: 135px; }
+  .hero h1 { font-size: clamp(1.7rem, 8vw, 2.2rem); }
+  .hero-description { display: none; }
   .timeline { padding-left: 2.5rem; }
   .timeline::before { left: 0.95rem; }
   .level-marker { left: -2.5rem; }
@@ -702,32 +703,31 @@ body {
   z-index: 20;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-top: 1rem;
-  padding: 0.6rem 0;
+  gap: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0;
   background: rgba(243, 240, 231, 0.94);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
 }
 
+/* Chips wrap onto extra rows so every domain is visible without scrolling. */
 .domain-chips {
   display: flex;
   flex: 1;
-  gap: 0.4rem;
+  flex-wrap: wrap;
+  gap: 0.3rem;
   min-width: 0;
-  padding-bottom: 2px;
-  overflow-x: auto;
-  scrollbar-width: thin;
 }
 
 .domain-chip {
   flex: none;
-  padding: 0.3rem 0.7rem;
+  padding: 0.2rem 0.55rem;
   border: 1px solid var(--line);
   border-radius: 4px;
   background: var(--surface);
   color: var(--ink);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 500;
   white-space: nowrap;
   transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
@@ -767,7 +767,7 @@ body {
 .now-reading strong { color: var(--accent); font-weight: 600; }
 
 .track-browser,
-.roadmap-view { scroll-margin-top: 4rem; }
+.roadmap-view { scroll-margin-top: 5.5rem; }
 
 .roadmap-view:focus { outline: none; }
 
@@ -857,7 +857,13 @@ body {
 
 .search-tip { color: var(--accent); }
 
+/* On short screens a pinned bar would hide too much content. */
+@media (max-height: 640px) {
+  .domain-bar { position: static; }
+}
+
 @media (max-width: 700px) {
+  .domain-bar { position: static; }
   .now-reading { display: none; }
   .search-tip { display: none; }
   .search-hint { display: none; }

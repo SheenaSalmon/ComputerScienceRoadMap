@@ -1,0 +1,237 @@
+{
+  "platform": {
+    "title": "Platform Engineering",
+    "description": "Build internal platforms, golden paths, and self-service tooling that let product teams ship safely and quickly.",
+    "audience": "For DevOps, SRE, and backend engineers who want to improve developer experience across many teams.",
+    "goal": "Design and operate a self-service platform that treats developers as customers and measures its impact.",
+    "relatedTracks": [
+      {"id": "cloud", "reason": "Containers, CI/CD, and infrastructure as code"},
+      {"id": "sre", "reason": "Reliability targets and operations"},
+      {"id": "security", "reason": "Policy, supply-chain, and access control"},
+      {"id": "swe", "reason": "Engineering practices and team workflows"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Understand what a platform is and how developers experience it.",
+        "skills": [
+          {
+            "id": "platform-fundamentals",
+            "name": "Platform Engineering Fundamentals",
+            "description": "Learn how platform teams differ from DevOps and SRE and what an internal developer platform provides.",
+            "outcomes": [
+              "Explain platform engineering, DevOps, and SRE and where they overlap",
+              "Describe the parts of an internal developer platform",
+              "Identify developer pain points worth solving first"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": ["ci-cd", "containers"],
+            "resources": [
+              {"label": "platformengineering.org: What is platform engineering?", "url": "https://platformengineering.org/blog/what-is-platform-engineering"},
+              {"label": "CNCF: Platforms White Paper", "url": "https://tag-app-delivery.cncf.io/whitepapers/platforms/"},
+              {"label": "Team Topologies: Key concepts - platform teams and team interaction", "url": "https://teamtopologies.com/key-concepts"},
+              {"label": "Martin Fowler: Platform teams and the self-service platform", "url": "https://martinfowler.com/articles/talk-about-platforms.html"},
+              {"label": "Google Cloud: Platform engineering overview", "url": "https://cloud.google.com/solutions/platform-engineering"},
+              {"label": "Microsoft Learn: What is platform engineering?", "url": "https://learn.microsoft.com/en-us/platform-engineering/what-is-platform-engineering"},
+              {"label": "Humanitec: Internal developer platform reference architecture", "url": "https://humanitec.com/platform-engineering"},
+              {"label": "YouTube search: what is platform engineering explained", "url": "https://www.youtube.com/results?search_query=what+is+platform+engineering+explained"},
+              {"label": "YouTube search: platform engineering vs DevOps vs SRE", "url": "https://www.youtube.com/results?search_query=platform+engineering+vs+DevOps+vs+SRE"},
+              {"label": "YouTube search: Team Topologies platform team explained", "url": "https://www.youtube.com/results?search_query=Team+Topologies+platform+team+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "platform-developer-experience",
+            "name": "Developer Experience & Research",
+            "description": "Learn what slows developers down and how to find and measure it.",
+            "outcomes": [
+              "Interview developers and map their workflow to find friction",
+              "Measure onboarding time and time to first deploy",
+              "Prioritize platform work by developer impact"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": ["platform-fundamentals"],
+            "resources": [
+              {"label": "DX: Developer experience measurement and research", "url": "https://getdx.com/research/"},
+              {"label": "ACM Queue: SPACE of developer productivity", "url": "https://queue.acm.org/detail.cfm?id=3454124"},
+              {"label": "GitHub Blog: Research on developer productivity and happiness", "url": "https://github.blog/news-insights/research/"},
+              {"label": "DORA: Capabilities - developer experience and platform engineering", "url": "https://dora.dev/capabilities/"},
+              {"label": "Nielsen Norman Group: User interviews 101", "url": "https://www.nngroup.com/articles/user-interviews/"},
+              {"label": "Atlassian Team Playbook: Customer interview play", "url": "https://www.atlassian.com/team-playbook/plays/customer-interview"},
+              {"label": "Google: Engineering productivity research", "url": "https://research.google/pubs/?area=software-engineering"},
+              {"label": "YouTube search: developer experience DevEx explained", "url": "https://www.youtube.com/results?search_query=developer+experience+DevEx+explained+productivity"},
+              {"label": "YouTube search: SPACE framework developer productivity", "url": "https://www.youtube.com/results?search_query=SPACE+framework+developer+productivity"},
+              {"label": "YouTube search: how to run user interviews for internal tools", "url": "https://www.youtube.com/results?search_query=user+interviews+for+internal+developer+tools"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Developer friction report",
+          "description": "Interview several developers, map their path from idea to production, and propose three prioritized platform improvements.",
+          "demonstrates": ["platform-fundamentals", "platform-developer-experience"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Provide self-service paths that make the right way the easy way.",
+        "skills": [
+          {
+            "id": "platform-golden-paths",
+            "name": "Golden Paths & Service Catalogs",
+            "description": "Create templates and a catalog so teams can create and discover services consistently.",
+            "outcomes": [
+              "Build a service template that includes CI, observability, and security defaults",
+              "Publish services in a developer portal catalog with owners and documentation",
+              "Version and evolve templates without breaking existing services"
+            ],
+            "estimatedHours": 20,
+            "prerequisites": ["platform-developer-experience", "infrastructure-as-code"],
+            "resources": [
+              {"label": "Backstage: Documentation and getting started", "url": "https://backstage.io/docs/overview/what-is-backstage"},
+              {"label": "Backstage: Software Templates", "url": "https://backstage.io/docs/features/software-templates/"},
+              {"label": "Backstage: Software Catalog", "url": "https://backstage.io/docs/features/software-catalog/"},
+              {"label": "Backstage: TechDocs - docs as code", "url": "https://backstage.io/docs/features/techdocs/"},
+              {"label": "Spotify Engineering: Golden Path - how Spotify standardizes building software", "url": "https://engineering.atspotify.com/2020/08/how-we-use-golden-paths-to-solve-fragmentation-in-our-software-ecosystem/"},
+              {"label": "Cookiecutter: Project templates documentation", "url": "https://cookiecutter.readthedocs.io/"},
+              {"label": "Terraform: Modules - reusable infrastructure building blocks", "url": "https://developer.hashicorp.com/terraform/language/modules"},
+              {"label": "Crossplane: Introduction - build a control plane with APIs", "url": "https://docs.crossplane.io/latest/"},
+              {"label": "YouTube search: Backstage developer portal tutorial", "url": "https://www.youtube.com/results?search_query=Backstage+developer+portal+tutorial"},
+              {"label": "YouTube search: golden paths platform engineering", "url": "https://www.youtube.com/results?search_query=golden+paths+platform+engineering+explained"},
+              {"label": "YouTube search: Backstage software templates scaffolder", "url": "https://www.youtube.com/results?search_query=Backstage+software+templates+scaffolder+tutorial"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "platform-gitops",
+            "name": "GitOps & Self-Service Delivery",
+            "description": "Deliver changes to clusters from Git using declarative configuration and automated reconciliation.",
+            "outcomes": [
+              "Deploy an application with Argo CD or Flux from a Git repository",
+              "Promote changes between environments with pull requests",
+              "Explain drift detection, rollback, and secrets handling in GitOps"
+            ],
+            "estimatedHours": 18,
+            "prerequisites": ["kubernetes-fundamentals", "ci-cd"],
+            "resources": [
+              {"label": "OpenGitOps: GitOps principles", "url": "https://opengitops.dev/"},
+              {"label": "Argo CD: Getting started", "url": "https://argo-cd.readthedocs.io/en/stable/getting_started/"},
+              {"label": "Argo CD: Declarative setup and ApplicationSets", "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/"},
+              {"label": "Flux: Get started with Flux", "url": "https://fluxcd.io/flux/get-started/"},
+              {"label": "Kustomize: Declarative customization of Kubernetes configuration", "url": "https://kubectl.docs.kubernetes.io/references/kustomize/"},
+              {"label": "Helm: Chart best practices", "url": "https://helm.sh/docs/chart_best_practices/"},
+              {"label": "External Secrets Operator: Introduction", "url": "https://external-secrets.io/latest/introduction/overview/"},
+              {"label": "Argo Rollouts: Progressive delivery with canary and blue-green", "url": "https://argo-rollouts.readthedocs.io/en/stable/"},
+              {"label": "YouTube: TechWorld with Nana – ArgoCD Tutorial for Beginners | GitOps CI/CD (38:00)", "url": "https://www.youtube.com/watch?v=MeU5_k9ssrs"},
+              {"label": "YouTube search: GitOps explained Argo CD vs Flux", "url": "https://www.youtube.com/results?search_query=GitOps+explained+Argo+CD+vs+Flux"},
+              {"label": "YouTube search: progressive delivery canary Argo Rollouts tutorial", "url": "https://www.youtube.com/results?search_query=progressive+delivery+canary+Argo+Rollouts+tutorial"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "platform-observability-defaults",
+            "name": "Built-In Observability & Reliability Defaults",
+            "description": "Give every service logs, metrics, traces, dashboards, and alerts by default.",
+            "outcomes": [
+              "Add OpenTelemetry instrumentation to a service template",
+              "Generate default dashboards and SLO alerts for new services",
+              "Provide runbook and on-call ownership metadata in the catalog"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": ["platform-golden-paths", "monitoring"],
+            "resources": [
+              {"label": "OpenTelemetry: Documentation", "url": "https://opentelemetry.io/docs/"},
+              {"label": "OpenTelemetry Collector: Overview and deployment", "url": "https://opentelemetry.io/docs/collector/"},
+              {"label": "Prometheus: Alerting rules", "url": "https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/"},
+              {"label": "Grafana: Provision dashboards as code", "url": "https://grafana.com/docs/grafana/latest/administration/provisioning/"},
+              {"label": "Sloth: SLO generator for Prometheus", "url": "https://sloth.dev/"},
+              {"label": "Google SRE Workbook: Implementing SLOs", "url": "https://sre.google/workbook/implementing-slos/"},
+              {"label": "Google SRE Workbook: Alerting on SLOs", "url": "https://sre.google/workbook/alerting-on-slos/"},
+              {"label": "YouTube search: OpenTelemetry Collector tutorial", "url": "https://www.youtube.com/results?search_query=OpenTelemetry+Collector+tutorial"},
+              {"label": "YouTube search: Grafana dashboards as code provisioning", "url": "https://www.youtube.com/results?search_query=Grafana+dashboards+as+code+provisioning"},
+              {"label": "YouTube search: SLO alerting burn rate explained", "url": "https://www.youtube.com/results?search_query=SLO+alerting+burn+rate+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Self-service service template",
+          "description": "Publish a template that creates a service with CI, GitOps deployment, telemetry, dashboards, and catalog entry in minutes.",
+          "demonstrates": ["platform-golden-paths", "platform-gitops", "platform-observability-defaults"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Run the platform safely and prove its value.",
+        "skills": [
+          {
+            "id": "platform-policy-guardrails",
+            "name": "Policy as Code & Guardrails",
+            "description": "Enforce security and compliance rules automatically while keeping developers productive.",
+            "outcomes": [
+              "Write admission and CI policies with OPA or Kyverno",
+              "Apply least-privilege access and namespace isolation",
+              "Provide clear policy errors and a documented exception process"
+            ],
+            "estimatedHours": 16,
+            "prerequisites": ["platform-gitops", "supply-chain-security"],
+            "resources": [
+              {"label": "Open Policy Agent: Policy language and Rego", "url": "https://www.openpolicyagent.org/docs/latest/policy-language/"},
+              {"label": "OPA Gatekeeper: Kubernetes admission control", "url": "https://open-policy-agent.github.io/gatekeeper/website/docs/"},
+              {"label": "Kyverno: Policies for Kubernetes", "url": "https://kyverno.io/docs/"},
+              {"label": "Kubernetes Docs: Pod Security Standards", "url": "https://kubernetes.io/docs/concepts/security/pod-security-standards/"},
+              {"label": "Kubernetes Docs: Role-based access control (RBAC)", "url": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/"},
+              {"label": "Kubernetes Docs: Network policies", "url": "https://kubernetes.io/docs/concepts/services-networking/network-policies/"},
+              {"label": "Conftest: Test configuration files with OPA policies", "url": "https://www.conftest.dev/"},
+              {"label": "CNCF: Cloud Native Security Whitepaper", "url": "https://github.com/cncf/tag-security/blob/main/community/resources/security-whitepaper/v2/CNCF_cloud-native-security-whitepaper-May2022-v2.pdf"},
+              {"label": "YouTube search: Open Policy Agent Rego tutorial", "url": "https://www.youtube.com/results?search_query=Open+Policy+Agent+Rego+tutorial"},
+              {"label": "YouTube search: Kyverno policies Kubernetes tutorial", "url": "https://www.youtube.com/results?search_query=Kyverno+policies+Kubernetes+tutorial"},
+              {"label": "YouTube search: Kubernetes RBAC and Pod Security explained", "url": "https://www.youtube.com/results?search_query=Kubernetes+RBAC+Pod+Security+Standards+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "platform-product-metrics",
+            "name": "Platform as a Product",
+            "description": "Run the platform like a product with a roadmap, adoption goals, support, and measurable outcomes.",
+            "outcomes": [
+              "Define platform adoption, satisfaction, and delivery metrics",
+              "Maintain a roadmap and a support and feedback process",
+              "Report platform value in terms of time saved, risk reduced, and cost avoided"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": ["platform-developer-experience", "platform-golden-paths"],
+            "resources": [
+              {"label": "DORA: The four key delivery metrics", "url": "https://dora.dev/guides/dora-metrics-four-keys/"},
+              {"label": "CNCF: Platform Engineering Maturity Model", "url": "https://tag-app-delivery.cncf.io/whitepapers/platform-eng-maturity-model/"},
+              {"label": "Team Topologies: Platform as a product", "url": "https://teamtopologies.com/key-concepts-content/what-is-a-platform-and-why-do-i-need-one"},
+              {"label": "Atlassian Team Playbook: Health monitor", "url": "https://www.atlassian.com/team-playbook/health-monitor"},
+              {"label": "Marty Cagan / SVPG: Product operating model articles", "url": "https://www.svpg.com/articles/"},
+              {"label": "FinOps Foundation: What is FinOps?", "url": "https://www.finops.org/introduction/what-is-finops/"},
+              {"label": "YouTube search: platform as a product metrics adoption", "url": "https://www.youtube.com/results?search_query=platform+as+a+product+metrics+adoption+internal+developer+platform"},
+              {"label": "YouTube search: DORA metrics and platform engineering", "url": "https://www.youtube.com/results?search_query=DORA+metrics+platform+engineering"},
+              {"label": "YouTube search: measuring platform engineering ROI", "url": "https://www.youtube.com/results?search_query=measuring+platform+engineering+ROI"}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Platform value review",
+          "description": "Add guardrails to the platform and present adoption, delivery, and satisfaction metrics with a prioritized roadmap.",
+          "demonstrates": ["platform-policy-guardrails", "platform-product-metrics"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A small internal developer platform",
+      "description": "Deliver a self-service platform with templates, GitOps delivery, observability defaults, policy guardrails, documentation, and metrics that show developer impact."
+    }
+  }
+}

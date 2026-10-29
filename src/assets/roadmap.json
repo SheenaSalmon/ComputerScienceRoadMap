@@ -273,12 +273,23 @@
             "resources": [{"label": "12 Factor App", "url": "https://12factor.net/"}, {"label": "OpenTelemetry: Documentation", "url": "https://opentelemetry.io/docs/"}, {"label": "Google SRE Book: Monitoring distributed systems", "url": "https://sre.google/sre-book/monitoring-distributed-systems/"}, {"label": "Docker Docs: Dockerfile best practices", "url": "https://docs.docker.com/build/building/best-practices/"}, {"label": "Kubernetes: Liveness, readiness and startup probes", "url": "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/"}, {"label": "OpenTelemetry: Observability primer - logs, metrics, traces", "url": "https://opentelemetry.io/docs/concepts/observability-primer/"}, {"label": "Heroku Dev Center: Logging - application log management", "url": "https://devcenter.heroku.com/articles/logging"}, {"label": "YouTube: Fireship – Grafana is the goat... Let's deploy the LGTM stack (5:59)", "url": "https://www.youtube.com/watch?v=1X3dV3D5EJg"}, {"label": "YouTube: freeCodeCamp.org – How to Deploy, Secure, and Automate Full-Stack Web Apps – Course for Beginners (10:29:10)", "url": "https://www.youtube.com/watch?v=wY5pQOTsGaA"}],
             "priority": "core",
             "completed": false
+          },
+          {
+            "id": "backend-performance-load",
+            "name": "Performance & Scalability Under Load",
+            "description": "Measure, profile, and improve how a service behaves as traffic grows.",
+            "outcomes": ["Write a load test and read latency percentiles and error rates", "Profile a slow endpoint and fix the main bottleneck", "Apply caching, queues, and rate limiting with clear trade-offs"],
+            "estimatedHours": 16,
+            "prerequisites": ["system-design", "backend-deployment"],
+            "resources": [{"label": "Grafana k6: Get started with load testing", "url": "https://grafana.com/docs/k6/latest/"}, {"label": "k6 Docs: Test types - smoke, load, stress, soak, spike", "url": "https://grafana.com/docs/k6/latest/testing-guides/test-types/"}, {"label": "Google SRE Book: The four golden signals", "url": "https://sre.google/sre-book/monitoring-distributed-systems/#xref_monitoring_golden-signals"}, {"label": "Google SRE Book: Handling overload", "url": "https://sre.google/sre-book/handling-overload/"}, {"label": "Google SRE Book: Addressing cascading failures", "url": "https://sre.google/sre-book/addressing-cascading-failures/"}, {"label": "Node.js Docs: Profiling Node.js applications", "url": "https://nodejs.org/en/learn/getting-started/profiling"}, {"label": "Redis Docs: Client-side and server-side caching patterns", "url": "https://redis.io/docs/latest/develop/use/client-side-caching/"}, {"label": "AWS Builders' Library: Timeouts, retries, and backoff with jitter", "url": "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/"}, {"label": "Martin Fowler: Circuit Breaker", "url": "https://martinfowler.com/bliki/CircuitBreaker.html"}, {"label": "Brendan Gregg: The USE Method for performance analysis", "url": "https://www.brendangregg.com/usemethod.html"}, {"label": "YouTube search: k6 load testing tutorial", "url": "https://www.youtube.com/results?search_query=k6+load+testing+tutorial+for+beginners"}, {"label": "YouTube search: API performance optimization caching rate limiting explained", "url": "https://www.youtube.com/results?search_query=API+performance+optimization+caching+rate+limiting+explained"}, {"label": "YouTube search: how to profile and fix a slow backend endpoint", "url": "https://www.youtube.com/results?search_query=profile+slow+backend+endpoint+latency+percentiles"}],
+            "priority": "core",
+            "completed": false
           }
         ],
         "project": {
           "title": "Production-minded service",
-          "description": "Deploy a tested API with clear documentation, health checks, and a short architecture overview.",
-          "demonstrates": ["backend-testing", "system-design", "backend-deployment"]
+          "description": "Deploy a tested API with clear documentation, health checks, and a short architecture overview. Add a load test and document the bottleneck you found and fixed.",
+          "demonstrates": ["backend-testing", "system-design", "backend-deployment", "backend-performance-load"]
         }
       }
     ],
@@ -561,12 +572,34 @@
             "resources": [{"label": "Google SRE Book: Table of Contents", "url": "https://sre.google/sre-book/table-of-contents/"}, {"label": "Google: Site Reliability Engineering Workbook", "url": "https://sre.google/workbook/table-of-contents/"}, {"label": "Google SRE Book: Embracing risk and error budgets", "url": "https://sre.google/sre-book/embracing-risk/"}, {"label": "Google SRE Book: Managing incidents", "url": "https://sre.google/sre-book/managing-incidents/"}, {"label": "Google SRE Book: Postmortem culture", "url": "https://sre.google/sre-book/postmortem-culture/"}, {"label": "Google SRE Workbook: Implementing SLOs", "url": "https://sre.google/workbook/implementing-slos/"}, {"label": "Atlassian: Incident management handbook", "url": "https://www.atlassian.com/incident-management/handbook"}, {"label": "YouTube: Tech Fusionist (T3P) – Free Course - DevOps & SRE | How to become DevOps & Site Reliability Engineer |… (5:32)", "url": "https://www.youtube.com/watch?v=9OOuX5wHLyM"}],
             "priority": "core",
             "completed": false
+          },
+          {
+            "id": "cloud-cost-finops",
+            "name": "Cloud Cost Management & FinOps",
+            "description": "Estimate, monitor, and reduce cloud spend while balancing performance and reliability.",
+            "outcomes": ["Estimate the monthly cost of an architecture before deploying it", "Set budgets, alerts, and cost-allocation tags", "Explain trade-offs among cost, performance, and reliability"],
+            "estimatedHours": 12,
+            "prerequisites": ["cloud-fundamentals", "monitoring"],
+            "resources": [{"label": "FinOps Foundation: What is FinOps?", "url": "https://www.finops.org/introduction/what-is-finops/"}, {"label": "FinOps Foundation: FinOps Framework", "url": "https://www.finops.org/framework/"}, {"label": "AWS Well-Architected: Cost Optimization Pillar", "url": "https://docs.aws.amazon.com/wellarchitected/latest/cost-optimization-pillar/welcome.html"}, {"label": "Azure Well-Architected Framework: Cost Optimization", "url": "https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/"}, {"label": "Google Cloud: Cost management tools and best practices", "url": "https://cloud.google.com/cost-management"}, {"label": "AWS Pricing Calculator: Estimate architecture cost", "url": "https://calculator.aws/"}, {"label": "AWS Docs: Managing costs with AWS Budgets", "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html"}, {"label": "Microsoft Learn: Overview of Cost Management", "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/overview-cost-management"}, {"label": "Infracost: Cloud cost estimates in pull requests", "url": "https://www.infracost.io/docs/"}, {"label": "YouTube search: FinOps explained for engineers", "url": "https://www.youtube.com/results?search_query=FinOps+explained+for+engineers+cloud+cost+optimization"}, {"label": "YouTube search: AWS cost optimization best practices", "url": "https://www.youtube.com/results?search_query=AWS+cost+optimization+best+practices+tutorial"}, {"label": "YouTube search: Infracost Terraform cost estimate pull request", "url": "https://www.youtube.com/results?search_query=Infracost+Terraform+cost+estimate+tutorial"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "kubernetes-fundamentals",
+            "name": "Kubernetes Fundamentals",
+            "description": "Run and operate containerized applications on a Kubernetes cluster.",
+            "outcomes": ["Deploy an app with Deployments, Services, and Ingress", "Manage configuration and secrets with ConfigMaps and Secrets", "Use probes, resource limits, and rollouts to keep the app healthy"],
+            "estimatedHours": 24,
+            "prerequisites": ["containers", "monitoring"],
+            "resources": [{"label": "Kubernetes Docs: Tutorials - Kubernetes basics", "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/"}, {"label": "Kubernetes Docs: Concepts - overview of core objects", "url": "https://kubernetes.io/docs/concepts/overview/"}, {"label": "Kubernetes Docs: Deployments - rolling updates and rollbacks", "url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/"}, {"label": "Kubernetes Docs: Services and networking", "url": "https://kubernetes.io/docs/concepts/services-networking/service/"}, {"label": "Kubernetes Docs: ConfigMaps", "url": "https://kubernetes.io/docs/concepts/configuration/configmap/"}, {"label": "Kubernetes Docs: Secrets", "url": "https://kubernetes.io/docs/concepts/configuration/secret/"}, {"label": "Kubernetes Docs: Resource management for pods and containers", "url": "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"}, {"label": "Kubernetes Docs: Liveness, readiness and startup probes", "url": "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/"}, {"label": "Kubernetes Docs: Debug running pods", "url": "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/"}, {"label": "minikube: Local Kubernetes quick start", "url": "https://minikube.sigs.k8s.io/docs/start/"}, {"label": "Helm: Quickstart guide - package and deploy charts", "url": "https://helm.sh/docs/intro/quickstart/"}, {"label": "Killercoda: Free interactive Kubernetes scenarios", "url": "https://killercoda.com/"}, {"label": "YouTube: TechWorld with Nana – Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours] (3:56:00)", "url": "https://www.youtube.com/watch?v=X48VuDVv0do"}, {"label": "YouTube: freeCodeCamp.org – Kubernetes Course - Full Beginners Tutorial (Containerize Your Apps!) (3:29:00)", "url": "https://www.youtube.com/watch?v=d6WC5n9G_sM"}, {"label": "YouTube search: Kubernetes troubleshooting CrashLoopBackOff", "url": "https://www.youtube.com/results?search_query=Kubernetes+troubleshooting+CrashLoopBackOff+pending+pods"}],
+            "priority": "core",
+            "completed": false
           }
         ],
         "project": {
           "title": "Observable cloud application",
-          "description": "Deploy a containerized service with infrastructure configuration, a monitoring view, and a recovery runbook.",
-          "demonstrates": ["infrastructure-as-code", "monitoring", "reliability"]
+          "description": "Deploy a containerized service with infrastructure configuration, a monitoring view, a recovery runbook, and a cost estimate with budget alerts. Run it on Kubernetes with probes, resource limits, and a rollback test.",
+          "demonstrates": ["infrastructure-as-code", "monitoring", "reliability", "cloud-cost-finops", "kubernetes-fundamentals"]
         }
       }
     ],
@@ -879,12 +912,34 @@
             "resources": [{"label": "Agile Manifesto", "url": "https://agilemanifesto.org/"}, {"label": "The Scrum Guide", "url": "https://scrumguides.org/scrum-guide.html"}, {"label": "Atlassian Agile Coach: Scrum guide to sprints and backlogs", "url": "https://www.atlassian.com/agile/scrum"}, {"label": "Atlassian Agile Coach: Kanban", "url": "https://www.atlassian.com/agile/kanban"}, {"label": "Atlassian Agile Coach: User stories", "url": "https://www.atlassian.com/agile/project-management/user-stories"}, {"label": "Atlassian Agile Coach: Estimation and story points", "url": "https://www.atlassian.com/agile/project-management/estimation"}, {"label": "Martin Fowler: The new methodology - agile history", "url": "https://martinfowler.com/articles/newMethodology.html"}, {"label": "YouTube: freeCodeCamp.org – Design Software Systems Like a Senior Engineer – Complete Course (3:16:48)", "url": "https://www.youtube.com/watch?v=soTfFFIQQ8U"}, {"label": "YouTube: freeCodeCamp.org – Software Testing Course – Playwright, E2E, and AI Agents (1:03:31)", "url": "https://www.youtube.com/watch?v=jydYq7oAtD8"}],
             "priority": "core",
             "completed": false
+          },
+          {
+            "id": "ai-assisted-development",
+            "name": "AI-Assisted Software Development",
+            "description": "Use coding assistants and agents to explore code, draft changes, and generate tests while verifying every result.",
+            "outcomes": ["Write context-rich prompts and break work into reviewable steps", "Verify AI-generated code with tests, linting, and code review", "Protect secrets, private code, and licensing obligations when using AI tools"],
+            "estimatedHours": 12,
+            "prerequisites": ["code-review", "unit-testing"],
+            "resources": [{"label": "GitHub Docs: Best practices for using GitHub Copilot", "url": "https://docs.github.com/en/copilot/using-github-copilot/best-practices-for-using-github-copilot"}, {"label": "VS Code Docs: GitHub Copilot overview - chat, agents, and inline suggestions", "url": "https://code.visualstudio.com/docs/copilot/overview"}, {"label": "Anthropic: Claude Code best practices for agentic coding", "url": "https://www.anthropic.com/engineering/claude-code-best-practices"}, {"label": "Simon Willison: How I use LLMs to help me write code", "url": "https://simonwillison.net/2025/Mar/11/using-llms-for-code/"}, {"label": "Model Context Protocol: Introduction - connecting assistants to tools and data", "url": "https://modelcontextprotocol.io/introduction"}, {"label": "Google Engineering Practices: The standard of code review", "url": "https://google.github.io/eng-practices/review/reviewer/standard.html"}, {"label": "OWASP: Top 10 for LLM Applications - risks to understand when using AI", "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"}, {"label": "GitHub Docs: Responsible use of GitHub Copilot features", "url": "https://docs.github.com/en/copilot/responsible-use"}, {"label": "YouTube: Andrej Karpathy – How I use LLMs (2:11:12)", "url": "https://www.youtube.com/watch?v=EWvNQjAaOHw"}, {"label": "YouTube search: GitHub Copilot agent mode tutorial", "url": "https://www.youtube.com/results?search_query=GitHub+Copilot+agent+mode+tutorial"}, {"label": "YouTube search: AI pair programming workflow best practices", "url": "https://www.youtube.com/results?search_query=AI+pair+programming+workflow+best+practices+developers"}, {"label": "YouTube search: reviewing AI generated code for bugs and security issues", "url": "https://www.youtube.com/results?search_query=reviewing+AI+generated+code+bugs+security"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "team-collaboration-async",
+            "name": "Distributed Team Collaboration",
+            "description": "Work effectively with engineers, designers, and product partners across time zones using clear written communication.",
+            "outcomes": ["Write a design proposal (RFC) that invites useful feedback", "Give concise async status updates and make decisions visible", "Clarify scope and expectations with cross-functional partners"],
+            "estimatedHours": 10,
+            "prerequisites": ["agile-delivery"],
+            "resources": [{"label": "GitLab Handbook: Communication and all-remote work", "url": "https://handbook.gitlab.com/handbook/company/culture/all-remote/"}, {"label": "GitLab Handbook: Asynchronous communication", "url": "https://handbook.gitlab.com/handbook/company/culture/all-remote/asynchronous/"}, {"label": "Google Design Docs: Writing and reviewing technical design documents", "url": "https://www.industrialempathy.com/posts/design-docs-at-google/"}, {"label": "Oxide: Requests for Discussion (RFD) process", "url": "https://rfd.shared.oxide.computer/rfd/0001"}, {"label": "Rust RFC process: How proposals are written and reviewed", "url": "https://github.com/rust-lang/rfcs"}, {"label": "Atlassian Team Playbook: Team health monitor and working agreements", "url": "https://www.atlassian.com/team-playbook"}, {"label": "Google re:Work: Guide - Understand team effectiveness", "url": "https://rework.withgoogle.com/guides/understanding-team-effectiveness/steps/introduction/"}, {"label": "Google Technical Writing: Course one", "url": "https://developers.google.com/tech-writing/one"}, {"label": "YouTube search: writing technical design docs and RFCs", "url": "https://www.youtube.com/results?search_query=writing+technical+design+docs+RFC+software+engineers"}, {"label": "YouTube search: async communication remote engineering teams", "url": "https://www.youtube.com/results?search_query=asynchronous+communication+remote+software+teams"}, {"label": "YouTube search: working with product managers and designers as an engineer", "url": "https://www.youtube.com/results?search_query=how+engineers+work+with+product+managers+and+designers"}],
+            "priority": "core",
+            "completed": false
           }
         ],
         "project": {
           "title": "Team-style feature delivery",
-          "description": "Plan and ship a feature through issues, pull requests, reviews, and a release note.",
-          "demonstrates": ["design-patterns", "code-review", "agile-delivery"]
+          "description": "Plan and ship a feature through issues, pull requests, reviews, and a release note. Record where AI assistance helped and how you verified its output. Include a short design proposal and async progress updates.",
+          "demonstrates": ["design-patterns", "code-review", "agile-delivery", "ai-assisted-development", "team-collaboration-async"]
         }
       },
       {
@@ -923,12 +978,23 @@
             "resources": [{"label": "Martin Fowler: Technical Debt", "url": "https://martinfowler.com/bliki/TechnicalDebt.html"}, {"label": "martinfowler.com: Technical Debt Quadrant", "url": "https://martinfowler.com/bliki/TechnicalDebtQuadrant.html"}, {"label": "Martin Fowler: Opportunistic refactoring", "url": "https://martinfowler.com/bliki/OpportunisticRefactoring.html"}, {"label": "Martin Fowler: Strangler fig application - incremental rewrite", "url": "https://martinfowler.com/bliki/StranglerFigApplication.html"}, {"label": "Martin Fowler: Is high quality software worth the cost?", "url": "https://martinfowler.com/articles/is-quality-worth-cost.html"}, {"label": "Refactoring Guru: Technical debt", "url": "https://refactoring.guru/refactoring/technical-debt"}, {"label": "Martin Fowler: Legacy seam", "url": "https://martinfowler.com/bliki/LegacySeam.html"}, {"label": "YouTube: Web Dev Simplified – How To Manage Technical Debt (14:12)", "url": "https://www.youtube.com/watch?v=nXMYHrERh80"}, {"label": "YouTube: Software Engineering Institute | Carnegie Mellon University – Technical Debt as a Core Software Engineering Practice (23:04)", "url": "https://www.youtube.com/watch?v=OfIYiyg1op8"}],
             "priority": "core",
             "completed": false
+          },
+          {
+            "id": "production-debugging",
+            "name": "Debugging & Troubleshooting Production Systems",
+            "description": "Find and explain the root cause of failures in running systems using evidence from logs, metrics, and traces.",
+            "outcomes": ["Form and test hypotheses from logs, metrics, and traces", "Reproduce a bug and isolate the change that caused it with git bisect", "Write a blameless root-cause analysis with follow-up actions"],
+            "estimatedHours": 14,
+            "prerequisites": ["testing-strategy"],
+            "resources": [{"label": "Google SRE Book: Effective troubleshooting", "url": "https://sre.google/sre-book/effective-troubleshooting/"}, {"label": "Google SRE Book: Postmortem culture - learning from failure", "url": "https://sre.google/sre-book/postmortem-culture/"}, {"label": "Google SRE Workbook: Example postmortem", "url": "https://sre.google/workbook/postmortem-culture/"}, {"label": "Git Docs: git bisect - find the commit that introduced a bug", "url": "https://git-scm.com/docs/git-bisect"}, {"label": "OpenTelemetry: Observability primer - logs, metrics, traces", "url": "https://opentelemetry.io/docs/concepts/observability-primer/"}, {"label": "Chrome DevTools: Debug JavaScript", "url": "https://developer.chrome.com/docs/devtools/javascript"}, {"label": "Julia Evans: Debugging zines and guides", "url": "https://jvns.ca/blog/2019/06/23/a-few-debugging-resources/"}, {"label": "Atlassian: Incident postmortem templates and guidance", "url": "https://www.atlassian.com/incident-management/postmortem"}, {"label": "Brendan Gregg: Linux performance analysis in 60 seconds", "url": "https://netflixtechblog.com/linux-performance-analysis-in-60-000-milliseconds-accc10403c55"}, {"label": "YouTube search: IBM Technology - what is observability", "url": "https://www.youtube.com/results?search_query=IBM+Technology+what+is+observability"}, {"label": "YouTube search: how to debug production issues", "url": "https://www.youtube.com/results?search_query=how+to+debug+production+issues+software+engineers"}, {"label": "YouTube search: git bisect tutorial", "url": "https://www.youtube.com/results?search_query=git+bisect+tutorial"}, {"label": "YouTube search: blameless postmortem root cause analysis example", "url": "https://www.youtube.com/results?search_query=blameless+postmortem+root+cause+analysis+example"}],
+            "priority": "core",
+            "completed": false
           }
         ],
         "project": {
           "title": "Legacy code makeover",
-          "description": "Take an untested project, add tests, refactor it safely, and document what changed and why.",
-          "demonstrates": ["testing-strategy", "architecture-docs", "technical-debt"]
+          "description": "Take an untested project, add tests, refactor it safely, and document what changed and why. Include a root-cause analysis of one bug you diagnosed from evidence.",
+          "demonstrates": ["testing-strategy", "architecture-docs", "technical-debt", "production-debugging"]
         }
       }
     ],
@@ -1887,12 +1953,23 @@
             "resources": [{"label": "OWASP: Threat Modeling", "url": "https://owasp.org/www-community/Threat_Modeling"}, {"label": "OWASP Cheat Sheet Series: Threat Modeling", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html"}, {"label": "OWASP: Threat Modeling Process", "url": "https://owasp.org/www-community/Threat_Modeling_Process"}, {"label": "Threat Modeling Manifesto - values and principles", "url": "https://www.threatmodelingmanifesto.org/"}, {"label": "Microsoft Learn: Threat Modeling Tool STRIDE threats", "url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats"}, {"label": "Microsoft Learn: Getting started with threat modeling", "url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-getting-started"}, {"label": "OWASP Cheat Sheet: Attack Surface Analysis", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Attack_Surface_Analysis_Cheat_Sheet.html"}, {"label": "YouTube: MIT OpenCourseWare – 1. Introduction, Threat Models (1:17:13)", "url": "https://www.youtube.com/watch?v=GqmQg-cszw4"}, {"label": "YouTube: AWS Events – AWS re:Invent 2025 - Threat-Modeling-As-Code - Transforming Your Threat… (53:59)", "url": "https://www.youtube.com/watch?v=F5GU_d6Gfuc"}],
             "priority": "core",
             "completed": false
+          },
+          {
+            "id": "privacy-compliance-a11y",
+            "name": "Privacy, Compliance & Accessibility",
+            "description": "Build software that respects personal data, meets common legal requirements, and is usable by everyone.",
+            "outcomes": ["Classify personal data and apply minimization, retention, and consent rules", "Explain the main obligations of GDPR, CCPA, and accessibility law for a product", "Audit an interface against WCAG success criteria"],
+            "estimatedHours": 14,
+            "prerequisites": ["security-fundamentals"],
+            "resources": [{"label": "GDPR.eu: Complete guide to GDPR compliance", "url": "https://gdpr.eu/"}, {"label": "GDPR.eu: Checklist for developers", "url": "https://gdpr.eu/checklist/"}, {"label": "California AG: California Consumer Privacy Act (CCPA)", "url": "https://oag.ca.gov/privacy/ccpa"}, {"label": "NIST Privacy Framework", "url": "https://www.nist.gov/privacy-framework"}, {"label": "OWASP Privacy Risks Project: Top 10 privacy risks", "url": "https://owasp.org/www-project-top-10-privacy-risks/"}, {"label": "OWASP Cheat Sheet: User Privacy Protection", "url": "https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html"}, {"label": "W3C: Web Content Accessibility Guidelines (WCAG) 2.2 quick reference", "url": "https://www.w3.org/WAI/WCAG22/quickref/"}, {"label": "W3C WAI: Easy Checks - a first review of web accessibility", "url": "https://www.w3.org/WAI/test-evaluate/easy-checks/"}, {"label": "WebAIM: Introduction to web accessibility", "url": "https://webaim.org/intro/"}, {"label": "Deque: axe DevTools accessibility testing", "url": "https://www.deque.com/axe/"}, {"label": "YouTube search: web accessibility fundamentals A11ycasts", "url": "https://www.youtube.com/results?search_query=A11ycasts+web+accessibility+fundamentals"}, {"label": "YouTube search: GDPR explained for software developers", "url": "https://www.youtube.com/results?search_query=GDPR+explained+for+software+developers"}, {"label": "YouTube search: privacy by design for engineers", "url": "https://www.youtube.com/results?search_query=privacy+by+design+for+software+engineers"}, {"label": "YouTube search: WCAG 2.2 accessibility audit tutorial", "url": "https://www.youtube.com/results?search_query=WCAG+2.2+accessibility+audit+tutorial"}],
+            "priority": "core",
+            "completed": false
           }
         ],
         "project": {
           "title": "Vulnerable app write-up",
-          "description": "Find vulnerabilities in a practice app, then patch them and explain the fixes.",
-          "demonstrates": ["web-security", "applied-crypto", "threat-modeling"]
+          "description": "Find vulnerabilities in a practice app, then patch them and explain the fixes. Add a short privacy and accessibility review of the app.",
+          "demonstrates": ["web-security", "applied-crypto", "threat-modeling", "privacy-compliance-a11y"]
         }
       },
       {
@@ -1931,12 +2008,23 @@
             "resources": [{"label": "OWASP DevSecOps Guideline", "url": "https://owasp.org/www-project-devsecops-guideline/"}, {"label": "CSRC: Secure Software Development Framework", "url": "https://csrc.nist.gov/Projects/ssdf"}, {"label": "OWASP DevSecOps Maturity Model", "url": "https://owasp.org/www-project-devsecops-maturity-model/"}, {"label": "OWASP SAMM: Software Assurance Maturity Model", "url": "https://owaspsamm.org/model/"}, {"label": "NIST SP 800-218: Secure Software Development Framework", "url": "https://csrc.nist.gov/pubs/sp/800/218/final"}, {"label": "GitHub Docs: About code scanning", "url": "https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning"}, {"label": "SLSA: Supply-chain security specification v1.0", "url": "https://slsa.dev/spec/v1.0/"}, {"label": "YouTube: TechWorld with Nana – What is DevSecOps? DevSecOps explained in 8 Mins (8:20)", "url": "https://www.youtube.com/watch?v=nrhxNNH5lt0"}, {"label": "YouTube: freeCodeCamp.org – DevSecOps Course for Beginners – API Security (2:02:47)", "url": "https://www.youtube.com/watch?v=JfiWi8RjN-8"}],
             "priority": "core",
             "completed": false
+          },
+          {
+            "id": "supply-chain-security",
+            "name": "Software Supply-Chain Security",
+            "description": "Protect dependencies, build pipelines, and released artifacts from tampering and known vulnerabilities.",
+            "outcomes": ["Automate dependency updates, vulnerability alerts, and secret scanning", "Generate an SBOM and sign build artifacts with provenance", "Harden CI with least-privilege tokens and pinned actions"],
+            "estimatedHours": 16,
+            "prerequisites": ["devsecops"],
+            "resources": [{"label": "SLSA: Supply-chain levels for software artifacts", "url": "https://slsa.dev/spec/v1.0/"}, {"label": "OpenSSF Scorecard: Automated security checks for open-source projects", "url": "https://scorecard.dev/"}, {"label": "Sigstore documentation: Signing and verifying software", "url": "https://docs.sigstore.dev/"}, {"label": "CISA: Software Bill of Materials (SBOM) resources", "url": "https://www.cisa.gov/sbom"}, {"label": "CycloneDX: SBOM standard overview", "url": "https://cyclonedx.org/"}, {"label": "SPDX: Software package data exchange specification", "url": "https://spdx.dev/"}, {"label": "GitHub Docs: Dependabot security updates and version updates", "url": "https://docs.github.com/en/code-security/dependabot"}, {"label": "GitHub Docs: About secret scanning and push protection", "url": "https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning"}, {"label": "GitHub Docs: Security hardening for GitHub Actions", "url": "https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions"}, {"label": "OWASP: A06 Vulnerable and Outdated Components", "url": "https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/"}, {"label": "OWASP Dependency-Check: Identify known vulnerable dependencies", "url": "https://owasp.org/www-project-dependency-check/"}, {"label": "Anchore Syft: Generate SBOMs from images and file systems", "url": "https://github.com/anchore/syft"}, {"label": "YouTube search: software supply chain security explained", "url": "https://www.youtube.com/results?search_query=software+supply+chain+security+explained+SLSA+SBOM"}, {"label": "YouTube search: Sigstore cosign sign container images tutorial", "url": "https://www.youtube.com/results?search_query=Sigstore+cosign+sign+container+images+tutorial"}, {"label": "YouTube search: secure GitHub Actions workflows best practices", "url": "https://www.youtube.com/results?search_query=secure+GitHub+Actions+workflows+best+practices"}],
+            "priority": "core",
+            "completed": false
           }
         ],
         "project": {
           "title": "Security assessment portfolio piece",
-          "description": "Assess a lab environment end to end and deliver a professional report with remediation steps.",
-          "demonstrates": ["pentesting", "incident-response", "devsecops"]
+          "description": "Assess a lab environment end to end and deliver a professional report with remediation steps, including a hardened build pipeline and SBOM.",
+          "demonstrates": ["pentesting", "incident-response", "devsecops", "supply-chain-security"]
         }
       }
     ],

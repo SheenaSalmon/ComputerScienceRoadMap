@@ -617,12 +617,23 @@
             "resources": [{"label": "OpenAI API documentation", "url": "https://platform.openai.com/docs"}, {"label": "OpenAI: Streaming API responses - server-sent events", "url": "https://platform.openai.com/docs/guides/streaming-responses"}, {"label": "OpenAI: Error codes - handling API failures", "url": "https://platform.openai.com/docs/guides/error-codes"}, {"label": "OpenAI: Rate limits - backoff and retry guidance", "url": "https://platform.openai.com/docs/guides/rate-limits"}, {"label": "Anthropic Docs: Streaming Messages - streaming responses", "url": "https://docs.anthropic.com/en/docs/build-with-claude/streaming"}, {"label": "OpenAI: Conversation state - managing multi-turn chats", "url": "https://platform.openai.com/docs/guides/conversation-state"}, {"label": "YouTube: Tech With Tim – How To Build an API with Python (LLM Integration, FastAPI, Ollama & More) (21:17)", "url": "https://www.youtube.com/watch?v=cy6EAp4iNN4"}, {"label": "YouTube: IBM Technology – MCP vs API: Simplifying AI Agent Integration with External Data (13:11)", "url": "https://www.youtube.com/watch?v=7j1t3UZA1TY"}],
             "priority": "core",
             "completed": false
+          },
+          {
+            "id": "genai-ai-literacy",
+            "name": "AI Use-Case Selection & Data Governance",
+            "description": "Decide where AI belongs in a product, how to check its quality, and how to protect sensitive data and meet policy requirements.",
+            "outcomes": ["Judge whether an AI feature fits the problem, risk level, and fallback options", "Define quality checks, failure cases, and human-review steps", "Classify data and avoid sending sensitive information to unapproved AI services"],
+            "estimatedHours": 10,
+            "prerequisites": ["genai-llm-basics"],
+            "resources": [{"label": "Elements of AI: Free introductory course on what AI can and cannot do", "url": "https://www.elementsofai.com/"}, {"label": "Google PAIR: People + AI Guidebook - designing human-centered AI features", "url": "https://pair.withgoogle.com/guidebook/"}, {"label": "NIST: AI Risk Management Framework - govern, map, measure, manage", "url": "https://www.nist.gov/itl/ai-risk-management-framework"}, {"label": "OWASP: LLM02 Sensitive Information Disclosure", "url": "https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/"}, {"label": "Microsoft: Responsible AI principles and practices", "url": "https://www.microsoft.com/en-us/ai/responsible-ai"}, {"label": "EU Artificial Intelligence Act: Overview of risk categories and obligations", "url": "https://artificialintelligenceact.eu/high-level-summary/"}, {"label": "OpenAI: Safety best practices - human review and adversarial testing", "url": "https://platform.openai.com/docs/guides/safety-best-practices"}, {"label": "YouTube: 3Blue1Brown – Transformers, the tech behind LLMs | Deep Learning Chapter 5", "url": "https://www.youtube.com/watch?v=wjZofJX0v4M"}, {"label": "YouTube: Andrej Karpathy – How I use LLMs (2:11:12)", "url": "https://www.youtube.com/watch?v=EWvNQjAaOHw"}, {"label": "YouTube search: responsible AI and data privacy for developers", "url": "https://www.youtube.com/results?search_query=responsible+AI+data+privacy+for+developers+LLM"}],
+            "priority": "core",
+            "completed": false
           }
         ],
         "project": {
           "title": "Structured-output assistant",
-          "description": "Build a chat assistant that returns validated structured data.",
-          "demonstrates": ["genai-llm-basics", "genai-prompting", "genai-api-integration"]
+          "description": "Build a chat assistant that returns validated structured data, with a short AI-use risk and data-handling note.",
+          "demonstrates": ["genai-llm-basics", "genai-prompting", "genai-api-integration", "genai-ai-literacy"]
         }
       },
       {

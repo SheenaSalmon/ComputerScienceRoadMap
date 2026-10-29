@@ -1350,15 +1350,76 @@
             ],
             "priority": "optional",
             "completed": false
+          },
+          {
+            "id": "portfolio-evidence-delivery",
+            "name": "Evidence-Driven Project Delivery",
+            "description": "Ship one flagship project with proof of quality, security, operations, and decisions that a hiring team can verify.",
+            "outcomes": [
+              "Deploy a project with automated tests, security checks, and monitoring",
+              "Publish measurable results such as test coverage, performance, and cost",
+              "Write a concise engineering write-up covering trade-offs and lessons learned"
+            ],
+            "estimatedHours": 20,
+            "prerequisites": [
+              "portfolio-case-studies"
+            ],
+            "resources": [
+              {"label": "DORA: The four key delivery metrics", "url": "https://dora.dev/guides/dora-metrics-four-keys/"},
+              {"label": "The Twelve-Factor App: Methodology for deployable services", "url": "https://12factor.net/"},
+              {"label": "Google SRE Book: Reliable product launches at scale", "url": "https://sre.google/sre-book/reliable-product-launches/"},
+              {"label": "Architecture Decision Records: ADR overview", "url": "https://adr.github.io/"},
+              {"label": "GitHub Docs: Using GitHub Actions for CI", "url": "https://docs.github.com/en/actions/about-github-actions/about-continuous-integration-with-github-actions"},
+              {"label": "GitHub Docs: Creating releases", "url": "https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository"},
+              {"label": "GitHub Docs: What is GitHub Pages?", "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages"},
+              {"label": "OpenSSF Scorecard: Automated security health checks for repositories", "url": "https://scorecard.dev/"},
+              {"label": "Make a README: A guide to writing a good README", "url": "https://www.makeareadme.com/"},
+              {"label": "YouTube search: DORA metrics explained for engineering teams", "url": "https://www.youtube.com/results?search_query=DORA+metrics+explained+four+keys"},
+              {"label": "YouTube search: how to build a portfolio project that gets software engineering interviews", "url": "https://www.youtube.com/results?search_query=software+engineer+portfolio+project+that+gets+interviews"},
+              {"label": "YouTube search: GitHub Actions CI/CD pipeline full tutorial", "url": "https://www.youtube.com/results?search_query=GitHub+Actions+CI+CD+pipeline+full+tutorial"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "portfolio-technical-leadership",
+            "name": "Technical Leadership Basics",
+            "description": "Lead work without formal authority by scoping ambiguity, mentoring, and aligning people around decisions.",
+            "outcomes": [
+              "Turn an ambiguous problem into a scoped plan with owners and milestones",
+              "Run an effective meeting and record decisions and actions",
+              "Mentor a teammate and give actionable feedback"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "portfolio-career-planning"
+            ],
+            "resources": [
+              {"label": "Staff Eng: Guides - leading projects and technical vision", "url": "https://staffeng.com/guides/"},
+              {"label": "Charity Majors: The Engineer/Manager Pendulum", "url": "https://charity.wtf/2017/05/11/the-engineer-manager-pendulum/"},
+              {"label": "Julia Evans: Get your work recognized - write a brag document", "url": "https://jvns.ca/blog/brag-documents/"},
+              {"label": "Google re:Work: Guide - Manager feedback and coaching practices", "url": "https://rework.withgoogle.com/guides/managers-coach-your-team/steps/introduction/"},
+              {"label": "Google re:Work: Guide - Set goals with OKRs", "url": "https://rework.withgoogle.com/guides/set-goals-with-okrs/steps/introduction/"},
+              {"label": "Atlassian Team Playbook: Meeting and decision plays", "url": "https://www.atlassian.com/team-playbook/plays"},
+              {"label": "Lara Hogan: Resources on feedback, mentoring, and leadership", "url": "https://larahogan.me/resources/"},
+              {"label": "Progression.fyi: Engineering career frameworks", "url": "https://www.progression.fyi/"},
+              {"label": "YouTube search: technical leadership without authority", "url": "https://www.youtube.com/results?search_query=technical+leadership+without+authority+senior+engineer"},
+              {"label": "YouTube search: how to mentor junior engineers", "url": "https://www.youtube.com/results?search_query=how+to+mentor+junior+software+engineers"},
+              {"label": "YouTube search: running effective engineering meetings", "url": "https://www.youtube.com/results?search_query=running+effective+engineering+meetings+decisions+action+items"}
+            ],
+            "priority": "optional",
+            "completed": false
           }
         ],
         "project": {
           "title": "Career transition plan",
-          "description": "Present a role-aligned portfolio and decision framework for opportunities and negotiation.",
+          "description": "Present a role-aligned portfolio and decision framework for opportunities and negotiation. Include one flagship project with deployment, tests, security checks, monitoring, and a write-up, plus a leadership example such as a scoped plan or mentoring log.",
           "demonstrates": [
             "portfolio-positioning",
             "portfolio-negotiation",
-            "portfolio-career-planning"
+            "portfolio-career-planning",
+            "portfolio-evidence-delivery",
+            "portfolio-technical-leadership"
           ]
         }
       }

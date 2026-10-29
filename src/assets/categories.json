@@ -61,6 +61,7 @@
     "tracks": [
       { "id": "cloud", "label": "Cloud & DevOps" },
       { "id": "sre", "label": "Site Reliability (SRE)" },
+      { "id": "platform", "label": "Platform Engineering" },
       { "id": "security", "label": "Cybersecurity" },
       { "id": "distributed", "label": "Distributed Systems" },
       { "id": "blockchain", "label": "Blockchain & Web3" },
