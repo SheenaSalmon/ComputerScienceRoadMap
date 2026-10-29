@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import Header from './Header'
 import Roadmap from './RoadMap'
 import categories from './assets/categories.json'
@@ -9,6 +9,27 @@ import "./App.css";
 
 // Track ids in categories.json must match keys in the merged roadmap data
 const DEFAULT_TRACK = "frontend";
+
+// Curated entry points shown above the full index
+const FEATURED = [
+  { id: "foundations", kicker: "New to CS" },
+  { id: "lang-python", kicker: "First language" },
+  { id: "frontend", kicker: "Build for the web" },
+  { id: "backend", kicker: "Servers & APIs" },
+  { id: "ai", kicker: "Machine learning" },
+  { id: "interviews", kicker: "Land the job" },
+];
+
+const totalTracks = categories.reduce((sum, category) => sum + category.tracks.length, 0);
+
+const prefersReducedMotion = () =>
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const scrollToElement = (element) =>
+  element?.scrollIntoView({
+    behavior: prefersReducedMotion() ? "auto" : "smooth",
+    block: "start",
+  });
 
 // Find the category that owns a track (used for accent colors and default expansion)
 const findCategory = (trackId) =>
@@ -43,9 +64,23 @@ const trackSkillIds = Object.fromEntries(
 );
 const allSkillIds = new Set(Object.values(trackSkillIds).flat());
 
+const trackLabels = Object.fromEntries(
+  categories.flatMap((category) => category.tracks.map((track) => [track.id, track.label])),
+);
+
+const trackHours = (trackId) =>
+  roadmapData[trackId]?.levels
+    .flatMap((level) => level.skills)
+    .reduce((sum, skill) => sum + (skill.estimatedHours || 0), 0) ?? 0;
+
 function App() {
   const { completed, toggle, reset, exportData, importData } = useProgress();
   const fileInput = useRef(null);
+  const searchInput = useRef(null);
+  const browserRef = useRef(null);
+  const roadmapRef = useRef(null);
+  const [scrollTick, setScrollTick] = useState(0);
+  const [categoryFilter, setCategoryFilter] = useState("all");
   const [resourceFilter, setResourceFilter] = useState("all");
   const [transferMessage, setTransferMessage] = useState("");
   const [selectedTrack, setSelectedTrack] = useState(DEFAULT_TRACK);
@@ -58,10 +93,17 @@ function App() {
   const activeCategory = findCategory(selectedTrack);
   const searchTerms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
   const isSearching = searchTerms.length > 0;
+  const isFiltered = categoryFilter !== "all";
+  // Search results and a single-domain filter are always shown open
+  const locked = isSearching || isFiltered;
 
   // While searching, keep only tracks that contain every search word and drop empty categories
   const visibleCategories = useMemo(() => {
-    if (searchTerms.length === 0) return categories;
+    if (searchTerms.length === 0) {
+      return categoryFilter === "all"
+        ? categories
+        : categories.filter((category) => category.id === categoryFilter);
+    }
     return categories
       .map((category) => ({
         ...category,
@@ -72,7 +114,77 @@ function App() {
       .filter((category) => category.tracks.length > 0);
     // searchTerms is derived from query, so query is the real dependency
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]);
+  }, [query, categoryFilter]);
+
+  const visibleTrackCount = visibleCategories.reduce((sum, c) => sum + c.tracks.length, 0);
+
+  // Selecting a track brings its roadmap into view and moves focus there for keyboard and screen reader users
+  const selectTrack = (trackId) => {
+    setSelectedTrack(trackId);
+    setScrollTick((tick) => tick + 1);
+  };
+
+  useEffect(() => {
+    if (scrollTick === 0) return;
+    roadmapRef.current?.focus({ preventScroll: true });
+    scrollToElement(roadmapRef.current);
+  }, [scrollTick]);
+
+  const chooseCategory = (categoryId) => {
+    setCategoryFilter(categoryId);
+    setQuery("");
+    scrollToElement(browserRef.current);
+  };
+
+  // Press "/" anywhere outside a form field to jump to search
+  useEffect(() => {
+    const onKeyDown = (event) => {
+      if (event.key !== "/" || event.metaKey || event.ctrlKey || event.altKey) return;
+      const target = event.target;
+      if (target.closest("input, textarea, select, [contenteditable='true']")) return;
+      event.preventDefault();
+      searchInput.current?.focus();
+      searchInput.current?.select();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
+  const onSearchKeyDown = (event) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      if (query) setQuery("");
+      else event.currentTarget.blur();
+    } else if (event.key === "Enter" && isSearching) {
+      const first = visibleCategories[0]?.tracks[0];
+      if (first) selectTrack(first.id);
+    } else if (event.key === "ArrowDown") {
+      const firstTab = document.querySelector(".track-nav .track-tab");
+      if (firstTab) {
+        event.preventDefault();
+        firstTab.focus();
+      }
+    }
+  };
+
+  // Arrow keys move between track buttons so the whole index is reachable without tabbing through every one
+  const onTrackNavKeyDown = (event) => {
+    if (!event.target.classList.contains("track-tab")) return;
+    if (event.metaKey || event.ctrlKey || event.altKey) return;
+    const tabs = [...event.currentTarget.querySelectorAll(".track-tab")];
+    const index = tabs.indexOf(event.target);
+    let next;
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") next = tabs[Math.min(index + 1, tabs.length - 1)];
+    else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+      if (index === 0) next = searchInput.current;
+      else next = tabs[index - 1];
+    } else if (event.key === "Home") next = tabs[0];
+    else if (event.key === "End") next = tabs[tabs.length - 1];
+    if (next) {
+      event.preventDefault();
+      next.focus();
+    }
+  };
 
   const toggleCategory = (categoryId) => {
     setExpanded((current) => {
@@ -122,7 +234,37 @@ function App() {
     <div className="app-shell" data-category={activeCategory?.id}>
       <Header />
 
-      <section className="track-browser" aria-labelledby="track-browser-title">
+      {/* Sticky domain bar: always one tap from any domain, even deep in a roadmap */}
+      <nav className="domain-bar" aria-label="Domains">
+        <div className="domain-chips">
+          <button
+            type="button"
+            className="domain-chip"
+            aria-pressed={!isFiltered}
+            onClick={() => chooseCategory("all")}
+          >
+            All<span className="chip-count">{totalTracks}</span>
+          </button>
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              type="button"
+              className="domain-chip"
+              data-category={category.id}
+              aria-pressed={categoryFilter === category.id}
+              onClick={() => chooseCategory(category.id)}
+            >
+              {category.label}
+              <span className="chip-count">{category.tracks.length}</span>
+            </button>
+          ))}
+        </div>
+        <span className="now-reading" title={roadmapData[selectedTrack]?.title}>
+          Reading: <strong>{trackLabels[selectedTrack]}</strong>
+        </span>
+      </nav>
+
+      <section className="track-browser" ref={browserRef} aria-labelledby="track-browser-title">
         <div className="browser-heading">
           <div>
             <p className="eyebrow browser-kicker">The index / {String(categories.length).padStart(2, "0")} domains</p>
@@ -165,6 +307,39 @@ function App() {
       <p className="visually-hidden" role="status">{transferMessage}</p>
       {transferMessage && <p className="transfer-message small muted">{transferMessage}</p>}
 
+      {!locked && (
+        <section className="featured" aria-labelledby="featured-title">
+          <div className="featured-heading">
+            <h3 id="featured-title" className="eyebrow">Start here</h3>
+            <span className="muted small">Popular first routes</span>
+          </div>
+          <div className="featured-grid">
+            {FEATURED.map((item) => {
+              const done = doneInTrack(item.id);
+              const total = trackSkillIds[item.id]?.length ?? 0;
+              const hours = trackHours(item.id);
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  className="featured-card"
+                  data-category={findCategory(item.id)?.id}
+                  aria-current={selectedTrack === item.id ? "true" : undefined}
+                  onClick={() => selectTrack(item.id)}
+                >
+                  <span className="featured-kicker">{item.kicker}</span>
+                  <span className="featured-title">{trackLabels[item.id]}</span>
+                  <span className="featured-meta">
+                    {total} skills{hours > 0 && ` · ~${hours} hrs`}
+                    {done > 0 && ` · ${done}/${total} done`}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
       <div className="track-toolbar">
         <div className="search-box">
           <label htmlFor="track-search" className="visually-hidden">
@@ -172,15 +347,32 @@ function App() {
           </label>
           <input
             id="track-search"
+            ref={searchInput}
             type="search"
             className="search-input"
             placeholder="Find a track or skill..."
             value={query}
             onChange={(event) => setQuery(event.target.value)}
+            onKeyDown={onSearchKeyDown}
+            aria-describedby="search-help"
           />
+          {!query && <kbd className="search-hint" aria-hidden="true">/</kbd>}
+          <p id="search-help" className="visually-hidden">
+            Press slash to focus search. Enter opens the first result. Down arrow moves to the results, and Escape clears.
+          </p>
+          <p className="result-count" role="status" aria-live="polite">
+            {isSearching
+              ? `${visibleTrackCount} of ${totalTracks} tracks match “${query.trim()}”`
+              : isFiltered
+                ? `${visibleTrackCount} tracks in ${visibleCategories[0]?.label}`
+                : `${totalTracks} tracks across ${categories.length} domains`}
+            {isSearching && visibleTrackCount > 0 && (
+              <span className="search-tip"> · Enter opens the first result, ↓ browses</span>
+            )}
+          </p>
         </div>
-        {/* Expand/collapse all is hidden while searching, since results are always expanded */}
-        {!isSearching && (
+        {/* Expand/collapse all is hidden while results are locked open */}
+        {!locked && (
           <div className="toolbar-actions">
             <button type="button" className="link-button" onClick={() => setAllExpanded(true)}>
               Expand all
@@ -192,17 +384,10 @@ function App() {
         )}
       </div>
 
-      {/* Announce the result count to screen readers as the user types */}
-      <p className="visually-hidden" role="status">
-        {isSearching
-          ? `${visibleCategories.reduce((sum, c) => sum + c.tracks.length, 0)} matching tracks`
-          : ""}
-      </p>
-
-      <nav className="track-nav" aria-label="Roadmap tracks">
+      <nav className="track-nav" aria-label="Roadmap tracks" onKeyDown={onTrackNavKeyDown}>
         {visibleCategories.map((category) => {
-          // Search results are always shown; otherwise respect the user's choice
-          const isOpen = isSearching || expanded.has(category.id);
+          // Search results and the domain filter are always shown; otherwise respect the user's choice
+          const isOpen = locked || expanded.has(category.id);
           const panelId = `category-panel-${category.id}`;
           const holdsSelection = category.tracks.some((track) => track.id === selectedTrack);
           return (
@@ -213,7 +398,7 @@ function App() {
                   className="group-toggle"
                   aria-expanded={isOpen}
                   aria-controls={panelId}
-                  disabled={isSearching}
+                  disabled={locked}
                   onClick={() => toggleCategory(category.id)}
                 >
                   <span className="chevron" aria-hidden="true">{isOpen ? "▾" : "▸"}</span>
@@ -234,7 +419,7 @@ function App() {
                       className="track-tab"
                       // aria-pressed exposes the selected track to assistive technology
                       aria-pressed={selectedTrack === track.id}
-                      onClick={() => setSelectedTrack(track.id)}
+                      onClick={() => selectTrack(track.id)}
                     >
                       {track.label}
                       {doneInTrack(track.id) > 0 && (
@@ -256,13 +441,15 @@ function App() {
       )}
       </section>
 
-      <Roadmap
-        category={selectedTrack}
-        completed={completed}
-        onToggle={toggle}
-        resourceFilter={resourceFilter}
-        onResourceFilter={setResourceFilter}
-      />
+      <div id="roadmap-view" className="roadmap-view" ref={roadmapRef} tabIndex={-1} aria-label={`${roadmapData[selectedTrack]?.title ?? "Roadmap"} roadmap`}>
+        <Roadmap
+          category={selectedTrack}
+          completed={completed}
+          onToggle={toggle}
+          resourceFilter={resourceFilter}
+          onResourceFilter={setResourceFilter}
+        />
+      </div>
     </div>
   )
 }
