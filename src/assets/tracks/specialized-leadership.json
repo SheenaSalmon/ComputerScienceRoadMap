@@ -20,10 +20,12 @@
             "estimatedHours": 8,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "IBM Quantum Learning",
-                "url": "https://learning.quantum.ibm.com/"
-              },
+              {"label": "IBM Quantum Learning", "url": "https://learning.quantum.ibm.com/"},
+              {"label": "Microsoft Learn: The qubit - states and measurement", "url": "https://learn.microsoft.com/en-us/azure/quantum/concepts-the-qubit"},
+              {"label": "Wikipedia: Qubit - state vectors and measurement", "url": "https://en.wikipedia.org/wiki/Qubit"},
+              {"label": "Wikipedia: Bloch sphere - geometric picture of a qubit", "url": "https://en.wikipedia.org/wiki/Bloch_sphere"},
+              {"label": "Quantum Country: Quantum Computing for the Very Curious", "url": "https://quantum.country/qcvc"},
+              {"label": "IBM Quantum Learning: Basics of quantum information course", "url": "https://quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information"},
               {"label": "YouTube: Sabine Hossenfelder – The Problem with Quantum Measurement (6:57)", "url": "https://www.youtube.com/watch?v=Be3HlA_9968"},
               {"label": "YouTube: The Quantum Garage – An Example of Quantum Measurement (4:22)", "url": "https://www.youtube.com/watch?v=R9QIj4bRuxM"}
             ],
@@ -43,10 +45,11 @@
               "quantum-qubits"
             ],
             "resources": [
-              {
-                "label": "IBM Quantum Learning",
-                "url": "https://learning.quantum.ibm.com/"
-              },
+              {"label": "IBM Quantum Learning", "url": "https://learning.quantum.ibm.com/"},
+              {"label": "Wikipedia: Quantum logic gate - Pauli, Hadamard, CNOT", "url": "https://en.wikipedia.org/wiki/Quantum_logic_gate"},
+              {"label": "Microsoft Learn: Multiple qubits - entanglement and two-qubit gates", "url": "https://learn.microsoft.com/en-us/azure/quantum/concepts-multiple-qubits"},
+              {"label": "Cirq docs: Gates - single and two-qubit gates", "url": "https://quantumai.google/cirq/build/gates"},
+              {"label": "Wikipedia: Controlled NOT gate (CNOT)", "url": "https://en.wikipedia.org/wiki/Controlled_NOT_gate"},
               {"label": "YouTube: freeCodeCamp.org – Quantum Computing Course – Math and Theory for Beginners (1:36:04)", "url": "https://www.youtube.com/watch?v=tsbCSkvHhMo"},
               {"label": "YouTube: 3Blue1Brown – But what is quantum computing? (Grover's Algorithm) (36:54)", "url": "https://www.youtube.com/watch?v=RQWpF2Gb-gU"}
             ],
@@ -66,10 +69,12 @@
               "quantum-gates"
             ],
             "resources": [
-              {
-                "label": "Qiskit Documentation",
-                "url": "https://docs.quantum.ibm.com/"
-              },
+              {"label": "Qiskit Documentation", "url": "https://docs.quantum.ibm.com/"},
+              {"label": "Wikipedia: Quantum circuit - gate model diagrams", "url": "https://en.wikipedia.org/wiki/Quantum_circuit"},
+              {"label": "Qiskit docs: Construct circuits", "url": "https://quantum.cloud.ibm.com/docs/en/guides/construct-circuits"},
+              {"label": "Microsoft Learn: Quantum circuits - diagrams and measurement", "url": "https://learn.microsoft.com/en-us/azure/quantum/concepts-circuits"},
+              {"label": "Cirq docs: Circuits - moments and operations", "url": "https://quantumai.google/cirq/build/circuits"},
+              {"label": "Qiskit docs: Bit-ordering in the Qiskit SDK", "url": "https://quantum.cloud.ibm.com/docs/en/guides/bit-ordering"},
               {"label": "YouTube: 3Blue1Brown – But what is quantum computing? (Grover's Algorithm) (36:54)", "url": "https://www.youtube.com/watch?v=RQWpF2Gb-gU"},
               {"label": "YouTube: freeCodeCamp.org – Quantum Computing Course – Math and Theory for Beginners (1:36:04)", "url": "https://www.youtube.com/watch?v=tsbCSkvHhMo"}
             ],
@@ -104,10 +109,12 @@
               "quantum-circuits"
             ],
             "resources": [
-              {
-                "label": "Qiskit Documentation",
-                "url": "https://docs.quantum.ibm.com/"
-              },
+              {"label": "Qiskit Documentation", "url": "https://docs.quantum.ibm.com/"},
+              {"label": "Qiskit docs: Hello world - build, run, and plot a first circuit", "url": "https://quantum.cloud.ibm.com/docs/en/guides/hello-world"},
+              {"label": "Qiskit docs: Install and set up Qiskit", "url": "https://quantum.cloud.ibm.com/docs/en/guides/install-qiskit"},
+              {"label": "Qiskit docs: Introduction to primitives - Sampler and Estimator", "url": "https://quantum.cloud.ibm.com/docs/en/guides/primitives"},
+              {"label": "Qiskit docs: Qiskit SDK API reference", "url": "https://quantum.cloud.ibm.com/docs/en/api/qiskit"},
+              {"label": "IBM Quantum Learning: Quantum computing in practice course", "url": "https://quantum.cloud.ibm.com/learning/en/courses/quantum-computing-in-practice"},
               {"label": "YouTube: Qiskit – Quantum Computing 101: How to Get Started (20:13)", "url": "https://www.youtube.com/watch?v=l5I9M3C2wzg"},
               {"label": "YouTube: IBM Technology – How to program a quantum computer using Qiskit (6:00)", "url": "https://www.youtube.com/watch?v=Jx7IuJMYtJM"}
             ],
@@ -127,10 +134,12 @@
               "quantum-qiskit"
             ],
             "resources": [
-              {
-                "label": "IBM Quantum Learning",
-                "url": "https://learning.quantum.ibm.com/"
-              },
+              {"label": "IBM Quantum Learning", "url": "https://learning.quantum.ibm.com/"},
+              {"label": "Qiskit docs: Simulate quantum circuits with Qiskit Aer", "url": "https://quantum.cloud.ibm.com/docs/en/guides/simulate-with-qiskit-aer"},
+              {"label": "Qiskit Aer docs: high-performance quantum simulators", "url": "https://qiskit.github.io/qiskit-aer/"},
+              {"label": "Cirq docs: Simulation - wavefunction and sampling", "url": "https://quantumai.google/cirq/simulate/simulation"},
+              {"label": "Qiskit docs: Statevector quantum info class", "url": "https://quantum.cloud.ibm.com/docs/en/api/qiskit/qiskit.quantum_info.Statevector"},
+              {"label": "Wikipedia: Quantum state - state vectors and measurement probabilities", "url": "https://en.wikipedia.org/wiki/Quantum_state"},
               {"label": "YouTube: Quantum ML – Quantum Machine Learning - 20 - Variational Circuits and Quantum Simulation 1… (5:57)", "url": "https://www.youtube.com/watch?v=bVymBcvE7BA"}
             ],
             "priority": "core",
@@ -149,10 +158,12 @@
               "quantum-circuit-simulation"
             ],
             "resources": [
-              {
-                "label": "IBM Quantum Learning",
-                "url": "https://learning.quantum.ibm.com/"
-              },
+              {"label": "IBM Quantum Learning", "url": "https://learning.quantum.ibm.com/"},
+              {"label": "Wikipedia: Quantum decoherence", "url": "https://en.wikipedia.org/wiki/Quantum_decoherence"},
+              {"label": "Wikipedia: Noisy intermediate-scale quantum era", "url": "https://en.wikipedia.org/wiki/Noisy_intermediate-scale_quantum_era"},
+              {"label": "Wikipedia: Quantum error correction", "url": "https://en.wikipedia.org/wiki/Quantum_error_correction"},
+              {"label": "Qiskit docs: Error mitigation and suppression techniques", "url": "https://quantum.cloud.ibm.com/docs/en/guides/error-mitigation-and-suppression-techniques"},
+              {"label": "Preskill: Quantum Computing in the NISQ era and beyond", "url": "https://arxiv.org/abs/1801.00862"},
               {"label": "YouTube: Qiskit – Understanding Noise in Near-Term Quantum Computers with Haimeng Zhang: Qiskit… (47:52)", "url": "https://www.youtube.com/watch?v=w--HZ4QXugA"},
               {"label": "YouTube: Gemini Center on Quantum Technology – Limitations of noisy quantum algorithms (1:03:01)", "url": "https://www.youtube.com/watch?v=j8Z7EXFpMh4"}
             ],
@@ -187,10 +198,12 @@
               "quantum-noise"
             ],
             "resources": [
-              {
-                "label": "IBM Quantum Learning",
-                "url": "https://learning.quantum.ibm.com/"
-              },
+              {"label": "IBM Quantum Learning", "url": "https://learning.quantum.ibm.com/"},
+              {"label": "Wikipedia: Amplitude amplification", "url": "https://en.wikipedia.org/wiki/Amplitude_amplification"},
+              {"label": "Wikipedia: Deutsch-Jozsa algorithm - interference speedup", "url": "https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm"},
+              {"label": "Wikipedia: Quantum Fourier transform", "url": "https://en.wikipedia.org/wiki/Quantum_Fourier_transform"},
+              {"label": "IBM Quantum Learning: Fundamentals of quantum algorithms course", "url": "https://quantum.cloud.ibm.com/learning/en/courses/fundamentals-of-quantum-algorithms"},
+              {"label": "Wikipedia: Quantum algorithm - overview of speedups", "url": "https://en.wikipedia.org/wiki/Quantum_algorithm"},
               {"label": "YouTube: Qiskit – Quantum vs Classical: Deutsch & Deutsch-Jozsa Algorithms Explained (19:08)", "url": "https://www.youtube.com/watch?v=QcK0GK7DUh8"},
               {"label": "YouTube: 3Blue1Brown – But what is quantum computing? (Grover's Algorithm) (36:54)", "url": "https://www.youtube.com/watch?v=RQWpF2Gb-gU"}
             ],
@@ -210,10 +223,11 @@
               "quantum-algorithmic-ideas"
             ],
             "resources": [
-              {
-                "label": "IBM Quantum Learning",
-                "url": "https://learning.quantum.ibm.com/"
-              },
+              {"label": "IBM Quantum Learning", "url": "https://learning.quantum.ibm.com/"},
+              {"label": "Wikipedia: Grover's algorithm", "url": "https://en.wikipedia.org/wiki/Grover%27s_algorithm"},
+              {"label": "Wikipedia: Shor's algorithm", "url": "https://en.wikipedia.org/wiki/Shor%27s_algorithm"},
+              {"label": "Microsoft Learn: Grover's search algorithm", "url": "https://learn.microsoft.com/en-us/azure/quantum/concepts-grovers"},
+              {"label": "Wikipedia: Quantum phase estimation algorithm - core of Shor", "url": "https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm"},
               {"label": "YouTube: quantumfy – What is Grover's Algorithm? (5:50)", "url": "https://www.youtube.com/watch?v=_cDIzwycANg"}
             ],
             "priority": "core",
@@ -232,10 +246,12 @@
               "quantum-grover-shor"
             ],
             "resources": [
-              {
-                "label": "Qiskit Documentation",
-                "url": "https://docs.quantum.ibm.com/"
-              },
+              {"label": "Qiskit Documentation", "url": "https://docs.quantum.ibm.com/"},
+              {"label": "IBM Quantum: Compute resources and processors", "url": "https://quantum.cloud.ibm.com/computers"},
+              {"label": "IBM Quantum Learning: Utility-scale quantum computing course", "url": "https://quantum.cloud.ibm.com/learning/en/courses/utility-scale-quantum-computing"},
+              {"label": "Qiskit docs: Compute services overview", "url": "https://quantum.cloud.ibm.com/docs/en/guides/compute-services"},
+              {"label": "Wikipedia: Quantum volume - benchmarking device capability", "url": "https://en.wikipedia.org/wiki/Quantum_volume"},
+              {"label": "Wikipedia: Threshold theorem - noise and fault tolerance", "url": "https://en.wikipedia.org/wiki/Quantum_threshold_theorem"},
               {"label": "YouTube: Qiskit – Lecture 3.1 - Noise in Quantum Computers - part 1 (54:31)", "url": "https://www.youtube.com/watch?v=kV0RsKXSqRg"}
             ],
             "priority": "core",
@@ -279,10 +295,11 @@
             "estimatedHours": 10,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "ROS 2 Documentation",
-                "url": "https://docs.ros.org/en/rolling/"
-              },
+              {"label": "ROS 2 Documentation", "url": "https://docs.ros.org/en/rolling/"},
+              {"label": "ROS 2 Tutorials: Introduction to tf2 - coordinate frames", "url": "https://docs.ros.org/en/rolling/Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html"},
+              {"label": "REP 103: Standard Units of Measure and Coordinate Conventions", "url": "https://www.ros.org/reps/rep-0103.html"},
+              {"label": "REP 105: Coordinate Frames for Mobile Platforms", "url": "https://www.ros.org/reps/rep-0105.html"},
+              {"label": "Wikipedia: Rotation matrix - orientation representation", "url": "https://en.wikipedia.org/wiki/Rotation_matrix"},
               {"label": "YouTube: Dr. Trefor Bazett – Rotation Matrices || Linear Algebra Fundamentals (21:24)", "url": "https://www.youtube.com/watch?v=rUKsjo1nReE"}
             ],
             "priority": "core",
@@ -299,10 +316,11 @@
             "estimatedHours": 10,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "ROS 2 Documentation",
-                "url": "https://docs.ros.org/en/rolling/"
-              },
+              {"label": "ROS 2 Documentation", "url": "https://docs.ros.org/en/rolling/"},
+              {"label": "Wikipedia: Lidar - ranging sensors", "url": "https://en.wikipedia.org/wiki/Lidar"},
+              {"label": "Wikipedia: Inertial measurement unit", "url": "https://en.wikipedia.org/wiki/Inertial_measurement_unit"},
+              {"label": "Wikipedia: Rotary encoder - joint and wheel position sensing", "url": "https://en.wikipedia.org/wiki/Rotary_encoder"},
+              {"label": "Wikipedia: Servomotor - actuators in robotics", "url": "https://en.wikipedia.org/wiki/Servomotor"},
               {"label": "YouTube: CrashCourse – How Engineering Robots Works: Crash Course Engineering #33 (11:02)", "url": "https://www.youtube.com/watch?v=uNfUAJBuZ0s"},
               {"label": "YouTube: DigiKey – Introduction to ROS Part 1: What is the Robot Operating System? | DigiKey (29:12)", "url": "https://www.youtube.com/watch?v=mjrxf8EFSb8"}
             ],
@@ -322,10 +340,12 @@
               "robotics-sensors-actuators"
             ],
             "resources": [
-              {
-                "label": "ROS 2 Documentation",
-                "url": "https://docs.ros.org/en/rolling/"
-              },
+              {"label": "ROS 2 Documentation", "url": "https://docs.ros.org/en/rolling/"},
+              {"label": "ROS 2 Tutorials: Understanding nodes", "url": "https://docs.ros.org/en/rolling/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html"},
+              {"label": "ROS 2 Tutorials: Understanding topics", "url": "https://docs.ros.org/en/rolling/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html"},
+              {"label": "ROS 2 Tutorials: Writing a simple publisher and subscriber (Python)", "url": "https://docs.ros.org/en/rolling/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html"},
+              {"label": "ROS 2 Tutorials: Creating custom msg and srv files", "url": "https://docs.ros.org/en/rolling/Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces.html"},
+              {"label": "ROS 2 Concepts: About topics", "url": "https://docs.ros.org/en/rolling/Concepts/Basic/About-Topics.html"},
               {"label": "YouTube: DigiKey – Introduction to ROS Part 1: What is the Robot Operating System? | DigiKey (29:12)", "url": "https://www.youtube.com/watch?v=mjrxf8EFSb8"},
               {"label": "YouTube: DeepLearning & Research . AI – ROS 2 Explained: How Robots Really Think & Communicate | DDS vs ROS1 (7:03)", "url": "https://www.youtube.com/watch?v=BlNJd_VEJew"}
             ],
@@ -360,10 +380,11 @@
               "robotics-robot-frames"
             ],
             "resources": [
-              {
-                "label": "ROS 2 Documentation",
-                "url": "https://docs.ros.org/en/rolling/"
-              },
+              {"label": "ROS 2 Documentation", "url": "https://docs.ros.org/en/rolling/"},
+              {"label": "Wikipedia: Forward kinematics", "url": "https://en.wikipedia.org/wiki/Forward_kinematics"},
+              {"label": "Wikipedia: Inverse kinematics", "url": "https://en.wikipedia.org/wiki/Inverse_kinematics"},
+              {"label": "Wikipedia: Denavit-Hartenberg parameters", "url": "https://en.wikipedia.org/wiki/Denavit%E2%80%93Hartenberg_parameters"},
+              {"label": "ROS 2 Tutorials: Building a visual robot model with URDF", "url": "https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html"},
               {"label": "YouTube: CrashCourse – How Engineering Robots Works: Crash Course Engineering #33 (11:02)", "url": "https://www.youtube.com/watch?v=uNfUAJBuZ0s"}
             ],
             "priority": "core",
@@ -382,10 +403,12 @@
               "robotics-kinematics"
             ],
             "resources": [
-              {
-                "label": "ROS 2 Documentation",
-                "url": "https://docs.ros.org/en/rolling/"
-              },
+              {"label": "ROS 2 Documentation", "url": "https://docs.ros.org/en/rolling/"},
+              {"label": "Wikipedia: PID controller", "url": "https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller"},
+              {"label": "Control Tutorials for MATLAB and Simulink: PID controller design", "url": "https://ctms.engin.umich.edu/CTMS/index.php?example=Introduction&section=ControlPID"},
+              {"label": "ros2_control documentation - controllers and hardware interfaces", "url": "https://control.ros.org/rolling/index.html"},
+              {"label": "Wikipedia: Feedback - closed-loop control", "url": "https://en.wikipedia.org/wiki/Feedback"},
+              {"label": "Wikipedia: Control theory - fundamentals and stability", "url": "https://en.wikipedia.org/wiki/Control_theory"},
               {"label": "YouTube: NVIDIA – How Robots Learn to Be Robots: Training, Simulation, and Real World Deployment (4:14)", "url": "https://www.youtube.com/watch?v=S4tvirlG8sQ"}
             ],
             "priority": "core",
@@ -404,10 +427,11 @@
               "robotics-ros2-basics"
             ],
             "resources": [
-              {
-                "label": "ROS 2 Documentation",
-                "url": "https://docs.ros.org/en/rolling/"
-              },
+              {"label": "ROS 2 Documentation", "url": "https://docs.ros.org/en/rolling/"},
+              {"label": "Gazebo docs: Getting started with Gazebo", "url": "https://gazebosim.org/docs/latest/getstarted/"},
+              {"label": "ROS 2 Tutorials: Using URDF with robot_state_publisher", "url": "https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Using-URDF-with-Robot-State-Publisher-py.html"},
+              {"label": "ROS 2 Tutorials: URDF main tutorial index", "url": "https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/URDF-Main.html"},
+              {"label": "Wikipedia: Robotics simulator", "url": "https://en.wikipedia.org/wiki/Robotics_simulator"},
               {"label": "YouTube: NVIDIA Omniverse – Training a Robot from Scratch in Simulation, from URDF to OpenUSD (1:22:48)", "url": "https://www.youtube.com/watch?v=_HMk7I-vSBQ"},
               {"label": "YouTube: NVIDIA – How Robots Learn to Be Robots: Training, Simulation, and Real World Deployment (4:14)", "url": "https://www.youtube.com/watch?v=S4tvirlG8sQ"}
             ],
@@ -443,10 +467,11 @@
               "robotics-sensors-actuators"
             ],
             "resources": [
-              {
-                "label": "ROS 2 Documentation",
-                "url": "https://docs.ros.org/en/rolling/"
-              },
+              {"label": "ROS 2 Documentation", "url": "https://docs.ros.org/en/rolling/"},
+              {"label": "Wikipedia: Kalman filter - state estimation from noisy sensors", "url": "https://en.wikipedia.org/wiki/Kalman_filter"},
+              {"label": "Wikipedia: Simultaneous localization and mapping", "url": "https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping"},
+              {"label": "OpenCV: Tutorials - image processing and feature detection", "url": "https://docs.opencv.org/4.x/d9/df8/tutorial_root.html"},
+              {"label": "Wikipedia: Monte Carlo localization - particle filters", "url": "https://en.wikipedia.org/wiki/Monte_Carlo_localization"},
               {"label": "YouTube: Computerphile – SLAM Robot Mapping - Computerphile (11:35)", "url": "https://www.youtube.com/watch?v=-XU54IsG8Vo"}
             ],
             "priority": "core",
@@ -466,10 +491,11 @@
               "robotics-control"
             ],
             "resources": [
-              {
-                "label": "ROS 2 Documentation",
-                "url": "https://docs.ros.org/en/rolling/"
-              },
+              {"label": "ROS 2 Documentation", "url": "https://docs.ros.org/en/rolling/"},
+              {"label": "Wikipedia: Motion planning", "url": "https://en.wikipedia.org/wiki/Motion_planning"},
+              {"label": "Wikipedia: Rapidly-exploring random tree", "url": "https://en.wikipedia.org/wiki/Rapidly-exploring_random_tree"},
+              {"label": "Wikipedia: A* search algorithm", "url": "https://en.wikipedia.org/wiki/A*_search_algorithm"},
+              {"label": "MoveIt 2: Your first project - motion planning with MoveIt", "url": "https://moveit.picknik.ai/main/doc/tutorials/your_first_project/your_first_project.html"},
               {"label": "YouTube: Computerphile – Path Planning for Robotics - Computerphile (29:45)", "url": "https://www.youtube.com/watch?v=LHHEOjd0z3s"}
             ],
             "priority": "core",
@@ -489,10 +515,9 @@
               "robotics-simulation"
             ],
             "resources": [
-              {
-                "label": "ROS 2 Documentation",
-                "url": "https://docs.ros.org/en/rolling/"
-              },
+              {"label": "ROS 2 Documentation", "url": "https://docs.ros.org/en/rolling/"},
+              {"label": "ROS 2 Tutorials: Launch files - starting systems together", "url": "https://docs.ros.org/en/rolling/Tutorials/Intermediate/Launch/Creating-Launch-Files.html"},
+              {"label": "ROS 2 Tutorials: Testing - unit and integration tests", "url": "https://docs.ros.org/en/rolling/Tutorials/Intermediate/Testing/Testing-Main.html"},
               {"label": "YouTube: Stanford Autonomous Systems Laboratory – LIVE - Principles of Robotic Autonomy Robotics Showcase (17:51)", "url": "https://www.youtube.com/watch?v=G7XGFamDA3Q"},
               {"label": "YouTube: 3Blue1Brown – Integration and the fundamental theorem of calculus | Chapter 8, Essence of calculus (20:46)", "url": "https://www.youtube.com/watch?v=rfG8ce4nNh0"}
             ],
@@ -537,10 +562,12 @@
             "estimatedHours": 10,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "Biopython",
-                "url": "https://biopython.org/"
-              },
+              {"label": "Biopython", "url": "https://biopython.org/"},
+              {"label": "Biopython Tutorial: Sequence objects - DNA, RNA and protein strings", "url": "https://biopython.org/docs/latest/Tutorial/chapter_seq_objects.html"},
+              {"label": "Wikipedia: Nucleic acid sequence - how DNA/RNA sequences are written", "url": "https://en.wikipedia.org/wiki/Nucleic_acid_sequence"},
+              {"label": "Wikipedia: Genetic code - codons and translation to protein", "url": "https://en.wikipedia.org/wiki/Genetic_code"},
+              {"label": "Wikipedia: Central dogma of molecular biology - DNA to RNA to protein", "url": "https://en.wikipedia.org/wiki/Central_dogma_of_molecular_biology"},
+              {"label": "Wikipedia: Protein primary structure - amino acid sequences", "url": "https://en.wikipedia.org/wiki/Protein_primary_structure"},
               {"label": "YouTube: CrashCourse – DNA Structure and Replication: Crash Course Biology #10 (12:35)", "url": "https://www.youtube.com/watch?v=8kK2zwjRV0M"}
             ],
             "priority": "core",
@@ -559,10 +586,12 @@
               "bioinformatics-sequence-basics"
             ],
             "resources": [
-              {
-                "label": "Biopython",
-                "url": "https://biopython.org/"
-              },
+              {"label": "Biopython", "url": "https://biopython.org/"},
+              {"label": "UCSC Genome Browser: Data file formats FAQ - BED, GFF, WIG, BAM and more", "url": "https://genome.ucsc.edu/FAQ/FAQformat.html"},
+              {"label": "Wikipedia: FASTA format - sequence record structure", "url": "https://en.wikipedia.org/wiki/FASTA_format"},
+              {"label": "Wikipedia: FASTQ format - reads with quality scores", "url": "https://en.wikipedia.org/wiki/FASTQ_format"},
+              {"label": "SAM/BAM specification - alignment record format (hts-specs)", "url": "https://samtools.github.io/hts-specs/SAMv1.pdf"},
+              {"label": "VCF 4.2 specification - variant call format", "url": "https://samtools.github.io/hts-specs/VCFv4.2.pdf"},
               {"label": "YouTube: Stanford Deep Data Research Center – Intro to Genomics & Bioinformatics: Experimenting with Genomic Data (1:01:47)", "url": "https://www.youtube.com/watch?v=r5OQ-4Zmo50"}
             ],
             "priority": "core",
@@ -579,10 +608,12 @@
             "estimatedHours": 12,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "Biopython",
-                "url": "https://biopython.org/"
-              },
+              {"label": "Biopython", "url": "https://biopython.org/"},
+              {"label": "OpenIntro Statistics - free textbook on summaries and inference", "url": "https://www.openintro.org/book/os/"},
+              {"label": "Wikipedia: Standard error - uncertainty of an estimate", "url": "https://en.wikipedia.org/wiki/Standard_error"},
+              {"label": "Wikipedia: Confidence interval - quantifying uncertainty", "url": "https://en.wikipedia.org/wiki/Confidence_interval"},
+              {"label": "Wikipedia: Multiple comparisons problem - many tests in omics data", "url": "https://en.wikipedia.org/wiki/Multiple_comparisons_problem"},
+              {"label": "Wikipedia: False discovery rate - controlling errors in genomics", "url": "https://en.wikipedia.org/wiki/False_discovery_rate"},
               {"label": "YouTube: Harvard Global Orthopaedics Collaborative – Introduction in Biostatistics (28:38)", "url": "https://www.youtube.com/watch?v=VjtKcVL3nCw"},
               {"label": "YouTube: CrashCourse – What Is Statistics: Crash Course Statistics #1 (13:00)", "url": "https://www.youtube.com/watch?v=sxQaBpKfDRk"}
             ],
@@ -617,10 +648,12 @@
               "bioinformatics-genomics-formats"
             ],
             "resources": [
-              {
-                "label": "Biopython",
-                "url": "https://biopython.org/"
-              }
+              {"label": "Biopython", "url": "https://biopython.org/"},
+              {"label": "Biopython Tutorial and Cookbook - full guide to common workflows", "url": "https://biopython.org/docs/latest/Tutorial/index.html"},
+              {"label": "Biopython Tutorial: Quick start - first steps with Seq and SeqIO", "url": "https://biopython.org/docs/latest/Tutorial/chapter_quick_start.html"},
+              {"label": "Biopython Tutorial: Sequence annotation objects - SeqRecord and features", "url": "https://biopython.org/docs/latest/Tutorial/chapter_seq_annot.html"},
+              {"label": "Biopython Tutorial: Cookbook - SeqIO recipes for parsing and filtering", "url": "https://biopython.org/docs/latest/Tutorial/chapter_cookbook.html"},
+              {"label": "Biopython Tutorial: BLAST - running and parsing searches", "url": "https://biopython.org/docs/latest/Tutorial/chapter_blast.html"}
             ],
             "priority": "core",
             "completed": false
@@ -638,10 +671,12 @@
               "bioinformatics-biopython"
             ],
             "resources": [
-              {
-                "label": "Biopython",
-                "url": "https://biopython.org/"
-              },
+              {"label": "Biopython", "url": "https://biopython.org/"},
+              {"label": "Biopython Tutorial: Pairwise sequence alignment - PairwiseAligner", "url": "https://biopython.org/docs/latest/Tutorial/chapter_pairwise.html"},
+              {"label": "Biopython Tutorial: Multiple sequence alignment objects", "url": "https://biopython.org/docs/latest/Tutorial/chapter_msa.html"},
+              {"label": "NCBI BLAST Help: BLAST search concepts and parameters", "url": "https://blast.ncbi.nlm.nih.gov/doc/blast-help/"},
+              {"label": "Wikipedia: Needleman-Wunsch algorithm - global alignment", "url": "https://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm"},
+              {"label": "Wikipedia: Smith-Waterman algorithm - local alignment", "url": "https://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm"},
               {"label": "YouTube: MIT OpenCourseWare – 2. Local Alignment (BLAST) and Statistics (1:16:48)", "url": "https://www.youtube.com/watch?v=6Udqou3vmng"}
             ],
             "priority": "core",
@@ -660,10 +695,11 @@
               "bioinformatics-biopython"
             ],
             "resources": [
-              {
-                "label": "Biopython",
-                "url": "https://biopython.org/"
-              },
+              {"label": "Biopython", "url": "https://biopython.org/"},
+              {"label": "Ensembl: GFF and GTF file format guide", "url": "https://www.ensembl.org/info/website/upload/gff.html"},
+              {"label": "Wikipedia: Gene prediction - finding genes in genomic DNA", "url": "https://en.wikipedia.org/wiki/Gene_prediction"},
+              {"label": "Wikipedia: General feature format - GFF columns and attributes", "url": "https://en.wikipedia.org/wiki/General_feature_format"},
+              {"label": "NCBI: RefSeq annotation overview - curated genome annotation", "url": "https://www.ncbi.nlm.nih.gov/refseq/about/"},
               {"label": "YouTube: Stanford Deep Data Research Center – Intro to Genomics & Bioinformatics: Experimenting with Genomic Data (1:01:47)", "url": "https://www.youtube.com/watch?v=r5OQ-4Zmo50"}
             ],
             "priority": "core",
@@ -698,10 +734,12 @@
               "bioinformatics-genome-annotation"
             ],
             "resources": [
-              {
-                "label": "Biopython",
-                "url": "https://biopython.org/"
-              },
+              {"label": "Biopython", "url": "https://biopython.org/"},
+              {"label": "Nextflow Docs: Getting started - processes, channels and workflows", "url": "https://www.nextflow.io/docs/latest/index.html"},
+              {"label": "Snakemake Tutorial: Basics - rules, wildcards and dependencies", "url": "https://snakemake.readthedocs.io/en/stable/tutorial/basics.html"},
+              {"label": "nf-core: Documentation - community bioinformatics pipeline standards", "url": "https://nf-co.re/docs"},
+              {"label": "Common Workflow Language: User Guide - portable pipeline descriptions", "url": "https://www.commonwl.org/user_guide/"},
+              {"label": "Snakemake Docs: Best practices - structuring workflows", "url": "https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html"},
               {"label": "YouTube: freeCodeCamp.org – Python for Bioinformatics - Drug Discovery Using Machine Learning and Data Analysis (1:42:54)", "url": "https://www.youtube.com/watch?v=jBlTQjcKuaY"},
               {"label": "YouTube: Stanford Deep Data Research Center – Breaking into Bioinformatics: Practical Skills & Strategies to Stand Out with… (56:21)", "url": "https://www.youtube.com/watch?v=xF0SdO1ms8I"}
             ],
@@ -721,10 +759,12 @@
               "bioinformatics-pipeline-design"
             ],
             "resources": [
-              {
-                "label": "Biopython",
-                "url": "https://biopython.org/"
-              },
+              {"label": "Biopython", "url": "https://biopython.org/"},
+              {"label": "The Turing Way: Guide for reproducible research", "url": "https://book.the-turing-way.org/reproducible-research/reproducible-research.html"},
+              {"label": "PLOS Comp Bio: Ten Simple Rules for Reproducible Computational Research", "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285"},
+              {"label": "Conda Docs: Managing environments - reproducible software stacks", "url": "https://docs.conda.io/projects/conda/en/stable/user-guide/tasks/manage-environments.html"},
+              {"label": "Software Carpentry: Version control with Git lesson", "url": "https://swcarpentry.github.io/git-novice/"},
+              {"label": "Docker Docs: Get started - containerizing analyses", "url": "https://docs.docker.com/get-started/"},
               {"label": "YouTube: Nextflow and Seqera – Nextflow Beyond Bioinformatics: Pipelines for Physics, Social Science, and AI (28:29)", "url": "https://www.youtube.com/watch?v=TT0mbDtchP4"}
             ],
             "priority": "core",
@@ -744,10 +784,12 @@
               "bioinformatics-reproducibility"
             ],
             "resources": [
-              {
-                "label": "Biopython",
-                "url": "https://biopython.org/"
-              },
+              {"label": "Biopython", "url": "https://biopython.org/"},
+              {"label": "Ensembl: Variant Effect Predictor documentation", "url": "https://www.ensembl.org/info/docs/tools/vep/index.html"},
+              {"label": "NCBI ClinVar: Introduction - variant clinical significance", "url": "https://www.ncbi.nlm.nih.gov/clinvar/intro/"},
+              {"label": "Ensembl: Variant consequence prediction - effect terms explained", "url": "https://www.ensembl.org/info/genome/variation/prediction/predicted_data.html"},
+              {"label": "Wikipedia: Genome-wide association study - association and interpretation", "url": "https://en.wikipedia.org/wiki/Genome-wide_association_study"},
+              {"label": "Wikipedia: Gene Ontology - functional enrichment terms", "url": "https://en.wikipedia.org/wiki/Gene_Ontology"},
               {"label": "YouTube: Data Science Learning Community Videos – Computational Genomics: Introduction to R for Genomic Data Analysis (comp_genom01 2) (58:23)", "url": "https://www.youtube.com/watch?v=FwmcE-avReA"}
             ],
             "priority": "core",
@@ -791,10 +833,12 @@
             "estimatedHours": 10,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "LLNL HPC Tutorials",
-                "url": "https://hpc-tutorials.llnl.gov/"
-              },
+              {"label": "LLNL HPC Tutorials", "url": "https://hpc-tutorials.llnl.gov/"},
+              {"label": "LLNL: Introduction to Parallel Computing tutorial - concepts and terminology", "url": "https://hpc.llnl.gov/documentation/tutorials/introduction-parallel-computing-tutorial"},
+              {"label": "Wikipedia: Parallel computing - forms of parallelism", "url": "https://en.wikipedia.org/wiki/Parallel_computing"},
+              {"label": "Wikipedia: Flynn's taxonomy - SISD, SIMD, MIMD", "url": "https://en.wikipedia.org/wiki/Flynn%27s_taxonomy"},
+              {"label": "The Art of HPC (Eijkhout) - free HPC textbooks", "url": "https://theartofhpc.com/"},
+              {"label": "Wikipedia: Shared memory vs distributed memory models", "url": "https://en.wikipedia.org/wiki/Distributed_memory"},
               {"label": "YouTube: ByteByteGo – Concurrency Vs Parallelism! (4:13)", "url": "https://www.youtube.com/watch?v=RlM9AfWf1WU"},
               {"label": "YouTube: Google Cloud Tech – What is High Performance Computing? (5:29)", "url": "https://www.youtube.com/watch?v=nIBu1EFYmBU"}
             ],
@@ -814,10 +858,12 @@
               "hpc-parallel-concepts"
             ],
             "resources": [
-              {
-                "label": "LLNL HPC Tutorials",
-                "url": "https://hpc-tutorials.llnl.gov/"
-              },
+              {"label": "LLNL HPC Tutorials", "url": "https://hpc-tutorials.llnl.gov/"},
+              {"label": "Wikipedia: Data parallelism - same operation over data partitions", "url": "https://en.wikipedia.org/wiki/Data_parallelism"},
+              {"label": "Wikipedia: Task parallelism - concurrent distinct tasks", "url": "https://en.wikipedia.org/wiki/Task_parallelism"},
+              {"label": "Wikipedia: Embarrassingly parallel - independent workloads", "url": "https://en.wikipedia.org/wiki/Embarrassingly_parallel"},
+              {"label": "Wikipedia: Algorithmic skeleton - map, reduce, pipeline patterns", "url": "https://en.wikipedia.org/wiki/Algorithmic_skeleton"},
+              {"label": "Wikipedia: Prefix sum - parallel scan primitive", "url": "https://en.wikipedia.org/wiki/Prefix_sum"},
               {"label": "YouTube: PyCon 2016 – Mike McKerns - Efficient Python for High-Performance Parallel Computing - PyCon 2016 (3:09:05)", "url": "https://www.youtube.com/watch?v=6zQhUlMYea4"}
             ],
             "priority": "core",
@@ -834,10 +880,11 @@
             "estimatedHours": 8,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "LLNL HPC Tutorials",
-                "url": "https://hpc-tutorials.llnl.gov/"
-              },
+              {"label": "LLNL HPC Tutorials", "url": "https://hpc-tutorials.llnl.gov/"},
+              {"label": "Wikipedia: Roofline model - bounding achievable performance", "url": "https://en.wikipedia.org/wiki/Roofline_model"},
+              {"label": "Wikipedia: Speedup - measuring parallel gains", "url": "https://en.wikipedia.org/wiki/Speedup"},
+              {"label": "Wikipedia: Benchmark (computing) - fair measurement practice", "url": "https://en.wikipedia.org/wiki/Benchmark_(computing)"},
+              {"label": "Wikipedia: FLOPS - floating-point throughput metric", "url": "https://en.wikipedia.org/wiki/FLOPS"},
               {"label": "YouTube: Google Cloud Tech – What is High Performance Computing? (5:29)", "url": "https://www.youtube.com/watch?v=nIBu1EFYmBU"}
             ],
             "priority": "core",
@@ -871,10 +918,12 @@
               "hpc-parallel-patterns"
             ],
             "resources": [
-              {
-                "label": "OpenMP Resources",
-                "url": "https://www.openmp.org/resources/"
-              },
+              {"label": "OpenMP Resources", "url": "https://www.openmp.org/resources/"},
+              {"label": "OpenMP 5.2 Specification (HTML) - directives and runtime", "url": "https://www.openmp.org/spec-html/5.2/openmp.html"},
+              {"label": "OpenMP: Books - recommended texts for learning OpenMP", "url": "https://www.openmp.org/resources/openmp-books/"},
+              {"label": "LLNL: OpenMP tutorial - directives, work sharing, synchronization", "url": "https://hpc-tutorials.llnl.gov/openmp/"},
+              {"label": "ENCCS: OpenMP for GPUs - offload directives lesson", "url": "https://enccs.github.io/openmp-gpu/"},
+              {"label": "Wikipedia: OpenMP - overview and example constructs", "url": "https://en.wikipedia.org/wiki/OpenMP"},
               {"label": "YouTube: Stanford Online – Stanford CS149 I Parallel Computing I 2023 I Lecture 1 - Why Parallelism? Why… (1:12:22)", "url": "https://www.youtube.com/watch?v=V1tINV2-9p4"}
             ],
             "priority": "core",
@@ -893,10 +942,12 @@
               "hpc-parallel-patterns"
             ],
             "resources": [
-              {
-                "label": "LLNL HPC Tutorials",
-                "url": "https://hpc-tutorials.llnl.gov/"
-              },
+              {"label": "LLNL HPC Tutorials", "url": "https://hpc-tutorials.llnl.gov/"},
+              {"label": "LLNL: MPI tutorial - message passing concepts and routines", "url": "https://hpc-tutorials.llnl.gov/mpi/"},
+              {"label": "MPI Tutorial: Hello World - first MPI program", "url": "https://mpitutorial.com/tutorials/mpi-hello-world/"},
+              {"label": "MPI Tutorial: Send and receive - point-to-point communication", "url": "https://mpitutorial.com/tutorials/mpi-send-and-receive/"},
+              {"label": "MPI Tutorial: Broadcasting and collective communication", "url": "https://mpitutorial.com/tutorials/mpi-broadcast-and-collective-communication/"},
+              {"label": "MPI Forum: MPI standard documents", "url": "https://www.mpi-forum.org/docs/"},
               {"label": "YouTube: Google Cloud Tech – What is High Performance Computing? (5:29)", "url": "https://www.youtube.com/watch?v=nIBu1EFYmBU"}
             ],
             "priority": "core",
@@ -916,10 +967,12 @@
               "hpc-openmp"
             ],
             "resources": [
-              {
-                "label": "LLNL HPC Tutorials",
-                "url": "https://hpc-tutorials.llnl.gov/"
-              },
+              {"label": "LLNL HPC Tutorials", "url": "https://hpc-tutorials.llnl.gov/"},
+              {"label": "Wikipedia: Amdahl's law - limits of strong scaling", "url": "https://en.wikipedia.org/wiki/Amdahl%27s_law"},
+              {"label": "Wikipedia: Gustafson's law - weak scaling", "url": "https://en.wikipedia.org/wiki/Gustafson%27s_law"},
+              {"label": "Wikipedia: Scalability - strong vs weak scaling", "url": "https://en.wikipedia.org/wiki/Scalability"},
+              {"label": "LLNL: Introduction to Parallel Computing - limits and costs of parallelism", "url": "https://hpc.llnl.gov/documentation/tutorials/introduction-parallel-computing-tutorial#LimitsCosts"},
+              {"label": "Wikipedia: Parallel slowdown - when more cores hurt", "url": "https://en.wikipedia.org/wiki/Parallel_slowdown"},
               {"label": "YouTube: ByteByteGo – Vertical Vs Horizontal Scaling: Key Differences You Should Know (4:34)", "url": "https://www.youtube.com/watch?v=dvRFHG2-uYs"}
             ],
             "priority": "core",
@@ -953,10 +1006,12 @@
               "hpc-parallel-patterns"
             ],
             "resources": [
-              {
-                "label": "CUDA Documentation",
-                "url": "https://docs.nvidia.com/cuda/"
-              },
+              {"label": "CUDA Documentation", "url": "https://docs.nvidia.com/cuda/"},
+              {"label": "NVIDIA: CUDA Programming Guide - GPU programming model", "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/index.html"},
+              {"label": "NVIDIA: CUDA C++ Best Practices Guide - optimization strategies", "url": "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html"},
+              {"label": "NVIDIA Blog: An Even Easier Introduction to CUDA", "url": "https://developer.nvidia.com/blog/even-easier-introduction-cuda/"},
+              {"label": "NVIDIA: CUDA Quick Start Guide - install and build first program", "url": "https://docs.nvidia.com/cuda/cuda-quick-start-guide/index.html"},
+              {"label": "ENCCS: GPU programming - when, why and how", "url": "https://enccs.github.io/gpu-programming/"},
               {"label": "YouTube: freeCodeCamp.org – CUDA Programming Course – High-Performance Computing with GPUs (11:55:11)", "url": "https://www.youtube.com/watch?v=86FAWCzIe_4"},
               {"label": "YouTube: NVIDIA Developer – Accelerating Applications with Parallel Algorithms | CUDA C++ Class Part 1 (2:05:27)", "url": "https://www.youtube.com/watch?v=Sdjn9FOkhnA"}
             ],
@@ -977,10 +1032,11 @@
               "hpc-gpu-cuda"
             ],
             "resources": [
-              {
-                "label": "CUDA Documentation",
-                "url": "https://docs.nvidia.com/cuda/"
-              },
+              {"label": "CUDA Documentation", "url": "https://docs.nvidia.com/cuda/"},
+              {"label": "NVIDIA Nsight Systems: User Guide - timeline profiling", "url": "https://docs.nvidia.com/nsight-systems/UserGuide/index.html"},
+              {"label": "NVIDIA Nsight Compute: Documentation - kernel-level profiling", "url": "https://docs.nvidia.com/nsight-compute/NsightCompute/index.html"},
+              {"label": "Linux perf: Tutorial - CPU sampling and counters", "url": "https://perf.wiki.kernel.org/index.php/Tutorial"},
+              {"label": "GNU gprof manual - function-level profiling", "url": "https://sourceware.org/binutils/docs/gprof/"},
               {"label": "YouTube: NVIDIA Developer – CUDA Tutorials I Profiling and Debugging Applications (10:31)", "url": "https://www.youtube.com/watch?v=dB5Jxwj0PDw"}
             ],
             "priority": "core",
@@ -1001,10 +1057,12 @@
               "hpc-profiling-optimization"
             ],
             "resources": [
-              {
-                "label": "LLNL HPC Tutorials",
-                "url": "https://hpc-tutorials.llnl.gov/"
-              },
+              {"label": "LLNL HPC Tutorials", "url": "https://hpc-tutorials.llnl.gov/"},
+              {"label": "NVIDIA Blog: Introduction to CUDA-Aware MPI", "url": "https://developer.nvidia.com/blog/introduction-cuda-aware-mpi/"},
+              {"label": "Open MPI FAQ: Building and running with CUDA", "url": "https://www.open-mpi.org/faq/?category=runcuda"},
+              {"label": "Open MPI: Documentation - launching hybrid jobs", "url": "https://docs.open-mpi.org/en/main/"},
+              {"label": "ENCCS: OpenMP for GPUs - combining directives with MPI", "url": "https://enccs.github.io/openmp-gpu/"},
+              {"label": "Wikipedia: Message Passing Interface - hybrid models with threads", "url": "https://en.wikipedia.org/wiki/Message_Passing_Interface"},
               {"label": "YouTube: PyCon 2016 – Mike McKerns - Efficient Python for High-Performance Parallel Computing - PyCon 2016 (3:09:05)", "url": "https://www.youtube.com/watch?v=6zQhUlMYea4"}
             ],
             "priority": "core",
@@ -1048,10 +1106,11 @@
             "estimatedHours": 8,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "Google re:Work",
-                "url": "https://rework.withgoogle.com/"
-              },
+              {"label": "Google re:Work", "url": "https://rework.withgoogle.com/"},
+              {"label": "Google re:Work: Identify what makes a great manager", "url": "https://rework.withgoogle.com/intl/en/guides/managers-identify-what-makes-a-great-manager/"},
+              {"label": "Lara Hogan: Questions for your first 1:1 with a new report", "url": "https://larahogan.me/blog/first-one-on-one-questions/"},
+              {"label": "Google re:Work: Following the data - research behind great managers", "url": "https://rework.withgoogle.com/intl/en/guides/following-the-data-the-research-behind-great-managers"},
+              {"label": "Radical Candor: Our approach - care personally, challenge directly", "url": "https://www.radicalcandor.com/our-approach/"},
               {"label": "YouTube: Theo - t3․gg – Engineering Managers: An Important Conversation (9:48)", "url": "https://www.youtube.com/watch?v=7FKvrqg636o"},
               {"label": "YouTube: freeCodeCamp.org – Become a Great Engineering Manager – Course (1:36:49)", "url": "https://www.youtube.com/watch?v=kZdFRXeuCuY"}
             ],
@@ -1071,10 +1130,12 @@
               "engmgmt-one-on-ones"
             ],
             "resources": [
-              {
-                "label": "Google re:Work",
-                "url": "https://rework.withgoogle.com/"
-              },
+              {"label": "Google re:Work", "url": "https://rework.withgoogle.com/"},
+              {"label": "Radical Candor: Our approach - framework for giving feedback", "url": "https://www.radicalcandor.com/our-approach/"},
+              {"label": "Lara Hogan: The Feedback Equation - actionable feedback", "url": "https://larahogan.me/feedback/"},
+              {"label": "Wikipedia: Situational leadership theory - adapting coaching style", "url": "https://en.wikipedia.org/wiki/Situational_leadership_theory"},
+              {"label": "Wikipedia: GROW model - coaching conversations", "url": "https://en.wikipedia.org/wiki/GROW_model"},
+              {"label": "Google re:Work: Managers - coaching and feedback guidance", "url": "https://rework.withgoogle.com/intl/en/subjects/managers"},
               {"label": "YouTube: freeCodeCamp.org – Become a Great Engineering Manager – Course (1:36:49)", "url": "https://www.youtube.com/watch?v=kZdFRXeuCuY"}
             ],
             "priority": "core",
@@ -1093,10 +1154,10 @@
               "engmgmt-one-on-ones"
             ],
             "resources": [
-              {
-                "label": "Google re:Work",
-                "url": "https://rework.withgoogle.com/"
-              },
+              {"label": "Google re:Work", "url": "https://rework.withgoogle.com/"},
+              {"label": "Google re:Work: Understand team effectiveness - psychological safety", "url": "https://rework.withgoogle.com/intl/en/guides/understanding-team-effectiveness/"},
+              {"label": "Wikipedia: Psychological safety - concept and research", "url": "https://en.wikipedia.org/wiki/Psychological_safety"},
+              {"label": "Spotify Squad Health Check model - team health indicators", "url": "https://engineering.atspotify.com/2014/09/squad-health-check-model/"},
               {"label": "YouTube: Harvard Business Review – What Is Psychological Safety? (7:30)", "url": "https://www.youtube.com/watch?v=GZgmoxOgfig"},
               {"label": "YouTube: Harvard Medical School Continuing Education – How Do You Support Psychological Safety? Part 10 (5:30)", "url": "https://www.youtube.com/watch?v=gamBYW3q3rs"}
             ],
@@ -1131,10 +1192,11 @@
               "engmgmt-team-health"
             ],
             "resources": [
-              {
-                "label": "Google re:Work",
-                "url": "https://rework.withgoogle.com/"
-              },
+              {"label": "Google re:Work", "url": "https://rework.withgoogle.com/"},
+              {"label": "Google re:Work: Use structured interviewing", "url": "https://rework.withgoogle.com/intl/en/guides/hiring-use-structured-interviewing/"},
+              {"label": "Google re:Work: Hiring subject hub - evidence-based practices", "url": "https://rework.withgoogle.com/intl/en/subjects/hiring"},
+              {"label": "Google re:Work: Optimizing employee onboarding - data-driven approach", "url": "https://rework.withgoogle.com/intl/en/guides/a-data-driven-approach-to-optimizing-employee-onboarding"},
+              {"label": "Wikipedia: Structured interview - reliability and validity", "url": "https://en.wikipedia.org/wiki/Structured_interview"},
               {"label": "YouTube: Alex The Analyst – What are Hiring Managers Looking For? | Nail the Interview Process! (13:42)", "url": "https://www.youtube.com/watch?v=OISvlkfbntY"}
             ],
             "priority": "core",
@@ -1153,10 +1215,12 @@
               "engmgmt-feedback"
             ],
             "resources": [
-              {
-                "label": "Google re:Work",
-                "url": "https://rework.withgoogle.com/"
-              },
+              {"label": "Google re:Work", "url": "https://rework.withgoogle.com/"},
+              {"label": "Progression.fyi - collection of engineering career ladders", "url": "https://progression.fyi/"},
+              {"label": "StaffEng: Staff archetypes - senior career paths", "url": "https://staffeng.com/guides/staff-archetypes/"},
+              {"label": "StaffEng: What do Staff engineers actually do", "url": "https://staffeng.com/guides/what-do-staff-engineers-actually-do/"},
+              {"label": "Wikipedia: Mentorship - structure and benefits", "url": "https://en.wikipedia.org/wiki/Mentorship"},
+              {"label": "Wikipedia: Career ladder - progression frameworks", "url": "https://en.wikipedia.org/wiki/Career_ladder"},
               {"label": "YouTube: Alien Theory – Exploring The Engineers (30:06)", "url": "https://www.youtube.com/watch?v=jIq4tDz-kBo"}
             ],
             "priority": "core",
@@ -1175,10 +1239,11 @@
               "engmgmt-team-health"
             ],
             "resources": [
-              {
-                "label": "Engineering Leadership",
-                "url": "https://lethain.com/"
-              },
+              {"label": "Engineering Leadership", "url": "https://lethain.com/"},
+              {"label": "DORA: Four key metrics - measuring delivery performance", "url": "https://dora.dev/guides/dora-metrics-four-keys/"},
+              {"label": "DORA: Capabilities - practices that drive delivery", "url": "https://dora.dev/capabilities/"},
+              {"label": "Martin Fowler: Cannot Measure Productivity", "url": "https://martinfowler.com/bliki/CannotMeasureProductivity.html"},
+              {"label": "Atlassian Team Playbook: Retrospective - improving delivery habits", "url": "https://www.atlassian.com/team-playbook/plays/retrospective"},
               {"label": "YouTube: Harvard Business Review – What Makes a Great Leader? (6:24)", "url": "https://www.youtube.com/watch?v=ME5arjlSTGQ"}
             ],
             "priority": "core",
@@ -1212,10 +1277,12 @@
               "engmgmt-delivery-leadership"
             ],
             "resources": [
-              {
-                "label": "Engineering Leadership",
-                "url": "https://lethain.com/"
-              },
+              {"label": "Engineering Leadership", "url": "https://lethain.com/"},
+              {"label": "Martin Fowler: Conway's Law - structure shapes systems", "url": "https://martinfowler.com/bliki/ConwaysLaw.html"},
+              {"label": "Team Topologies: Key concepts - team types and interaction modes", "url": "https://teamtopologies.com/key-concepts"},
+              {"label": "Wikipedia: Conway's law - original statement", "url": "https://en.wikipedia.org/wiki/Conway%27s_law"},
+              {"label": "Wikipedia: Span of control - team sizing and layers", "url": "https://en.wikipedia.org/wiki/Span_of_control"},
+              {"label": "Martin Fowler: Team Topologies - Conway-aware organization", "url": "https://martinfowler.com/bliki/TeamTopologies.html"},
               {"label": "YouTube: FastFlowConf – Vision for an AI-First Team Topology (27:40)", "url": "https://www.youtube.com/watch?v=8ouoRxWKYQI"}
             ],
             "priority": "core",
@@ -1235,10 +1302,12 @@
               "engmgmt-hiring"
             ],
             "resources": [
-              {
-                "label": "Google re:Work",
-                "url": "https://rework.withgoogle.com/"
-              },
+              {"label": "Google re:Work", "url": "https://rework.withgoogle.com/"},
+              {"label": "Google re:Work: Organization and management subject hub", "url": "https://rework.withgoogle.com/intl/en/subjects/org-management"},
+              {"label": "Wikipedia: Objectives and key results - goal-setting system", "url": "https://en.wikipedia.org/wiki/OKR"},
+              {"label": "Atlassian: OKRs guide - setting and tracking goals", "url": "https://www.atlassian.com/agile/agile-at-scale/okr"},
+              {"label": "Wikipedia: Performance management - review cycles and calibration", "url": "https://en.wikipedia.org/wiki/Performance_management"},
+              {"label": "Atlassian Team Playbook: Team goals play", "url": "https://www.atlassian.com/team-playbook/plays/goals-signals-measures"},
               {"label": "YouTube: Systems Engineering: Theory & Practice – Systems Engineering Management (SEM) (50:35)", "url": "https://www.youtube.com/watch?v=PCx6CAqOWGA"}
             ],
             "priority": "core",
@@ -1258,10 +1327,10 @@
               "engmgmt-management-systems"
             ],
             "resources": [
-              {
-                "label": "Engineering Leadership",
-                "url": "https://lethain.com/"
-              },
+              {"label": "Engineering Leadership", "url": "https://lethain.com/"},
+              {"label": "Kotter: 8-step process for leading change", "url": "https://www.kotterinc.com/methodology/8-steps/"},
+              {"label": "Wikipedia: Kotter's 8-step change model", "url": "https://en.wikipedia.org/wiki/John_Kotter"},
+              {"label": "Wikipedia: Change management - approaches and resistance", "url": "https://en.wikipedia.org/wiki/Change_management"},
               {"label": "YouTube: freeCodeCamp.org – Become a Great Engineering Manager – Course (1:36:49)", "url": "https://www.youtube.com/watch?v=kZdFRXeuCuY"}
             ],
             "priority": "core",
@@ -1305,10 +1374,11 @@
             "estimatedHours": 10,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              },
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "Product Talk: Opportunity solution trees - continuous discovery", "url": "https://www.producttalk.org/opportunity-solution-trees/"},
+              {"label": "Product Talk: Continuous discovery habits overview", "url": "https://www.producttalk.org/continuous-discovery/"},
+              {"label": "Wikipedia: Design thinking - empathize and define", "url": "https://en.wikipedia.org/wiki/Design_thinking"},
+              {"label": "Nielsen Norman Group: Usability testing 101", "url": "https://www.nngroup.com/articles/usability-testing-101/"},
               {"label": "YouTube: freeCodeCamp.org – The Business of Building Apps - App Product Management Course for Developers (7:59:57)", "url": "https://www.youtube.com/watch?v=poLzjLt2yqU"}
             ],
             "priority": "core",
@@ -1327,10 +1397,12 @@
               "productmgmt-product-discovery"
             ],
             "resources": [
-              {
-                "label": "Engineering Leadership",
-                "url": "https://lethain.com/"
-              },
+              {"label": "Engineering Leadership", "url": "https://lethain.com/"},
+              {"label": "Atlassian: Product roadmaps - what they are and how to build", "url": "https://www.atlassian.com/agile/product-management/product-roadmaps"},
+              {"label": "ProductPlan: Product roadmap guide", "url": "https://www.productplan.com/learn/product-roadmap/"},
+              {"label": "Atlassian: Roadmap types for agile teams", "url": "https://www.atlassian.com/agile/project-management/roadmaps"},
+              {"label": "Wikipedia: Technology roadmap", "url": "https://en.wikipedia.org/wiki/Technology_roadmap"},
+              {"label": "ProductPlan: Product roadmap glossary - roadmap terms", "url": "https://www.productplan.com/glossary/product-roadmap/"},
               {"label": "YouTube: Beyond Coding – Meta Staff Engineer: What the Best Engineers Do Differently (33:26)", "url": "https://www.youtube.com/watch?v=brNpAU5JmUY"},
               {"label": "YouTube: freeCodeCamp.org – The Business of Building Apps - App Product Management Course for Developers (7:59:57)", "url": "https://www.youtube.com/watch?v=poLzjLt2yqU"}
             ],
@@ -1350,10 +1422,12 @@
               "productmgmt-product-discovery"
             ],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              },
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "Intercom: RICE - simple prioritization for product managers", "url": "https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/"},
+              {"label": "Wikipedia: MoSCoW method - must/should/could/won't", "url": "https://en.wikipedia.org/wiki/MoSCoW_method"},
+              {"label": "Wikipedia: Kano model - customer satisfaction categories", "url": "https://en.wikipedia.org/wiki/Kano_model"},
+              {"label": "Wikipedia: Prioritization - ranking work by value", "url": "https://en.wikipedia.org/wiki/Prioritization"},
+              {"label": "SAFe: Weighted Shortest Job First (WSJF)", "url": "https://framework.scaledagile.com/wsjf"},
               {"label": "YouTube: freeCodeCamp.org – The Business of Building Apps - App Product Management Course for Developers (7:59:57)", "url": "https://www.youtube.com/watch?v=poLzjLt2yqU"}
             ],
             "priority": "core",
@@ -1387,10 +1461,10 @@
               "productmgmt-product-discovery"
             ],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              },
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "Amplitude: North Star Playbook", "url": "https://amplitude.com/books/north-star"},
+              {"label": "Google Research: HEART framework - user-centered metrics", "url": "https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/"},
+              {"label": "Wikipedia: Cohort analysis - retention measurement", "url": "https://en.wikipedia.org/wiki/Cohort_analysis"},
               {"label": "YouTube: Alex The Analyst – What are KPIs and Metrics? | Data Fundamental for Beginners (5:46)", "url": "https://www.youtube.com/watch?v=ItZlTixh6Bs"}
             ],
             "priority": "core",
@@ -1409,10 +1483,12 @@
               "productmgmt-product-roadmaps"
             ],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              },
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "Wikipedia: Stakeholder analysis - mapping influence and interest", "url": "https://en.wikipedia.org/wiki/Stakeholder_analysis"},
+              {"label": "Plain Language Guidelines - clear writing for audiences", "url": "https://www.plainlanguage.gov/guidelines/"},
+              {"label": "Wikipedia: Bottom line up front - structuring updates", "url": "https://en.wikipedia.org/wiki/BLUF_(communication)"},
+              {"label": "Wikipedia: Responsibility assignment matrix (RACI) - clarifying roles", "url": "https://en.wikipedia.org/wiki/Responsibility_assignment_matrix"},
+              {"label": "Wikipedia: Stakeholder management - engaging and informing stakeholders", "url": "https://en.wikipedia.org/wiki/Stakeholder_management"},
               {"label": "YouTube: Stanford Graduate School of Business – Class Takeaways — Essentials of Strategic Communication (5:51)", "url": "https://www.youtube.com/watch?v=MfqPp37KGBQ"}
             ],
             "priority": "core",
@@ -1432,10 +1508,12 @@
               "productmgmt-product-metrics"
             ],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              },
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "Martin Fowler: Feature Toggles - ship incrementally", "url": "https://martinfowler.com/articles/feature-toggles.html"},
+              {"label": "Martin Fowler: Canary Release", "url": "https://martinfowler.com/bliki/CanaryRelease.html"},
+              {"label": "Wikipedia: Minimum viable product", "url": "https://en.wikipedia.org/wiki/Minimum_viable_product"},
+              {"label": "Agile Manifesto: Principles behind the manifesto", "url": "https://agilemanifesto.org/principles.html"},
+              {"label": "Martin Fowler: Parallel Change - safe incremental change", "url": "https://martinfowler.com/bliki/ParallelChange.html"},
               {"label": "YouTube: IxDF - Interaction Design Foundation – Why Perfectionism Isnt Perfect? Minimum Viable Product (MVP) Explained (6:07)", "url": "https://www.youtube.com/watch?v=nra6V-CIOAI"}
             ],
             "priority": "core",
@@ -1470,10 +1548,12 @@
               "productmgmt-stakeholder-communication"
             ],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              },
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "ProductPlan: Product strategy guide", "url": "https://www.productplan.com/learn/product-strategy/"},
+              {"label": "Wikipedia: Porter's five forces analysis", "url": "https://en.wikipedia.org/wiki/Porter%27s_five_forces_analysis"},
+              {"label": "Wikipedia: Value proposition", "url": "https://en.wikipedia.org/wiki/Value_proposition"},
+              {"label": "Wikipedia: SWOT analysis", "url": "https://en.wikipedia.org/wiki/SWOT_analysis"},
+              {"label": "Atlassian: Product strategy playbook", "url": "https://www.atlassian.com/agile/product-management/product-strategy"},
               {"label": "YouTube: Harvard Innovation Labs – How to Build a Product that Scales into a Company (1:05:03)", "url": "https://www.youtube.com/watch?v=r-98YRAF1dY"}
             ],
             "priority": "core",
@@ -1493,10 +1573,12 @@
               "productmgmt-product-metrics"
             ],
             "resources": [
-              {
-                "label": "Engineering Leadership",
-                "url": "https://lethain.com/"
-              },
+              {"label": "Engineering Leadership", "url": "https://lethain.com/"},
+              {"label": "Wikipedia: Project portfolio management", "url": "https://en.wikipedia.org/wiki/Project_portfolio_management"},
+              {"label": "Wikipedia: Opportunity cost - evaluating tradeoffs", "url": "https://en.wikipedia.org/wiki/Opportunity_cost"},
+              {"label": "Wikipedia: Cost of delay - sequencing work", "url": "https://en.wikipedia.org/wiki/Cost_of_delay"},
+              {"label": "SAFe: Lean portfolio management", "url": "https://framework.scaledagile.com/lean-portfolio-management"},
+              {"label": "Martin Fowler: Technical Debt - tradeoff of speed vs quality", "url": "https://martinfowler.com/bliki/TechnicalDebt.html"},
               {"label": "YouTube: ByteByteGo – System Design Was HARD - Until You Knew the Trade-Offs (5:09)", "url": "https://www.youtube.com/watch?v=1nENigGr-a0"}
             ],
             "priority": "core",
@@ -1515,10 +1597,11 @@
               "productmgmt-portfolio-tradeoffs"
             ],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              },
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "The Lean Startup: Principles - build-measure-learn", "url": "https://theleanstartup.com/principles"},
+              {"label": "Wikipedia: A/B testing - controlled experiments", "url": "https://en.wikipedia.org/wiki/A/B_testing"},
+              {"label": "Wikipedia: Lean startup - validated learning", "url": "https://en.wikipedia.org/wiki/Lean_startup"},
+              {"label": "Nielsen Norman Group: Why you only need to test with 5 users", "url": "https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/"},
               {"label": "YouTube: Beyond Coding – Meta Staff Engineer: What the Best Engineers Do Differently (33:26)", "url": "https://www.youtube.com/watch?v=brNpAU5JmUY"}
             ],
             "priority": "core",
@@ -1562,10 +1645,12 @@
             "estimatedHours": 8,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              }
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "Atlassian: Project scope - defining and managing", "url": "https://www.atlassian.com/work-management/project-management/project-scope"},
+              {"label": "Wikipedia: Work breakdown structure", "url": "https://en.wikipedia.org/wiki/Work_breakdown_structure"},
+              {"label": "Wikipedia: Scope creep", "url": "https://en.wikipedia.org/wiki/Scope_creep"},
+              {"label": "Atlassian: User stories with examples and templates", "url": "https://www.atlassian.com/agile/project-management/user-stories"},
+              {"label": "Wikipedia: Project charter", "url": "https://en.wikipedia.org/wiki/Project_charter"}
             ],
             "priority": "core",
             "completed": false
@@ -1583,10 +1668,12 @@
               "projectmgmt-project-scoping"
             ],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              }
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "Joel on Software: Evidence Based Scheduling", "url": "https://www.joelonsoftware.com/2007/10/26/evidence-based-scheduling/"},
+              {"label": "Wikipedia: Cone of uncertainty", "url": "https://en.wikipedia.org/wiki/Cone_of_Uncertainty"},
+              {"label": "Wikipedia: Planning poker", "url": "https://en.wikipedia.org/wiki/Planning_poker"},
+              {"label": "Wikipedia: Three-point estimation", "url": "https://en.wikipedia.org/wiki/Three-point_estimation"},
+              {"label": "Atlassian: Agile estimation techniques", "url": "https://www.atlassian.com/agile/project-management/estimation"}
             ],
             "priority": "core",
             "completed": false
@@ -1604,10 +1691,11 @@
               "projectmgmt-project-scoping"
             ],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              }
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "HBR: Performing a Project Premortem", "url": "https://hbr.org/2007/09/performing-a-project-premortem"},
+              {"label": "Wikipedia: Risk management", "url": "https://en.wikipedia.org/wiki/Risk_management"},
+              {"label": "Wikipedia: Risk register", "url": "https://en.wikipedia.org/wiki/Risk_register"},
+              {"label": "Wikipedia: Failure mode and effects analysis", "url": "https://en.wikipedia.org/wiki/Failure_mode_and_effects_analysis"}
             ],
             "priority": "core",
             "completed": false
@@ -1641,10 +1729,11 @@
               "projectmgmt-risk-management"
             ],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              }
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "Wikipedia: Critical path method", "url": "https://en.wikipedia.org/wiki/Critical_path_method"},
+              {"label": "Wikipedia: Gantt chart", "url": "https://en.wikipedia.org/wiki/Gantt_chart"},
+              {"label": "Wikipedia: Program evaluation and review technique", "url": "https://en.wikipedia.org/wiki/Program_evaluation_and_review_technique"},
+              {"label": "Atlassian: Project planning steps and templates", "url": "https://www.atlassian.com/work-management/project-management/project-planning"}
             ],
             "priority": "core",
             "completed": false
@@ -1662,10 +1751,12 @@
               "projectmgmt-project-planning"
             ],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              },
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "Atlassian: Kanban - boards, WIP limits and flow", "url": "https://www.atlassian.com/agile/kanban"},
+              {"label": "Scrum Guide - official definition of Scrum", "url": "https://scrumguides.org/scrum-guide.html"},
+              {"label": "Kanban Guide - official practice definition", "url": "https://kanbanguides.org/english/"},
+              {"label": "Atlassian: Scrum - sprints, roles and artifacts", "url": "https://www.atlassian.com/agile/scrum"},
+              {"label": "Wikipedia: Kanban (development)", "url": "https://en.wikipedia.org/wiki/Kanban_(development)"},
               {"label": "YouTube: Codex Community – Scrum in 20 mins... (with examples) (19:36)", "url": "https://www.youtube.com/watch?v=SWDhGSZNF9M"}
             ],
             "priority": "core",
@@ -1684,10 +1775,11 @@
               "projectmgmt-project-planning"
             ],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              },
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "Wikipedia: Earned value management - progress measurement", "url": "https://en.wikipedia.org/wiki/Earned_value_management"},
+              {"label": "Wikipedia: Burndown chart", "url": "https://en.wikipedia.org/wiki/Burn_down_chart"},
+              {"label": "Atlassian: Burndown charts - tracking sprint progress", "url": "https://www.atlassian.com/agile/tutorials/burndown-charts"},
+              {"label": "Wikipedia: Traffic light rating (RAG status)", "url": "https://en.wikipedia.org/wiki/Traffic_light_rating_system"},
               {"label": "YouTube: ServiceNow Community – Status Reports in Project Workspace (20:33)", "url": "https://www.youtube.com/watch?v=G_AUnHWlNYc"}
             ],
             "priority": "core",
@@ -1722,10 +1814,12 @@
               "projectmgmt-risk-management"
             ],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              }
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "Semantic Versioning 2.0.0 specification", "url": "https://semver.org/"},
+              {"label": "Keep a Changelog - writing release notes", "url": "https://keepachangelog.com/en/1.1.0/"},
+              {"label": "Google SRE Book: Release engineering", "url": "https://sre.google/sre-book/release-engineering/"},
+              {"label": "Martin Fowler: Blue Green Deployment", "url": "https://martinfowler.com/bliki/BlueGreenDeployment.html"},
+              {"label": "Atlassian: Release management in agile teams", "url": "https://www.atlassian.com/agile/software-development/release-management"}
             ],
             "priority": "core",
             "completed": false
@@ -1744,10 +1838,12 @@
               "projectmgmt-project-planning"
             ],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              },
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "Wikipedia: Dependency (project management)", "url": "https://en.wikipedia.org/wiki/Dependency_(project_management)"},
+              {"label": "Wikipedia: Critical chain project management - resource dependencies", "url": "https://en.wikipedia.org/wiki/Critical_chain_project_management"},
+              {"label": "SAFe: Program increment and dependency planning", "url": "https://framework.scaledagile.com/program-increment"},
+              {"label": "Team Topologies: Key concepts - interaction modes", "url": "https://teamtopologies.com/key-concepts"},
+              {"label": "Martin Fowler: Consumer-Driven Contracts", "url": "https://martinfowler.com/articles/consumerDrivenContracts.html"},
               {"label": "YouTube: Web Dev Simplified – Dependency Inversion Principle Explained - SOLID Design Principles (13:00)", "url": "https://www.youtube.com/watch?v=9oHY5TllWaU"},
               {"label": "YouTube: CodeAesthetic – Dependency Injection, The Best Pattern (13:16)", "url": "https://www.youtube.com/watch?v=J1f5b4vcxCQ"}
             ],
@@ -1768,10 +1864,11 @@
               "projectmgmt-dependency-coordination"
             ],
             "resources": [
-              {
-                "label": "Atlassian Agile",
-                "url": "https://www.atlassian.com/agile"
-              },
+              {"label": "Atlassian Agile", "url": "https://www.atlassian.com/agile"},
+              {"label": "Atlassian Team Playbook: Retrospective", "url": "https://www.atlassian.com/team-playbook/plays/retrospective"},
+              {"label": "Atlassian: Scrum retrospectives", "url": "https://www.atlassian.com/agile/scrum/retrospectives"},
+              {"label": "DORA: Four key metrics", "url": "https://dora.dev/guides/dora-metrics-four-keys/"},
+              {"label": "Wikipedia: Value stream mapping", "url": "https://en.wikipedia.org/wiki/Value-stream_mapping"},
               {"label": "YouTube: BMC Community – DORA Metrics Overview (4:50)", "url": "https://www.youtube.com/watch?v=kxyQPTgz_6k"}
             ],
             "priority": "core",

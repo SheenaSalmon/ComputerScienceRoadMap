@@ -16,7 +16,7 @@
             "outcomes": ["Declare variables with appropriate types", "Use branches and loops", "Compile and run a multi-function program"],
             "estimatedHours": 16,
             "prerequisites": [],
-            "resources": [{"label": "Beej's Guide to C Programming", "url": "https://beej.us/guide/bgc/"}, {"label": "YouTube: CyberFlow – How to Learn C Language (For Hackers) (4:55)", "url": "https://www.youtube.com/watch?v=jNk8TYpyDrA"}],
+            "resources": [{"label": "Beej's Guide to C Programming", "url": "https://beej.us/guide/bgc/"}, {"label": "Beej's Guide to C: Variables and Statements", "url": "https://beej.us/guide/bgc/html/split/variables-and-statements.html"}, {"label": "Beej's Guide to C: Functions", "url": "https://beej.us/guide/bgc/html/split/functions.html"}, {"label": "cppreference: C types - arithmetic and basic types", "url": "https://en.cppreference.com/w/c/language/arithmetic_types"}, {"label": "cppreference: C statements - if, switch, loops", "url": "https://en.cppreference.com/w/c/language/statements"}, {"label": "YouTube: CyberFlow – How to Learn C Language (For Hackers) (4:55)", "url": "https://www.youtube.com/watch?v=jNk8TYpyDrA"}],
             "priority": "core",
             "completed": false
           },
@@ -27,7 +27,7 @@
             "outcomes": ["Pass arrays and strings to functions", "Explain the relationship between arrays and pointers", "Avoid common bounds and lifetime errors"],
             "estimatedHours": 18,
             "prerequisites": ["lang-c-syntax"],
-            "resources": [{"label": "cppreference: C language", "url": "https://en.cppreference.com/w/c/language"}, {"label": "YouTube: Bro Code – C arrays (4:33)", "url": "https://www.youtube.com/watch?v=eE9MnoS0lc0"}, {"label": "YouTube: freeCodeCamp.org – Pointers in C / C++ [Full Course] (3:47:23)", "url": "https://www.youtube.com/watch?v=zuegQmMdy8M"}],
+            "resources": [{"label": "cppreference: C language", "url": "https://en.cppreference.com/w/c/language"}, {"label": "Beej's Guide to C: Pointers - addresses and dereferencing", "url": "https://beej.us/guide/bgc/html/split/pointers.html"}, {"label": "Beej's Guide to C: Arrays", "url": "https://beej.us/guide/bgc/html/split/arrays.html"}, {"label": "Beej's Guide to C: Strings", "url": "https://beej.us/guide/bgc/html/split/strings.html"}, {"label": "YouTube: Bro Code – C arrays (4:33)", "url": "https://www.youtube.com/watch?v=eE9MnoS0lc0"}, {"label": "YouTube: freeCodeCamp.org – Pointers in C / C++ [Full Course] (3:47:23)", "url": "https://www.youtube.com/watch?v=zuegQmMdy8M"}],
             "priority": "core",
             "completed": false
           },
@@ -38,7 +38,7 @@
             "outcomes": ["Declare functions in headers", "Compile and link multiple source files", "Use compiler warnings to find mistakes"],
             "estimatedHours": 12,
             "prerequisites": ["lang-c-syntax"],
-            "resources": [{"label": "GCC: Compiling C programs", "url": "https://gcc.gnu.org/onlinedocs/gcc/Invoking-GCC.html"}, {"label": "YouTube: Jacob Sorber – Compiling C programs with Multiple Files (6:09)", "url": "https://www.youtube.com/watch?v=2YfM-HxQd_8"}],
+            "resources": [{"label": "GCC: Compiling C programs", "url": "https://gcc.gnu.org/onlinedocs/gcc/Invoking-GCC.html"}, {"label": "GCC: Overall options - compilation stages", "url": "https://gcc.gnu.org/onlinedocs/gcc/Overall-Options.html"}, {"label": "GCC: Using precompiled headers", "url": "https://gcc.gnu.org/onlinedocs/gcc/Precompiled-Headers.html"}, {"label": "GCC: Link options", "url": "https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html"}, {"label": "GNU Make Manual: Introduction - building multi-file programs", "url": "https://www.gnu.org/software/make/manual/html_node/Introduction.html"}, {"label": "cppreference: C translation phases", "url": "https://en.cppreference.com/w/c/language/translation_phases"}, {"label": "YouTube: Jacob Sorber – Compiling C programs with Multiple Files (6:09)", "url": "https://www.youtube.com/watch?v=2YfM-HxQd_8"}],
             "priority": "core",
             "completed": false
           }
@@ -60,7 +60,7 @@
             "outcomes": ["Define and pass structs", "Read files with error checks", "Choose text or binary formats for a small tool"],
             "estimatedHours": 14,
             "prerequisites": ["lang-c-arrays-strings"],
-            "resources": [{"label": "GNU C Library: Input and Output", "url": "https://www.gnu.org/software/libc/manual/html_node/I_002fO-Overview.html"}, {"label": "YouTube: Bro Code – C reading files (4:33)", "url": "https://www.youtube.com/watch?v=Hzg3kCHJcxI"}, {"label": "YouTube: freeCodeCamp.org – Data Structures - Full Course Using C and C++ (9:46:11)", "url": "https://www.youtube.com/watch?v=B31LgI4Y4DQ"}],
+            "resources": [{"label": "GNU C Library: Input and Output", "url": "https://www.gnu.org/software/libc/manual/html_node/I_002fO-Overview.html"}, {"label": "Beej's Guide to C: Structs", "url": "https://beej.us/guide/bgc/html/split/structs.html"}, {"label": "Beej's Guide to C: File Input/Output", "url": "https://beej.us/guide/bgc/html/split/file-inputoutput.html"}, {"label": "GNU C Library: Opening and Closing Streams", "url": "https://www.gnu.org/software/libc/manual/html_node/Opening-and-Closing-Streams.html"}, {"label": "cppreference: C struct declaration", "url": "https://en.cppreference.com/w/c/language/struct"}, {"label": "YouTube: Bro Code – C reading files (4:33)", "url": "https://www.youtube.com/watch?v=Hzg3kCHJcxI"}, {"label": "YouTube: freeCodeCamp.org – Data Structures - Full Course Using C and C++ (9:46:11)", "url": "https://www.youtube.com/watch?v=B31LgI4Y4DQ"}],
             "priority": "core",
             "completed": false
           },
@@ -71,7 +71,7 @@
             "outcomes": ["Use malloc, calloc, realloc, and free correctly", "Handle allocation failures", "Prevent leaks, double frees, and use-after-free errors"],
             "estimatedHours": 18,
             "prerequisites": ["lang-c-arrays-strings", "lang-c-structs-files"],
-            "resources": [{"label": "GNU C Library: Memory Allocation", "url": "https://www.gnu.org/software/libc/manual/html_node/Memory-Allocation.html"}, {"label": "YouTube: Low Level – i wrote my own memory allocator in C to prove a point (5:23)", "url": "https://www.youtube.com/watch?v=CulF4YQt6zA"}],
+            "resources": [{"label": "GNU C Library: Memory Allocation", "url": "https://www.gnu.org/software/libc/manual/html_node/Memory-Allocation.html"}, {"label": "Beej's Guide to C: Manual Memory Allocation", "url": "https://beej.us/guide/bgc/html/split/manual-memory-allocation.html"}, {"label": "cppreference: malloc", "url": "https://en.cppreference.com/w/c/memory/malloc"}, {"label": "cppreference: free", "url": "https://en.cppreference.com/w/c/memory/free"}, {"label": "Valgrind: Memcheck - detecting memory errors", "url": "https://valgrind.org/docs/manual/mc-manual.html"}, {"label": "YouTube: Low Level – i wrote my own memory allocator in C to prove a point (5:23)", "url": "https://www.youtube.com/watch?v=CulF4YQt6zA"}],
             "priority": "core",
             "completed": false
           },
@@ -82,7 +82,7 @@
             "outcomes": ["Debug a program with breakpoints and backtraces", "Test normal and error paths", "Use sanitizers to detect memory errors"],
             "estimatedHours": 14,
             "prerequisites": ["lang-c-functions-build", "lang-c-memory"],
-            "resources": [{"label": "GNU GDB: Documentation", "url": "https://www.gnu.org/software/gdb/documentation/"}, {"label": "YouTube: Jacob Sorber – Debugging Embedded Systems With GDB? (13:51)", "url": "https://www.youtube.com/watch?v=m4agpY_w2y8"}, {"label": "YouTube: Khan Academy – Unit testing | Intro to CS - Python | Khan Academy (4:45)", "url": "https://www.youtube.com/watch?v=3OmfTIf-SOU"}],
+            "resources": [{"label": "GNU GDB: Documentation", "url": "https://www.gnu.org/software/gdb/documentation/"}, {"label": "GDB Manual: Sample Session", "url": "https://sourceware.org/gdb/current/onlinedocs/gdb.html/Sample-Session.html"}, {"label": "GCC: Warning options - compiler diagnostics", "url": "https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html"}, {"label": "Clang: AddressSanitizer documentation", "url": "https://clang.llvm.org/docs/AddressSanitizer.html"}, {"label": "Valgrind: Quick Start Guide", "url": "https://valgrind.org/docs/manual/quick-start.html"}, {"label": "YouTube: Jacob Sorber – Debugging Embedded Systems With GDB? (13:51)", "url": "https://www.youtube.com/watch?v=m4agpY_w2y8"}, {"label": "YouTube: Khan Academy – Unit testing | Intro to CS - Python | Khan Academy (4:45)", "url": "https://www.youtube.com/watch?v=3OmfTIf-SOU"}],
             "priority": "core",
             "completed": false
           }
@@ -104,7 +104,7 @@
             "outcomes": ["Implement a linked structure or hash table", "Define clear interfaces and invariants", "Test boundary cases and allocation failures"],
             "estimatedHours": 18,
             "prerequisites": ["lang-c-memory", "lang-c-debug-testing"],
-            "resources": [{"label": "The Open Data Structures textbook", "url": "https://opendatastructures.org/"}, {"label": "YouTube: freeCodeCamp.org – Data Structures - Full Course Using C and C++ (9:46:11)", "url": "https://www.youtube.com/watch?v=B31LgI4Y4DQ"}],
+            "resources": [{"label": "The Open Data Structures textbook", "url": "https://opendatastructures.org/"}, {"label": "Open Data Structures: Linked lists chapter (SLList)", "url": "https://opendatastructures.org/ods-cpp/3_Linked_Lists.html"}, {"label": "Open Data Structures: Hash tables chapter", "url": "https://opendatastructures.org/ods-cpp/5_Hash_Tables.html"}, {"label": "Open Data Structures: Binary trees chapter", "url": "https://opendatastructures.org/ods-cpp/6_Binary_Trees.html"}, {"label": "Open Data Structures: Array-based lists", "url": "https://opendatastructures.org/ods-cpp/2_Array_Based_Lists.html"}, {"label": "YouTube: freeCodeCamp.org – Data Structures - Full Course Using C and C++ (9:46:11)", "url": "https://www.youtube.com/watch?v=B31LgI4Y4DQ"}],
             "priority": "core",
             "completed": false
           },
@@ -126,7 +126,7 @@
             "outcomes": ["Enable strict compiler warnings", "Profile before optimizing", "Document platform assumptions and undefined-behavior risks"],
             "estimatedHours": 16,
             "prerequisites": ["lang-c-data-structures", "lang-c-systems-apis"],
-            "resources": [{"label": "SEI CERT C Coding Standard", "url": "https://wiki.sei.cmu.edu/confluence/display/c"}, {"label": "YouTube: Computerphile – Optimising Code - Computerphile (19:43)", "url": "https://www.youtube.com/watch?v=K62EMzueWwA"}],
+            "resources": [{"label": "SEI CERT C Coding Standard", "url": "https://wiki.sei.cmu.edu/confluence/display/c"}, {"label": "GCC: Optimize options", "url": "https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html"}, {"label": "GCC: Language standards supported by GCC", "url": "https://gcc.gnu.org/onlinedocs/gcc/Standards.html"}, {"label": "GCC: Instrumentation options - gprof profiling", "url": "https://gcc.gnu.org/onlinedocs/gcc/Instrumentation-Options.html"}, {"label": "GNU gprof manual", "url": "https://sourceware.org/binutils/docs/gprof/"}, {"label": "cppreference: C language standard versions and features", "url": "https://en.cppreference.com/w/c/compiler_support"}, {"label": "YouTube: Computerphile – Optimising Code - Computerphile (19:43)", "url": "https://www.youtube.com/watch?v=K62EMzueWwA"}],
             "priority": "core",
             "completed": false
           }
@@ -160,7 +160,7 @@
             "outcomes": ["Write and compile a small C++ program", "Use const and references appropriately", "Explain the role of the compiler and linker"],
             "estimatedHours": 16,
             "prerequisites": [],
-            "resources": [{"label": "LearnCpp: Introduction to C++", "url": "https://www.learncpp.com/"}, {"label": "YouTube: Programming with Mosh – C++ Tutorial for Beginners - Learn C++ in 1 Hour (1:22:56)", "url": "https://www.youtube.com/watch?v=ZzaPdXTrSb8"}, {"label": "YouTube: Bro Code – C++ Full Course for free ⚡ (6:00:00)", "url": "https://www.youtube.com/watch?v=-TkoO8Z07hI"}],
+            "resources": [{"label": "LearnCpp: Introduction to C++", "url": "https://www.learncpp.com/"}, {"label": "LearnCpp: Variables and the basic data types", "url": "https://www.learncpp.com/cpp-tutorial/introduction-to-variables/"}, {"label": "LearnCpp: Introduction to if statements", "url": "https://www.learncpp.com/cpp-tutorial/introduction-to-if-statements/"}, {"label": "LearnCpp: Introduction to functions", "url": "https://www.learncpp.com/cpp-tutorial/introduction-to-functions/"}, {"label": "cppreference: std::cout and std::cin - basic I/O", "url": "https://en.cppreference.com/w/cpp/io/cout"}, {"label": "YouTube: Programming with Mosh – C++ Tutorial for Beginners - Learn C++ in 1 Hour (1:22:56)", "url": "https://www.youtube.com/watch?v=ZzaPdXTrSb8"}, {"label": "YouTube: Bro Code – C++ Full Course for free ⚡ (6:00:00)", "url": "https://www.youtube.com/watch?v=-TkoO8Z07hI"}],
             "priority": "core",
             "completed": false
           },
@@ -171,7 +171,7 @@
             "outcomes": ["Design a small class with a clear interface", "Use constructors and member functions", "Prefer scoped enums and const-correct interfaces"],
             "estimatedHours": 18,
             "prerequisites": ["lang-cpp-fundamentals"],
-            "resources": [{"label": "cppreference: Classes", "url": "https://en.cppreference.com/w/cpp/language/classes"}, {"label": "YouTube: Bro Code – C++ CLASSES & OBJECTS explained easy (10:54)", "url": "https://www.youtube.com/watch?v=_8H2n0nDfd4"}, {"label": "YouTube: Quantum Leaps, LLC – #29 OOP Part-1: Encapsulation (classes) in C and C++ (31:29)", "url": "https://www.youtube.com/watch?v=dSLodtKuung"}],
+            "resources": [{"label": "cppreference: Classes", "url": "https://en.cppreference.com/w/cpp/language/classes"}, {"label": "LearnCpp: Introduction to classes", "url": "https://www.learncpp.com/cpp-tutorial/classes-and-class-members/"}, {"label": "LearnCpp: Constructors and member initializer lists", "url": "https://www.learncpp.com/cpp-tutorial/constructor-member-initializer-lists/"}, {"label": "cppreference: Access specifiers", "url": "https://en.cppreference.com/w/cpp/language/access"}, {"label": "cppreference: Enumeration declaration", "url": "https://en.cppreference.com/w/cpp/language/enum"}, {"label": "C++ Core Guidelines: Classes and class hierarchies", "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#c-classes-and-class-hierarchies"}, {"label": "YouTube: Bro Code – C++ CLASSES & OBJECTS explained easy (10:54)", "url": "https://www.youtube.com/watch?v=_8H2n0nDfd4"}, {"label": "YouTube: Quantum Leaps, LLC – #29 OOP Part-1: Encapsulation (classes) in C and C++ (31:29)", "url": "https://www.youtube.com/watch?v=dSLodtKuung"}],
             "priority": "core",
             "completed": false
           },
@@ -182,7 +182,7 @@
             "outcomes": ["Choose standard containers for common tasks", "Use iterators and algorithms", "Work with strings and optional values"],
             "estimatedHours": 16,
             "prerequisites": ["lang-cpp-fundamentals", "lang-cpp-types-classes"],
-            "resources": [{"label": "cppreference: C++ Standard Library", "url": "https://en.cppreference.com/w/cpp/standard_library"}, {"label": "YouTube: Bro Code – Useful string methods in C++ (6:35)", "url": "https://www.youtube.com/watch?v=KTr0SZTW9nI"}, {"label": "YouTube: Tech With Tim – Learn C++ With Me #13 - Strings (5:56)", "url": "https://www.youtube.com/watch?v=QtP0PdLEvFk"}],
+            "resources": [{"label": "cppreference: C++ Standard Library", "url": "https://en.cppreference.com/w/cpp/standard_library"}, {"label": "cppreference: Containers library", "url": "https://en.cppreference.com/w/cpp/container"}, {"label": "cppreference: Algorithms library", "url": "https://en.cppreference.com/w/cpp/algorithm"}, {"label": "cppreference: std::string", "url": "https://en.cppreference.com/w/cpp/string/basic_string"}, {"label": "LearnCpp: Introduction to the STL", "url": "https://www.learncpp.com/cpp-tutorial/introduction-to-the-stl/"}, {"label": "YouTube: Bro Code – Useful string methods in C++ (6:35)", "url": "https://www.youtube.com/watch?v=KTr0SZTW9nI"}, {"label": "YouTube: Tech With Tim – Learn C++ With Me #13 - Strings (5:56)", "url": "https://www.youtube.com/watch?v=QtP0PdLEvFk"}],
             "priority": "core",
             "completed": false
           }
@@ -204,7 +204,7 @@
             "outcomes": ["Apply RAII to file and memory resources", "Choose unique_ptr or shared_ptr deliberately", "Understand copy and move operations"],
             "estimatedHours": 18,
             "prerequisites": ["lang-cpp-types-classes"],
-            "resources": [{"label": "C++ Core Guidelines: Resource management", "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#S-resource"}, {"label": "YouTube: The Cherno – Move Semantics in C++ (13:10)", "url": "https://www.youtube.com/watch?v=ehMg6zvXuMY"}, {"label": "YouTube: Fred Overflow – C++ Move Semantics: Resource ownership transfer between objects (move… (16:26)", "url": "https://www.youtube.com/watch?v=VIWjZmPAvDg"}],
+            "resources": [{"label": "C++ Core Guidelines: Resource management", "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#S-resource"}, {"label": "cppreference: RAII - resource acquisition is initialization", "url": "https://en.cppreference.com/w/cpp/language/raii"}, {"label": "cppreference: std::unique_ptr", "url": "https://en.cppreference.com/w/cpp/memory/unique_ptr"}, {"label": "cppreference: std::shared_ptr", "url": "https://en.cppreference.com/w/cpp/memory/shared_ptr"}, {"label": "LearnCpp: Introduction to smart pointers and move semantics", "url": "https://www.learncpp.com/cpp-tutorial/introduction-to-smart-pointers-move-semantics/"}, {"label": "cppreference: Move constructors", "url": "https://en.cppreference.com/w/cpp/language/move_constructor"}, {"label": "YouTube: The Cherno – Move Semantics in C++ (13:10)", "url": "https://www.youtube.com/watch?v=ehMg6zvXuMY"}, {"label": "YouTube: Fred Overflow – C++ Move Semantics: Resource ownership transfer between objects (move… (16:26)", "url": "https://www.youtube.com/watch?v=VIWjZmPAvDg"}],
             "priority": "core",
             "completed": false
           },
@@ -215,7 +215,7 @@
             "outcomes": ["Create function and class templates", "Use type deduction effectively", "Constrain generic code with concepts"],
             "estimatedHours": 18,
             "prerequisites": ["lang-cpp-library", "lang-cpp-raii"],
-            "resources": [{"label": "cppreference: Templates", "url": "https://en.cppreference.com/w/cpp/language/templates"}, {"label": "YouTube: The Cherno – Templates in C++ (17:58)", "url": "https://www.youtube.com/watch?v=I-hZkUa9mIs"}, {"label": "YouTube: Google TechTalks – Concepts Extending C++ Templates For Generic Programming (58:40)", "url": "https://www.youtube.com/watch?v=Ot4WdHAGSGo"}],
+            "resources": [{"label": "cppreference: Templates", "url": "https://en.cppreference.com/w/cpp/language/templates"}, {"label": "cppreference: Constraints and concepts", "url": "https://en.cppreference.com/w/cpp/language/constraints"}, {"label": "cppreference: Template argument deduction", "url": "https://en.cppreference.com/w/cpp/language/template_argument_deduction"}, {"label": "LearnCpp: Function templates", "url": "https://www.learncpp.com/cpp-tutorial/function-templates/"}, {"label": "LearnCpp: Class templates", "url": "https://www.learncpp.com/cpp-tutorial/class-templates/"}, {"label": "YouTube: The Cherno – Templates in C++ (17:58)", "url": "https://www.youtube.com/watch?v=I-hZkUa9mIs"}, {"label": "YouTube: Google TechTalks – Concepts Extending C++ Templates For Generic Programming (58:40)", "url": "https://www.youtube.com/watch?v=Ot4WdHAGSGo"}],
             "priority": "core",
             "completed": false
           },
@@ -226,7 +226,7 @@
             "outcomes": ["Organize a project into libraries and executables", "Configure a CMake build", "Write unit tests and run them in CI"],
             "estimatedHours": 16,
             "prerequisites": ["lang-cpp-library"],
-            "resources": [{"label": "CMake Tutorial", "url": "https://cmake.org/cmake/help/latest/guide/tutorial/index.html"}, {"label": "YouTube: JetBrains – C++ Unit Testing with Google Test Tutorial (14:59)", "url": "https://www.youtube.com/watch?v=16FI1-d2P4E"}, {"label": "YouTube: Google TechTalks – CMake/CPack/CTest/CDash Open Source Tools to Build Test and Deploy C++ Software (1:08:04)", "url": "https://www.youtube.com/watch?v=8Ut9o4OdSC0"}],
+            "resources": [{"label": "CMake Tutorial", "url": "https://cmake.org/cmake/help/latest/guide/tutorial/index.html"}, {"label": "CMake Tutorial: Testing and CTest", "url": "https://cmake.org/cmake/help/latest/guide/tutorial/Testing%20and%20CTest.html"}, {"label": "CMake Tutorial: In-Depth System Introspection", "url": "https://cmake.org/cmake/help/latest/guide/tutorial/In-Depth%20System%20Introspection.html"}, {"label": "GoogleTest: Primer - writing C++ unit tests", "url": "https://google.github.io/googletest/primer.html"}, {"label": "GoogleTest: Quickstart with CMake", "url": "https://google.github.io/googletest/quickstart-cmake.html"}, {"label": "YouTube: JetBrains – C++ Unit Testing with Google Test Tutorial (14:59)", "url": "https://www.youtube.com/watch?v=16FI1-d2P4E"}, {"label": "YouTube: Google TechTalks – CMake/CPack/CTest/CDash Open Source Tools to Build Test and Deploy C++ Software (1:08:04)", "url": "https://www.youtube.com/watch?v=8Ut9o4OdSC0"}],
             "priority": "core",
             "completed": false
           }
@@ -248,7 +248,7 @@
             "outcomes": ["Use threads, mutexes, and condition variables safely", "Understand futures and asynchronous tasks", "Identify shared-state hazards"],
             "estimatedHours": 20,
             "prerequisites": ["lang-cpp-raii", "lang-cpp-testing-build"],
-            "resources": [{"label": "cppreference: Concurrency support library", "url": "https://en.cppreference.com/w/cpp/thread"}, {"label": "YouTube: The Cherno – Threads in C++ (11:35)", "url": "https://www.youtube.com/watch?v=wXBcwHwIt_I"}, {"label": "YouTube: Low Level – how does a Mutex even work? (atoms in the computer??) (4:17)", "url": "https://www.youtube.com/watch?v=1tZhmTnk-vc"}],
+            "resources": [{"label": "cppreference: Concurrency support library", "url": "https://en.cppreference.com/w/cpp/thread"}, {"label": "cppreference: std::thread", "url": "https://en.cppreference.com/w/cpp/thread/thread"}, {"label": "cppreference: std::mutex", "url": "https://en.cppreference.com/w/cpp/thread/mutex"}, {"label": "cppreference: std::async", "url": "https://en.cppreference.com/w/cpp/thread/async"}, {"label": "cppreference: std::condition_variable", "url": "https://en.cppreference.com/w/cpp/thread/condition_variable"}, {"label": "C++ Core Guidelines: Concurrency and parallelism", "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#cp-concurrency-and-parallelism"}, {"label": "YouTube: The Cherno – Threads in C++ (11:35)", "url": "https://www.youtube.com/watch?v=wXBcwHwIt_I"}, {"label": "YouTube: Low Level – how does a Mutex even work? (atoms in the computer??) (4:17)", "url": "https://www.youtube.com/watch?v=1tZhmTnk-vc"}],
             "priority": "core",
             "completed": false
           },
@@ -259,7 +259,7 @@
             "outcomes": ["Apply the rule of zero", "Use standard library types at API boundaries", "Document invariants and compatibility expectations"],
             "estimatedHours": 16,
             "prerequisites": ["lang-cpp-templates", "lang-cpp-raii"],
-            "resources": [{"label": "C++ Core Guidelines", "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines"}, {"label": "YouTube: Programming with Mosh – C++ Tutorial for Beginners - Learn C++ in 1 Hour (1:22:56)", "url": "https://www.youtube.com/watch?v=ZzaPdXTrSb8"}, {"label": "YouTube: Bro Code – C++ Full Course for free ⚡ (6:00:00)", "url": "https://www.youtube.com/watch?v=-TkoO8Z07hI"}],
+            "resources": [{"label": "C++ Core Guidelines", "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines"}, {"label": "C++ Core Guidelines: Interfaces", "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#i-interfaces"}, {"label": "C++ Core Guidelines: Functions - parameter passing", "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#f-functions"}, {"label": "C++ Core Guidelines: Philosophy", "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#p-philosophy"}, {"label": "Google C++ Style Guide", "url": "https://google.github.io/styleguide/cppguide.html"}, {"label": "YouTube: Programming with Mosh – C++ Tutorial for Beginners - Learn C++ in 1 Hour (1:22:56)", "url": "https://www.youtube.com/watch?v=ZzaPdXTrSb8"}, {"label": "YouTube: Bro Code – C++ Full Course for free ⚡ (6:00:00)", "url": "https://www.youtube.com/watch?v=-TkoO8Z07hI"}],
             "priority": "core",
             "completed": false
           },
@@ -270,7 +270,7 @@
             "outcomes": ["Profile a representative workload", "Reduce unnecessary allocations and copies", "Use benchmarks to guard performance changes"],
             "estimatedHours": 16,
             "prerequisites": ["lang-cpp-concurrency", "lang-cpp-testing-build"],
-            "resources": [{"label": "Google Benchmark: User Guide", "url": "https://github.com/google/benchmark/blob/main/docs/user_guide.md"}, {"label": "YouTube: The Cherno – BENCHMARKING in C++ (how to measure performance) (14:52)", "url": "https://www.youtube.com/watch?v=YG4jexlSAjc"}],
+            "resources": [{"label": "Google Benchmark: User Guide", "url": "https://github.com/google/benchmark/blob/main/docs/user_guide.md"}, {"label": "Valgrind: Callgrind profiler manual", "url": "https://valgrind.org/docs/manual/cl-manual.html"}, {"label": "C++ Core Guidelines: Performance", "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#per-performance"}, {"label": "YouTube: The Cherno – BENCHMARKING in C++ (how to measure performance) (14:52)", "url": "https://www.youtube.com/watch?v=YG4jexlSAjc"}],
             "priority": "core",
             "completed": false
           }
@@ -304,7 +304,7 @@
             "outcomes": ["Write and run a .NET console program", "Choose appropriate value and reference types", "Use control flow and pattern matching basics"],
             "estimatedHours": 14,
             "prerequisites": [],
-            "resources": [{"label": "Microsoft Learn: A tour of C#", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/"}, {"label": "YouTube: freeCodeCamp.org – C# Tutorial - Full Course for Beginners (4:31:09)", "url": "https://www.youtube.com/watch?v=GhQdlIFylQ8"}, {"label": "YouTube: Bro Code – C# variables ✖ (8:44)", "url": "https://www.youtube.com/watch?v=IxBMVztdlr4"}],
+            "resources": [{"label": "Microsoft Learn: A tour of C#", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/"}, {"label": "Microsoft Learn: C# type system", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/"}, {"label": "Microsoft Learn: Safely cast using pattern matching, is and as", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/safely-cast-using-pattern-matching-is-and-as-operators"}, {"label": "Microsoft Learn: Selection statements - if, switch", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/selection-statements"}, {"label": "Microsoft Learn: Iteration statements - for, foreach, while", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements"}, {"label": "Microsoft Learn: Top-level statements", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/program-structure/top-level-statements"}, {"label": "YouTube: freeCodeCamp.org – C# Tutorial - Full Course for Beginners (4:31:09)", "url": "https://www.youtube.com/watch?v=GhQdlIFylQ8"}, {"label": "YouTube: Bro Code – C# variables ✖ (8:44)", "url": "https://www.youtube.com/watch?v=IxBMVztdlr4"}],
             "priority": "core",
             "completed": false
           },
@@ -315,7 +315,7 @@
             "outcomes": ["Define methods with parameters and return values", "Use arrays, lists, and dictionaries", "Handle nullable values deliberately"],
             "estimatedHours": 14,
             "prerequisites": ["lang-csharp-syntax"],
-            "resources": [{"label": "Microsoft Learn: C# fundamentals", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/"}, {"label": "YouTube: Bro Code – C# string methods (6:52)", "url": "https://www.youtube.com/watch?v=BKYBiUAWZKM"}, {"label": "YouTube: Derek Banas – C# Tutorial 11 Collections (20:49)", "url": "https://www.youtube.com/watch?v=-vjQ3gW3Dd8"}],
+            "resources": [{"label": "Microsoft Learn: C# fundamentals", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/"}, {"label": "Microsoft Learn: Methods in C#", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods"}, {"label": "Microsoft Learn: Collections in .NET", "url": "https://learn.microsoft.com/en-us/dotnet/standard/collections/"}, {"label": "Microsoft Learn: Strings in C#", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/"}, {"label": "Microsoft Learn: Interpolated strings", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated"}, {"label": "YouTube: Bro Code – C# string methods (6:52)", "url": "https://www.youtube.com/watch?v=BKYBiUAWZKM"}, {"label": "YouTube: Derek Banas – C# Tutorial 11 Collections (20:49)", "url": "https://www.youtube.com/watch?v=-vjQ3gW3Dd8"}],
             "priority": "core",
             "completed": false
           },
@@ -326,7 +326,7 @@
             "outcomes": ["Define classes and constructors", "Use properties and access modifiers", "Choose between classes, records, and structs"],
             "estimatedHours": 16,
             "prerequisites": ["lang-csharp-methods-collections"],
-            "resources": [{"label": "Microsoft Learn: Object-oriented programming", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/oop"}, {"label": "YouTube: Bro Code – C# interfaces (5:38)", "url": "https://www.youtube.com/watch?v=RuhGv81tpoU"}, {"label": "YouTube: Programming with Mosh – C# Interfaces Explained in Simple Terms | Mosh (5:04)", "url": "https://www.youtube.com/watch?v=aQ8YkJrAbzE"}],
+            "resources": [{"label": "Microsoft Learn: Object-oriented programming", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/oop"}, {"label": "Microsoft Learn: Records in C#", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record"}, {"label": "Microsoft Learn: Explore record types tutorial", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/records"}, {"label": "Microsoft Learn: Interfaces in C#", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/interfaces"}, {"label": "Microsoft Learn: Classes in C#", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/classes"}, {"label": "YouTube: Bro Code – C# interfaces (5:38)", "url": "https://www.youtube.com/watch?v=RuhGv81tpoU"}, {"label": "YouTube: Programming with Mosh – C# Interfaces Explained in Simple Terms | Mosh (5:04)", "url": "https://www.youtube.com/watch?v=aQ8YkJrAbzE"}],
             "priority": "core",
             "completed": false
           }
@@ -348,7 +348,7 @@
             "outcomes": ["Use generic collections and constraints", "Compose filtering and projection queries", "Choose deferred or immediate query execution intentionally"],
             "estimatedHours": 16,
             "prerequisites": ["lang-csharp-methods-collections", "lang-csharp-classes"],
-            "resources": [{"label": "Microsoft Learn: Query data with LINQ", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/linq/"}, {"label": "YouTube: Bro Code – C# generics ⁉ (5:33)", "url": "https://www.youtube.com/watch?v=aNTDJ9bnRU4"}, {"label": "YouTube: freeCodeCamp.org – Advanced C# – LINQ Tutorial (3:07:24)", "url": "https://www.youtube.com/watch?v=5l2qA3Pc83M"}],
+            "resources": [{"label": "Microsoft Learn: Query data with LINQ", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/linq/"}, {"label": "Microsoft Learn: Standard query operators overview", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/linq/standard-query-operators/"}, {"label": "Microsoft Learn: Generics in .NET", "url": "https://learn.microsoft.com/en-us/dotnet/standard/generics/"}, {"label": "Microsoft Learn: Generic classes and methods", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/generics"}, {"label": "Microsoft Learn: IEnumerable<T> interface", "url": "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1"}, {"label": "YouTube: Bro Code – C# generics ⁉ (5:33)", "url": "https://www.youtube.com/watch?v=aNTDJ9bnRU4"}, {"label": "YouTube: freeCodeCamp.org – Advanced C# – LINQ Tutorial (3:07:24)", "url": "https://www.youtube.com/watch?v=5l2qA3Pc83M"}],
             "priority": "core",
             "completed": false
           },
@@ -359,7 +359,7 @@
             "outcomes": ["Use async and await", "Propagate cancellation and exceptions", "Avoid blocking asynchronous work"],
             "estimatedHours": 16,
             "prerequisites": ["lang-csharp-methods-collections"],
-            "resources": [{"label": "Microsoft Learn: Asynchronous programming with async and await", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/"}, {"label": "YouTube: Programming with Mosh – C# Tutorial For Beginners - Learn C# Basics in 1 Hour (1:10:32)", "url": "https://www.youtube.com/watch?v=gfkTfcpWqAY"}, {"label": "YouTube: freeCodeCamp.org – Learn C# Programming – Full Course with Mini-Projects (8:17:11)", "url": "https://www.youtube.com/watch?v=YrtFtdTTfv0"}],
+            "resources": [{"label": "Microsoft Learn: Asynchronous programming with async and await", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/"}, {"label": "Microsoft Learn: Task asynchronous programming (TAP) model", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/task-asynchronous-programming-model"}, {"label": "Microsoft Learn: Real-world async scenarios", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios"}, {"label": "Microsoft Learn: Async return types", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-return-types"}, {"label": "Microsoft Learn: Cancel an async task", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/cancel-an-async-task-or-a-list-of-tasks"}, {"label": "YouTube: Programming with Mosh – C# Tutorial For Beginners - Learn C# Basics in 1 Hour (1:10:32)", "url": "https://www.youtube.com/watch?v=gfkTfcpWqAY"}, {"label": "YouTube: freeCodeCamp.org – Learn C# Programming – Full Course with Mini-Projects (8:17:11)", "url": "https://www.youtube.com/watch?v=YrtFtdTTfv0"}],
             "priority": "core",
             "completed": false
           },
@@ -370,7 +370,7 @@
             "outcomes": ["Use exceptions for exceptional failures", "Write unit tests with a .NET test framework", "Test boundary and error cases"],
             "estimatedHours": 14,
             "prerequisites": ["lang-csharp-classes"],
-            "resources": [{"label": "Microsoft Learn: Unit testing C# with .NET", "url": "https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test"}, {"label": "YouTube: Programming with Mosh – Unit Testing C# Code - Tutorial for Beginners (44:56)", "url": "https://www.youtube.com/watch?v=HYrXogLj7vg"}, {"label": "YouTube: Bro Code – C# exception handling ⚠ (5:01)", "url": "https://www.youtube.com/watch?v=QqWfw_CFR6Q"}],
+            "resources": [{"label": "Microsoft Learn: Unit testing C# with .NET", "url": "https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test"}, {"label": "Microsoft Learn: Exception handling - try, catch, finally", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/exceptions/exception-handling"}, {"label": "Microsoft Learn: Unit testing best practices", "url": "https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices"}, {"label": "Microsoft Learn: Unit testing C# with xUnit", "url": "https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-csharp-with-xunit"}, {"label": "Microsoft Learn: Best practices for exceptions", "url": "https://learn.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions"}, {"label": "YouTube: Programming with Mosh – Unit Testing C# Code - Tutorial for Beginners (44:56)", "url": "https://www.youtube.com/watch?v=HYrXogLj7vg"}, {"label": "YouTube: Bro Code – C# exception handling ⚠ (5:01)", "url": "https://www.youtube.com/watch?v=QqWfw_CFR6Q"}],
             "priority": "core",
             "completed": false
           }
@@ -392,7 +392,7 @@
             "outcomes": ["Separate application concerns into projects or layers", "Use dependency injection and options", "Manage configuration without committing secrets"],
             "estimatedHours": 18,
             "prerequisites": ["lang-csharp-classes", "lang-csharp-errors-testing"],
-            "resources": [{"label": "Microsoft: .NET architecture guides", "url": "https://learn.microsoft.com/en-us/dotnet/architecture/"}, {"label": "YouTube: JetBrains – Clean Architecture With ASP.NET Core — Steve Smith (58:41)", "url": "https://www.youtube.com/watch?v=qOwB8PxOqC0"}],
+            "resources": [{"label": "Microsoft: .NET architecture guides", "url": "https://learn.microsoft.com/en-us/dotnet/architecture/"}, {"label": "Microsoft Learn: Dependency injection in .NET", "url": "https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection"}, {"label": "Microsoft Learn: Configuration in .NET", "url": "https://learn.microsoft.com/en-us/dotnet/core/extensions/configuration"}, {"label": "Microsoft Learn: Architect modern web apps with ASP.NET Core and Azure", "url": "https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/"}, {"label": "Microsoft Learn: .NET Generic Host", "url": "https://learn.microsoft.com/en-us/dotnet/core/extensions/generic-host"}, {"label": "Microsoft Learn: .NET Microservices architecture for containerized apps", "url": "https://learn.microsoft.com/en-us/dotnet/architecture/microservices/"}, {"label": "YouTube: JetBrains – Clean Architecture With ASP.NET Core — Steve Smith (58:41)", "url": "https://www.youtube.com/watch?v=qOwB8PxOqC0"}],
             "priority": "core",
             "completed": false
           },
@@ -403,7 +403,7 @@
             "outcomes": ["Use .NET diagnostics tools", "Understand allocations and garbage collection", "Benchmark representative code paths"],
             "estimatedHours": 16,
             "prerequisites": ["lang-csharp-linq-generics", "lang-csharp-async"],
-            "resources": [{"label": "Microsoft Learn: .NET diagnostics", "url": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/"}],
+            "resources": [{"label": "Microsoft Learn: .NET diagnostics", "url": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/"}, {"label": "Microsoft Learn: dotnet-trace performance analysis utility", "url": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-trace"}, {"label": "Microsoft Learn: Measure performance using EventCounters", "url": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/event-counter-perf"}, {"label": "Microsoft Learn: .NET metrics", "url": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/metrics"}, {"label": "Microsoft Learn: Logging and tracing", "url": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/logging-tracing"}, {"label": "Microsoft Learn: .NET profilers", "url": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/profilers"}],
             "priority": "core",
             "completed": false
           },
@@ -414,7 +414,7 @@
             "outcomes": ["Choose framework-dependent or self-contained publishing", "Automate build and test checks", "Document setup and deployment steps"],
             "estimatedHours": 14,
             "prerequisites": ["lang-csharp-dotnet-architecture", "lang-csharp-errors-testing"],
-            "resources": [{"label": "Microsoft Learn: .NET application publishing", "url": "https://learn.microsoft.com/en-us/dotnet/core/deploying/"}],
+            "resources": [{"label": "Microsoft Learn: .NET application publishing", "url": "https://learn.microsoft.com/en-us/dotnet/core/deploying/"}, {"label": "Microsoft Learn: Single-file deployment", "url": "https://learn.microsoft.com/en-us/dotnet/core/deploying/single-file/overview"}, {"label": "Microsoft Learn: Native AOT deployment", "url": "https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/"}, {"label": "Microsoft Learn: ReadyToRun compilation", "url": "https://learn.microsoft.com/en-us/dotnet/core/deploying/ready-to-run"}, {"label": "Microsoft Learn: Trim self-contained deployments", "url": "https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/trim-self-contained"}, {"label": "Microsoft Learn: dotnet publish command", "url": "https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-publish"}],
             "priority": "core",
             "completed": false
           }
@@ -448,7 +448,7 @@
             "outcomes": ["Identify the roles of the four divisions", "Write and compile a simple program", "Read free-format and fixed-format source"],
             "estimatedHours": 16,
             "prerequisites": [],
-            "resources": [{"label": "GnuCOBOL Programmer's Guide", "url": "https://gnucobol.sourceforge.io/"}, {"label": "YouTube: freeCodeCamp.org – COBOL Course - Programming with VSCode (1:17:04)", "url": "https://www.youtube.com/watch?v=RdMAEdGvtLA"}],
+            "resources": [{"label": "GnuCOBOL Programmer's Guide", "url": "https://gnucobol.sourceforge.io/"}, {"label": "TutorialsPoint: COBOL program structure - divisions, sections, paragraphs", "url": "https://www.tutorialspoint.com/cobol/cobol_program_structure.htm"}, {"label": "TutorialsPoint: COBOL basic syntax - character set, literals, reserved words", "url": "https://www.tutorialspoint.com/cobol/cobol_basic_syntax.htm"}, {"label": "Wikipedia: COBOL - language history, syntax and division layout", "url": "https://en.wikipedia.org/wiki/COBOL"}, {"label": "YouTube: freeCodeCamp.org – COBOL Course - Programming with VSCode (1:17:04)", "url": "https://www.youtube.com/watch?v=RdMAEdGvtLA"}],
             "priority": "core",
             "completed": false
           },
@@ -459,7 +459,7 @@
             "outcomes": ["Declare elementary and group items", "Use numeric and alphanumeric picture clauses", "Explain how record layouts represent business data"],
             "estimatedHours": 16,
             "prerequisites": ["lang-cobol-structure"],
-            "resources": [{"label": "IBM COBOL: Data Division", "url": "https://www.ibm.com/docs/en/cobol-zos/6.4?topic=division-data"}, {"label": "YouTube: Derek Banas – COBOL Tutorial : Learn COBOL in One Video (2:13:59)", "url": "https://www.youtube.com/watch?v=TBs7HXI76yU"}, {"label": "YouTube: freeCodeCamp.org – COBOL Course - Programming with VSCode (1:17:04)", "url": "https://www.youtube.com/watch?v=RdMAEdGvtLA"}],
+            "resources": [{"label": "IBM COBOL: Data Division", "url": "https://www.ibm.com/docs/en/cobol-zos/6.4?topic=division-data"}, {"label": "TutorialsPoint: COBOL data types - PIC clauses and numeric formats", "url": "https://www.tutorialspoint.com/cobol/cobol_data_types.htm"}, {"label": "TutorialsPoint: COBOL basic verbs - MOVE, ADD, COMPUTE on fields", "url": "https://www.tutorialspoint.com/cobol/cobol_basic_verbs.htm"}, {"label": "YouTube: Derek Banas – COBOL Tutorial : Learn COBOL in One Video (2:13:59)", "url": "https://www.youtube.com/watch?v=TBs7HXI76yU"}, {"label": "YouTube: freeCodeCamp.org – COBOL Course - Programming with VSCode (1:17:04)", "url": "https://www.youtube.com/watch?v=RdMAEdGvtLA"}],
             "priority": "core",
             "completed": false
           },
@@ -470,7 +470,7 @@
             "outcomes": ["Use IF, EVALUATE, and PERFORM", "Organize logic into paragraphs", "Trace a program's control flow"],
             "estimatedHours": 14,
             "prerequisites": ["lang-cobol-structure", "lang-cobol-data"],
-            "resources": [{"label": "IBM COBOL: Procedure Division", "url": "https://www.ibm.com/docs/en/cobol-zos/6.4?topic=division-procedure"}, {"label": "YouTube: Derek Banas – COBOL Tutorial : Learn COBOL in One Video (2:13:59)", "url": "https://www.youtube.com/watch?v=TBs7HXI76yU"}],
+            "resources": [{"label": "IBM COBOL: Procedure Division", "url": "https://www.ibm.com/docs/en/cobol-zos/6.4?topic=division-procedure"}, {"label": "TutorialsPoint: COBOL loop statements - PERFORM variants", "url": "https://www.tutorialspoint.com/cobol/cobol_loop_statements.htm"}, {"label": "TutorialsPoint: COBOL subroutines - CALL and called programs", "url": "https://www.tutorialspoint.com/cobol/cobol_subroutines.htm"}, {"label": "YouTube: Derek Banas – COBOL Tutorial : Learn COBOL in One Video (2:13:59)", "url": "https://www.youtube.com/watch?v=TBs7HXI76yU"}],
             "priority": "core",
             "completed": false
           }
@@ -492,7 +492,7 @@
             "outcomes": ["Define file-control and file descriptions", "Process records until end-of-file", "Handle file errors and invalid records"],
             "estimatedHours": 16,
             "prerequisites": ["lang-cobol-data", "lang-cobol-procedural"],
-            "resources": [{"label": "IBM COBOL: File handling", "url": "https://www.ibm.com/docs/en/cobol-zos/6.4?topic=operations-file-control-entry"}, {"label": "YouTube: Derek Banas – COBOL Tutorial : Learn COBOL in One Video (2:13:59)", "url": "https://www.youtube.com/watch?v=TBs7HXI76yU"}, {"label": "YouTube: freeCodeCamp.org – COBOL Course - Programming with VSCode (1:17:04)", "url": "https://www.youtube.com/watch?v=RdMAEdGvtLA"}],
+            "resources": [{"label": "IBM COBOL: File handling", "url": "https://www.ibm.com/docs/en/cobol-zos/6.4?topic=operations-file-control-entry"}, {"label": "TutorialsPoint: COBOL file handling - FD, OPEN, READ, WRITE, CLOSE", "url": "https://www.tutorialspoint.com/cobol/cobol_file_handling.htm"}, {"label": "TutorialsPoint: COBOL file organization - sequential, indexed, relative", "url": "https://www.tutorialspoint.com/cobol/cobol_file_organization.htm"}, {"label": "TutorialsPoint: COBOL file handling verbs - READ, WRITE, REWRITE, DELETE", "url": "https://www.tutorialspoint.com/cobol/cobol_file_handling_verbs.htm"}, {"label": "YouTube: Derek Banas – COBOL Tutorial : Learn COBOL in One Video (2:13:59)", "url": "https://www.youtube.com/watch?v=TBs7HXI76yU"}, {"label": "YouTube: freeCodeCamp.org – COBOL Course - Programming with VSCode (1:17:04)", "url": "https://www.youtube.com/watch?v=RdMAEdGvtLA"}],
             "priority": "core",
             "completed": false
           },
@@ -503,7 +503,7 @@
             "outcomes": ["Use COPY to reuse declarations", "Pass data between programs", "Keep shared record layouts consistent"],
             "estimatedHours": 14,
             "prerequisites": ["lang-cobol-data", "lang-cobol-procedural"],
-            "resources": [{"label": "IBM COBOL: COPY statement", "url": "https://www.ibm.com/docs/en/cobol-zos/6.4?topic=statements-copy-statement"}, {"label": "YouTube: freeCodeCamp.org – COBOL Course - Programming with VSCode (1:17:04)", "url": "https://www.youtube.com/watch?v=RdMAEdGvtLA"}, {"label": "YouTube: Derek Banas – COBOL Tutorial : Learn COBOL in One Video (2:13:59)", "url": "https://www.youtube.com/watch?v=TBs7HXI76yU"}],
+            "resources": [{"label": "IBM COBOL: COPY statement", "url": "https://www.ibm.com/docs/en/cobol-zos/6.4?topic=statements-copy-statement"}, {"label": "TutorialsPoint: COBOL subroutines - CALL, USING and linkage interfaces", "url": "https://www.tutorialspoint.com/cobol/cobol_subroutines.htm"}, {"label": "GnuCOBOL FAQ - COPY statements, compiling and linking multiple programs", "url": "https://gnucobol.sourceforge.io/faq/index.html"}, {"label": "YouTube: freeCodeCamp.org – COBOL Course - Programming with VSCode (1:17:04)", "url": "https://www.youtube.com/watch?v=RdMAEdGvtLA"}, {"label": "YouTube: Derek Banas – COBOL Tutorial : Learn COBOL in One Video (2:13:59)", "url": "https://www.youtube.com/watch?v=TBs7HXI76yU"}],
             "priority": "core",
             "completed": false
           },
@@ -514,7 +514,7 @@
             "outcomes": ["Test valid, invalid, and boundary records", "Compare program output with expected results", "Use compiler diagnostics to investigate defects"],
             "estimatedHours": 14,
             "prerequisites": ["lang-cobol-file-processing", "lang-cobol-copybooks"],
-            "resources": [{"label": "GnuCOBOL Programmer's Guide", "url": "https://gnucobol.sourceforge.io/guides.html"}, {"label": "YouTube: Theo - t3․gg – The ONLY REASON To Unit Test (8:26)", "url": "https://www.youtube.com/watch?v=FF50H2RWaEY"}],
+            "resources": [{"label": "GnuCOBOL Programmer's Guide", "url": "https://gnucobol.sourceforge.io/guides.html"}, {"label": "GnuCOBOL FAQ - debugging options, runtime errors and tracing", "url": "https://gnucobol.sourceforge.io/faq/index.html"}, {"label": "Zowe documentation: overview - tooling for modern mainframe development", "url": "https://docs.zowe.org/stable/getting-started/overview"}, {"label": "YouTube: Theo - t3․gg – The ONLY REASON To Unit Test (8:26)", "url": "https://www.youtube.com/watch?v=FF50H2RWaEY"}],
             "priority": "core",
             "completed": false
           }
@@ -536,7 +536,7 @@
             "outcomes": ["Separate job steps and responsibilities", "Design safe reruns for interrupted work", "Report completion and failure status clearly"],
             "estimatedHours": 16,
             "prerequisites": ["lang-cobol-file-processing", "lang-cobol-testing-debugging"],
-            "resources": [{"label": "IBM z/OS: Batch processing", "url": "https://www.ibm.com/docs/en/zos-basic-skills?topic=zos-batch-processing"}],
+            "resources": [{"label": "IBM z/OS: Batch processing", "url": "https://www.ibm.com/docs/en/zos-basic-skills?topic=zos-batch-processing"}, {"label": "Wikipedia: Batch processing - concepts of unattended job execution", "url": "https://en.wikipedia.org/wiki/Batch_processing"}, {"label": "Wikipedia: Job Control Language - running mainframe batch jobs", "url": "https://en.wikipedia.org/wiki/Job_Control_Language"}, {"label": "Wikipedia: Application checkpointing - saving state for restart", "url": "https://en.wikipedia.org/wiki/Application_checkpointing"}],
             "priority": "core",
             "completed": false
           },
@@ -547,7 +547,7 @@
             "outcomes": ["Describe how embedded SQL is compiled", "Map host variables to database fields", "Handle SQL status and transaction outcomes"],
             "estimatedHours": 18,
             "prerequisites": ["lang-cobol-data", "lang-cobol-copybooks"],
-            "resources": [{"label": "IBM Db2: Embedded SQL applications", "url": "https://www.ibm.com/docs/en/db2-for-zos/13.0.0?topic=programs-embedded-sql"}],
+            "resources": [{"label": "IBM Db2: Embedded SQL applications", "url": "https://www.ibm.com/docs/en/db2-for-zos/13.0.0?topic=programs-embedded-sql"}, {"label": "TutorialsPoint: COBOL database interface - embedded SQL and host variables", "url": "https://www.tutorialspoint.com/cobol/cobol_database_interface.htm"}, {"label": "Wikipedia: Embedded SQL - embedding SQL statements in host languages", "url": "https://en.wikipedia.org/wiki/Embedded_SQL"}, {"label": "Wikipedia: IBM Db2 - the database commonly used with COBOL", "url": "https://en.wikipedia.org/wiki/IBM_Db2"}],
             "priority": "core",
             "completed": false
           },
@@ -558,7 +558,7 @@
             "outcomes": ["Identify integration boundaries around a legacy application", "Document data contracts and operational dependencies", "Plan incremental modernization with regression tests"],
             "estimatedHours": 16,
             "prerequisites": ["lang-cobol-batch-design", "lang-cobol-database"],
-            "resources": [{"label": "IBM: COBOL modernization", "url": "https://www.ibm.com/think/topics/cobol-modernization"}, {"label": "YouTube: IBM Technology – Mainframe modernization explained: COBOL and AI (44:04)", "url": "https://www.youtube.com/watch?v=9mJhBzjugQg"}],
+            "resources": [{"label": "IBM: COBOL modernization", "url": "https://www.ibm.com/think/topics/cobol-modernization"}, {"label": "Martin Fowler: Strangler Fig Application - incremental legacy replacement", "url": "https://martinfowler.com/bliki/StranglerFigApplication.html"}, {"label": "Martin Fowler: Patterns of Legacy Displacement - modernization strategies", "url": "https://martinfowler.com/articles/patterns-legacy-displacement/"}, {"label": "Zowe documentation: overview - APIs and DevOps tooling for mainframes", "url": "https://docs.zowe.org/stable/getting-started/overview"}, {"label": "IBM Think: Application modernization - approaches and benefits", "url": "https://www.ibm.com/think/topics/application-modernization"}, {"label": "YouTube: IBM Technology – Mainframe modernization explained: COBOL and AI (44:04)", "url": "https://www.youtube.com/watch?v=9mJhBzjugQg"}],
             "priority": "core",
             "completed": false
           }
@@ -592,7 +592,7 @@
             "outcomes": ["Write functions with arguments and return values", "Use loops and conditionals correctly", "Run scripts from the command line"],
             "estimatedHours": 14,
             "prerequisites": [],
-            "resources": [{"label": "Python Tutorial", "url": "https://docs.python.org/3/tutorial/"}, {"label": "YouTube: Programming with Mosh – Control Flow in Python - If Elif Else Statements (16:08)", "url": "https://www.youtube.com/watch?v=Zp5MuPOtsSY"}, {"label": "YouTube: Net Ninja – Python Crash Course #5 - Control Flow (22:42)", "url": "https://www.youtube.com/watch?v=Mg6B3RsMd54"}],
+            "resources": [{"label": "Python Tutorial", "url": "https://docs.python.org/3/tutorial/"}, {"label": "Python docs: More control flow tools - if, for, range, match, functions", "url": "https://docs.python.org/3/tutorial/controlflow.html"}, {"label": "Python docs: An informal introduction to Python - numbers, strings, lists", "url": "https://docs.python.org/3/tutorial/introduction.html"}, {"label": "Real Python: Python conditional statements - if, elif, else", "url": "https://realpython.com/python-conditional-statements/"}, {"label": "Real Python: Defining your own Python function", "url": "https://realpython.com/defining-your-own-python-function/"}, {"label": "YouTube: Programming with Mosh – Control Flow in Python - If Elif Else Statements (16:08)", "url": "https://www.youtube.com/watch?v=Zp5MuPOtsSY"}, {"label": "YouTube: Net Ninja – Python Crash Course #5 - Control Flow (22:42)", "url": "https://www.youtube.com/watch?v=Mg6B3RsMd54"}],
             "priority": "core",
             "completed": false
           },
@@ -603,7 +603,7 @@
             "outcomes": ["Choose the right collection for a task", "Use comprehensions", "Format and manipulate strings"],
             "estimatedHours": 14,
             "prerequisites": ["lang-python-syntax"],
-            "resources": [{"label": "Python Standard Library", "url": "https://docs.python.org/3/library/"}, {"label": "YouTube: Alex The Analyst – Data Types in Python | Python for Beginners (21:58)", "url": "https://www.youtube.com/watch?v=ppsCxnNm-JI"}, {"label": "YouTube: Dave Gray – Python Data Types for Beginners | Python tutorial (37:28)", "url": "https://www.youtube.com/watch?v=INGJh9DEaBM"}],
+            "resources": [{"label": "Python Standard Library", "url": "https://docs.python.org/3/library/"}, {"label": "Python docs: Data structures tutorial - lists, tuples, sets, dicts", "url": "https://docs.python.org/3/tutorial/datastructures.html"}, {"label": "Python docs: Time complexity of built-in types", "url": "https://docs.python.org/3/library/stdtypes.html"}, {"label": "Real Python: Python dictionaries - creating and using dicts", "url": "https://realpython.com/python-dicts/"}, {"label": "Real Python: Strings and character data in Python", "url": "https://realpython.com/python-strings/"}, {"label": "YouTube: Alex The Analyst – Data Types in Python | Python for Beginners (21:58)", "url": "https://www.youtube.com/watch?v=ppsCxnNm-JI"}, {"label": "YouTube: Dave Gray – Python Data Types for Beginners | Python tutorial (37:28)", "url": "https://www.youtube.com/watch?v=INGJh9DEaBM"}],
             "priority": "core",
             "completed": false
           },
@@ -614,7 +614,7 @@
             "outcomes": ["Import and structure modules", "Read and write files with context managers", "Use virtual environments and pip"],
             "estimatedHours": 10,
             "prerequisites": ["lang-python-syntax"],
-            "resources": [{"label": "Python Tutorial: Modules", "url": "https://docs.python.org/3/tutorial/modules.html"}, {"label": "YouTube: Bro Code – What are Python modules? (6:36)", "url": "https://www.youtube.com/watch?v=XcfxkHrHTVE"}, {"label": "YouTube: Net Ninja – Python 3 Tutorial for Beginners #19 - Modules & Packages (10:15)", "url": "https://www.youtube.com/watch?v=f26nAmfJggw"}],
+            "resources": [{"label": "Python Tutorial: Modules", "url": "https://docs.python.org/3/tutorial/modules.html"}, {"label": "Python docs: Reading and writing files - open() and with", "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files"}, {"label": "Python docs: pathlib - object-oriented filesystem paths", "url": "https://docs.python.org/3/library/pathlib.html"}, {"label": "Real Python: Python modules and packages - an introduction", "url": "https://realpython.com/python-modules-packages/"}, {"label": "Python docs: The import system - how modules are found and loaded", "url": "https://docs.python.org/3/reference/import.html"}, {"label": "YouTube: Bro Code – What are Python modules? (6:36)", "url": "https://www.youtube.com/watch?v=XcfxkHrHTVE"}, {"label": "YouTube: Net Ninja – Python 3 Tutorial for Beginners #19 - Modules & Packages (10:15)", "url": "https://www.youtube.com/watch?v=f26nAmfJggw"}],
             "priority": "core",
             "completed": false
           }
@@ -636,7 +636,7 @@
             "outcomes": ["Define classes, dataclasses, and properties", "Implement dunder methods such as __repr__ and __eq__", "Prefer composition where appropriate"],
             "estimatedHours": 16,
             "prerequisites": ["lang-python-builtin-types"],
-            "resources": [{"label": "Python Data Model", "url": "https://docs.python.org/3/reference/datamodel.html"}, {"label": "YouTube: Corey Schafer – Python OOP Tutorial 1: Classes and Instances (15:24)", "url": "https://www.youtube.com/watch?v=ZDa-Z5JzLYM"}, {"label": "YouTube: Tech With Tim – Python Data Classes Are AMAZING! Here's Why (16:11)", "url": "https://www.youtube.com/watch?v=5mMpM8zK4pY"}],
+            "resources": [{"label": "Python Data Model", "url": "https://docs.python.org/3/reference/datamodel.html"}, {"label": "Python docs: Classes tutorial - objects, inheritance, iterators", "url": "https://docs.python.org/3/tutorial/classes.html"}, {"label": "Real Python: Python classes - the power of object-oriented programming", "url": "https://realpython.com/python-classes/"}, {"label": "Real Python: Python's dataclasses - modern data classes", "url": "https://realpython.com/python-data-classes/"}, {"label": "Python docs: Descriptor HowTo guide", "url": "https://docs.python.org/3/howto/descriptor.html"}, {"label": "YouTube: Corey Schafer – Python OOP Tutorial 1: Classes and Instances (15:24)", "url": "https://www.youtube.com/watch?v=ZDa-Z5JzLYM"}, {"label": "YouTube: Tech With Tim – Python Data Classes Are AMAZING! Here's Why (16:11)", "url": "https://www.youtube.com/watch?v=5mMpM8zK4pY"}],
             "priority": "core",
             "completed": false
           },
@@ -647,7 +647,7 @@
             "outcomes": ["Write generators and use itertools", "Create simple decorators", "Use context managers"],
             "estimatedHours": 14,
             "prerequisites": ["lang-python-oop-datamodel"],
-            "resources": [{"label": "Python HOWTOs", "url": "https://docs.python.org/3/howto/"}, {"label": "YouTube: Bro Code – Learn Python generators in 8 minutes! (8:02)", "url": "https://www.youtube.com/watch?v=G1lJeEIl05o"}, {"label": "YouTube: Corey Schafer – Python Tutorial: Generators - How to use them and the benefits you receive (11:14)", "url": "https://www.youtube.com/watch?v=bD05uGo_sVI"}],
+            "resources": [{"label": "Python HOWTOs", "url": "https://docs.python.org/3/howto/"}, {"label": "Python docs: Generators tutorial section", "url": "https://docs.python.org/3/tutorial/classes.html#generators"}, {"label": "Python docs: Functional programming HOWTO - iterators and generators", "url": "https://docs.python.org/3/howto/functional.html"}, {"label": "Real Python: Introduction to Python generators", "url": "https://realpython.com/introduction-to-python-generators/"}, {"label": "Real Python: Primer on Python decorators", "url": "https://realpython.com/primer-on-python-decorators/"}, {"label": "YouTube: Bro Code – Learn Python generators in 8 minutes! (8:02)", "url": "https://www.youtube.com/watch?v=G1lJeEIl05o"}, {"label": "YouTube: Corey Schafer – Python Tutorial: Generators - How to use them and the benefits you receive (11:14)", "url": "https://www.youtube.com/watch?v=bD05uGo_sVI"}],
             "priority": "core",
             "completed": false
           },
@@ -658,7 +658,7 @@
             "outcomes": ["Raise and catch specific exceptions", "Write unit tests with unittest or pytest", "Use logging instead of print"],
             "estimatedHours": 12,
             "prerequisites": ["lang-python-files-modules", "unit-testing"],
-            "resources": [{"label": "unittest documentation", "url": "https://docs.python.org/3/library/unittest.html"}, {"label": "YouTube: Corey Schafer – Python Tutorial: Using Try/Except Blocks for Error Handling (10:34)", "url": "https://www.youtube.com/watch?v=NIWwJbo-9_8"}, {"label": "YouTube: Bro Code – Learn Python EXCEPTION HANDLING in 5 minutes! (5:49)", "url": "https://www.youtube.com/watch?v=V_NXT2-QIlE"}],
+            "resources": [{"label": "unittest documentation", "url": "https://docs.python.org/3/library/unittest.html"}, {"label": "Python docs: Errors and exceptions tutorial - try, except, raise", "url": "https://docs.python.org/3/tutorial/errors.html"}, {"label": "Python docs: Built-in exceptions - hierarchy and semantics", "url": "https://docs.python.org/3/library/exceptions.html"}, {"label": "pytest docs: Get started - writing and running tests", "url": "https://docs.pytest.org/en/stable/getting-started.html"}, {"label": "Real Python: Getting started with testing in Python", "url": "https://realpython.com/python-testing/"}, {"label": "YouTube: Corey Schafer – Python Tutorial: Using Try/Except Blocks for Error Handling (10:34)", "url": "https://www.youtube.com/watch?v=NIWwJbo-9_8"}, {"label": "YouTube: Bro Code – Learn Python EXCEPTION HANDLING in 5 minutes! (5:49)", "url": "https://www.youtube.com/watch?v=V_NXT2-QIlE"}],
             "priority": "core",
             "completed": false
           }
@@ -680,7 +680,7 @@
             "outcomes": ["Use generics, protocols, and unions", "Run a type checker in CI"],
             "estimatedHours": 12,
             "prerequisites": ["lang-python-oop-datamodel"],
-            "resources": [{"label": "typing module", "url": "https://docs.python.org/3/library/typing.html"}, {"label": "YouTube: Corey Schafer – Python Tutorial: Type Hints - From Basic Annotations to Advanced Generics (40:59)", "url": "https://www.youtube.com/watch?v=RwH2UzC2rIo"}, {"label": "YouTube: Tech With Tim – Python Typing - Type Hints & Annotations (24:46)", "url": "https://www.youtube.com/watch?v=QORvB-_mbZ0"}],
+            "resources": [{"label": "typing module", "url": "https://docs.python.org/3/library/typing.html"}, {"label": "Python docs: Static typing with Python - typing module overview", "url": "https://typing.python.org/en/latest/"}, {"label": "mypy docs: Type hints cheat sheet", "url": "https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html"}, {"label": "mypy docs: Getting started - running the static checker", "url": "https://mypy.readthedocs.io/en/stable/getting_started.html"}, {"label": "Real Python: Python type checking guide", "url": "https://realpython.com/python-type-checking/"}, {"label": "YouTube: Corey Schafer – Python Tutorial: Type Hints - From Basic Annotations to Advanced Generics (40:59)", "url": "https://www.youtube.com/watch?v=RwH2UzC2rIo"}, {"label": "YouTube: Tech With Tim – Python Typing - Type Hints & Annotations (24:46)", "url": "https://www.youtube.com/watch?v=QORvB-_mbZ0"}],
             "priority": "core",
             "completed": false
           },
@@ -691,7 +691,7 @@
             "outcomes": ["Write async functions and gather tasks", "Understand the GIL and its impact", "Use concurrent.futures"],
             "estimatedHours": 18,
             "prerequisites": ["lang-python-iterators-generators", "concurrency"],
-            "resources": [{"label": "asyncio documentation", "url": "https://docs.python.org/3/library/asyncio.html"}, {"label": "YouTube: Socratica – AsyncIO, await, and async - Concurrency in Python (9:12)", "url": "https://www.youtube.com/watch?v=K56nNuBEd0c"}, {"label": "YouTube: Tech With Tim – Asyncio in Python - Full Tutorial (24:59)", "url": "https://www.youtube.com/watch?v=Qb9s3UiMSTA"}],
+            "resources": [{"label": "asyncio documentation", "url": "https://docs.python.org/3/library/asyncio.html"}, {"label": "Python docs: A conceptual overview of asyncio", "url": "https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html"}, {"label": "Python docs: Coroutines and tasks - asyncio.run, create_task, gather", "url": "https://docs.python.org/3/library/asyncio-task.html"}, {"label": "Python docs: concurrent.futures - thread and process pools", "url": "https://docs.python.org/3/library/concurrent.futures.html"}, {"label": "Real Python: Speed up your Python program with concurrency", "url": "https://realpython.com/python-concurrency/"}, {"label": "YouTube: Socratica – AsyncIO, await, and async - Concurrency in Python (9:12)", "url": "https://www.youtube.com/watch?v=K56nNuBEd0c"}, {"label": "YouTube: Tech With Tim – Asyncio in Python - Full Tutorial (24:59)", "url": "https://www.youtube.com/watch?v=Qb9s3UiMSTA"}],
             "priority": "core",
             "completed": false
           },
@@ -702,7 +702,7 @@
             "outcomes": ["Build a package with pyproject.toml", "Profile code with cProfile", "Apply targeted optimizations"],
             "estimatedHours": 14,
             "prerequisites": ["lang-python-testing-errors"],
-            "resources": [{"label": "Python Packaging User Guide", "url": "https://packaging.python.org/"}, {"label": "YouTube: Real Python – Packaging Your Python Code With pyproject.toml | Complete Code Conversation (51:39)", "url": "https://www.youtube.com/watch?v=v6tALyc4C10"}, {"label": "YouTube: ArjanCodes – How to Package and Publish Python Code the Right Way (20:28)", "url": "https://www.youtube.com/watch?v=5KEObONUkik"}],
+            "resources": [{"label": "Python Packaging User Guide", "url": "https://packaging.python.org/"}, {"label": "Python Packaging guide: Packaging Python projects tutorial", "url": "https://packaging.python.org/en/latest/tutorials/packaging-projects/"}, {"label": "Python Packaging guide: Writing your pyproject.toml", "url": "https://packaging.python.org/en/latest/guides/writing-pyproject-toml/"}, {"label": "Python docs: The Python profilers - cProfile and profile", "url": "https://docs.python.org/3/library/profile.html"}, {"label": "Python docs: timeit - measuring execution time of small snippets", "url": "https://docs.python.org/3/library/timeit.html"}, {"label": "YouTube: Real Python – Packaging Your Python Code With pyproject.toml | Complete Code Conversation (51:39)", "url": "https://www.youtube.com/watch?v=v6tALyc4C10"}, {"label": "YouTube: ArjanCodes – How to Package and Publish Python Code the Right Way (20:28)", "url": "https://www.youtube.com/watch?v=5KEObONUkik"}],
             "priority": "optional",
             "completed": false
           }
@@ -736,7 +736,7 @@
             "outcomes": ["Use let, const, and arrow functions", "Manipulate arrays and objects", "Use destructuring and template literals"],
             "estimatedHours": 20,
             "prerequisites": [],
-            "resources": [{"label": "MDN JavaScript", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"}, {"label": "YouTube: Traversy Media – Has TypeScript Become The Default Way To Write JavaScript? (11:54)", "url": "https://www.youtube.com/watch?v=NAIC9sjBgZA"}],
+            "resources": [{"label": "MDN JavaScript", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"}, {"label": "MDN: JavaScript Guide - grammar and types", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types"}, {"label": "MDN: JavaScript Guide - control flow and error handling", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling"}, {"label": "MDN: JavaScript Guide - functions", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions"}, {"label": "MDN: JavaScript Guide - working with objects", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects"}, {"label": "YouTube: Traversy Media – Has TypeScript Become The Default Way To Write JavaScript? (11:54)", "url": "https://www.youtube.com/watch?v=NAIC9sjBgZA"}],
             "priority": "core",
             "completed": false
           },
@@ -747,7 +747,7 @@
             "outcomes": ["Explain closures with examples", "Predict the value of this", "Avoid common hoisting pitfalls"],
             "estimatedHours": 10,
             "prerequisites": ["lang-typescript-js-core"],
-            "resources": [{"label": "MDN: Closures", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures"}, {"label": "YouTube: Programming with Mosh – TypeScript Tutorial for Beginners (1:04:28)", "url": "https://www.youtube.com/watch?v=d56mG7DezGs"}, {"label": "YouTube: Boot dev – The TypeScript Course for JS Devs (4:24:19)", "url": "https://www.youtube.com/watch?v=K01hLNDdqg4"}],
+            "resources": [{"label": "MDN: Closures", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures"}, {"label": "MDN: this - how the this keyword is determined", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"}, {"label": "MDN: Functions guide - scope and the function stack", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_scope"}, {"label": "MDN: Glossary - scope", "url": "https://developer.mozilla.org/en-US/docs/Glossary/Scope"}, {"label": "javascript.info: Variable scope and closure", "url": "https://javascript.info/closure"}, {"label": "YouTube: Programming with Mosh – TypeScript Tutorial for Beginners (1:04:28)", "url": "https://www.youtube.com/watch?v=d56mG7DezGs"}, {"label": "YouTube: Boot dev – The TypeScript Course for JS Devs (4:24:19)", "url": "https://www.youtube.com/watch?v=K01hLNDdqg4"}],
             "priority": "core",
             "completed": false
           },
@@ -758,7 +758,7 @@
             "outcomes": ["Import and export ES modules", "Manage packages with npm", "Run scripts and a linter"],
             "estimatedHours": 8,
             "prerequisites": ["lang-typescript-js-core"],
-            "resources": [{"label": "MDN: JavaScript modules", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"}, {"label": "YouTube: Net Ninja – TypeScript Tutorial #14 - Modules (6:37)", "url": "https://www.youtube.com/watch?v=EpOPR03z4Vw"}],
+            "resources": [{"label": "MDN: JavaScript modules", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"}, {"label": "javascript.info: Modules introduction", "url": "https://javascript.info/modules-intro"}, {"label": "MDN: import statement reference", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import"}, {"label": "npm docs: About packages and modules", "url": "https://docs.npmjs.com/about-packages-and-modules"}, {"label": "npm docs: Specifying dependencies and devDependencies in package.json", "url": "https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file"}, {"label": "YouTube: Net Ninja – TypeScript Tutorial #14 - Modules (6:37)", "url": "https://www.youtube.com/watch?v=EpOPR03z4Vw"}],
             "priority": "core",
             "completed": false
           }
@@ -780,7 +780,7 @@
             "outcomes": ["Use async/await with error handling", "Run tasks in parallel with Promise.all", "Explain the event loop"],
             "estimatedHours": 14,
             "prerequisites": ["lang-typescript-scope-closures"],
-            "resources": [{"label": "MDN: Using promises", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises"}, {"label": "YouTube: Programming with Mosh – TypeScript Tutorial for Beginners (1:04:28)", "url": "https://www.youtube.com/watch?v=d56mG7DezGs"}, {"label": "YouTube: Fireship – TypeScript - The Basics (12:01)", "url": "https://www.youtube.com/watch?v=ahCwqrYpIuM"}],
+            "resources": [{"label": "MDN: Using promises", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises"}, {"label": "MDN: Async function statement reference", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function"}, {"label": "MDN: Introducing asynchronous JavaScript", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing"}, {"label": "MDN: JavaScript execution model - event loop", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop"}, {"label": "javascript.info: Promise basics", "url": "https://javascript.info/promise-basics"}, {"label": "YouTube: Programming with Mosh – TypeScript Tutorial for Beginners (1:04:28)", "url": "https://www.youtube.com/watch?v=d56mG7DezGs"}, {"label": "YouTube: Fireship – TypeScript - The Basics (12:01)", "url": "https://www.youtube.com/watch?v=ahCwqrYpIuM"}],
             "priority": "core",
             "completed": false
           },
@@ -791,7 +791,7 @@
             "outcomes": ["Model data with interfaces and type aliases", "Use unions and narrowing", "Write generic functions"],
             "estimatedHours": 16,
             "prerequisites": ["lang-typescript-modules-tooling"],
-            "resources": [{"label": "TypeScript Handbook", "url": "https://www.typescriptlang.org/docs/handbook/intro.html"}, {"label": "YouTube: freeCodeCamp.org – TypeScript in Express – TypeScript Tutorial (1:14:35)", "url": "https://www.youtube.com/watch?v=bYgphDEWwvs"}, {"label": "YouTube: Web Dev Simplified – Learn TypeScript Generics In 13 Minutes (12:52)", "url": "https://www.youtube.com/watch?v=EcCTIExsqmI"}],
+            "resources": [{"label": "TypeScript Handbook", "url": "https://www.typescriptlang.org/docs/handbook/intro.html"}, {"label": "TypeScript Handbook: Everyday types", "url": "https://www.typescriptlang.org/docs/handbook/2/everyday-types.html"}, {"label": "TypeScript Handbook: Object types - interfaces and type aliases", "url": "https://www.typescriptlang.org/docs/handbook/2/objects.html"}, {"label": "TypeScript Handbook: Generics", "url": "https://www.typescriptlang.org/docs/handbook/2/generics.html"}, {"label": "TypeScript Handbook: Narrowing - unions and type guards", "url": "https://www.typescriptlang.org/docs/handbook/2/narrowing.html"}, {"label": "YouTube: freeCodeCamp.org – TypeScript in Express – TypeScript Tutorial (1:14:35)", "url": "https://www.youtube.com/watch?v=bYgphDEWwvs"}, {"label": "YouTube: Web Dev Simplified – Learn TypeScript Generics In 13 Minutes (12:52)", "url": "https://www.youtube.com/watch?v=EcCTIExsqmI"}],
             "priority": "core",
             "completed": false
           },
@@ -802,7 +802,7 @@
             "outcomes": ["Write a Node.js script or API", "Write unit tests", "Configure tsconfig for a project"],
             "estimatedHours": 12,
             "prerequisites": ["lang-typescript-async", "unit-testing"],
-            "resources": [{"label": "Node.js Documentation", "url": "https://nodejs.org/docs/latest/api/"}, {"label": "YouTube: freeCodeCamp.org – 0-60 with Typescript and Node.js (25:32)", "url": "https://www.youtube.com/watch?v=RjqTo_dfw4w"}],
+            "resources": [{"label": "Node.js Documentation", "url": "https://nodejs.org/docs/latest/api/"}, {"label": "Node.js docs: Introduction to Node.js", "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs"}, {"label": "Node.js docs: test runner module", "url": "https://nodejs.org/docs/latest/api/test.html"}, {"label": "Node.js docs: assert module", "url": "https://nodejs.org/docs/latest/api/assert.html"}, {"label": "Jest docs: Getting started", "url": "https://jestjs.io/docs/getting-started"}, {"label": "YouTube: freeCodeCamp.org – 0-60 with Typescript and Node.js (25:32)", "url": "https://www.youtube.com/watch?v=RjqTo_dfw4w"}],
             "priority": "core",
             "completed": false
           }
@@ -824,7 +824,7 @@
             "outcomes": ["Write mapped and conditional types", "Use discriminated unions for state", "Apply utility types"],
             "estimatedHours": 18,
             "prerequisites": ["lang-typescript-type-basics"],
-            "resources": [{"label": "TypeScript Documentation", "url": "https://www.typescriptlang.org/docs/"}, {"label": "YouTube: Web Dev Simplified – Learn Advanced TypeScript In 25 Minutes (infer, extends, ternaries) (25:55)", "url": "https://www.youtube.com/watch?v=bnTAOB3P6nM"}, {"label": "YouTube: Boot dev – The TypeScript Course for JS Devs (4:24:19)", "url": "https://www.youtube.com/watch?v=K01hLNDdqg4"}],
+            "resources": [{"label": "TypeScript Documentation", "url": "https://www.typescriptlang.org/docs/"}, {"label": "TypeScript Handbook: Conditional types", "url": "https://www.typescriptlang.org/docs/handbook/2/conditional-types.html"}, {"label": "TypeScript Handbook: Mapped types", "url": "https://www.typescriptlang.org/docs/handbook/2/mapped-types.html"}, {"label": "TypeScript Handbook: Utility types", "url": "https://www.typescriptlang.org/docs/handbook/utility-types.html"}, {"label": "TypeScript Handbook: Template literal types", "url": "https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html"}, {"label": "YouTube: Web Dev Simplified – Learn Advanced TypeScript In 25 Minutes (infer, extends, ternaries) (25:55)", "url": "https://www.youtube.com/watch?v=bnTAOB3P6nM"}, {"label": "YouTube: Boot dev – The TypeScript Course for JS Devs (4:24:19)", "url": "https://www.youtube.com/watch?v=K01hLNDdqg4"}],
             "priority": "core",
             "completed": false
           },
@@ -835,7 +835,7 @@
             "outcomes": ["Enable strict compiler options", "Validate external input with a schema library", "Use type guards"],
             "estimatedHours": 10,
             "prerequisites": ["lang-typescript-advanced-types"],
-            "resources": [{"label": "TSConfig Reference", "url": "https://www.typescriptlang.org/tsconfig/"}, {"label": "YouTube: Jack Herrington – Fixing TypeScript's Blindspot: Runtime Typechecking (15:44)", "url": "https://www.youtube.com/watch?v=rY_XqfSHock"}],
+            "resources": [{"label": "TSConfig Reference", "url": "https://www.typescriptlang.org/tsconfig/"}, {"label": "Zod docs: Introduction - schema validation with static type inference", "url": "https://zod.dev/"}, {"label": "TypeScript: TSConfig strict option reference", "url": "https://www.typescriptlang.org/tsconfig/#strict"}, {"label": "TypeScript Handbook: Narrowing - type predicates and unknown data", "url": "https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates"}, {"label": "TypeScript Handbook: Type compatibility", "url": "https://www.typescriptlang.org/docs/handbook/type-compatibility.html"}, {"label": "YouTube: Jack Herrington – Fixing TypeScript's Blindspot: Runtime Typechecking (15:44)", "url": "https://www.youtube.com/watch?v=rY_XqfSHock"}],
             "priority": "core",
             "completed": false
           },
@@ -846,7 +846,7 @@
             "outcomes": ["Organize a monorepo or layered project", "Configure a bundler and CI", "Manage library publishing"],
             "estimatedHours": 14,
             "prerequisites": ["lang-typescript-node-testing", "clean-code"],
-            "resources": [{"label": "TypeScript Project References", "url": "https://www.typescriptlang.org/docs/handbook/project-references.html"}, {"label": "YouTube: Web Dev Simplified – How To Build Your First TypeScript Project - TODO List Application (28:30)", "url": "https://www.youtube.com/watch?v=jBmrduvKl5w"}, {"label": "YouTube: Dave Gray – Typescript Project from Scratch | Complete Tutorial for Beginners (48:14)", "url": "https://www.youtube.com/watch?v=61v23Ce5SXA"}],
+            "resources": [{"label": "TypeScript Project References", "url": "https://www.typescriptlang.org/docs/handbook/project-references.html"}, {"label": "TypeScript Handbook: Modules reference", "url": "https://www.typescriptlang.org/docs/handbook/modules/introduction.html"}, {"label": "TypeScript Handbook: Modules - choosing compiler options", "url": "https://www.typescriptlang.org/docs/handbook/modules/guides/choosing-compiler-options.html"}, {"label": "TypeScript docs: Integrating with build tools", "url": "https://www.typescriptlang.org/docs/handbook/integrating-with-build-tools.html"}, {"label": "esbuild docs: Getting started - bundling for the web", "url": "https://esbuild.github.io/getting-started/"}, {"label": "YouTube: Web Dev Simplified – How To Build Your First TypeScript Project - TODO List Application (28:30)", "url": "https://www.youtube.com/watch?v=jBmrduvKl5w"}, {"label": "YouTube: Dave Gray – Typescript Project from Scratch | Complete Tutorial for Beginners (48:14)", "url": "https://www.youtube.com/watch?v=61v23Ce5SXA"}],
             "priority": "optional",
             "completed": false
           }
@@ -880,7 +880,7 @@
             "outcomes": ["Compile and run Java programs", "Use primitives, strings, and arrays", "Write methods and control flow"],
             "estimatedHours": 16,
             "prerequisites": [],
-            "resources": [{"label": "Dev.java Learn", "url": "https://dev.java/learn/"}, {"label": "YouTube: LinkedIn Learning – Java Tutorial - Explore BASIC SYNTAX (7:04)", "url": "https://www.youtube.com/watch?v=3lOhz1F1zHA"}],
+            "resources": [{"label": "Dev.java Learn", "url": "https://dev.java/learn/"}, {"label": "Oracle Java Tutorials: Primitive data types", "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html"}, {"label": "Oracle Java Tutorials: Control flow statements", "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html"}, {"label": "Oracle Java Tutorials: Strings", "url": "https://docs.oracle.com/javase/tutorial/java/data/strings.html"}, {"label": "Oracle Java Tutorials: Defining methods", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html"}, {"label": "YouTube: LinkedIn Learning – Java Tutorial - Explore BASIC SYNTAX (7:04)", "url": "https://www.youtube.com/watch?v=3lOhz1F1zHA"}],
             "priority": "core",
             "completed": false
           },
@@ -891,7 +891,7 @@
             "outcomes": ["Define classes and constructors", "Use interfaces and inheritance", "Apply access modifiers"],
             "estimatedHours": 16,
             "prerequisites": ["lang-java-syntax-types"],
-            "resources": [{"label": "Dev.java: Classes and Objects", "url": "https://dev.java/learn/classes-objects/"}, {"label": "YouTube: Bro Code – Learn Java Object Oriented Programming in 10 minutes! (9:51)", "url": "https://www.youtube.com/watch?v=DYbi93vuSaU"}],
+            "resources": [{"label": "Dev.java: Classes and Objects", "url": "https://dev.java/learn/classes-objects/"}, {"label": "Oracle Java Tutorials: Classes and objects", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/index.html"}, {"label": "Oracle Java Tutorials: Interfaces and inheritance", "url": "https://docs.oracle.com/javase/tutorial/java/IandI/index.html"}, {"label": "Oracle Java Tutorials: Controlling access to members of a class", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html"}, {"label": "Oracle Java Tutorials: Nested classes", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html"}, {"label": "YouTube: Bro Code – Learn Java Object Oriented Programming in 10 minutes! (9:51)", "url": "https://www.youtube.com/watch?v=DYbi93vuSaU"}],
             "priority": "core",
             "completed": false
           },
@@ -902,7 +902,7 @@
             "outcomes": ["Choose between List, Map, and Set", "Handle checked and unchecked exceptions", "Use generics with collections"],
             "estimatedHours": 14,
             "prerequisites": ["lang-java-classes-objects"],
-            "resources": [{"label": "Java SE API Documentation", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/"}, {"label": "YouTube: Programming with Mosh – Java Collections Tutorial (32:22)", "url": "https://www.youtube.com/watch?v=rH0winlka8A"}],
+            "resources": [{"label": "Java SE API Documentation", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/"}, {"label": "Oracle Java Tutorials: Collections trail", "url": "https://docs.oracle.com/javase/tutorial/collections/index.html"}, {"label": "Oracle Java Tutorials: Exceptions lesson", "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html"}, {"label": "Oracle Java Tutorials: Collection interfaces - List, Set, Map, Queue", "url": "https://docs.oracle.com/javase/tutorial/collections/interfaces/index.html"}, {"label": "Oracle Java Tutorials: try-with-resources statement", "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html"}, {"label": "YouTube: Programming with Mosh – Java Collections Tutorial (32:22)", "url": "https://www.youtube.com/watch?v=rH0winlka8A"}],
             "priority": "core",
             "completed": false
           }
@@ -924,7 +924,7 @@
             "outcomes": ["Write lambdas and method references", "Build stream pipelines", "Use Optional safely"],
             "estimatedHours": 14,
             "prerequisites": ["lang-java-collections-exceptions"],
-            "resources": [{"label": "Dev.java: Streams", "url": "https://dev.java/learn/"}, {"label": "YouTube: Bro Code – Java lambda λ (18:00)", "url": "https://www.youtube.com/watch?v=LEJ1kGHSXdA"}],
+            "resources": [{"label": "Dev.java: Streams", "url": "https://dev.java/learn/"}, {"label": "Oracle Java Tutorials: Lambda expressions", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html"}, {"label": "Oracle Java Tutorials: Aggregate operations - streams", "url": "https://docs.oracle.com/javase/tutorial/collections/streams/index.html"}, {"label": "Oracle Java Tutorials: Reduction - collect and reduce", "url": "https://docs.oracle.com/javase/tutorial/collections/streams/reduction.html"}, {"label": "Oracle Java Tutorials: Method references", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html"}, {"label": "YouTube: Bro Code – Java lambda λ (18:00)", "url": "https://www.youtube.com/watch?v=LEJ1kGHSXdA"}],
             "priority": "core",
             "completed": false
           },
@@ -935,7 +935,7 @@
             "outcomes": ["Configure a Maven or Gradle project", "Write JUnit tests", "Use mocking sparingly"],
             "estimatedHours": 12,
             "prerequisites": ["lang-java-classes-objects", "unit-testing"],
-            "resources": [{"label": "JUnit 5 User Guide", "url": "https://junit.org/junit5/docs/current/user-guide/"}, {"label": "YouTube: freeCodeCamp.org – Java Testing with Selenium Course (7:28:51)", "url": "https://www.youtube.com/watch?v=QQliGCtqD2w"}],
+            "resources": [{"label": "JUnit 5 User Guide", "url": "https://junit.org/junit5/docs/current/user-guide/"}, {"label": "Maven: Getting started guide", "url": "https://maven.apache.org/guides/getting-started/index.html"}, {"label": "Maven: Introduction to the build lifecycle", "url": "https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html"}, {"label": "Baeldung: A guide to JUnit 5", "url": "https://www.baeldung.com/junit-5"}, {"label": "YouTube: freeCodeCamp.org – Java Testing with Selenium Course (7:28:51)", "url": "https://www.youtube.com/watch?v=QQliGCtqD2w"}],
             "priority": "core",
             "completed": false
           },
@@ -946,7 +946,7 @@
             "outcomes": ["Define records and enums", "Use sealed interfaces", "Apply pattern matching in switch"],
             "estimatedHours": 10,
             "prerequisites": ["lang-java-lambdas-streams"],
-            "resources": [{"label": "Dev.java Learn", "url": "https://dev.java/learn/"}, {"label": "YouTube: Manchester Java Community – The Future of Java: Records, Sealed Classes and Pattern Matching - José Paumard (1:05:46)", "url": "https://www.youtube.com/watch?v=HGjcrheS7BU"}],
+            "resources": [{"label": "Dev.java Learn", "url": "https://dev.java/learn/"}, {"label": "Oracle Java docs: Record classes", "url": "https://docs.oracle.com/en/java/javase/21/language/records.html"}, {"label": "Oracle Java docs: Sealed classes", "url": "https://docs.oracle.com/en/java/javase/21/language/sealed-classes-and-interfaces.html"}, {"label": "Oracle Java docs: Pattern matching", "url": "https://docs.oracle.com/en/java/javase/21/language/pattern-matching.html"}, {"label": "Oracle Java docs: Pattern matching for switch", "url": "https://docs.oracle.com/en/java/javase/21/language/pattern-matching-switch-expressions-and-statements.html"}, {"label": "YouTube: Manchester Java Community – The Future of Java: Records, Sealed Classes and Pattern Matching - José Paumard (1:05:46)", "url": "https://www.youtube.com/watch?v=HGjcrheS7BU"}],
             "priority": "optional",
             "completed": false
           }
@@ -968,7 +968,7 @@
             "outcomes": ["Use ExecutorService and CompletableFuture", "Avoid races and deadlocks", "Apply virtual threads appropriately"],
             "estimatedHours": 20,
             "prerequisites": ["lang-java-lambdas-streams", "concurrency"],
-            "resources": [{"label": "Dev.java: Concurrency", "url": "https://dev.java/learn/"}, {"label": "YouTube: Bro Code – Learn Java threading in 10 minutes! (10:21)", "url": "https://www.youtube.com/watch?v=SztE5W41on4"}],
+            "resources": [{"label": "Dev.java: Concurrency", "url": "https://dev.java/learn/"}, {"label": "Oracle Java Tutorials: Concurrency lesson", "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html"}, {"label": "Oracle Java Tutorials: Executors", "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/executors.html"}, {"label": "Oracle Java Tutorials: Concurrent collections", "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/collections.html"}, {"label": "Oracle Java docs: Virtual threads", "url": "https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html"}, {"label": "YouTube: Bro Code – Learn Java threading in 10 minutes! (10:21)", "url": "https://www.youtube.com/watch?v=SztE5W41on4"}],
             "priority": "core",
             "completed": false
           },
@@ -979,7 +979,7 @@
             "outcomes": ["Explain heap, stack, and garbage collection", "Profile an application", "Tune basic JVM options"],
             "estimatedHours": 16,
             "prerequisites": ["lang-java-build-testing"],
-            "resources": [{"label": "Java SE Documentation", "url": "https://docs.oracle.com/en/java/javase/21/"}, {"label": "YouTube: The Coding Gopher – How the Java Virtual Machine Works (and Why You Should Care) (4:04)", "url": "https://www.youtube.com/watch?v=cAoymPToQdg"}, {"label": "YouTube: Programming with Mosh – Java Full Course for Beginners (2:30:48)", "url": "https://www.youtube.com/watch?v=eIrMbAQSU34"}],
+            "resources": [{"label": "Java SE Documentation", "url": "https://docs.oracle.com/en/java/javase/21/"}, {"label": "Oracle Java docs: HotSpot Virtual Machine Garbage Collection Tuning Guide", "url": "https://docs.oracle.com/en/java/javase/21/gctuning/index.html"}, {"label": "Oracle: The Java Virtual Machine Specification - run-time data areas", "url": "https://docs.oracle.com/javase/specs/jvms/se21/html/jvms-2.html"}, {"label": "Oracle Java docs: Java Flight Recorder runtime guide", "url": "https://docs.oracle.com/en/java/javase/21/jfapi/why-use-java-flight-recorder.html"}, {"label": "YouTube: The Coding Gopher – How the Java Virtual Machine Works (and Why You Should Care) (4:04)", "url": "https://www.youtube.com/watch?v=cAoymPToQdg"}, {"label": "YouTube: Programming with Mosh – Java Full Course for Beginners (2:30:48)", "url": "https://www.youtube.com/watch?v=eIrMbAQSU34"}],
             "priority": "core",
             "completed": false
           },
@@ -990,7 +990,7 @@
             "outcomes": ["Build a REST service", "Use dependency injection", "Persist data with a database"],
             "estimatedHours": 24,
             "prerequisites": ["lang-java-build-testing", "lang-java-modern-features"],
-            "resources": [{"label": "Spring Boot Reference", "url": "https://spring.io/projects/spring-boot"}, {"label": "YouTube: freeCodeCamp.org – Spring Boot Tutorial for Beginners (Java Framework) (1:49:29)", "url": "https://www.youtube.com/watch?v=vtPkZShrvXQ"}],
+            "resources": [{"label": "Spring Boot Reference", "url": "https://spring.io/projects/spring-boot"}, {"label": "Spring Guides: Building an application with Spring Boot", "url": "https://spring.io/guides/gs/spring-boot/"}, {"label": "Spring Guides: Building a RESTful web service", "url": "https://spring.io/guides/gs/rest-service/"}, {"label": "Spring Boot reference: Getting started", "url": "https://docs.spring.io/spring-boot/reference/using/index.html"}, {"label": "Spring Guides: Accessing data with JPA", "url": "https://spring.io/guides/gs/accessing-data-jpa/"}, {"label": "YouTube: freeCodeCamp.org – Spring Boot Tutorial for Beginners (Java Framework) (1:49:29)", "url": "https://www.youtube.com/watch?v=vtPkZShrvXQ"}],
             "priority": "optional",
             "completed": false
           }
@@ -1024,7 +1024,7 @@
             "outcomes": ["Create a module and run programs", "Use variables, loops, and functions", "Format code with gofmt"],
             "estimatedHours": 10,
             "prerequisites": [],
-            "resources": [{"label": "A Tour of Go", "url": "https://go.dev/tour/"}, {"label": "YouTube: Ardan Labs – Go Syntax - Function Idioms (9:03)", "url": "https://www.youtube.com/watch?v=sK3eSCdyksM"}],
+            "resources": [{"label": "A Tour of Go", "url": "https://go.dev/tour/"}, {"label": "Go docs: Tutorial - Get started with Go", "url": "https://go.dev/doc/tutorial/getting-started"}, {"label": "Go docs: Tutorial - Create a Go module", "url": "https://go.dev/doc/tutorial/create-module"}, {"label": "Go docs: How to write Go code", "url": "https://go.dev/doc/code"}, {"label": "Go docs: Managing dependencies", "url": "https://go.dev/doc/modules/managing-dependencies"}, {"label": "YouTube: Ardan Labs – Go Syntax - Function Idioms (9:03)", "url": "https://www.youtube.com/watch?v=sK3eSCdyksM"}],
             "priority": "core",
             "completed": false
           },
@@ -1035,7 +1035,7 @@
             "outcomes": ["Use slices and maps correctly", "Define structs and methods", "Understand pointers"],
             "estimatedHours": 12,
             "prerequisites": ["lang-go-syntax-tooling"],
-            "resources": [{"label": "Go Documentation", "url": "https://go.dev/doc/"}, {"label": "YouTube: Net Ninja – Go (Golang) Tutorial #5 - Arrays & Slices (10:57)", "url": "https://www.youtube.com/watch?v=Arb-LjPg7FA"}, {"label": "YouTube: Tech With Tim – Golang Tutorial #15 - Maps (9:57)", "url": "https://www.youtube.com/watch?v=yJE2RC37BF4"}],
+            "resources": [{"label": "Go Documentation", "url": "https://go.dev/doc/"}, {"label": "Go blog: Go slices - usage and internals", "url": "https://go.dev/blog/slices-intro"}, {"label": "Go blog: Arrays, slices (and strings) - the mechanics of append", "url": "https://go.dev/blog/slices"}, {"label": "Go blog: Go maps in action", "url": "https://go.dev/blog/maps"}, {"label": "Go Tour: Structs", "url": "https://go.dev/tour/moretypes/2"}, {"label": "YouTube: Net Ninja – Go (Golang) Tutorial #5 - Arrays & Slices (10:57)", "url": "https://www.youtube.com/watch?v=Arb-LjPg7FA"}, {"label": "YouTube: Tech With Tim – Golang Tutorial #15 - Maps (9:57)", "url": "https://www.youtube.com/watch?v=yJE2RC37BF4"}],
             "priority": "core",
             "completed": false
           },
@@ -1046,7 +1046,7 @@
             "outcomes": ["Return and wrap errors", "Structure packages", "Write table-driven tests"],
             "estimatedHours": 10,
             "prerequisites": ["lang-go-data-structures"],
-            "resources": [{"label": "Effective Go", "url": "https://go.dev/doc/effective_go"}, {"label": "YouTube: Engineering Community – Error handling with Go 1.13 by Andriana Prudyvus (Eng) (17:22)", "url": "https://www.youtube.com/watch?v=NQ_DUIGgARw"}],
+            "resources": [{"label": "Effective Go", "url": "https://go.dev/doc/effective_go"}, {"label": "Go blog: Error handling and Go", "url": "https://go.dev/blog/error-handling-and-go"}, {"label": "Go blog: Working with errors in Go 1.13", "url": "https://go.dev/blog/go1.13-errors"}, {"label": "Go blog: Package names", "url": "https://go.dev/blog/package-names"}, {"label": "Go docs: Tutorial - Return and handle an error", "url": "https://go.dev/doc/tutorial/handle-errors"}, {"label": "YouTube: Engineering Community – Error handling with Go 1.13 by Andriana Prudyvus (Eng) (17:22)", "url": "https://www.youtube.com/watch?v=NQ_DUIGgARw"}],
             "priority": "core",
             "completed": false
           }
@@ -1068,7 +1068,7 @@
             "outcomes": ["Define and satisfy interfaces implicitly", "Write generic functions", "Prefer composition via embedding"],
             "estimatedHours": 12,
             "prerequisites": ["lang-go-errors-packages"],
-            "resources": [{"label": "Go Tutorials", "url": "https://go.dev/doc/tutorial/"}, {"label": "YouTube: Net Ninja – Go (Golang) Tutorial #22 - Interfaces (5:37)", "url": "https://www.youtube.com/watch?v=lbW-KVdIXaY"}, {"label": "YouTube: Anthony GG – This Will Make Everyone Understand Golang Interfaces (21:03)", "url": "https://www.youtube.com/watch?v=rH0bpx7I2Dk"}],
+            "resources": [{"label": "Go Tutorials", "url": "https://go.dev/doc/tutorial/"}, {"label": "Go Tour: Interfaces", "url": "https://go.dev/tour/methods/9"}, {"label": "Go docs: Tutorial - Getting started with generics", "url": "https://go.dev/doc/tutorial/generics"}, {"label": "Go blog: An introduction to generics", "url": "https://go.dev/blog/intro-generics"}, {"label": "Go blog: When to use generics", "url": "https://go.dev/blog/when-generics"}, {"label": "YouTube: Net Ninja – Go (Golang) Tutorial #22 - Interfaces (5:37)", "url": "https://www.youtube.com/watch?v=lbW-KVdIXaY"}, {"label": "YouTube: Anthony GG – This Will Make Everyone Understand Golang Interfaces (21:03)", "url": "https://www.youtube.com/watch?v=rH0bpx7I2Dk"}],
             "priority": "core",
             "completed": false
           },
@@ -1079,7 +1079,7 @@
             "outcomes": ["Launch goroutines safely", "Use channels and select", "Use WaitGroup and Mutex"],
             "estimatedHours": 16,
             "prerequisites": ["lang-go-interfaces-generics", "concurrency"],
-            "resources": [{"label": "Effective Go: Concurrency", "url": "https://go.dev/doc/effective_go#concurrency"}, {"label": "YouTube: Anthony GG – Golang Channels Or Wait Groups? Let Me Explain. (18:32)", "url": "https://www.youtube.com/watch?v=2B-VAxCmhgA"}],
+            "resources": [{"label": "Effective Go: Concurrency", "url": "https://go.dev/doc/effective_go#concurrency"}, {"label": "Go Tour: Concurrency - goroutines and channels", "url": "https://go.dev/tour/concurrency/1"}, {"label": "Go blog: Share memory by communicating", "url": "https://go.dev/blog/codelab-share"}, {"label": "Go blog: Go concurrency patterns - timing out, moving on", "url": "https://go.dev/blog/concurrency-timeouts"}, {"label": "Go package docs: sync", "url": "https://pkg.go.dev/sync"}, {"label": "YouTube: Anthony GG – Golang Channels Or Wait Groups? Let Me Explain. (18:32)", "url": "https://www.youtube.com/watch?v=2B-VAxCmhgA"}],
             "priority": "core",
             "completed": false
           },
@@ -1090,7 +1090,7 @@
             "outcomes": ["Build handlers and routing with net/http", "Encode and decode JSON", "Test handlers with httptest"],
             "estimatedHours": 14,
             "prerequisites": ["lang-go-interfaces-generics"],
-            "resources": [{"label": "Go Standard Library", "url": "https://pkg.go.dev/std"}, {"label": "YouTube: Tech With Tim – Go API Tutorial - Make An API With Go (38:03)", "url": "https://www.youtube.com/watch?v=bj77B59nkTQ"}],
+            "resources": [{"label": "Go Standard Library", "url": "https://pkg.go.dev/std"}, {"label": "Go package docs: net/http", "url": "https://pkg.go.dev/net/http"}, {"label": "Go docs: Tutorial - Developing a RESTful API with Go and Gin", "url": "https://go.dev/doc/tutorial/web-service-gin"}, {"label": "Go blog: Routing enhancements for Go 1.22", "url": "https://go.dev/blog/routing-enhancements"}, {"label": "Go package docs: net/http/httptest", "url": "https://pkg.go.dev/net/http/httptest"}, {"label": "YouTube: Tech With Tim – Go API Tutorial - Make An API With Go (38:03)", "url": "https://www.youtube.com/watch?v=bj77B59nkTQ"}],
             "priority": "core",
             "completed": false
           }
@@ -1112,7 +1112,7 @@
             "outcomes": ["Propagate context cancellation and deadlines", "Build worker pools and pipelines", "Prevent goroutine leaks"],
             "estimatedHours": 14,
             "prerequisites": ["lang-go-goroutines-channels"],
-            "resources": [{"label": "Go Concurrency Patterns: Context", "url": "https://go.dev/blog/context"}, {"label": "YouTube: Google for Developers – Google I/O 2013 - Advanced Go Concurrency Patterns (34:11)", "url": "https://www.youtube.com/watch?v=QDDwwePbDtw"}],
+            "resources": [{"label": "Go Concurrency Patterns: Context", "url": "https://go.dev/blog/context"}, {"label": "Go blog: Go concurrency patterns - pipelines and cancellation", "url": "https://go.dev/blog/pipelines"}, {"label": "Go blog: Contexts and structs", "url": "https://go.dev/blog/context-and-structs"}, {"label": "Go package docs: context", "url": "https://pkg.go.dev/context"}, {"label": "Go blog: Advanced Go concurrency patterns", "url": "https://go.dev/blog/advanced-go-concurrency-patterns"}, {"label": "YouTube: Google for Developers – Google I/O 2013 - Advanced Go Concurrency Patterns (34:11)", "url": "https://www.youtube.com/watch?v=QDDwwePbDtw"}],
             "priority": "core",
             "completed": false
           },
@@ -1123,7 +1123,7 @@
             "outcomes": ["Write benchmarks", "Use pprof and the race detector", "Reduce allocations"],
             "estimatedHours": 12,
             "prerequisites": ["lang-go-http-services"],
-            "resources": [{"label": "Diagnostics", "url": "https://go.dev/doc/diagnostics"}, {"label": "YouTube: Gopher Academy – GopherCon 2019: Two Go Programs, Three Different Profiling Techniques - Dave Cheney (43:00)", "url": "https://www.youtube.com/watch?v=nok0aYiGiYA"}, {"label": "YouTube: Google Cloud Tech – Boost performance of Go applications with profile guided optimization (35:30)", "url": "https://www.youtube.com/watch?v=FwzE5Sdhhdw"}],
+            "resources": [{"label": "Diagnostics", "url": "https://go.dev/doc/diagnostics"}, {"label": "Go blog: Profiling Go programs", "url": "https://go.dev/blog/pprof"}, {"label": "Go docs: Profile-guided optimization", "url": "https://go.dev/doc/pgo"}, {"label": "Go package docs: testing - benchmarks", "url": "https://pkg.go.dev/testing#hdr-Benchmarks"}, {"label": "Go package docs: runtime/pprof", "url": "https://pkg.go.dev/runtime/pprof"}, {"label": "YouTube: Gopher Academy – GopherCon 2019: Two Go Programs, Three Different Profiling Techniques - Dave Cheney (43:00)", "url": "https://www.youtube.com/watch?v=nok0aYiGiYA"}, {"label": "YouTube: Google Cloud Tech – Boost performance of Go applications with profile guided optimization (35:30)", "url": "https://www.youtube.com/watch?v=FwzE5Sdhhdw"}],
             "priority": "core",
             "completed": false
           },
@@ -1134,7 +1134,7 @@
             "outcomes": ["Use structured logging", "Handle graceful shutdown", "Build small container images"],
             "estimatedHours": 12,
             "prerequisites": ["lang-go-http-services", "clean-code"],
-            "resources": [{"label": "Go Documentation", "url": "https://go.dev/doc/"}, {"label": "YouTube: GopherCon UK – Production Go Service Essentials - Elliot Williams (40:19)", "url": "https://www.youtube.com/watch?v=BVEcbifDrMk"}],
+            "resources": [{"label": "Go Documentation", "url": "https://go.dev/doc/"}, {"label": "Go blog: Structured logging with slog", "url": "https://go.dev/blog/slog"}, {"label": "Go docs: Tutorial - Add a test", "url": "https://go.dev/doc/tutorial/add-a-test"}, {"label": "Docker docs: Containerize a Go application", "url": "https://docs.docker.com/guides/golang/build-images/"}, {"label": "Go docs: Tutorial - Getting started with fuzzing", "url": "https://go.dev/doc/tutorial/fuzz"}, {"label": "YouTube: GopherCon UK – Production Go Service Essentials - Elliot Williams (40:19)", "url": "https://www.youtube.com/watch?v=BVEcbifDrMk"}],
             "priority": "optional",
             "completed": false
           }
@@ -1168,7 +1168,7 @@
             "outcomes": ["Define and implement traits", "Use generics with trait bounds", "Use derive and standard traits"],
             "estimatedHours": 14,
             "prerequisites": ["rust-basics"],
-            "resources": [{"label": "The Rust Book: Generic Types, Traits, and Lifetimes", "url": "https://doc.rust-lang.org/book/ch10-00-generics.html"}, {"label": "YouTube: Let's Get Rusty – Generic Types in Rust (15:18)", "url": "https://www.youtube.com/watch?v=6rcTSxPJ6Bw"}, {"label": "YouTube: Copenhagen Rust Community – Impl Trait aka Look ma’, no generics! by Jon Gjengset (1:09:05)", "url": "https://www.youtube.com/watch?v=CWiz_RtA1Hw"}],
+            "resources": [{"label": "The Rust Book: Generic Types, Traits, and Lifetimes", "url": "https://doc.rust-lang.org/book/ch10-00-generics.html"}, {"label": "Rust Book: Generic Data Types - generics in functions, structs, enums", "url": "https://doc.rust-lang.org/book/ch10-01-syntax.html"}, {"label": "Rust Book: Traits - defining shared behavior and trait bounds", "url": "https://doc.rust-lang.org/book/ch10-02-traits.html"}, {"label": "Rust Book: Lifetime Syntax - validating references with lifetimes", "url": "https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html"}, {"label": "Rust by Example: Traits - trait definitions and implementations", "url": "https://doc.rust-lang.org/rust-by-example/trait.html"}, {"label": "Rust by Example: Generics - generic types, bounds, where clauses", "url": "https://doc.rust-lang.org/rust-by-example/generics.html"}, {"label": "YouTube: Let's Get Rusty – Generic Types in Rust (15:18)", "url": "https://www.youtube.com/watch?v=6rcTSxPJ6Bw"}, {"label": "YouTube: Copenhagen Rust Community – Impl Trait aka Look ma’, no generics! by Jon Gjengset (1:09:05)", "url": "https://www.youtube.com/watch?v=CWiz_RtA1Hw"}],
             "priority": "core",
             "completed": false
           },
@@ -1179,7 +1179,7 @@
             "outcomes": ["Propagate errors with the ? operator", "Define custom error types", "Choose between panic and Result"],
             "estimatedHours": 10,
             "prerequisites": ["rust-basics"],
-            "resources": [{"label": "The Rust Book: Error Handling", "url": "https://doc.rust-lang.org/book/ch09-00-error-handling.html"}, {"label": "YouTube: Let's Get Rusty – Error Handling in Rust (16:20)", "url": "https://www.youtube.com/watch?v=wM6o70NAWUI"}, {"label": "YouTube: Ardan Labs – Mastering Error Handling in Rust: From Panics to thiserror & anyhow | with Nathan… (1:13:46)", "url": "https://www.youtube.com/watch?v=sZV6sz4P6QY"}],
+            "resources": [{"label": "The Rust Book: Error Handling", "url": "https://doc.rust-lang.org/book/ch09-00-error-handling.html"}, {"label": "Rust Book: Recoverable Errors with Result - match, unwrap, ? operator", "url": "https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html"}, {"label": "Rust Book: To panic! or Not to panic! - choosing error strategies", "url": "https://doc.rust-lang.org/book/ch09-03-to-panic-or-not-to-panic.html"}, {"label": "Rust by Example: Error handling - Option, Result, custom errors", "url": "https://doc.rust-lang.org/rust-by-example/error.html"}, {"label": "Rust std docs: std::result - the Result type and its methods", "url": "https://doc.rust-lang.org/std/result/index.html"}, {"label": "Rust std docs: std::option - the Option type and its methods", "url": "https://doc.rust-lang.org/std/option/index.html"}, {"label": "YouTube: Let's Get Rusty – Error Handling in Rust (16:20)", "url": "https://www.youtube.com/watch?v=wM6o70NAWUI"}, {"label": "YouTube: Ardan Labs – Mastering Error Handling in Rust: From Panics to thiserror & anyhow | with Nathan… (1:13:46)", "url": "https://www.youtube.com/watch?v=sZV6sz4P6QY"}],
             "priority": "core",
             "completed": false
           },
@@ -1190,7 +1190,7 @@
             "outcomes": ["Use Vec, HashMap, and String", "Chain iterator adapters", "Write closures"],
             "estimatedHours": 12,
             "prerequisites": ["rust-basics"],
-            "resources": [{"label": "The Rust Book", "url": "https://doc.rust-lang.org/book/"}, {"label": "YouTube: Let's Get Rusty – Iterators in Rust (13:25)", "url": "https://www.youtube.com/watch?v=4GcKrj4By8k"}, {"label": "YouTube: Jon Gjengset – Crust of Rust: std::collections (2:45:04)", "url": "https://www.youtube.com/watch?v=EF3Z4jdD1EQ"}],
+            "resources": [{"label": "The Rust Book", "url": "https://doc.rust-lang.org/book/"}, {"label": "Rust Book: Storing Lists of Values with Vectors", "url": "https://doc.rust-lang.org/book/ch08-01-vectors.html"}, {"label": "Rust Book: Storing Keys with Associated Values in Hash Maps", "url": "https://doc.rust-lang.org/book/ch08-03-hash-maps.html"}, {"label": "Rust Book: Processing a Series of Items with Iterators", "url": "https://doc.rust-lang.org/book/ch13-02-iterators.html"}, {"label": "Rust std docs: std::collections - choosing the right collection", "url": "https://doc.rust-lang.org/std/collections/index.html"}, {"label": "Rust std docs: std::iter - iterator trait and adapters", "url": "https://doc.rust-lang.org/std/iter/index.html"}, {"label": "YouTube: Let's Get Rusty – Iterators in Rust (13:25)", "url": "https://www.youtube.com/watch?v=4GcKrj4By8k"}, {"label": "YouTube: Jon Gjengset – Crust of Rust: std::collections (2:45:04)", "url": "https://www.youtube.com/watch?v=EF3Z4jdD1EQ"}],
             "priority": "core",
             "completed": false
           }
@@ -1212,7 +1212,7 @@
             "outcomes": ["Use workspaces and features", "Write unit and integration tests", "Publish or document a crate"],
             "estimatedHours": 10,
             "prerequisites": ["lang-rust-traits-generics", "unit-testing"],
-            "resources": [{"label": "The Cargo Book", "url": "https://doc.rust-lang.org/cargo/"}, {"label": "YouTube: Jon Gjengset – Setting up CI and property testing for a Rust crate (2:46:41)", "url": "https://www.youtube.com/watch?v=xUH-4y92jPg"}, {"label": "YouTube: Let's Get Rusty – Publishing a Rust Crate! (14:02)", "url": "https://www.youtube.com/watch?v=4TI153PIEDQ"}],
+            "resources": [{"label": "The Cargo Book", "url": "https://doc.rust-lang.org/cargo/"}, {"label": "Cargo Guide: Why Cargo exists and getting started", "url": "https://doc.rust-lang.org/cargo/guide/index.html"}, {"label": "Cargo Reference: Cargo Workspaces - multi-package projects", "url": "https://doc.rust-lang.org/cargo/reference/workspaces.html"}, {"label": "Cargo Reference: Specifying Dependencies - versions, git, features", "url": "https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html"}, {"label": "Rust Book: How to Write Tests - assertions and #[test]", "url": "https://doc.rust-lang.org/book/ch11-01-writing-tests.html"}, {"label": "Rust Book: Packages and Crates - modules and crate structure", "url": "https://doc.rust-lang.org/book/ch07-01-packages-and-crates.html"}, {"label": "YouTube: Jon Gjengset – Setting up CI and property testing for a Rust crate (2:46:41)", "url": "https://www.youtube.com/watch?v=xUH-4y92jPg"}, {"label": "YouTube: Let's Get Rusty – Publishing a Rust Crate! (14:02)", "url": "https://www.youtube.com/watch?v=4TI153PIEDQ"}],
             "priority": "core",
             "completed": false
           },
@@ -1223,7 +1223,7 @@
             "outcomes": ["Choose the right smart pointer", "Share state across threads with Arc and Mutex", "Use message passing"],
             "estimatedHours": 16,
             "prerequisites": ["lang-rust-collections-iterators", "concurrency"],
-            "resources": [{"label": "The Rust Book: Fearless Concurrency", "url": "https://doc.rust-lang.org/book/ch16-00-concurrency.html"}, {"label": "YouTube: Jon Gjengset – Crust of Rust: Smart Pointers and Interior Mutability (2:03:04)", "url": "https://www.youtube.com/watch?v=8O0Nt9qY_vo"}, {"label": "YouTube: Let's Get Rusty – The Box Smart Pointer in Rust (12:18)", "url": "https://www.youtube.com/watch?v=m76sRj2VgGo"}],
+            "resources": [{"label": "The Rust Book: Fearless Concurrency", "url": "https://doc.rust-lang.org/book/ch16-00-concurrency.html"}, {"label": "Rust Book: Using Box<T> to Point to Data on the Heap", "url": "https://doc.rust-lang.org/book/ch15-01-box.html"}, {"label": "Rust Book: Rc<T>, the Reference Counted Smart Pointer", "url": "https://doc.rust-lang.org/book/ch15-04-rc.html"}, {"label": "Rust Book: Using Threads to Run Code Simultaneously", "url": "https://doc.rust-lang.org/book/ch16-01-threads.html"}, {"label": "Rust Book: Message Passing with channels", "url": "https://doc.rust-lang.org/book/ch16-02-message-passing.html"}, {"label": "Rust Book: Shared-State Concurrency with Mutex and Arc", "url": "https://doc.rust-lang.org/book/ch16-03-shared-state.html"}, {"label": "YouTube: Jon Gjengset – Crust of Rust: Smart Pointers and Interior Mutability (2:03:04)", "url": "https://www.youtube.com/watch?v=8O0Nt9qY_vo"}, {"label": "YouTube: Let's Get Rusty – The Box Smart Pointer in Rust (12:18)", "url": "https://www.youtube.com/watch?v=m76sRj2VgGo"}],
             "priority": "core",
             "completed": false
           },
@@ -1234,7 +1234,7 @@
             "outcomes": ["Use async/await with Tokio", "Understand futures and polling", "Build a simple async network service"],
             "estimatedHours": 18,
             "prerequisites": ["lang-rust-error-handling", "lang-rust-smart-pointers-concurrency"],
-            "resources": [{"label": "Asynchronous Programming in Rust", "url": "https://rust-lang.github.io/async-book/"}, {"label": "YouTube: Let's Get Rusty – Async Rust explained in 20 minutes (19:15)", "url": "https://www.youtube.com/watch?v=wXtngLBkK4Q"}, {"label": "YouTube: Ardan Labs – 1 Hour Dive into Asynchronous Rust (1:14:12)", "url": "https://www.youtube.com/watch?v=0HwrZp9CBD4"}],
+            "resources": [{"label": "Asynchronous Programming in Rust", "url": "https://rust-lang.github.io/async-book/"}, {"label": "Async Book: Introduction to the async guide", "url": "https://rust-lang.github.io/async-book/part-guide/intro.html"}, {"label": "Async Book: Async/await basics - futures and async functions", "url": "https://rust-lang.github.io/async-book/part-guide/async-await.html"}, {"label": "Tokio Tutorial: Hello Tokio - first async program", "url": "https://tokio.rs/tokio/tutorial/hello-tokio"}, {"label": "Tokio Tutorial: Spawning tasks and concurrency", "url": "https://tokio.rs/tokio/tutorial/spawning"}, {"label": "Tokio Tutorial: Channels - message passing between async tasks", "url": "https://tokio.rs/tokio/tutorial/channels"}, {"label": "YouTube: Let's Get Rusty – Async Rust explained in 20 minutes (19:15)", "url": "https://www.youtube.com/watch?v=wXtngLBkK4Q"}, {"label": "YouTube: Ardan Labs – 1 Hour Dive into Asynchronous Rust (1:14:12)", "url": "https://www.youtube.com/watch?v=0HwrZp9CBD4"}],
             "priority": "core",
             "completed": false
           }
@@ -1256,7 +1256,7 @@
             "outcomes": ["Explain what unsafe permits", "Wrap unsafe code in safe APIs", "Call C libraries through FFI"],
             "estimatedHours": 16,
             "prerequisites": ["lang-rust-smart-pointers-concurrency"],
-            "resources": [{"label": "The Rustonomicon", "url": "https://doc.rust-lang.org/nomicon/"}, {"label": "YouTube: Let's Get Rusty – The unsafe Rust survival guide (6:45)", "url": "https://www.youtube.com/watch?v=91uStPBLibc"}, {"label": "YouTube: Low Level – how common is unsafe rust? (15:58)", "url": "https://www.youtube.com/watch?v=z_RekEdKcfk"}],
+            "resources": [{"label": "The Rustonomicon", "url": "https://doc.rust-lang.org/nomicon/"}, {"label": "Nomicon: Foreign Function Interface - calling C from Rust", "url": "https://doc.rust-lang.org/nomicon/ffi.html"}, {"label": "Nomicon: What Unsafe Can Do - unsafe superpowers", "url": "https://doc.rust-lang.org/nomicon/what-unsafe-does.html"}, {"label": "Nomicon: Meet Safe and Unsafe - safety boundaries", "url": "https://doc.rust-lang.org/nomicon/meet-safe-and-unsafe.html"}, {"label": "Rust Reference: Unsafety - unsafe operations and blocks", "url": "https://doc.rust-lang.org/reference/unsafety.html"}, {"label": "Rust by Example: Unsafe Operations - raw pointers and unsafe fn", "url": "https://doc.rust-lang.org/rust-by-example/unsafe.html"}, {"label": "YouTube: Let's Get Rusty – The unsafe Rust survival guide (6:45)", "url": "https://www.youtube.com/watch?v=91uStPBLibc"}, {"label": "YouTube: Low Level – how common is unsafe rust? (15:58)", "url": "https://www.youtube.com/watch?v=z_RekEdKcfk"}],
             "priority": "core",
             "completed": false
           },
@@ -1267,7 +1267,7 @@
             "outcomes": ["Write macro_rules macros", "Follow the Rust API guidelines", "Use the type state and builder patterns"],
             "estimatedHours": 14,
             "prerequisites": ["lang-rust-traits-generics", "lang-rust-cargo-crates"],
-            "resources": [{"label": "Rust API Guidelines", "url": "https://rust-lang.github.io/api-guidelines/"}, {"label": "YouTube: Jon Gjengset – Crust of Rust: Declarative Macros (1:36:11)", "url": "https://www.youtube.com/watch?v=q6paRBbLgNw"}, {"label": "YouTube: Let's Get Rusty – Procedural Macros in Rust (11:33)", "url": "https://www.youtube.com/watch?v=crWfcA064is"}],
+            "resources": [{"label": "Rust API Guidelines", "url": "https://rust-lang.github.io/api-guidelines/"}, {"label": "Rust by Example: macro_rules! - declarative macros", "url": "https://doc.rust-lang.org/rust-by-example/macros.html"}, {"label": "Rust Reference: Macros By Example - macro_rules syntax", "url": "https://doc.rust-lang.org/reference/macros-by-example.html"}, {"label": "The Little Book of Rust Macros - in-depth macro patterns", "url": "https://veykril.github.io/tlborm/"}, {"label": "Rust API Guidelines: Naming - idiomatic naming conventions", "url": "https://rust-lang.github.io/api-guidelines/naming.html"}, {"label": "Rust API Guidelines: Flexibility - generic, ergonomic API design", "url": "https://rust-lang.github.io/api-guidelines/flexibility.html"}, {"label": "YouTube: Jon Gjengset – Crust of Rust: Declarative Macros (1:36:11)", "url": "https://www.youtube.com/watch?v=q6paRBbLgNw"}, {"label": "YouTube: Let's Get Rusty – Procedural Macros in Rust (11:33)", "url": "https://www.youtube.com/watch?v=crWfcA064is"}],
             "priority": "optional",
             "completed": false
           },
@@ -1278,7 +1278,7 @@
             "outcomes": ["Write benchmarks", "Profile with flamegraphs", "Reduce allocations and copies"],
             "estimatedHours": 14,
             "prerequisites": ["lang-rust-async"],
-            "resources": [{"label": "The Rust Performance Book", "url": "https://nnethercote.github.io/perf-book/"}, {"label": "YouTube: Let's Get Rusty – The ultimate Rust performance guide (12:11)", "url": "https://www.youtube.com/watch?v=q3VOsGzkM-M"}],
+            "resources": [{"label": "The Rust Performance Book", "url": "https://nnethercote.github.io/perf-book/"}, {"label": "Rust Perf Book: Benchmarking - measuring Rust performance", "url": "https://nnethercote.github.io/perf-book/benchmarking.html"}, {"label": "Rust Perf Book: Profiling - finding hot spots", "url": "https://nnethercote.github.io/perf-book/profiling.html"}, {"label": "Rust Perf Book: Heap Allocations - reducing allocation costs", "url": "https://nnethercote.github.io/perf-book/heap-allocations.html"}, {"label": "Rust Perf Book: Build Configuration - release profiles and LTO", "url": "https://nnethercote.github.io/perf-book/build-configuration.html"}, {"label": "Criterion.rs User Guide - statistics-driven benchmarking", "url": "https://bheisler.github.io/criterion.rs/book/"}, {"label": "YouTube: Let's Get Rusty – The ultimate Rust performance guide (12:11)", "url": "https://www.youtube.com/watch?v=q3VOsGzkM-M"}],
             "priority": "core",
             "completed": false
           }
@@ -1312,7 +1312,7 @@
             "outcomes": ["Distinguish pure from impure code", "Replace mutation with new values", "Define functions in Haskell"],
             "estimatedHours": 12,
             "prerequisites": ["programming-fundamentals"],
-            "resources": [{"label": "Learn You a Haskell for Great Good", "url": "https://learnyouahaskell.github.io/"}, {"label": "YouTube: Web Dev Simplified – Learn Pure Functions In 10 Minutes (10:11)", "url": "https://www.youtube.com/watch?v=fYbhD_KMCOg"}, {"label": "YouTube: FullStack Flow – 042 Functional Programming, Pure Functions (9:59)", "url": "https://www.youtube.com/watch?v=54SFmLfO1NA"}],
+            "resources": [{"label": "Learn You a Haskell for Great Good", "url": "https://learnyouahaskell.github.io/"}, {"label": "Python HOWTO: Functional Programming - iterators, generators, pure style", "url": "https://docs.python.org/3/howto/functional.html"}, {"label": "Haskell Wikibooks: Functional programming basics - functions as values", "url": "https://en.wikibooks.org/wiki/Haskell/Variables_and_functions"}, {"label": "Elixir Guide: Pattern matching and immutable data", "url": "https://hexdocs.pm/elixir/pattern-matching.html"}, {"label": "YouTube: Web Dev Simplified – Learn Pure Functions In 10 Minutes (10:11)", "url": "https://www.youtube.com/watch?v=fYbhD_KMCOg"}, {"label": "YouTube: FullStack Flow – 042 Functional Programming, Pure Functions (9:59)", "url": "https://www.youtube.com/watch?v=54SFmLfO1NA"}],
             "priority": "core",
             "completed": false
           },
@@ -1323,7 +1323,7 @@
             "outcomes": ["Apply map, filter, and fold", "Compose functions", "Use partial application and currying"],
             "estimatedHours": 12,
             "prerequisites": ["lang-functional-pure-functions"],
-            "resources": [{"label": "Learn You a Haskell: Higher Order Functions", "url": "https://learnyouahaskell.github.io/"}, {"label": "YouTube: Bro Code – Python higher order functions (6:28)", "url": "https://www.youtube.com/watch?v=xZtTIm3fpfA"}, {"label": "YouTube: Traversy Media – JavaScript Higher Order Functions & Arrays (34:56)", "url": "https://www.youtube.com/watch?v=rRgD1yVwIvE"}],
+            "resources": [{"label": "Learn You a Haskell: Higher Order Functions", "url": "https://learnyouahaskell.github.io/"}, {"label": "Haskell Wikibooks: Higher-order functions - map, filter, folds", "url": "https://en.wikibooks.org/wiki/Haskell/Higher-order_functions"}, {"label": "MDN: Array.prototype.map() - transforming collections", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"}, {"label": "MDN: Array.prototype.reduce() - folding a collection", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce"}, {"label": "MDN: Array.prototype.filter() - selecting elements", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"}, {"label": "Elixir docs: Enum module - map, filter, reduce", "url": "https://hexdocs.pm/elixir/Enum.html"}, {"label": "YouTube: Bro Code – Python higher order functions (6:28)", "url": "https://www.youtube.com/watch?v=xZtTIm3fpfA"}, {"label": "YouTube: Traversy Media – JavaScript Higher Order Functions & Arrays (34:56)", "url": "https://www.youtube.com/watch?v=rRgD1yVwIvE"}],
             "priority": "core",
             "completed": false
           },
@@ -1334,7 +1334,7 @@
             "outcomes": ["Write recursive functions", "Use tail recursion and accumulators", "Process lists with pattern matching"],
             "estimatedHours": 10,
             "prerequisites": ["lang-functional-pure-functions"],
-            "resources": [{"label": "Learn You a Haskell: Recursion", "url": "https://learnyouahaskell.github.io/"}, {"label": "YouTube: freeCodeCamp.org – Recursion in Programming - Full Course (1:51:36)", "url": "https://www.youtube.com/watch?v=IJDJ0kBx2LM"}, {"label": "YouTube: Bro Code – Learn RECURSION in 5 minutes! (5:59)", "url": "https://www.youtube.com/watch?v=ivl5-snqul8"}],
+            "resources": [{"label": "Learn You a Haskell: Recursion", "url": "https://learnyouahaskell.github.io/"}, {"label": "Haskell Wikibooks: Recursion - recursive definitions", "url": "https://en.wikibooks.org/wiki/Haskell/Recursion"}, {"label": "Haskell Wikibooks: Lists II - list processing", "url": "https://en.wikibooks.org/wiki/Haskell/Lists_II"}, {"label": "Elixir Guide: Recursion - loops via recursion", "url": "https://hexdocs.pm/elixir/recursion.html"}, {"label": "Haskell MOOC: Course material - recursion and lists", "url": "https://haskell.mooc.fi/"}, {"label": "YouTube: freeCodeCamp.org – Recursion in Programming - Full Course (1:51:36)", "url": "https://www.youtube.com/watch?v=IJDJ0kBx2LM"}, {"label": "YouTube: Bro Code – Learn RECURSION in 5 minutes! (5:59)", "url": "https://www.youtube.com/watch?v=ivl5-snqul8"}],
             "priority": "core",
             "completed": false
           }
@@ -1356,7 +1356,7 @@
             "outcomes": ["Define sum and product types", "Pattern match exhaustively", "Make illegal states unrepresentable"],
             "estimatedHours": 14,
             "prerequisites": ["lang-functional-recursion-lists"],
-            "resources": [{"label": "Learn You a Haskell: Making Our Own Types", "url": "https://learnyouahaskell.github.io/"}, {"label": "YouTube: Icelandic Centre of Excellence in Theoretical CS – A Mechanized First-Order Theory of Algebraic Data Types with Pattern Matching |… (25:29)", "url": "https://www.youtube.com/watch?v=EIycyzfVb3I"}, {"label": "YouTube: Daedalus Community – Functional programming - A general introduction (11:47)", "url": "https://www.youtube.com/watch?v=8z_bUIl_uPo"}],
+            "resources": [{"label": "Learn You a Haskell: Making Our Own Types", "url": "https://learnyouahaskell.github.io/"}, {"label": "Haskell Wikibooks: More on datatypes - sum and product types", "url": "https://en.wikibooks.org/wiki/Haskell/More_on_datatypes"}, {"label": "Haskell Wikibooks: Pattern matching - deconstructing values", "url": "https://en.wikibooks.org/wiki/Haskell/Pattern_matching"}, {"label": "Rust Book: Enums and Pattern Matching - sum types in Rust", "url": "https://doc.rust-lang.org/book/ch06-00-enums.html"}, {"label": "Haskell Wikibooks: Type declarations - data, type, newtype", "url": "https://en.wikibooks.org/wiki/Haskell/Type_declarations"}, {"label": "YouTube: Icelandic Centre of Excellence in Theoretical CS – A Mechanized First-Order Theory of Algebraic Data Types with Pattern Matching |… (25:29)", "url": "https://www.youtube.com/watch?v=EIycyzfVb3I"}, {"label": "YouTube: Daedalus Community – Functional programming - A general introduction (11:47)", "url": "https://www.youtube.com/watch?v=8z_bUIl_uPo"}],
             "priority": "core",
             "completed": false
           },
@@ -1367,7 +1367,7 @@
             "outcomes": ["Define and instantiate type classes", "Use fmap over containers", "Explain parametric polymorphism"],
             "estimatedHours": 14,
             "prerequisites": ["lang-functional-algebraic-types", "lang-functional-higher-order"],
-            "resources": [{"label": "Learn You a Haskell: Functors", "url": "https://learnyouahaskell.github.io/"}, {"label": "YouTube: Daedalus Community – Functional programming - A general introduction (11:47)", "url": "https://www.youtube.com/watch?v=8z_bUIl_uPo"}, {"label": "YouTube: ArjanCodes – Functions vs Classes: When to Use Which and Why? (10:49)", "url": "https://www.youtube.com/watch?v=txRTzljmV0Q"}],
+            "resources": [{"label": "Learn You a Haskell: Functors", "url": "https://learnyouahaskell.github.io/"}, {"label": "Haskell Wikibooks: Classes and types - type class basics", "url": "https://en.wikibooks.org/wiki/Haskell/Classes_and_types"}, {"label": "Haskell Wikibooks: The Functor class", "url": "https://en.wikibooks.org/wiki/Haskell/The_Functor_class"}, {"label": "Haskell Wikibooks: Applicative functors", "url": "https://en.wikibooks.org/wiki/Haskell/Applicative_functors"}, {"label": "Haskell Wiki: Typeclassopedia - Functor, Foldable, Monad hierarchy", "url": "https://wiki.haskell.org/Typeclassopedia"}, {"label": "YouTube: Daedalus Community – Functional programming - A general introduction (11:47)", "url": "https://www.youtube.com/watch?v=8z_bUIl_uPo"}, {"label": "YouTube: ArjanCodes – Functions vs Classes: When to Use Which and Why? (10:49)", "url": "https://www.youtube.com/watch?v=txRTzljmV0Q"}],
             "priority": "core",
             "completed": false
           },
@@ -1378,7 +1378,7 @@
             "outcomes": ["Use Maybe and Either", "Chain fallible computations", "Validate input without exceptions"],
             "estimatedHours": 10,
             "prerequisites": ["lang-functional-algebraic-types"],
-            "resources": [{"label": "Haskell Documentation", "url": "https://www.haskell.org/documentation/"}, {"label": "YouTube: 3Blue1Brown – But what are Hamming codes? The origin of error correction (20:05)", "url": "https://www.youtube.com/watch?v=X8jsijhllIA"}],
+            "resources": [{"label": "Haskell Documentation", "url": "https://www.haskell.org/documentation/"}, {"label": "Haskell Wikibooks: Maybe - representing absence of a value", "url": "https://en.wikibooks.org/wiki/Haskell/Understanding_monads/Maybe"}, {"label": "Rust Book: Recoverable Errors with Result - errors as values", "url": "https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html"}, {"label": "Haskell Wiki: Error handling - Maybe, Either, exceptions", "url": "https://wiki.haskell.org/Error_vs._Exception"}, {"label": "Scala docs: Option - idiomatic absence handling", "url": "https://docs.scala-lang.org/scala3/book/fp-functional-error-handling.html"}, {"label": "YouTube: 3Blue1Brown – But what are Hamming codes? The origin of error correction (20:05)", "url": "https://www.youtube.com/watch?v=X8jsijhllIA"}],
             "priority": "core",
             "completed": false
           }
@@ -1400,7 +1400,7 @@
             "outcomes": ["Use do-notation", "Use Maybe, Either, and State monads", "Explain the monad laws informally"],
             "estimatedHours": 18,
             "prerequisites": ["lang-functional-typeclasses", "lang-functional-error-modeling"],
-            "resources": [{"label": "Learn You a Haskell: A Fistful of Monads", "url": "https://learnyouahaskell.github.io/"}, {"label": "YouTube: Computerphile – What is a Monad? - Computerphile (21:50)", "url": "https://www.youtube.com/watch?v=t1e8gqXLbsU"}, {"label": "YouTube: ArjanCodes – What the Heck Are Monads?! (21:08)", "url": "https://www.youtube.com/watch?v=Q0aVbqim5pE"}],
+            "resources": [{"label": "Learn You a Haskell: A Fistful of Monads", "url": "https://learnyouahaskell.github.io/"}, {"label": "Haskell Wikibooks: Understanding monads - the monad idea", "url": "https://en.wikibooks.org/wiki/Haskell/Understanding_monads"}, {"label": "Haskell Wikibooks: Monad transformers and State", "url": "https://en.wikibooks.org/wiki/Haskell/Understanding_monads/State"}, {"label": "Haskell Wiki: Monad - definition, laws, examples", "url": "https://wiki.haskell.org/Monad"}, {"label": "Haskell Wikibooks: Do notation - sequencing with context", "url": "https://en.wikibooks.org/wiki/Haskell/do_notation"}, {"label": "YouTube: Computerphile – What is a Monad? - Computerphile (21:50)", "url": "https://www.youtube.com/watch?v=t1e8gqXLbsU"}, {"label": "YouTube: ArjanCodes – What the Heck Are Monads?! (21:08)", "url": "https://www.youtube.com/watch?v=Q0aVbqim5pE"}],
             "priority": "core",
             "completed": false
           },
@@ -1411,7 +1411,7 @@
             "outcomes": ["Use IO safely", "Separate pure logic from effects", "Test pure code with property tests"],
             "estimatedHours": 14,
             "prerequisites": ["lang-functional-monads", "unit-testing"],
-            "resources": [{"label": "Learn You a Haskell: Input and Output", "url": "https://learnyouahaskell.github.io/"}, {"label": "YouTube: Kotlin by JetBrains – Kotlin & Functional Programming: pick the best, skip the rest by Urs Peter (43:49)", "url": "https://www.youtube.com/watch?v=Ed3t4WAe0Co"}],
+            "resources": [{"label": "Learn You a Haskell: Input and Output", "url": "https://learnyouahaskell.github.io/"}, {"label": "Haskell Wikibooks: Simple input and output - the IO type", "url": "https://en.wikibooks.org/wiki/Haskell/Simple_input_and_output"}, {"label": "Haskell Wikibooks: The IO monad - sequencing side effects", "url": "https://en.wikibooks.org/wiki/Haskell/Understanding_monads/IO"}, {"label": "Haskell Wiki: Introduction to IO", "url": "https://wiki.haskell.org/Introduction_to_IO"}, {"label": "YouTube: Kotlin by JetBrains – Kotlin & Functional Programming: pick the best, skip the rest by Urs Peter (43:49)", "url": "https://www.youtube.com/watch?v=Ed3t4WAe0Co"}],
             "priority": "core",
             "completed": false
           },
@@ -1422,7 +1422,7 @@
             "outcomes": ["Apply immutability and composition in a mainstream language", "Compare functional and object-oriented designs"],
             "estimatedHours": 10,
             "prerequisites": ["lang-functional-higher-order", "design-patterns"],
-            "resources": [{"label": "Elixir Documentation", "url": "https://elixir-lang.org/docs.html"}, {"label": "YouTube: freeCodeCamp.org – Functional Programming in Scala (37:45)", "url": "https://www.youtube.com/watch?v=R0jVqeYzs9c"}],
+            "resources": [{"label": "Elixir Documentation", "url": "https://elixir-lang.org/docs.html"}, {"label": "Elixir Guide: Pattern matching - functional idioms in Elixir", "url": "https://hexdocs.pm/elixir/pattern-matching.html"}, {"label": "Oracle Java Tutorial: Aggregate operations and streams", "url": "https://docs.oracle.com/javase/tutorial/collections/streams/index.html"}, {"label": "Oracle Java Tutorial: Lambda expressions", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html"}, {"label": "MDN: Closures - functions bundled with lexical scope", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures"}, {"label": "Python docs: functools - higher-order functions and callables", "url": "https://docs.python.org/3/library/functools.html"}, {"label": "YouTube: freeCodeCamp.org – Functional Programming in Scala (37:45)", "url": "https://www.youtube.com/watch?v=R0jVqeYzs9c"}],
             "priority": "optional",
             "completed": false
           }
@@ -1456,7 +1456,7 @@
             "outcomes": ["Design classes with clear responsibilities", "Hide state behind methods", "Keep objects in a valid state"],
             "estimatedHours": 12,
             "prerequisites": ["programming-fundamentals"],
-            "resources": [{"label": "Refactoring Guru: OOP", "url": "https://refactoring.guru/design-patterns/what-is-pattern"}, {"label": "YouTube: Bro Code – Java encapsulation (8:27)", "url": "https://www.youtube.com/watch?v=eboNNUADeIc"}],
+            "resources": [{"label": "Refactoring Guru: OOP", "url": "https://refactoring.guru/design-patterns/what-is-pattern"}, {"label": "Oracle Java Tutorial: Classes - declaring classes and members", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html"}, {"label": "Oracle Java Tutorial: Controlling access to members of a class", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html"}, {"label": "Martin Fowler: TellDontAsk - keep behavior with data", "url": "https://martinfowler.com/bliki/TellDontAsk.html"}, {"label": "Refactoring Guru: Self Encapsulate Field - hiding fields behind accessors", "url": "https://refactoring.guru/self-encapsulate-field"}, {"label": "YouTube: Bro Code – Java encapsulation (8:27)", "url": "https://www.youtube.com/watch?v=eboNNUADeIc"}],
             "priority": "core",
             "completed": false
           },
@@ -1467,7 +1467,7 @@
             "outcomes": ["Use interfaces and abstract classes", "Override methods correctly", "Explain subtype polymorphism"],
             "estimatedHours": 12,
             "prerequisites": ["lang-oop-classes-encapsulation"],
-            "resources": [{"label": "Refactoring Guru: Basic Concepts", "url": "https://refactoring.guru/design-patterns/what-is-pattern"}, {"label": "YouTube: Dave Gray – Python Classes, Objects, Inheritance & Polymorphism for Beginners (19:32)", "url": "https://www.youtube.com/watch?v=RpBBzci_cBk"}, {"label": "YouTube: Bro Code – Learn Java inheritance in 9 minutes! ‍‍ (9:07)", "url": "https://www.youtube.com/watch?v=GTP5lVEKXaU"}],
+            "resources": [{"label": "Refactoring Guru: Basic Concepts", "url": "https://refactoring.guru/design-patterns/what-is-pattern"}, {"label": "Oracle Java Tutorial: Inheritance - subclasses and superclasses", "url": "https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html"}, {"label": "Oracle Java Tutorial: Polymorphism - runtime method dispatch", "url": "https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html"}, {"label": "Oracle Java Tutorial: Interfaces - contracts for common types", "url": "https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html"}, {"label": "Refactoring Guru: Replace Conditional with Polymorphism", "url": "https://refactoring.guru/replace-conditional-with-polymorphism"}, {"label": "Refactoring Guru: Parallel Inheritance Hierarchies smell", "url": "https://refactoring.guru/smells/parallel-inheritance-hierarchies"}, {"label": "YouTube: Dave Gray – Python Classes, Objects, Inheritance & Polymorphism for Beginners (19:32)", "url": "https://www.youtube.com/watch?v=RpBBzci_cBk"}, {"label": "YouTube: Bro Code – Learn Java inheritance in 9 minutes! ‍‍ (9:07)", "url": "https://www.youtube.com/watch?v=GTP5lVEKXaU"}],
             "priority": "core",
             "completed": false
           },
@@ -1478,7 +1478,7 @@
             "outcomes": ["Replace inheritance with delegation", "Explain the fragile base class problem"],
             "estimatedHours": 8,
             "prerequisites": ["lang-oop-inheritance-polymorphism"],
-            "resources": [{"label": "Refactoring Guru: Design Patterns", "url": "https://refactoring.guru/design-patterns"}, {"label": "YouTube: ArjanCodes – Composition Is Better Than Inheritance in Python (23:29)", "url": "https://www.youtube.com/watch?v=0mcP8ZpUR38"}, {"label": "YouTube: Bro Code – Learn Python COMPOSITION in 7 minutes! (7:22)", "url": "https://www.youtube.com/watch?v=TPUdUkFHD5I"}],
+            "resources": [{"label": "Refactoring Guru: Design Patterns", "url": "https://refactoring.guru/design-patterns"}, {"label": "Refactoring Guru: Replace Inheritance with Delegation", "url": "https://refactoring.guru/replace-inheritance-with-delegation"}, {"label": "Refactoring Guru: Composite pattern - tree structures by composition", "url": "https://refactoring.guru/design-patterns/composite"}, {"label": "Refactoring Guru: Decorator pattern - adding behavior by wrapping", "url": "https://refactoring.guru/design-patterns/decorator"}, {"label": "Refactoring Guru: Strategy pattern - swapping behavior objects", "url": "https://refactoring.guru/design-patterns/strategy"}, {"label": "Martin Fowler: Inversion of Control Containers and DI pattern", "url": "https://martinfowler.com/articles/injection.html"}, {"label": "YouTube: ArjanCodes – Composition Is Better Than Inheritance in Python (23:29)", "url": "https://www.youtube.com/watch?v=0mcP8ZpUR38"}, {"label": "YouTube: Bro Code – Learn Python COMPOSITION in 7 minutes! (7:22)", "url": "https://www.youtube.com/watch?v=TPUdUkFHD5I"}],
             "priority": "core",
             "completed": false
           }
@@ -1500,7 +1500,7 @@
             "outcomes": ["Identify violations of each principle", "Refactor to depend on abstractions", "Keep interfaces small"],
             "estimatedHours": 14,
             "prerequisites": ["lang-oop-composition", "clean-code"],
-            "resources": [{"label": "Refactoring Guru: Principles", "url": "https://refactoring.guru/design-patterns/catalog"}, {"label": "YouTube: freeCodeCamp.org – Master Design Patterns & SOLID Principles in C# - Full OOP Course for Beginners (11:46:54)", "url": "https://www.youtube.com/watch?v=rylaiB2uH2A"}, {"label": "YouTube: Web Dev Simplified – Single Responsibility Principle Explained - SOLID Design Principles (6:17)", "url": "https://www.youtube.com/watch?v=UQqY3_6Epbg"}],
+            "resources": [{"label": "Refactoring Guru: Principles", "url": "https://refactoring.guru/design-patterns/catalog"}, {"label": "Wikipedia: SOLID - the five principles of object-oriented design", "url": "https://en.wikipedia.org/wiki/SOLID"}, {"label": "DigitalOcean: SOLID - the first five principles of OO design", "url": "https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design"}, {"label": "Baeldung: A Solid Guide to SOLID Principles", "url": "https://www.baeldung.com/solid-principles"}, {"label": "Wikipedia: Single-responsibility principle", "url": "https://en.wikipedia.org/wiki/Single-responsibility_principle"}, {"label": "Wikipedia: Liskov substitution principle", "url": "https://en.wikipedia.org/wiki/Liskov_substitution_principle"}, {"label": "YouTube: freeCodeCamp.org – Master Design Patterns & SOLID Principles in C# - Full OOP Course for Beginners (11:46:54)", "url": "https://www.youtube.com/watch?v=rylaiB2uH2A"}, {"label": "YouTube: Web Dev Simplified – Single Responsibility Principle Explained - SOLID Design Principles (6:17)", "url": "https://www.youtube.com/watch?v=UQqY3_6Epbg"}],
             "priority": "core",
             "completed": false
           },
@@ -1511,7 +1511,7 @@
             "outcomes": ["Implement Factory and Builder", "Implement Adapter and Decorator", "Know when not to use a pattern"],
             "estimatedHours": 16,
             "prerequisites": ["lang-oop-solid", "design-patterns"],
-            "resources": [{"label": "Refactoring Guru: Design Patterns Catalog", "url": "https://refactoring.guru/design-patterns/catalog"}, {"label": "YouTube: Programming with Mosh – Object-Oriented Programming, Simplified (7:34)", "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8"}, {"label": "YouTube: freeCodeCamp.org – Intro to Object Oriented Programming - Crash Course (30:18)", "url": "https://www.youtube.com/watch?v=SiBw7os-_zI"}],
+            "resources": [{"label": "Refactoring Guru: Design Patterns Catalog", "url": "https://refactoring.guru/design-patterns/catalog"}, {"label": "Refactoring Guru: Creational design patterns overview", "url": "https://refactoring.guru/design-patterns/creational-patterns"}, {"label": "Refactoring Guru: Factory Method pattern", "url": "https://refactoring.guru/design-patterns/factory-method"}, {"label": "Refactoring Guru: Builder pattern", "url": "https://refactoring.guru/design-patterns/builder"}, {"label": "Refactoring Guru: Adapter pattern", "url": "https://refactoring.guru/design-patterns/adapter"}, {"label": "Refactoring Guru: Structural design patterns overview", "url": "https://refactoring.guru/design-patterns/structural-patterns"}, {"label": "YouTube: Programming with Mosh – Object-Oriented Programming, Simplified (7:34)", "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8"}, {"label": "YouTube: freeCodeCamp.org – Intro to Object Oriented Programming - Crash Course (30:18)", "url": "https://www.youtube.com/watch?v=SiBw7os-_zI"}],
             "priority": "core",
             "completed": false
           },
@@ -1522,7 +1522,7 @@
             "outcomes": ["Implement Strategy and Observer", "Implement Command and State", "Replace conditionals with polymorphism"],
             "estimatedHours": 14,
             "prerequisites": ["lang-oop-solid"],
-            "resources": [{"label": "Refactoring Guru: Behavioral Patterns", "url": "https://refactoring.guru/design-patterns/behavioral-patterns"}, {"label": "YouTube: Programming with Mosh – Object-Oriented Programming, Simplified (7:34)", "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8"}, {"label": "YouTube: freeCodeCamp.org – Intro to Object Oriented Programming - Crash Course (30:18)", "url": "https://www.youtube.com/watch?v=SiBw7os-_zI"}],
+            "resources": [{"label": "Refactoring Guru: Behavioral Patterns", "url": "https://refactoring.guru/design-patterns/behavioral-patterns"}, {"label": "Refactoring Guru: Observer pattern - subscription notifications", "url": "https://refactoring.guru/design-patterns/observer"}, {"label": "Refactoring Guru: Command pattern - requests as objects", "url": "https://refactoring.guru/design-patterns/command"}, {"label": "Refactoring Guru: State pattern - behavior varying by state", "url": "https://refactoring.guru/design-patterns/state"}, {"label": "Refactoring Guru: Template Method pattern", "url": "https://refactoring.guru/design-patterns/template-method"}, {"label": "YouTube: Programming with Mosh – Object-Oriented Programming, Simplified (7:34)", "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8"}, {"label": "YouTube: freeCodeCamp.org – Intro to Object Oriented Programming - Crash Course (30:18)", "url": "https://www.youtube.com/watch?v=SiBw7os-_zI"}],
             "priority": "core",
             "completed": false
           }
@@ -1544,7 +1544,7 @@
             "outcomes": ["Distinguish entities from value objects", "Define aggregate boundaries", "Use a ubiquitous language"],
             "estimatedHours": 18,
             "prerequisites": ["lang-oop-solid", "lang-oop-behavioral-patterns"],
-            "resources": [{"label": "Refactoring Guru: Refactoring", "url": "https://refactoring.guru/refactoring"}, {"label": "YouTube: Google Cloud Tech – What are domain specific language models? (4:11)", "url": "https://www.youtube.com/watch?v=35rRK49HnAQ"}, {"label": "YouTube: Community for F# – Domain Modeling with Types with Ryan Riley (1:27:16)", "url": "https://www.youtube.com/watch?v=970nkg60lHs"}],
+            "resources": [{"label": "Refactoring Guru: Refactoring", "url": "https://refactoring.guru/refactoring"}, {"label": "Martin Fowler: Domain Driven Design - overview", "url": "https://martinfowler.com/bliki/DomainDrivenDesign.html"}, {"label": "Martin Fowler: Value Object", "url": "https://martinfowler.com/bliki/ValueObject.html"}, {"label": "Martin Fowler: DDD Aggregate", "url": "https://martinfowler.com/bliki/DDD_Aggregate.html"}, {"label": "Martin Fowler: Evans Classification - entities, value objects, services", "url": "https://martinfowler.com/bliki/EvansClassification.html"}, {"label": "Microsoft Learn: Tactical DDD - entities, aggregates, domain services", "url": "https://learn.microsoft.com/en-us/azure/architecture/microservices/model/tactical-ddd"}, {"label": "YouTube: Google Cloud Tech – What are domain specific language models? (4:11)", "url": "https://www.youtube.com/watch?v=35rRK49HnAQ"}, {"label": "YouTube: Community for F# – Domain Modeling with Types with Ryan Riley (1:27:16)", "url": "https://www.youtube.com/watch?v=970nkg60lHs"}],
             "priority": "core",
             "completed": false
           },
@@ -1555,7 +1555,7 @@
             "outcomes": ["Recognize code smells", "Refactor under test coverage", "Use dependency injection for testability"],
             "estimatedHours": 14,
             "prerequisites": ["lang-oop-solid", "unit-testing"],
-            "resources": [{"label": "Refactoring Guru: Code Smells", "url": "https://refactoring.guru/refactoring/smells"}, {"label": "YouTube: Google TechTalks – Design Tech Talk Series Presents: OO Design for Testability (56:02)", "url": "https://www.youtube.com/watch?v=acjvKJiOvXw"}, {"label": "YouTube: Book Overflow – Martin Fowler Reflects on Refactoring: Improving the Design of Existing Code (1:10:56)", "url": "https://www.youtube.com/watch?v=CjCJ76oZXTE"}],
+            "resources": [{"label": "Refactoring Guru: Code Smells", "url": "https://refactoring.guru/refactoring/smells"}, {"label": "Refactoring Guru: What is refactoring", "url": "https://refactoring.guru/refactoring/what-is-refactoring"}, {"label": "Refactoring Guru: How to refactor - checklist for safe changes", "url": "https://refactoring.guru/refactoring/how-to"}, {"label": "Martin Fowler: Test Pyramid", "url": "https://martinfowler.com/bliki/TestPyramid.html"}, {"label": "Martin Fowler: Mocks Aren't Stubs - test doubles and design", "url": "https://martinfowler.com/articles/mocksArentStubs.html"}, {"label": "Refactoring Guru: Extract Class", "url": "https://refactoring.guru/extract-class"}, {"label": "YouTube: Google TechTalks – Design Tech Talk Series Presents: OO Design for Testability (56:02)", "url": "https://www.youtube.com/watch?v=acjvKJiOvXw"}, {"label": "YouTube: Book Overflow – Martin Fowler Reflects on Refactoring: Improving the Design of Existing Code (1:10:56)", "url": "https://www.youtube.com/watch?v=CjCJ76oZXTE"}],
             "priority": "core",
             "completed": false
           },
@@ -1566,7 +1566,7 @@
             "outcomes": ["Define ports and adapters", "Keep the domain free of framework code", "Weigh OOP against functional alternatives"],
             "estimatedHours": 14,
             "prerequisites": ["lang-oop-domain-modeling"],
-            "resources": [{"label": "Refactoring Guru: Design Patterns", "url": "https://refactoring.guru/design-patterns"}, {"label": "YouTube: Master AWS with Yan – Hexagonal architecture: the what, why and when? (7:27)", "url": "https://www.youtube.com/watch?v=qGp66Oc3zTg"}, {"label": "YouTube: JetBrains – Clean Architecture With ASP.NET Core — Steve Smith (58:41)", "url": "https://www.youtube.com/watch?v=qOwB8PxOqC0"}],
+            "resources": [{"label": "Refactoring Guru: Design Patterns", "url": "https://refactoring.guru/design-patterns"}, {"label": "Alistair Cockburn: Hexagonal Architecture - ports and adapters", "url": "https://alistair.cockburn.us/hexagonal-architecture/"}, {"label": "Martin Fowler: Presentation Domain Data Layering", "url": "https://martinfowler.com/bliki/PresentationDomainDataLayering.html"}, {"label": "Microsoft Learn: Common web application architectures - layers, clean architecture", "url": "https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures"}, {"label": "Martin Fowler: Bounded Context", "url": "https://martinfowler.com/bliki/BoundedContext.html"}, {"label": "Microsoft Learn: Anti-corruption Layer pattern", "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/anti-corruption-layer"}, {"label": "YouTube: Master AWS with Yan – Hexagonal architecture: the what, why and when? (7:27)", "url": "https://www.youtube.com/watch?v=qGp66Oc3zTg"}, {"label": "YouTube: JetBrains – Clean Architecture With ASP.NET Core — Steve Smith (58:41)", "url": "https://www.youtube.com/watch?v=qOwB8PxOqC0"}],
             "priority": "optional",
             "completed": false
           }

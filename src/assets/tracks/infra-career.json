@@ -20,10 +20,11 @@
             "estimatedHours": 8,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "Google SRE Book",
-                "url": "https://sre.google/sre-book/table-of-contents/"
-              },
+              {"label": "Google SRE Book", "url": "https://sre.google/sre-book/table-of-contents/"},
+              {"label": "Google SRE Book: Service Level Objectives - SLIs, SLOs and SLAs", "url": "https://sre.google/sre-book/service-level-objectives/"},
+              {"label": "Google SRE Workbook: Implementing SLOs - choosing and measuring SLIs", "url": "https://sre.google/workbook/implementing-slos/"},
+              {"label": "Google Cloud: SRE fundamentals - SLIs, SLAs and SLOs compared", "url": "https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos"},
+              {"label": "Google Cloud Observability: Concepts in service monitoring - SLOs", "url": "https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring"},
               {"label": "YouTube: Google Cloud Tech – The Art of SLOs (Service Level Objectives) (4:01)", "url": "https://www.youtube.com/watch?v=E3ReKuJ8ewA"}
             ],
             "priority": "core",
@@ -42,10 +43,11 @@
               "sre-sli-slo"
             ],
             "resources": [
-              {
-                "label": "Google SRE Workbook",
-                "url": "https://sre.google/workbook/table-of-contents/"
-              },
+              {"label": "Google SRE Workbook", "url": "https://sre.google/workbook/table-of-contents/"},
+              {"label": "Google SRE Book: Embracing Risk - error budgets and risk tolerance", "url": "https://sre.google/sre-book/embracing-risk/"},
+              {"label": "Google SRE Workbook: Example Error Budget Policy", "url": "https://sre.google/workbook/error-budget-policy/"},
+              {"label": "Google SRE Workbook: SLO Engineering Case Studies", "url": "https://sre.google/workbook/slo-engineering-case-studies/"},
+              {"label": "Google SRE Workbook: Alerting on SLOs - burn rate alerts", "url": "https://sre.google/workbook/alerting-on-slos/"},
               {"label": "YouTube: IBM Technology – What is Site Reliability Engineering (SRE)? (8:12)", "url": "https://www.youtube.com/watch?v=ztIIcXNzMN4"},
               {"label": "YouTube: Google Cloud Events – Site Reliability Engineering (SRE) Fundamentals (1:00:49)", "url": "https://www.youtube.com/watch?v=eopc_ijIfLg"}
             ],
@@ -65,10 +67,10 @@
               "monitoring"
             ],
             "resources": [
-              {
-                "label": "Google SRE Book",
-                "url": "https://sre.google/sre-book/table-of-contents/"
-              },
+              {"label": "Google SRE Book", "url": "https://sre.google/sre-book/table-of-contents/"},
+              {"label": "Google SRE Book: Practical Alerting from Time-Series Data", "url": "https://sre.google/sre-book/practical-alerting/"},
+              {"label": "Prometheus Docs: Instrumentation best practices", "url": "https://prometheus.io/docs/practices/instrumentation/"},
+              {"label": "Prometheus Docs: Alerting best practices - symptom-based alerts", "url": "https://prometheus.io/docs/practices/alerting/"},
               {"label": "YouTube: ServiceNow Community – Demo - ServiceNow Site Reliability Operations (7:34)", "url": "https://www.youtube.com/watch?v=YYrvI0FccPM"},
               {"label": "YouTube: Microsoft Azure – What is Azure Monitor? (5:01)", "url": "https://www.youtube.com/watch?v=eSutaPE80PM"}
             ],
@@ -103,10 +105,11 @@
               "sre-monitoring"
             ],
             "resources": [
-              {
-                "label": "Google SRE Book",
-                "url": "https://sre.google/sre-book/table-of-contents/"
-              },
+              {"label": "Google SRE Book", "url": "https://sre.google/sre-book/table-of-contents/"},
+              {"label": "Google SRE Workbook: Incident Response", "url": "https://sre.google/workbook/incident-response/"},
+              {"label": "Google SRE Book: Postmortem Culture - learning from failure", "url": "https://sre.google/sre-book/postmortem-culture/"},
+              {"label": "Atlassian: Incident management handbook", "url": "https://www.atlassian.com/incident-management"},
+              {"label": "PagerDuty: Incident Response documentation", "url": "https://response.pagerduty.com/"},
               {"label": "YouTube: Professor Messer – Incident Response - CompTIA Security+ SY0-701 - 4.8 (9:14)", "url": "https://www.youtube.com/watch?v=X2UiMLxRdhE"}
             ],
             "priority": "core",
@@ -125,10 +128,12 @@
               "sre-monitoring"
             ],
             "resources": [
-              {
-                "label": "Google SRE Book",
-                "url": "https://sre.google/sre-book/table-of-contents/"
-              },
+              {"label": "Google SRE Book", "url": "https://sre.google/sre-book/table-of-contents/"},
+              {"label": "Google SRE Book: Software Engineering in SRE - demand forecasting and capacity", "url": "https://sre.google/sre-book/software-engineering-in-sre/"},
+              {"label": "Google SRE Book: Handling Overload", "url": "https://sre.google/sre-book/handling-overload/"},
+              {"label": "Google SRE Book: Addressing Cascading Failures", "url": "https://sre.google/sre-book/addressing-cascading-failures/"},
+              {"label": "Google SRE Workbook: Managing Load - autoscaling and load shedding", "url": "https://sre.google/workbook/managing-load/"},
+              {"label": "AWS Well-Architected: Reliability pillar - manage service quotas and demand", "url": "https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html"},
               {"label": "YouTube: Gaurav Sen – Capacity Planning and Estimation: How much data does YouTube store daily? (13:12)", "url": "https://www.youtube.com/watch?v=0myM0k1mjZw"}
             ],
             "priority": "core",
@@ -147,10 +152,10 @@
               "sre-incidents"
             ],
             "resources": [
-              {
-                "label": "Google SRE Workbook",
-                "url": "https://sre.google/workbook/table-of-contents/"
-              },
+              {"label": "Google SRE Workbook", "url": "https://sre.google/workbook/table-of-contents/"},
+              {"label": "Google SRE Book: Being On-Call", "url": "https://sre.google/sre-book/being-on-call/"},
+              {"label": "Google SRE Workbook: On-Call - sustainable on-call practice", "url": "https://sre.google/workbook/on-call/"},
+              {"label": "Google SRE Book: Eliminating Toil", "url": "https://sre.google/sre-book/eliminating-toil/"},
               {"label": "YouTube: ServiceNow Community – Demo - ServiceNow Site Reliability Operations (7:34)", "url": "https://www.youtube.com/watch?v=YYrvI0FccPM"}
             ],
             "priority": "core",
@@ -185,10 +190,12 @@
               "sre-capacity"
             ],
             "resources": [
-              {
-                "label": "Google SRE Book",
-                "url": "https://sre.google/sre-book/table-of-contents/"
-              },
+              {"label": "Google SRE Book", "url": "https://sre.google/sre-book/table-of-contents/"},
+              {"label": "Principles of Chaos Engineering - the experiment method", "url": "https://principlesofchaos.org/"},
+              {"label": "Google SRE Book: Testing for Reliability", "url": "https://sre.google/sre-book/testing-reliability/"},
+              {"label": "AWS Fault Injection Service: What is AWS FIS", "url": "https://docs.aws.amazon.com/fis/latest/userguide/what-is.html"},
+              {"label": "Azure Chaos Studio: Overview - fault injection experiments", "url": "https://learn.microsoft.com/en-us/azure/chaos-studio/chaos-studio-overview"},
+              {"label": "Chaos Mesh Docs: Run a chaos experiment", "url": "https://chaos-mesh.org/docs/"},
               {"label": "YouTube: Microsoft Developer – Understanding Chaos Engineering (21:21)", "url": "https://www.youtube.com/watch?v=mfEMXKSFtaQ"},
               {"label": "YouTube: Veritasium – Chaos: The Science of the Butterfly Effect (12:51)", "url": "https://www.youtube.com/watch?v=fDek6cYijxI"}
             ],
@@ -208,10 +215,12 @@
               "sre-sli-slo"
             ],
             "resources": [
-              {
-                "label": "Google SRE Book",
-                "url": "https://sre.google/sre-book/table-of-contents/"
-              },
+              {"label": "Google SRE Book", "url": "https://sre.google/sre-book/table-of-contents/"},
+              {"label": "AWS Well-Architected: Reliability Pillar - design for failure", "url": "https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/design-principles.html"},
+              {"label": "Azure Architecture Center: Reliability design principles", "url": "https://learn.microsoft.com/en-us/azure/well-architected/reliability/principles"},
+              {"label": "Google SRE Book: Managing Critical State - distributed consensus", "url": "https://sre.google/sre-book/managing-critical-state/"},
+              {"label": "Google SRE Book: Data Integrity - what you read is what you wrote", "url": "https://sre.google/sre-book/data-integrity/"},
+              {"label": "Azure Architecture Center: Bulkhead pattern - isolate failure", "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead"},
               {"label": "YouTube: IBM Technology – What is Site Reliability Engineering (SRE)? (8:12)", "url": "https://www.youtube.com/watch?v=ztIIcXNzMN4"},
               {"label": "YouTube: Google Cloud Events – Site Reliability Engineering (SRE) Fundamentals (1:00:49)", "url": "https://www.youtube.com/watch?v=eopc_ijIfLg"}
             ],
@@ -232,10 +241,11 @@
               "sre-incidents"
             ],
             "resources": [
-              {
-                "label": "Google SRE Workbook",
-                "url": "https://sre.google/workbook/table-of-contents/"
-              },
+              {"label": "Google SRE Workbook", "url": "https://sre.google/workbook/table-of-contents/"},
+              {"label": "Google SRE Book: Reliable Product Launches at Scale", "url": "https://sre.google/sre-book/reliable-product-launches/"},
+              {"label": "Google SRE Workbook: Engagement Model - SRE service reviews", "url": "https://sre.google/workbook/engagement-model/"},
+              {"label": "AWS Well-Architected: Reliability pillar - failure management", "url": "https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/failure-management.html"},
+              {"label": "Google SRE Book: Production Readiness - service best practices", "url": "https://sre.google/sre-book/service-best-practices/"},
               {"label": "YouTube: IBM Technology – What is Site Reliability Engineering (SRE)? (8:12)", "url": "https://www.youtube.com/watch?v=ztIIcXNzMN4"},
               {"label": "YouTube: Google Cloud Events – Site Reliability Engineering (SRE) Fundamentals (1:00:49)", "url": "https://www.youtube.com/watch?v=eopc_ijIfLg"}
             ],
@@ -282,10 +292,12 @@
               "networking"
             ],
             "resources": [
-              {
-                "label": "MDN: HTTP overview",
-                "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"
-              },
+              {"label": "MDN: HTTP overview", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"},
+              {"label": "Beej's Guide to Network Programming - sockets, TCP and UDP", "url": "https://beej.us/guide/bgnet/"},
+              {"label": "Computer Networks: A Systems Approach - foundations", "url": "https://book.systemsapproach.org/foundation.html"},
+              {"label": "Cloudflare Learning: What is the Internet Protocol (IP)?", "url": "https://www.cloudflare.com/learning/network-layer/internet-protocol/"},
+              {"label": "Cloudflare Learning: What is TCP/IP?", "url": "https://www.cloudflare.com/learning/ddos/glossary/tcp-ip/"},
+              {"label": "Wikipedia: Fallacies of distributed computing", "url": "https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing"},
               {"label": "YouTube: TechWorld with Nana – Every Networking Concept Explained In 20 Minutes (23:21)", "url": "https://www.youtube.com/watch?v=xj_GjnD4uyI"},
               {"label": "YouTube: CrashCourse – Computer Networks: Crash Course Computer Science #28 (12:20)", "url": "https://www.youtube.com/watch?v=3QhU9jd03a0"}
             ],
@@ -303,10 +315,12 @@
             "estimatedHours": 8,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "Google Cloud: Retry strategy",
-                "url": "https://cloud.google.com/storage/docs/retry-strategy"
-              },
+              {"label": "Google Cloud: Retry strategy", "url": "https://cloud.google.com/storage/docs/retry-strategy"},
+              {"label": "AWS Builders' Library: Timeouts, retries, and backoff with jitter", "url": "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/"},
+              {"label": "Azure Architecture Center: Retry pattern", "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/retry"},
+              {"label": "Azure Architecture Center: Circuit Breaker pattern", "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker"},
+              {"label": "AWS Architecture Blog: Exponential backoff and jitter", "url": "https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/"},
+              {"label": "Martin Fowler: Circuit Breaker", "url": "https://martinfowler.com/bliki/CircuitBreaker.html"},
               {"label": "YouTube: ByteByteGo – Top 7 Most-Used Distributed System Patterns (6:14)", "url": "https://www.youtube.com/watch?v=nH4qjmP2KEE"}
             ],
             "priority": "core",
@@ -325,10 +339,12 @@
               "distributed-networking"
             ],
             "resources": [
-              {
-                "label": "MIT 6.5840: Distributed Systems",
-                "url": "https://pdos.csail.mit.edu/6.824/"
-              },
+              {"label": "MIT 6.5840: Distributed Systems", "url": "https://pdos.csail.mit.edu/6.824/"},
+              {"label": "Martin Fowler: Patterns of Distributed Systems - Heartbeat", "url": "https://martinfowler.com/articles/patterns-of-distributed-systems/heartbeat.html"},
+              {"label": "Martin Fowler: Patterns of Distributed Systems - Lease", "url": "https://martinfowler.com/articles/patterns-of-distributed-systems/time-bound-lease.html"},
+              {"label": "Jepsen: Distributed systems safety research - failure testing", "url": "https://jepsen.io/analyses"},
+              {"label": "Lamport: Time, Clocks, and the Ordering of Events", "url": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf"},
+              {"label": "Martin Fowler: Patterns of Distributed Systems - Generation Clock", "url": "https://martinfowler.com/articles/patterns-of-distributed-systems/generation.html"},
               {"label": "YouTube: HashiCorp, an IBM Company – Explaining Distributed Systems Like I'm 5 (12:40)", "url": "https://www.youtube.com/watch?v=CESKgdNiKJw"},
               {"label": "YouTube: ByteByteGo – Top 7 Most-Used Distributed System Patterns (6:14)", "url": "https://www.youtube.com/watch?v=nH4qjmP2KEE"}
             ],
@@ -363,10 +379,12 @@
               "distributed-failures"
             ],
             "resources": [
-              {
-                "label": "MIT 6.5840: Distributed Systems",
-                "url": "https://pdos.csail.mit.edu/6.824/"
-              },
+              {"label": "MIT 6.5840: Distributed Systems", "url": "https://pdos.csail.mit.edu/6.824/"},
+              {"label": "Martin Fowler: Patterns of Distributed Systems - Leader and Followers", "url": "https://martinfowler.com/articles/patterns-of-distributed-systems/leader-follower.html"},
+              {"label": "Martin Fowler: Patterns of Distributed Systems - Replicated Log", "url": "https://martinfowler.com/articles/patterns-of-distributed-systems/replicated-log.html"},
+              {"label": "Dynamo: Amazon's Highly Available Key-value Store", "url": "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf"},
+              {"label": "PostgreSQL Docs: High Availability, Load Balancing, and Replication", "url": "https://www.postgresql.org/docs/current/high-availability.html"},
+              {"label": "Martin Fowler: Patterns of Distributed Systems - Write-Ahead Log", "url": "https://martinfowler.com/articles/patterns-of-distributed-systems/wal.html"},
               {"label": "YouTube: CrashCourse – DNA Structure and Replication: Crash Course Biology #10 (12:35)", "url": "https://www.youtube.com/watch?v=8kK2zwjRV0M"},
               {"label": "YouTube: Khan Academy – DNA replication and RNA transcription and translation | Khan Academy (15:23)", "url": "https://www.youtube.com/watch?v=6gUY5NoX1Lk"}
             ],
@@ -386,10 +404,12 @@
               "distributed-replication"
             ],
             "resources": [
-              {
-                "label": "MIT 6.5840: Distributed Systems",
-                "url": "https://pdos.csail.mit.edu/6.824/"
-              },
+              {"label": "MIT 6.5840: Distributed Systems", "url": "https://pdos.csail.mit.edu/6.824/"},
+              {"label": "Azure Architecture Center: Data partitioning guidance", "url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning"},
+              {"label": "Azure Architecture Center: Sharding pattern", "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding"},
+              {"label": "Martin Fowler: Patterns of Distributed Systems - Fixed Partitions", "url": "https://martinfowler.com/articles/patterns-of-distributed-systems/fixed-partitions.html"},
+              {"label": "MongoDB Manual: Sharding - shard keys and balancing", "url": "https://www.mongodb.com/docs/manual/sharding/"},
+              {"label": "Karger et al.: Consistent Hashing and Random Trees", "url": "https://www.cs.princeton.edu/courses/archive/fall09/cos518/papers/chash.pdf"},
               {"label": "YouTube: Numberphile – Partitions - Numberphile (11:45)", "url": "https://www.youtube.com/watch?v=NjCIq58rZ8I"},
               {"label": "YouTube: Alex The Analyst – Intermediate SQL Tutorial | Partition By (4:14)", "url": "https://www.youtube.com/watch?v=D6XNlTfglW4"}
             ],
@@ -409,10 +429,12 @@
               "distributed-replication"
             ],
             "resources": [
-              {
-                "label": "MIT 6.5840: Distributed Systems",
-                "url": "https://pdos.csail.mit.edu/6.824/"
-              },
+              {"label": "MIT 6.5840: Distributed Systems", "url": "https://pdos.csail.mit.edu/6.824/"},
+              {"label": "Jepsen: Consistency Models map", "url": "https://jepsen.io/consistency"},
+              {"label": "Martin Fowler: Patterns of Distributed Systems - Hybrid Clock", "url": "https://martinfowler.com/articles/patterns-of-distributed-systems/hybrid-clock.html"},
+              {"label": "Amazon DynamoDB Docs: Read consistency", "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html"},
+              {"label": "Azure Cosmos DB: Consistency levels", "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels"},
+              {"label": "Brewer: CAP Twelve Years Later - how the rules have changed", "url": "https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/"},
               {"label": "YouTube: Gaurav Sen – Data Consistency and Tradeoffs in Distributed Systems (25:42)", "url": "https://www.youtube.com/watch?v=m4q7VkgDWrM"}
             ],
             "priority": "core",
@@ -446,10 +468,12 @@
               "distributed-consistency"
             ],
             "resources": [
-              {
-                "label": "MIT 6.5840: Distributed Systems",
-                "url": "https://pdos.csail.mit.edu/6.824/"
-              },
+              {"label": "MIT 6.5840: Distributed Systems", "url": "https://pdos.csail.mit.edu/6.824/"},
+              {"label": "Raft consensus algorithm - visualization and resources", "url": "https://raft.github.io/"},
+              {"label": "Ongaro & Ousterhout: In Search of an Understandable Consensus Algorithm (Raft)", "url": "https://raft.github.io/raft.pdf"},
+              {"label": "Lamport: Paxos Made Simple", "url": "https://lamport.azurewebsites.net/pubs/paxos-simple.pdf"},
+              {"label": "Martin Fowler: Patterns of Distributed Systems - Majority Quorum", "url": "https://martinfowler.com/articles/patterns-of-distributed-systems/majority-quorum.html"},
+              {"label": "etcd Docs: Learning - how Raft is used in etcd", "url": "https://etcd.io/docs/latest/learning/design-learner/"},
               {"label": "YouTube: Gaurav Sen – Distributed Consensus and Data Replication strategies on the server (15:48)", "url": "https://www.youtube.com/watch?v=GeGxgmPTe4c"},
               {"label": "YouTube: 73 Big Theory – Paxos Made Simple: The Algorithm Behind Distributed Consensus (8:04)", "url": "https://www.youtube.com/watch?v=op9JtpJoNvw"}
             ],
@@ -470,10 +494,12 @@
               "distributed-retries"
             ],
             "resources": [
-              {
-                "label": "Apache Kafka Documentation",
-                "url": "https://kafka.apache.org/documentation/"
-              },
+              {"label": "Apache Kafka Documentation", "url": "https://kafka.apache.org/documentation/"},
+              {"label": "Martin Fowler: Patterns of Distributed Systems - Idempotent Receiver", "url": "https://martinfowler.com/articles/patterns-of-distributed-systems/idempotent-receiver.html"},
+              {"label": "RabbitMQ Tutorial: Work Queues and acknowledgements", "url": "https://www.rabbitmq.com/tutorials/tutorial-two-python"},
+              {"label": "Confluent: Kafka design - delivery semantics", "url": "https://docs.confluent.io/kafka/design/delivery-semantics.html"},
+              {"label": "Enterprise Integration Patterns: Guaranteed Delivery", "url": "https://www.enterpriseintegrationpatterns.com/patterns/messaging/GuaranteedMessaging.html"},
+              {"label": "Azure Architecture Center: Competing Consumers pattern", "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/competing-consumers"},
               {"label": "YouTube: The Coding Gopher – Kafka vs RabbitMQ: The Best Message Queue Explained (5:16)", "url": "https://www.youtube.com/watch?v=PQHf_IzmUXE"},
               {"label": "YouTube: TechWorld with Nana – Kafka Tutorial for Beginners | Everything you need to get started (18:33)", "url": "https://www.youtube.com/watch?v=QkdkLdMBuL0"}
             ],
@@ -494,10 +520,12 @@
               "distributed-messaging"
             ],
             "resources": [
-              {
-                "label": "MIT 6.5840: Distributed Systems",
-                "url": "https://pdos.csail.mit.edu/6.824/"
-              },
+              {"label": "MIT 6.5840: Distributed Systems", "url": "https://pdos.csail.mit.edu/6.824/"},
+              {"label": "Azure Architecture Center: Health Endpoint Monitoring pattern", "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/health-endpoint-monitoring"},
+              {"label": "AWS Builders' Library: Static stability using Availability Zones", "url": "https://aws.amazon.com/builders-library/static-stability-using-availability-zones/"},
+              {"label": "AWS Builders' Library: Avoiding fallback in distributed systems", "url": "https://aws.amazon.com/builders-library/avoiding-fallback-in-distributed-systems/"},
+              {"label": "Google SRE Book: Addressing Cascading Failures - graceful degradation", "url": "https://sre.google/sre-book/addressing-cascading-failures/"},
+              {"label": "Azure Architecture Center: Fault-tolerant design - failure mode analysis", "url": "https://learn.microsoft.com/en-us/azure/architecture/resiliency/failure-mode-analysis"},
               {"label": "YouTube: ByteByteGo – 8 Most Important Tips for Designing Fault-Tolerant System (5:11)", "url": "https://www.youtube.com/watch?v=3Lis4w4_bBc"}
             ],
             "priority": "core",
@@ -543,10 +571,12 @@
               "applied-crypto"
             ],
             "resources": [
-              {
-                "label": "Ethereum: Introduction",
-                "url": "https://ethereum.org/en/developers/docs/intro-to-ethereum/"
-              },
+              {"label": "Ethereum: Introduction", "url": "https://ethereum.org/en/developers/docs/intro-to-ethereum/"},
+              {"label": "Bitcoin Whitepaper: A Peer-to-Peer Electronic Cash System", "url": "https://bitcoin.org/bitcoin.pdf"},
+              {"label": "Bitcoin Developer Guide: Block Chain - hashes and Merkle trees", "url": "https://developer.bitcoin.org/devguide/block_chain.html"},
+              {"label": "Wikipedia: Merkle tree - hash tree integrity proofs", "url": "https://en.wikipedia.org/wiki/Merkle_tree"},
+              {"label": "Bitcoin Wiki: Elliptic Curve Digital Signature Algorithm", "url": "https://en.bitcoin.it/wiki/Elliptic_Curve_Digital_Signature_Algorithm"},
+              {"label": "Anders Brownworth: Blockchain demo - hashing, blocks, keys and signatures", "url": "https://andersbrownworth.com/blockchain/hash"},
               {"label": "YouTube: MIT OpenCourseWare – 3. Blockchain Basics & Cryptography (1:17:38)", "url": "https://www.youtube.com/watch?v=0UvVOMZqpEA"},
               {"label": "YouTube: CrashCourse – Cryptography: Crash Course Computer Science #33 (12:33)", "url": "https://www.youtube.com/watch?v=jhXCTbFnK8o"}
             ],
@@ -566,10 +596,12 @@
               "blockchain-cryptography"
             ],
             "resources": [
-              {
-                "label": "Ethereum Developer Documentation",
-                "url": "https://ethereum.org/en/developers/docs/"
-              },
+              {"label": "Ethereum Developer Documentation", "url": "https://ethereum.org/en/developers/docs/"},
+              {"label": "ethereum.org: Accounts", "url": "https://ethereum.org/developers/docs/accounts/"},
+              {"label": "ethereum.org: Transactions", "url": "https://ethereum.org/developers/docs/transactions/"},
+              {"label": "ethereum.org: Blocks", "url": "https://ethereum.org/developers/docs/blocks/"},
+              {"label": "ethereum.org: Gas and fees", "url": "https://ethereum.org/developers/docs/gas/"},
+              {"label": "ethereum.org: Ethereum Virtual Machine (EVM)", "url": "https://ethereum.org/developers/docs/evm/"},
               {"label": "YouTube: Programming with Mosh – From Zero to Blockchain Developer in 10 Months: Complete Roadmap (4:59)", "url": "https://www.youtube.com/watch?v=gdiao7L9GjE"},
               {"label": "YouTube: Fireship – Is Web3 all Hype? Top 10 Web 3.0 Questions & Answers (9:29)", "url": "https://www.youtube.com/watch?v=wHTcrmhskto"}
             ],
@@ -589,10 +621,12 @@
               "blockchain-ethereum"
             ],
             "resources": [
-              {
-                "label": "Ethereum: Wallets",
-                "url": "https://ethereum.org/en/wallets/"
-              },
+              {"label": "Ethereum: Wallets", "url": "https://ethereum.org/en/wallets/"},
+              {"label": "ethereum.org: How to create an Ethereum account", "url": "https://ethereum.org/guides/how-to-create-an-ethereum-account/"},
+              {"label": "ethereum.org: How to use a wallet", "url": "https://ethereum.org/guides/how-to-use-a-wallet/"},
+              {"label": "ethereum.org: How to revoke smart contract access to your crypto funds", "url": "https://ethereum.org/guides/how-to-revoke-token-access/"},
+              {"label": "ethereum.org: Staying safe - security and scam prevention", "url": "https://ethereum.org/security/"},
+              {"label": "EIP-1193: Ethereum Provider JavaScript API", "url": "https://eips.ethereum.org/EIPS/eip-1193"},
               {"label": "YouTube: Simply Explained – How Bitcoin Wallets Work (Public & Private Key Explained) (4:05)", "url": "https://www.youtube.com/watch?v=GSTiKjnBaes"}
             ],
             "priority": "core",
@@ -626,10 +660,12 @@
               "blockchain-ethereum"
             ],
             "resources": [
-              {
-                "label": "Solidity Documentation",
-                "url": "https://docs.soliditylang.org/"
-              },
+              {"label": "Solidity Documentation", "url": "https://docs.soliditylang.org/"},
+              {"label": "Solidity Docs: Solidity by Example", "url": "https://docs.soliditylang.org/en/latest/solidity-by-example.html"},
+              {"label": "Solidity Docs: Types - value and reference types", "url": "https://docs.soliditylang.org/en/latest/types.html"},
+              {"label": "Solidity Docs: Contracts - visibility, modifiers and events", "url": "https://docs.soliditylang.org/en/latest/contracts.html"},
+              {"label": "Solidity Docs: Common Patterns - access restriction", "url": "https://docs.soliditylang.org/en/latest/common-patterns.html"},
+              {"label": "Solidity Docs: Style Guide", "url": "https://docs.soliditylang.org/en/latest/style-guide.html"},
               {"label": "YouTube: Programming with Mosh – From Zero to Blockchain Developer in 10 Months: Complete Roadmap (4:59)", "url": "https://www.youtube.com/watch?v=gdiao7L9GjE"},
               {"label": "YouTube: Fireship – Is Web3 all Hype? Top 10 Web 3.0 Questions & Answers (9:29)", "url": "https://www.youtube.com/watch?v=wHTcrmhskto"}
             ],
@@ -649,10 +685,12 @@
               "blockchain-solidity"
             ],
             "resources": [
-              {
-                "label": "Ethereum Developer Documentation",
-                "url": "https://ethereum.org/en/developers/docs/"
-              },
+              {"label": "Ethereum Developer Documentation", "url": "https://ethereum.org/en/developers/docs/"},
+              {"label": "ethereum.org: Anatomy of smart contracts", "url": "https://ethereum.org/developers/docs/smart-contracts/anatomy/"},
+              {"label": "ethereum.org: Introduction to smart contracts", "url": "https://ethereum.org/developers/docs/smart-contracts/"},
+              {"label": "ethereum.org: ERC-20 token standard", "url": "https://ethereum.org/developers/docs/standards/tokens/erc-20/"},
+              {"label": "ethereum.org: Logs and events", "url": "https://ethereum.org/developers/docs/apis/json-rpc/"},
+              {"label": "OpenZeppelin Docs: Contracts - upgradeable and standard building blocks", "url": "https://docs.openzeppelin.com/contracts/5.x/"},
               {"label": "YouTube: freeCodeCamp.org – Build Your First Blockchain App Using Ethereum Smart Contracts and Solidity (1:31:07)", "url": "https://www.youtube.com/watch?v=coQ5dg8wM2o"},
               {"label": "YouTube: Simply Explained – Smart contracts - Simply Explained (4:17)", "url": "https://www.youtube.com/watch?v=ZE2HxTmxfrI"}
             ],
@@ -673,10 +711,12 @@
               "blockchain-contract-design"
             ],
             "resources": [
-              {
-                "label": "Ethereum Developer Documentation",
-                "url": "https://ethereum.org/en/developers/docs/"
-              },
+              {"label": "Ethereum Developer Documentation", "url": "https://ethereum.org/en/developers/docs/"},
+              {"label": "ethereum.org: Introduction to dapps", "url": "https://ethereum.org/developers/docs/dapps/"},
+              {"label": "ethers.js v6 Documentation: Getting started", "url": "https://docs.ethers.org/v6/getting-started/"},
+              {"label": "wagmi Docs: Getting started - React hooks for Ethereum", "url": "https://wagmi.sh/react/getting-started"},
+              {"label": "ethereum.org: JavaScript API libraries", "url": "https://ethereum.org/developers/docs/apis/javascript/"},
+              {"label": "MetaMask Docs: Connect to MetaMask", "url": "https://docs.metamask.io/wallet/"},
               {"label": "YouTube: Fireship – I built a decentralized chat dapp // GUN web3 Tutorial (10:47)", "url": "https://www.youtube.com/watch?v=J5x3OMXjgMc"},
               {"label": "YouTube: DesignCourse – 01. Smart Contracts and Decentralized Apps 101 (6:00)", "url": "https://www.youtube.com/watch?v=a9_HPYlhCug"}
             ],
@@ -711,10 +751,12 @@
               "blockchain-contract-design"
             ],
             "resources": [
-              {
-                "label": "Solidity: Security Considerations",
-                "url": "https://docs.soliditylang.org/en/latest/security-considerations.html"
-              },
+              {"label": "Solidity: Security Considerations", "url": "https://docs.soliditylang.org/en/latest/security-considerations.html"},
+              {"label": "ConsenSys: Ethereum Smart Contract Security Best Practices", "url": "https://consensys.github.io/smart-contract-best-practices/"},
+              {"label": "OWASP: Smart Contract Top 10", "url": "https://owasp.org/www-project-smart-contract-top-10/"},
+              {"label": "Solidity by Example: Re-entrancy hack", "url": "https://solidity-by-example.org/hacks/re-entrancy/"},
+              {"label": "OpenZeppelin Docs: Access Control", "url": "https://docs.openzeppelin.com/contracts/5.x/access-control"},
+              {"label": "Smart Contract Weakness Classification Registry", "url": "https://swcregistry.io/"},
               {"label": "YouTube: Simply Explained – Smart contracts - Simply Explained (4:17)", "url": "https://www.youtube.com/watch?v=ZE2HxTmxfrI"},
               {"label": "YouTube: MIT OpenCourseWare – 6. Smart Contracts and DApps (1:22:23)", "url": "https://www.youtube.com/watch?v=JPkgJwJHYSc"}
             ],
@@ -734,10 +776,10 @@
               "blockchain-contract-security"
             ],
             "resources": [
-              {
-                "label": "Ethereum Developer Documentation",
-                "url": "https://ethereum.org/en/developers/docs/"
-              },
+              {"label": "Ethereum Developer Documentation", "url": "https://ethereum.org/en/developers/docs/"},
+              {"label": "Foundry Book: Writing tests with Forge", "url": "https://book.getfoundry.sh/forge/tests"},
+              {"label": "Foundry Book: Fuzz testing", "url": "https://book.getfoundry.sh/forge/fuzz-testing"},
+              {"label": "Foundry Book: Invariant testing", "url": "https://book.getfoundry.sh/forge/invariant-testing"},
               {"label": "YouTube: Simply Explained – Smart contracts - Simply Explained (4:17)", "url": "https://www.youtube.com/watch?v=ZE2HxTmxfrI"}
             ],
             "priority": "core",
@@ -757,10 +799,12 @@
               "blockchain-dapps"
             ],
             "resources": [
-              {
-                "label": "Solidity Documentation",
-                "url": "https://docs.soliditylang.org/"
-              },
+              {"label": "Solidity Documentation", "url": "https://docs.soliditylang.org/"},
+              {"label": "ethereum.org: Deploying smart contracts", "url": "https://ethereum.org/developers/docs/smart-contracts/deploying/"},
+              {"label": "ethereum.org: Development networks", "url": "https://ethereum.org/developers/docs/development-networks/"},
+              {"label": "Foundry Book: Deploying and verifying contracts", "url": "https://book.getfoundry.sh/forge/deploying"},
+              {"label": "OpenZeppelin Docs: Upgrades Plugins", "url": "https://docs.openzeppelin.com/upgrades-plugins/"},
+              {"label": "ethereum.org: Nodes and clients", "url": "https://ethereum.org/developers/docs/nodes-and-clients/"},
               {"label": "YouTube: ByteByteGo – Top 5 Most-Used Deployment Strategies (10:00)", "url": "https://www.youtube.com/watch?v=AWVTKBUnoIg"},
               {"label": "YouTube: Microsoft Azure – How Kubernetes deployments work (6:35)", "url": "https://www.youtube.com/watch?v=mNK14yXIZF4"}
             ],
@@ -805,10 +849,11 @@
             "estimatedHours": 8,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "LeetCode Explore",
-                "url": "https://leetcode.com/explore/"
-              },
+              {"label": "LeetCode Explore", "url": "https://leetcode.com/explore/"},
+              {"label": "Tech Interview Handbook: Coding interview preparation", "url": "https://www.techinterviewhandbook.org/coding-interview-prep/"},
+              {"label": "Tech Interview Handbook: Coding interview techniques", "url": "https://www.techinterviewhandbook.org/coding-interview-techniques/"},
+              {"label": "MIT OCW 6.0001: Introduction to Computer Science and Programming in Python", "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/"},
+              {"label": "Wikipedia: How to Solve It - Polya's four-step method", "url": "https://en.wikipedia.org/wiki/How_to_Solve_It"},
               {"label": "YouTube: Tech With Tim – Problem Solving Techniques - For Programming Problems & Interviews (17:40)", "url": "https://www.youtube.com/watch?v=r4TgqWbKRtA"},
               {"label": "YouTube: Fireship – Problem-Solving for Developers - A Beginner's Guide (10:44)", "url": "https://www.youtube.com/watch?v=UFc-RPbq8kg"}
             ],
@@ -828,10 +873,12 @@
               "basic-data-structures"
             ],
             "resources": [
-              {
-                "label": "Khan Academy: Algorithms",
-                "url": "https://www.khanacademy.org/computing/computer-science/algorithms"
-              },
+              {"label": "Khan Academy: Algorithms", "url": "https://www.khanacademy.org/computing/computer-science/algorithms"},
+              {"label": "Tech Interview Handbook: Array interview cheatsheet", "url": "https://www.techinterviewhandbook.org/algorithms/array/"},
+              {"label": "Tech Interview Handbook: Hash table interview cheatsheet", "url": "https://www.techinterviewhandbook.org/algorithms/hash-table/"},
+              {"label": "Princeton Algorithms: Stacks and Queues", "url": "https://algs4.cs.princeton.edu/13stacks/"},
+              {"label": "Princeton Algorithms: Priority Queues", "url": "https://algs4.cs.princeton.edu/24pq/"},
+              {"label": "Princeton Algorithms: Hash Tables", "url": "https://algs4.cs.princeton.edu/34hash/"},
               {"label": "YouTube: NeetCode – Top 6 Coding Interview Concepts (Data Structures & Algorithms) (10:51)", "url": "https://www.youtube.com/watch?v=ft0owvS5tQA"},
               {"label": "YouTube: freeCodeCamp.org – Data Structure and Algorithm Patterns for LeetCode Interviews – Tutorial (1:15:03)", "url": "https://www.youtube.com/watch?v=Z_c4byLrNBU"}
             ],
@@ -852,10 +899,11 @@
               "interviews-problem-solving"
             ],
             "resources": [
-              {
-                "label": "LeetCode Explore",
-                "url": "https://leetcode.com/explore/"
-              },
+              {"label": "LeetCode Explore", "url": "https://leetcode.com/explore/"},
+              {"label": "Tech Interview Handbook: Algorithms study cheatsheets", "url": "https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/"},
+              {"label": "Tech Interview Handbook: Graph interview cheatsheet", "url": "https://www.techinterviewhandbook.org/algorithms/graph/"},
+              {"label": "Princeton Algorithms: Elementary Sorts", "url": "https://algs4.cs.princeton.edu/21elementary/"},
+              {"label": "Princeton Algorithms: Undirected Graphs - DFS and BFS", "url": "https://algs4.cs.princeton.edu/41graph/"},
               {"label": "YouTube: freeCodeCamp.org – Data Structure and Algorithm Patterns for LeetCode Interviews – Tutorial (1:15:03)", "url": "https://www.youtube.com/watch?v=Z_c4byLrNBU"},
               {"label": "YouTube: NeetCode – Top 6 Coding Interview Concepts (Data Structures & Algorithms) (10:51)", "url": "https://www.youtube.com/watch?v=ft0owvS5tQA"}
             ],
@@ -891,10 +939,12 @@
               "interviews-algorithms"
             ],
             "resources": [
-              {
-                "label": "Khan Academy: Algorithms",
-                "url": "https://www.khanacademy.org/computing/computer-science/algorithms"
-              },
+              {"label": "Khan Academy: Algorithms", "url": "https://www.khanacademy.org/computing/computer-science/algorithms"},
+              {"label": "Princeton Algorithms: Analysis of Algorithms", "url": "https://algs4.cs.princeton.edu/14analysis/"},
+              {"label": "Big-O Algorithm Complexity Cheat Sheet", "url": "https://www.bigocheatsheet.com/"},
+              {"label": "MIT OCW 6.006: Introduction to Algorithms (Spring 2020)", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"},
+              {"label": "Tech Interview Handbook: Algorithms introduction - time and space", "url": "https://www.techinterviewhandbook.org/algorithms/introduction/"},
+              {"label": "Python Docs: TimeComplexity wiki for built-in types", "url": "https://wiki.python.org/moin/TimeComplexity"},
               {"label": "YouTube: Tech With Tim – Big O Notation & Time Complexity Analysis Tutorial (1:05:51)", "url": "https://www.youtube.com/watch?v=6aDHWSNKlVw"},
               {"label": "YouTube: Gaurav Sen – What is Time Complexity Analysis? - Basics of Algorithms ⌛ (9:57)", "url": "https://www.youtube.com/watch?v=fZc3ijGM0aM"}
             ],
@@ -914,10 +964,11 @@
               "system-design"
             ],
             "resources": [
-              {
-                "label": "System Design Primer",
-                "url": "https://github.com/donnemartin/system-design-primer"
-              },
+              {"label": "System Design Primer", "url": "https://github.com/donnemartin/system-design-primer"},
+              {"label": "Tech Interview Handbook: System design interview guide", "url": "https://www.techinterviewhandbook.org/system-design/"},
+              {"label": "Google SRE Book: Non-Abstract Large System Design", "url": "https://sre.google/workbook/non-abstract-design/"},
+              {"label": "AWS Well-Architected Framework: Design principles", "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/general-design-principles.html"},
+              {"label": "Azure Architecture Center: Architecture styles", "url": "https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/"},
               {"label": "YouTube: KodeKloud – System Design Interview Prep for Beginners (Full Course) (2:45:24)", "url": "https://www.youtube.com/watch?v=oz5c88cO5P8"},
               {"label": "YouTube: freeCodeCamp.org – System Design Concepts Course and Interview Prep (53:38)", "url": "https://www.youtube.com/watch?v=F2FmTdLtb_4"}
             ],
@@ -937,10 +988,11 @@
               "interviews-problem-solving"
             ],
             "resources": [
-              {
-                "label": "Harvard FAS Career Services",
-                "url": "https://careerservices.fas.harvard.edu/"
-              },
+              {"label": "Harvard FAS Career Services", "url": "https://careerservices.fas.harvard.edu/"},
+              {"label": "Tech Interview Handbook: Coding interview techniques - communicate clearly", "url": "https://www.techinterviewhandbook.org/coding-interview-techniques/"},
+              {"label": "Tech Interview Handbook: Software engineering interview guide", "url": "https://www.techinterviewhandbook.org/software-engineering-interview-guide/"},
+              {"label": "Google Developer Documentation Style Guide: Highlights", "url": "https://developers.google.com/style/highlights"},
+              {"label": "MIT CAPD: Interviewing", "url": "https://capd.mit.edu/resources/interviewing/"},
               {"label": "YouTube: Fireship – How to NOT Fail a Technical Interview (8:26)", "url": "https://www.youtube.com/watch?v=1t1_a1BZ04o"},
               {"label": "YouTube: Tech With Tim – 7 Steps to Pass Technical Interviews - What I Actually Did (12:23)", "url": "https://www.youtube.com/watch?v=BH3y1V7KUKg"}
             ],
@@ -975,10 +1027,10 @@
               "interviews-communication"
             ],
             "resources": [
-              {
-                "label": "Harvard FAS Career Services",
-                "url": "https://careerservices.fas.harvard.edu/"
-              },
+              {"label": "Harvard FAS Career Services", "url": "https://careerservices.fas.harvard.edu/"},
+              {"label": "Tech Interview Handbook: Behavioral interview questions", "url": "https://www.techinterviewhandbook.org/behavioral-interview/"},
+              {"label": "Tech Interview Handbook: Behavioral interview questions list", "url": "https://www.techinterviewhandbook.org/behavioral-interview-questions/"},
+              {"label": "MIT CAPD: Behavioral interviews and the STAR method", "url": "https://capd.mit.edu/resources/interviewing/"},
               {"label": "YouTube: freeCodeCamp.org – Master Behavioral Interviews (for Software Engineers) (2:12:42)", "url": "https://www.youtube.com/watch?v=8hpSMnCwCxY"},
               {"label": "YouTube: Fireship – How to NOT Fail a Technical Interview (8:26)", "url": "https://www.youtube.com/watch?v=1t1_a1BZ04o"}
             ],
@@ -999,10 +1051,11 @@
               "interviews-system-design"
             ],
             "resources": [
-              {
-                "label": "Pramp",
-                "url": "https://www.pramp.com/"
-              },
+              {"label": "Pramp", "url": "https://www.pramp.com/"},
+              {"label": "Tech Interview Handbook: Coding interview cheatsheet - practice plan", "url": "https://www.techinterviewhandbook.org/coding-interview-cheatsheet/"},
+              {"label": "Tech Interview Handbook: Coding interview study plan", "url": "https://www.techinterviewhandbook.org/coding-interview-study-plan/"},
+              {"label": "Pramp: Free peer mock interviews - how it works", "url": "https://www.pramp.com/interview-with-friends"},
+              {"label": "Interviewing.io: Interview guides and practice", "url": "https://interviewing.io/guides"},
               {"label": "YouTube: freeCodeCamp.org – Software Engineering Job Interview – Full Mock Interview (1:14:29)", "url": "https://www.youtube.com/watch?v=1qw5ITr3k9E"}
             ],
             "priority": "core",
@@ -1022,10 +1075,10 @@
               "interviews-mocks"
             ],
             "resources": [
-              {
-                "label": "Google Careers",
-                "url": "https://careers.google.com/"
-              },
+              {"label": "Google Careers", "url": "https://careers.google.com/"},
+              {"label": "Tech Interview Handbook: Coding interview study plan", "url": "https://www.techinterviewhandbook.org/coding-interview-study-plan/"},
+              {"label": "Google Careers: How we hire", "url": "https://www.google.com/about/careers/applications/how-we-hire/"},
+              {"label": "Interviewing.io: Guide to the technical interview process", "url": "https://interviewing.io/guides/hiring-process"},
               {"label": "YouTube: Tech With Tim – 7 Steps to Pass Technical Interviews - What I Actually Did (12:23)", "url": "https://www.youtube.com/watch?v=BH3y1V7KUKg"}
             ],
             "priority": "core",
@@ -1069,10 +1122,11 @@
             "estimatedHours": 8,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "Harvard FAS Career Services",
-                "url": "https://careerservices.fas.harvard.edu/"
-              },
+              {"label": "Harvard FAS Career Services", "url": "https://careerservices.fas.harvard.edu/"},
+              {"label": "Tech Interview Handbook: Resume guide for software engineers", "url": "https://www.techinterviewhandbook.org/resume/"},
+              {"label": "Harvard FAS Career Services: Resumes and cover letters", "url": "https://careerservices.fas.harvard.edu/resources/create-a-strong-resume/"},
+              {"label": "MIT CAPD: Resumes", "url": "https://capd.mit.edu/resources/resumes/"},
+              {"label": "Purdue OWL: Resume Writing overview", "url": "https://owl.purdue.edu/owl/job_search_writing/resumes_and_vitas/index.html"},
               {"label": "YouTube: Figma – Build a portfolio that tells your story | Figma for Edu Early Career Week (59:52)", "url": "https://www.youtube.com/watch?v=6dEqxMwCSgY"},
               {"label": "YouTube: MIT OpenCourseWare – 16. Portfolio Management (1:28:38)", "url": "https://www.youtube.com/watch?v=8TJQhQ2GZ0Y"}
             ],
@@ -1092,10 +1146,11 @@
               "git"
             ],
             "resources": [
-              {
-                "label": "GitHub Docs",
-                "url": "https://docs.github.com/en"
-              },
+              {"label": "GitHub Docs", "url": "https://docs.github.com/en"},
+              {"label": "GitHub Docs: Managing your profile README", "url": "https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme"},
+              {"label": "GitHub Docs: Pinning items to your profile", "url": "https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/pinning-items-to-your-profile"},
+              {"label": "GitHub Docs: Personalizing your profile", "url": "https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/personalizing-your-profile"},
+              {"label": "Make a README: A guide to writing a good README", "url": "https://www.makeareadme.com/"},
               {"label": "YouTube: Keith Galli – How to make your GitHub more impressive to Employers! (5 simple tips) (19:01)", "url": "https://www.youtube.com/watch?v=QDfLou004iE"},
               {"label": "YouTube: GitHub – A brief introduction to Git for beginners | GitHub (9:08)", "url": "https://www.youtube.com/watch?v=r8jQ9hVA2qs"}
             ],
@@ -1115,10 +1170,10 @@
               "portfolio-github"
             ],
             "resources": [
-              {
-                "label": "Google Developer Documentation Style Guide",
-                "url": "https://developers.google.com/style"
-              },
+              {"label": "Google Developer Documentation Style Guide", "url": "https://developers.google.com/style"},
+              {"label": "Write the Docs: Documentation guide", "url": "https://www.writethedocs.org/guide/"},
+              {"label": "Architecture Decision Records: ADR overview", "url": "https://adr.github.io/"},
+              {"label": "Diataxis: A systematic approach to technical documentation", "url": "https://diataxis.fr/"},
               {"label": "YouTube: Adobe Creative Cloud – Building a Case Study with Josh Iwata - 1 of 2 | Adobe Creative Cloud (1:55:44)", "url": "https://www.youtube.com/watch?v=hg-eDgNBMZE"}
             ],
             "priority": "core",
@@ -1152,10 +1207,12 @@
               "portfolio-case-studies"
             ],
             "resources": [
-              {
-                "label": "GitHub Pages Documentation",
-                "url": "https://docs.github.com/en/pages"
-              },
+              {"label": "GitHub Pages Documentation", "url": "https://docs.github.com/en/pages"},
+              {"label": "GitHub Docs: Creating a GitHub Pages site", "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site"},
+              {"label": "web.dev Learn: HTML course", "url": "https://web.dev/learn/html"},
+              {"label": "web.dev Learn: Responsive design course", "url": "https://web.dev/learn/design"},
+              {"label": "Astro Docs: Getting started - build a content site", "url": "https://docs.astro.build/en/getting-started/"},
+              {"label": "Hugo Docs: Quick start", "url": "https://gohugo.io/getting-started/quick-start/"},
               {"label": "YouTube: Ali Abdaal – Why Everyone Needs a Personal Website (26:29)", "url": "https://www.youtube.com/watch?v=NWfIrmIgaCU"},
               {"label": "YouTube: freeCodeCamp.org – Build and deploy a portfolio website [Full Tutorial Course] (2:23:16)", "url": "https://www.youtube.com/watch?v=_xkSvufmjEs"}
             ],
@@ -1175,10 +1232,10 @@
               "portfolio-resume"
             ],
             "resources": [
-              {
-                "label": "LinkedIn",
-                "url": "https://www.linkedin.com/"
-              },
+              {"label": "LinkedIn", "url": "https://www.linkedin.com/"},
+              {"label": "Purdue OWL: Job search letters - outreach and follow-up writing", "url": "https://owl.purdue.edu/owl/job_search_writing/job_search_letters/index.html"},
+              {"label": "MIT CAPD: Career resources library", "url": "https://capd.mit.edu/resources/"},
+              {"label": "Harvard FAS Career Services: Resource library", "url": "https://careerservices.fas.harvard.edu/resources/"},
               {"label": "YouTube: Stanford Graduate School of Business – Tom Friel: How to Network (4:33)", "url": "https://www.youtube.com/watch?v=rW-Ui6j60AM"},
               {"label": "YouTube: TechWorld with Nana – Every Networking Concept Explained In 20 Minutes (23:21)", "url": "https://www.youtube.com/watch?v=xj_GjnD4uyI"}
             ],
@@ -1199,10 +1256,8 @@
               "portfolio-personal-site"
             ],
             "resources": [
-              {
-                "label": "Harvard FAS Career Services",
-                "url": "https://careerservices.fas.harvard.edu/"
-              },
+              {"label": "Harvard FAS Career Services", "url": "https://careerservices.fas.harvard.edu/"},
+              {"label": "CareerOneStop: Job search guide", "url": "https://www.careeronestop.org/JobSearch/job-search.aspx"},
               {"label": "YouTube: freeCodeCamp.org – Build and deploy a portfolio website [Full Tutorial Course] (2:23:16)", "url": "https://www.youtube.com/watch?v=_xkSvufmjEs"}
             ],
             "priority": "core",
@@ -1237,10 +1292,12 @@
               "portfolio-job-search"
             ],
             "resources": [
-              {
-                "label": "Harvard FAS Career Services",
-                "url": "https://careerservices.fas.harvard.edu/"
-              },
+              {"label": "Harvard FAS Career Services", "url": "https://careerservices.fas.harvard.edu/"},
+              {"label": "Tech Interview Handbook: Resume guide - highlighting impact", "url": "https://www.techinterviewhandbook.org/resume/"},
+              {"label": "Software Engineering Career Ladder: Progression.fyi", "url": "https://www.progression.fyi/"},
+              {"label": "Staff Eng: Guides on engineering career and visibility", "url": "https://staffeng.com/guides/"},
+              {"label": "U.S. BLS: Software developers occupational outlook", "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm"},
+              {"label": "O*NET OnLine: Software Developers summary report", "url": "https://www.onetonline.org/link/summary/15-1252.00"},
               {"label": "YouTube: Ali Abdaal – How to Find a Career You Genuinely Love (12:41)", "url": "https://www.youtube.com/watch?v=O3m14PVOq_g"}
             ],
             "priority": "core",
@@ -1259,10 +1316,10 @@
               "portfolio-positioning"
             ],
             "resources": [
-              {
-                "label": "Harvard FAS Career Services",
-                "url": "https://careerservices.fas.harvard.edu/"
-              },
+              {"label": "Harvard FAS Career Services", "url": "https://careerservices.fas.harvard.edu/"},
+              {"label": "Tech Interview Handbook: Negotiation guide", "url": "https://www.techinterviewhandbook.org/negotiation/"},
+              {"label": "Patrick McKenzie: Salary Negotiation - Make More Money, Be More Valued", "url": "https://www.kalzumeus.com/2012/01/23/salary-negotiation/"},
+              {"label": "Tech Interview Handbook: Understanding compensation", "url": "https://www.techinterviewhandbook.org/understanding-compensation/"},
               {"label": "YouTube: Gaurav Sen – 8 Rules for Offer Negotiations by Gaurav Sen (17:55)", "url": "https://www.youtube.com/watch?v=Gr861i8aB3k"}
             ],
             "priority": "core",
@@ -1282,10 +1339,12 @@
               "portfolio-networking"
             ],
             "resources": [
-              {
-                "label": "LinkedIn",
-                "url": "https://www.linkedin.com/"
-              },
+              {"label": "LinkedIn", "url": "https://www.linkedin.com/"},
+              {"label": "Staff Eng: Guides - career paths beyond senior", "url": "https://staffeng.com/guides/"},
+              {"label": "Progression.fyi: Engineering career frameworks", "url": "https://www.progression.fyi/"},
+              {"label": "O*NET OnLine: Software Developers - skills and outlook", "url": "https://www.onetonline.org/link/summary/15-1252.00"},
+              {"label": "U.S. BLS: Occupational Outlook for software developers", "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm"},
+              {"label": "developer roadmaps: roadmap.sh career roadmaps", "url": "https://roadmap.sh/"},
               {"label": "YouTube: Ali Abdaal – How to Find a Career You Genuinely Love (12:41)", "url": "https://www.youtube.com/watch?v=O3m14PVOq_g"},
               {"label": "YouTube: MIT OpenCourseWare – 16. Portfolio Management (1:28:38)", "url": "https://www.youtube.com/watch?v=8TJQhQ2GZ0Y"}
             ],
@@ -1330,10 +1389,11 @@
             "estimatedHours": 6,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "Open Source Guides",
-                "url": "https://opensource.guide/"
-              },
+              {"label": "Open Source Guides", "url": "https://opensource.guide/"},
+              {"label": "Open Source Guides: How to Contribute to Open Source - finding a project", "url": "https://opensource.guide/how-to-contribute/"},
+              {"label": "GitHub Docs: Finding ways to contribute to open source on GitHub", "url": "https://docs.github.com/en/get-started/exploring-projects-on-github/finding-ways-to-contribute-to-open-source-on-github"},
+              {"label": "GitHub Docs: Saving repositories with stars - track interesting projects", "url": "https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars"},
+              {"label": "GitHub Docs: Following people - discover projects via contributors", "url": "https://docs.github.com/en/get-started/exploring-projects-on-github/following-people"},
               {"label": "YouTube: Tech With Tim – How To Structure A Programming Project… (19:00)", "url": "https://www.youtube.com/watch?v=CAeWjoP525M"},
               {"label": "YouTube: Luke Barousse – PROJECTS that landed Data Jobs for my Subscribers (9:33)", "url": "https://www.youtube.com/watch?v=5Q0gB7imNOo"}
             ],
@@ -1353,10 +1413,11 @@
               "git"
             ],
             "resources": [
-              {
-                "label": "GitHub Docs",
-                "url": "https://docs.github.com/en"
-              },
+              {"label": "GitHub Docs", "url": "https://docs.github.com/en"},
+              {"label": "GitHub Docs: Navigating code on GitHub - symbols and references", "url": "https://docs.github.com/en/repositories/working-with-files/using-files/navigating-code-on-github"},
+              {"label": "GitHub Docs: Searching code - find definitions and usages", "url": "https://docs.github.com/en/search-github/github-code-search/about-github-code-search"},
+              {"label": "GitHub Docs: About READMEs - first stop for project structure", "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes"},
+              {"label": "GitHub Docs: Viewing a file's history with blame", "url": "https://docs.github.com/en/repositories/working-with-files/using-files/viewing-and-understanding-files"},
               {"label": "YouTube: freeCodeCamp.org – Contributing To Open Source – Beginner's Guide (2:29:31)", "url": "https://www.youtube.com/watch?v=mklEhT_RLos"},
               {"label": "YouTube: The Cherno – BEST WAY to read and understand code (17:24)", "url": "https://www.youtube.com/watch?v=XTZVbmz7LpY"}
             ],
@@ -1377,10 +1438,11 @@
               "opensource-reading-code"
             ],
             "resources": [
-              {
-                "label": "GitHub: Contributing to projects",
-                "url": "https://docs.github.com/en/get-started/quickstart/contributing-to-projects"
-              },
+              {"label": "GitHub: Contributing to projects", "url": "https://docs.github.com/en/get-started/quickstart/contributing-to-projects"},
+              {"label": "GitHub Docs: Fork a repo - set up your own copy", "url": "https://docs.github.com/en/get-started/quickstart/fork-a-repo"},
+              {"label": "GitHub Docs: GitHub flow - branch, change, and propose", "url": "https://docs.github.com/en/get-started/using-github/github-flow"},
+              {"label": "GitHub Docs: Setting guidelines for repository contributors", "url": "https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors"},
+              {"label": "Pro Git: Contributing to a project - workflows and commit guidelines", "url": "https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project"},
               {"label": "YouTube: freeCodeCamp.org – Contributing To Open Source – Beginner's Guide (2:29:31)", "url": "https://www.youtube.com/watch?v=mklEhT_RLos"},
               {"label": "YouTube: GitHub – Getting started with open source contributions for beginners (5:33)", "url": "https://www.youtube.com/watch?v=WldXhauP024"}
             ],
@@ -1415,10 +1477,11 @@
               "opensource-workflow"
             ],
             "resources": [
-              {
-                "label": "GitHub Docs: Issues",
-                "url": "https://docs.github.com/en/issues"
-              },
+              {"label": "GitHub Docs: Issues", "url": "https://docs.github.com/en/issues"},
+              {"label": "GitHub Docs: Quickstart for GitHub Issues", "url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/quickstart"},
+              {"label": "GitHub Docs: Filtering and searching issues and pull requests", "url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/filtering-and-searching-issues-and-pull-requests"},
+              {"label": "GitHub Docs: Managing labels - categorize issues for triage", "url": "https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels"},
+              {"label": "GitHub Docs: Creating an issue - clear, reproducible reports", "url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue"},
               {"label": "YouTube: IBM Technology – What Is a Triage AI Agent? Automation & Multi-Agent Systems Explained (7:29)", "url": "https://www.youtube.com/watch?v=x2ghX_RyHG4"},
               {"label": "YouTube: Pantheon – How to Create and Triage Issues with Drupal (Gift of Open Source) (56:34)", "url": "https://www.youtube.com/watch?v=9k1mw8Z7uBU"}
             ],
@@ -1438,10 +1501,11 @@
               "opensource-workflow"
             ],
             "resources": [
-              {
-                "label": "GitHub Docs: Pull requests",
-                "url": "https://docs.github.com/en/pull-requests"
-              },
+              {"label": "GitHub Docs: Pull requests", "url": "https://docs.github.com/en/pull-requests"},
+              {"label": "GitHub Docs: Creating a pull request", "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request"},
+              {"label": "GitHub Docs: Reviewing proposed changes in a pull request", "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request"},
+              {"label": "GitHub Docs: About pull request reviews", "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews"},
+              {"label": "Google eng-practices: How to write a code review's author guide", "url": "https://google.github.io/eng-practices/review/developer/"},
               {"label": "YouTube: Jacob Sorber – How to Contribute to Open Source Projects on Github (pull requests) (10:57)", "url": "https://www.youtube.com/watch?v=x24fOAPclL4"},
               {"label": "YouTube: codebasics – Git Github Tutorial 10: What is Pull Request? (10:43)", "url": "https://www.youtube.com/watch?v=e3bjQX9jIBk"}
             ],
@@ -1461,10 +1525,11 @@
               "opensource-discovery"
             ],
             "resources": [
-              {
-                "label": "Open Source Guides: Community",
-                "url": "https://opensource.guide/building-community/"
-              },
+              {"label": "Open Source Guides: Community", "url": "https://opensource.guide/building-community/"},
+              {"label": "Contributor Covenant: Code of Conduct text", "url": "https://www.contributor-covenant.org/version/2/1/code_of_conduct/"},
+              {"label": "GitHub Docs: Adding a code of conduct to your project", "url": "https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project"},
+              {"label": "Open Source Guides: Code of Conduct - setting community standards", "url": "https://opensource.guide/code-of-conduct/"},
+              {"label": "Open Source Guides: Best Practices for Maintainers - communicating", "url": "https://opensource.guide/best-practices/"},
               {"label": "YouTube: Theo - t3․gg – Don't Contribute to Open Source (9:55)", "url": "https://www.youtube.com/watch?v=5nY_cy8zcO4"},
               {"label": "YouTube: GitHub – Getting started with open source contributions for beginners (5:33)", "url": "https://www.youtube.com/watch?v=WldXhauP024"}
             ],
@@ -1500,10 +1565,12 @@
               "opensource-pull-requests"
             ],
             "resources": [
-              {
-                "label": "Open Source Guides",
-                "url": "https://opensource.guide/"
-              },
+              {"label": "Open Source Guides", "url": "https://opensource.guide/"},
+              {"label": "Open Source Guides: Best Practices for Maintainers", "url": "https://opensource.guide/best-practices/"},
+              {"label": "Open Source Guides: Leadership and Governance", "url": "https://opensource.guide/leadership-and-governance/"},
+              {"label": "Open Source Guides: Finding Users for Your Project", "url": "https://opensource.guide/finding-users/"},
+              {"label": "GitHub Docs: Creating a pull request template for your repository", "url": "https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository"},
+              {"label": "GitHub Docs: About code owners - assign review responsibility", "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners"},
               {"label": "YouTube: GitHub – Global Maintainer Summit 2021: Paulus Schoutsen-Staying afloat running a big open… (14:54)", "url": "https://www.youtube.com/watch?v=JTTZRFCuAds"},
               {"label": "YouTube: The Linux Foundation – Clear Your Own Path to Open Source Maintainer - Martin Hickey, IBM (45:32)", "url": "https://www.youtube.com/watch?v=JioO79peb2U"}
             ],
@@ -1523,10 +1590,12 @@
               "opensource-discovery"
             ],
             "resources": [
-              {
-                "label": "Choose a License",
-                "url": "https://choosealicense.com/"
-              },
+              {"label": "Choose a License", "url": "https://choosealicense.com/"},
+              {"label": "Choose a License: Licenses overview - compare common licenses", "url": "https://choosealicense.com/licenses/"},
+              {"label": "Choose a License: MIT License - simple and permissive", "url": "https://choosealicense.com/licenses/mit/"},
+              {"label": "Choose a License: GNU GPLv3 - copyleft sharing of improvements", "url": "https://choosealicense.com/licenses/gpl-3.0/"},
+              {"label": "Choose a License: No permission - why unlicensed code is restricted", "url": "https://choosealicense.com/no-permission/"},
+              {"label": "GitHub Docs: Licensing a repository", "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository"},
               {"label": "YouTube: freeCodeCamp.org – Contributing To Open Source – Beginner's Guide (2:29:31)", "url": "https://www.youtube.com/watch?v=mklEhT_RLos"},
               {"label": "YouTube: GitHub – Getting started with open source contributions for beginners (5:33)", "url": "https://www.youtube.com/watch?v=WldXhauP024"}
             ],
@@ -1547,10 +1616,12 @@
               "opensource-licensing"
             ],
             "resources": [
-              {
-                "label": "Open Source Guides",
-                "url": "https://opensource.guide/"
-              },
+              {"label": "Open Source Guides", "url": "https://opensource.guide/"},
+              {"label": "Open Source Guides: Your Code of Conduct - healthy communities", "url": "https://opensource.guide/code-of-conduct/"},
+              {"label": "Open Source Guides: Getting Paid for Open Source Work", "url": "https://opensource.guide/getting-paid/"},
+              {"label": "Open Source Guides: Metrics - measuring project health", "url": "https://opensource.guide/metrics/"},
+              {"label": "Open Source Guides: Starting an Open Source Project", "url": "https://opensource.guide/starting-a-project/"},
+              {"label": "GitHub Docs: Community profile - check healthy-project files", "url": "https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/about-community-profiles-for-public-repositories"},
               {"label": "YouTube: GitHub – Open Source Friday: Sustainability Workshop (1:22:36)", "url": "https://www.youtube.com/watch?v=e1SD01RmAs0"}
             ],
             "priority": "optional",
@@ -1594,10 +1665,11 @@
             "estimatedHours": 6,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "GitHub Docs: About READMEs",
-                "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes"
-              },
+              {"label": "GitHub Docs: About READMEs", "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes"},
+              {"label": "Make a README: A guide to writing a good README", "url": "https://www.makeareadme.com/"},
+              {"label": "GitHub Docs: Quickstart for writing on GitHub - Markdown basics", "url": "https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github"},
+              {"label": "GitHub Docs: Basic writing and formatting syntax", "url": "https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax"},
+              {"label": "Google docs style guide: Code in documentation - formatting code samples", "url": "https://developers.google.com/style/code-syntax"},
               {"label": "YouTube: freeCodeCamp.org – Technical Writing Course for Beginners (1:16:05)", "url": "https://www.youtube.com/watch?v=vT5pcc30Ffw"},
               {"label": "YouTube: O'Reilly – Ten Steps to a Better README - Mike Jang (Ignite OSCON 2015) (5:31)", "url": "https://www.youtube.com/watch?v=PC05prd2usY"}
             ],
@@ -1617,10 +1689,11 @@
               "api-design"
             ],
             "resources": [
-              {
-                "label": "Google Developer Documentation Style Guide",
-                "url": "https://developers.google.com/style"
-              },
+              {"label": "Google Developer Documentation Style Guide", "url": "https://developers.google.com/style"},
+              {"label": "Google Style Guide: API reference code comments", "url": "https://developers.google.com/style/api-reference-comments"},
+              {"label": "OpenAPI Initiative: OpenAPI Specification v3.1.0", "url": "https://spec.openapis.org/oas/v3.1.0"},
+              {"label": "Swagger: OpenAPI 3.0 guide - describing endpoints and parameters", "url": "https://swagger.io/docs/specification/v3_0/basic-structure/"},
+              {"label": "Google Style Guide: Code samples - writing API examples", "url": "https://developers.google.com/style/code-samples"},
               {"label": "YouTube: freeCodeCamp.org – API Documentation Best Practices – Full Course (1:55:38)", "url": "https://www.youtube.com/watch?v=0CSyIBHQy9g"},
               {"label": "YouTube: Document360 – Webinar on Art of API Documentation: Best Practices for Technical Writers (48:03)", "url": "https://www.youtube.com/watch?v=967vXMQLm30"}
             ],
@@ -1638,10 +1711,12 @@
             "estimatedHours": 6,
             "prerequisites": [],
             "resources": [
-              {
-                "label": "Google Developer Documentation Style Guide",
-                "url": "https://developers.google.com/style"
-              },
+              {"label": "Google Developer Documentation Style Guide", "url": "https://developers.google.com/style"},
+              {"label": "Plain Language Guidelines: Federal plain language guidelines", "url": "https://www.plainlanguage.gov/guidelines/"},
+              {"label": "Google Style Guide: Write for a global audience", "url": "https://developers.google.com/style/translation"},
+              {"label": "Google Style Guide: Voice and tone", "url": "https://developers.google.com/style/tone"},
+              {"label": "Google Style Guide: Active voice versus passive voice", "url": "https://developers.google.com/style/voice"},
+              {"label": "Google Technical Writing One: Words - clear word choice", "url": "https://developers.google.com/tech-writing/one/words"},
               {"label": "YouTube: UVM Center on Disability & Community Inclusion – Where To Start with Plain Language (38:46)", "url": "https://www.youtube.com/watch?v=59Vzu9yoJ_8"},
               {"label": "YouTube: Carnegie Mellon University's Dietrich College – Plain Language and the Legacy of Professor Erwin R. Steinberg (1:09:45)", "url": "https://www.youtube.com/watch?v=_cq0oPwABGw"}
             ],
@@ -1676,10 +1751,11 @@
               "techwriting-plain-language"
             ],
             "resources": [
-              {
-                "label": "Google Developer Documentation Style Guide",
-                "url": "https://developers.google.com/style"
-              },
+              {"label": "Google Developer Documentation Style Guide", "url": "https://developers.google.com/style"},
+              {"label": "Diataxis: Tutorials - learning-oriented documentation", "url": "https://diataxis.fr/tutorials/"},
+              {"label": "Diataxis: How-to guides - task-oriented documentation", "url": "https://diataxis.fr/how-to-guides/"},
+              {"label": "Google Style Guide: Procedures - writing numbered steps", "url": "https://developers.google.com/style/procedures"},
+              {"label": "Write the Docs: Docs as Code - tutorial publishing practices", "url": "https://www.writethedocs.org/guide/docs-as-code/"},
               {"label": "YouTube: Brackeys – How to make a Video Game - Godot Beginner Tutorial (1:17:12)", "url": "https://www.youtube.com/watch?v=LOhfqjmasi0"},
               {"label": "YouTube: freeCodeCamp.org – n8n Tutorial – Zero to Hero Course (3:35:08)", "url": "https://www.youtube.com/watch?v=UIf-SlmMays"}
             ],
@@ -1699,10 +1775,12 @@
               "system-design"
             ],
             "resources": [
-              {
-                "label": "C4 Model",
-                "url": "https://c4model.com/"
-              },
+              {"label": "C4 Model", "url": "https://c4model.com/"},
+              {"label": "C4 Model: System context diagram", "url": "https://c4model.com/diagrams/system-context"},
+              {"label": "C4 Model: Container diagram", "url": "https://c4model.com/diagrams/container"},
+              {"label": "C4 Model: Component diagram", "url": "https://c4model.com/diagrams/component"},
+              {"label": "Mermaid: Flowchart syntax - diagrams as text", "url": "https://mermaid.js.org/syntax/flowchart.html"},
+              {"label": "Mermaid: Sequence diagrams - modelling message flows", "url": "https://mermaid.js.org/syntax/sequenceDiagram.html"},
               {"label": "YouTube: freeCodeCamp.org – Technical Writing Course for Beginners (1:16:05)", "url": "https://www.youtube.com/watch?v=vT5pcc30Ffw"}
             ],
             "priority": "core",
@@ -1722,10 +1800,11 @@
               "system-design"
             ],
             "resources": [
-              {
-                "label": "Google Developer Documentation Style Guide",
-                "url": "https://developers.google.com/style"
-              },
+              {"label": "Google Developer Documentation Style Guide", "url": "https://developers.google.com/style"},
+              {"label": "Microsoft Azure Well-Architected: Architecture decision record", "url": "https://learn.microsoft.com/en-us/azure/well-architected/architect-role/architecture-decision-record"},
+              {"label": "Martin Fowler: Architecture Decision Record bliki", "url": "https://martinfowler.com/bliki/ArchitectureDecisionRecord.html"},
+              {"label": "arc42: Architecture documentation template", "url": "https://arc42.org/overview"},
+              {"label": "C4 Model: Deployment diagram", "url": "https://c4model.com/diagrams/deployment"},
               {"label": "YouTube: ByteByteGo – Top 5 Most Used Architecture Patterns (5:53)", "url": "https://www.youtube.com/watch?v=f6zXyq4VPP8"}
             ],
             "priority": "core",
@@ -1759,10 +1838,10 @@
               "techwriting-diagrams"
             ],
             "resources": [
-              {
-                "label": "Google Developer Documentation Style Guide",
-                "url": "https://developers.google.com/style"
-              },
+              {"label": "Google Developer Documentation Style Guide", "url": "https://developers.google.com/style"},
+              {"label": "Google Technical Writing: Organizing large documents - narrative structure", "url": "https://developers.google.com/tech-writing/two/large-docs"},
+              {"label": "Google Technical Writing Two: Illustrating - effective visuals", "url": "https://developers.google.com/tech-writing/two/illustrations"},
+              {"label": "Google Technical Writing One: Audience - know who you present to", "url": "https://developers.google.com/tech-writing/one/audience"},
               {"label": "YouTube: freeCodeCamp.org – Technical Writing Course for Beginners (1:16:05)", "url": "https://www.youtube.com/watch?v=vT5pcc30Ffw"}
             ],
             "priority": "core",
@@ -1781,10 +1860,10 @@
               "techwriting-plain-language"
             ],
             "resources": [
-              {
-                "label": "Google Developer Documentation Style Guide",
-                "url": "https://developers.google.com/style"
-              },
+              {"label": "Google Developer Documentation Style Guide", "url": "https://developers.google.com/style"},
+              {"label": "Google Technical Writing One: Short sentences - concise writing", "url": "https://developers.google.com/tech-writing/one/short-sentences"},
+              {"label": "Google Technical Writing One: Lists and tables", "url": "https://developers.google.com/tech-writing/one/lists-and-tables"},
+              {"label": "Google Technical Writing One: Paragraphs - lead with the key point", "url": "https://developers.google.com/tech-writing/one/paragraphs"},
               {"label": "YouTube: IBM Technology – Agentic Engineering: 5 Terms Every AI Developer Should Know (11:41)", "url": "https://www.youtube.com/watch?v=SIZsFGvtClM"}
             ],
             "priority": "core",
@@ -1804,10 +1883,11 @@
               "techwriting-architecture"
             ],
             "resources": [
-              {
-                "label": "GitHub Docs",
-                "url": "https://docs.github.com/en"
-              },
+              {"label": "GitHub Docs", "url": "https://docs.github.com/en"},
+              {"label": "Write the Docs: Docs as Code - treating docs like source code", "url": "https://www.writethedocs.org/guide/docs-as-code/"},
+              {"label": "Write the Docs: Documentation guide - maintaining docs", "url": "https://www.writethedocs.org/guide/"},
+              {"label": "Google Technical Writing Two: Editing - revising existing docs", "url": "https://developers.google.com/tech-writing/two/editing"},
+              {"label": "GitHub Docs: About CODEOWNERS - doc ownership", "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners"},
               {"label": "YouTube: PyCon US – Talk: Mason Egger - Building Docs like Code: Continuous Integration for Documentation (34:40)", "url": "https://www.youtube.com/watch?v=4SwdVMKhbn4"},
               {"label": "YouTube: CASS Community – From Code to Clarity: What Makes Good Docs? (55:42)", "url": "https://www.youtube.com/watch?v=Slb504PCzEw"}
             ],
