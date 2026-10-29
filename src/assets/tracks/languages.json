@@ -865,9 +865,18 @@
   },
   "lang-java": {
     "title": "Java",
-    "description": "Learn Java from core syntax to modern, concurrent, production-ready applications.",
-    "audience": "For learners targeting enterprise, backend, or Android-adjacent development.",
-    "goal": "Build and test a well-structured Java application using modern language features.",
+    "description": "Learn Java from core syntax to modern, concurrent, production-ready applications using JDK 21 as the path baseline. This path focuses on backend and enterprise development; Android is a separate, Kotlin-first route.",
+    "audience": "For learners targeting Java backend and enterprise roles. For Android app development, start with Kotlin and the Mobile Development path.",
+    "goal": "Build and test a well-structured Java application using modern language features. Examples target JDK 21 LTS; check later-JDK documentation when using newer features.",
+    "relatedTracks": [
+      {"id": "backend", "reason": "Backend service architecture"},
+      {"id": "databases", "reason": "SQL, schema design, and migrations"},
+      {"id": "api", "reason": "API contracts and documentation"},
+      {"id": "testing", "reason": "Broader quality engineering"},
+      {"id": "cloud", "reason": "Containers and deployment"},
+      {"id": "sre", "reason": "Production reliability and observability"},
+      {"id": "mobile", "reason": "Android and other mobile platforms"}
+    ],
     "levels": [
       {
         "level": "Beginner",
@@ -885,6 +894,24 @@
             "completed": false
           },
           {
+            "id": "lang-java-workflow",
+            "name": "Git, IDE Debugging & Developer Workflow",
+            "description": "Practice the day-to-day tools and collaboration habits used on Java teams.",
+            "outcomes": ["Use Git branches and pull requests for small changes", "Set breakpoints, inspect variables, and step through Java code in an IDE", "Read stack traces and isolate the source of an exception", "Write useful Javadoc and respond constructively to code review"],
+            "estimatedHours": 12,
+            "prerequisites": ["lang-java-syntax-types"],
+            "resources": [
+              {"label": "Pro Git: Branching and Basic Branching", "url": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell"},
+              {"label": "GitHub Docs: About pull requests", "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"},
+              {"label": "IntelliJ IDEA: Debug code", "url": "https://www.jetbrains.com/help/idea/debugging-code.html"},
+              {"label": "VS Code: Java debugging", "url": "https://code.visualstudio.com/docs/java/java-debugging"},
+              {"label": "Dev.java: Javadoc", "url": "https://dev.java/learn/javadoc/"},
+              {"label": "YouTube videos: Java debugging with breakpoints and reading stack traces", "url": "https://www.youtube.com/results?search_query=Java+debugging+breakpoints+IDE+read+stack+trace+tutorial"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
             "id": "lang-java-classes-objects",
             "name": "Classes and Objects",
             "description": "Model concepts with classes, interfaces, and encapsulation.",
@@ -896,26 +923,62 @@
             "completed": false
           },
           {
-            "id": "lang-java-collections-exceptions",
-            "name": "Collections and Exceptions",
-            "description": "Use the collections framework and handle errors with exceptions.",
-            "outcomes": ["Choose between List, Map, and Set", "Handle checked and unchecked exceptions", "Use generics with collections"],
+            "id": "lang-java-api-design",
+            "name": "Generics, Object Contracts & Composition",
+            "description": "Design reusable, predictable Java APIs with generics, object contracts, and composition.",
+            "outcomes": ["Define and use generic classes and methods", "Implement equals and hashCode consistently", "Order objects with Comparator and choose composition over inheritance where appropriate"],
             "estimatedHours": 14,
             "prerequisites": ["lang-java-classes-objects"],
+            "resources": [
+              {"label": "Dev.java: Generics", "url": "https://dev.java/learn/language/fp/generics/"},
+              {"label": "Dev.java: Object methods", "url": "https://dev.java/learn/classes-objects/object-class/"},
+              {"label": "Java SE 21 API: Object.equals and hashCode contracts", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html"},
+              {"label": "Java SE 21 API: Comparator", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Comparator.html"},
+              {"label": "Effective Java: equals and hashCode overview", "url": "https://www.baeldung.com/java-equals-hashcode-contracts"},
+              {"label": "YouTube videos: Java generics, equals/hashCode, Comparator, and composition", "url": "https://www.youtube.com/results?search_query=Java+generics+equals+hashCode+Comparator+composition+object+oriented"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-java-collections-exceptions",
+            "name": "Collections and Exceptions",
+            "description": "Choose collection types and handle errors with well-defined exception behavior.",
+            "outcomes": ["Choose between List, Map, Set, and Queue", "Handle checked and unchecked exceptions", "Use try-with-resources and understand collection ordering"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-java-api-design"],
             "resources": [{"label": "Java SE API Documentation", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/"}, {"label": "Oracle Java Tutorials: Collections trail", "url": "https://docs.oracle.com/javase/tutorial/collections/index.html"}, {"label": "Oracle Java Tutorials: Exceptions lesson", "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html"}, {"label": "Oracle Java Tutorials: Collection interfaces - List, Set, Map, Queue", "url": "https://docs.oracle.com/javase/tutorial/collections/interfaces/index.html"}, {"label": "Oracle Java Tutorials: try-with-resources statement", "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html"}, {"label": "YouTube: Programming with Mosh – Java Collections Tutorial (32:22)", "url": "https://www.youtube.com/watch?v=rH0winlka8A"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-java-file-io",
+            "name": "File I/O, NIO.2 & Data Formats",
+            "description": "Read and write files safely using Java's Path and Files APIs, then serialize application data with a standard format.",
+            "outcomes": ["Use Path and Files for common file operations", "Read and write text with explicit character encodings", "Handle I/O failures and resources with try-with-resources", "Persist and reload JSON data with a library such as Jackson"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-java-collections-exceptions"],
+            "resources": [
+              {"label": "Dev.java: Basic I/O", "url": "https://dev.java/learn/api/io/java-io/"},
+              {"label": "Java SE 21 API: Files", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/Files.html"},
+              {"label": "Java SE 21 API: Path", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/Path.html"},
+              {"label": "Oracle Java Tutorials: Basic I/O", "url": "https://docs.oracle.com/javase/tutorial/essential/io/"},
+              {"label": "Jackson Databind: JSON data binding", "url": "https://github.com/FasterXML/jackson-databind#readme"},
+              {"label": "YouTube videos: Java NIO.2 Path and Files file I/O", "url": "https://www.youtube.com/results?search_query=Java+NIO.2+Path+Files+file+I%2FO+tutorial"}
+            ],
             "priority": "core",
             "completed": false
           }
         ],
         "project": {
-          "title": "Library management console app",
-          "description": "Build a console application managing books and members with in-memory collections.",
-          "demonstrates": ["lang-java-syntax-types", "lang-java-classes-objects", "lang-java-collections-exceptions"]
+          "title": "File-backed library app",
+          "description": "Build a console application for books and members with a clear object model, collections, and data that persists across runs.",
+          "demonstrates": ["lang-java-syntax-types", "lang-java-workflow", "lang-java-classes-objects", "lang-java-api-design", "lang-java-collections-exceptions", "lang-java-file-io"]
         }
       },
       {
         "level": "Intermediate",
-        "goal": "Write idiomatic modern Java with streams, tooling, and tests.",
+        "goal": "Write idiomatic modern Java, build with Maven, and verify behavior with focused automated tests.",
         "skills": [
           {
             "id": "lang-java-lambdas-streams",
@@ -930,12 +993,21 @@
           },
           {
             "id": "lang-java-build-testing",
-            "name": "Build Tools and Testing",
-            "description": "Manage builds and dependencies with Maven or Gradle and test with JUnit.",
-            "outcomes": ["Configure a Maven or Gradle project", "Write JUnit tests", "Use mocking sparingly"],
-            "estimatedHours": 12,
+            "name": "Maven Build, JUnit 5 & Unit Testing",
+            "description": "Use Maven as the primary build tool and write focused unit tests with JUnit 5; recognize how Gradle solves similar build tasks.",
+            "outcomes": ["Create a Maven project and manage dependencies", "Run the compile, test, and package lifecycle from the command line", "Write JUnit 5 tests with assertions, lifecycle methods, and parameterized cases", "Use mocks only at boundaries and prefer direct behavior tests", "Recognize the equivalent Gradle project and task concepts"],
+            "estimatedHours": 16,
             "prerequisites": ["lang-java-classes-objects", "unit-testing"],
-            "resources": [{"label": "JUnit 5 User Guide", "url": "https://junit.org/junit5/docs/current/user-guide/"}, {"label": "Maven: Getting started guide", "url": "https://maven.apache.org/guides/getting-started/index.html"}, {"label": "Maven: Introduction to the build lifecycle", "url": "https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html"}, {"label": "Baeldung: A guide to JUnit 5", "url": "https://www.baeldung.com/junit-5"}, {"label": "YouTube: freeCodeCamp.org – Java Testing with Selenium Course (7:28:51)", "url": "https://www.youtube.com/watch?v=QQliGCtqD2w"}],
+            "resources": [
+              {"label": "Maven: Getting Started Guide (including compiling and running tests)", "url": "https://maven.apache.org/guides/getting-started/index.html"},
+              {"label": "Maven: Introduction to the Build Lifecycle", "url": "https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html"},
+              {"label": "Maven: Introduction to the POM", "url": "https://maven.apache.org/guides/introduction/introduction-to-the-pom.html"},
+              {"label": "JUnit 5.11 User Guide: Writing Tests", "url": "https://docs.junit.org/5.11.4/user-guide/"},
+              {"label": "JUnit 5 User Guide: Parameterized Tests", "url": "https://junit.org/junit5/docs/5.11.4/user-guide/#writing-tests-parameterized-tests"},
+              {"label": "Mockito: Documentation", "url": "https://site.mockito.org/"},
+              {"label": "Gradle: Getting Started (optional comparison)", "url": "https://docs.gradle.org/current/userguide/getting_started.html"},
+              {"label": "YouTube videos: Java JUnit 5 unit testing and Maven project tutorial", "url": "https://www.youtube.com/results?search_query=Java+JUnit+5+unit+testing+Maven+project+tutorial"}
+            ],
             "priority": "core",
             "completed": false
           },
@@ -949,17 +1021,92 @@
             "resources": [{"label": "Dev.java Learn", "url": "https://dev.java/learn/"}, {"label": "Oracle Java docs: Record classes", "url": "https://docs.oracle.com/en/java/javase/21/language/records.html"}, {"label": "Oracle Java docs: Sealed classes", "url": "https://docs.oracle.com/en/java/javase/21/language/sealed-classes-and-interfaces.html"}, {"label": "Oracle Java docs: Pattern matching", "url": "https://docs.oracle.com/en/java/javase/21/language/pattern-matching.html"}, {"label": "Oracle Java docs: Pattern matching for switch", "url": "https://docs.oracle.com/en/java/javase/21/language/pattern-matching-switch-expressions-and-statements.html"}, {"label": "YouTube: Manchester Java Community – The Future of Java: Records, Sealed Classes and Pattern Matching - José Paumard (1:05:46)", "url": "https://www.youtube.com/watch?v=HGjcrheS7BU"}],
             "priority": "optional",
             "completed": false
+          },
+          {
+            "id": "lang-java-sql-jdbc",
+            "name": "SQL, JDBC, Transactions & Migrations",
+            "description": "Connect Java applications to relational databases and evolve their schemas safely.",
+            "outcomes": ["Write SQL queries and design a small relational schema", "Use JDBC connections, prepared statements, and resource cleanup", "Explain transaction boundaries and commit or rollback behavior", "Apply versioned schema migrations with Flyway"],
+            "estimatedHours": 20,
+            "prerequisites": ["lang-java-file-io", "lang-java-build-testing"],
+            "resources": [
+              {"label": "Java SE 21 API: JDBC package", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/module-summary.html"},
+              {"label": "Oracle JDBC Basics", "url": "https://docs.oracle.com/javase/tutorial/jdbc/basics/index.html"},
+              {"label": "PostgreSQL: SQL Tutorial", "url": "https://www.postgresql.org/docs/current/tutorial.html"},
+              {"label": "JDBC: Transactions", "url": "https://docs.oracle.com/javase/tutorial/jdbc/basics/transactions.html"},
+              {"label": "Flyway: Migrations", "url": "https://documentation.red-gate.com/flyway/flyway-concepts/migrations"},
+              {"label": "Java Database Connectivity (JDBC) tutorial videos", "url": "https://www.youtube.com/results?search_query=Java+JDBC+prepared+statements+transactions+tutorial"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-java-frameworks",
+            "name": "Spring Boot, REST APIs & Persistence",
+            "description": "Build a Java backend service with Spring Boot, HTTP APIs, validation, database persistence, and clear API contracts.",
+            "outcomes": ["Create REST endpoints and choose suitable HTTP status codes", "Use dependency injection and request validation", "Persist and query data with Spring Data JPA", "Handle errors consistently and add pagination", "Secure endpoints with authentication and authorization", "Document endpoints with OpenAPI"],
+            "estimatedHours": 28,
+            "prerequisites": ["lang-java-build-testing", "lang-java-modern-features", "lang-java-sql-jdbc"],
+            "resources": [
+              {"label": "Spring Boot Reference Documentation", "url": "https://docs.spring.io/spring-boot/reference/"},
+              {"label": "Spring Guide: Building a RESTful Web Service", "url": "https://spring.io/guides/gs/rest-service/"},
+              {"label": "Spring Guide: Accessing Data with JPA", "url": "https://spring.io/guides/gs/accessing-data-jpa/"},
+              {"label": "Spring Framework: Validation", "url": "https://docs.spring.io/spring-framework/reference/core/validation/beanvalidation.html"},
+              {"label": "Spring Security: Servlet Applications", "url": "https://docs.spring.io/spring-security/reference/servlet/index.html"},
+              {"label": "OpenAPI: Learn the Specification", "url": "https://learn.openapis.org/"},
+              {"label": "Spring Boot: Testing", "url": "https://docs.spring.io/spring-boot/reference/testing/"},
+              {"label": "YouTube videos: Spring Boot REST API with JPA and tests", "url": "https://www.youtube.com/results?search_query=Spring+Boot+REST+API+JPA+JUnit+testing+tutorial"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-java-integration-testing",
+            "name": "Spring Integration Testing with Testcontainers",
+            "description": "Test the real boundaries between a Spring application, its database, and its HTTP API.",
+            "outcomes": ["Write Spring application-context and web-layer tests", "Run repository tests against a disposable real database", "Use Testcontainers to keep integration tests isolated and repeatable", "Distinguish unit, integration, and end-to-end test responsibilities"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-java-frameworks"],
+            "resources": [
+              {"label": "Spring Boot Reference: Testing", "url": "https://docs.spring.io/spring-boot/reference/testing/"},
+              {"label": "Spring Framework: Testing", "url": "https://docs.spring.io/spring-framework/reference/testing.html"},
+              {"label": "Testcontainers for Java: Quickstart", "url": "https://java.testcontainers.org/quickstart/junit_5_quickstart/"},
+              {"label": "Testcontainers: PostgreSQL module", "url": "https://java.testcontainers.org/modules/databases/postgres/"},
+              {"label": "JUnit 5: Integration testing with extensions", "url": "https://docs.junit.org/5.11.4/user-guide/"},
+              {"label": "YouTube videos: Spring Boot integration testing with Testcontainers", "url": "https://www.youtube.com/results?search_query=Spring+Boot+integration+testing+Testcontainers+PostgreSQL"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-java-deployment",
+            "name": "Containerization, CI/CD & Production Readiness",
+            "description": "Package and deliver a Java service with repeatable builds, safe configuration, and basic operational visibility.",
+            "outcomes": ["Create a container image for a Spring Boot service", "Automate Maven tests and image builds in CI", "Configure environments and secrets outside the application artifact", "Add health checks, structured logs, and basic metrics"],
+            "estimatedHours": 20,
+            "prerequisites": ["lang-java-integration-testing"],
+            "resources": [
+              {"label": "Docker Docs: Java language guide", "url": "https://docs.docker.com/guides/java/"},
+              {"label": "Docker Docs: Multi-stage builds", "url": "https://docs.docker.com/build/building/multi-stage/"},
+              {"label": "GitHub Actions: Building and testing your code", "url": "https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing"},
+              {"label": "Spring Boot: Externalized Configuration", "url": "https://docs.spring.io/spring-boot/reference/features/external-config.html"},
+              {"label": "Spring Boot Actuator: Production-ready features", "url": "https://docs.spring.io/spring-boot/reference/actuator/index.html"},
+              {"label": "OpenTelemetry Java: Getting started", "url": "https://opentelemetry.io/docs/languages/java/"},
+              {"label": "YouTube videos: Dockerize Spring Boot and deploy with GitHub Actions", "url": "https://www.youtube.com/results?search_query=Dockerize+Spring+Boot+GitHub+Actions+CI+CD+deployment"}
+            ],
+            "priority": "core",
+            "completed": false
           }
         ],
         "project": {
-          "title": "Data-processing pipeline",
-          "description": "Build a tested Maven or Gradle project that reads CSV data and reports aggregates with streams.",
-          "demonstrates": ["lang-java-lambdas-streams", "lang-java-build-testing", "lang-java-modern-features"]
+          "title": "Tested Java REST API",
+          "description": "Build a Spring REST API with SQL persistence, migrations, validation, pagination, authentication and authorization, OpenAPI documentation, JUnit unit tests, and Testcontainers integration tests.",
+          "demonstrates": ["lang-java-lambdas-streams", "lang-java-build-testing", "lang-java-modern-features", "lang-java-sql-jdbc", "lang-java-frameworks", "lang-java-integration-testing"]
         }
       },
       {
         "level": "Advanced",
-        "goal": "Build concurrent, performant, and well-understood JVM applications.",
+        "goal": "Build, deploy, and operate concurrent JVM services with measured performance and production health signals.",
         "skills": [
           {
             "id": "lang-java-concurrency",
@@ -984,27 +1131,33 @@
             "completed": false
           },
           {
-            "id": "lang-java-frameworks",
-            "name": "Application Frameworks",
-            "description": "Build services with a framework such as Spring Boot.",
-            "outcomes": ["Build a REST service", "Use dependency injection", "Persist data with a database"],
-            "estimatedHours": 24,
-            "prerequisites": ["lang-java-build-testing", "lang-java-modern-features"],
-            "resources": [{"label": "Spring Boot Reference", "url": "https://spring.io/projects/spring-boot"}, {"label": "Spring Guides: Building an application with Spring Boot", "url": "https://spring.io/guides/gs/spring-boot/"}, {"label": "Spring Guides: Building a RESTful web service", "url": "https://spring.io/guides/gs/rest-service/"}, {"label": "Spring Boot reference: Getting started", "url": "https://docs.spring.io/spring-boot/reference/using/index.html"}, {"label": "Spring Guides: Accessing data with JPA", "url": "https://spring.io/guides/gs/accessing-data-jpa/"}, {"label": "YouTube: freeCodeCamp.org – Spring Boot Tutorial for Beginners (Java Framework) (1:49:29)", "url": "https://www.youtube.com/watch?v=vtPkZShrvXQ"}],
-            "priority": "optional",
+            "id": "lang-java-production-readiness",
+            "name": "Service Operations & Observability",
+            "description": "Operate a deployed Java service using health signals, logs, metrics, and reliability practices.",
+            "outcomes": ["Define service-level indicators for availability and latency", "Inspect structured logs and service metrics", "Configure readiness and liveness checks", "Practice a rollback or recovery procedure"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-java-deployment"],
+            "resources": [
+              {"label": "Google SRE Workbook: Implementing SLOs", "url": "https://sre.google/workbook/implementing-slos/"},
+              {"label": "Spring Boot Actuator: Endpoints", "url": "https://docs.spring.io/spring-boot/reference/actuator/endpoints.html"},
+              {"label": "OpenTelemetry: Observability concepts", "url": "https://opentelemetry.io/docs/concepts/observability-primer/"},
+              {"label": "Docker Docs: Healthcheck instruction", "url": "https://docs.docker.com/reference/dockerfile/#healthcheck"},
+              {"label": "YouTube videos: Spring Boot Actuator, metrics, and health checks", "url": "https://www.youtube.com/results?search_query=Spring+Boot+Actuator+metrics+health+checks+observability"}
+            ],
+            "priority": "core",
             "completed": false
           }
         ],
         "project": {
           "title": "Concurrent order service",
-          "description": "Build a tested REST service that processes orders concurrently and is profiled under load.",
-          "demonstrates": ["lang-java-concurrency", "lang-java-jvm-internals", "lang-java-frameworks"]
+          "description": "Extend the tested REST API into a containerized service, deploy through CI, load-test a representative endpoint, and document its health signals and a measured performance improvement.",
+          "demonstrates": ["lang-java-concurrency", "lang-java-jvm-internals", "lang-java-deployment", "lang-java-production-readiness"]
         }
       }
     ],
     "capstone": {
       "title": "Production-grade Java service",
-      "description": "Deliver a documented, tested, containerized Java service with measured performance."
+      "description": "Deliver a documented Java backend service with SQL persistence and versioned migrations, unit and Testcontainers integration tests, OpenAPI documentation, containerized CI/CD, externalized configuration, health and metrics endpoints, and measured performance results. Use JDK 21 as the baseline and clearly label any features requiring a newer JDK."
     }
   },
   "lang-go": {

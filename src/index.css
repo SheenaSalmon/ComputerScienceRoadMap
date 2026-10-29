@@ -1,3 +1,5 @@
+/* Legacy Vite starter stylesheet. main.jsx does not import this file; active
+   application styling is defined in App.css and Bootstrap. */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

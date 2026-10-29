@@ -1,3 +1,5 @@
+// Static landing banner; the route illustration is decorative and hidden from
+// assistive technology so it does not add noise to the page's reading order.
 function Header() {
   return (
     <header className="hero">

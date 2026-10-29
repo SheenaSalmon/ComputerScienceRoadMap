@@ -7,10 +7,14 @@ import useProgress from './useProgress'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-// Track ids in categories.json must match keys in the merged roadmap data
+// This module owns track browsing, selection, progress-transfer controls, and
+// the app-level keyboard interactions. Roadmap content and progress persistence
+// are kept in roadmapData.js and useProgress.js respectively.
+//
+// Track ids in categories.json must match keys in the merged roadmap data.
 const DEFAULT_TRACK = "frontend";
 
-// Curated entry points shown above the full index
+// Curated entry points shown above the full index; each id must be a known track.
 const FEATURED = [
   { id: "foundations", kicker: "New to CS" },
   { id: "lang-python", kicker: "First language" },
@@ -22,23 +26,25 @@ const FEATURED = [
 
 const totalTracks = categories.reduce((sum, category) => sum + category.tracks.length, 0);
 
+// Respect the user's motion preference for programmatic navigation.
 const prefersReducedMotion = () =>
   window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+// Shared scroll helper for moving between the browser, roadmap, and filters.
 const scrollToElement = (element) =>
   element?.scrollIntoView({
     behavior: prefersReducedMotion() ? "auto" : "smooth",
     block: "start",
   });
 
-// Find the category that owns a track (used for accent colors and default expansion)
+// Find the category that owns a track; used for accent colors and default expansion.
 const findCategory = (trackId) =>
   categories.find((category) =>
     category.tracks.some((track) => track.id === trackId),
   );
 
-// Build one lowercase string per track so searching is a simple substring check.
-// It covers the track label, title, description, and every skill name.
+// Precompute searchable text once so keystrokes only perform simple substring
+// checks. Search covers the track label, title, description, and skill names.
 const searchIndex = Object.fromEntries(
   categories.flatMap((category) =>
     category.tracks.map((track) => {
@@ -55,7 +61,8 @@ const searchIndex = Object.fromEntries(
   ),
 );
 
-// Skill ids per track, used for per-track and overall progress counts
+// These indexes keep progress summaries consistent with the skills actually
+// present in roadmap data, including tracks loaded from the assets/tracks glob.
 const trackSkillIds = Object.fromEntries(
   Object.entries(roadmapData).map(([id, track]) => [
     id,
@@ -68,24 +75,29 @@ const trackLabels = Object.fromEntries(
   categories.flatMap((category) => category.tracks.map((track) => [track.id, track.label])),
 );
 
+// Sum planned learning time for featured-card summaries.
 const trackHours = (trackId) =>
   roadmapData[trackId]?.levels
     .flatMap((level) => level.skills)
     .reduce((sum, skill) => sum + (skill.estimatedHours || 0), 0) ?? 0;
 
 function App() {
+  // Progress is persisted by the hook; this component uses its public API for
+  // counters, toggles, and portable JSON import/export.
   const { completed, toggle, reset, exportData, importData } = useProgress();
   const fileInput = useRef(null);
   const searchInput = useRef(null);
   const browserRef = useRef(null);
   const roadmapRef = useRef(null);
+  // A counter allows selecting the same track repeatedly to trigger focus/scroll.
   const [scrollTick, setScrollTick] = useState(0);
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [resourceFilter, setResourceFilter] = useState("all");
   const [transferMessage, setTransferMessage] = useState("");
   const [selectedTrack, setSelectedTrack] = useState(DEFAULT_TRACK);
   const [query, setQuery] = useState("");
-  // Ids of categories the user has expanded; start with the selected track's category open
+  // Store expanded category ids in a Set for efficient toggling and membership checks.
+  // Start with the selected track's category open.
   const [expanded, setExpanded] = useState(
     () => new Set([findCategory(DEFAULT_TRACK)?.id]),
   );
@@ -94,10 +106,11 @@ function App() {
   const searchTerms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
   const isSearching = searchTerms.length > 0;
   const isFiltered = categoryFilter !== "all";
-  // Search results and a single-domain filter are always shown open
+  // Search results and a selected-domain filter are locked open to expose results.
   const locked = isSearching || isFiltered;
 
-  // While searching, keep only tracks that contain every search word and drop empty categories
+  // A result must contain every search term. Filtering maps categories rather
+  // than mutating the shared source data and removes categories with no matches.
   const visibleCategories = useMemo(() => {
     if (searchTerms.length === 0) {
       return categoryFilter === "all"
@@ -112,13 +125,13 @@ function App() {
         ),
       }))
       .filter((category) => category.tracks.length > 0);
-    // searchTerms is derived from query, so query is the real dependency
+    // searchTerms is derived from query, so query is the real dependency.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query, categoryFilter]);
 
   const visibleTrackCount = visibleCategories.reduce((sum, c) => sum + c.tracks.length, 0);
 
-  // Selecting a track brings its roadmap into view and moves focus there for keyboard and screen reader users
+  // Selection updates the roadmap and schedules focus/scroll after React renders it.
   const selectTrack = (trackId) => {
     setSelectedTrack(trackId);
     setScrollTick((tick) => tick + 1);
@@ -130,13 +143,15 @@ function App() {
     scrollToElement(roadmapRef.current);
   }, [scrollTick]);
 
+  // Choosing a domain clears search so the domain filter remains the sole constraint.
   const chooseCategory = (categoryId) => {
     setCategoryFilter(categoryId);
     setQuery("");
     scrollToElement(browserRef.current);
   };
 
-  // Press "/" anywhere outside a form field to jump to search
+  // "/" is a global search shortcut, except while the user is typing in an
+  // editable control. Cleanup prevents a duplicate listener after unmount.
   useEffect(() => {
     const onKeyDown = (event) => {
       if (event.key !== "/" || event.metaKey || event.ctrlKey || event.altKey) return;
@@ -150,6 +165,8 @@ function App() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
+  // Search keyboard behavior: Escape clears/closes, Enter opens the first match,
+  // and ArrowDown moves focus into the result list.
   const onSearchKeyDown = (event) => {
     if (event.key === "Escape") {
       event.preventDefault();
@@ -167,7 +184,8 @@ function App() {
     }
   };
 
-  // Arrow keys move between track buttons so the whole index is reachable without tabbing through every one
+  // Roving keyboard navigation keeps the large track index usable without
+  // requiring a Tab press for every track button.
   const onTrackNavKeyDown = (event) => {
     if (!event.target.classList.contains("track-tab")) return;
     if (event.metaKey || event.ctrlKey || event.altKey) return;
@@ -204,6 +222,7 @@ function App() {
   };
 
   const handleExport = () => {
+    // Export only the hook's versioned progress payload; the browser handles the download.
     const blob = new Blob([exportData()], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
@@ -215,6 +234,7 @@ function App() {
   };
 
   const handleImport = async (event) => {
+    // Reset the input first so choosing the same file again still emits change.
     const file = event.target.files?.[0];
     event.target.value = "";
     if (!file) return;
@@ -275,6 +295,8 @@ function App() {
           </p>
         </div>
 
+      {/* Progress controls sit with the index so users can transfer or reset it
+          without navigating away from their current roadmap. */}
       <div className="overall-progress">
         <span>
           <strong>{doneTotal}</strong> of {allSkillIds.size} skills complete across all tracks
@@ -307,6 +329,7 @@ function App() {
       <p className="visually-hidden" role="status">{transferMessage}</p>
       {transferMessage && <p className="transfer-message small muted">{transferMessage}</p>}
 
+      {/* Featured routes provide curated entry points until the user narrows the index. */}
       {!locked && (
         <section className="featured" aria-labelledby="featured-title">
           <div className="featured-heading">
@@ -340,6 +363,8 @@ function App() {
         </section>
       )}
 
+      {/* Search and category filters share one result set; locked state keeps
+          matching groups expanded so results remain discoverable. */}
       <div className="track-toolbar">
         <div className="search-box">
           <label htmlFor="track-search" className="visually-hidden">
@@ -446,6 +471,7 @@ function App() {
           category={selectedTrack}
           completed={completed}
           onToggle={toggle}
+          onSelectTrack={selectTrack}
           resourceFilter={resourceFilter}
           onResourceFilter={setResourceFilter}
         />

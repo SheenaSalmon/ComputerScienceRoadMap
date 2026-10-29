@@ -1946,8 +1946,8 @@
     }
   },
   "embedded": {
-    "title": "Embedded Systems & IoT",
-    "description": "Program microcontrollers and connected devices that sense and act on the physical world.",
+    "title": "Embedded Software Development & IoT",
+    "description": "Develop firmware for microcontrollers and connected devices that sense and act on the physical world.",
     "audience": "For makers and engineers who want software to control real hardware.",
     "goal": "Build a reliable connected device from circuit to cloud.",
     "levels": [
@@ -2031,12 +2031,45 @@
             "resources": [{"label": "Beej's Guide to C", "url": "https://beej.us/guide/bgc/"}, {"label": "en.cppreference.com: Embedded C/C++", "url": "https://en.cppreference.com/w/c/language"}, {"label": "cppreference: C volatile qualifier - hardware registers", "url": "https://en.cppreference.com/w/c/language/volatile"}, {"label": "cppreference: Bit-fields in C", "url": "https://en.cppreference.com/w/c/language/bit_field"}, {"label": "cppreference: Fixed-width integer types in C", "url": "https://en.cppreference.com/w/c/types/integer"}, {"label": "Arduino Docs: Memory guide - flash, SRAM, EEPROM", "url": "https://docs.arduino.cc/learn/programming/memory-guide/"}, {"label": "Barr Group: Embedded C Coding Standard", "url": "https://barrgroup.com/embedded-systems/books/embedded-c-coding-standard"}, {"label": "YouTube: Jacob Sorber – What Actually is Embedded C/C++? Is it different from C/C++? (11:05)", "url": "https://www.youtube.com/watch?v=KQBBWvY-s0o"}, {"label": "YouTube: The Linux Foundation – C++ for Embedded Development (52:28)", "url": "https://www.youtube.com/watch?v=wLq-5lBc7x4"}],
             "priority": "core",
             "completed": false
+          },
+          {
+            "id": "embedded-toolchain-debugging",
+            "name": "Embedded Toolchains & Debugging",
+            "description": "Build and debug firmware with cross-compilers and hardware debugging tools.",
+            "outcomes": ["Configure a cross-compilation build", "Debug firmware with GDB over JTAG or SWD", "Inspect signals with a logic analyzer"],
+            "estimatedHours": 16,
+            "prerequisites": ["microcontroller-programming", "embedded-c"],
+            "resources": [{"label": "GNU GDB Documentation", "url": "https://www.sourceware.org/gdb/documentation/"}, {"label": "OpenOCD User's Guide", "url": "https://openocd.org/doc/html/"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "embedded-memory-startup",
+            "name": "Memory Maps, Linkers & Startup",
+            "description": "Understand how firmware is laid out in memory and initialized at boot.",
+            "outcomes": ["Read a linker map and memory layout", "Use linker scripts to place code and data", "Explain startup code, vector tables, and bootloaders"],
+            "estimatedHours": 16,
+            "prerequisites": ["embedded-c", "embedded-toolchain-debugging"],
+            "resources": [{"label": "GNU ld Documentation: Scripts", "url": "https://sourceware.org/binutils/docs/ld/Scripts.html"}, {"label": "GNU ld Documentation: Memory Layout", "url": "https://sourceware.org/binutils/docs/ld/MEMORY.html"}, {"label": "Arm CMSIS Documentation", "url": "https://arm-software.github.io/CMSIS_6/latest/"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "embedded-peripheral-drivers",
+            "name": "Peripheral Drivers",
+            "description": "Create reliable firmware interfaces for on-chip and external peripherals.",
+            "outcomes": ["Configure peripherals through registers or vendor APIs", "Use interrupts and DMA for data movement", "Separate hardware-specific code from application logic"],
+            "estimatedHours": 20,
+            "prerequisites": ["embedded-c", "communication-protocols"],
+            "resources": [{"label": "Zephyr Documentation: Device Driver Model", "url": "https://docs.zephyrproject.org/latest/kernel/drivers/index.html"}, {"label": "Linux Kernel Documentation: Device Drivers", "url": "https://docs.kernel.org/driver-api/index.html"}, {"label": "Arm CMSIS Documentation", "url": "https://arm-software.github.io/CMSIS_6/latest/"}],
+            "priority": "core",
+            "completed": false
           }
         ],
         "project": {
           "title": "Connected sensor node",
           "description": "Send sensor readings from a device to a dashboard using MQTT.",
-          "demonstrates": ["communication-protocols", "iot-networking", "embedded-c"]
+          "demonstrates": ["communication-protocols", "iot-networking", "embedded-c", "embedded-toolchain-debugging", "embedded-memory-startup", "embedded-peripheral-drivers"]
         }
       },
       {
@@ -2075,18 +2108,51 @@
             "resources": [{"label": "OWASP IoT Project", "url": "https://owasp.org/www-project-internet-of-things/"}, {"label": "NIST: NIST Cybersecurity for IoT Program", "url": "https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program"}, {"label": "OWASP: IoT Security Testing Guide", "url": "https://owasp.org/www-project-iot-security-testing-guide/"}, {"label": "NIST IR 8259: IoT Device Manufacturer Cybersecurity Capability Baseline", "url": "https://csrc.nist.gov/pubs/ir/8259/final"}, {"label": "MCUboot: Secure bootloader documentation", "url": "https://docs.mcuboot.com/"}, {"label": "ESP-IDF: Secure Boot v2 - signed firmware", "url": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/security/secure-boot-v2.html"}, {"label": "OWASP: Firmware Security Testing Methodology", "url": "https://scriptingxss.gitbook.io/firmware-security-testing-methodology"}, {"label": "YouTube: IBM Technology – Securing Your IoT Devices (13:55)", "url": "https://www.youtube.com/watch?v=7zWVxrjjIpE"}, {"label": "YouTube: The Linux Foundation – Device Security in IoT - Ashutosh Singh, Arm Ltd (42:49)", "url": "https://www.youtube.com/watch?v=9fFSlpD7NjQ"}],
             "priority": "core",
             "completed": false
+          },
+          {
+            "id": "embedded-testing-reliability",
+            "name": "Embedded Testing & Reliability",
+            "description": "Validate firmware behavior and recover safely from failures.",
+            "outcomes": ["Write unit tests for embedded code", "Use emulation or hardware-in-the-loop tests", "Design watchdog and fault-recovery behavior"],
+            "estimatedHours": 18,
+            "prerequisites": ["embedded-peripheral-drivers", "rtos"],
+            "resources": [{"label": "Renode Documentation", "url": "https://renode.readthedocs.io/en/latest/"}, {"label": "Unity Test Documentation", "url": "https://github.com/ThrowTheSwitch/Unity"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "embedded-linux",
+            "name": "Embedded Linux",
+            "description": "Bring up Linux-based devices and integrate hardware with the operating system.",
+            "outcomes": ["Describe the embedded Linux boot process", "Configure device trees and kernel drivers", "Build a tailored Linux image"],
+            "estimatedHours": 24,
+            "prerequisites": ["embedded-c", "embedded-toolchain-debugging"],
+            "resources": [{"label": "Linux Kernel Documentation", "url": "https://docs.kernel.org/"}, {"label": "Devicetree Specification", "url": "https://devicetree.org/specifications/"}, {"label": "Yocto Project Documentation", "url": "https://docs.yoctoproject.org/"}],
+            "priority": "optional",
+            "completed": false
+          },
+          {
+            "id": "functional-safety",
+            "name": "Functional Safety",
+            "description": "Design safety-critical embedded systems around hazards, mitigations, and evidence.",
+            "outcomes": ["Identify hazards and define safety requirements", "Apply fail-safe design and traceability", "Recognize the role of standards such as IEC 61508 and ISO 26262"],
+            "estimatedHours": 20,
+            "prerequisites": ["embedded-testing-reliability", "rtos"],
+            "resources": [{"label": "IEC: Functional Safety", "url": "https://www.iec.ch/functionalsafety"}, {"label": "ISO 26262: Road vehicles — Functional safety", "url": "https://www.iso.org/standard/68383.html"}],
+            "priority": "optional",
+            "completed": false
           }
         ],
         "project": {
           "title": "Reliable field device",
           "description": "Build a battery-powered device with scheduled tasks, secure connectivity, and update support.",
-          "demonstrates": ["rtos", "low-power-design", "iot-security"]
+          "demonstrates": ["rtos", "low-power-design", "iot-security", "embedded-testing-reliability", "embedded-linux", "functional-safety"]
         }
       }
     ],
     "capstone": {
       "title": "A connected hardware product",
-      "description": "Deliver a working device with firmware, a cloud dashboard, a wiring diagram, and a build guide."
+      "description": "Deliver a working device with debugged firmware, automated tests, a cloud dashboard, a wiring diagram, and a build guide."
     }
   }
 }

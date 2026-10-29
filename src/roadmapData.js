@@ -1,14 +1,15 @@
 import baseRoadmap from "./assets/roadmap.json";
 
-// Every JSON file in assets/tracks/ holds additional tracks keyed by track id.
-// Vite bundles them at build time, so adding a file there is enough to add content.
+// Keep the original roadmap data in roadmap.json and place additional groups in
+// tracks/*.json. Vite eagerly bundles those files, so each file must export an
+// object keyed by track id and each id must be unique across all files.
 const trackFiles = import.meta.glob("./assets/tracks/*.json", { eager: true });
 const extraTracks = Object.assign(
   {},
   ...Object.values(trackFiles).map((file) => file.default),
 );
 
-// Single merged lookup of track id -> roadmap, used by the whole app
+// Single lookup of track id -> roadmap shared by search, progress, and rendering.
 const roadmapData = { ...baseRoadmap, ...extraTracks };
 
 export default roadmapData;

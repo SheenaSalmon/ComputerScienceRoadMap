@@ -1,3 +1,4 @@
+/* Shared design tokens; category wrappers override the accent pair below. */
 :root {
   --ink: #1d2925;
   --muted: #68746c;
@@ -10,6 +11,7 @@
   --shadow: 0 12px 30px rgba(34, 43, 35, 0.06);
 }
 
+/* The selected or grouped domain controls a consistent accent across the UI. */
 [data-category="foundations"] { --accent: #b45309; --accent-soft: #fef3c7; }
 [data-category="languages"] { --accent: #be123c; --accent-soft: #ffe4e6; }
 [data-category="build"] { --accent: #4f46e5; --accent-soft: #eceafd; }
@@ -19,6 +21,7 @@
 [data-category="career"] { --accent: #4d7c0f; --accent-soft: #ecfccb; }
 [data-category="leadership"] { --accent: #7c3aed; --accent-soft: #ede9fe; }
 
+/* Page shell and brand banner */
 body {
   background-color: var(--bg);
   background-image: radial-gradient(#d9d4c7 0.7px, transparent 0.7px);
@@ -182,6 +185,7 @@ body {
   letter-spacing: 0.16em;
 }
 
+/* Track index: search, group accordions, and the selected-track state */
 .track-browser {
   margin: 4.5rem 0 4.25rem;
 }
@@ -374,6 +378,7 @@ body {
   color: #fff;
 }
 
+/* Roadmap content: overview, level timeline, project callouts, and skill cards */
 .roadmap-intro {
   position: relative;
   overflow: hidden;
@@ -545,6 +550,7 @@ body {
 .capstone .eyebrow { color: #e7b27c; }
 .capstone p { color: #d3ddd3; }
 
+/* Collapse the two-column hero and heading at tablet/mobile widths. */
 @media (max-width: 700px) {
   .hero {
     grid-template-columns: 1fr;
@@ -567,6 +573,7 @@ body {
   .track-browser { margin: 3rem 0; }
 }
 
+/* Tighten the timeline gutter and spacing on narrow phones. */
 @media (max-width: 576px) {
   .app-shell { padding: 0.75rem 0.75rem 3rem; }
   .hero { min-height: 0; }
@@ -578,6 +585,7 @@ body {
   .level { margin-bottom: 2.75rem; }
 }
 
+/* Avoid motion effects for users who request reduced motion at OS level. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -587,7 +595,7 @@ body {
   }
 }
 
-/* Progress tracking */
+/* Progress summaries, completion controls, and their visual states */
 .overall-progress {
   display: flex;
   flex-wrap: wrap;
@@ -649,7 +657,7 @@ body {
 .skill-card.is-complete { border-left: 4px solid var(--accent); }
 .skill-card.is-complete h4 { text-decoration: line-through; text-decoration-thickness: 1px; }
 
-/* Resource type filter and progress transfer */
+/* Resource filtering and progress import/export feedback */
 .resource-filter {
   display: flex;
   flex-wrap: wrap;
@@ -687,7 +695,7 @@ body {
 
 .transfer-message { margin: -0.5rem 0 1rem; }
 
-/* Navigation at scale: sticky domain bar, featured routes, search help */
+/* Navigation at scale: sticky domain bar, featured routes, and search affordances */
 .domain-bar {
   position: sticky;
   top: 0;

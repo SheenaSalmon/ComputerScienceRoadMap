@@ -1,0 +1,592 @@
+{
+  "networking": {
+    "title": "Computer Networking",
+    "description": "Understand how data moves between devices, from local networks to internet-scale services.",
+    "audience": "For developers and infrastructure engineers who want a practical foundation in network protocols and troubleshooting.",
+    "goal": "Trace, diagnose, and design reliable network communication for an application.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Learn the basic building blocks and protocols of network communication.",
+        "skills": [
+          {
+            "id": "networking-fundamentals",
+            "name": "Network Models & Core Concepts",
+            "description": "Build a mental model of how local and internet networks deliver data.",
+            "outcomes": ["Explain the roles of the link, internet, transport, and application layers", "Distinguish switches, routers, clients, and servers", "Trace how a packet travels across networks"],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [
+              {"label": "Cloudflare Learning: What is a computer network?", "url": "https://www.cloudflare.com/learning/network-layer/what-is-a-computer-network/"},
+              {"label": "Cloudflare Learning: What is the OSI model?", "url": "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"},
+              {"label": "Cisco: What is a network?", "url": "https://www.cisco.com/c/en/us/solutions/what-is-a-network.html"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "networking-addressing-dns",
+            "name": "IP Addressing, Subnets & DNS",
+            "description": "Learn how devices are addressed and how human-readable names locate services.",
+            "outcomes": ["Read IPv4 and IPv6 addresses", "Explain subnets, gateways, and basic routing", "Trace a DNS lookup"],
+            "estimatedHours": 12,
+            "prerequisites": ["networking-fundamentals"],
+            "resources": [
+              {"label": "Cloudflare Learning: What is an IP address?", "url": "https://www.cloudflare.com/learning/network-layer/what-is-an-ip-address/"},
+              {"label": "Cloudflare Learning: What is DNS?", "url": "https://www.cloudflare.com/learning/dns/what-is-dns/"},
+              {"label": "Cloudflare Learning: What is IPv6?", "url": "https://www.cloudflare.com/learning/network-layer/what-is-ipv6/"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Trace a web request",
+          "description": "Document the DNS lookup, addressing, and network-layer steps involved in reaching a website.",
+          "demonstrates": ["networking-fundamentals", "networking-addressing-dns"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Understand transport and application protocols and diagnose real connections.",
+        "skills": [
+          {
+            "id": "networking-transport",
+            "name": "TCP, UDP & Ports",
+            "description": "Compare transport protocols and learn how applications communicate through ports.",
+            "outcomes": ["Explain TCP connections, acknowledgements, and retransmission", "Choose between TCP and UDP for common use cases", "Inspect listening and connected sockets"],
+            "estimatedHours": 12,
+            "prerequisites": ["networking-addressing-dns"],
+            "resources": [
+              {"label": "Cloudflare Learning: What is TCP?", "url": "https://www.cloudflare.com/learning/ddos/glossary/tcp-ip/"},
+              {"label": "Cloudflare Learning: What is UDP?", "url": "https://www.cloudflare.com/learning/ddos/glossary/user-datagram-protocol-udp/"},
+              {"label": "Beej's Guide to Network Programming", "url": "https://beej.us/guide/bgnet/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "networking-http-tls",
+            "name": "HTTP, TLS & Web Communication",
+            "description": "Follow a secure web connection from request to response.",
+            "outcomes": ["Read HTTP methods, headers, and status codes", "Explain how TLS protects a connection", "Use command-line tools to inspect HTTP requests"],
+            "estimatedHours": 12,
+            "prerequisites": ["networking-transport"],
+            "resources": [
+              {"label": "MDN: Overview of HTTP", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview"},
+              {"label": "Cloudflare Learning: What is TLS?", "url": "https://www.cloudflare.com/learning/ssl/transport-layer-security-tls/"},
+              {"label": "curl: The Art Of HTTP Scripting", "url": "https://curl.se/docs/httpscripting.html"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "networking-troubleshooting",
+            "name": "Network Troubleshooting & Packet Analysis",
+            "description": "Use diagnostic commands and packet captures to find connection problems.",
+            "outcomes": ["Use ping, traceroute, and DNS lookup tools appropriately", "Capture and filter traffic in Wireshark", "Distinguish name-resolution, routing, and transport failures"],
+            "estimatedHours": 14,
+            "prerequisites": ["networking-transport"],
+            "resources": [
+              {"label": "Wireshark User's Guide", "url": "https://www.wireshark.org/docs/wsug_html_chunked/"},
+              {"label": "Wireshark: Display Filter Reference", "url": "https://www.wireshark.org/docs/dfref/"},
+              {"label": "Cloudflare Learning: What is traceroute?", "url": "https://www.cloudflare.com/learning/network-layer/what-is-traceroute/"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Diagnose a connection",
+          "description": "Use DNS and packet-analysis tools to diagnose a failing HTTP connection and explain the root cause.",
+          "demonstrates": ["networking-transport", "networking-http-tls", "networking-troubleshooting"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Design networks and services for scale, resilience, and secure operation.",
+        "skills": [
+          {
+            "id": "networking-routing-load-balancing",
+            "name": "Routing, Proxies & Load Balancing",
+            "description": "Explore how traffic is routed and distributed across larger systems.",
+            "outcomes": ["Explain routing and autonomous systems at a high level", "Compare forward proxies, reverse proxies, and load balancers", "Select health checks and traffic-distribution strategies"],
+            "estimatedHours": 14,
+            "prerequisites": ["networking-troubleshooting"],
+            "resources": [
+              {"label": "Cloudflare Learning: What is BGP?", "url": "https://www.cloudflare.com/learning/security/glossary/what-is-bgp/"},
+              {"label": "NGINX: Reverse proxy", "url": "https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/"},
+              {"label": "HAProxy: Configuration documentation", "url": "https://docs.haproxy.org/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "networking-reliability-security",
+            "name": "Network Reliability & Security",
+            "description": "Apply practical security and resilience principles to networked applications.",
+            "outcomes": ["Identify common network attack surfaces", "Apply segmentation and least-privilege access concepts", "Design timeouts, retries, and connection limits that fail safely"],
+            "estimatedHours": 14,
+            "prerequisites": ["networking-http-tls", "networking-routing-load-balancing"],
+            "resources": [
+              {"label": "OWASP: Transport Layer Security Cheat Sheet", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html"},
+              {"label": "NIST SP 800-41 Rev. 1: Guidelines on Firewalls and Firewall Policy", "url": "https://csrc.nist.gov/pubs/sp/800/41/r1/final"},
+              {"label": "Google SRE Book: Addressing Cascading Failures", "url": "https://sre.google/sre-book/addressing-cascading-failures/"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Resilient service network",
+          "description": "Design a secure service topology with routing, load balancing, health checks, and failure-handling policies.",
+          "demonstrates": ["networking-routing-load-balancing", "networking-reliability-security"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Networked service field guide",
+      "description": "Deliver a network diagram, request trace, troubleshooting notes, and reliability and security recommendations for a small service."
+    }
+  },
+  "testing": {
+    "title": "Testing & Quality Engineering",
+    "description": "Build confidence in software through thoughtful test design, automation, and quality practices.",
+    "audience": "For software developers and quality engineers who want to prevent regressions and ship dependable changes.",
+    "goal": "Create a maintainable automated test strategy that gives useful feedback throughout development.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Learn what to test and how to write focused, useful checks.",
+        "skills": [
+          {
+            "id": "testing-fundamentals",
+            "name": "Test Design & Quality Fundamentals",
+            "description": "Turn requirements and risks into clear, repeatable test cases.",
+            "outcomes": ["Distinguish expected behavior from implementation details", "Choose representative boundary and equivalence cases", "Report failures with reproducible steps"],
+            "estimatedHours": 8,
+            "prerequisites": [],
+            "resources": [
+              {"label": "ISTQB: CTFL 4.0 syllabus and downloads", "url": "https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/"},
+              {"label": "Google Testing Blog", "url": "https://testing.googleblog.com/"},
+              {"label": "Ministry of Testing: Test ideas", "url": "https://www.ministryoftesting.com/software-testing-glossary/test-ideas"},
+              {"label": "ISTQB Glossary", "url": "https://glossary.istqb.org/"},
+              {"label": "YouTube videos: software testing fundamentals and test design techniques", "url": "https://www.youtube.com/results?search_query=software+testing+fundamentals+test+design+equivalence+partitioning+boundary+value+analysis"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "testing-unit",
+            "name": "Unit Testing & Test Doubles",
+            "description": "Test small units of behavior in isolation while keeping tests readable and stable.",
+            "outcomes": ["Write tests for normal, boundary, and error cases", "Use stubs and fakes to isolate dependencies", "Recognize brittle tests and avoid over-mocking"],
+            "estimatedHours": 12,
+            "prerequisites": ["testing-fundamentals"],
+            "resources": [
+              {"label": "pytest: Getting Started", "url": "https://docs.pytest.org/en/stable/getting-started.html"},
+              {"label": "pytest: How-to guides", "url": "https://docs.pytest.org/en/stable/how-to/index.html"},
+              {"label": "pytest: Parametrizing tests", "url": "https://docs.pytest.org/en/stable/how-to/parametrize.html"},
+              {"label": "Python: unittest.mock — mock object library", "url": "https://docs.python.org/3/library/unittest.mock.html"},
+              {"label": "Vitest: Guide", "url": "https://vitest.dev/guide/"},
+              {"label": "Vitest: Mocking", "url": "https://vitest.dev/guide/mocking.html"},
+              {"label": "Martin Fowler: Test Double", "url": "https://martinfowler.com/bliki/TestDouble.html"},
+              {"label": "Google Testing Blog: Test sizes", "url": "https://testing.googleblog.com/2010/12/test-sizes.html"},
+              {"label": "YouTube videos: pytest unit testing and test doubles", "url": "https://www.youtube.com/results?search_query=unit+testing+pytest+tutorial+test+doubles+software+testing"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Test a small utility",
+          "description": "Write a focused suite covering normal, boundary, and failure behavior for a small library or utility.",
+          "demonstrates": ["testing-fundamentals", "testing-unit"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Test interactions across application boundaries and automate quality feedback.",
+        "skills": [
+          {
+            "id": "testing-integration-api",
+            "name": "Integration & API Testing",
+            "description": "Verify that modules, services, and APIs work together as expected.",
+            "outcomes": ["Test API contracts and error responses", "Manage test data and isolated environments", "Choose boundaries for integration tests"],
+            "estimatedHours": 12,
+            "prerequisites": ["testing-unit"],
+            "resources": [
+              {"label": "Postman Learning Center: Writing test scripts", "url": "https://learning.postman.com/docs/tests-and-scripts/write-scripts/test-scripts/"},
+              {"label": "Pact: Consumer-driven contract testing", "url": "https://docs.pact.io/"},
+              {"label": "Testcontainers: Getting started", "url": "https://testcontainers.com/getting-started/"},
+              {"label": "pytest: Fixtures", "url": "https://docs.pytest.org/en/stable/how-to/fixtures.html"},
+              {"label": "Martin Fowler: Integration Test", "url": "https://martinfowler.com/bliki/IntegrationTest.html"},
+              {"label": "YouTube videos: automated API testing with Postman", "url": "https://www.youtube.com/results?search_query=API+testing+Postman+tutorial+automated+tests"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "testing-end-to-end",
+            "name": "End-to-End & Browser Automation",
+            "description": "Exercise important user journeys through a running application.",
+            "outcomes": ["Automate critical user journeys", "Use selectors and waits that reduce flakiness", "Capture useful artifacts when a test fails"],
+            "estimatedHours": 14,
+            "prerequisites": ["testing-integration-api"],
+            "resources": [
+              {"label": "Playwright: Writing tests", "url": "https://playwright.dev/docs/writing-tests"},
+              {"label": "Playwright: Best practices", "url": "https://playwright.dev/docs/best-practices"},
+              {"label": "Playwright: Locators", "url": "https://playwright.dev/docs/locators"},
+              {"label": "Playwright: Trace Viewer", "url": "https://playwright.dev/docs/trace-viewer"},
+              {"label": "Cypress: End-to-end testing", "url": "https://docs.cypress.io/app/end-to-end-testing/writing-your-first-end-to-end-test"},
+              {"label": "Cypress: Best practices", "url": "https://docs.cypress.io/app/core-concepts/best-practices"},
+              {"label": "YouTube videos: Playwright end-to-end testing tutorials", "url": "https://www.youtube.com/results?search_query=Playwright+end+to+end+testing+official+tutorial"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "testing-ci-quality-gates",
+            "name": "Test Automation & CI Quality Gates",
+            "description": "Run a fast, dependable test suite automatically as code changes.",
+            "outcomes": ["Organize fast checks and slower suites into stages", "Run tests in continuous integration", "Use coverage and static checks as signals rather than goals"],
+            "estimatedHours": 10,
+            "prerequisites": ["testing-unit", "testing-integration-api"],
+            "resources": [
+              {"label": "GitHub Actions: Building and testing your code", "url": "https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing"},
+              {"label": "GitHub Actions: Workflow syntax", "url": "https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions"},
+              {"label": "GitHub Actions: Caching dependencies", "url": "https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows"},
+              {"label": "Codecov: What is code coverage?", "url": "https://about.codecov.io/blog/code-coverage-101-testing-coverage-and-codecov/"},
+              {"label": "Martin Fowler: Continuous Integration", "url": "https://martinfowler.com/articles/continuousIntegration.html"},
+              {"label": "YouTube videos: GitHub Actions CI testing workflow tutorial", "url": "https://www.youtube.com/results?search_query=GitHub+Actions+CI+testing+tutorial"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Automated application checks",
+          "description": "Build a CI workflow that runs unit, API integration, and one critical end-to-end test.",
+          "demonstrates": ["testing-integration-api", "testing-end-to-end", "testing-ci-quality-gates"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Evaluate system qualities beyond basic functional correctness.",
+        "skills": [
+          {
+            "id": "testing-performance",
+            "name": "Performance & Load Testing",
+            "description": "Measure response under load and identify meaningful bottlenecks.",
+            "outcomes": ["Define realistic workload models", "Measure latency percentiles and throughput", "Use results to guide targeted optimization"],
+            "estimatedHours": 12,
+            "prerequisites": ["testing-ci-quality-gates"],
+            "resources": [
+              {"label": "k6 Documentation: Load testing", "url": "https://grafana.com/docs/k6/latest/testing-guides/load-testing/"},
+              {"label": "k6 Documentation: Getting started", "url": "https://grafana.com/docs/k6/latest/get-started/"},
+              {"label": "k6 Documentation: Checks", "url": "https://grafana.com/docs/k6/latest/using-k6/checks/"},
+              {"label": "k6 Documentation: Thresholds", "url": "https://grafana.com/docs/k6/latest/using-k6/thresholds/"},
+              {"label": "Google SRE Book: Load Testing", "url": "https://sre.google/sre-book/load-testing/"},
+              {"label": "YouTube videos: Grafana k6 load testing tutorials", "url": "https://www.youtube.com/results?search_query=Grafana+k6+load+testing+tutorial+official"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "testing-reliability-security",
+            "name": "Reliability & Security Testing",
+            "description": "Test recovery behavior and look for security weaknesses within an authorized development scope.",
+            "outcomes": ["Test timeout and recovery behavior", "Include dependency and input-validation checks", "Prioritize findings by likelihood and impact"],
+            "estimatedHours": 12,
+            "prerequisites": ["testing-end-to-end", "testing-ci-quality-gates"],
+            "resources": [
+              {"label": "OWASP Web Security Testing Guide", "url": "https://owasp.org/www-project-web-security-testing-guide/"},
+              {"label": "OWASP ZAP: Automation Framework", "url": "https://www.zaproxy.org/docs/automate/"},
+              {"label": "OWASP Cheat Sheet: Input Validation", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html"},
+              {"label": "Google SRE Workbook: Testing for Reliability", "url": "https://sre.google/workbook/testing-reliability/"},
+              {"label": "Principles of Chaos Engineering", "url": "https://principlesofchaos.org/"},
+              {"label": "OWASP ZAP: Official videos", "url": "https://www.zaproxy.org/videos/"},
+              {"label": "YouTube videos: application security testing and reliability testing", "url": "https://www.youtube.com/results?search_query=application+security+testing+reliability+testing+OWASP+ZAP"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Quality and resilience report",
+          "description": "Extend an automated test pipeline with a representative load test and documented recovery and security checks.",
+          "demonstrates": ["testing-performance", "testing-reliability-security"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A maintainable quality strategy",
+      "description": "Deliver a layered test suite, CI workflow, representative performance results, and a concise quality risk report."
+    }
+  },
+  "compilers": {
+    "title": "Compilers & Language Tools",
+    "description": "Explore how programming languages are parsed, checked, interpreted, and compiled into executable forms.",
+    "audience": "For programmers curious about language implementation, developer tools, and how source code becomes a running program.",
+    "goal": "Implement a small language and explain the major stages of its implementation.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Build the front end of a small programming language.",
+        "skills": [
+          {
+            "id": "compilers-language-processing",
+            "name": "Language Processing & Grammars",
+            "description": "Understand tokens, grammars, and the structure of a language implementation.",
+            "outcomes": ["Describe the compiler and interpreter pipeline", "Write a small grammar for expressions", "Explain the roles of lexing, parsing, and semantic analysis"],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [
+              {"label": "Crafting Interpreters: Introduction", "url": "https://craftinginterpreters.com/introduction.html"},
+              {"label": "LLVM: My First Language Frontend", "url": "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "compilers-lexer-parser",
+            "name": "Lexing, Parsing & Syntax Trees",
+            "description": "Turn source text into a structured representation that software can analyze.",
+            "outcomes": ["Tokenize source text", "Parse expressions with precedence", "Represent programs with an abstract syntax tree"],
+            "estimatedHours": 16,
+            "prerequisites": ["compilers-language-processing"],
+            "resources": [
+              {"label": "Crafting Interpreters: Scanning", "url": "https://craftinginterpreters.com/scanning.html"},
+              {"label": "Crafting Interpreters: Representing Code", "url": "https://craftinginterpreters.com/representing-code.html"},
+              {"label": "Crafting Interpreters: Parsing Expressions", "url": "https://craftinginterpreters.com/parsing-expressions.html"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Expression parser",
+          "description": "Implement a lexer and parser that turns arithmetic expressions into an abstract syntax tree.",
+          "demonstrates": ["compilers-language-processing", "compilers-lexer-parser"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Give the language behavior and check programs before execution.",
+        "skills": [
+          {
+            "id": "compilers-interpreter",
+            "name": "Interpreters & Runtime Semantics",
+            "description": "Execute a language by evaluating its syntax tree and managing program state.",
+            "outcomes": ["Evaluate expressions and statements", "Represent environments and variable scope", "Define clear runtime errors"],
+            "estimatedHours": 18,
+            "prerequisites": ["compilers-lexer-parser"],
+            "resources": [
+              {"label": "Crafting Interpreters: Evaluating Expressions", "url": "https://craftinginterpreters.com/evaluating-expressions.html"},
+              {"label": "Crafting Interpreters: Statements and State", "url": "https://craftinginterpreters.com/statements-and-state.html"},
+              {"label": "Crafting Interpreters: Functions", "url": "https://craftinginterpreters.com/functions.html"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "compilers-types-analysis",
+            "name": "Type Checking & Static Analysis",
+            "description": "Catch invalid programs and produce useful diagnostics before execution.",
+            "outcomes": ["Design a small type system", "Report type errors with source locations", "Perform a basic static analysis over an AST"],
+            "estimatedHours": 16,
+            "prerequisites": ["compilers-interpreter"],
+            "resources": [
+              {"label": "Crafting Interpreters: A Bytecode Virtual Machine - Types of Values", "url": "https://craftinginterpreters.com/types-of-values.html"},
+              {"label": "LLVM: Kaleidoscope language tutorial", "url": "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Typed mini-language",
+          "description": "Extend the expression language with variables and functions, an interpreter, and source-aware type errors.",
+          "demonstrates": ["compilers-interpreter", "compilers-types-analysis"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Lower programs into a machine-oriented representation and improve generated code.",
+        "skills": [
+          {
+            "id": "compilers-ir-codegen",
+            "name": "Intermediate Representations & Code Generation",
+            "description": "Translate a language into an intermediate form and generate executable output.",
+            "outcomes": ["Explain why compilers use intermediate representations", "Lower syntax into a control-flow representation", "Generate code for a target or virtual machine"],
+            "estimatedHours": 20,
+            "prerequisites": ["compilers-types-analysis"],
+            "resources": [
+              {"label": "LLVM: My First Language Frontend", "url": "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html"},
+              {"label": "LLVM: Code Generator", "url": "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/LangImpl03.html"},
+              {"label": "Crafting Interpreters: Chunks of Bytecode", "url": "https://craftinginterpreters.com/chunks-of-bytecode.html"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "compilers-optimization",
+            "name": "Optimization & Compiler Tooling",
+            "description": "Apply semantics-preserving optimizations and make language tools easier to use.",
+            "outcomes": ["Implement constant folding or dead-code elimination", "Explain optimization correctness and tradeoffs", "Add source maps, diagnostics, or a basic language-server feature"],
+            "estimatedHours": 18,
+            "prerequisites": ["compilers-ir-codegen"],
+            "resources": [
+              {"label": "LLVM: Code Generator", "url": "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/LangImpl03.html"},
+              {"label": "Language Server Protocol Specification", "url": "https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Compile a small language",
+          "description": "Compile the typed mini-language to bytecode or native code and document one verified optimization.",
+          "demonstrates": ["compilers-ir-codegen", "compilers-optimization"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A small programming language",
+      "description": "Deliver a documented language with parsing, diagnostics, execution or code generation, tests, and an example program."
+    }
+  },
+  "graphics": {
+    "title": "Computer Graphics & Rendering",
+    "description": "Learn the mathematics and techniques used to turn geometric scenes into images.",
+    "audience": "For programmers interested in rendering, visualization, games, simulation, and GPU programming.",
+    "goal": "Build a small real-time renderer and explain its core graphics pipeline.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Build the mathematical and rendering foundations for drawing 2D and 3D scenes.",
+        "skills": [
+          {
+            "id": "graphics-math",
+            "name": "Graphics Math & Coordinate Spaces",
+            "description": "Use vectors and matrices to describe geometry and transform objects between spaces.",
+            "outcomes": ["Perform vector operations used in rendering", "Apply model, view, and projection transformations", "Explain coordinate spaces and homogeneous coordinates"],
+            "estimatedHours": 16,
+            "prerequisites": [],
+            "resources": [
+              {"label": "LearnOpenGL: Transformations", "url": "https://learnopengl.com/Getting-started/Transformations"},
+              {"label": "Scratchapixel: Mathematics for Computer Graphics", "url": "https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/"},
+              {"label": "WebGL Fundamentals: 2D translation, rotation, scale", "url": "https://webglfundamentals.org/webgl/lessons/webgl-2d-translation.html"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "graphics-rasterization",
+            "name": "Rasterization & the Rendering Pipeline",
+            "description": "Understand how geometry is transformed, clipped, and converted into pixels.",
+            "outcomes": ["Describe the major stages of a rasterization pipeline", "Explain vertices, triangles, and fragments", "Render a basic 2D or 3D scene"],
+            "estimatedHours": 14,
+            "prerequisites": ["graphics-math"],
+            "resources": [
+              {"label": "WebGPU Fundamentals: Graphics Pipeline", "url": "https://webgpufundamentals.org/webgpu/lessons/webgpu-pipeline.html"},
+              {"label": "LearnOpenGL: Hello Triangle", "url": "https://learnopengl.com/Getting-started/Hello-Triangle"},
+              {"label": "MDN: WebGL fundamentals", "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Transform and draw a scene",
+          "description": "Render a simple scene with a camera and interactive transformations.",
+          "demonstrates": ["graphics-math", "graphics-rasterization"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Control the rendering pipeline with shaders, lighting, and materials.",
+        "skills": [
+          {
+            "id": "graphics-shaders",
+            "name": "Shaders & GPU Programming",
+            "description": "Write small programs that run on the GPU to transform vertices and shade pixels.",
+            "outcomes": ["Write and debug vertex and fragment shaders", "Pass attributes and uniforms through a pipeline", "Explain GPU buffers and draw calls"],
+            "estimatedHours": 16,
+            "prerequisites": ["graphics-rasterization"],
+            "resources": [
+              {"label": "The Book of Shaders", "url": "https://thebookofshaders.com/"},
+              {"label": "WebGPU Fundamentals: Shaders", "url": "https://webgpufundamentals.org/webgpu/lessons/webgpu-shaders-and-structs.html"},
+              {"label": "LearnOpenGL: Shaders", "url": "https://learnopengl.com/Getting-started/Shaders"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "graphics-lighting-materials",
+            "name": "Lighting, Materials & Textures",
+            "description": "Represent surface appearance and illuminate objects in a scene.",
+            "outcomes": ["Implement basic diffuse and specular lighting", "Apply textures and material parameters", "Explain color spaces and normal vectors in shading"],
+            "estimatedHours": 18,
+            "prerequisites": ["graphics-shaders"],
+            "resources": [
+              {"label": "LearnOpenGL: Basic Lighting", "url": "https://learnopengl.com/Lighting/Basic-Lighting"},
+              {"label": "LearnOpenGL: Materials", "url": "https://learnopengl.com/Lighting/Materials"},
+              {"label": "LearnOpenGL: Textures", "url": "https://learnopengl.com/Getting-started/Textures"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Shaded 3D scene",
+          "description": "Build a small scene with camera controls, textured objects, and a moveable light source.",
+          "demonstrates": ["graphics-shaders", "graphics-lighting-materials"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Explore physically based rendering and make performance-informed design choices.",
+        "skills": [
+          {
+            "id": "graphics-pbr",
+            "name": "Physically Based Rendering",
+            "description": "Use energy-conscious shading models to create consistent materials under varied lighting.",
+            "outcomes": ["Explain the roles of albedo, roughness, and metallic parameters", "Use a microfacet BRDF at a conceptual level", "Apply environment lighting to a scene"],
+            "estimatedHours": 18,
+            "prerequisites": ["graphics-lighting-materials"],
+            "resources": [
+              {"label": "LearnOpenGL: PBR Theory", "url": "https://learnopengl.com/PBR/Theory"},
+              {"label": "LearnOpenGL: PBR Lighting", "url": "https://learnopengl.com/PBR/Lighting"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "graphics-performance",
+            "name": "Rendering Performance & GPU Profiling",
+            "description": "Measure rendering bottlenecks and improve frame-time consistency.",
+            "outcomes": ["Distinguish CPU-bound and GPU-bound work", "Use a graphics profiler or frame capture", "Reduce unnecessary work through batching and level-of-detail choices"],
+            "estimatedHours": 14,
+            "prerequisites": ["graphics-shaders", "graphics-lighting-materials"],
+            "resources": [
+              {"label": "WebGPU Fundamentals: Timing GPU work", "url": "https://webgpufundamentals.org/webgpu/lessons/webgpu-timing.html"},
+              {"label": "Arm: Mali Graphics Debugger", "url": "https://developer.arm.com/Tools%20and%20Software/Graphics%20Analyzer"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Optimized real-time renderer",
+          "description": "Add physically based materials to a scene, profile its rendering, and document a measurable optimization.",
+          "demonstrates": ["graphics-pbr", "graphics-performance"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A real-time graphics demo",
+      "description": "Deliver a documented interactive scene with shaders, lighting, materials, performance measurements, and a short rendering walkthrough."
+    }
+  }
+}

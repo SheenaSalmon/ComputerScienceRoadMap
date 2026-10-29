@@ -1,6 +1,7 @@
 import roadmapData from "./roadmapData";
 
-// Lookup across all tracks so prerequisite ids (including cross-track ones) show as readable names
+// Resolve prerequisite references centrally so cards can show readable labels,
+// including prerequisites that belong to a different track.
 const skillsById = Object.fromEntries(
   Object.values(roadmapData).flatMap((track) =>
     track.levels.flatMap((level) =>
@@ -10,6 +11,8 @@ const skillsById = Object.fromEntries(
 );
 
 const isVideo = (url) => /youtube\.com|youtu\.be/.test(url);
+
+// Keep filter ids stable because they are passed from App and used to classify links.
 const FILTERS = [
   { id: "all", label: "All" },
   { id: "reading", label: "Reading" },
@@ -18,9 +21,11 @@ const FILTERS = [
 
 // This project does not use a runtime prop-types dependency.
 /* eslint-disable react/prop-types */
-const Roadmap = ({ category, completed, onToggle, resourceFilter, onResourceFilter }) => {
+const Roadmap = ({ category, completed, onToggle, onSelectTrack, resourceFilter, onResourceFilter }) => {
   const roadmap = roadmapData[category];
 
+  // A missing key usually means the category index and roadmap data are out of
+  // sync; show an explicit status instead of rendering a broken page.
   if (!roadmap) {
     return (
       <p className="alert alert-warning" role="status">
@@ -29,6 +34,7 @@ const Roadmap = ({ category, completed, onToggle, resourceFilter, onResourceFilt
     );
   }
 
+  // Derive progress from the active roadmap so global progress remains owned by App.
   const allSkills = roadmap.levels.flatMap((level) => level.skills);
   const doneCount = allSkills.filter((skill) => completed.has(skill.id)).length;
   const percent = allSkills.length ? Math.round((doneCount / allSkills.length) * 100) : 0;
@@ -36,6 +42,9 @@ const Roadmap = ({ category, completed, onToggle, resourceFilter, onResourceFilt
   const remainingHours = allSkills
     .filter((s) => !completed.has(s.id))
     .reduce((sum, s) => sum + (s.estimatedHours || 0), 0);
+  const relatedTracks = (roadmap.relatedTracks ?? []).filter(
+    (track) => roadmapData[track.id],
+  );
 
   return (
     <main>
@@ -101,7 +110,30 @@ const Roadmap = ({ category, completed, onToggle, resourceFilter, onResourceFilt
         </div>
       </section>
 
-      {/* Levels are shown as numbered steps along a vertical timeline */}
+      {/* Optional cross-links connect learners to adjacent tracks without copying
+          those curricula into this roadmap. */}
+      {relatedTracks.length > 0 && (
+        <section className="related-paths mb-4" aria-labelledby="related-paths-title">
+          <p id="related-paths-title" className="eyebrow mb-2">Related learning paths</p>
+          <div className="d-flex flex-wrap gap-2">
+            {relatedTracks.map((track) => (
+              <button
+                key={track.id}
+                type="button"
+                className="btn btn-sm btn-outline-secondary"
+                title={track.reason}
+                aria-label={`Explore ${roadmapData[track.id].title}: ${track.reason}`}
+                onClick={() => onSelectTrack(track.id)}
+              >
+                {roadmapData[track.id].title}
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Levels are numbered steps; projects are displayed before the skills
+          they synthesize, and cards stay keyed by stable skill ids. */}
       <div className="timeline">
         {roadmap.levels.map((level, index) => (
           <section
@@ -153,7 +185,7 @@ const Roadmap = ({ category, completed, onToggle, resourceFilter, onResourceFilt
                       <span>Mark {skill.name} as complete</span>
                     </label>
 
-                    {/* Native details element keeps the overview compact and keyboard accessible */}
+                    {/* Native details keeps extra content compact and keyboard accessible. */}
                     <details>
                       <summary>Learning details</summary>
                       <div className="pt-3">
@@ -177,6 +209,8 @@ const Roadmap = ({ category, completed, onToggle, resourceFilter, onResourceFilt
                           </p>
                         )}
 
+                        {/* Apply the selected resource type to each skill's own
+                            resource list; an empty filtered list gets an explanation. */}
                         {(() => {
                           const shown = (skill.resources ?? []).filter(
                             (r) =>
@@ -198,7 +232,7 @@ const Roadmap = ({ category, completed, onToggle, resourceFilter, onResourceFilt
                               <ul className="mb-0">
                                 {shown.map((resource) => (
                                   <li key={resource.url}>
-                                    {/* Visually hidden text warns screen reader users about the new tab */}
+                                    {/* Announce the new-tab behavior to screen-reader users. */}
                                     <a
                                       href={resource.url}
                                       target="_blank"

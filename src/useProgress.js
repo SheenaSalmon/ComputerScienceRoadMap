@@ -2,6 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 
 const STORAGE_KEY = "cs-roadmap-progress-v1";
 
+// Restore the browser-local set of completed skill ids. Invalid or unavailable
+// storage starts with empty progress so the app remains usable for this session.
 const load = () => {
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
@@ -11,7 +13,8 @@ const load = () => {
   }
 };
 
-// Completed skill ids persisted in localStorage (kept in sync across browser tabs)
+// Owns progress persistence and portable backup behavior. The Set representation
+// gives callers constant-time membership checks and avoids duplicate skill ids.
 export default function useProgress() {
   const [completed, setCompleted] = useState(load);
 
@@ -19,10 +22,13 @@ export default function useProgress() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify([...completed]));
     } catch {
-      // Storage can be unavailable (private mode, quota); progress then lasts for the session only
+      // Storage may be unavailable or full; in-memory React state still works
+      // until the page is closed.
     }
   }, [completed]);
 
+  // The storage event fires in other tabs when browser storage changes, not in
+  // the tab that made the write. Re-read this app's key to refresh this tab.
   useEffect(() => {
     const onStorage = (event) => {
       if (event.key === STORAGE_KEY) setCompleted(load());
@@ -42,12 +48,14 @@ export default function useProgress() {
 
   const reset = useCallback(() => setCompleted(new Set()), []);
 
+  // Include a format version and timestamp so exported backups can evolve safely.
   const exportData = useCallback(
     () => JSON.stringify({ version: 1, exportedAt: new Date().toISOString(), completed: [...completed] }, null, 2),
     [completed],
   );
 
-  // Merges imported ids into current progress; returns how many ids were read, or -1 if the file is invalid
+  // Accept both the current object format and legacy arrays. Unknown ids are
+  // discarded, valid ids merge into progress, and -1 signals malformed input.
   const importData = useCallback((text, validIds) => {
     try {
       const parsed = JSON.parse(text);
