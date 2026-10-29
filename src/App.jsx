@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import Header from './Header'
 import Roadmap from './RoadMap'
 import categories from './assets/categories.json'
@@ -44,7 +44,10 @@ const trackSkillIds = Object.fromEntries(
 const allSkillIds = new Set(Object.values(trackSkillIds).flat());
 
 function App() {
-  const { completed, toggle, reset } = useProgress();
+  const { completed, toggle, reset, exportData, importData } = useProgress();
+  const fileInput = useRef(null);
+  const [resourceFilter, setResourceFilter] = useState("all");
+  const [transferMessage, setTransferMessage] = useState("");
   const [selectedTrack, setSelectedTrack] = useState(DEFAULT_TRACK);
   const [query, setQuery] = useState("");
   // Ids of categories the user has expanded; start with the selected track's category open
@@ -88,6 +91,29 @@ function App() {
     if (window.confirm("Clear all saved progress on this device?")) reset();
   };
 
+  const handleExport = () => {
+    const blob = new Blob([exportData()], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "cs-roadmap-progress.json";
+    link.click();
+    URL.revokeObjectURL(url);
+    setTransferMessage(`Exported ${doneTotal} completed skills.`);
+  };
+
+  const handleImport = async (event) => {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+    const count = importData(await file.text(), allSkillIds);
+    setTransferMessage(
+      count < 0
+        ? "That file isn’t a valid progress export."
+        : `Imported ${count} completed skills and merged them with your progress.`,
+    );
+  };
+
   const setAllExpanded = (open) =>
     setExpanded(open ? new Set(categories.map((category) => category.id)) : new Set());
 
@@ -111,12 +137,33 @@ function App() {
         <span>
           <strong>{doneTotal}</strong> of {allSkillIds.size} skills complete across all tracks
         </span>
-        {doneTotal > 0 && (
-          <button type="button" className="link-button" onClick={confirmReset}>
-            Reset progress
+        <div className="progress-actions">
+          {doneTotal > 0 && (
+            <button type="button" className="link-button" onClick={handleExport}>
+              Export
+            </button>
+          )}
+          <button type="button" className="link-button" onClick={() => fileInput.current?.click()}>
+            Import
           </button>
-        )}
+          {doneTotal > 0 && (
+            <button type="button" className="link-button" onClick={confirmReset}>
+              Reset progress
+            </button>
+          )}
+          <input
+            ref={fileInput}
+            type="file"
+            accept="application/json,.json"
+            className="visually-hidden"
+            tabIndex={-1}
+            aria-label="Import progress file"
+            onChange={handleImport}
+          />
+        </div>
       </div>
+      <p className="visually-hidden" role="status">{transferMessage}</p>
+      {transferMessage && <p className="transfer-message small muted">{transferMessage}</p>}
 
       <div className="track-toolbar">
         <div className="search-box">
@@ -209,7 +256,13 @@ function App() {
       )}
       </section>
 
-      <Roadmap category={selectedTrack} completed={completed} onToggle={toggle} />
+      <Roadmap
+        category={selectedTrack}
+        completed={completed}
+        onToggle={toggle}
+        resourceFilter={resourceFilter}
+        onResourceFilter={setResourceFilter}
+      />
     </div>
   )
 }

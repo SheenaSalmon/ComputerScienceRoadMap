@@ -42,5 +42,24 @@ export default function useProgress() {
 
   const reset = useCallback(() => setCompleted(new Set()), []);
 
-  return { completed, toggle, reset };
+  const exportData = useCallback(
+    () => JSON.stringify({ version: 1, exportedAt: new Date().toISOString(), completed: [...completed] }, null, 2),
+    [completed],
+  );
+
+  // Merges imported ids into current progress; returns how many ids were read, or -1 if the file is invalid
+  const importData = useCallback((text, validIds) => {
+    try {
+      const parsed = JSON.parse(text);
+      const ids = Array.isArray(parsed) ? parsed : parsed?.completed;
+      if (!Array.isArray(ids)) return -1;
+      const known = ids.filter((id) => typeof id === "string" && validIds.has(id));
+      setCompleted((current) => new Set([...current, ...known]));
+      return known.length;
+    } catch {
+      return -1;
+    }
+  }, []);
+
+  return { completed, toggle, reset, exportData, importData };
 }

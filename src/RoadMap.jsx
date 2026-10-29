@@ -9,9 +9,16 @@ const skillsById = Object.fromEntries(
   ),
 );
 
+const isVideo = (url) => /youtube\.com|youtu\.be/.test(url);
+const FILTERS = [
+  { id: "all", label: "All" },
+  { id: "reading", label: "Reading" },
+  { id: "videos", label: "Videos" },
+];
+
 // This project does not use a runtime prop-types dependency.
 /* eslint-disable react/prop-types */
-const Roadmap = ({ category, completed, onToggle }) => {
+const Roadmap = ({ category, completed, onToggle, resourceFilter, onResourceFilter }) => {
   const roadmap = roadmapData[category];
 
   if (!roadmap) {
@@ -36,6 +43,21 @@ const Roadmap = ({ category, completed, onToggle }) => {
         <p className="eyebrow mb-2">Learning path</p>
         <h2 className="fw-bold mb-3">{roadmap.title}</h2>
         <p className="lead muted mb-4">{roadmap.description}</p>
+
+        <div className="resource-filter" role="group" aria-label="Show resource type">
+          <span className="eyebrow">Resources</span>
+          {FILTERS.map((f) => (
+            <button
+              key={f.id}
+              type="button"
+              className="filter-chip"
+              aria-pressed={resourceFilter === f.id}
+              onClick={() => onResourceFilter(f.id)}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
 
         <div className="track-progress">
           <div className="track-progress-text">
@@ -155,33 +177,48 @@ const Roadmap = ({ category, completed, onToggle }) => {
                           </p>
                         )}
 
-                        {skill.resources?.length > 0 ? (
-                          <>
-                            <h5 className="h6">Recommended resources</h5>
-                            <ul className="mb-0">
-                              {skill.resources.map((resource) => (
-                                <li key={resource.url}>
-                                  {/* Visually hidden text warns screen reader users about the new tab */}
-                                  <a
-                                    href={resource.url}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                  >
-                                    {resource.label}
-                                    <span className="visually-hidden">
-                                      {" "}
-                                      (opens in a new tab)
-                                    </span>
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
-                          </>
-                        ) : (
-                          <p className="small muted mb-0">
-                            No resources added yet.
-                          </p>
-                        )}
+                        {(() => {
+                          const shown = (skill.resources ?? []).filter(
+                            (r) =>
+                              resourceFilter === "all" ||
+                              (resourceFilter === "videos") === isVideo(r.url),
+                          );
+                          if (shown.length === 0) {
+                            return (
+                              <p className="small muted mb-0">
+                                {resourceFilter === "all"
+                                  ? "No resources added yet."
+                                  : `No ${resourceFilter} resources for this skill yet.`}
+                              </p>
+                            );
+                          }
+                          return (
+                            <>
+                              <h5 className="h6">Recommended resources</h5>
+                              <ul className="mb-0">
+                                {shown.map((resource) => (
+                                  <li key={resource.url}>
+                                    {/* Visually hidden text warns screen reader users about the new tab */}
+                                    <a
+                                      href={resource.url}
+                                      target="_blank"
+                                      rel="noreferrer"
+                                    >
+                                      {isVideo(resource.url) && (
+                                        <span className="video-icon" aria-hidden="true">▶ </span>
+                                      )}
+                                      {resource.label}
+                                      <span className="visually-hidden">
+                                        {" "}
+                                        (opens in a new tab)
+                                      </span>
+                                    </a>
+                                  </li>
+                                ))}
+                              </ul>
+                            </>
+                          );
+                        })()}
                       </div>
                     </details>
                   </article>

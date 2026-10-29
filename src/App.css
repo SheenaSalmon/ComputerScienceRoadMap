@@ -648,3 +648,41 @@ body {
 
 .skill-card.is-complete { border-left: 4px solid var(--accent); }
 .skill-card.is-complete h4 { text-decoration: line-through; text-decoration-thickness: 1px; }
+
+/* Resource type filter and progress transfer */
+.resource-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.resource-filter .eyebrow { margin-right: 0.4rem; }
+
+.filter-chip {
+  padding: 0.2rem 0.75rem;
+  font-family: "Courier New", monospace;
+  font-size: 0.8rem;
+  background: transparent;
+  color: inherit;
+  border: 1px solid var(--accent);
+  cursor: pointer;
+}
+
+.filter-chip[aria-pressed="true"] {
+  background: var(--accent);
+  color: #fff;
+}
+
+.filter-chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.video-icon { color: var(--accent); }
+
+.progress-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+
+.transfer-message { margin: -0.5rem 0 1rem; }
