@@ -3,6 +3,7 @@ import Header from './Header'
 import Roadmap from './RoadMap'
 import categories from './assets/categories.json'
 import roadmapData from './roadmapData'
+import useProgress from './useProgress'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -33,7 +34,17 @@ const searchIndex = Object.fromEntries(
   ),
 );
 
+// Skill ids per track, used for per-track and overall progress counts
+const trackSkillIds = Object.fromEntries(
+  Object.entries(roadmapData).map(([id, track]) => [
+    id,
+    track.levels.flatMap((level) => level.skills.map((skill) => skill.id)),
+  ]),
+);
+const allSkillIds = new Set(Object.values(trackSkillIds).flat());
+
 function App() {
+  const { completed, toggle, reset } = useProgress();
   const [selectedTrack, setSelectedTrack] = useState(DEFAULT_TRACK);
   const [query, setQuery] = useState("");
   // Ids of categories the user has expanded; start with the selected track's category open
@@ -69,6 +80,14 @@ function App() {
     });
   };
 
+  const doneTotal = [...completed].filter((id) => allSkillIds.has(id)).length;
+  const doneInTrack = (trackId) =>
+    (trackSkillIds[trackId] ?? []).filter((id) => completed.has(id)).length;
+
+  const confirmReset = () => {
+    if (window.confirm("Clear all saved progress on this device?")) reset();
+  };
+
   const setAllExpanded = (open) =>
     setExpanded(open ? new Set(categories.map((category) => category.id)) : new Set());
 
@@ -87,6 +106,17 @@ function App() {
             Start with a discipline. Follow it from first principles to things you can build.
           </p>
         </div>
+
+      <div className="overall-progress">
+        <span>
+          <strong>{doneTotal}</strong> of {allSkillIds.size} skills complete across all tracks
+        </span>
+        {doneTotal > 0 && (
+          <button type="button" className="link-button" onClick={confirmReset}>
+            Reset progress
+          </button>
+        )}
+      </div>
 
       <div className="track-toolbar">
         <div className="search-box">
@@ -160,6 +190,11 @@ function App() {
                       onClick={() => setSelectedTrack(track.id)}
                     >
                       {track.label}
+                      {doneInTrack(track.id) > 0 && (
+                        <span className="tab-progress">
+                          {doneInTrack(track.id)}/{trackSkillIds[track.id].length}
+                        </span>
+                      )}
                     </button>
                   ))}
                 </div>
@@ -174,7 +209,7 @@ function App() {
       )}
       </section>
 
-      <Roadmap category={selectedTrack} />
+      <Roadmap category={selectedTrack} completed={completed} onToggle={toggle} />
     </div>
   )
 }

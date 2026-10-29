@@ -10,8 +10,8 @@ const skillsById = Object.fromEntries(
 );
 
 // This project does not use a runtime prop-types dependency.
-// eslint-disable-next-line react/prop-types
-const Roadmap = ({ category }) => {
+/* eslint-disable react/prop-types */
+const Roadmap = ({ category, completed, onToggle }) => {
   const roadmap = roadmapData[category];
 
   if (!roadmap) {
@@ -22,12 +22,43 @@ const Roadmap = ({ category }) => {
     );
   }
 
+  const allSkills = roadmap.levels.flatMap((level) => level.skills);
+  const doneCount = allSkills.filter((skill) => completed.has(skill.id)).length;
+  const percent = allSkills.length ? Math.round((doneCount / allSkills.length) * 100) : 0;
+  const totalHours = allSkills.reduce((sum, s) => sum + (s.estimatedHours || 0), 0);
+  const remainingHours = allSkills
+    .filter((s) => !completed.has(s.id))
+    .reduce((sum, s) => sum + (s.estimatedHours || 0), 0);
+
   return (
     <main>
       <section className="roadmap-intro">
         <p className="eyebrow mb-2">Learning path</p>
         <h2 className="fw-bold mb-3">{roadmap.title}</h2>
         <p className="lead muted mb-4">{roadmap.description}</p>
+
+        <div className="track-progress">
+          <div className="track-progress-text">
+            <strong>
+              {doneCount} of {allSkills.length} skills complete
+            </strong>
+            <span className="muted">
+              {percent}%
+              {totalHours > 0 && ` · ~${remainingHours} of ${totalHours} hrs remaining`}
+            </span>
+          </div>
+          <div
+            className="progress-bar-track"
+            role="progressbar"
+            aria-label={`${roadmap.title} progress`}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuenow={percent}
+          >
+            <div className="progress-bar-fill" style={{ width: `${percent}%` }} />
+          </div>
+        </div>
+
         <div className="row g-3">
           {roadmap.audience && (
             <div className="col-md-6">
@@ -75,7 +106,9 @@ const Roadmap = ({ category }) => {
             <div className="row g-3">
               {level.skills.map((skill) => (
                 <div className="col-12 col-lg-6" key={skill.id}>
-                  <article className="skill-card">
+                  <article
+                    className={`skill-card${completed.has(skill.id) ? " is-complete" : ""}`}
+                  >
                     <div className="skill-heading d-flex justify-content-between align-items-start gap-2 mb-2">
                       <h4 className="h5 mb-0">{skill.name}</h4>
                       <div className="skill-badges d-flex gap-1 flex-shrink-0">
@@ -88,6 +121,15 @@ const Roadmap = ({ category }) => {
                       </div>
                     </div>
                     <p className="muted">{skill.description}</p>
+
+                    <label className="skill-check">
+                      <input
+                        type="checkbox"
+                        checked={completed.has(skill.id)}
+                        onChange={() => onToggle(skill.id)}
+                      />
+                      <span>Mark {skill.name} as complete</span>
+                    </label>
 
                     {/* Native details element keeps the overview compact and keyboard accessible */}
                     <details>

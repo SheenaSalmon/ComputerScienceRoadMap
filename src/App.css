@@ -586,3 +586,65 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Progress tracking */
+.overall-progress {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.tab-progress {
+  margin-left: 0.4rem;
+  padding: 0 0.35rem;
+  font-family: "Courier New", monospace;
+  font-size: 0.7rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.track-progress { margin-bottom: 1.5rem; }
+
+.track-progress-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.progress-bar-track {
+  height: 0.6rem;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.skill-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.skill-check input {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.skill-card.is-complete { border-left: 4px solid var(--accent); }
+.skill-card.is-complete h4 { text-decoration: line-through; text-decoration-thickness: 1px; }
