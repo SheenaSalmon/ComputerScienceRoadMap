@@ -1,0 +1,1010 @@
+{
+  "fullstack": {
+    "title": "Full-Stack Development",
+    "description": "Build complete web applications from the browser interface to the database and deploy them end to end.",
+    "audience": "For learners who want to own a product from user interface through server and deployment.",
+    "goal": "Ship a production-style full-stack application with authentication, persistence, and automated deployment.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Connect a simple frontend to a server and a database.",
+        "skills": [
+          {
+            "id": "fullstack-http-basics",
+            "name": "HTTP and Client-Server Basics",
+            "description": "Understand how browsers and servers exchange requests and responses.",
+            "outcomes": ["Read request and response headers and status codes", "Explain the lifecycle of a web request"],
+            "estimatedHours": 8,
+            "prerequisites": [],
+            "resources": [{"label": "MDN: HTTP overview", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP"}, {"label": "YouTube: Traversy Media – HTTP Crash Course & Exploration (38:30)", "url": "https://www.youtube.com/watch?v=iYM2zFP3Zn0"}, {"label": "YouTube: freeCodeCamp.org – Full HTTP Networking Course – Fetch and REST APIs in JavaScript (5:08:48)", "url": "https://www.youtube.com/watch?v=2JYT5f2isg4"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "fullstack-server-app",
+            "name": "Server-Side Application",
+            "description": "Build a server that exposes routes and returns JSON to a frontend.",
+            "outcomes": ["Create routes for CRUD operations", "Serve data to a React client"],
+            "estimatedHours": 20,
+            "prerequisites": ["nodejs", "javascript-basics"],
+            "resources": [{"label": "Full Stack Open", "url": "https://fullstackopen.com/en/"}, {"label": "YouTube: GopherCon UK – Go Full Stack Server-Side Rendering vs SPAs - Fernando J. Villamarin Diaz, JPMC (33:13)", "url": "https://www.youtube.com/watch?v=X30eAwuUgrE"}, {"label": "YouTube: freeCodeCamp.org – NestJS Course for Beginners - Build Server-Side Applications (1:27:39)", "url": "https://www.youtube.com/watch?v=21_I-12f5JE"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "fullstack-sql-persistence",
+            "name": "Database Persistence",
+            "description": "Store and query application data in a relational database.",
+            "outcomes": ["Design simple tables and relations", "Query data from the server safely"],
+            "estimatedHours": 16,
+            "prerequisites": ["backend-databases"],
+            "resources": [{"label": "PostgreSQL Tutorial", "url": "https://www.postgresql.org/docs/current/tutorial.html"}, {"label": "YouTube: freeCodeCamp.org – SQL For Web Developers - Complete Database Course (4:44:43)", "url": "https://www.youtube.com/watch?v=KBDSJU3cGkc"}, {"label": "YouTube: TechWorld with Nana – Kubernetes Volumes explained | Persistent Volume, Persistent Volume Claim &… (21:14)", "url": "https://www.youtube.com/watch?v=0swOh5C3OVM"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Notes app with a database",
+          "description": "Build a notes application with a React client, a server API, and persistent storage.",
+          "demonstrates": ["fullstack-http-basics", "fullstack-server-app", "fullstack-sql-persistence"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Add authentication, a full-stack framework, and quality checks.",
+        "skills": [
+          {
+            "id": "fullstack-auth",
+            "name": "Authentication and Authorization",
+            "description": "Secure applications with sessions or tokens and role-based access.",
+            "outcomes": ["Implement login and protected routes", "Avoid common credential and session mistakes"],
+            "estimatedHours": 18,
+            "prerequisites": ["fullstack-server-app"],
+            "resources": [{"label": "MDN: Web security", "url": "https://developer.mozilla.org/en-US/docs/Web/Security"}, {"label": "YouTube: Microsoft Azure – Authentication fundamentals: The basics | Microsoft Entra ID (4:33)", "url": "https://www.youtube.com/watch?v=fbSVgC8nGz4"}, {"label": "YouTube: Professor Messer – Authentication, Authorization, and Accounting - CompTIA Security+ SY0-701 - 1.2 (9:04)", "url": "https://www.youtube.com/watch?v=AhaZtj5P2a8"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "fullstack-framework",
+            "name": "Full-Stack Framework",
+            "description": "Use a framework that combines routing, rendering, and server logic.",
+            "outcomes": ["Build server-rendered and client-rendered pages", "Fetch data on the server"],
+            "estimatedHours": 22,
+            "prerequisites": ["react", "fullstack-server-app"],
+            "resources": [{"label": "Next.js Learn", "url": "https://nextjs.org/learn"}, {"label": "YouTube: Fireship – How to OVER Engineer a Website // What is a Tech Stack? (11:20)", "url": "https://www.youtube.com/watch?v=Sxxw3qtb3_g"}, {"label": "YouTube: Tech With Tim – How To Become a Full Stack Developer in 2025 - Full Roadmap (14:46)", "url": "https://www.youtube.com/watch?v=Je_KYIM9QJc"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "fullstack-testing",
+            "name": "End-to-End Testing",
+            "description": "Verify application behavior across the client, server, and database.",
+            "outcomes": ["Write integration tests for API routes", "Automate a user flow in a browser test"],
+            "estimatedHours": 14,
+            "prerequisites": ["fullstack-server-app"],
+            "resources": [{"label": "Playwright documentation", "url": "https://playwright.dev/docs/intro"}, {"label": "YouTube: freeCodeCamp.org – Software Testing Course – Playwright, E2E, and AI Agents (1:03:31)", "url": "https://www.youtube.com/watch?v=jydYq7oAtD8"}, {"label": "YouTube: Fireship – Cypress End-to-End Testing (9:34)", "url": "https://www.youtube.com/watch?v=7N63cMKosIE"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Multi-user task manager",
+          "description": "Build an authenticated task manager with per-user data and automated tests.",
+          "demonstrates": ["fullstack-auth", "fullstack-framework", "fullstack-testing"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Deploy, automate, and operate a full-stack system reliably.",
+        "skills": [
+          {
+            "id": "fullstack-ci-cd",
+            "name": "CI/CD Pipelines",
+            "description": "Automate testing and deployment on every change.",
+            "outcomes": ["Build a pipeline that tests and deploys", "Manage secrets and environments"],
+            "estimatedHours": 14,
+            "prerequisites": ["fullstack-testing", "containers"],
+            "resources": [{"label": "GitHub Actions documentation", "url": "https://docs.github.com/en/actions"}, {"label": "YouTube: Traversy Media – CI/CD Made Simple: Build a Real Pipeline (35:13)", "url": "https://www.youtube.com/watch?v=B7GM6F3BP6A"}, {"label": "YouTube: freeCodeCamp.org – Master Full-Stack Docker & CI/CD – Build a Production-Ready Pipeline (3:58:43)", "url": "https://www.youtube.com/watch?v=lEcULR30-GM"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "fullstack-cloud-deploy",
+            "name": "Cloud Deployment",
+            "description": "Run containerized applications and databases on a cloud platform.",
+            "outcomes": ["Deploy a containerized app with a managed database", "Configure domains and HTTPS"],
+            "estimatedHours": 18,
+            "prerequisites": ["containers", "cloud-fundamentals"],
+            "resources": [{"label": "Docker: Get started", "url": "https://docs.docker.com/get-started/"}, {"label": "YouTube: freeCodeCamp.org – How to Deploy, Secure, and Automate Full-Stack Web Apps – Course for Beginners (10:29:10)", "url": "https://www.youtube.com/watch?v=wY5pQOTsGaA"}, {"label": "YouTube: Be A Better Dev – Cloud Computing Explained: The Most Important Concepts To Know (45:32)", "url": "https://www.youtube.com/watch?v=ZaA0kNm18pE"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "fullstack-observability",
+            "name": "Monitoring and Performance",
+            "description": "Measure, log, and tune a live application.",
+            "outcomes": ["Add structured logging and error tracking", "Find and fix a performance bottleneck"],
+            "estimatedHours": 14,
+            "prerequisites": ["fullstack-cloud-deploy"],
+            "resources": [{"label": "web.dev: Learn Performance", "url": "https://web.dev/learn/performance"}, {"label": "YouTube: IBM Technology – OpenTelemetry: Simplifying Hybrid Cloud Monitoring (5:40)", "url": "https://www.youtube.com/watch?v=hLvwoow3XTk"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Production deployment of a SaaS app",
+          "description": "Deploy a full-stack app with CI/CD, a managed database, and monitoring.",
+          "demonstrates": ["fullstack-ci-cd", "fullstack-cloud-deploy", "fullstack-observability"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Launch a full-stack product",
+      "description": "Design, build, test, and deploy a real multi-user application with documentation and monitoring."
+    }
+  },
+  "api": {
+    "title": "API & Integration Engineering",
+    "description": "Design, build, and operate APIs and integrations using REST, GraphQL, gRPC, webhooks, and events.",
+    "audience": "For learners who want to connect systems and build reliable interfaces between services.",
+    "goal": "Deliver a well-documented, secure, multi-protocol integration platform.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Design and document a clear REST API.",
+        "skills": [
+          {
+            "id": "api-rest-fundamentals",
+            "name": "REST Fundamentals",
+            "description": "Model resources and use HTTP methods and status codes correctly.",
+            "outcomes": ["Design resource-oriented endpoints", "Choose correct methods and status codes"],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [{"label": "MDN: HTTP overview", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP"}, {"label": "YouTube: ByteByteGo – What Is REST API? Examples And How To Use It: Crash Course System Design #3 (5:21)", "url": "https://www.youtube.com/watch?v=-mN3VyJuCjM"}, {"label": "YouTube: IBM Technology – What is a REST API? (9:12)", "url": "https://www.youtube.com/watch?v=lsMQRaeKNDk"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "api-openapi-docs",
+            "name": "OpenAPI Documentation",
+            "description": "Describe APIs with a machine-readable specification.",
+            "outcomes": ["Write an OpenAPI document", "Generate human-readable docs from it"],
+            "estimatedHours": 8,
+            "prerequisites": ["api-rest-fundamentals"],
+            "resources": [{"label": "OpenAPI Learn", "url": "https://learn.openapis.org/"}, {"label": "YouTube: IBM Technology – REST API and OpenAPI: It’s Not an Either/Or Question (9:17)", "url": "https://www.youtube.com/watch?v=pRS9LRBgjYg"}, {"label": "YouTube: freeCodeCamp.org – API Documentation Best Practices – Full Course (1:55:38)", "url": "https://www.youtube.com/watch?v=0CSyIBHQy9g"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "api-client-integration",
+            "name": "Consuming Third-Party APIs",
+            "description": "Call external APIs with authentication, pagination, and error handling.",
+            "outcomes": ["Handle pagination and rate limits", "Retry failed requests safely"],
+            "estimatedHours": 10,
+            "prerequisites": ["api-rest-fundamentals", "javascript-basics"],
+            "resources": [{"label": "MDN: Fetch API", "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"}, {"label": "YouTube: freeCodeCamp.org – APIs for Beginners - How to use an API (Full Course / Tutorial) (3:07:07)", "url": "https://www.youtube.com/watch?v=WXsD0ZgxjRw"}, {"label": "YouTube: ArjanCodes – How to Stop Third-Party APIs From Ruining Your Code (11:07)", "url": "https://www.youtube.com/watch?v=vskwNNdnqMc"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Documented REST service",
+          "description": "Build a small REST API with an OpenAPI spec and a client that consumes it.",
+          "demonstrates": ["api-rest-fundamentals", "api-openapi-docs", "api-client-integration"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Secure APIs and offer alternative protocols and push-based integrations.",
+        "skills": [
+          {
+            "id": "api-auth-security",
+            "name": "API Authentication and Security",
+            "description": "Protect APIs with OAuth 2.0, tokens, and input validation.",
+            "outcomes": ["Implement token-based authentication", "Validate input and limit abuse"],
+            "estimatedHours": 16,
+            "prerequisites": ["api-design"],
+            "resources": [{"label": "OWASP API Security Project", "url": "https://owasp.org/API-Security/"}, {"label": "YouTube: freeCodeCamp.org – API Security Fundamentals – Course for Beginners (1:49:04)", "url": "https://www.youtube.com/watch?v=R-4_DbV1Su4"}, {"label": "YouTube: ByteByteGo – Top 12 Tips For API Security (9:47)", "url": "https://www.youtube.com/watch?v=6WZ6S-qmtqY"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "api-graphql",
+            "name": "GraphQL",
+            "description": "Expose flexible, typed data graphs to clients.",
+            "outcomes": ["Define a schema and resolvers", "Avoid over-fetching and N+1 queries"],
+            "estimatedHours": 16,
+            "prerequisites": ["api-rest-fundamentals"],
+            "resources": [{"label": "Learn GraphQL", "url": "https://graphql.org/learn/"}, {"label": "YouTube: Fireship – GraphQL Basics - Build an app with the SpaceX API (15:48)", "url": "https://www.youtube.com/watch?v=7wzR4Ig5pTI"}, {"label": "YouTube: freeCodeCamp.org – GraphQL Course for Beginners (1:29:00)", "url": "https://www.youtube.com/watch?v=5199E50O7SI"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "api-webhooks",
+            "name": "Webhooks",
+            "description": "Receive and deliver event notifications between systems.",
+            "outcomes": ["Verify webhook signatures", "Handle retries and idempotency"],
+            "estimatedHours": 8,
+            "prerequisites": ["api-client-integration"],
+            "resources": [{"label": "Stripe: Webhooks", "url": "https://docs.stripe.com/webhooks"}, {"label": "YouTube: freeCodeCamp.org – Webhooks for Beginners - Full Course (2:28:54)", "url": "https://www.youtube.com/watch?v=41NOoEz3Tzc"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Secure GraphQL gateway",
+          "description": "Build a token-protected GraphQL API that also emits signed webhooks.",
+          "demonstrates": ["api-auth-security", "api-graphql", "api-webhooks"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Build high-performance, event-driven, and well-governed integrations.",
+        "skills": [
+          {
+            "id": "api-grpc",
+            "name": "gRPC and Protocol Buffers",
+            "description": "Build efficient service-to-service APIs with typed contracts.",
+            "outcomes": ["Define services in Protocol Buffers", "Implement unary and streaming calls"],
+            "estimatedHours": 16,
+            "prerequisites": ["api-rest-fundamentals"],
+            "resources": [{"label": "gRPC documentation", "url": "https://grpc.io/docs/"}, {"label": "YouTube: The Coding Gopher – gRPC and Protocol Buffers in 6 Minutes (5:28)", "url": "https://www.youtube.com/watch?v=PSe4GuLOFZw"}, {"label": "YouTube: CNCF [Cloud Native Computing Foundation] – Efficient IoT with Protocol Buffers and gRPC - Vladimir Vivien, {code} (Beginner… (37:22)", "url": "https://www.youtube.com/watch?v=c9z_o5lu0dI"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "api-event-driven",
+            "name": "Event-Driven Architecture",
+            "description": "Decouple services with message brokers and asynchronous events.",
+            "outcomes": ["Publish and consume events reliably", "Design for idempotent consumers"],
+            "estimatedHours": 20,
+            "prerequisites": ["api-webhooks", "backend-databases"],
+            "resources": [{"label": "Apache Kafka documentation", "url": "https://kafka.apache.org/documentation/"}, {"label": "YouTube: freeCodeCamp.org – Event-Driven Architecture with React and FastAPI – Full Course (1:37:44)", "url": "https://www.youtube.com/watch?v=NVvIpqmf_Xc"}, {"label": "YouTube: KodeKloud – How Event-Driven Architecture Works? (6:57)", "url": "https://www.youtube.com/watch?v=itPC-Ex-D-0"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "api-governance",
+            "name": "API Versioning and Governance",
+            "description": "Evolve APIs without breaking consumers.",
+            "outcomes": ["Apply versioning and deprecation policies", "Add rate limiting and usage analytics"],
+            "estimatedHours": 12,
+            "prerequisites": ["api-openapi-docs", "api-auth-security"],
+            "resources": [{"label": "OpenAPI Learn", "url": "https://learn.openapis.org/"}, {"label": "YouTube: IBM Technology – MCP vs API: Simplifying AI Agent Integration with External Data (13:11)", "url": "https://www.youtube.com/watch?v=7j1t3UZA1TY"}, {"label": "YouTube: freeCodeCamp.org – API integration Course – Modern Python with FastAPI (3:49:36)", "url": "https://www.youtube.com/watch?v=rkPIftzu1pQ"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Event-driven order platform",
+          "description": "Build services that communicate over gRPC and events with a versioned public API.",
+          "demonstrates": ["api-grpc", "api-event-driven", "api-governance"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Integration platform",
+      "description": "Deliver a multi-protocol API platform with docs, security, events, and versioning that integrates with a third-party service."
+    }
+  },
+  "creative3d": {
+    "title": "Web3D, AR/VR & Creative Coding",
+    "description": "Create interactive 3D, immersive, and generative visual experiences in the browser.",
+    "audience": "For learners who enjoy graphics, art, and immersive interactive media.",
+    "goal": "Publish an immersive, performant creative experience that combines 3D, shaders, and generative art.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Render and animate a basic 3D scene and a generative sketch.",
+        "skills": [
+          {
+            "id": "creative3d-canvas-sketches",
+            "name": "Creative Coding with Canvas",
+            "description": "Draw and animate generative visuals with code.",
+            "outcomes": ["Animate shapes with a draw loop", "Use randomness and noise to generate patterns"],
+            "estimatedHours": 12,
+            "prerequisites": ["javascript-basics"],
+            "resources": [{"label": "p5.js tutorials", "url": "https://p5js.org/tutorials/"}, {"label": "YouTube: The Coding Train – Creative Coding for Beginners - Full Course! (5:06:17)", "url": "https://www.youtube.com/watch?v=4JzDttgdILQ"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "creative3d-threejs-basics",
+            "name": "Three.js Fundamentals",
+            "description": "Build scenes with cameras, lights, meshes, and materials.",
+            "outcomes": ["Create and animate a 3D scene", "Add lights and basic materials"],
+            "estimatedHours": 18,
+            "prerequisites": ["modern-javascript"],
+            "resources": [{"label": "Three.js Manual", "url": "https://threejs.org/manual/"}, {"label": "YouTube: freeCodeCamp.org – Creative Web Development with Three.js and Blender – 3D Portfolio for Beginners (5:39:21)", "url": "https://www.youtube.com/watch?v=yhtdkuw9mbM"}, {"label": "YouTube: Fireship – Build a Mindblowing 3D Portfolio Website // Three.js Beginner’s Tutorial (15:38)", "url": "https://www.youtube.com/watch?v=Q7AOvWpIVHU"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "creative3d-3d-math",
+            "name": "3D Math Foundations",
+            "description": "Use vectors, matrices, and transforms to position and rotate objects.",
+            "outcomes": ["Apply vector and matrix transforms", "Explain coordinate spaces and projection"],
+            "estimatedHours": 12,
+            "prerequisites": [],
+            "resources": [{"label": "Khan Academy: Linear algebra", "url": "https://www.khanacademy.org/math/linear-algebra"}, {"label": "YouTube: freeCodeCamp.org – Project-Based Augmented Reality Course with Unity Engine and AR Foundation (2:02:24)", "url": "https://www.youtube.com/watch?v=FJAO6jDYljs"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Interactive 3D showcase",
+          "description": "Build an animated 3D scene alongside a generative sketch.",
+          "demonstrates": ["creative3d-canvas-sketches", "creative3d-threejs-basics", "creative3d-3d-math"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Create custom visuals with shaders and load real 3D assets.",
+        "skills": [
+          {
+            "id": "creative3d-glsl-shaders",
+            "name": "GLSL Shaders",
+            "description": "Write vertex and fragment shaders to control rendering on the GPU.",
+            "outcomes": ["Write a fragment shader effect", "Pass uniforms from JavaScript"],
+            "estimatedHours": 20,
+            "prerequisites": ["creative3d-threejs-basics", "creative3d-3d-math"],
+            "resources": [{"label": "The Book of Shaders", "url": "https://thebookofshaders.com/"}, {"label": "YouTube: The Cherno – How Shaders Work in OpenGL (17:37)", "url": "https://www.youtube.com/watch?v=5W7JLgFCkwI"}, {"label": "YouTube: Flutter – Building custom fragment shaders - Flutter Build Show (20:36)", "url": "https://www.youtube.com/watch?v=OpcPZdfJbq8"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "creative3d-assets-animation",
+            "name": "3D Assets and Animation",
+            "description": "Load, optimize, and animate models in glTF format.",
+            "outcomes": ["Load glTF models with textures", "Play and blend animations"],
+            "estimatedHours": 14,
+            "prerequisites": ["creative3d-threejs-basics"],
+            "resources": [{"label": "Three.js: Loading 3D models", "url": "https://threejs.org/docs/pages/GLTFLoader.html"}, {"label": "YouTube: CG Cookie – Learn Blender – 10 Tips for Creating 3D Assets for Virtual Reality (12:35)", "url": "https://www.youtube.com/watch?v=Djx5WltmTUU"}, {"label": "YouTube: freeCodeCamp.org – React 3D Animation Website Tutorial with ThreeJS (WebGi) & GSAP (1:46:20)", "url": "https://www.youtube.com/watch?v=IyBhFma4H1A"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "creative3d-generative-art",
+            "name": "Generative Art Systems",
+            "description": "Create systems of rules, noise, and particles that produce evolving art.",
+            "outcomes": ["Build a particle or flow-field system", "Control output with seeds and parameters"],
+            "estimatedHours": 14,
+            "prerequisites": ["creative3d-canvas-sketches"],
+            "resources": [{"label": "p5.js reference", "url": "https://p5js.org/reference/"}, {"label": "YouTube: freeCodeCamp.org – Creative Web Development with Three.js and Blender – 3D Portfolio for Beginners (5:39:21)", "url": "https://www.youtube.com/watch?v=yhtdkuw9mbM"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Shader-driven 3D art piece",
+          "description": "Combine a loaded model, a custom shader, and generative motion into one piece.",
+          "demonstrates": ["creative3d-glsl-shaders", "creative3d-assets-animation", "creative3d-generative-art"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Deliver immersive, high-performance experiences.",
+        "skills": [
+          {
+            "id": "creative3d-webxr",
+            "name": "WebXR for AR and VR",
+            "description": "Build immersive experiences that run on headsets and phones.",
+            "outcomes": ["Start an immersive session with controllers", "Place content in the real world with AR"],
+            "estimatedHours": 20,
+            "prerequisites": ["creative3d-threejs-basics", "creative3d-assets-animation"],
+            "resources": [{"label": "Immersive Web", "url": "https://immersiveweb.dev/"}, {"label": "YouTube: Apple Developer – WWDC24: Build immersive web experiences with WebXR | Apple (26:16)", "url": "https://www.youtube.com/watch?v=C3XDHjam-eI"}, {"label": "YouTube: Engineering Community – WebXR 101 by Daniel Vega Ceja (40:42)", "url": "https://www.youtube.com/watch?v=S0e7vcJJzXk"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "creative3d-webgpu-performance",
+            "name": "Graphics Performance and WebGPU",
+            "description": "Profile and optimize rendering for smooth frame rates.",
+            "outcomes": ["Reduce draw calls and memory use", "Explain how WebGPU differs from WebGL"],
+            "estimatedHours": 18,
+            "prerequisites": ["creative3d-glsl-shaders"],
+            "resources": [{"label": "MDN: WebGPU API", "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API"}, {"label": "YouTube: freeCodeCamp.org – WebGPU Tutorial - Advanced Graphics on the Web Course (2:06:30)", "url": "https://www.youtube.com/watch?v=KTFFdZSDiTU"}, {"label": "YouTube: Apple Developer – WWDC25: Unlock GPU computing with WebGPU | Apple (21:53)", "url": "https://www.youtube.com/watch?v=rPp7HZFNXnM"}],
+            "priority": "optional",
+            "completed": false
+          },
+          {
+            "id": "creative3d-interaction-audio",
+            "name": "Interaction and Spatial Audio",
+            "description": "Add physics, input, and sound to make worlds feel responsive.",
+            "outcomes": ["Handle pointer, gamepad, and hand input", "Add positional audio"],
+            "estimatedHours": 12,
+            "prerequisites": ["creative3d-assets-animation"],
+            "resources": [{"label": "MDN: Web Audio API", "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API"}, {"label": "YouTube: Unity Game Dev Made EZ (Easy) – Real-time 3D Spatial Audio Demo (4:17)", "url": "https://www.youtube.com/watch?v=QLkapqEBX7Q"}, {"label": "YouTube: Apple Developer – Meet Apple Spatial Audio Format and APAC | Meet with Apple (18:11)", "url": "https://www.youtube.com/watch?v=DpvR_74V4T4"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Immersive WebXR experience",
+          "description": "Ship an optimized interactive VR or AR scene with spatial audio.",
+          "demonstrates": ["creative3d-webxr", "creative3d-webgpu-performance", "creative3d-interaction-audio"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Immersive creative installation",
+      "description": "Publish a polished web-based 3D or XR experience that blends shaders, generative art, and interaction."
+    }
+  },
+  "desktop": {
+    "title": "Desktop & Cross-Platform Apps",
+    "description": "Build installable desktop applications that run on Windows, macOS, and Linux.",
+    "audience": "For learners who want to ship native-feeling applications using web or .NET technologies.",
+    "goal": "Ship a signed, auto-updating cross-platform desktop application.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Build and run a simple desktop app.",
+        "skills": [
+          {
+            "id": "desktop-app-fundamentals",
+            "name": "Desktop App Fundamentals",
+            "description": "Understand windows, event loops, and the desktop application lifecycle.",
+            "outcomes": ["Explain main and renderer process roles", "Create and manage windows and menus"],
+            "estimatedHours": 10,
+            "prerequisites": ["javascript-basics"],
+            "resources": [{"label": "Electron documentation", "url": "https://www.electronjs.org/docs/latest/"}, {"label": "YouTube: Fireship – Build a Desktop App with Electron... But Should You? (11:12)", "url": "https://www.youtube.com/watch?v=3yqDxhR2XxE"}, {"label": "YouTube: Traversy Media – Create a Desktop App With JavaScript & Electron (1:11:48)", "url": "https://www.youtube.com/watch?v=ML743nrkMHw"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "desktop-electron-app",
+            "name": "Electron Application",
+            "description": "Build a desktop app with web technologies and Electron.",
+            "outcomes": ["Build a UI with web technologies", "Use IPC between processes"],
+            "estimatedHours": 18,
+            "prerequisites": ["desktop-app-fundamentals", "modern-javascript"],
+            "resources": [{"label": "Electron: Quick start", "url": "https://www.electronjs.org/docs/latest/tutorial/tutorial-prerequisites"}, {"label": "YouTube: Fireship – Build a Desktop App with Electron... But Should You? (11:12)", "url": "https://www.youtube.com/watch?v=3yqDxhR2XxE"}, {"label": "YouTube: freeCodeCamp.org – Electron Course - Code Desktop Applications (inc. React and Typescript) (3:33:20)", "url": "https://www.youtube.com/watch?v=fP-371MN0Ck"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "desktop-local-storage",
+            "name": "Files and Local Storage",
+            "description": "Read, write, and persist data on the user's machine.",
+            "outcomes": ["Read and write files safely", "Persist user settings"],
+            "estimatedHours": 8,
+            "prerequisites": ["desktop-electron-app"],
+            "resources": [{"label": "Node.js: File system", "url": "https://nodejs.org/api/fs.html"}, {"label": "YouTube: IBM Technology – Block vs. File Storage (10:52)", "url": "https://www.youtube.com/watch?v=PmxWTTpXNLI"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Desktop markdown notes app",
+          "description": "Build a desktop notes editor that saves files locally.",
+          "demonstrates": ["desktop-app-fundamentals", "desktop-electron-app", "desktop-local-storage"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Use lighter and native frameworks and integrate with the operating system.",
+        "skills": [
+          {
+            "id": "desktop-tauri",
+            "name": "Tauri and Rust Backends",
+            "description": "Build small, fast desktop apps with a Rust core and web frontend.",
+            "outcomes": ["Create a Tauri app and call Rust commands", "Compare Tauri and Electron trade-offs"],
+            "estimatedHours": 20,
+            "prerequisites": ["desktop-electron-app"],
+            "resources": [{"label": "Tauri documentation", "url": "https://tauri.app/start/"}, {"label": "YouTube: Let's Get Rusty – Build your entire tech stack in Rust (7:22)", "url": "https://www.youtube.com/watch?v=luOgEhLE2sg"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "desktop-dotnet-ui",
+            "name": ".NET Desktop UI",
+            "description": "Build native interfaces with WPF or .NET MAUI.",
+            "outcomes": ["Build views with XAML", "Apply the MVVM pattern with data binding"],
+            "estimatedHours": 24,
+            "prerequisites": ["desktop-app-fundamentals"],
+            "resources": [{"label": ".NET MAUI documentation", "url": "https://learn.microsoft.com/en-us/dotnet/maui/"}, {"label": "YouTube: Microsoft Developer – Modernizing Desktop Apps on Windows 10 with .NET Core 3.0 and much more : Build 2018 (1:18:11)", "url": "https://www.youtube.com/watch?v=spgI12ZEBcs"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "desktop-os-integration",
+            "name": "Operating System Integration",
+            "description": "Use native features such as notifications, tray icons, and file associations.",
+            "outcomes": ["Add tray icons and notifications", "Handle native dialogs and shortcuts"],
+            "estimatedHours": 10,
+            "prerequisites": ["desktop-electron-app"],
+            "resources": [{"label": "Electron: Notifications", "url": "https://www.electronjs.org/docs/latest/tutorial/notifications"}, {"label": "YouTube: CrashCourse – Operating Systems: Crash Course Computer Science #18 (13:36)", "url": "https://www.youtube.com/watch?v=26QPDBe-NB8"}, {"label": "YouTube: Fireship – Every operating system concept in one video… (11:31)", "url": "https://www.youtube.com/watch?v=MtxP2pyCvYA"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Cross-framework utility app",
+          "description": "Build the same utility in two frameworks and compare size, speed, and effort.",
+          "demonstrates": ["desktop-tauri", "desktop-dotnet-ui", "desktop-os-integration"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Package, secure, and distribute apps with automatic updates.",
+        "skills": [
+          {
+            "id": "desktop-packaging",
+            "name": "Packaging and Installers",
+            "description": "Produce installers for each platform with code signing.",
+            "outcomes": ["Build installers for Windows, macOS, and Linux", "Sign and notarize builds"],
+            "estimatedHours": 14,
+            "prerequisites": ["desktop-electron-app"],
+            "resources": [{"label": "electron-builder", "url": "https://www.electron.build/"}, {"label": "YouTube: Fireship – Build 5 Apps in 5 Minutes with Flutter… But should you? (8:53)", "url": "https://www.youtube.com/watch?v=7JdcGBSWo50"}, {"label": "YouTube: freeCodeCamp.org – .NET MAUI Course for Beginners – Create Cross-Platform Apps with C# (3:14:15)", "url": "https://www.youtube.com/watch?v=n3tA3Ku65_8"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "desktop-auto-update",
+            "name": "Auto-Update and Release Pipelines",
+            "description": "Deliver updates automatically through a release pipeline.",
+            "outcomes": ["Configure auto-update channels", "Automate release builds in CI"],
+            "estimatedHours": 12,
+            "prerequisites": ["desktop-packaging"],
+            "resources": [{"label": "Electron: Updating applications", "url": "https://www.electronjs.org/docs/latest/tutorial/updates"}, {"label": "YouTube: TechWorld with Nana – Azure DevOps Tutorial for Beginners | CI/CD with Azure Pipelines (36:29)", "url": "https://www.youtube.com/watch?v=4BibQ69MD8c"}, {"label": "YouTube: Microsoft Tech Community – Azure Pipelines for web, container and mobile apps (1:01:55)", "url": "https://www.youtube.com/watch?v=JhAnTikIMoU"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "desktop-security-performance",
+            "name": "Desktop Security and Performance",
+            "description": "Harden apps and keep memory and startup time low.",
+            "outcomes": ["Apply context isolation and least privilege", "Profile startup time and memory"],
+            "estimatedHours": 12,
+            "prerequisites": ["desktop-electron-app"],
+            "resources": [{"label": "Electron: Security", "url": "https://www.electronjs.org/docs/latest/tutorial/security"}, {"label": "YouTube: NetworkChuck – Your Remote Desktop SUCKS!! Try this instead (FREE + Open Source) (22:30)", "url": "https://www.youtube.com/watch?v=EXL8mMUXs88"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Signed auto-updating release",
+          "description": "Ship a signed installer with auto-update and a hardened security configuration.",
+          "demonstrates": ["desktop-packaging", "desktop-auto-update", "desktop-security-performance"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Cross-platform desktop product",
+      "description": "Release a production-ready desktop app with installers, auto-update, and documented security practices."
+    }
+  },
+  "genai": {
+    "title": "Generative AI & LLM Engineering",
+    "description": "Build reliable applications on large language models using prompting, retrieval, agents, and evaluation.",
+    "audience": "For developers who want to design, ship, and operate LLM-powered products.",
+    "goal": "Ship an evaluated, safe, and cost-aware LLM application with retrieval and tool use.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Call LLMs effectively and understand how they work.",
+        "skills": [
+          {
+            "id": "genai-llm-basics",
+            "name": "LLM Fundamentals",
+            "description": "Understand tokens, context windows, sampling, and model limitations.",
+            "outcomes": ["Explain tokenization and context limits", "Describe hallucination and its causes"],
+            "estimatedHours": 10,
+            "prerequisites": ["python"],
+            "resources": [{"label": "Hugging Face LLM Course", "url": "https://huggingface.co/learn/llm-course"}, {"label": "YouTube: IBM Technology – How Large Language Models Work (5:34)", "url": "https://www.youtube.com/watch?v=5sLYAQS9sWQ"}, {"label": "YouTube: 3Blue1Brown – Large Language Models explained briefly (7:58)", "url": "https://www.youtube.com/watch?v=LPZh9BOjkQs"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "genai-prompting",
+            "name": "Prompt Engineering",
+            "description": "Write clear prompts and use structured outputs to get dependable results.",
+            "outcomes": ["Apply few-shot and step-by-step prompting", "Request and validate structured JSON output"],
+            "estimatedHours": 10,
+            "prerequisites": ["genai-llm-basics"],
+            "resources": [{"label": "Prompt Engineering Guide", "url": "https://www.promptingguide.ai/"}, {"label": "YouTube: freeCodeCamp.org – Prompt Engineering Tutorial – Master ChatGPT and LLM Responses (41:36)", "url": "https://www.youtube.com/watch?v=_ZvnD73m40o"}, {"label": "YouTube: Tech With Tim – Prompt Engineering Full Course (37:44)", "url": "https://www.youtube.com/watch?v=2BpCk4d2Cc0"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "genai-api-integration",
+            "name": "LLM API Integration",
+            "description": "Integrate model APIs with streaming, error handling, and conversation state.",
+            "outcomes": ["Call a model API from code", "Stream responses and manage chat history"],
+            "estimatedHours": 12,
+            "prerequisites": ["genai-prompting", "api-design"],
+            "resources": [{"label": "OpenAI API documentation", "url": "https://platform.openai.com/docs"}, {"label": "YouTube: Tech With Tim – How To Build an API with Python (LLM Integration, FastAPI, Ollama & More) (21:17)", "url": "https://www.youtube.com/watch?v=cy6EAp4iNN4"}, {"label": "YouTube: IBM Technology – MCP vs API: Simplifying AI Agent Integration with External Data (13:11)", "url": "https://www.youtube.com/watch?v=7j1t3UZA1TY"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Structured-output assistant",
+          "description": "Build a chat assistant that returns validated structured data.",
+          "demonstrates": ["genai-llm-basics", "genai-prompting", "genai-api-integration"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Ground models in your own data with retrieval and evaluate quality.",
+        "skills": [
+          {
+            "id": "genai-embeddings",
+            "name": "Embeddings and Vector Databases",
+            "description": "Represent text as vectors and search it by similarity.",
+            "outcomes": ["Generate embeddings and compare similarity", "Index and query a vector database"],
+            "estimatedHours": 14,
+            "prerequisites": ["genai-api-integration", "backend-databases"],
+            "resources": [{"label": "pgvector", "url": "https://github.com/pgvector/pgvector"}, {"label": "YouTube: IBM Technology – What is a Vector Database? Powering Semantic Search & AI Applications (9:49)", "url": "https://www.youtube.com/watch?v=gl1r1XV0SLw"}, {"label": "YouTube: freeCodeCamp.org – Vector Embeddings Tutorial – Code Your Own AI Assistant with GPT-4 API +… (36:23)", "url": "https://www.youtube.com/watch?v=yfHHvmaMkcA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "genai-rag",
+            "name": "Retrieval-Augmented Generation",
+            "description": "Combine retrieval with generation to answer from trusted documents.",
+            "outcomes": ["Chunk, index, and retrieve documents", "Cite sources in generated answers"],
+            "estimatedHours": 20,
+            "prerequisites": ["genai-embeddings"],
+            "resources": [{"label": "LangChain documentation", "url": "https://python.langchain.com/docs/"}, {"label": "YouTube: IBM Technology – What is Retrieval-Augmented Generation (RAG)? (6:36)", "url": "https://www.youtube.com/watch?v=T-D1OfcDW1M"}, {"label": "YouTube: MIT OpenCourseWare – 9: Generative AI – Large Language Models (LLMs) and Retrieval Augmented… (1:14:30)", "url": "https://www.youtube.com/watch?v=KGDe1QvfKJ8"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "genai-evaluation",
+            "name": "LLM Evaluation",
+            "description": "Measure the quality of LLM outputs with test sets and automated graders.",
+            "outcomes": ["Build a golden evaluation set", "Score outputs with metrics and model graders"],
+            "estimatedHours": 14,
+            "prerequisites": ["genai-prompting"],
+            "resources": [{"label": "OpenAI: Evals guide", "url": "https://platform.openai.com/docs/guides/evals"}, {"label": "YouTube: IBM Technology – LLM as a Judge: Scaling AI Evaluation Strategies (6:09)", "url": "https://www.youtube.com/watch?v=trfUBIDeI1Y"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Document question-answering app",
+          "description": "Build a RAG app over a document set with an evaluation suite.",
+          "demonstrates": ["genai-embeddings", "genai-rag", "genai-evaluation"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Build agents and operate LLM systems safely and efficiently.",
+        "skills": [
+          {
+            "id": "genai-agents-tools",
+            "name": "Agents and Tool Use",
+            "description": "Let models call functions and plan multi-step tasks.",
+            "outcomes": ["Define tools with function calling", "Build an agent loop with guardrails"],
+            "estimatedHours": 20,
+            "prerequisites": ["genai-rag"],
+            "resources": [{"label": "OpenAI: Function calling", "url": "https://platform.openai.com/docs/guides/function-calling"}, {"label": "YouTube: Tech With Tim – Build an AI Agent From Scratch in Python - Tutorial for Beginners (34:20)", "url": "https://www.youtube.com/watch?v=bTMPwUgLZf0"}, {"label": "YouTube: IBM Technology – Essential Skills for Becoming an AI Engineer: RAG, AI Agents, & More (10:55)", "url": "https://www.youtube.com/watch?v=XN3xNJvWXsc"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "genai-safety",
+            "name": "Safety and Security",
+            "description": "Defend against prompt injection, data leakage, and harmful output.",
+            "outcomes": ["Mitigate prompt injection risks", "Add content filters and access controls"],
+            "estimatedHours": 12,
+            "prerequisites": ["genai-agents-tools"],
+            "resources": [{"label": "OWASP Top 10 for LLM Applications", "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"}, {"label": "YouTube: Krish Naik – The Complete AI Security Course In 8 Hours-AI Guardrails, LLM Evals & Memory And… (7:48:39)", "url": "https://www.youtube.com/watch?v=rQE3w8Qjx98"}, {"label": "YouTube: IBM Technology – Understanding AI Agent Security: Safeguard LLM Systems Effectively (8:46)", "url": "https://www.youtube.com/watch?v=SAYmsKxNDF4"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "genai-cost-latency",
+            "name": "Cost, Latency, and Fine-Tuning",
+            "description": "Optimize spend and response time with caching, routing, and fine-tuning.",
+            "outcomes": ["Reduce cost with caching and smaller models", "Decide when fine-tuning is justified"],
+            "estimatedHours": 14,
+            "prerequisites": ["genai-evaluation", "deep-learning"],
+            "resources": [{"label": "Hugging Face LLM Course", "url": "https://huggingface.co/learn/llm-course"}, {"label": "YouTube: IBM Technology – What is Prompt Caching? Optimize LLM Latency with AI Transformers (9:06)", "url": "https://www.youtube.com/watch?v=u57EnkQaUTY"}, {"label": "YouTube: freeCodeCamp.org – Fine Tuning LLM Models – Generative AI Course (2:37:05)", "url": "https://www.youtube.com/watch?v=iOdFUJiB0Zc"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Tool-using research agent",
+          "description": "Build a guarded agent with tools, safety checks, and cost tracking.",
+          "demonstrates": ["genai-agents-tools", "genai-safety", "genai-cost-latency"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Production LLM application",
+      "description": "Deliver a RAG and agent application with evaluation, safety controls, and cost and latency monitoring."
+    }
+  },
+  "datascience": {
+    "title": "Data Science & Statistics",
+    "description": "Use statistics and data analysis to draw sound conclusions and guide decisions.",
+    "audience": "For learners who want to turn data into reliable evidence and clear recommendations.",
+    "goal": "Design and analyze an experiment and communicate defensible results to stakeholders.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Describe data and understand probability.",
+        "skills": [
+          {
+            "id": "datascience-descriptive-stats",
+            "name": "Descriptive Statistics",
+            "description": "Summarize data with measures of center, spread, and distribution.",
+            "outcomes": ["Compute and interpret summary statistics", "Choose suitable charts for distributions"],
+            "estimatedHours": 12,
+            "prerequisites": [],
+            "resources": [{"label": "Khan Academy: Statistics and probability", "url": "https://www.khanacademy.org/math/statistics-probability"}, {"label": "YouTube: Krish Naik – Complete Statistics For Data Science In 6 hours By Krish Naik (5:28:32)", "url": "https://www.youtube.com/watch?v=LZzq1zSL1bs"}, {"label": "YouTube: CrashCourse – What Is Statistics: Crash Course Statistics #1 (13:00)", "url": "https://www.youtube.com/watch?v=sxQaBpKfDRk"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "datascience-probability",
+            "name": "Probability Foundations",
+            "description": "Reason about uncertainty with probability rules and distributions.",
+            "outcomes": ["Apply conditional probability and Bayes' rule", "Use common distributions"],
+            "estimatedHours": 16,
+            "prerequisites": ["datascience-descriptive-stats"],
+            "resources": [{"label": "MIT OpenCourseWare: Probability and Statistics", "url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/"}, {"label": "YouTube: Derek Banas – Probability for Data Science & Machine Learning (46:55)", "url": "https://www.youtube.com/watch?v=sEte4hXEgJ8"}, {"label": "YouTube: CrashCourse – Probability Part 1: Rules and Patterns: Crash Course Statistics #13 (12:01)", "url": "https://www.youtube.com/watch?v=OyddY7DlV58"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "datascience-data-wrangling",
+            "name": "Data Wrangling and Visualization",
+            "description": "Clean, reshape, and visualize data with Python tools.",
+            "outcomes": ["Clean and join datasets with pandas", "Create clear plots with Matplotlib or Seaborn"],
+            "estimatedHours": 18,
+            "prerequisites": ["python", "data-analysis"],
+            "resources": [{"label": "pandas documentation", "url": "https://pandas.pydata.org/docs/"}, {"label": "YouTube: Data Community DC – May - Data Wrangling & Visualization of Public / Government Data (1:57:10)", "url": "https://www.youtube.com/watch?v=QrWcZc1rEd8"}, {"label": "YouTube: freeCodeCamp.org – Data Analysis with Python Course - Numpy, Pandas, Data Visualization (9:56:23)", "url": "https://www.youtube.com/watch?v=GPVsHOlRBBI"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Exploratory data analysis report",
+          "description": "Clean a public dataset and report its key distributions and patterns.",
+          "demonstrates": ["datascience-descriptive-stats", "datascience-probability", "datascience-data-wrangling"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Make inferences and model relationships.",
+        "skills": [
+          {
+            "id": "datascience-inference",
+            "name": "Statistical Inference",
+            "description": "Estimate quantities and quantify uncertainty with confidence intervals.",
+            "outcomes": ["Build and interpret confidence intervals", "Explain sampling distributions and the central limit theorem"],
+            "estimatedHours": 18,
+            "prerequisites": ["datascience-probability"],
+            "resources": [{"label": "OpenIntro Statistics", "url": "https://www.openintro.org/book/os/"}, {"label": "YouTube: Simons Institute for the Theory of Computing – Statistical Inference I (55:39)", "url": "https://www.youtube.com/watch?v=9S4KXkyb3WE"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "datascience-hypothesis-testing",
+            "name": "Hypothesis Testing",
+            "description": "Test claims with p-values, effect sizes, and appropriate tests.",
+            "outcomes": ["Select and run t-tests and chi-square tests", "Interpret p-values and effect sizes correctly"],
+            "estimatedHours": 16,
+            "prerequisites": ["datascience-inference"],
+            "resources": [{"label": "SciPy statistics tutorial", "url": "https://docs.scipy.org/doc/scipy/tutorial/stats.html"}, {"label": "YouTube: StatQuest with Josh Starmer – Hypothesis Testing and The Null Hypothesis, Clearly Explained!!! (14:41)", "url": "https://www.youtube.com/watch?v=0oc49DyA3hU"}, {"label": "YouTube: Khan Academy – Idea behind hypothesis testing (9:58)", "url": "https://www.youtube.com/watch?v=cn4S3QqEBRg"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "datascience-regression",
+            "name": "Regression Modeling",
+            "description": "Model relationships with linear and logistic regression.",
+            "outcomes": ["Fit and interpret regression models", "Check assumptions and diagnose residuals"],
+            "estimatedHours": 20,
+            "prerequisites": ["datascience-inference", "data-analysis"],
+            "resources": [{"label": "statsmodels documentation", "url": "https://www.statsmodels.org/stable/index.html"}, {"label": "YouTube: CrashCourse – Regression: Crash Course Statistics #32 (12:40)", "url": "https://www.youtube.com/watch?v=WWqE7YHR4Jc"}, {"label": "YouTube: Data Professor – Machine Learning in Python: Building a Linear Regression Model (17:46)", "url": "https://www.youtube.com/watch?v=R15LjD8aCzc"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Factors driving an outcome",
+          "description": "Test hypotheses and fit regression models on a real dataset.",
+          "demonstrates": ["datascience-inference", "datascience-hypothesis-testing", "datascience-regression"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Design experiments, apply advanced methods, and communicate results.",
+        "skills": [
+          {
+            "id": "datascience-experiments",
+            "name": "Experiment Design and A/B Testing",
+            "description": "Plan and analyze randomized experiments with proper power and guardrails.",
+            "outcomes": ["Compute sample size and power", "Avoid peeking and multiple-testing errors"],
+            "estimatedHours": 20,
+            "prerequisites": ["datascience-hypothesis-testing"],
+            "resources": [{"label": "Statsmodels: Power and sample size", "url": "https://www.statsmodels.org/stable/stats.html#power-and-sample-size-calculations"}, {"label": "YouTube: codebasics – Simple explanation of A/B Testing (5:49)", "url": "https://www.youtube.com/watch?v=eiIhTbFP0ls"}, {"label": "YouTube: freeCodeCamp.org – Data Science Essentials – Crash Course in A/B Testing with Case Study (2:33:06)", "url": "https://www.youtube.com/watch?v=KZe0C0Qq4p0"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "datascience-bayesian-causal",
+            "name": "Bayesian and Causal Methods",
+            "description": "Use Bayesian updating and causal reasoning beyond simple correlation.",
+            "outcomes": ["Apply Bayesian estimation to a problem", "Distinguish correlation from causation"],
+            "estimatedHours": 24,
+            "prerequisites": ["datascience-regression", "classical-ml"],
+            "resources": [{"label": "PyMC documentation", "url": "https://www.pymc.io/projects/docs/en/stable/"}, {"label": "YouTube: CrashCourse – You Know I'm All About that Bayes: Crash Course Statistics #24 (12:05)", "url": "https://www.youtube.com/watch?v=9TDjifpGj-k"}, {"label": "YouTube: Harvard Data Science Initiative – Tutorial | Bayesian causal inference: A critical review and tutorial (Standard… (1:47:18)", "url": "https://www.youtube.com/watch?v=7Cwl6DgL64o"}],
+            "priority": "optional",
+            "completed": false
+          },
+          {
+            "id": "datascience-communication",
+            "name": "Communicating Results",
+            "description": "Present findings and uncertainty clearly to non-technical audiences.",
+            "outcomes": ["Tell a data story with clear visuals", "Report uncertainty and limitations honestly"],
+            "estimatedHours": 10,
+            "prerequisites": ["datascience-data-wrangling"],
+            "resources": [{"label": "Seaborn tutorial", "url": "https://seaborn.pydata.org/tutorial.html"}, {"label": "YouTube: Stanford Graduate School of Business – Class Takeaways — Essentials of Strategic Communication (5:51)", "url": "https://www.youtube.com/watch?v=MfqPp37KGBQ"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "A/B test analysis and recommendation",
+          "description": "Design, analyze, and present an A/B test with a decision recommendation.",
+          "demonstrates": ["datascience-experiments", "datascience-bayesian-causal", "datascience-communication"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "End-to-end data science study",
+      "description": "Frame a question, design and analyze an experiment or observational study, and deliver a stakeholder-ready report."
+    }
+  },
+  "cvnlp": {
+    "title": "Computer Vision & NLP",
+    "description": "Build models that understand images and text, from classical methods to modern transformers.",
+    "audience": "For learners who want to apply deep learning to visual and language data.",
+    "goal": "Train, fine-tune, and rigorously evaluate vision and language models for real tasks.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Work with images and text using foundational techniques.",
+        "skills": [
+          {
+            "id": "cvnlp-image-processing",
+            "name": "Image Processing Basics",
+            "description": "Load, transform, and analyze images with classical techniques.",
+            "outcomes": ["Apply filters, thresholds, and edge detection", "Represent images as arrays"],
+            "estimatedHours": 12,
+            "prerequisites": ["python"],
+            "resources": [{"label": "OpenCV-Python tutorials", "url": "https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html"}, {"label": "YouTube: IBM Technology – What Are Vision Language Models? How AI Sees & Understands Images (9:48)", "url": "https://www.youtube.com/watch?v=lOD_EE96jhM"}, {"label": "YouTube: Rob Mulla – Image Processing with OpenCV and Python (20:38)", "url": "https://www.youtube.com/watch?v=kSqxn6zGE0c"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "cvnlp-text-processing",
+            "name": "Text Processing and Classification",
+            "description": "Clean text and build classifiers with bag-of-words and TF-IDF features.",
+            "outcomes": ["Tokenize and normalize text", "Train a baseline text classifier"],
+            "estimatedHours": 14,
+            "prerequisites": ["python", "classical-ml"],
+            "resources": [{"label": "scikit-learn: Working with text data", "url": "https://scikit-learn.org/stable/modules/feature_extraction.html"}, {"label": "YouTube: TensorFlow – Natural Language Processing - Tokenization (NLP Zero to Hero - Part 1) (4:39)", "url": "https://www.youtube.com/watch?v=fNxaJsNG3-s"}, {"label": "YouTube: IBM Technology – What is NLP (Natural Language Processing)? (9:38)", "url": "https://www.youtube.com/watch?v=fLvJ8VdHLA0"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "cvnlp-pytorch-basics",
+            "name": "Neural Networks with PyTorch",
+            "description": "Build and train neural networks with a deep learning framework.",
+            "outcomes": ["Write a training loop", "Track loss and accuracy on validation data"],
+            "estimatedHours": 18,
+            "prerequisites": ["deep-learning"],
+            "resources": [{"label": "PyTorch tutorials", "url": "https://pytorch.org/tutorials/"}, {"label": "YouTube: Rob Mulla – Build Your First Pytorch Model In Minutes! [Tutorial + Code] (31:32)", "url": "https://www.youtube.com/watch?v=tHL5STNJKag"}, {"label": "YouTube: Socratica – Neural Networks with PyTorch (Python Tutorial) (17:09)", "url": "https://www.youtube.com/watch?v=yNX4kDpM5k4"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Image and text baselines",
+          "description": "Build a classical image pipeline and a baseline text classifier.",
+          "demonstrates": ["cvnlp-image-processing", "cvnlp-text-processing", "cvnlp-pytorch-basics"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Use CNNs and transformers for core vision and language tasks.",
+        "skills": [
+          {
+            "id": "cvnlp-cnn-classification",
+            "name": "CNN Image Classification",
+            "description": "Classify images with convolutional networks and transfer learning.",
+            "outcomes": ["Train a CNN with data augmentation", "Fine-tune a pretrained model"],
+            "estimatedHours": 20,
+            "prerequisites": ["cvnlp-pytorch-basics", "cvnlp-image-processing"],
+            "resources": [{"label": "Stanford CS231n", "url": "https://cs231n.github.io/"}, {"label": "YouTube: StatQuest with Josh Starmer – Neural Networks Part 8: Image Classification with Convolutional Neural Networks… (15:24)", "url": "https://www.youtube.com/watch?v=HGwBXDKFk9I"}, {"label": "YouTube: codebasics – Image classification using CNN (CIFAR10 dataset) | Deep Learning Tutorial 24… (28:12)", "url": "https://www.youtube.com/watch?v=7HPwo4wnJeA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "cvnlp-transformers",
+            "name": "Transformers for NLP",
+            "description": "Use attention-based models for text understanding and generation.",
+            "outcomes": ["Explain self-attention", "Use pretrained transformers for classification"],
+            "estimatedHours": 22,
+            "prerequisites": ["cvnlp-pytorch-basics", "cvnlp-text-processing"],
+            "resources": [{"label": "Hugging Face NLP Course", "url": "https://huggingface.co/learn/nlp-course"}, {"label": "YouTube: IBM Technology – What are Transformers (Machine Learning Model)? (5:51)", "url": "https://www.youtube.com/watch?v=ZXiruGOCn9s"}, {"label": "YouTube: 3Blue1Brown – Transformers, the tech behind LLMs | Deep Learning Chapter 5 (27:14)", "url": "https://www.youtube.com/watch?v=wjZofJX0v4M"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "cvnlp-evaluation",
+            "name": "Model Evaluation and Error Analysis",
+            "description": "Evaluate vision and language models with appropriate metrics and error analysis.",
+            "outcomes": ["Choose metrics such as F1 and confusion matrices", "Analyze failure cases and dataset bias"],
+            "estimatedHours": 10,
+            "prerequisites": ["cvnlp-text-processing"],
+            "resources": [{"label": "scikit-learn: Model evaluation", "url": "https://scikit-learn.org/stable/modules/model_evaluation.html"}, {"label": "YouTube: Roboflow – Model Evaluation for Computer Vision (26:22)", "url": "https://www.youtube.com/watch?v=nbCY93BMw0U"}, {"label": "YouTube: Nicolai Nielsen – How To Evaluate Computer Vision Models and Data (24:24)", "url": "https://www.youtube.com/watch?v=C4gG-HRmmeM"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Multimodal classifier suite",
+          "description": "Fine-tune an image classifier and a text classifier and compare their errors.",
+          "demonstrates": ["cvnlp-cnn-classification", "cvnlp-transformers", "cvnlp-evaluation"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Solve harder tasks such as detection, segmentation, and efficient fine-tuning.",
+        "skills": [
+          {
+            "id": "cvnlp-detection-segmentation",
+            "name": "Object Detection and Segmentation",
+            "description": "Locate and outline objects in images.",
+            "outcomes": ["Train or fine-tune a detector", "Evaluate with IoU and mAP"],
+            "estimatedHours": 24,
+            "prerequisites": ["cvnlp-cnn-classification", "cvnlp-evaluation"],
+            "resources": [{"label": "Ultralytics documentation", "url": "https://docs.ultralytics.com/"}, {"label": "YouTube: Stanford University School of Engineering – Lecture 11 | Detection and Segmentation (1:14:26)", "url": "https://www.youtube.com/watch?v=nDPWywWRIRo"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "cvnlp-finetuning-nlp",
+            "name": "Fine-Tuning Language Models",
+            "description": "Adapt pretrained language models to tasks such as NER and summarization.",
+            "outcomes": ["Fine-tune a transformer on custom data", "Apply parameter-efficient methods such as LoRA"],
+            "estimatedHours": 24,
+            "prerequisites": ["cvnlp-transformers", "cvnlp-evaluation"],
+            "resources": [{"label": "Stanford CS224n", "url": "https://web.stanford.edu/class/cs224n/"}, {"label": "YouTube: IBM Technology – What Are Vision Language Models? How AI Sees & Understands Images (9:48)", "url": "https://www.youtube.com/watch?v=lOD_EE96jhM"}, {"label": "YouTube: Tech With Tim – How to Fine-Tune any AI Model Locally (FULL Tutorial) (41:06)", "url": "https://www.youtube.com/watch?v=4JofSJIrjwU"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "cvnlp-deployment",
+            "name": "Deploying Vision and NLP Models",
+            "description": "Serve and optimize models for real-world inference.",
+            "outcomes": ["Export and serve a model behind an API", "Reduce latency with batching or quantization"],
+            "estimatedHours": 16,
+            "prerequisites": ["cvnlp-cnn-classification", "containers"],
+            "resources": [{"label": "PyTorch: Deployment", "url": "https://pytorch.org/tutorials/"}, {"label": "YouTube: Krish Naik – Complete ML,DL,NLP And Computer Vision Project Guide With Free Videos And Materials (7:49)", "url": "https://www.youtube.com/watch?v=xHwiBF0wVF8"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Document and image understanding service",
+          "description": "Build a service that detects objects and extracts entities, with documented evaluation.",
+          "demonstrates": ["cvnlp-detection-segmentation", "cvnlp-finetuning-nlp", "cvnlp-deployment"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Applied vision-and-language system",
+      "description": "Deliver a deployed model that combines image and text understanding with a rigorous evaluation report."
+    }
+  }
+}

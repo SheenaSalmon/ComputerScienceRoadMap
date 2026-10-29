@@ -1,0 +1,96 @@
+[
+  {
+    "id": "foundations",
+    "label": "Foundations & Practice",
+    "tracks": [
+      { "id": "foundations", "label": "CS Foundations" },
+      { "id": "swe", "label": "Software Engineering" },
+      { "id": "systems", "label": "Systems & Low-Level" }
+    ]
+  },
+  {
+    "id": "languages",
+    "label": "Languages & Paradigms",
+    "tracks": [
+      { "id": "lang-cpp", "label": "C++" },
+      { "id": "lang-c", "label": "C" },
+      { "id": "lang-csharp", "label": "C#" },
+      { "id": "lang-cobol", "label": "COBOL" },
+      { "id": "lang-python", "label": "Python" },
+      { "id": "lang-typescript", "label": "JavaScript & TypeScript" },
+      { "id": "lang-java", "label": "Java" },
+      { "id": "lang-go", "label": "Go" },
+      { "id": "lang-rust", "label": "Rust" },
+      { "id": "lang-functional", "label": "Functional Programming" },
+      { "id": "lang-oop", "label": "Object-Oriented Design" }
+    ]
+  },
+  {
+    "id": "build",
+    "label": "Build",
+    "tracks": [
+      { "id": "frontend", "label": "Frontend" },
+      { "id": "backend", "label": "Backend" },
+      { "id": "fullstack", "label": "Full-Stack" },
+      { "id": "mobile", "label": "Mobile" },
+      { "id": "api", "label": "API & Integration" },
+      { "id": "desktop", "label": "Desktop & Cross-Platform" },
+      { "id": "games", "label": "Game Development" },
+      { "id": "creative3d", "label": "Web3D, AR/VR & Creative" },
+      { "id": "ux", "label": "UX & Product Design" }
+    ]
+  },
+  {
+    "id": "data",
+    "label": "Data & AI",
+    "tracks": [
+      { "id": "ai", "label": "AI & Machine Learning" },
+      { "id": "genai", "label": "Generative AI & LLMs" },
+      { "id": "datascience", "label": "Data Science & Statistics" },
+      { "id": "cvnlp", "label": "Computer Vision & NLP" },
+      { "id": "data", "label": "Data Engineering" },
+      { "id": "databases", "label": "Databases" }
+    ]
+  },
+  {
+    "id": "infrastructure",
+    "label": "Infrastructure & Security",
+    "tracks": [
+      { "id": "cloud", "label": "Cloud & DevOps" },
+      { "id": "sre", "label": "Site Reliability (SRE)" },
+      { "id": "security", "label": "Cybersecurity" },
+      { "id": "distributed", "label": "Distributed Systems" },
+      { "id": "blockchain", "label": "Blockchain & Web3" },
+      { "id": "embedded", "label": "Embedded & IoT" }
+    ]
+  },
+  {
+    "id": "specialized",
+    "label": "Specialized & Emerging",
+    "tracks": [
+      { "id": "quantum", "label": "Quantum Computing" },
+      { "id": "robotics", "label": "Robotics" },
+      { "id": "bioinformatics", "label": "Bioinformatics" },
+      { "id": "hpc", "label": "High-Performance Computing" }
+    ]
+  },
+  {
+    "id": "career",
+    "label": "Career & Professional Skills",
+    "tracks": [
+      { "id": "interviews", "label": "Technical Interviews" },
+      { "id": "portfolio", "label": "Portfolio & Career" },
+      { "id": "opensource", "label": "Open-Source Contribution" },
+      { "id": "techwriting", "label": "Technical Writing" }
+    ]
+  },
+  {
+    "id": "leadership",
+    "label": "Leadership & Product",
+    "tracks": [
+      { "id": "engmgmt", "label": "Engineering Management" },
+      { "id": "productmgmt", "label": "Product Management" },
+      { "id": "projectmgmt", "label": "Technical Project Management" }
+    ]
+  }
+]

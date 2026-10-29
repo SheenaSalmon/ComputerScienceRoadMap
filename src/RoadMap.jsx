@@ -1,4 +1,13 @@
-import roadmapData from "./assets/roadmap.json";
+import roadmapData from "./roadmapData";
+
+// Lookup across all tracks so prerequisite ids (including cross-track ones) show as readable names
+const skillsById = Object.fromEntries(
+  Object.values(roadmapData).flatMap((track) =>
+    track.levels.flatMap((level) =>
+      level.skills.map((skill) => [skill.id, skill.name]),
+    ),
+  ),
+);
 
 // This project does not use a runtime prop-types dependency.
 // eslint-disable-next-line react/prop-types
@@ -12,13 +21,6 @@ const Roadmap = ({ category }) => {
       </p>
     );
   }
-
-  // Lookup so prerequisite ids can be shown as readable skill names
-  const skillsById = Object.fromEntries(
-    roadmap.levels.flatMap((level) =>
-      level.skills.map((skill) => [skill.id, skill.name]),
-    ),
-  );
 
   return (
     <main>
@@ -74,11 +76,16 @@ const Roadmap = ({ category }) => {
               {level.skills.map((skill) => (
                 <div className="col-12 col-lg-6" key={skill.id}>
                   <article className="skill-card">
-                    <div className="d-flex justify-content-between align-items-start gap-2 mb-2">
+                    <div className="skill-heading d-flex justify-content-between align-items-start gap-2 mb-2">
                       <h4 className="h5 mb-0">{skill.name}</h4>
-                      {Number.isFinite(skill.estimatedHours) && (
-                        <span className="pill">~{skill.estimatedHours} hrs</span>
-                      )}
+                      <div className="skill-badges d-flex gap-1 flex-shrink-0">
+                        {skill.priority === "optional" && (
+                          <span className="pill">Optional</span>
+                        )}
+                        {Number.isFinite(skill.estimatedHours) && (
+                          <span className="pill">~{skill.estimatedHours} hrs</span>
+                        )}
+                      </div>
                     </div>
                     <p className="muted">{skill.description}</p>
 

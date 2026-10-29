@@ -1,0 +1,1797 @@
+{
+  "quantum": {
+    "title": "Quantum Computing",
+    "description": "Explore quantum information and build small quantum circuits with established development tools.",
+    "audience": "For learners with programming experience who want a conceptual and practical introduction to quantum computing.",
+    "goal": "Explain core quantum ideas and implement and assess small quantum workflows in simulation.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Describe qubits and construct simple measured circuits.",
+        "skills": [
+          {
+            "id": "quantum-qubits",
+            "name": "Qubits and Measurement",
+            "description": "Explain how quantum states encode information and how measurement yields outcomes.",
+            "outcomes": [
+              "Describe superposition and measurement",
+              "Interpret simple outcome probabilities"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "IBM Quantum Learning",
+                "url": "https://learning.quantum.ibm.com/"
+              },
+              {"label": "YouTube: Sabine Hossenfelder – The Problem with Quantum Measurement (6:57)", "url": "https://www.youtube.com/watch?v=Be3HlA_9968"},
+              {"label": "YouTube: The Quantum Garage – An Example of Quantum Measurement (4:22)", "url": "https://www.youtube.com/watch?v=R9QIj4bRuxM"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "quantum-gates",
+            "name": "Quantum Gates",
+            "description": "Use common single- and two-qubit gates to describe reversible state transformations.",
+            "outcomes": [
+              "Recognize X, H, and CNOT gates",
+              "Trace a short gate sequence"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "quantum-qubits"
+            ],
+            "resources": [
+              {
+                "label": "IBM Quantum Learning",
+                "url": "https://learning.quantum.ibm.com/"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Quantum Computing Course – Math and Theory for Beginners (1:36:04)", "url": "https://www.youtube.com/watch?v=tsbCSkvHhMo"},
+              {"label": "YouTube: 3Blue1Brown – But what is quantum computing? (Grover's Algorithm) (36:54)", "url": "https://www.youtube.com/watch?v=RQWpF2Gb-gU"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "quantum-circuits",
+            "name": "Quantum Circuits",
+            "description": "Represent quantum operations and measurement as ordered circuit diagrams.",
+            "outcomes": [
+              "Read circuit diagrams",
+              "Predict simple measurement outcomes"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "quantum-gates"
+            ],
+            "resources": [
+              {
+                "label": "Qiskit Documentation",
+                "url": "https://docs.quantum.ibm.com/"
+              },
+              {"label": "YouTube: 3Blue1Brown – But what is quantum computing? (Grover's Algorithm) (36:54)", "url": "https://www.youtube.com/watch?v=RQWpF2Gb-gU"},
+              {"label": "YouTube: freeCodeCamp.org – Quantum Computing Course – Math and Theory for Beginners (1:36:04)", "url": "https://www.youtube.com/watch?v=tsbCSkvHhMo"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Single-qubit circuit",
+          "description": "Build and explain a tiny circuit that prepares, transforms, and measures a qubit.",
+          "demonstrates": [
+            "quantum-qubits",
+            "quantum-gates",
+            "quantum-circuits"
+          ]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Simulate circuits and reason about imperfect quantum devices.",
+        "skills": [
+          {
+            "id": "quantum-qiskit",
+            "name": "Qiskit Fundamentals",
+            "description": "Create and simulate basic circuits using the Qiskit software ecosystem.",
+            "outcomes": [
+              "Build a circuit in Qiskit",
+              "Run a local simulation"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "quantum-circuits"
+            ],
+            "resources": [
+              {
+                "label": "Qiskit Documentation",
+                "url": "https://docs.quantum.ibm.com/"
+              },
+              {"label": "YouTube: Qiskit – Quantum Computing 101: How to Get Started (20:13)", "url": "https://www.youtube.com/watch?v=l5I9M3C2wzg"},
+              {"label": "YouTube: IBM Technology – How to program a quantum computer using Qiskit (6:00)", "url": "https://www.youtube.com/watch?v=Jx7IuJMYtJM"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "quantum-circuit-simulation",
+            "name": "Circuit Simulation",
+            "description": "Use statevector and sampling ideas to interpret simulated circuit behavior.",
+            "outcomes": [
+              "Compare statevector and counts",
+              "Explain sampling variation"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "quantum-qiskit"
+            ],
+            "resources": [
+              {
+                "label": "IBM Quantum Learning",
+                "url": "https://learning.quantum.ibm.com/"
+              },
+              {"label": "YouTube: Quantum ML – Quantum Machine Learning - 20 - Variational Circuits and Quantum Simulation 1… (5:57)", "url": "https://www.youtube.com/watch?v=bVymBcvE7BA"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "quantum-noise",
+            "name": "Noise and Hardware Limits",
+            "description": "Recognize how decoherence and gate errors affect quantum computations.",
+            "outcomes": [
+              "Identify common error sources",
+              "Compare ideal and noisy results"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "quantum-circuit-simulation"
+            ],
+            "resources": [
+              {
+                "label": "IBM Quantum Learning",
+                "url": "https://learning.quantum.ibm.com/"
+              },
+              {"label": "YouTube: Qiskit – Understanding Noise in Near-Term Quantum Computers with Haimeng Zhang: Qiskit… (47:52)", "url": "https://www.youtube.com/watch?v=w--HZ4QXugA"},
+              {"label": "YouTube: Gemini Center on Quantum Technology – Limitations of noisy quantum algorithms (1:03:01)", "url": "https://www.youtube.com/watch?v=j8Z7EXFpMh4"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Noisy circuit experiment",
+          "description": "Compare ideal and noisy simulation results for a small circuit.",
+          "demonstrates": [
+            "quantum-qiskit",
+            "quantum-circuit-simulation",
+            "quantum-noise"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Explain landmark quantum algorithms and evaluate practical limitations.",
+        "skills": [
+          {
+            "id": "quantum-algorithmic-ideas",
+            "name": "Quantum Algorithmic Ideas",
+            "description": "Connect interference and amplitude amplification to algorithmic speedups.",
+            "outcomes": [
+              "Explain interference in a circuit",
+              "Describe amplitude amplification"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "quantum-noise"
+            ],
+            "resources": [
+              {
+                "label": "IBM Quantum Learning",
+                "url": "https://learning.quantum.ibm.com/"
+              },
+              {"label": "YouTube: Qiskit – Quantum vs Classical: Deutsch & Deutsch-Jozsa Algorithms Explained (19:08)", "url": "https://www.youtube.com/watch?v=QcK0GK7DUh8"},
+              {"label": "YouTube: 3Blue1Brown – But what is quantum computing? (Grover's Algorithm) (36:54)", "url": "https://www.youtube.com/watch?v=RQWpF2Gb-gU"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "quantum-grover-shor",
+            "name": "Grover and Shor Concepts",
+            "description": "Describe the high-level goals and steps of Grover search and Shor factoring.",
+            "outcomes": [
+              "Outline Grover search",
+              "Summarize Shor factoring conceptually"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "quantum-algorithmic-ideas"
+            ],
+            "resources": [
+              {
+                "label": "IBM Quantum Learning",
+                "url": "https://learning.quantum.ibm.com/"
+              },
+              {"label": "YouTube: quantumfy – What is Grover's Algorithm? (5:50)", "url": "https://www.youtube.com/watch?v=_cDIzwycANg"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "quantum-quantum-limitations",
+            "name": "Quantum Resource and Noise Assessment",
+            "description": "Assess how qubit counts, circuit depth, and noise constrain algorithm demonstrations.",
+            "outcomes": [
+              "Estimate circuit resource needs",
+              "Explain limits of current devices"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "quantum-grover-shor"
+            ],
+            "resources": [
+              {
+                "label": "Qiskit Documentation",
+                "url": "https://docs.quantum.ibm.com/"
+              },
+              {"label": "YouTube: Qiskit – Lecture 3.1 - Noise in Quantum Computers - part 1 (54:31)", "url": "https://www.youtube.com/watch?v=kV0RsKXSqRg"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Algorithm comparison",
+          "description": "Model the conceptual steps of Grover and Shor algorithms and discuss resource and noise constraints.",
+          "demonstrates": [
+            "quantum-algorithmic-ideas",
+            "quantum-grover-shor",
+            "quantum-quantum-limitations"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Quantum algorithm explainer",
+      "description": "Create a small simulated circuit demonstration and explain its algorithm, outputs, and limitations."
+    }
+  },
+  "robotics": {
+    "title": "Robotics & Autonomous Systems",
+    "description": "Learn how robot software combines geometry, sensing, control, and planning into autonomous behavior.",
+    "audience": "For programmers and engineers interested in building and testing robot applications.",
+    "goal": "Develop a simulated robot behavior that senses its environment and moves toward a goal safely.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Model robot components and communicate with a basic ROS 2 application.",
+        "skills": [
+          {
+            "id": "robotics-robot-frames",
+            "name": "Robot Frames and Geometry",
+            "description": "Describe position, orientation, and coordinate frames used to reason about robot motion.",
+            "outcomes": [
+              "Read coordinate-frame diagrams",
+              "Transform simple 2D poses"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "ROS 2 Documentation",
+                "url": "https://docs.ros.org/en/rolling/"
+              },
+              {"label": "YouTube: Dr. Trefor Bazett – Rotation Matrices || Linear Algebra Fundamentals (21:24)", "url": "https://www.youtube.com/watch?v=rUKsjo1nReE"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "robotics-sensors-actuators",
+            "name": "Sensors and Actuators",
+            "description": "Identify common robot sensors and actuators and interpret their basic data and limits.",
+            "outcomes": [
+              "Compare sensor roles",
+              "Describe actuator constraints"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "ROS 2 Documentation",
+                "url": "https://docs.ros.org/en/rolling/"
+              },
+              {"label": "YouTube: CrashCourse – How Engineering Robots Works: Crash Course Engineering #33 (11:02)", "url": "https://www.youtube.com/watch?v=uNfUAJBuZ0s"},
+              {"label": "YouTube: DigiKey – Introduction to ROS Part 1: What is the Robot Operating System? | DigiKey (29:12)", "url": "https://www.youtube.com/watch?v=mjrxf8EFSb8"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "robotics-ros2-basics",
+            "name": "ROS 2 Fundamentals",
+            "description": "Use ROS 2 nodes, topics, and messages to exchange robot data.",
+            "outcomes": [
+              "Explain nodes and topics",
+              "Inspect a message flow"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": [
+              "robotics-sensors-actuators"
+            ],
+            "resources": [
+              {
+                "label": "ROS 2 Documentation",
+                "url": "https://docs.ros.org/en/rolling/"
+              },
+              {"label": "YouTube: DigiKey – Introduction to ROS Part 1: What is the Robot Operating System? | DigiKey (29:12)", "url": "https://www.youtube.com/watch?v=mjrxf8EFSb8"},
+              {"label": "YouTube: DeepLearning & Research . AI – ROS 2 Explained: How Robots Really Think & Communicate | DDS vs ROS1 (7:03)", "url": "https://www.youtube.com/watch?v=BlNJd_VEJew"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "ROS 2 sensor dashboard",
+          "description": "Create a simple ROS 2 node that receives sensor data and reports robot state.",
+          "demonstrates": [
+            "robotics-robot-frames",
+            "robotics-sensors-actuators",
+            "robotics-ros2-basics"
+          ]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Simulate motion and implement basic control loops.",
+        "skills": [
+          {
+            "id": "robotics-kinematics",
+            "name": "Robot Kinematics",
+            "description": "Relate joint motion and robot pose using forward and inverse kinematics concepts.",
+            "outcomes": [
+              "Compute simple planar poses",
+              "Explain inverse kinematics constraints"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": [
+              "robotics-robot-frames"
+            ],
+            "resources": [
+              {
+                "label": "ROS 2 Documentation",
+                "url": "https://docs.ros.org/en/rolling/"
+              },
+              {"label": "YouTube: CrashCourse – How Engineering Robots Works: Crash Course Engineering #33 (11:02)", "url": "https://www.youtube.com/watch?v=uNfUAJBuZ0s"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "robotics-control",
+            "name": "Robot Control",
+            "description": "Use feedback and proportional control concepts to regulate robot motion.",
+            "outcomes": [
+              "Describe feedback loops",
+              "Tune a simple proportional controller"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": [
+              "robotics-kinematics"
+            ],
+            "resources": [
+              {
+                "label": "ROS 2 Documentation",
+                "url": "https://docs.ros.org/en/rolling/"
+              },
+              {"label": "YouTube: NVIDIA – How Robots Learn to Be Robots: Training, Simulation, and Real World Deployment (4:14)", "url": "https://www.youtube.com/watch?v=S4tvirlG8sQ"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "robotics-simulation",
+            "name": "Robot Simulation",
+            "description": "Use simulation to test robot models and behaviors before deployment.",
+            "outcomes": [
+              "Run a simulated robot scenario",
+              "Compare simulated outcomes"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "robotics-ros2-basics"
+            ],
+            "resources": [
+              {
+                "label": "ROS 2 Documentation",
+                "url": "https://docs.ros.org/en/rolling/"
+              },
+              {"label": "YouTube: NVIDIA Omniverse – Training a Robot from Scratch in Simulation, from URDF to OpenUSD (1:22:48)", "url": "https://www.youtube.com/watch?v=_HMk7I-vSBQ"},
+              {"label": "YouTube: NVIDIA – How Robots Learn to Be Robots: Training, Simulation, and Real World Deployment (4:14)", "url": "https://www.youtube.com/watch?v=S4tvirlG8sQ"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Simulated waypoint follower",
+          "description": "Simulate a robot following waypoints with a feedback controller.",
+          "demonstrates": [
+            "robotics-kinematics",
+            "robotics-control",
+            "robotics-simulation"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Combine perception and planning into an integrated autonomous behavior.",
+        "skills": [
+          {
+            "id": "robotics-perception",
+            "name": "Robot Perception",
+            "description": "Interpret sensor observations to estimate relevant features of the environment.",
+            "outcomes": [
+              "Explain sensor-based perception",
+              "Identify uncertainty in observations"
+            ],
+            "estimatedHours": 16,
+            "prerequisites": [
+              "robotics-simulation",
+              "robotics-sensors-actuators"
+            ],
+            "resources": [
+              {
+                "label": "ROS 2 Documentation",
+                "url": "https://docs.ros.org/en/rolling/"
+              },
+              {"label": "YouTube: Computerphile – SLAM Robot Mapping - Computerphile (11:35)", "url": "https://www.youtube.com/watch?v=-XU54IsG8Vo"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "robotics-planning",
+            "name": "Motion Planning",
+            "description": "Plan feasible robot actions that reach goals while respecting obstacles and constraints.",
+            "outcomes": [
+              "Compare route-planning approaches",
+              "Account for collision constraints"
+            ],
+            "estimatedHours": 16,
+            "prerequisites": [
+              "robotics-perception",
+              "robotics-control"
+            ],
+            "resources": [
+              {
+                "label": "ROS 2 Documentation",
+                "url": "https://docs.ros.org/en/rolling/"
+              },
+              {"label": "YouTube: Computerphile – Path Planning for Robotics - Computerphile (29:45)", "url": "https://www.youtube.com/watch?v=LHHEOjd0z3s"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "robotics-autonomy-integration",
+            "name": "Autonomy Integration",
+            "description": "Connect sensing, planning, and control into a testable autonomous system.",
+            "outcomes": [
+              "Integrate perception and planning",
+              "Evaluate behavior in simulation"
+            ],
+            "estimatedHours": 18,
+            "prerequisites": [
+              "robotics-planning",
+              "robotics-simulation"
+            ],
+            "resources": [
+              {
+                "label": "ROS 2 Documentation",
+                "url": "https://docs.ros.org/en/rolling/"
+              },
+              {"label": "YouTube: Stanford Autonomous Systems Laboratory – LIVE - Principles of Robotic Autonomy Robotics Showcase (17:51)", "url": "https://www.youtube.com/watch?v=G7XGFamDA3Q"},
+              {"label": "YouTube: 3Blue1Brown – Integration and the fundamental theorem of calculus | Chapter 8, Essence of calculus (20:46)", "url": "https://www.youtube.com/watch?v=rfG8ce4nNh0"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Obstacle-aware navigation",
+          "description": "Build a simulated robot that detects obstacles, plans a route, and reports its behavior.",
+          "demonstrates": [
+            "robotics-perception",
+            "robotics-planning",
+            "robotics-autonomy-integration"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Autonomous robot mission",
+      "description": "Deliver a simulated robot mission with documented sensing, planning, control, and safety tradeoffs."
+    }
+  },
+  "bioinformatics": {
+    "title": "Bioinformatics & Computational Biology",
+    "description": "Apply reproducible computational methods to biological sequences, genomic data, and research questions.",
+    "audience": "For programmers and life-science learners who want to analyze biological data responsibly.",
+    "goal": "Build a reproducible analysis that transforms biological data into interpretable results.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Interpret common sequence data and build sound analytical habits.",
+        "skills": [
+          {
+            "id": "bioinformatics-sequence-basics",
+            "name": "Biological Sequence Basics",
+            "description": "Explain DNA, RNA, and protein sequence representations and common analysis tasks.",
+            "outcomes": [
+              "Distinguish sequence types",
+              "Describe basic sequence comparisons"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "Biopython",
+                "url": "https://biopython.org/"
+              },
+              {"label": "YouTube: CrashCourse – DNA Structure and Replication: Crash Course Biology #10 (12:35)", "url": "https://www.youtube.com/watch?v=8kK2zwjRV0M"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "bioinformatics-genomics-formats",
+            "name": "Genomics File Formats",
+            "description": "Recognize common FASTA, FASTQ, and annotation file structures and their uses.",
+            "outcomes": [
+              "Read FASTA and FASTQ records",
+              "Identify metadata and quality fields"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "bioinformatics-sequence-basics"
+            ],
+            "resources": [
+              {
+                "label": "Biopython",
+                "url": "https://biopython.org/"
+              },
+              {"label": "YouTube: Stanford Deep Data Research Center – Intro to Genomics & Bioinformatics: Experimenting with Genomic Data (1:01:47)", "url": "https://www.youtube.com/watch?v=r5OQ-4Zmo50"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "bioinformatics-bio-statistics",
+            "name": "Statistics for Biological Data",
+            "description": "Use descriptive statistics and uncertainty checks to summarize biological measurements.",
+            "outcomes": [
+              "Summarize a dataset",
+              "Interpret variability and sampling limits"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "Biopython",
+                "url": "https://biopython.org/"
+              },
+              {"label": "YouTube: Harvard Global Orthopaedics Collaborative – Introduction in Biostatistics (28:38)", "url": "https://www.youtube.com/watch?v=VjtKcVL3nCw"},
+              {"label": "YouTube: CrashCourse – What Is Statistics: Crash Course Statistics #1 (13:00)", "url": "https://www.youtube.com/watch?v=sxQaBpKfDRk"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Sequence quality report",
+          "description": "Summarize sequence records, data quality, and analysis assumptions in a reproducible report.",
+          "demonstrates": [
+            "bioinformatics-sequence-basics",
+            "bioinformatics-genomics-formats",
+            "bioinformatics-bio-statistics"
+          ]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Parse biological records and perform standard sequence analyses.",
+        "skills": [
+          {
+            "id": "bioinformatics-biopython",
+            "name": "Biopython Workflows",
+            "description": "Use Biopython to load, inspect, and transform biological sequence records.",
+            "outcomes": [
+              "Parse sequence files",
+              "Use Biopython record objects"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": [
+              "bioinformatics-genomics-formats"
+            ],
+            "resources": [
+              {
+                "label": "Biopython",
+                "url": "https://biopython.org/"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "bioinformatics-sequence-alignment",
+            "name": "Sequence Alignment",
+            "description": "Compare sequences using alignment concepts and interpret matches and differences.",
+            "outcomes": [
+              "Explain alignment scores",
+              "Interpret aligned regions"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": [
+              "bioinformatics-biopython"
+            ],
+            "resources": [
+              {
+                "label": "Biopython",
+                "url": "https://biopython.org/"
+              },
+              {"label": "YouTube: MIT OpenCourseWare – 2. Local Alignment (BLAST) and Statistics (1:16:48)", "url": "https://www.youtube.com/watch?v=6Udqou3vmng"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "bioinformatics-genome-annotation",
+            "name": "Genome Annotations",
+            "description": "Relate genomic coordinates and feature annotations to biological sequence data.",
+            "outcomes": [
+              "Interpret feature coordinates",
+              "Connect annotations to sequences"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "bioinformatics-biopython"
+            ],
+            "resources": [
+              {
+                "label": "Biopython",
+                "url": "https://biopython.org/"
+              },
+              {"label": "YouTube: Stanford Deep Data Research Center – Intro to Genomics & Bioinformatics: Experimenting with Genomic Data (1:01:47)", "url": "https://www.youtube.com/watch?v=r5OQ-4Zmo50"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Sequence analysis pipeline",
+          "description": "Use a documented script to parse records, compare sequences, and summarize findings.",
+          "demonstrates": [
+            "bioinformatics-biopython",
+            "bioinformatics-sequence-alignment",
+            "bioinformatics-genome-annotation"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Design scalable, auditable analyses and communicate biological results with care.",
+        "skills": [
+          {
+            "id": "bioinformatics-pipeline-design",
+            "name": "Bioinformatics Pipeline Design",
+            "description": "Structure multi-step analyses with explicit inputs, outputs, and validation checks.",
+            "outcomes": [
+              "Define workflow stages",
+              "Add input and output checks"
+            ],
+            "estimatedHours": 16,
+            "prerequisites": [
+              "bioinformatics-sequence-alignment",
+              "bioinformatics-genome-annotation"
+            ],
+            "resources": [
+              {
+                "label": "Biopython",
+                "url": "https://biopython.org/"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Python for Bioinformatics - Drug Discovery Using Machine Learning and Data Analysis (1:42:54)", "url": "https://www.youtube.com/watch?v=jBlTQjcKuaY"},
+              {"label": "YouTube: Stanford Deep Data Research Center – Breaking into Bioinformatics: Practical Skills & Strategies to Stand Out with… (56:21)", "url": "https://www.youtube.com/watch?v=xF0SdO1ms8I"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "bioinformatics-reproducibility",
+            "name": "Reproducible Research",
+            "description": "Record data provenance, software versions, and methods so analyses can be repeated.",
+            "outcomes": [
+              "Capture provenance",
+              "Document software and methods"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "bioinformatics-pipeline-design"
+            ],
+            "resources": [
+              {
+                "label": "Biopython",
+                "url": "https://biopython.org/"
+              },
+              {"label": "YouTube: Nextflow and Seqera – Nextflow Beyond Bioinformatics: Pipelines for Physics, Social Science, and AI (28:29)", "url": "https://www.youtube.com/watch?v=TT0mbDtchP4"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "bioinformatics-genomic-interpretation",
+            "name": "Genomic Result Interpretation",
+            "description": "Communicate computational findings while distinguishing evidence from biological inference.",
+            "outcomes": [
+              "Summarize findings and caveats",
+              "Avoid overstating associations"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "bioinformatics-bio-statistics",
+              "bioinformatics-reproducibility"
+            ],
+            "resources": [
+              {
+                "label": "Biopython",
+                "url": "https://biopython.org/"
+              },
+              {"label": "YouTube: Data Science Learning Community Videos – Computational Genomics: Introduction to R for Genomic Data Analysis (comp_genom01 2) (58:23)", "url": "https://www.youtube.com/watch?v=FwmcE-avReA"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Reproducible genomics workflow",
+          "description": "Package a tested workflow with provenance, quality checks, and a clear interpretation of its results.",
+          "demonstrates": [
+            "bioinformatics-pipeline-design",
+            "bioinformatics-reproducibility",
+            "bioinformatics-genomic-interpretation"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Reproducible sequence study",
+      "description": "Publish a reproducible sequence-analysis workflow with data provenance, validation, and appropriately qualified conclusions."
+    }
+  },
+  "hpc": {
+    "title": "High-Performance & Parallel Computing",
+    "description": "Learn to design, measure, and scale parallel programs across multicore CPUs and GPUs.",
+    "audience": "For developers who need to accelerate computational workloads on modern hardware.",
+    "goal": "Build and evaluate a parallel program with evidence-based performance and scaling analysis.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Understand parallel execution and measure baseline performance.",
+        "skills": [
+          {
+            "id": "hpc-parallel-concepts",
+            "name": "Parallel Computing Concepts",
+            "description": "Explain concurrency, parallelism, and common sources of parallel speedup and overhead.",
+            "outcomes": [
+              "Distinguish concurrency and parallelism",
+              "Identify parallel work"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "LLNL HPC Tutorials",
+                "url": "https://hpc-tutorials.llnl.gov/"
+              },
+              {"label": "YouTube: ByteByteGo – Concurrency Vs Parallelism! (4:13)", "url": "https://www.youtube.com/watch?v=RlM9AfWf1WU"},
+              {"label": "YouTube: Google Cloud Tech – What is High Performance Computing? (5:29)", "url": "https://www.youtube.com/watch?v=nIBu1EFYmBU"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "hpc-parallel-patterns",
+            "name": "Parallel Patterns",
+            "description": "Recognize common patterns such as data parallelism, reductions, and task parallelism.",
+            "outcomes": [
+              "Choose a pattern for a workload",
+              "Describe synchronization needs"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "hpc-parallel-concepts"
+            ],
+            "resources": [
+              {
+                "label": "LLNL HPC Tutorials",
+                "url": "https://hpc-tutorials.llnl.gov/"
+              },
+              {"label": "YouTube: PyCon 2016 – Mike McKerns - Efficient Python for High-Performance Parallel Computing - PyCon 2016 (3:09:05)", "url": "https://www.youtube.com/watch?v=6zQhUlMYea4"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "hpc-performance-baselines",
+            "name": "Performance Measurement",
+            "description": "Measure runtime and establish repeatable baselines for computational workloads.",
+            "outcomes": [
+              "Time a program repeatably",
+              "Report baseline measurements"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "LLNL HPC Tutorials",
+                "url": "https://hpc-tutorials.llnl.gov/"
+              },
+              {"label": "YouTube: Google Cloud Tech – What is High Performance Computing? (5:29)", "url": "https://www.youtube.com/watch?v=nIBu1EFYmBU"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Parallel workload analysis",
+          "description": "Analyze a computational task and identify its work, data dependencies, and performance baseline.",
+          "demonstrates": [
+            "hpc-parallel-concepts",
+            "hpc-parallel-patterns",
+            "hpc-performance-baselines"
+          ]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Implement shared- and distributed-memory programs with standard tools.",
+        "skills": [
+          {
+            "id": "hpc-openmp",
+            "name": "OpenMP Programming",
+            "description": "Use OpenMP directives to parallelize suitable shared-memory loops.",
+            "outcomes": [
+              "Parallelize a loop",
+              "Use a reduction safely"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": [
+              "hpc-parallel-patterns"
+            ],
+            "resources": [
+              {
+                "label": "OpenMP Resources",
+                "url": "https://www.openmp.org/resources/"
+              },
+              {"label": "YouTube: Stanford Online – Stanford CS149 I Parallel Computing I 2023 I Lecture 1 - Why Parallelism? Why… (1:12:22)", "url": "https://www.youtube.com/watch?v=V1tINV2-9p4"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "hpc-mpi",
+            "name": "MPI Programming",
+            "description": "Use message passing to divide work and exchange data across distributed processes.",
+            "outcomes": [
+              "Explain ranks and communicators",
+              "Exchange distributed data"
+            ],
+            "estimatedHours": 16,
+            "prerequisites": [
+              "hpc-parallel-patterns"
+            ],
+            "resources": [
+              {
+                "label": "LLNL HPC Tutorials",
+                "url": "https://hpc-tutorials.llnl.gov/"
+              },
+              {"label": "YouTube: Google Cloud Tech – What is High Performance Computing? (5:29)", "url": "https://www.youtube.com/watch?v=nIBu1EFYmBU"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "hpc-scaling",
+            "name": "Parallel Scaling",
+            "description": "Evaluate speedup, efficiency, and bottlenecks as parallel resources increase.",
+            "outcomes": [
+              "Calculate speedup and efficiency",
+              "Recognize scaling limits"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "hpc-performance-baselines",
+              "hpc-openmp"
+            ],
+            "resources": [
+              {
+                "label": "LLNL HPC Tutorials",
+                "url": "https://hpc-tutorials.llnl.gov/"
+              },
+              {"label": "YouTube: ByteByteGo – Vertical Vs Horizontal Scaling: Key Differences You Should Know (4:34)", "url": "https://www.youtube.com/watch?v=dvRFHG2-uYs"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Parallel matrix workload",
+          "description": "Implement a matrix workload with OpenMP and MPI and compare results against its baseline.",
+          "demonstrates": [
+            "hpc-openmp",
+            "hpc-mpi",
+            "hpc-scaling"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Accelerate workloads on GPUs and optimize end-to-end performance.",
+        "skills": [
+          {
+            "id": "hpc-gpu-cuda",
+            "name": "GPU Programming with CUDA",
+            "description": "Describe GPU execution and implement basic data-parallel work using CUDA concepts.",
+            "outcomes": [
+              "Explain threads and blocks",
+              "Map data work to GPU threads"
+            ],
+            "estimatedHours": 18,
+            "prerequisites": [
+              "hpc-parallel-patterns"
+            ],
+            "resources": [
+              {
+                "label": "CUDA Documentation",
+                "url": "https://docs.nvidia.com/cuda/"
+              },
+              {"label": "YouTube: freeCodeCamp.org – CUDA Programming Course – High-Performance Computing with GPUs (11:55:11)", "url": "https://www.youtube.com/watch?v=86FAWCzIe_4"},
+              {"label": "YouTube: NVIDIA Developer – Accelerating Applications with Parallel Algorithms | CUDA C++ Class Part 1 (2:05:27)", "url": "https://www.youtube.com/watch?v=Sdjn9FOkhnA"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "hpc-profiling-optimization",
+            "name": "Profiling and Optimization",
+            "description": "Use profiling evidence to identify bottlenecks and guide safe performance improvements.",
+            "outcomes": [
+              "Interpret a profiler summary",
+              "Prioritize measured bottlenecks"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": [
+              "hpc-scaling",
+              "hpc-gpu-cuda"
+            ],
+            "resources": [
+              {
+                "label": "CUDA Documentation",
+                "url": "https://docs.nvidia.com/cuda/"
+              },
+              {"label": "YouTube: NVIDIA Developer – CUDA Tutorials I Profiling and Debugging Applications (10:31)", "url": "https://www.youtube.com/watch?v=dB5Jxwj0PDw"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "hpc-hybrid-systems",
+            "name": "Hybrid Parallel Systems",
+            "description": "Combine CPU, distributed, and accelerator approaches while accounting for data movement.",
+            "outcomes": [
+              "Compare hybrid decomposition choices",
+              "Measure end-to-end performance"
+            ],
+            "estimatedHours": 16,
+            "prerequisites": [
+              "hpc-mpi",
+              "hpc-gpu-cuda",
+              "hpc-profiling-optimization"
+            ],
+            "resources": [
+              {
+                "label": "LLNL HPC Tutorials",
+                "url": "https://hpc-tutorials.llnl.gov/"
+              },
+              {"label": "YouTube: PyCon 2016 – Mike McKerns - Efficient Python for High-Performance Parallel Computing - PyCon 2016 (3:09:05)", "url": "https://www.youtube.com/watch?v=6zQhUlMYea4"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Heterogeneous compute benchmark",
+          "description": "Compare CPU and GPU implementations and report profiling and scaling evidence.",
+          "demonstrates": [
+            "hpc-gpu-cuda",
+            "hpc-profiling-optimization",
+            "hpc-hybrid-systems"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Scaled parallel application",
+      "description": "Deliver a parallel workload with correctness checks, profiling evidence, and a clear account of scaling limits."
+    }
+  },
+  "engmgmt": {
+    "title": "Engineering Management",
+    "description": "Develop the people, delivery, and organizational practices needed to lead effective engineering teams.",
+    "audience": "For current or aspiring engineering managers and technical leaders.",
+    "goal": "Lead a healthy engineering team that delivers reliably and helps engineers grow.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Build trusted relationships and support a healthy team environment.",
+        "skills": [
+          {
+            "id": "engmgmt-one-on-ones",
+            "name": "Effective One-to-Ones",
+            "description": "Run recurring one-to-one conversations that support trust, clarity, and individual needs.",
+            "outcomes": [
+              "Prepare a useful conversation agenda",
+              "Follow through on commitments"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "Google re:Work",
+                "url": "https://rework.withgoogle.com/"
+              },
+              {"label": "YouTube: Theo - t3․gg – Engineering Managers: An Important Conversation (9:48)", "url": "https://www.youtube.com/watch?v=7FKvrqg636o"},
+              {"label": "YouTube: freeCodeCamp.org – Become a Great Engineering Manager – Course (1:36:49)", "url": "https://www.youtube.com/watch?v=kZdFRXeuCuY"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "engmgmt-feedback",
+            "name": "Feedback and Coaching",
+            "description": "Give timely, specific feedback and coach people toward their own development goals.",
+            "outcomes": [
+              "Deliver specific feedback",
+              "Use questions to support coaching"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "engmgmt-one-on-ones"
+            ],
+            "resources": [
+              {
+                "label": "Google re:Work",
+                "url": "https://rework.withgoogle.com/"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Become a Great Engineering Manager – Course (1:36:49)", "url": "https://www.youtube.com/watch?v=kZdFRXeuCuY"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "engmgmt-team-health",
+            "name": "Team Health and Psychological Safety",
+            "description": "Recognize team-health signals and foster an environment where people can raise concerns.",
+            "outcomes": [
+              "Identify team-health signals",
+              "Encourage candid discussion"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "engmgmt-one-on-ones"
+            ],
+            "resources": [
+              {
+                "label": "Google re:Work",
+                "url": "https://rework.withgoogle.com/"
+              },
+              {"label": "YouTube: Harvard Business Review – What Is Psychological Safety? (7:30)", "url": "https://www.youtube.com/watch?v=GZgmoxOgfig"},
+              {"label": "YouTube: Harvard Medical School Continuing Education – How Do You Support Psychological Safety? Part 10 (5:30)", "url": "https://www.youtube.com/watch?v=gamBYW3q3rs"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Team operating agreements",
+          "description": "Create practical team agreements for communication, support, and recurring one-to-ones.",
+          "demonstrates": [
+            "engmgmt-one-on-ones",
+            "engmgmt-feedback",
+            "engmgmt-team-health"
+          ]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Hire thoughtfully, grow engineers, and create dependable delivery practices.",
+        "skills": [
+          {
+            "id": "engmgmt-hiring",
+            "name": "Engineering Hiring",
+            "description": "Structure fair hiring practices around role clarity, consistent evaluation, and candidate care.",
+            "outcomes": [
+              "Define role criteria",
+              "Use consistent interview evidence"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "engmgmt-team-health"
+            ],
+            "resources": [
+              {
+                "label": "Google re:Work",
+                "url": "https://rework.withgoogle.com/"
+              },
+              {"label": "YouTube: Alex The Analyst – What are Hiring Managers Looking For? | Nail the Interview Process! (13:42)", "url": "https://www.youtube.com/watch?v=OISvlkfbntY"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "engmgmt-growing-engineers",
+            "name": "Growing Engineers",
+            "description": "Support career development with clear expectations, useful opportunities, and regular follow-up.",
+            "outcomes": [
+              "Discuss growth goals",
+              "Connect feedback to opportunities"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "engmgmt-feedback"
+            ],
+            "resources": [
+              {
+                "label": "Google re:Work",
+                "url": "https://rework.withgoogle.com/"
+              },
+              {"label": "YouTube: Alien Theory – Exploring The Engineers (30:06)", "url": "https://www.youtube.com/watch?v=jIq4tDz-kBo"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "engmgmt-delivery-leadership",
+            "name": "Delivery Leadership",
+            "description": "Help a team deliver predictably by clarifying outcomes, dependencies, and sustainable pace.",
+            "outcomes": [
+              "Clarify delivery outcomes",
+              "Surface dependencies early"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "engmgmt-team-health"
+            ],
+            "resources": [
+              {
+                "label": "Engineering Leadership",
+                "url": "https://lethain.com/"
+              },
+              {"label": "YouTube: Harvard Business Review – What Makes a Great Leader? (6:24)", "url": "https://www.youtube.com/watch?v=ME5arjlSTGQ"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Growth and delivery plan",
+          "description": "Design a team plan that connects hiring, development, and delivery expectations.",
+          "demonstrates": [
+            "engmgmt-hiring",
+            "engmgmt-growing-engineers",
+            "engmgmt-delivery-leadership"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Shape an organization that aligns team structures, decision-making, and strategy.",
+        "skills": [
+          {
+            "id": "engmgmt-org-design",
+            "name": "Engineering Organization Design",
+            "description": "Evaluate team boundaries and responsibilities in relation to work, dependencies, and strategy.",
+            "outcomes": [
+              "Map team responsibilities",
+              "Identify coordination costs"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": [
+              "engmgmt-delivery-leadership"
+            ],
+            "resources": [
+              {
+                "label": "Engineering Leadership",
+                "url": "https://lethain.com/"
+              },
+              {"label": "YouTube: FastFlowConf – Vision for an AI-First Team Topology (27:40)", "url": "https://www.youtube.com/watch?v=8ouoRxWKYQI"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "engmgmt-management-systems",
+            "name": "Management Systems",
+            "description": "Design lightweight management routines that support decisions, development, and team health.",
+            "outcomes": [
+              "Choose useful team routines",
+              "Review management signals"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "engmgmt-growing-engineers",
+              "engmgmt-hiring"
+            ],
+            "resources": [
+              {
+                "label": "Google re:Work",
+                "url": "https://rework.withgoogle.com/"
+              },
+              {"label": "YouTube: Systems Engineering: Theory & Practice – Systems Engineering Management (SEM) (50:35)", "url": "https://www.youtube.com/watch?v=PCx6CAqOWGA"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "engmgmt-organizational-change",
+            "name": "Organizational Change",
+            "description": "Lead change transparently while gathering feedback and monitoring effects on teams.",
+            "outcomes": [
+              "Explain change rationale",
+              "Monitor intended and unintended effects"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "engmgmt-org-design",
+              "engmgmt-management-systems"
+            ],
+            "resources": [
+              {
+                "label": "Engineering Leadership",
+                "url": "https://lethain.com/"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Become a Great Engineering Manager – Course (1:36:49)", "url": "https://www.youtube.com/watch?v=kZdFRXeuCuY"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Organization design proposal",
+          "description": "Propose an organizational change that improves coordination while accounting for people and delivery risks.",
+          "demonstrates": [
+            "engmgmt-org-design",
+            "engmgmt-management-systems",
+            "engmgmt-organizational-change"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Engineering leadership operating plan",
+      "description": "Present a practical leadership plan covering team health, growth, delivery, and organizational tradeoffs."
+    }
+  },
+  "productmgmt": {
+    "title": "Product Management for Engineers",
+    "description": "Apply product thinking to discover valuable problems and guide engineering work toward measurable outcomes.",
+    "audience": "For engineers and technical leaders who want to make stronger product decisions.",
+    "goal": "Shape and ship a product improvement grounded in user evidence and measurable outcomes.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Understand user problems and express a focused product direction.",
+        "skills": [
+          {
+            "id": "productmgmt-product-discovery",
+            "name": "Product Discovery",
+            "description": "Investigate user needs and validate problem assumptions before committing to solutions.",
+            "outcomes": [
+              "Plan a discovery conversation",
+              "Separate evidence from assumptions"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              },
+              {"label": "YouTube: freeCodeCamp.org – The Business of Building Apps - App Product Management Course for Developers (7:59:57)", "url": "https://www.youtube.com/watch?v=poLzjLt2yqU"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "productmgmt-product-roadmaps",
+            "name": "Product Roadmaps",
+            "description": "Communicate product direction and sequencing as outcomes rather than fixed feature promises.",
+            "outcomes": [
+              "State roadmap outcomes",
+              "Explain sequencing choices"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "productmgmt-product-discovery"
+            ],
+            "resources": [
+              {
+                "label": "Engineering Leadership",
+                "url": "https://lethain.com/"
+              },
+              {"label": "YouTube: Beyond Coding – Meta Staff Engineer: What the Best Engineers Do Differently (33:26)", "url": "https://www.youtube.com/watch?v=brNpAU5JmUY"},
+              {"label": "YouTube: freeCodeCamp.org – The Business of Building Apps - App Product Management Course for Developers (7:59:57)", "url": "https://www.youtube.com/watch?v=poLzjLt2yqU"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "productmgmt-prioritization",
+            "name": "Product Prioritization",
+            "description": "Compare opportunities using customer value, effort, uncertainty, and strategic fit.",
+            "outcomes": [
+              "Use explicit prioritization criteria",
+              "Explain a tradeoff"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "productmgmt-product-discovery"
+            ],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              },
+              {"label": "YouTube: freeCodeCamp.org – The Business of Building Apps - App Product Management Course for Developers (7:59:57)", "url": "https://www.youtube.com/watch?v=poLzjLt2yqU"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Problem discovery brief",
+          "description": "Document a user problem, supporting evidence, and a testable product opportunity.",
+          "demonstrates": [
+            "productmgmt-product-discovery",
+            "productmgmt-product-roadmaps",
+            "productmgmt-prioritization"
+          ]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Use metrics and collaboration to guide iterative product delivery.",
+        "skills": [
+          {
+            "id": "productmgmt-product-metrics",
+            "name": "Product Metrics",
+            "description": "Choose product measures that connect user outcomes with business and operational context.",
+            "outcomes": [
+              "Define a leading indicator",
+              "Identify metric limitations"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "productmgmt-product-discovery"
+            ],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              },
+              {"label": "YouTube: Alex The Analyst – What are KPIs and Metrics? | Data Fundamental for Beginners (5:46)", "url": "https://www.youtube.com/watch?v=ItZlTixh6Bs"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "productmgmt-stakeholder-communication",
+            "name": "Stakeholder Communication",
+            "description": "Communicate product context, decisions, and uncertainty clearly to technical and nontechnical partners.",
+            "outcomes": [
+              "Tailor a decision update",
+              "Clarify stakeholder expectations"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "productmgmt-product-roadmaps"
+            ],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              },
+              {"label": "YouTube: Stanford Graduate School of Business – Class Takeaways — Essentials of Strategic Communication (5:51)", "url": "https://www.youtube.com/watch?v=MfqPp37KGBQ"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "productmgmt-iterative-shipping",
+            "name": "Shipping Iteratively",
+            "description": "Break product work into small releases that enable learning and reduce delivery risk.",
+            "outcomes": [
+              "Define a small release",
+              "Plan feedback after launch"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "productmgmt-prioritization",
+              "productmgmt-product-metrics"
+            ],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              },
+              {"label": "YouTube: IxDF - Interaction Design Foundation – Why Perfectionism Isnt Perfect? Minimum Viable Product (MVP) Explained (6:07)", "url": "https://www.youtube.com/watch?v=nra6V-CIOAI"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Outcome-focused delivery brief",
+          "description": "Define a measurable outcome and align stakeholders around an incremental delivery approach.",
+          "demonstrates": [
+            "productmgmt-product-metrics",
+            "productmgmt-stakeholder-communication",
+            "productmgmt-iterative-shipping"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Connect product strategy, portfolio choices, and evidence-based learning.",
+        "skills": [
+          {
+            "id": "productmgmt-product-strategy",
+            "name": "Product Strategy",
+            "description": "Connect a product vision to target users, differentiated value, and strategic choices.",
+            "outcomes": [
+              "State a product strategy",
+              "Name deliberate exclusions"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "productmgmt-iterative-shipping",
+              "productmgmt-stakeholder-communication"
+            ],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              },
+              {"label": "YouTube: Harvard Innovation Labs – How to Build a Product that Scales into a Company (1:05:03)", "url": "https://www.youtube.com/watch?v=r-98YRAF1dY"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "productmgmt-portfolio-tradeoffs",
+            "name": "Portfolio Tradeoffs",
+            "description": "Balance product investments across opportunities, constraints, and expected outcomes.",
+            "outcomes": [
+              "Compare investment options",
+              "Describe opportunity cost"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "productmgmt-product-strategy",
+              "productmgmt-product-metrics"
+            ],
+            "resources": [
+              {
+                "label": "Engineering Leadership",
+                "url": "https://lethain.com/"
+              },
+              {"label": "YouTube: ByteByteGo – System Design Was HARD - Until You Knew the Trade-Offs (5:09)", "url": "https://www.youtube.com/watch?v=1nENigGr-a0"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "productmgmt-product-learning",
+            "name": "Product Learning Loops",
+            "description": "Use post-launch evidence to revise assumptions and guide subsequent product decisions.",
+            "outcomes": [
+              "Review outcome evidence",
+              "Recommend a next experiment"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "productmgmt-portfolio-tradeoffs"
+            ],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              },
+              {"label": "YouTube: Beyond Coding – Meta Staff Engineer: What the Best Engineers Do Differently (33:26)", "url": "https://www.youtube.com/watch?v=brNpAU5JmUY"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Product strategy review",
+          "description": "Recommend a product direction using user evidence, business goals, and post-launch learning.",
+          "demonstrates": [
+            "productmgmt-product-strategy",
+            "productmgmt-portfolio-tradeoffs",
+            "productmgmt-product-learning"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Evidence-led product proposal",
+      "description": "Propose, ship, and assess a product improvement with clear user evidence, success measures, and follow-up learning."
+    }
+  },
+  "projectmgmt": {
+    "title": "Technical Project Management",
+    "description": "Coordinate technical work from initial scope through delivery, release, and learning.",
+    "audience": "For engineers and project leads responsible for coordinating cross-functional technical outcomes.",
+    "goal": "Plan and deliver a technical project with visible scope, risks, progress, and release readiness.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Define a manageable project and make uncertainty visible.",
+        "skills": [
+          {
+            "id": "projectmgmt-project-scoping",
+            "name": "Project Scoping",
+            "description": "Define project outcomes, boundaries, assumptions, and acceptance criteria.",
+            "outcomes": [
+              "State in-scope and out-of-scope work",
+              "Define acceptance criteria"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "projectmgmt-project-estimation",
+            "name": "Technical Estimation",
+            "description": "Estimate work using explicit assumptions, ranges, and appropriate decomposition.",
+            "outcomes": [
+              "Break work into estimates",
+              "Explain estimate uncertainty"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "projectmgmt-project-scoping"
+            ],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "projectmgmt-risk-management",
+            "name": "Project Risk Management",
+            "description": "Identify, prioritize, and track delivery risks with practical mitigation and contingency plans.",
+            "outcomes": [
+              "Rank project risks",
+              "Assign mitigations and owners"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "projectmgmt-project-scoping"
+            ],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Project initiation brief",
+          "description": "Write a concise project brief with scope, estimates, assumptions, and top risks.",
+          "demonstrates": [
+            "projectmgmt-project-scoping",
+            "projectmgmt-project-estimation",
+            "projectmgmt-risk-management"
+          ]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Coordinate plans and communicate progress as delivery conditions change.",
+        "skills": [
+          {
+            "id": "projectmgmt-project-planning",
+            "name": "Project Planning",
+            "description": "Sequence work around dependencies, capacity, milestones, and decision points.",
+            "outcomes": [
+              "Map key dependencies",
+              "Set useful milestones"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "projectmgmt-project-estimation",
+              "projectmgmt-risk-management"
+            ],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "projectmgmt-agile-kanban",
+            "name": "Agile and Kanban Practices",
+            "description": "Use iterative planning and flow visualization to coordinate changing technical work.",
+            "outcomes": [
+              "Maintain a Kanban flow",
+              "Review and adapt work"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "projectmgmt-project-planning"
+            ],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              },
+              {"label": "YouTube: Codex Community – Scrum in 20 mins... (with examples) (19:36)", "url": "https://www.youtube.com/watch?v=SWDhGSZNF9M"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "projectmgmt-status-reporting",
+            "name": "Status Reporting",
+            "description": "Report progress, forecast, risks, and decisions in a concise and audience-aware format.",
+            "outcomes": [
+              "Write a decision-focused update",
+              "Escalate material risks"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "projectmgmt-project-planning"
+            ],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              },
+              {"label": "YouTube: ServiceNow Community – Status Reports in Project Workspace (20:33)", "url": "https://www.youtube.com/watch?v=G_AUnHWlNYc"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Adaptive project plan",
+          "description": "Build an adaptive plan with work tracking, clear status, and change handling.",
+          "demonstrates": [
+            "projectmgmt-project-planning",
+            "projectmgmt-agile-kanban",
+            "projectmgmt-status-reporting"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Manage changes and deliver reliable, well-coordinated releases.",
+        "skills": [
+          {
+            "id": "projectmgmt-release-management",
+            "name": "Release Management",
+            "description": "Coordinate release scope, readiness checks, rollout, and rollback planning.",
+            "outcomes": [
+              "Define release checks",
+              "Prepare rollout and rollback steps"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "projectmgmt-agile-kanban",
+              "projectmgmt-risk-management"
+            ],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "projectmgmt-dependency-coordination",
+            "name": "Dependency Coordination",
+            "description": "Manage cross-team dependencies through explicit owners, dates, and decision pathways.",
+            "outcomes": [
+              "Track dependency ownership",
+              "Escalate blocked work constructively"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "projectmgmt-status-reporting",
+              "projectmgmt-project-planning"
+            ],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              },
+              {"label": "YouTube: Web Dev Simplified – Dependency Inversion Principle Explained - SOLID Design Principles (13:00)", "url": "https://www.youtube.com/watch?v=9oHY5TllWaU"},
+              {"label": "YouTube: CodeAesthetic – Dependency Injection, The Best Pattern (13:16)", "url": "https://www.youtube.com/watch?v=J1f5b4vcxCQ"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "projectmgmt-delivery-improvement",
+            "name": "Delivery Improvement",
+            "description": "Review delivery outcomes and use evidence to improve future planning and execution.",
+            "outcomes": [
+              "Facilitate a project review",
+              "Convert findings into actions"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "projectmgmt-release-management",
+              "projectmgmt-dependency-coordination"
+            ],
+            "resources": [
+              {
+                "label": "Atlassian Agile",
+                "url": "https://www.atlassian.com/agile"
+              },
+              {"label": "YouTube: BMC Community – DORA Metrics Overview (4:50)", "url": "https://www.youtube.com/watch?v=kxyQPTgz_6k"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Release readiness review",
+          "description": "Coordinate a release plan with readiness criteria, ownership, contingencies, and stakeholder updates.",
+          "demonstrates": [
+            "projectmgmt-release-management",
+            "projectmgmt-dependency-coordination",
+            "projectmgmt-delivery-improvement"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Technical project delivery plan",
+      "description": "Plan and coordinate a technical project from scope through release, including risks, status, and lessons learned."
+    }
+  }
+}

@@ -1,0 +1,1834 @@
+{
+  "sre": {
+    "title": "Site Reliability Engineering",
+    "description": "Learn to keep production services reliable, observable, and ready to recover.",
+    "audience": "For engineers who operate and improve software services in production.",
+    "goal": "Design and operate a service with measurable reliability and a practiced failure response.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Define service reliability with measurable indicators and objectives.",
+        "skills": [
+          {
+            "id": "sre-sli-slo",
+            "name": "SLIs and SLOs",
+            "description": "Choose indicators and objectives that express user-visible reliability.",
+            "outcomes": [
+              "Select latency, traffic, error, and saturation indicators",
+              "Write measurable service objectives"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "Google SRE Book",
+                "url": "https://sre.google/sre-book/table-of-contents/"
+              },
+              {"label": "YouTube: Google Cloud Tech – The Art of SLOs (Service Level Objectives) (4:01)", "url": "https://www.youtube.com/watch?v=E3ReKuJ8ewA"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "sre-error-budgets",
+            "name": "Error Budgets",
+            "description": "Use error budgets to balance release velocity with reliability risk.",
+            "outcomes": [
+              "Calculate a budget from an objective",
+              "Explain release decisions using budget burn"
+            ],
+            "estimatedHours": 6,
+            "prerequisites": [
+              "sre-sli-slo"
+            ],
+            "resources": [
+              {
+                "label": "Google SRE Workbook",
+                "url": "https://sre.google/workbook/table-of-contents/"
+              },
+              {"label": "YouTube: IBM Technology – What is Site Reliability Engineering (SRE)? (8:12)", "url": "https://www.youtube.com/watch?v=ztIIcXNzMN4"},
+              {"label": "YouTube: Google Cloud Events – Site Reliability Engineering (SRE) Fundamentals (1:00:49)", "url": "https://www.youtube.com/watch?v=eopc_ijIfLg"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "sre-monitoring",
+            "name": "Service Monitoring",
+            "description": "Build monitoring around symptoms that matter to service users.",
+            "outcomes": [
+              "Choose actionable service metrics",
+              "Create a basic dashboard and alert"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "monitoring"
+            ],
+            "resources": [
+              {
+                "label": "Google SRE Book",
+                "url": "https://sre.google/sre-book/table-of-contents/"
+              },
+              {"label": "YouTube: ServiceNow Community – Demo - ServiceNow Site Reliability Operations (7:34)", "url": "https://www.youtube.com/watch?v=YYrvI0FccPM"},
+              {"label": "YouTube: Microsoft Azure – What is Azure Monitor? (5:01)", "url": "https://www.youtube.com/watch?v=eSutaPE80PM"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Reliability scorecard",
+          "description": "Define indicators, objectives, and an error-budget policy for a small service.",
+          "demonstrates": [
+            "sre-sli-slo",
+            "sre-error-budgets",
+            "sre-monitoring"
+          ]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Improve recovery practices and plan capacity using operational evidence.",
+        "skills": [
+          {
+            "id": "sre-incidents",
+            "name": "Incident Management",
+            "description": "Coordinate response with clear roles, communication, and follow-up.",
+            "outcomes": [
+              "Run a structured incident timeline",
+              "Write a blameless postmortem with actions"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "sre-monitoring"
+            ],
+            "resources": [
+              {
+                "label": "Google SRE Book",
+                "url": "https://sre.google/sre-book/table-of-contents/"
+              },
+              {"label": "YouTube: Professor Messer – Incident Response - CompTIA Security+ SY0-701 - 4.8 (9:14)", "url": "https://www.youtube.com/watch?v=X2UiMLxRdhE"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "sre-capacity",
+            "name": "Capacity Planning",
+            "description": "Forecast resources and plan headroom for changing workloads.",
+            "outcomes": [
+              "Estimate demand from workload trends",
+              "Identify saturation risks and scaling options"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "sre-monitoring"
+            ],
+            "resources": [
+              {
+                "label": "Google SRE Book",
+                "url": "https://sre.google/sre-book/table-of-contents/"
+              },
+              {"label": "YouTube: Gaurav Sen – Capacity Planning and Estimation: How much data does YouTube store daily? (13:12)", "url": "https://www.youtube.com/watch?v=0myM0k1mjZw"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "sre-on-call",
+            "name": "On-Call Operations",
+            "description": "Create an on-call process with actionable alerts and useful runbooks.",
+            "outcomes": [
+              "Triage and escalate an alert",
+              "Improve a recurring-failure runbook"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "sre-incidents"
+            ],
+            "resources": [
+              {
+                "label": "Google SRE Workbook",
+                "url": "https://sre.google/workbook/table-of-contents/"
+              },
+              {"label": "YouTube: ServiceNow Community – Demo - ServiceNow Site Reliability Operations (7:34)", "url": "https://www.youtube.com/watch?v=YYrvI0FccPM"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Operations readiness exercise",
+          "description": "Simulate an incident, communicate status, and deliver a capacity-informed follow-up.",
+          "demonstrates": [
+            "sre-incidents",
+            "sre-capacity",
+            "sre-on-call"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Validate resilience through controlled failure testing and reliability improvement.",
+        "skills": [
+          {
+            "id": "sre-chaos-testing",
+            "name": "Chaos Testing",
+            "description": "Run controlled experiments to test resilience and recovery behavior.",
+            "outcomes": [
+              "Form a falsifiable failure hypothesis",
+              "Limit experiment scope and analyze recovery"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "sre-on-call",
+              "sre-capacity"
+            ],
+            "resources": [
+              {
+                "label": "Google SRE Book",
+                "url": "https://sre.google/sre-book/table-of-contents/"
+              },
+              {"label": "YouTube: Microsoft Developer – Understanding Chaos Engineering (21:21)", "url": "https://www.youtube.com/watch?v=mfEMXKSFtaQ"},
+              {"label": "YouTube: Veritasium – Chaos: The Science of the Butterfly Effect (12:51)", "url": "https://www.youtube.com/watch?v=fDek6cYijxI"}
+            ],
+            "priority": "optional",
+            "completed": false
+          },
+          {
+            "id": "sre-reliability-architecture",
+            "name": "Reliability Architecture",
+            "description": "Design failure boundaries and recovery paths for a critical service.",
+            "outcomes": [
+              "Map dependencies and failure modes",
+              "Select redundancy and degradation strategies"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": [
+              "sre-sli-slo"
+            ],
+            "resources": [
+              {
+                "label": "Google SRE Book",
+                "url": "https://sre.google/sre-book/table-of-contents/"
+              },
+              {"label": "YouTube: IBM Technology – What is Site Reliability Engineering (SRE)? (8:12)", "url": "https://www.youtube.com/watch?v=ztIIcXNzMN4"},
+              {"label": "YouTube: Google Cloud Events – Site Reliability Engineering (SRE) Fundamentals (1:00:49)", "url": "https://www.youtube.com/watch?v=eopc_ijIfLg"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "sre-reliability-review",
+            "name": "Reliability Review",
+            "description": "Prioritize reliability work using objectives and service evidence.",
+            "outcomes": [
+              "Assess risk against objectives and budget",
+              "Present a prioritized improvement proposal"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "sre-error-budgets",
+              "sre-incidents"
+            ],
+            "resources": [
+              {
+                "label": "Google SRE Workbook",
+                "url": "https://sre.google/workbook/table-of-contents/"
+              },
+              {"label": "YouTube: IBM Technology – What is Site Reliability Engineering (SRE)? (8:12)", "url": "https://www.youtube.com/watch?v=ztIIcXNzMN4"},
+              {"label": "YouTube: Google Cloud Events – Site Reliability Engineering (SRE) Fundamentals (1:00:49)", "url": "https://www.youtube.com/watch?v=eopc_ijIfLg"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Resilient service launch",
+          "description": "Present reliability objectives, incident practices, capacity plans, and resilience experiments.",
+          "demonstrates": [
+            "sre-chaos-testing",
+            "sre-reliability-architecture",
+            "sre-reliability-review"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Production reliability program",
+      "description": "Deliver a service reliability program with objectives, incident practices, capacity plans, and resilience experiments."
+    }
+  },
+  "distributed": {
+    "title": "Networking & Distributed Systems",
+    "description": "Study communication, coordination, and failure handling across networked computers.",
+    "audience": "For learners building backend, infrastructure, or networked applications.",
+    "goal": "Design a distributed service with explicit consistency and fault-tolerance tradeoffs.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Explain core network and distributed-system behavior.",
+        "skills": [
+          {
+            "id": "distributed-networking",
+            "name": "Network Fundamentals",
+            "description": "Understand addressing, transport, and failure in network communication.",
+            "outcomes": [
+              "Explain DNS, TCP, and HTTP roles",
+              "Trace a request across a simple network"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "networking"
+            ],
+            "resources": [
+              {
+                "label": "MDN: HTTP overview",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"
+              },
+              {"label": "YouTube: TechWorld with Nana – Every Networking Concept Explained In 20 Minutes (23:21)", "url": "https://www.youtube.com/watch?v=xj_GjnD4uyI"},
+              {"label": "YouTube: CrashCourse – Computer Networks: Crash Course Computer Science #28 (12:20)", "url": "https://www.youtube.com/watch?v=3QhU9jd03a0"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "distributed-retries",
+            "name": "Timeouts and Retries",
+            "description": "Use timeouts and bounded retries to make remote calls fail predictably.",
+            "outcomes": [
+              "Set timeouts for remote operations",
+              "Avoid retry amplification with backoff"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "Google Cloud: Retry strategy",
+                "url": "https://cloud.google.com/storage/docs/retry-strategy"
+              },
+              {"label": "YouTube: ByteByteGo – Top 7 Most-Used Distributed System Patterns (6:14)", "url": "https://www.youtube.com/watch?v=nH4qjmP2KEE"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "distributed-failures",
+            "name": "Failure Models",
+            "description": "Distinguish process, network, and partial failures in distributed systems.",
+            "outcomes": [
+              "Identify partial failure scenarios",
+              "Describe failure detection limits"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "distributed-networking"
+            ],
+            "resources": [
+              {
+                "label": "MIT 6.5840: Distributed Systems",
+                "url": "https://pdos.csail.mit.edu/6.824/"
+              },
+              {"label": "YouTube: HashiCorp, an IBM Company – Explaining Distributed Systems Like I'm 5 (12:40)", "url": "https://www.youtube.com/watch?v=CESKgdNiKJw"},
+              {"label": "YouTube: ByteByteGo – Top 7 Most-Used Distributed System Patterns (6:14)", "url": "https://www.youtube.com/watch?v=nH4qjmP2KEE"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Network request map",
+          "description": "Diagram a request path and document timeouts, retries, and failure cases.",
+          "demonstrates": [
+            "distributed-networking",
+            "distributed-retries",
+            "distributed-failures"
+          ]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Choose data distribution and consistency techniques for application workloads.",
+        "skills": [
+          {
+            "id": "distributed-replication",
+            "name": "Replication",
+            "description": "Use replication to improve availability while accounting for lag.",
+            "outcomes": [
+              "Compare synchronous and asynchronous replication",
+              "Explain replica lag and failover consequences"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "distributed-failures"
+            ],
+            "resources": [
+              {
+                "label": "MIT 6.5840: Distributed Systems",
+                "url": "https://pdos.csail.mit.edu/6.824/"
+              },
+              {"label": "YouTube: CrashCourse – DNA Structure and Replication: Crash Course Biology #10 (12:35)", "url": "https://www.youtube.com/watch?v=8kK2zwjRV0M"},
+              {"label": "YouTube: Khan Academy – DNA replication and RNA transcription and translation | Khan Academy (15:23)", "url": "https://www.youtube.com/watch?v=6gUY5NoX1Lk"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "distributed-partitioning",
+            "name": "Partitioning",
+            "description": "Partition data to scale while managing skew and rebalancing.",
+            "outcomes": [
+              "Choose a partition key",
+              "Describe hotspots and repartitioning tradeoffs"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "distributed-replication"
+            ],
+            "resources": [
+              {
+                "label": "MIT 6.5840: Distributed Systems",
+                "url": "https://pdos.csail.mit.edu/6.824/"
+              },
+              {"label": "YouTube: Numberphile – Partitions - Numberphile (11:45)", "url": "https://www.youtube.com/watch?v=NjCIq58rZ8I"},
+              {"label": "YouTube: Alex The Analyst – Intermediate SQL Tutorial | Partition By (4:14)", "url": "https://www.youtube.com/watch?v=D6XNlTfglW4"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "distributed-consistency",
+            "name": "Consistency Models",
+            "description": "Compare consistency guarantees and choose one for user needs.",
+            "outcomes": [
+              "Contrast strong and eventual consistency",
+              "Identify stale reads and ordering behavior"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "distributed-replication"
+            ],
+            "resources": [
+              {
+                "label": "MIT 6.5840: Distributed Systems",
+                "url": "https://pdos.csail.mit.edu/6.824/"
+              },
+              {"label": "YouTube: Gaurav Sen – Data Consistency and Tradeoffs in Distributed Systems (25:42)", "url": "https://www.youtube.com/watch?v=m4q7VkgDWrM"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Replicated key-value service",
+          "description": "Prototype a partitioned replicated service and explain its consistency guarantees.",
+          "demonstrates": [
+            "distributed-replication",
+            "distributed-partitioning",
+            "distributed-consistency"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Design coordination and messaging under concurrent operation and faults.",
+        "skills": [
+          {
+            "id": "distributed-consensus",
+            "name": "Consensus",
+            "description": "Understand protocols and conditions for safe distributed agreement.",
+            "outcomes": [
+              "Describe leader election and replicated logs",
+              "Explain safety and liveness tradeoffs"
+            ],
+            "estimatedHours": 16,
+            "prerequisites": [
+              "distributed-consistency"
+            ],
+            "resources": [
+              {
+                "label": "MIT 6.5840: Distributed Systems",
+                "url": "https://pdos.csail.mit.edu/6.824/"
+              },
+              {"label": "YouTube: Gaurav Sen – Distributed Consensus and Data Replication strategies on the server (15:48)", "url": "https://www.youtube.com/watch?v=GeGxgmPTe4c"},
+              {"label": "YouTube: 73 Big Theory – Paxos Made Simple: The Algorithm Behind Distributed Consensus (8:04)", "url": "https://www.youtube.com/watch?v=op9JtpJoNvw"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "distributed-messaging",
+            "name": "Distributed Messaging",
+            "description": "Design message flows with delivery guarantees and idempotent consumers.",
+            "outcomes": [
+              "Compare delivery guarantees",
+              "Design deduplication and ordering strategies"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "distributed-partitioning",
+              "distributed-retries"
+            ],
+            "resources": [
+              {
+                "label": "Apache Kafka Documentation",
+                "url": "https://kafka.apache.org/documentation/"
+              },
+              {"label": "YouTube: The Coding Gopher – Kafka vs RabbitMQ: The Best Message Queue Explained (5:16)", "url": "https://www.youtube.com/watch?v=PQHf_IzmUXE"},
+              {"label": "YouTube: TechWorld with Nana – Kafka Tutorial for Beginners | Everything you need to get started (18:33)", "url": "https://www.youtube.com/watch?v=QkdkLdMBuL0"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "distributed-fault-tolerance",
+            "name": "Fault Tolerance",
+            "description": "Combine redundancy, recovery, and graceful degradation to tolerate failures.",
+            "outcomes": [
+              "Model a service failure boundary",
+              "Evaluate recovery and availability tradeoffs"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": [
+              "distributed-consensus",
+              "distributed-messaging"
+            ],
+            "resources": [
+              {
+                "label": "MIT 6.5840: Distributed Systems",
+                "url": "https://pdos.csail.mit.edu/6.824/"
+              },
+              {"label": "YouTube: ByteByteGo – 8 Most Important Tips for Designing Fault-Tolerant System (5:11)", "url": "https://www.youtube.com/watch?v=3Lis4w4_bBc"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Fault-tolerant event service",
+          "description": "Design a service that handles partitions, duplicate messages, and node failures.",
+          "demonstrates": [
+            "distributed-consensus",
+            "distributed-messaging",
+            "distributed-fault-tolerance"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Distributed service design",
+      "description": "Deliver an architecture with replication, consistency, messaging, and fault-tolerance decisions."
+    }
+  },
+  "blockchain": {
+    "title": "Blockchain & Web3",
+    "description": "Learn blockchain foundations and develop safer decentralized applications.",
+    "audience": "For developers exploring Ethereum applications and smart contracts.",
+    "goal": "Build a decentralized application with explicit security safeguards.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Understand blockchain primitives and Ethereum foundations.",
+        "skills": [
+          {
+            "id": "blockchain-cryptography",
+            "name": "Cryptographic Foundations",
+            "description": "Learn how hashes and signatures support blockchain integrity and identity.",
+            "outcomes": [
+              "Explain hashes and digital signatures",
+              "Describe public-key address ownership"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "applied-crypto"
+            ],
+            "resources": [
+              {
+                "label": "Ethereum: Introduction",
+                "url": "https://ethereum.org/en/developers/docs/intro-to-ethereum/"
+              },
+              {"label": "YouTube: MIT OpenCourseWare – 3. Blockchain Basics & Cryptography (1:17:38)", "url": "https://www.youtube.com/watch?v=0UvVOMZqpEA"},
+              {"label": "YouTube: CrashCourse – Cryptography: Crash Course Computer Science #33 (12:33)", "url": "https://www.youtube.com/watch?v=jhXCTbFnK8o"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "blockchain-ethereum",
+            "name": "Ethereum Basics",
+            "description": "Understand Ethereum accounts, transactions, blocks, and gas.",
+            "outcomes": [
+              "Trace a transaction lifecycle",
+              "Explain gas and account types"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "blockchain-cryptography"
+            ],
+            "resources": [
+              {
+                "label": "Ethereum Developer Documentation",
+                "url": "https://ethereum.org/en/developers/docs/"
+              },
+              {"label": "YouTube: Programming with Mosh – From Zero to Blockchain Developer in 10 Months: Complete Roadmap (4:59)", "url": "https://www.youtube.com/watch?v=gdiao7L9GjE"},
+              {"label": "YouTube: Fireship – Is Web3 all Hype? Top 10 Web 3.0 Questions & Answers (9:29)", "url": "https://www.youtube.com/watch?v=wHTcrmhskto"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "blockchain-wallets",
+            "name": "Wallets and Accounts",
+            "description": "Use wallets safely to manage keys and interact with dApps.",
+            "outcomes": [
+              "Distinguish a wallet from an account",
+              "Identify safe key-handling practices"
+            ],
+            "estimatedHours": 6,
+            "prerequisites": [
+              "blockchain-ethereum"
+            ],
+            "resources": [
+              {
+                "label": "Ethereum: Wallets",
+                "url": "https://ethereum.org/en/wallets/"
+              },
+              {"label": "YouTube: Simply Explained – How Bitcoin Wallets Work (Public & Private Key Explained) (4:05)", "url": "https://www.youtube.com/watch?v=GSTiKjnBaes"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Transaction walkthrough",
+          "description": "Document a wallet transaction from signing to confirmation and identify trust assumptions.",
+          "demonstrates": [
+            "blockchain-cryptography",
+            "blockchain-ethereum",
+            "blockchain-wallets"
+          ]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Implement and test a smart contract and connect it to an interface.",
+        "skills": [
+          {
+            "id": "blockchain-solidity",
+            "name": "Solidity",
+            "description": "Write and test Solidity contracts with explicit state and access rules.",
+            "outcomes": [
+              "Define contract state and functions",
+              "Compile and test a simple contract"
+            ],
+            "estimatedHours": 16,
+            "prerequisites": [
+              "blockchain-ethereum"
+            ],
+            "resources": [
+              {
+                "label": "Solidity Documentation",
+                "url": "https://docs.soliditylang.org/"
+              },
+              {"label": "YouTube: Programming with Mosh – From Zero to Blockchain Developer in 10 Months: Complete Roadmap (4:59)", "url": "https://www.youtube.com/watch?v=gdiao7L9GjE"},
+              {"label": "YouTube: Fireship – Is Web3 all Hype? Top 10 Web 3.0 Questions & Answers (9:29)", "url": "https://www.youtube.com/watch?v=wHTcrmhskto"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "blockchain-contract-design",
+            "name": "Smart Contract Design",
+            "description": "Design contract behavior around transactions, events, and irreversible state.",
+            "outcomes": [
+              "Model contract state transitions",
+              "Emit and interpret contract events"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "blockchain-solidity"
+            ],
+            "resources": [
+              {
+                "label": "Ethereum Developer Documentation",
+                "url": "https://ethereum.org/en/developers/docs/"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Build Your First Blockchain App Using Ethereum Smart Contracts and Solidity (1:31:07)", "url": "https://www.youtube.com/watch?v=coQ5dg8wM2o"},
+              {"label": "YouTube: Simply Explained – Smart contracts - Simply Explained (4:17)", "url": "https://www.youtube.com/watch?v=ZE2HxTmxfrI"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "blockchain-dapps",
+            "name": "Decentralized Applications",
+            "description": "Connect a web interface to a contract and handle wallet states.",
+            "outcomes": [
+              "Read contract state from a dApp",
+              "Handle wallet and transaction feedback"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "blockchain-wallets",
+              "blockchain-contract-design"
+            ],
+            "resources": [
+              {
+                "label": "Ethereum Developer Documentation",
+                "url": "https://ethereum.org/en/developers/docs/"
+              },
+              {"label": "YouTube: Fireship – I built a decentralized chat dapp // GUN web3 Tutorial (10:47)", "url": "https://www.youtube.com/watch?v=J5x3OMXjgMc"},
+              {"label": "YouTube: DesignCourse – 01. Smart Contracts and Decentralized Apps 101 (6:00)", "url": "https://www.youtube.com/watch?v=a9_HPYlhCug"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "dApp prototype",
+          "description": "Create a small contract and interface for wallet connection and contract state.",
+          "demonstrates": [
+            "blockchain-solidity",
+            "blockchain-contract-design",
+            "blockchain-dapps"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Assess contract threats and prepare for responsible deployment.",
+        "skills": [
+          {
+            "id": "blockchain-contract-security",
+            "name": "Smart Contract Security",
+            "description": "Review contracts for authorization, arithmetic, and external-call risks.",
+            "outcomes": [
+              "Identify common vulnerability patterns",
+              "Apply checks-effects-interactions"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": [
+              "blockchain-contract-design"
+            ],
+            "resources": [
+              {
+                "label": "Solidity: Security Considerations",
+                "url": "https://docs.soliditylang.org/en/latest/security-considerations.html"
+              },
+              {"label": "YouTube: Simply Explained – Smart contracts - Simply Explained (4:17)", "url": "https://www.youtube.com/watch?v=ZE2HxTmxfrI"},
+              {"label": "YouTube: MIT OpenCourseWare – 6. Smart Contracts and DApps (1:22:23)", "url": "https://www.youtube.com/watch?v=JPkgJwJHYSc"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "blockchain-security-testing",
+            "name": "Contract Security Testing",
+            "description": "Test contracts with adversarial cases and automated analysis.",
+            "outcomes": [
+              "Write negative and invariant tests",
+              "Interpret static-analysis findings"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "blockchain-contract-security"
+            ],
+            "resources": [
+              {
+                "label": "Ethereum Developer Documentation",
+                "url": "https://ethereum.org/en/developers/docs/"
+              },
+              {"label": "YouTube: Simply Explained – Smart contracts - Simply Explained (4:17)", "url": "https://www.youtube.com/watch?v=ZE2HxTmxfrI"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "blockchain-deployment",
+            "name": "Deployment and Operations",
+            "description": "Plan contract deployment, verification, and upgrade decisions.",
+            "outcomes": [
+              "Prepare a deployment checklist",
+              "Explain immutable and upgradeable tradeoffs"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "blockchain-security-testing",
+              "blockchain-dapps"
+            ],
+            "resources": [
+              {
+                "label": "Solidity Documentation",
+                "url": "https://docs.soliditylang.org/"
+              },
+              {"label": "YouTube: ByteByteGo – Top 5 Most-Used Deployment Strategies (10:00)", "url": "https://www.youtube.com/watch?v=AWVTKBUnoIg"},
+              {"label": "YouTube: Microsoft Azure – How Kubernetes deployments work (6:35)", "url": "https://www.youtube.com/watch?v=mNK14yXIZF4"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Reviewed contract release",
+          "description": "Present a tested release plan with threat analysis, deployment controls, and user safeguards.",
+          "demonstrates": [
+            "blockchain-contract-security",
+            "blockchain-security-testing",
+            "blockchain-deployment"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Decentralized application release",
+      "description": "Deliver a dApp with tested contracts, a wallet-connected interface, and a security review."
+    }
+  },
+  "interviews": {
+    "title": "Technical Interview Preparation",
+    "description": "Practice problem solving and communication for software engineering interviews.",
+    "audience": "For candidates preparing for technical and behavioral interviews.",
+    "goal": "Demonstrate clear reasoning and communication in realistic interviews.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Build a repeatable method for analyzing and solving coding problems.",
+        "skills": [
+          {
+            "id": "interviews-problem-solving",
+            "name": "Problem-Solving Method",
+            "description": "Clarify requirements, examples, and edge cases before coding.",
+            "outcomes": [
+              "Ask clarifying questions and define inputs",
+              "Work through examples and edge cases"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "LeetCode Explore",
+                "url": "https://leetcode.com/explore/"
+              },
+              {"label": "YouTube: Tech With Tim – Problem Solving Techniques - For Programming Problems & Interviews (17:40)", "url": "https://www.youtube.com/watch?v=r4TgqWbKRtA"},
+              {"label": "YouTube: Fireship – Problem-Solving for Developers - A Beginner's Guide (10:44)", "url": "https://www.youtube.com/watch?v=UFc-RPbq8kg"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "interviews-data-structures",
+            "name": "Data-Structure Practice",
+            "description": "Select data structures based on operation and access needs.",
+            "outcomes": [
+              "Choose arrays, maps, stacks, or queues",
+              "Explain access and update tradeoffs"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": [
+              "basic-data-structures"
+            ],
+            "resources": [
+              {
+                "label": "Khan Academy: Algorithms",
+                "url": "https://www.khanacademy.org/computing/computer-science/algorithms"
+              },
+              {"label": "YouTube: NeetCode – Top 6 Coding Interview Concepts (Data Structures & Algorithms) (10:51)", "url": "https://www.youtube.com/watch?v=ft0owvS5tQA"},
+              {"label": "YouTube: freeCodeCamp.org – Data Structure and Algorithm Patterns for LeetCode Interviews – Tutorial (1:15:03)", "url": "https://www.youtube.com/watch?v=Z_c4byLrNBU"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "interviews-algorithms",
+            "name": "Algorithm Patterns",
+            "description": "Apply search, traversal, and sorting patterns to interview problems.",
+            "outcomes": [
+              "Recognize binary search and traversal use cases",
+              "Implement an algorithm pattern clearly"
+            ],
+            "estimatedHours": 16,
+            "prerequisites": [
+              "algorithm-design",
+              "interviews-problem-solving"
+            ],
+            "resources": [
+              {
+                "label": "LeetCode Explore",
+                "url": "https://leetcode.com/explore/"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Data Structure and Algorithm Patterns for LeetCode Interviews – Tutorial (1:15:03)", "url": "https://www.youtube.com/watch?v=Z_c4byLrNBU"},
+              {"label": "YouTube: NeetCode – Top 6 Coding Interview Concepts (Data Structures & Algorithms) (10:51)", "url": "https://www.youtube.com/watch?v=ft0owvS5tQA"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Problem-solving notebook",
+          "description": "Solve and explain problems with examples, edge cases, and complexity notes.",
+          "demonstrates": [
+            "interviews-problem-solving",
+            "interviews-data-structures",
+            "interviews-algorithms"
+          ]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Communicate efficient solutions and design systems under interview constraints.",
+        "skills": [
+          {
+            "id": "interviews-complexity",
+            "name": "Complexity Analysis",
+            "description": "Analyze time and space costs as input size grows.",
+            "outcomes": [
+              "Estimate asymptotic time and space",
+              "Compare solutions by complexity"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "complexity-analysis",
+              "interviews-algorithms"
+            ],
+            "resources": [
+              {
+                "label": "Khan Academy: Algorithms",
+                "url": "https://www.khanacademy.org/computing/computer-science/algorithms"
+              },
+              {"label": "YouTube: Tech With Tim – Big O Notation & Time Complexity Analysis Tutorial (1:05:51)", "url": "https://www.youtube.com/watch?v=6aDHWSNKlVw"},
+              {"label": "YouTube: Gaurav Sen – What is Time Complexity Analysis? - Basics of Algorithms ⌛ (9:57)", "url": "https://www.youtube.com/watch?v=fZc3ijGM0aM"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "interviews-system-design",
+            "name": "System Design Interviews",
+            "description": "Structure a design discussion from requirements through tradeoffs.",
+            "outcomes": [
+              "Clarify scale and functional requirements",
+              "Discuss APIs, data, and reliability tradeoffs"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": [
+              "system-design"
+            ],
+            "resources": [
+              {
+                "label": "System Design Primer",
+                "url": "https://github.com/donnemartin/system-design-primer"
+              },
+              {"label": "YouTube: KodeKloud – System Design Interview Prep for Beginners (Full Course) (2:45:24)", "url": "https://www.youtube.com/watch?v=oz5c88cO5P8"},
+              {"label": "YouTube: freeCodeCamp.org – System Design Concepts Course and Interview Prep (53:38)", "url": "https://www.youtube.com/watch?v=F2FmTdLtb_4"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "interviews-communication",
+            "name": "Technical Communication",
+            "description": "Explain reasoning and collaborate effectively while solving a problem.",
+            "outcomes": [
+              "Narrate assumptions and decision points",
+              "Respond constructively to feedback"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "interviews-problem-solving"
+            ],
+            "resources": [
+              {
+                "label": "Harvard FAS Career Services",
+                "url": "https://careerservices.fas.harvard.edu/"
+              },
+              {"label": "YouTube: Fireship – How to NOT Fail a Technical Interview (8:26)", "url": "https://www.youtube.com/watch?v=1t1_a1BZ04o"},
+              {"label": "YouTube: Tech With Tim – 7 Steps to Pass Technical Interviews - What I Actually Did (12:23)", "url": "https://www.youtube.com/watch?v=BH3y1V7KUKg"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Timed interview simulation",
+          "description": "Complete a coding and system-design simulation with a written reflection.",
+          "demonstrates": [
+            "interviews-complexity",
+            "interviews-system-design",
+            "interviews-communication"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Perform consistently across mock technical and behavioral interviews.",
+        "skills": [
+          {
+            "id": "interviews-behavioral",
+            "name": "Behavioral Interviews",
+            "description": "Prepare concise stories that show impact, learning, and collaboration.",
+            "outcomes": [
+              "Structure examples around context and outcomes",
+              "Reflect on failure and learning"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "interviews-communication"
+            ],
+            "resources": [
+              {
+                "label": "Harvard FAS Career Services",
+                "url": "https://careerservices.fas.harvard.edu/"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Master Behavioral Interviews (for Software Engineers) (2:12:42)", "url": "https://www.youtube.com/watch?v=8hpSMnCwCxY"},
+              {"label": "YouTube: Fireship – How to NOT Fail a Technical Interview (8:26)", "url": "https://www.youtube.com/watch?v=1t1_a1BZ04o"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "interviews-mocks",
+            "name": "Mock Interviews",
+            "description": "Use realistic practice interviews to identify gaps and improve.",
+            "outcomes": [
+              "Run a complete practice interview",
+              "Convert feedback into practice goals"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "interviews-complexity",
+              "interviews-system-design"
+            ],
+            "resources": [
+              {
+                "label": "Pramp",
+                "url": "https://www.pramp.com/"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Software Engineering Job Interview – Full Mock Interview (1:14:29)", "url": "https://www.youtube.com/watch?v=1qw5ITr3k9E"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "interviews-strategy",
+            "name": "Interview Strategy",
+            "description": "Plan preparation and pacing across a multi-stage hiring process.",
+            "outcomes": [
+              "Prioritize practice by role requirements",
+              "Manage time and clarify evaluation criteria"
+            ],
+            "estimatedHours": 6,
+            "prerequisites": [
+              "interviews-behavioral",
+              "interviews-mocks"
+            ],
+            "resources": [
+              {
+                "label": "Google Careers",
+                "url": "https://careers.google.com/"
+              },
+              {"label": "YouTube: Tech With Tim – 7 Steps to Pass Technical Interviews - What I Actually Did (12:23)", "url": "https://www.youtube.com/watch?v=BH3y1V7KUKg"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Interview readiness portfolio",
+          "description": "Present practice artifacts and a plan covering coding, system design, and behavioral interviews.",
+          "demonstrates": [
+            "interviews-behavioral",
+            "interviews-mocks",
+            "interviews-strategy"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Interview performance portfolio",
+      "description": "Complete mock interviews and show improvement across technical and behavioral rounds."
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio & Career Building",
+    "description": "Create a professional presence and navigate a software engineering job search.",
+    "audience": "For learners preparing to present their work and pursue technology roles.",
+    "goal": "Build a credible portfolio and execute a focused job search.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Create professional materials that make skills and work easy to evaluate.",
+        "skills": [
+          {
+            "id": "portfolio-resume",
+            "name": "Resume Writing",
+            "description": "Write a concise resume connecting accomplishments to target roles.",
+            "outcomes": [
+              "Describe outcomes with specific evidence",
+              "Tailor resume sections to a role"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "Harvard FAS Career Services",
+                "url": "https://careerservices.fas.harvard.edu/"
+              },
+              {"label": "YouTube: Figma – Build a portfolio that tells your story | Figma for Edu Early Career Week (59:52)", "url": "https://www.youtube.com/watch?v=6dEqxMwCSgY"},
+              {"label": "YouTube: MIT OpenCourseWare – 16. Portfolio Management (1:28:38)", "url": "https://www.youtube.com/watch?v=8TJQhQ2GZ0Y"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "portfolio-github",
+            "name": "GitHub Profile",
+            "description": "Organize a GitHub profile so others can quickly explore your work.",
+            "outcomes": [
+              "Pin representative repositories",
+              "Add useful project READMEs and profile context"
+            ],
+            "estimatedHours": 6,
+            "prerequisites": [
+              "git"
+            ],
+            "resources": [
+              {
+                "label": "GitHub Docs",
+                "url": "https://docs.github.com/en"
+              },
+              {"label": "YouTube: Keith Galli – How to make your GitHub more impressive to Employers! (5 simple tips) (19:01)", "url": "https://www.youtube.com/watch?v=QDfLou004iE"},
+              {"label": "YouTube: GitHub – A brief introduction to Git for beginners | GitHub (9:08)", "url": "https://www.youtube.com/watch?v=r8jQ9hVA2qs"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "portfolio-case-studies",
+            "name": "Project Case Studies",
+            "description": "Explain project context, decisions, implementation, and outcomes.",
+            "outcomes": [
+              "Document the problem and constraints",
+              "Show decisions and evidence of results"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "portfolio-github"
+            ],
+            "resources": [
+              {
+                "label": "Google Developer Documentation Style Guide",
+                "url": "https://developers.google.com/style"
+              },
+              {"label": "YouTube: Adobe Creative Cloud – Building a Case Study with Josh Iwata - 1 of 2 | Adobe Creative Cloud (1:55:44)", "url": "https://www.youtube.com/watch?v=hg-eDgNBMZE"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Professional profile starter",
+          "description": "Publish a tailored resume, curated GitHub profile, and project case study.",
+          "demonstrates": [
+            "portfolio-resume",
+            "portfolio-github",
+            "portfolio-case-studies"
+          ]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Present work consistently and build purposeful professional relationships.",
+        "skills": [
+          {
+            "id": "portfolio-personal-site",
+            "name": "Personal Website",
+            "description": "Build a focused site presenting projects, skills, and contact details.",
+            "outcomes": [
+              "Publish an accessible portfolio site",
+              "Keep project information current"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "portfolio-case-studies"
+            ],
+            "resources": [
+              {
+                "label": "GitHub Pages Documentation",
+                "url": "https://docs.github.com/en/pages"
+              },
+              {"label": "YouTube: Ali Abdaal – Why Everyone Needs a Personal Website (26:29)", "url": "https://www.youtube.com/watch?v=NWfIrmIgaCU"},
+              {"label": "YouTube: freeCodeCamp.org – Build and deploy a portfolio website [Full Tutorial Course] (2:23:16)", "url": "https://www.youtube.com/watch?v=_xkSvufmjEs"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "portfolio-networking",
+            "name": "Professional Networking",
+            "description": "Build genuine professional connections through clear outreach.",
+            "outcomes": [
+              "Write respectful, specific outreach",
+              "Maintain relationships through follow-up"
+            ],
+            "estimatedHours": 6,
+            "prerequisites": [
+              "portfolio-resume"
+            ],
+            "resources": [
+              {
+                "label": "LinkedIn",
+                "url": "https://www.linkedin.com/"
+              },
+              {"label": "YouTube: Stanford Graduate School of Business – Tom Friel: How to Network (4:33)", "url": "https://www.youtube.com/watch?v=rW-Ui6j60AM"},
+              {"label": "YouTube: TechWorld with Nana – Every Networking Concept Explained In 20 Minutes (23:21)", "url": "https://www.youtube.com/watch?v=xj_GjnD4uyI"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "portfolio-job-search",
+            "name": "Job Search Planning",
+            "description": "Organize a focused search around suitable roles and follow-up.",
+            "outcomes": [
+              "Track applications and next steps",
+              "Evaluate role fit against goals"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "portfolio-resume",
+              "portfolio-personal-site"
+            ],
+            "resources": [
+              {
+                "label": "Harvard FAS Career Services",
+                "url": "https://careerservices.fas.harvard.edu/"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Build and deploy a portfolio website [Full Tutorial Course] (2:23:16)", "url": "https://www.youtube.com/watch?v=_xkSvufmjEs"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Targeted job search kit",
+          "description": "Create a target-role list, application tracker, outreach templates, and consistent portfolio links.",
+          "demonstrates": [
+            "portfolio-personal-site",
+            "portfolio-networking",
+            "portfolio-job-search"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Navigate offers and communicate value with informed career decisions.",
+        "skills": [
+          {
+            "id": "portfolio-positioning",
+            "name": "Career Positioning",
+            "description": "Connect project evidence and strengths to engineering role needs.",
+            "outcomes": [
+              "Prepare examples of technical impact",
+              "Align portfolio evidence to a role"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "portfolio-case-studies",
+              "portfolio-job-search"
+            ],
+            "resources": [
+              {
+                "label": "Harvard FAS Career Services",
+                "url": "https://careerservices.fas.harvard.edu/"
+              },
+              {"label": "YouTube: Ali Abdaal – How to Find a Career You Genuinely Love (12:41)", "url": "https://www.youtube.com/watch?v=O3m14PVOq_g"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "portfolio-negotiation",
+            "name": "Offer Negotiation",
+            "description": "Evaluate compensation and negotiate respectfully using researched priorities.",
+            "outcomes": [
+              "Compare offer components and constraints",
+              "Prepare a professional negotiation request"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "portfolio-positioning"
+            ],
+            "resources": [
+              {
+                "label": "Harvard FAS Career Services",
+                "url": "https://careerservices.fas.harvard.edu/"
+              },
+              {"label": "YouTube: Gaurav Sen – 8 Rules for Offer Negotiations by Gaurav Sen (17:55)", "url": "https://www.youtube.com/watch?v=Gr861i8aB3k"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "portfolio-career-planning",
+            "name": "Career Planning",
+            "description": "Set a sustainable development plan informed by role expectations.",
+            "outcomes": [
+              "Identify growth areas from feedback",
+              "Set milestones for development"
+            ],
+            "estimatedHours": 6,
+            "prerequisites": [
+              "portfolio-negotiation",
+              "portfolio-networking"
+            ],
+            "resources": [
+              {
+                "label": "LinkedIn",
+                "url": "https://www.linkedin.com/"
+              },
+              {"label": "YouTube: Ali Abdaal – How to Find a Career You Genuinely Love (12:41)", "url": "https://www.youtube.com/watch?v=O3m14PVOq_g"},
+              {"label": "YouTube: MIT OpenCourseWare – 16. Portfolio Management (1:28:38)", "url": "https://www.youtube.com/watch?v=8TJQhQ2GZ0Y"}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Career transition plan",
+          "description": "Present a role-aligned portfolio and decision framework for opportunities and negotiation.",
+          "demonstrates": [
+            "portfolio-positioning",
+            "portfolio-negotiation",
+            "portfolio-career-planning"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Career-ready portfolio",
+      "description": "Deliver a polished site, case studies, and a practical job-search and negotiation strategy."
+    }
+  },
+  "opensource": {
+    "title": "Open-Source Contribution",
+    "description": "Learn to contribute responsibly to collaborative open-source projects.",
+    "audience": "For developers who want to participate in public software communities.",
+    "goal": "Make a useful contribution and understand project maintenance and licensing.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Find a suitable project and learn its contribution workflow.",
+        "skills": [
+          {
+            "id": "opensource-discovery",
+            "name": "Finding Projects",
+            "description": "Identify active projects whose goals and practices fit your interests.",
+            "outcomes": [
+              "Evaluate activity and contribution guidance",
+              "Choose a bounded first contribution"
+            ],
+            "estimatedHours": 6,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "Open Source Guides",
+                "url": "https://opensource.guide/"
+              },
+              {"label": "YouTube: Tech With Tim – How To Structure A Programming Project… (19:00)", "url": "https://www.youtube.com/watch?v=CAeWjoP525M"},
+              {"label": "YouTube: Luke Barousse – PROJECTS that landed Data Jobs for my Subscribers (9:33)", "url": "https://www.youtube.com/watch?v=5Q0gB7imNOo"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "opensource-reading-code",
+            "name": "Reading Unfamiliar Code",
+            "description": "Explore a repository by tracing its structure, tests, and documentation.",
+            "outcomes": [
+              "Locate entry points and test suites",
+              "Summarize a feature flow from source"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "git"
+            ],
+            "resources": [
+              {
+                "label": "GitHub Docs",
+                "url": "https://docs.github.com/en"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Contributing To Open Source – Beginner's Guide (2:29:31)", "url": "https://www.youtube.com/watch?v=mklEhT_RLos"},
+              {"label": "YouTube: The Cherno – BEST WAY to read and understand code (17:24)", "url": "https://www.youtube.com/watch?v=XTZVbmz7LpY"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "opensource-workflow",
+            "name": "Contribution Workflow",
+            "description": "Prepare a change using branches, tests, and project instructions.",
+            "outcomes": [
+              "Run setup and relevant tests",
+              "Create a focused change with a clear commit"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "opensource-discovery",
+              "opensource-reading-code"
+            ],
+            "resources": [
+              {
+                "label": "GitHub: Contributing to projects",
+                "url": "https://docs.github.com/en/get-started/quickstart/contributing-to-projects"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Contributing To Open Source – Beginner's Guide (2:29:31)", "url": "https://www.youtube.com/watch?v=mklEhT_RLos"},
+              {"label": "YouTube: GitHub – Getting started with open source contributions for beginners (5:33)", "url": "https://www.youtube.com/watch?v=WldXhauP024"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Repository orientation report",
+          "description": "Choose a project, map its structure, and propose a contribution aligned with its guidelines.",
+          "demonstrates": [
+            "opensource-discovery",
+            "opensource-reading-code",
+            "opensource-workflow"
+          ]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Collaborate on issues and pull requests with respectful changes.",
+        "skills": [
+          {
+            "id": "opensource-issues",
+            "name": "Issues and Triage",
+            "description": "Clarify reports and discuss reproducible problems with contributors.",
+            "outcomes": [
+              "Reproduce and document an issue",
+              "Ask focused questions and confirm scope"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "opensource-workflow"
+            ],
+            "resources": [
+              {
+                "label": "GitHub Docs: Issues",
+                "url": "https://docs.github.com/en/issues"
+              },
+              {"label": "YouTube: IBM Technology – What Is a Triage AI Agent? Automation & Multi-Agent Systems Explained (7:29)", "url": "https://www.youtube.com/watch?v=x2ghX_RyHG4"},
+              {"label": "YouTube: Pantheon – How to Create and Triage Issues with Drupal (Gift of Open Source) (56:34)", "url": "https://www.youtube.com/watch?v=9k1mw8Z7uBU"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "opensource-pull-requests",
+            "name": "Pull Requests",
+            "description": "Submit focused pull requests with tests and respond constructively to review.",
+            "outcomes": [
+              "Write a clear pull request description",
+              "Revise changes based on feedback"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "opensource-workflow"
+            ],
+            "resources": [
+              {
+                "label": "GitHub Docs: Pull requests",
+                "url": "https://docs.github.com/en/pull-requests"
+              },
+              {"label": "YouTube: Jacob Sorber – How to Contribute to Open Source Projects on Github (pull requests) (10:57)", "url": "https://www.youtube.com/watch?v=x24fOAPclL4"},
+              {"label": "YouTube: codebasics – Git Github Tutorial 10: What is Pull Request? (10:43)", "url": "https://www.youtube.com/watch?v=e3bjQX9jIBk"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "opensource-etiquette",
+            "name": "Community Etiquette",
+            "description": "Communicate inclusively and follow project norms and codes of conduct.",
+            "outcomes": [
+              "Use considerate and specific communication",
+              "Respond constructively to disagreement"
+            ],
+            "estimatedHours": 6,
+            "prerequisites": [
+              "opensource-discovery"
+            ],
+            "resources": [
+              {
+                "label": "Open Source Guides: Community",
+                "url": "https://opensource.guide/building-community/"
+              },
+              {"label": "YouTube: Theo - t3․gg – Don't Contribute to Open Source (9:55)", "url": "https://www.youtube.com/watch?v=5nY_cy8zcO4"},
+              {"label": "YouTube: GitHub – Getting started with open source contributions for beginners (5:33)", "url": "https://www.youtube.com/watch?v=WldXhauP024"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Reviewed contribution",
+          "description": "Complete an issue through review and document how project conventions shaped the change.",
+          "demonstrates": [
+            "opensource-issues",
+            "opensource-pull-requests",
+            "opensource-etiquette"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Support project health through maintainership and informed licensing.",
+        "skills": [
+          {
+            "id": "opensource-maintainership",
+            "name": "Maintainership",
+            "description": "Coordinate contributions and sustain project health with clear processes.",
+            "outcomes": [
+              "Triage incoming work consistently",
+              "Plan releases and contributor onboarding"
+            ],
+            "estimatedHours": 12,
+            "prerequisites": [
+              "opensource-issues",
+              "opensource-pull-requests"
+            ],
+            "resources": [
+              {
+                "label": "Open Source Guides",
+                "url": "https://opensource.guide/"
+              },
+              {"label": "YouTube: GitHub – Global Maintainer Summit 2021: Paulus Schoutsen-Staying afloat running a big open… (14:54)", "url": "https://www.youtube.com/watch?v=JTTZRFCuAds"},
+              {"label": "YouTube: The Linux Foundation – Clear Your Own Path to Open Source Maintainer - Martin Hickey, IBM (45:32)", "url": "https://www.youtube.com/watch?v=JioO79peb2U"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "opensource-licensing",
+            "name": "Open-Source Licensing",
+            "description": "Understand common licenses and select one appropriate for a project.",
+            "outcomes": [
+              "Compare license obligations",
+              "Add clear license information to a repository"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "opensource-discovery"
+            ],
+            "resources": [
+              {
+                "label": "Choose a License",
+                "url": "https://choosealicense.com/"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Contributing To Open Source – Beginner's Guide (2:29:31)", "url": "https://www.youtube.com/watch?v=mklEhT_RLos"},
+              {"label": "YouTube: GitHub – Getting started with open source contributions for beginners (5:33)", "url": "https://www.youtube.com/watch?v=WldXhauP024"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "opensource-sustainability",
+            "name": "Project Sustainability",
+            "description": "Assess project health and define practices for long-term participation.",
+            "outcomes": [
+              "Identify continuity risks",
+              "Propose inclusive contribution practices"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "opensource-maintainership",
+              "opensource-licensing"
+            ],
+            "resources": [
+              {
+                "label": "Open Source Guides",
+                "url": "https://opensource.guide/"
+              },
+              {"label": "YouTube: GitHub – Open Source Friday: Sustainability Workshop (1:22:36)", "url": "https://www.youtube.com/watch?v=e1SD01RmAs0"}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Maintainer handbook",
+          "description": "Plan triage, licensing, contributor onboarding, and sustainable project operations.",
+          "demonstrates": [
+            "opensource-maintainership",
+            "opensource-licensing",
+            "opensource-sustainability"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Sustainable open-source project",
+      "description": "Deliver a meaningful contribution and a plan addressing community health and licensing."
+    }
+  },
+  "techwriting": {
+    "title": "Technical Writing & Communication",
+    "description": "Develop clear documentation and communication for technical users and collaborators.",
+    "audience": "For engineers who explain software, systems, and decisions.",
+    "goal": "Publish coherent documentation and communicate technical decisions to varied audiences.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Write clear project and interface documentation for new users.",
+        "skills": [
+          {
+            "id": "techwriting-readmes",
+            "name": "README Writing",
+            "description": "Write a README that helps readers understand, install, and use a project.",
+            "outcomes": [
+              "Explain project purpose and setup",
+              "Document a basic usage example"
+            ],
+            "estimatedHours": 6,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "GitHub Docs: About READMEs",
+                "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Technical Writing Course for Beginners (1:16:05)", "url": "https://www.youtube.com/watch?v=vT5pcc30Ffw"},
+              {"label": "YouTube: O'Reilly – Ten Steps to a Better README - Mike Jang (Ignite OSCON 2015) (5:31)", "url": "https://www.youtube.com/watch?v=PC05prd2usY"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "techwriting-api-docs",
+            "name": "API Documentation",
+            "description": "Describe API behavior with endpoints, parameters, examples, and errors.",
+            "outcomes": [
+              "Document request and response formats",
+              "Explain errors and authentication"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "api-design"
+            ],
+            "resources": [
+              {
+                "label": "Google Developer Documentation Style Guide",
+                "url": "https://developers.google.com/style"
+              },
+              {"label": "YouTube: freeCodeCamp.org – API Documentation Best Practices – Full Course (1:55:38)", "url": "https://www.youtube.com/watch?v=0CSyIBHQy9g"},
+              {"label": "YouTube: Document360 – Webinar on Art of API Documentation: Best Practices for Technical Writers (48:03)", "url": "https://www.youtube.com/watch?v=967vXMQLm30"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "techwriting-plain-language",
+            "name": "Plain Language",
+            "description": "Make technical explanations easier to follow with audience-aware wording.",
+            "outcomes": [
+              "Define terms before using them",
+              "Revise sentences for clarity and scanability"
+            ],
+            "estimatedHours": 6,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "Google Developer Documentation Style Guide",
+                "url": "https://developers.google.com/style"
+              },
+              {"label": "YouTube: UVM Center on Disability & Community Inclusion – Where To Start with Plain Language (38:46)", "url": "https://www.youtube.com/watch?v=59Vzu9yoJ_8"},
+              {"label": "YouTube: Carnegie Mellon University's Dietrich College – Plain Language and the Legacy of Professor Erwin R. Steinberg (1:09:45)", "url": "https://www.youtube.com/watch?v=_cq0oPwABGw"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Project quick-start guide",
+          "description": "Publish a reader-tested README and API usage example for a small project.",
+          "demonstrates": [
+            "techwriting-readmes",
+            "techwriting-api-docs",
+            "techwriting-plain-language"
+          ]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Create reusable learning materials and diagrams that explain systems.",
+        "skills": [
+          {
+            "id": "techwriting-tutorials",
+            "name": "Tutorials",
+            "description": "Teach a task with ordered steps, expected results, and a learning outcome.",
+            "outcomes": [
+              "Write steps that produce a verifiable result",
+              "Separate prerequisites from task instructions"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "techwriting-plain-language"
+            ],
+            "resources": [
+              {
+                "label": "Google Developer Documentation Style Guide",
+                "url": "https://developers.google.com/style"
+              },
+              {"label": "YouTube: Brackeys – How to make a Video Game - Godot Beginner Tutorial (1:17:12)", "url": "https://www.youtube.com/watch?v=LOhfqjmasi0"},
+              {"label": "YouTube: freeCodeCamp.org – n8n Tutorial – Zero to Hero Course (3:35:08)", "url": "https://www.youtube.com/watch?v=UIf-SlmMays"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "techwriting-diagrams",
+            "name": "Technical Diagrams",
+            "description": "Use diagrams to communicate system components, relationships, and flows.",
+            "outcomes": [
+              "Choose a diagram type for a question",
+              "Label boundaries and flows consistently"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "system-design"
+            ],
+            "resources": [
+              {
+                "label": "C4 Model",
+                "url": "https://c4model.com/"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Technical Writing Course for Beginners (1:16:05)", "url": "https://www.youtube.com/watch?v=vT5pcc30Ffw"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "techwriting-architecture",
+            "name": "Architecture Documentation",
+            "description": "Record system context, decisions, and tradeoffs for collaborators.",
+            "outcomes": [
+              "Document components and dependencies",
+              "Explain significant decisions and alternatives"
+            ],
+            "estimatedHours": 10,
+            "prerequisites": [
+              "techwriting-diagrams",
+              "system-design"
+            ],
+            "resources": [
+              {
+                "label": "Google Developer Documentation Style Guide",
+                "url": "https://developers.google.com/style"
+              },
+              {"label": "YouTube: ByteByteGo – Top 5 Most Used Architecture Patterns (5:53)", "url": "https://www.youtube.com/watch?v=f6zXyq4VPP8"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "System learning guide",
+          "description": "Create a tutorial and architecture overview that help a teammate understand a workflow.",
+          "demonstrates": [
+            "techwriting-tutorials",
+            "techwriting-diagrams",
+            "techwriting-architecture"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Present technical decisions and maintain written communication across a project.",
+        "skills": [
+          {
+            "id": "techwriting-presenting",
+            "name": "Technical Presentations",
+            "description": "Present technical material with a focused narrative and useful visuals.",
+            "outcomes": [
+              "Structure a presentation around a clear message",
+              "Explain decisions with supporting visuals"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "techwriting-diagrams"
+            ],
+            "resources": [
+              {
+                "label": "Google Developer Documentation Style Guide",
+                "url": "https://developers.google.com/style"
+              },
+              {"label": "YouTube: freeCodeCamp.org – Technical Writing Course for Beginners (1:16:05)", "url": "https://www.youtube.com/watch?v=vT5pcc30Ffw"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "techwriting-updates",
+            "name": "Written Project Updates",
+            "description": "Write concise updates that surface progress, risks, decisions, and next steps.",
+            "outcomes": [
+              "Summarize status and blockers clearly",
+              "Tailor update detail to its audience"
+            ],
+            "estimatedHours": 6,
+            "prerequisites": [
+              "techwriting-plain-language"
+            ],
+            "resources": [
+              {
+                "label": "Google Developer Documentation Style Guide",
+                "url": "https://developers.google.com/style"
+              },
+              {"label": "YouTube: IBM Technology – Agentic Engineering: 5 Terms Every AI Developer Should Know (11:41)", "url": "https://www.youtube.com/watch?v=SIZsFGvtClM"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "techwriting-maintenance",
+            "name": "Documentation Maintenance",
+            "description": "Keep documentation accurate through ownership and release-aware review.",
+            "outcomes": [
+              "Identify documentation owners and review points",
+              "Update docs alongside behavior changes"
+            ],
+            "estimatedHours": 8,
+            "prerequisites": [
+              "techwriting-api-docs",
+              "techwriting-architecture"
+            ],
+            "resources": [
+              {
+                "label": "GitHub Docs",
+                "url": "https://docs.github.com/en"
+              },
+              {"label": "YouTube: PyCon US – Talk: Mason Egger - Building Docs like Code: Continuous Integration for Documentation (34:40)", "url": "https://www.youtube.com/watch?v=4SwdVMKhbn4"},
+              {"label": "YouTube: CASS Community – From Code to Clarity: What Makes Good Docs? (55:42)", "url": "https://www.youtube.com/watch?v=Slb504PCzEw"}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Technical communication package",
+          "description": "Present an architecture decision and publish coordinated project updates and documentation.",
+          "demonstrates": [
+            "techwriting-presenting",
+            "techwriting-updates",
+            "techwriting-maintenance"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Documentation and communication suite",
+      "description": "Deliver a README, API reference, tutorial, architecture diagram, presentation, and written updates."
+    }
+  }
+}

@@ -16,7 +16,7 @@
             "outcomes": ["Use semantic elements and accessible labels", "Build layouts with Flexbox and Grid", "Adapt a page for mobile and desktop"],
             "estimatedHours": 20,
             "prerequisites": [],
-            "resources": [{"label": "MDN: Structuring content with HTML", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content"}],
+            "resources": [{"label": "MDN: Structuring content with HTML", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content"}, {"label": "MDN: CSS styling basics - Learn web development", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics"}, {"label": "YouTube: Programming with Mosh – HTML Tutorial for Beginners: HTML Crash Course (1:09:34)", "url": "https://www.youtube.com/watch?v=qz0aGYrrlhU"}, {"label": "YouTube: Bro Code – HTML & CSS Full Course for free (4:02:43)", "url": "https://www.youtube.com/watch?v=HGTJBPNC-Gw"}],
             "priority": "core",
             "completed": false
           },
@@ -27,7 +27,7 @@
             "outcomes": ["Create commits and branches", "Use GitHub to host and share a project"],
             "estimatedHours": 8,
             "prerequisites": [],
-            "resources": [{"label": "GitHub Skills: Introduction to GitHub", "url": "https://github.com/skills/introduction-to-github"}],
+            "resources": [{"label": "GitHub Skills: Introduction to GitHub", "url": "https://github.com/skills/introduction-to-github"}, {"label": "git-scm.com: Git & GitHub", "url": "https://git-scm.com/book/en/v2"}, {"label": "YouTube: freeCodeCamp.org and logicBase Labs – Git & GitHub Crash Course for Beginners [2026] (1:21:20)", "url": "https://www.youtube.com/watch?v=mAFoROnOfHs"}, {"label": "YouTube: Fireship – Git It? How to use Git and Github (12:19)", "url": "https://www.youtube.com/watch?v=HkdAHXoRtos"}],
             "priority": "core",
             "completed": false
           },
@@ -38,7 +38,7 @@
             "outcomes": ["Work with variables, functions, arrays, and objects", "Respond to user input and update the page"],
             "estimatedHours": 24,
             "prerequisites": ["html-css"],
-            "resources": [{"label": "MDN: JavaScript first steps", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting"}],
+            "resources": [{"label": "MDN: JavaScript first steps", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting"}, {"label": "javascript.info: The Modern JavaScript Tutorial", "url": "https://javascript.info/"}, {"label": "YouTube: Fireship – 100+ JavaScript Concepts you Need to Know (12:24)", "url": "https://www.youtube.com/watch?v=lkIFF4maKMU"}, {"label": "YouTube: Programming with Mosh – JavaScript Course for Beginners – Your First Step to Web Development (48:17)", "url": "https://www.youtube.com/watch?v=W6NZfCO5SIk"}],
             "priority": "core",
             "completed": false
           }
@@ -60,7 +60,7 @@
             "outcomes": ["Use ES modules and array methods", "Fetch data and handle asynchronous results", "Handle errors and loading states"],
             "estimatedHours": 20,
             "prerequisites": ["javascript-basics"],
-            "resources": [{"label": "MDN: JavaScript", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"}],
+            "resources": [{"label": "MDN: JavaScript", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"}, {"label": "developer.mozilla.org: Modern JavaScript", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises"}, {"label": "YouTube: Programming with Mosh – ES6 Tutorial: Learn Modern JavaScript in 1 Hour (50:05)", "url": "https://www.youtube.com/watch?v=NCwa_xi0Uuc"}, {"label": "YouTube: Traversy Media – Modern JavaScript From The Beginning | First 12 Hours (11:54:00)", "url": "https://www.youtube.com/watch?v=BI1o2H9z9fo"}],
             "priority": "core",
             "completed": false
           },
@@ -71,7 +71,7 @@
             "outcomes": ["Compose components and pass props", "Manage state and user events", "Render collections with stable keys"],
             "estimatedHours": 28,
             "prerequisites": ["modern-javascript"],
-            "resources": [{"label": "React: Quick Start", "url": "https://react.dev/learn"}],
+            "resources": [{"label": "React: Quick Start", "url": "https://react.dev/learn"}, {"label": "React: Thinking in React", "url": "https://react.dev/learn/thinking-in-react"}, {"label": "YouTube: Programming with Mosh – React Tutorial for Beginners (1:20:04)", "url": "https://www.youtube.com/watch?v=SqcY0GlETPk"}, {"label": "YouTube: Bro Code – React tutorial for beginners ⚛ (20:27)", "url": "https://www.youtube.com/watch?v=hn80mWvP-9g"}],
             "priority": "core",
             "completed": false
           },
@@ -82,7 +82,7 @@
             "outcomes": ["Use semantic controls and visible focus states", "Check color contrast and responsive behavior", "Test common flows without a mouse"],
             "estimatedHours": 14,
             "prerequisites": ["html-css"],
-            "resources": [{"label": "MDN: Accessibility", "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"}],
+            "resources": [{"label": "MDN: Accessibility", "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"}, {"label": "w3.org: Accessibility & Responsive Design", "url": "https://www.w3.org/WAI/tutorials/"}, {"label": "YouTube: freeCodeCamp.org – Learn Accessibility - Full a11y Tutorial (1:33:06)", "url": "https://www.youtube.com/watch?v=e2nkq3h1P68"}, {"label": "YouTube: Web Dev Simplified – The Only Accessibility Video You Will Ever Need (37:33)", "url": "https://www.youtube.com/watch?v=2oiBKSjOOFE"}],
             "priority": "core",
             "completed": false
           }
@@ -104,7 +104,7 @@
             "outcomes": ["Test components and user interactions", "Choose meaningful behavior-focused test cases", "Run tests as part of code changes"],
             "estimatedHours": 18,
             "prerequisites": ["react"],
-            "resources": [{"label": "Testing Library: Guiding Principles", "url": "https://testing-library.com/docs/guiding-principles/"}],
+            "resources": [{"label": "Testing Library: Guiding Principles", "url": "https://testing-library.com/docs/guiding-principles/"}, {"label": "Vitest: Getting Started - Guide", "url": "https://vitest.dev/guide/"}, {"label": "YouTube: Programming with Mosh – React Testing for Beginners: Start Here! (1:17:14)", "url": "https://www.youtube.com/watch?v=8Xwq35cPwYg"}, {"label": "YouTube: Matt Pocock – Frontend is HARDER for AI than backend (here's how to fix it) (5:29)", "url": "https://www.youtube.com/watch?v=pSritFeoYFo"}],
             "priority": "core",
             "completed": false
           },
@@ -115,7 +115,7 @@
             "outcomes": ["Measure performance with browser tools", "Reduce unnecessary work and oversized assets", "Explain the trade-offs of an optimization"],
             "estimatedHours": 16,
             "prerequisites": ["react"],
-            "resources": [{"label": "web.dev: Learn Performance", "url": "https://web.dev/learn/performance/"}],
+            "resources": [{"label": "web.dev: Learn Performance", "url": "https://web.dev/learn/performance/"}, {"label": "web.dev: Web Vitals  -  Articles", "url": "https://web.dev/articles/vitals"}, {"label": "YouTube: Beyond Fireship – The ultimate guide to web performance (6:43)", "url": "https://www.youtube.com/watch?v=0fONene3OIA"}, {"label": "YouTube: Chrome for Developers – Monitor live Core Web Vitals in Chrome DevTools #DevToolsTips (5:55)", "url": "https://www.youtube.com/watch?v=M5oe010pYbA"}],
             "priority": "core",
             "completed": false
           },
@@ -126,7 +126,7 @@
             "outcomes": ["Configure environment-specific settings safely", "Automate build and deployment checks", "Document how to run and deploy the project"],
             "estimatedHours": 12,
             "prerequisites": ["git", "react"],
-            "resources": [{"label": "Vite: Deploying a Static Site", "url": "https://vite.dev/guide/static-deploy"}],
+            "resources": [{"label": "Vite: Deploying a Static Site", "url": "https://vite.dev/guide/static-deploy"}, {"label": "GitHub Docs: Quickstart for GitHub Pages", "url": "https://docs.github.com/en/pages/quickstart"}, {"label": "YouTube: freeCodeCamp.org – MERN Stack Tutorial for Beginners with Deployment – 2025 (3:34:55)", "url": "https://www.youtube.com/watch?v=F9gB5b4jgOI"}, {"label": "YouTube: Tech With Tim – How to Build an App With Claude Code - Full Tutorial for Beginners (24:04)", "url": "https://www.youtube.com/watch?v=GUgxx6fMiR8"}],
             "priority": "core",
             "completed": false
           }
@@ -160,7 +160,7 @@
             "outcomes": ["Navigate directories and manage files", "Run programs and inspect their output"],
             "estimatedHours": 10,
             "prerequisites": [],
-            "resources": [{"label": "The Linux Command Line", "url": "https://linuxcommand.org/tlcl.php"}],
+            "resources": [{"label": "The Linux Command Line", "url": "https://linuxcommand.org/tlcl.php"}, {"label": "missing.csail.mit.edu: Command Line & Linux Basics", "url": "https://missing.csail.mit.edu/2020/shell-tools/"}, {"label": "YouTube: NetworkChuck – 60 Linux Commands you NEED to know (in 10 minutes) (10:50)", "url": "https://www.youtube.com/watch?v=gd7BXuUQ91w"}, {"label": "YouTube: Traversy Media – Command Line Crash Course For Beginners | Terminal Commands (44:53)", "url": "https://www.youtube.com/watch?v=uwAqEzhyjtw"}],
             "priority": "core",
             "completed": false
           },
@@ -171,7 +171,7 @@
             "outcomes": ["Create commits and branches", "Share code and review changes on GitHub"],
             "estimatedHours": 8,
             "prerequisites": [],
-            "resources": [{"label": "GitHub Skills: Introduction to GitHub", "url": "https://github.com/skills/introduction-to-github"}],
+            "resources": [{"label": "GitHub Skills: Introduction to GitHub", "url": "https://github.com/skills/introduction-to-github"}, {"label": "git-scm.com: Git & GitHub", "url": "https://git-scm.com/book/en/v2"}, {"label": "YouTube: freeCodeCamp.org and logicBase Labs – Git & GitHub Crash Course for Beginners [2026] (1:21:20)", "url": "https://www.youtube.com/watch?v=mAFoROnOfHs"}, {"label": "YouTube: Traversy Media – Git & GitHub Crash Course 2025 (49:29)", "url": "https://www.youtube.com/watch?v=vA5TTz6BXhY"}],
             "priority": "core",
             "completed": false
           },
@@ -182,7 +182,7 @@
             "outcomes": ["Write SELECT queries with filters and joins", "Design tables with keys and constraints", "Explain basic normalization"],
             "estimatedHours": 20,
             "prerequisites": [],
-            "resources": [{"label": "PostgreSQL: Tutorial", "url": "https://www.postgresql.org/docs/current/tutorial.html"}],
+            "resources": [{"label": "PostgreSQL: Tutorial", "url": "https://www.postgresql.org/docs/current/tutorial.html"}, {"label": "sqlbolt.com: Relational Databases & SQL", "url": "https://sqlbolt.com/"}, {"label": "YouTube: IBM Technology – What is a Relational Database? (7:54)", "url": "https://www.youtube.com/watch?v=OqjJjpjDRLc"}, {"label": "YouTube: freeCodeCamp.org – Databases In-Depth – Complete Course (3:41:20)", "url": "https://www.youtube.com/watch?v=pPqazMTzNOM"}],
             "priority": "core",
             "completed": false
           }
@@ -204,7 +204,7 @@
             "outcomes": ["Build a server with routes and middleware", "Separate application logic into modules", "Handle configuration and errors"],
             "estimatedHours": 20,
             "prerequisites": ["backend-git"],
-            "resources": [{"label": "Node.js: Learn", "url": "https://nodejs.org/en/learn"}],
+            "resources": [{"label": "Node.js: Learn", "url": "https://nodejs.org/en/learn"}, {"label": "MDN: Express/Node.js server-side development", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction"}, {"label": "YouTube: freeCodeCamp.org – Intro to Backend Web Development – Node.js & Express Tutorial for Beginners (2:26:22)", "url": "https://www.youtube.com/watch?v=KOutPbKc9UM"}, {"label": "YouTube: Fireship – Node.js Ultimate Beginner’s Guide in 7 Easy Steps (16:20)", "url": "https://www.youtube.com/watch?v=ENrzD9HAZK4"}],
             "priority": "core",
             "completed": false
           },
@@ -215,7 +215,7 @@
             "outcomes": ["Choose suitable methods and status codes", "Validate request data", "Document endpoints and example responses"],
             "estimatedHours": 18,
             "prerequisites": ["nodejs"],
-            "resources": [{"label": "MDN: HTTP Overview", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"}],
+            "resources": [{"label": "MDN: HTTP Overview", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"}, {"label": "RFC 9110: HTTP Semantics", "url": "https://www.rfc-editor.org/rfc/rfc9110.html"}, {"label": "YouTube: ByteByteGo – What Is REST API? Examples And How To Use It: Crash Course System Design #3 (5:21)", "url": "https://www.youtube.com/watch?v=-mN3VyJuCjM"}, {"label": "YouTube: Programming with Mosh – Spring Boot Project: Build a REST API for an E-commerce Platform (2:00:17)", "url": "https://www.youtube.com/watch?v=EWd3_I4X32g"}],
             "priority": "core",
             "completed": false
           },
@@ -226,7 +226,7 @@
             "outcomes": ["Distinguish authentication from authorization", "Use established password and session practices", "Check access on protected operations"],
             "estimatedHours": 16,
             "prerequisites": ["api-design", "backend-databases"],
-            "resources": [{"label": "OWASP: Authentication Cheat Sheet", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"}],
+            "resources": [{"label": "OWASP: Authentication Cheat Sheet", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"}, {"label": "OWASP: Application Security Verification Standard", "url": "https://owasp.org/www-project-application-security-verification-standard/"}, {"label": "YouTube: Web Dev Simplified – Build Node.js User Authentication - Password Login (13:31)", "url": "https://www.youtube.com/watch?v=Ud5xKCYQTjM"}, {"label": "YouTube: Fireship – Auth0 in 100 Seconds // And beyond with a Next.js Authentication Tutorial (8:24)", "url": "https://www.youtube.com/watch?v=yufqeJLP1rI"}],
             "priority": "core",
             "completed": false
           }
@@ -248,7 +248,7 @@
             "outcomes": ["Write unit and integration tests", "Test success, validation, and failure cases", "Use repeatable test data"],
             "estimatedHours": 16,
             "prerequisites": ["api-design"],
-            "resources": [{"label": "Node.js: Test Runner", "url": "https://nodejs.org/api/test.html"}],
+            "resources": [{"label": "Node.js: Test Runner", "url": "https://nodejs.org/api/test.html"}, {"label": "jestjs.io: Getting Started · Jest", "url": "https://jestjs.io/docs/getting-started"}, {"label": "YouTube: Programming with Mosh – The Complete Backend Developer Roadmap (8:24)", "url": "https://www.youtube.com/watch?v=OeEHJgzqS1k"}, {"label": "YouTube: freeCodeCamp.org – Software Testing Course – Playwright, E2E, and AI Agents (1:03:31)", "url": "https://www.youtube.com/watch?v=jydYq7oAtD8"}],
             "priority": "core",
             "completed": false
           },
@@ -259,7 +259,7 @@
             "outcomes": ["Sketch a service and data-flow diagram", "Identify likely bottlenecks and failure modes", "Compare caching and scaling trade-offs"],
             "estimatedHours": 20,
             "prerequisites": ["api-design", "backend-databases"],
-            "resources": [{"label": "Google Cloud: System Design", "url": "https://cloud.google.com/architecture"}],
+            "resources": [{"label": "Google Cloud: System Design", "url": "https://cloud.google.com/architecture"}, {"label": "github.com: System Design & Scalability", "url": "https://github.com/donnemartin/system-design-primer"}, {"label": "YouTube: ByteByteGo – 8 Most Important System Design Concepts You Should Know (6:05)", "url": "https://www.youtube.com/watch?v=BTjxUS_PylA"}, {"label": "YouTube: freeCodeCamp.org – System Design Concepts Course and Interview Prep (53:38)", "url": "https://www.youtube.com/watch?v=F2FmTdLtb_4"}],
             "priority": "core",
             "completed": false
           },
@@ -270,7 +270,7 @@
             "outcomes": ["Deploy an application with managed configuration", "Add useful health checks and logs", "Document recovery and operational steps"],
             "estimatedHours": 18,
             "prerequisites": ["nodejs", "backend-testing"],
-            "resources": [{"label": "12 Factor App", "url": "https://12factor.net/"}],
+            "resources": [{"label": "12 Factor App", "url": "https://12factor.net/"}, {"label": "OpenTelemetry: Documentation", "url": "https://opentelemetry.io/docs/"}, {"label": "YouTube: Fireship – Grafana is the goat... Let's deploy the LGTM stack (5:59)", "url": "https://www.youtube.com/watch?v=1X3dV3D5EJg"}, {"label": "YouTube: freeCodeCamp.org – How to Deploy, Secure, and Automate Full-Stack Web Apps – Course for Beginners (10:29:10)", "url": "https://www.youtube.com/watch?v=wY5pQOTsGaA"}],
             "priority": "core",
             "completed": false
           }
@@ -304,7 +304,7 @@
             "outcomes": ["Use functions, collections, and modules", "Read and write simple data files", "Use a virtual environment and install packages"],
             "estimatedHours": 24,
             "prerequisites": [],
-            "resources": [{"label": "Python: Tutorial", "url": "https://docs.python.org/3/tutorial/"}],
+            "resources": [{"label": "Python: Tutorial", "url": "https://docs.python.org/3/tutorial/"}, {"label": "cs50.harvard.edu: CS50's Introduction to Programming with Python", "url": "https://cs50.harvard.edu/python/"}, {"label": "YouTube: Tech With Tim – Python Skills You NEED Before Machine Learning (10:04)", "url": "https://www.youtube.com/watch?v=YhmtBmyQt18"}, {"label": "YouTube: codebasics – Python Tutorial for AI: Everything You Need in 2 Hours (2:02:53)", "url": "https://www.youtube.com/watch?v=6GuyMZ-cSzE"}],
             "priority": "core",
             "completed": false
           },
@@ -315,7 +315,7 @@
             "outcomes": ["Interpret vectors and matrices", "Summarize distributions and uncertainty", "Explain training and evaluation data"],
             "estimatedHours": 24,
             "prerequisites": [],
-            "resources": [{"label": "Khan Academy: Statistics and Probability", "url": "https://www.khanacademy.org/math/statistics-probability"}],
+            "resources": [{"label": "Khan Academy: Statistics and Probability", "url": "https://www.khanacademy.org/math/statistics-probability"}, {"label": "3blue1brown.com: 3Blue1Brown", "url": "https://www.3blue1brown.com/topics/linear-algebra"}, {"label": "YouTube: Python Programmer – Math for Machine Learning by Imperial & Coursera: REVIEW (9:29)", "url": "https://www.youtube.com/watch?v=loLEqvaQ-Wc"}, {"label": "YouTube: freeCodeCamp.org – Machine Learning for Everybody – Full Course (3:53:53)", "url": "https://www.youtube.com/watch?v=i_LwzRVP7bg"}],
             "priority": "core",
             "completed": false
           },
@@ -326,7 +326,7 @@
             "outcomes": ["Load and inspect tabular data", "Handle missing and inconsistent values", "Create summaries and visualizations"],
             "estimatedHours": 20,
             "prerequisites": ["python"],
-            "resources": [{"label": "pandas: Getting Started", "url": "https://pandas.pydata.org/docs/getting_started/index.html"}],
+            "resources": [{"label": "pandas: Getting Started", "url": "https://pandas.pydata.org/docs/getting_started/index.html"}, {"label": "pandas.pydata.org: Data Analysis with NumPy & pandas", "url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/"}, {"label": "YouTube: Python Programmer – Learn NUMPY in 5 minutes - BEST Python Library! (13:38)", "url": "https://www.youtube.com/watch?v=xECXZ3tyONo"}, {"label": "YouTube: Tech With Tim – Learn Pandas in 30 Minutes - Python Pandas Tutorial (30:37)", "url": "https://www.youtube.com/watch?v=EXIgjIBu4EU"}],
             "priority": "core",
             "completed": false
           }
@@ -348,7 +348,7 @@
             "outcomes": ["Build a preprocessing and training pipeline", "Compare a baseline with alternative models", "Choose metrics suited to the task"],
             "estimatedHours": 24,
             "prerequisites": ["python", "data-analysis", "ml-math"],
-            "resources": [{"label": "scikit-learn: Getting Started", "url": "https://scikit-learn.org/stable/getting_started.html"}],
+            "resources": [{"label": "scikit-learn: Getting Started", "url": "https://scikit-learn.org/stable/getting_started.html"}, {"label": "Scikit-learn course: Introduction", "url": "https://inria.github.io/scikit-learn-mooc/"}, {"label": "YouTube: freeCodeCamp.org – Machine Learning for Everybody – Full Course (3:53:53)", "url": "https://www.youtube.com/watch?v=i_LwzRVP7bg"}, {"label": "YouTube: IBM Technology – AI, Machine Learning, Deep Learning and Generative AI Explained (10:01)", "url": "https://www.youtube.com/watch?v=qYNweeDHiyU"}],
             "priority": "core",
             "completed": false
           },
@@ -359,7 +359,7 @@
             "outcomes": ["Use train, validation, and test splits appropriately", "Recognize overfitting and data leakage", "Report limitations and uncertainty"],
             "estimatedHours": 16,
             "prerequisites": ["classical-ml"],
-            "resources": [{"label": "Google: Machine Learning Crash Course", "url": "https://developers.google.com/machine-learning/crash-course"}],
+            "resources": [{"label": "Google: Machine Learning Crash Course", "url": "https://developers.google.com/machine-learning/crash-course"}, {"label": "scikit-learn.org: Model Evaluation & Validation", "url": "https://scikit-learn.org/stable/modules/model_evaluation.html"}, {"label": "YouTube: StatQuest with Josh Starmer – Machine Learning Fundamentals: Cross Validation (6:05)", "url": "https://www.youtube.com/watch?v=fSytzGwwBVw"}, {"label": "YouTube: IBM Technology – LLM as a Judge: Scaling AI Evaluation Strategies (6:09)", "url": "https://www.youtube.com/watch?v=trfUBIDeI1Y"}],
             "priority": "core",
             "completed": false
           },
@@ -370,7 +370,7 @@
             "outcomes": ["Explain layers, loss, and optimization at a high level", "Train and evaluate a small neural network", "Choose either PyTorch or TensorFlow to start"],
             "estimatedHours": 28,
             "prerequisites": ["python", "ml-math"],
-            "resources": [{"label": "PyTorch: Learn the Basics", "url": "https://pytorch.org/tutorials/beginner/basics/intro.html"}],
+            "resources": [{"label": "PyTorch: Learn the Basics", "url": "https://pytorch.org/tutorials/beginner/basics/intro.html"}, {"label": "DeepLearning.AI: Deep Learning Specialization", "url": "https://www.deeplearning.ai/courses/deep-learning-specialization/"}, {"label": "YouTube: IBM Technology – AI, Machine Learning, Deep Learning and Generative AI Explained (10:01)", "url": "https://www.youtube.com/watch?v=qYNweeDHiyU"}, {"label": "YouTube: freeCodeCamp.org – Deep Learning Crash Course for Beginners (1:25:39)", "url": "https://www.youtube.com/watch?v=VyWAvY2CF9c"}],
             "priority": "core",
             "completed": false
           }
@@ -392,7 +392,7 @@
             "outcomes": ["Expose model predictions through an API or application", "Validate inputs and handle failures", "Document intended use and limitations"],
             "estimatedHours": 18,
             "prerequisites": ["classical-ml", "backend-git"],
-            "resources": [{"label": "FastAPI: Tutorial", "url": "https://fastapi.tiangolo.com/tutorial/"}],
+            "resources": [{"label": "FastAPI: Tutorial", "url": "https://fastapi.tiangolo.com/tutorial/"}, {"label": "TensorFlow Serving: Tutorials", "url": "https://www.tensorflow.org/tfx/guide/serving"}, {"label": "YouTube: Microsoft Azure – Model deployment and inferencing with Azure Machine Learning | Machine Learning… (14:50)", "url": "https://www.youtube.com/watch?v=WZ7vS10KPAw"}, {"label": "YouTube: Krish Naik – Tutorial 7: Deploying Machine Learning Models In Azure Cloud (11:05)", "url": "https://www.youtube.com/watch?v=qnbJcbjh-3s"}],
             "priority": "core",
             "completed": false
           },
@@ -403,7 +403,7 @@
             "outcomes": ["Track data, code, and model versions", "Record key model and service metrics", "Describe a process for reviewing model changes"],
             "estimatedHours": 20,
             "prerequisites": ["model-evaluation", "model-serving"],
-            "resources": [{"label": "MLflow: Getting Started", "url": "https://mlflow.org/docs/latest/getting-started/"}],
+            "resources": [{"label": "MLflow: Getting Started", "url": "https://mlflow.org/docs/latest/getting-started/"}, {"label": "MLflow AI Platform: Getting Started with MLflow for ML", "url": "https://mlflow.org/docs/latest/ml/getting-started/"}, {"label": "YouTube: Krish Naik – Evidently AI Tutorial-Open Source ML Models Monitoring and Observability (30:13)", "url": "https://www.youtube.com/watch?v=cgc3dSEAel0"}, {"label": "YouTube: TechWorld with Nana – MLOps Explained - What It Is, Why You Need It and How It Works (26:23)", "url": "https://www.youtube.com/watch?v=biqYkVf-a7Y"}],
             "priority": "core",
             "completed": false
           },
@@ -414,7 +414,7 @@
             "outcomes": ["Identify affected users and potential harms", "Check data and evaluation for blind spots", "Communicate uncertainty and appropriate use"],
             "estimatedHours": 12,
             "prerequisites": ["model-evaluation"],
-            "resources": [{"label": "Google: Responsible AI Practices", "url": "https://ai.google/responsibility/responsible-ai-practices/"}],
+            "resources": [{"label": "Google: Responsible AI Practices", "url": "https://ai.google/responsibility/responsible-ai-practices/"}, {"label": "NIST: AI Risk Management Framework", "url": "https://www.nist.gov/itl/ai-risk-management-framework"}, {"label": "YouTube: IBM Technology – What is Responsible AI? A Guide to AI Governance (6:06)", "url": "https://www.youtube.com/watch?v=yh-3WU1FKrk"}, {"label": "YouTube: TensorFlow – A developer's guide to responsible AI review processes (19:21)", "url": "https://www.youtube.com/watch?v=wvytEFQ7mIo"}],
             "priority": "core",
             "completed": false
           }
@@ -448,7 +448,7 @@
             "outcomes": ["Explain DNS, IP addresses, and ports", "Describe the role of HTTP and TLS", "Trace a basic request from client to server"],
             "estimatedHours": 16,
             "prerequisites": [],
-            "resources": [{"label": "MDN: How the Web Works", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works"}],
+            "resources": [{"label": "MDN: How the Web Works", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works"}, {"label": "cloudflare.com: Networking Fundamentals", "url": "https://www.cloudflare.com/learning/network-layer/what-is-a-computer-network/"}, {"label": "YouTube: TechWorld with Nana – Networking Concepts Every DevOps Engineer Must Know (38:41)", "url": "https://www.youtube.com/watch?v=w0SQGCt-6Ro"}, {"label": "YouTube: freeCodeCamp.org – Computer Networking Course - Network Engineering [CompTIA Network+ Exam Prep] (9:24:49)", "url": "https://www.youtube.com/watch?v=qiQR5rTSshw"}],
             "priority": "core",
             "completed": false
           },
@@ -459,7 +459,7 @@
             "outcomes": ["Navigate files and manage processes", "Use shell commands to inspect logs and files", "Explain basic permissions"],
             "estimatedHours": 14,
             "prerequisites": [],
-            "resources": [{"label": "The Linux Command Line", "url": "https://linuxcommand.org/tlcl.php"}],
+            "resources": [{"label": "The Linux Command Line", "url": "https://linuxcommand.org/tlcl.php"}, {"label": "missing.csail.mit.edu: Shell Tools and Scripting · Missing Semester", "url": "https://missing.csail.mit.edu/2020/shell-tools/"}, {"label": "YouTube: freeCodeCamp.org – Introduction to Linux – Full Course for Beginners (6:07:32)", "url": "https://www.youtube.com/watch?v=sWbUDq4S6Y8"}, {"label": "YouTube: NetworkChuck – 60 Linux Commands you NEED to know (in 10 minutes) (10:50)", "url": "https://www.youtube.com/watch?v=gd7BXuUQ91w"}],
             "priority": "core",
             "completed": false
           },
@@ -470,7 +470,7 @@
             "outcomes": ["Distinguish compute, storage, and managed services", "Explain regions and availability at a high level", "Deploy a small application using one cloud provider"],
             "estimatedHours": 16,
             "prerequisites": ["networking"],
-            "resources": [{"label": "AWS: Cloud Essentials", "url": "https://aws.amazon.com/getting-started/cloud-essentials/"}],
+            "resources": [{"label": "AWS: Cloud Essentials", "url": "https://aws.amazon.com/getting-started/cloud-essentials/"}, {"label": "explore.skillbuilder.aws: AWS Skill Builder", "url": "https://explore.skillbuilder.aws/learn/course/134/aws-cloud-practitioner-essentials"}, {"label": "YouTube: TechWorld with Nana – Cloud Engineer Roadmap | From Beginner to Advanced (36:55)", "url": "https://www.youtube.com/watch?v=6eroP2XGtTI"}, {"label": "YouTube: Be A Better Dev – Cloud Computing Explained: The Most Important Concepts To Know (45:32)", "url": "https://www.youtube.com/watch?v=ZaA0kNm18pE"}],
             "priority": "core",
             "completed": false
           }
@@ -492,7 +492,7 @@
             "outcomes": ["Build and run an image", "Use environment configuration appropriately", "Explain the difference between an image and a container"],
             "estimatedHours": 18,
             "prerequisites": ["cloud-linux"],
-            "resources": [{"label": "Docker: Get Started", "url": "https://docs.docker.com/get-started/"}],
+            "resources": [{"label": "Docker: Get Started", "url": "https://docs.docker.com/get-started/"}, {"label": "Kubernetes: Tutorials", "url": "https://kubernetes.io/docs/tutorials/"}, {"label": "YouTube: freeCodeCamp.org – Learn Docker – Full DevOps Course for Deploying Containerized Apps (7:29:48)", "url": "https://www.youtube.com/watch?v=rjjES5IsPdg"}, {"label": "YouTube: TechWorld with Nana – Docker Crash Course for Absolute Beginners [NEW] (1:07:39)", "url": "https://www.youtube.com/watch?v=pg19Z8LL06w"}],
             "priority": "core",
             "completed": false
           },
@@ -503,7 +503,7 @@
             "outcomes": ["Create a workflow triggered by repository events", "Run build or test checks automatically", "Protect deployment credentials"],
             "estimatedHours": 16,
             "prerequisites": ["backend-git"],
-            "resources": [{"label": "GitHub Actions: Understanding workflows", "url": "https://docs.github.com/en/actions/about-github-actions/understanding-github-actions"}],
+            "resources": [{"label": "GitHub Actions: Understanding workflows", "url": "https://docs.github.com/en/actions/about-github-actions/understanding-github-actions"}, {"label": "GitHub Docs: Quickstart for GitHub Actions", "url": "https://docs.github.com/en/actions/writing-workflows/quickstart"}, {"label": "YouTube: TechWorld with Nana – GitHub Actions Tutorial - Basic Concepts and CI/CD Pipeline with Docker (32:31)", "url": "https://www.youtube.com/watch?v=R8_veQiYBjI"}, {"label": "YouTube: KodeKloud – Mastering GitHub Actions: Streamline Your CI/CD Pipeline (29:54)", "url": "https://www.youtube.com/watch?v=FEkkwZ0iiLs"}],
             "priority": "core",
             "completed": false
           },
@@ -514,7 +514,7 @@
             "outcomes": ["Use least-privilege access as a guiding principle", "Keep secrets out of source code", "Identify common public-exposure risks"],
             "estimatedHours": 14,
             "prerequisites": ["cloud-fundamentals"],
-            "resources": [{"label": "AWS: Security Best Practices", "url": "https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html"}],
+            "resources": [{"label": "AWS: Security Best Practices", "url": "https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html"}, {"label": "docs.aws.amazon.com: What is IAM?", "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"}, {"label": "YouTube: IBM Technology – What is Cloud Security? (10:17)", "url": "https://www.youtube.com/watch?v=jI8IKpjiCSM"}, {"label": "YouTube: Google Cloud Tech – What is Cloud IAM? (9:44)", "url": "https://www.youtube.com/watch?v=xQClVtAECdg"}],
             "priority": "core",
             "completed": false
           }
@@ -536,7 +536,7 @@
             "outcomes": ["Define a small environment as code", "Review changes before applying them", "Keep environment configuration repeatable"],
             "estimatedHours": 20,
             "prerequisites": ["cloud-fundamentals"],
-            "resources": [{"label": "Terraform: Get Started", "url": "https://developer.hashicorp.com/terraform/tutorials"}],
+            "resources": [{"label": "Terraform: Get Started", "url": "https://developer.hashicorp.com/terraform/tutorials"}, {"label": "Ansible: Getting started", "url": "https://docs.ansible.com/ansible/latest/getting_started/index.html"}, {"label": "YouTube: IBM Technology – What is Infrastructure as Code? (8:51)", "url": "https://www.youtube.com/watch?v=zWw2wuiKd5o"}, {"label": "YouTube: TechWorld with Nana – What is Infrastructure as Code? Difference of Infrastructure as Code Tools (8:04)", "url": "https://www.youtube.com/watch?v=POPP2WTJ8es"}],
             "priority": "core",
             "completed": false
           },
@@ -547,7 +547,7 @@
             "outcomes": ["Choose useful service and application metrics", "Create a basic dashboard or alert", "Use logs to investigate a failure"],
             "estimatedHours": 16,
             "prerequisites": ["containers"],
-            "resources": [{"label": "Prometheus: Overview", "url": "https://prometheus.io/docs/introduction/overview/"}],
+            "resources": [{"label": "Prometheus: Overview", "url": "https://prometheus.io/docs/introduction/overview/"}, {"label": "Prometheus: Getting started", "url": "https://prometheus.io/docs/prometheus/latest/getting_started/"}, {"label": "YouTube: IBM Technology – OpenTelemetry: Simplifying Hybrid Cloud Monitoring (5:40)", "url": "https://www.youtube.com/watch?v=hLvwoow3XTk"}, {"label": "YouTube: TechWorld with Nana – How Prometheus Monitoring works | Prometheus Architecture explained (21:31)", "url": "https://www.youtube.com/watch?v=h4Sl21AKiDg"}],
             "priority": "core",
             "completed": false
           },
@@ -558,7 +558,7 @@
             "outcomes": ["Identify key dependencies and failure modes", "Write a concise operational runbook", "Explain backup and recovery trade-offs"],
             "estimatedHours": 14,
             "prerequisites": ["monitoring", "ci-cd"],
-            "resources": [{"label": "Google SRE Book: Table of Contents", "url": "https://sre.google/sre-book/table-of-contents/"}],
+            "resources": [{"label": "Google SRE Book: Table of Contents", "url": "https://sre.google/sre-book/table-of-contents/"}, {"label": "Google: Site Reliability Engineering Workbook", "url": "https://sre.google/workbook/table-of-contents/"}, {"label": "YouTube: Tech Fusionist (T3P) – Free Course - DevOps & SRE | How to become DevOps & Site Reliability Engineer |… (5:32)", "url": "https://www.youtube.com/watch?v=9OOuX5wHLyM"}],
             "priority": "core",
             "completed": false
           }
@@ -573,6 +573,1520 @@
     "capstone": {
       "title": "An automated, observable deployment",
       "description": "Show how the application is built, deployed, monitored, and recovered, with architecture and operations documentation."
+    }
+  },
+  "foundations": {
+    "title": "CS Foundations",
+    "description": "Learn the core ideas behind every programming language and system: data structures, algorithms, math, and how computers work.",
+    "audience": "For anyone starting out, or self-taught developers who want to fill in theory gaps.",
+    "goal": "Solve problems efficiently and explain why a solution works and how well it scales.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Write correct programs and reason about basic data organization.",
+        "skills": [
+          {
+            "id": "programming-fundamentals",
+            "name": "Programming Fundamentals",
+            "description": "Learn variables, control flow, functions, and debugging in one general-purpose language.",
+            "outcomes": ["Write programs using loops, conditionals, and functions", "Read error messages and debug systematically", "Break a problem into smaller steps"],
+            "estimatedHours": 40,
+            "prerequisites": [],
+            "resources": [
+              {"label": "Harvard CS50x: full introductory computer science course", "url": "https://cs50.harvard.edu/x/"},
+              {"label": "CS50x Week 0: computational thinking, algorithms, pseudocode, functions, and loops", "url": "https://cs50.harvard.edu/x/weeks/0/"},
+              {"label": "CS50x Week 1: variables, types, conditions, loops, and functions in C", "url": "https://cs50.harvard.edu/x/weeks/1/"},
+              {"label": "CS50x Problem Set 0: practice sequencing, events, conditions, and loops in Scratch", "url": "https://cs50.harvard.edu/x/psets/0/"},
+              { "label": "YouTube: CS50x 2025 Lecture 0 ? Scratch", "url": "https://www.youtube.com/watch?v=2WtPyqwTLKM "},
+              { "label": "YouTube: CS50x 2025 Lecture 1 ? C", "url": "https://www.youtube.com/watch?v=89cbCbWrM4U "}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "basic-data-structures",
+            "name": "Arrays, Lists & Hash Tables",
+            "description": "Understand the most common ways to store and look up data.",
+            "outcomes": ["Choose between arrays, linked lists, and hash tables", "Implement a simple hash table", "Explain lookup and insertion costs"],
+            "estimatedHours": 20,
+            "prerequisites": ["programming-fundamentals"],
+            "resources": [
+              {"label": "OpenDSA: interactive data structures and algorithms modules", "url": "https://opendsa-server.cs.vt.edu/"},
+              {"label": "VisuAlgo: linked lists, stacks, queues, and deques (animated operations)", "url": "https://visualgo.net/en/list"},
+              {"label": "VisuAlgo: hash tables, hash functions, and collision resolution", "url": "https://visualgo.net/en/hashtable"},
+              {"label": "Princeton Algorithms 1.3: bags, queues, stacks, and collection interfaces", "url": "https://algs4.cs.princeton.edu/13stacks/"},
+              {"label": "Princeton Algorithms 3.4: hash functions and collision resolution", "url": "https://algs4.cs.princeton.edu/34hash/"},
+              { "label": "YouTube: freeCodeCamp ? Data Structures Easy to Advanced (William Fiset)", "url": "https://www.youtube.com/watch?v=RBSGKlAvoiM "},
+              { "label": "YouTube: freeCodeCamp ? Algorithms and Data Structures for Beginners", "url": "https://www.youtube.com/watch?v=8hly31xKli0 "},
+              { "label": "YouTube: Hash Tables and Hash Functions", "url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q "}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "discrete-math-basics",
+            "name": "Logic & Discrete Math Basics",
+            "description": "Build the reasoning skills behind proofs, sets, and counting.",
+            "outcomes": ["Use propositional logic and set notation", "Count possibilities with basic combinatorics", "Write a simple proof by induction"],
+            "estimatedHours": 24,
+            "prerequisites": [],
+            "resources": [
+              {"label": "MIT 6.042J: definitions, proofs, sets, relations, counting, and discrete probability", "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"},
+              {"label": "Discrete Mathematics: An Open Introduction, 4th edition (interactive textbook and exercises)", "url": "https://discrete.openmathbooks.org/dmoi4/"},
+              {"label": "Stanford CS103: mathematical logic, proof writing, sets, graphs, and computability", "url": "https://web.stanford.edu/class/cs103/"},
+              { "label": "YouTube: Dr. Trefor Bazett ? Discrete Math full course", "url": "https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS "},
+              { "label": "YouTube: MIT 6.042J Mathematics for Computer Science (2010)", "url": "https://www.youtube.com/playlist?list=PLB7540DEDD482705B "}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Text-based puzzle game",
+          "description": "Build a small game that uses functions, collections, and tested logic.",
+          "demonstrates": ["programming-fundamentals", "basic-data-structures"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Pick and implement the right algorithm for a problem.",
+        "skills": [
+          {
+            "id": "trees-graphs",
+            "name": "Trees, Heaps & Graphs",
+            "description": "Model hierarchical and networked data and traverse it.",
+            "outcomes": ["Implement binary search trees and heaps", "Traverse graphs with BFS and DFS", "Model a real problem as a graph"],
+            "estimatedHours": 30,
+            "prerequisites": ["basic-data-structures"],
+            "resources": [
+              {"label": "MIT 6.006 Lecture 6: binary search trees, operations, and runtime", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec6/"},
+              {"label": "MIT 6.006 Lecture 7: balanced trees and AVL rotations", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec7/"},
+              {"label": "MIT 6.006 Lecture 8: binary heaps and priority queues", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec8/"},
+              {"label": "MIT 6.006 Lecture 9: breadth-first search", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec9/"},
+              {"label": "MIT 6.006 Lecture 10: depth-first search", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec10/"},
+              {"label": "VisuAlgo: binary search tree operations and balancing", "url": "https://visualgo.net/en/bst"},
+              {"label": "VisuAlgo: heap insertion, extraction, and priority queues", "url": "https://visualgo.net/en/heap"},
+              {"label": "Princeton Algorithms 4.1: graph representation and traversal foundations", "url": "https://algs4.cs.princeton.edu/41graph/"},
+              {"label": "Coursera: Algorithms, Part I (structured lectures and exercises)", "url": "https://www.coursera.org/learn/algorithms-part1"},
+              { "label": "YouTube: freeCodeCamp ? Graph Algorithms for Technical Interviews", "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU "}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "algorithm-design",
+            "name": "Sorting, Searching & Algorithm Design",
+            "description": "Learn core techniques such as divide and conquer, greedy methods, and dynamic programming.",
+            "outcomes": ["Implement common sorting and searching algorithms", "Recognize when to use recursion or dynamic programming", "Compare approaches by trade-offs"],
+            "estimatedHours": 36,
+            "prerequisites": ["basic-data-structures"],
+            "resources": [
+              {"label": "MIT 6.006 Lecture 3: sorting algorithms and correctness", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec3/"},
+              {"label": "MIT 6.006 Lecture 15: dynamic programming, recurrences, and DAGs", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec15/"},
+              {"label": "MIT 6.006 Lecture 16: dynamic programming for LCS, LIS, and coin problems", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec16/"},
+              {"label": "Princeton Algorithms 2.1: selection sort, insertion sort, and shellsort", "url": "https://algs4.cs.princeton.edu/21elementary/"},
+              {"label": "Princeton Algorithms 2.2: mergesort and divide-and-conquer analysis", "url": "https://algs4.cs.princeton.edu/22mergesort/"},
+              {"label": "Princeton Algorithms 2.3: quicksort and partitioning", "url": "https://algs4.cs.princeton.edu/23quicksort/"},
+              {"label": "CS50x Week 3: linear and binary search, sorting, recursion, and asymptotic notation", "url": "https://cs50.harvard.edu/x/weeks/3/"},
+              {"label": "Princeton: Algorithms, 4th edition (textbook, code, and exercises)", "url": "https://algs4.cs.princeton.edu/home/"},
+              { "label": "YouTube: MIT 6.006 Introduction to Algorithms (Spring 2020)", "url": "https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY "},
+              { "label": "YouTube: freeCodeCamp ? Dynamic Programming", "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk "},
+              { "label": "YouTube: CS50x 2025 Lecture 3 ? Algorithms", "url": "https://www.youtube.com/watch?v=iCx3zwK8Ms8 "}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "complexity-analysis",
+            "name": "Complexity Analysis",
+            "description": "Describe how running time and memory grow with input size.",
+            "outcomes": ["Use Big-O notation correctly", "Analyze loops and recursive calls", "Explain best, average, and worst cases"],
+            "estimatedHours": 14,
+            "prerequisites": ["discrete-math-basics", "basic-data-structures"],
+            "resources": [
+              {"label": "MIT 6.006 Lecture 19: asymptotic bounds and algorithmic complexity", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec19/"},
+              {"label": "Princeton Algorithms 1.4: mathematical models, growth rates, and empirical analysis", "url": "https://algs4.cs.princeton.edu/14analysis/"},
+              {"label": "CS50x Week 3: Big-O, Big-Omega, Big-Theta, and running-time comparisons", "url": "https://cs50.harvard.edu/x/weeks/3/"},
+              {"label": "Big-O Cheat Sheet: common data-structure and algorithm operation costs", "url": "https://www.bigocheatsheet.com/"},
+              { "label": "YouTube: Fireship ? Big-O Notation in 100 Seconds", "url": "https://www.youtube.com/watch?v=g2o22C3CRfU "}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Algorithm visualizer",
+          "description": "Build an app that animates sorting and graph algorithms and reports their running time.",
+          "demonstrates": ["trees-graphs", "algorithm-design", "complexity-analysis"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Understand how computers run programs, from hardware to theory.",
+        "skills": [
+          {
+            "id": "computer-architecture",
+            "name": "Computer Architecture",
+            "description": "See how hardware executes instructions and stores data.",
+            "outcomes": ["Explain the CPU, memory, and cache hierarchy", "Describe how instructions are fetched and executed", "Build simple logic circuits in a simulator"],
+            "estimatedHours": 30,
+            "prerequisites": ["programming-fundamentals"],
+            "resources": [
+              {"label": "Nand2Tetris Project 1: implement Boolean logic gates", "url": "https://www.nand2tetris.org/project01"},
+              {"label": "Nand2Tetris Project 2: build the ALU from logic gates", "url": "https://www.nand2tetris.org/project02"},
+              {"label": "Nand2Tetris Project 3: build registers and RAM", "url": "https://www.nand2tetris.org/project03"},
+              {"label": "Nand2Tetris Project 5: assemble memory, CPU, and the complete computer", "url": "https://www.nand2tetris.org/project05"},
+              {"label": "Coursera: Build a Modern Computer from First Principles (Nand2Tetris)", "url": "https://www.coursera.org/learn/build-a-computer"},
+              { "label": "YouTube: Ben Eater ? Building an 8-bit breadboard computer", "url": "https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU "},
+              { "label": "YouTube: Crash Course Computer Science", "url": "https://www.youtube.com/playlist?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo "}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "operating-systems",
+            "name": "Operating Systems",
+            "description": "Learn how processes, memory, and files are managed.",
+            "outcomes": ["Explain processes, threads, and scheduling", "Describe virtual memory", "Identify common concurrency problems"],
+            "estimatedHours": 36,
+            "prerequisites": ["computer-architecture"],
+            "resources": [
+              {"label": "OSTEP: processes, CPU virtualization, and process execution", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf"},
+              {"label": "OSTEP: virtual memory, address spaces, and translation", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf"},
+              {"label": "OSTEP: threads, shared state, and concurrency problems", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf"},
+              {"label": "OSTEP: complete free textbook with chapters on scheduling, files, and persistence", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"},
+              {"label": "MIT 6.S081: Operating System Engineering (lectures, labs, and xv6 projects)", "url": "https://pdos.csail.mit.edu/6.S081/2020/"},
+              { "label": "YouTube: Neso Academy ? Operating Systems", "url": "https://www.youtube.com/playlist?list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O "}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "theory-of-computation",
+            "name": "Theory of Computation",
+            "description": "Study what can and cannot be computed efficiently.",
+            "outcomes": ["Use finite automata and regular expressions", "Explain P versus NP at a high level", "Recognize undecidable problems"],
+            "estimatedHours": 28,
+            "prerequisites": ["discrete-math-basics", "complexity-analysis"],
+            "resources": [
+              {"label": "MIT 18.404J Lecture 1: finite automata and regular expressions", "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/resources/lecture-1-introduction-finite-automata-regular-expressions/"},
+              {"label": "MIT 18.404J Lecture 8: undecidability and limits of computation", "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/resources/mit18_404f20_lec8-1/"},
+              {"label": "MIT 18.404J Lecture 12: time complexity", "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/resources/mit18_404f20_lec12-1/"},
+              {"label": "MIT 18.404J Lecture 14: P, NP, SAT, and polynomial-time reductions", "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/resources/mit18_404f20_lec14-1/"},
+              {"label": "MIT 6.042J: discrete mathematics for computer science (logic, proof, counting, and graphs)", "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"},
+              {"label": "Stanford CS103: mathematical foundations, proof techniques, and computability", "url": "https://web.stanford.edu/class/cs103/"},
+              { "label": "YouTube: Neso Academy ? Theory of Computation & Automata", "url": "https://www.youtube.com/playlist?list=PLBlnK6fEyqRgp46KUv4ZY69yXmpwKOIev "}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Tiny interpreter or virtual machine",
+          "description": "Implement a small language or instruction set and document how it executes code.",
+          "demonstrates": ["computer-architecture", "operating-systems"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A from-scratch core system",
+      "description": "Implement a data structure library, interpreter, or similar system with tests and a written complexity analysis."
+    }
+  },
+  "swe": {
+    "title": "Software Engineering Practices",
+    "description": "Learn how professional teams design, review, test, and maintain software over time.",
+    "audience": "For developers who can code and want to work effectively on real, long-lived projects.",
+    "goal": "Deliver clean, tested, well-documented code in a team workflow.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Write readable code and collaborate through version control.",
+        "skills": [
+          {
+            "id": "swe-git-workflow",
+            "name": "Git Workflows & Pull Requests",
+            "description": "Collaborate with branches, pull requests, and code review.",
+            "outcomes": ["Use feature branches and resolve merge conflicts", "Write clear pull request descriptions", "Respond constructively to review feedback"],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [{"label": "GitHub Skills", "url": "https://github.com/skills"}, {"label": "GitHub Docs: GitHub flow", "url": "https://docs.github.com/en/get-started/using-github/github-flow"}, {"label": "YouTube: TechWorld with Nana – 3 Git Workflows Every Developer Should Know (And When to Use Each) (31:32)", "url": "https://www.youtube.com/watch?v=GQQqf-C2ha4"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "clean-code",
+            "name": "Clean Code & Refactoring",
+            "description": "Make code easier to read, change, and trust.",
+            "outcomes": ["Name things clearly and keep functions small", "Remove duplication safely", "Refactor with tests as a safety net"],
+            "estimatedHours": 16,
+            "prerequisites": [],
+            "resources": [{"label": "Refactoring Guru: Refactoring", "url": "https://refactoring.guru/refactoring"}, {"label": "Martin Fowler: Refactoring catalog", "url": "https://refactoring.com/catalog/"}, {"label": "YouTube: Programming with Mosh – Clean Code: Learn to write clean, maintainable and robust code (34:18)", "url": "https://www.youtube.com/watch?v=5koPpYVa020"}, {"label": "YouTube: Tech With Tim – My 5 \"Clean\" Code Principles (Start These Now) (16:18)", "url": "https://www.youtube.com/watch?v=kfyo-N-xAwE"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "unit-testing",
+            "name": "Unit Testing",
+            "description": "Verify small units of code automatically.",
+            "outcomes": ["Write tests that fail for the right reason", "Cover edge cases and error paths", "Keep tests fast and independent"],
+            "estimatedHours": 14,
+            "prerequisites": [],
+            "resources": [{"label": "Martin Fowler: Test Pyramid", "url": "https://martinfowler.com/bliki/TestPyramid.html"}, {"label": "pytest documentation: Get Started", "url": "https://docs.pytest.org/en/stable/getting-started.html"}, {"label": "YouTube: Khan Academy – Unit testing | Intro to CS - Python | Khan Academy (4:45)", "url": "https://www.youtube.com/watch?v=3OmfTIf-SOU"}, {"label": "YouTube: Programming with Mosh – JavaScript Unit Testing Tutorial for Beginners (48:32)", "url": "https://www.youtube.com/watch?v=zuKbR4Q428o"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Well-tested utility library",
+          "description": "Publish a small library with tests, a README, and a clean commit history.",
+          "demonstrates": ["swe-git-workflow", "clean-code", "unit-testing"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Structure larger codebases and work within a team process.",
+        "skills": [
+          {
+            "id": "design-patterns",
+            "name": "Design Patterns & Principles",
+            "description": "Apply proven solutions and principles such as SOLID.",
+            "outcomes": ["Recognize common patterns such as factory, strategy, and observer", "Apply single responsibility and dependency inversion", "Avoid over-engineering"],
+            "estimatedHours": 20,
+            "prerequisites": ["clean-code"],
+            "resources": [{"label": "Refactoring Guru: Design Patterns", "url": "https://refactoring.guru/design-patterns"}, {"label": "SourceMaking: Design Patterns", "url": "https://sourcemaking.com/design_patterns"}, {"label": "YouTube: freeCodeCamp.org – Master Design Patterns & SOLID Principles in C# - Full OOP Course for Beginners (11:46:54)", "url": "https://www.youtube.com/watch?v=rylaiB2uH2A"}, {"label": "YouTube: Tech With Tim – PLEASE Master These 3 Software Design Principles... (11:43)", "url": "https://www.youtube.com/watch?v=1ZM88C_CLDY"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "code-review",
+            "name": "Code Review",
+            "description": "Give and receive reviews that improve quality without slowing teams down.",
+            "outcomes": ["Review for correctness, clarity, and risk", "Write specific, kind feedback", "Keep changes small and reviewable"],
+            "estimatedHours": 8,
+            "prerequisites": ["swe-git-workflow"],
+            "resources": [{"label": "Google Engineering Practices: Code Review", "url": "https://google.github.io/eng-practices/review/"}, {"label": "GitHub Docs: About pull request reviews", "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews"}, {"label": "YouTube: JetBrains – Code Review Best Practices (58:47)", "url": "https://www.youtube.com/watch?v=a9_0UUUNt-Y"}, {"label": "YouTube: IBM Technology – How AI Is Changing Code Reviews & Software Development (14:09)", "url": "https://www.youtube.com/watch?v=c57vAe-mMLo"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "agile-delivery",
+            "name": "Agile & Project Planning",
+            "description": "Plan, estimate, and deliver work in small increments.",
+            "outcomes": ["Break features into user stories", "Run a simple sprint or Kanban board", "Communicate scope and trade-offs"],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [{"label": "Agile Manifesto", "url": "https://agilemanifesto.org/"}, {"label": "The Scrum Guide", "url": "https://scrumguides.org/scrum-guide.html"}, {"label": "YouTube: freeCodeCamp.org – Design Software Systems Like a Senior Engineer – Complete Course (3:16:48)", "url": "https://www.youtube.com/watch?v=soTfFFIQQ8U"}, {"label": "YouTube: freeCodeCamp.org – Software Testing Course – Playwright, E2E, and AI Agents (1:03:31)", "url": "https://www.youtube.com/watch?v=jydYq7oAtD8"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Team-style feature delivery",
+          "description": "Plan and ship a feature through issues, pull requests, reviews, and a release note.",
+          "demonstrates": ["design-patterns", "code-review", "agile-delivery"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Keep software maintainable and reliable as it grows.",
+        "skills": [
+          {
+            "id": "testing-strategy",
+            "name": "Testing Strategy",
+            "description": "Balance unit, integration, and end-to-end tests.",
+            "outcomes": ["Decide what to test at each level", "Use test doubles appropriately", "Reduce flaky tests"],
+            "estimatedHours": 14,
+            "prerequisites": ["unit-testing"],
+            "resources": [{"label": "Martin Fowler: Test Pyramid", "url": "https://martinfowler.com/bliki/TestPyramid.html"}, {"label": "martinfowler.com: The Practical Test Pyramid", "url": "https://martinfowler.com/articles/practical-test-pyramid.html"}, {"label": "YouTube: freeCodeCamp.org – Software Testing Course – Playwright, E2E, and AI Agents (1:03:31)", "url": "https://www.youtube.com/watch?v=jydYq7oAtD8"}, {"label": "YouTube: Academind – JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests (39:46)", "url": "https://www.youtube.com/watch?v=r9HdJ8P6GQI"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "architecture-docs",
+            "name": "Architecture & Documentation",
+            "description": "Capture design decisions so others can understand and extend the system.",
+            "outcomes": ["Draw a clear architecture diagram", "Write architecture decision records", "Keep docs close to the code"],
+            "estimatedHours": 12,
+            "prerequisites": ["design-patterns"],
+            "resources": [{"label": "Write the Docs: Guide", "url": "https://www.writethedocs.org/guide/"}, {"label": "c4model.com: Architecture & Documentation", "url": "https://c4model.com/"}, {"label": "YouTube: ByteByteGo – Top 5 Most Used Architecture Patterns (5:53)", "url": "https://www.youtube.com/watch?v=f6zXyq4VPP8"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "technical-debt",
+            "name": "Maintainability & Technical Debt",
+            "description": "Manage legacy code and decide when to refactor or rewrite.",
+            "outcomes": ["Identify and prioritize technical debt", "Improve legacy code incrementally", "Explain the cost of delay to non-engineers"],
+            "estimatedHours": 12,
+            "prerequisites": ["clean-code", "testing-strategy"],
+            "resources": [{"label": "Martin Fowler: Technical Debt", "url": "https://martinfowler.com/bliki/TechnicalDebt.html"}, {"label": "martinfowler.com: Technical Debt Quadrant", "url": "https://martinfowler.com/bliki/TechnicalDebtQuadrant.html"}, {"label": "YouTube: Web Dev Simplified – How To Manage Technical Debt (14:12)", "url": "https://www.youtube.com/watch?v=nXMYHrERh80"}, {"label": "YouTube: Software Engineering Institute | Carnegie Mellon University – Technical Debt as a Core Software Engineering Practice (23:04)", "url": "https://www.youtube.com/watch?v=OfIYiyg1op8"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Legacy code makeover",
+          "description": "Take an untested project, add tests, refactor it safely, and document what changed and why.",
+          "demonstrates": ["testing-strategy", "architecture-docs", "technical-debt"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A maintainable open-source style project",
+      "description": "Maintain a repository with contribution guidelines, tests, automated checks, and architecture documentation."
+    }
+  },
+  "systems": {
+    "title": "Systems & Low-Level Programming",
+    "description": "Understand memory, concurrency, and the operating system by programming close to the machine.",
+    "audience": "For learners who want to know how software really runs, or who are drawn to performance-critical work.",
+    "goal": "Write safe, efficient low-level programs and explain how they use system resources.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Write and debug small programs that manage their own memory.",
+        "skills": [
+          {
+            "id": "c-basics",
+            "name": "C Programming",
+            "description": "Learn a small language that exposes how programs map to memory.",
+            "outcomes": ["Use pointers, arrays, and structs", "Allocate and free memory", "Compile and debug with command-line tools"],
+            "estimatedHours": 30,
+            "prerequisites": [],
+            "resources": [{"label": "Beej's Guide to C", "url": "https://beej.us/guide/bgc/"}, {"label": "en.cppreference.com: C Programming", "url": "https://en.cppreference.com/w/c/language"}, {"label": "YouTube: Low Level – Getting Started with Baremetal Arduino C Programming | No IDE Required [Linux SDK] (11:03)", "url": "https://www.youtube.com/watch?v=j4xw8QomkXs"}, {"label": "YouTube: Bro Code – C Programming Full Course for free ⚙ (6:53:35)", "url": "https://www.youtube.com/watch?v=xND0t1pr3KY"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "memory-model",
+            "name": "Memory Layout & Debugging",
+            "description": "Understand the stack, the heap, and common memory errors.",
+            "outcomes": ["Explain stack versus heap allocation", "Find leaks and buffer overflows with a debugger", "Read a crash backtrace"],
+            "estimatedHours": 14,
+            "prerequisites": ["c-basics"],
+            "resources": [{"label": "Operating Systems: Three Easy Pieces", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"}, {"label": "gnu.org: Memory Layout & Debugging", "url": "https://www.gnu.org/software/gdb/documentation/"}, {"label": "YouTube: Low Level – i wrote my own memory allocator in C to prove a point (5:23)", "url": "https://www.youtube.com/watch?v=CulF4YQt6zA"}, {"label": "YouTube: Bro Code – C++ dynamic memory explained for beginners (5:49)", "url": "https://www.youtube.com/watch?v=fc19HhHKtrA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "systems-shell",
+            "name": "Command Line & Build Tools",
+            "description": "Use the shell, Make, and a debugger as everyday tools.",
+            "outcomes": ["Write a Makefile", "Use pipes and redirection", "Step through code with a debugger"],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [{"label": "The Linux Command Line", "url": "https://linuxcommand.org/tlcl.php"}, {"label": "cmake.org: Command Line & Build Tools", "url": "https://cmake.org/cmake/help/latest/guide/tutorial/index.html"}, {"label": "YouTube: freeCodeCamp.org – Command Line Basics for Beginners - Full Course (45:20)", "url": "https://www.youtube.com/watch?v=mABpAI-pCw0"}, {"label": "YouTube: Low Level – GDB is REALLY easy! Find Bugs in Your Code with Only A Few Commands (7:29)", "url": "https://www.youtube.com/watch?v=Dq8l1_-QgAc"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Mini shell or text utility",
+          "description": "Build a simple command-line tool in C with careful memory handling.",
+          "demonstrates": ["c-basics", "memory-model", "systems-shell"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Use operating system features for processes, files, and networking.",
+        "skills": [
+          {
+            "id": "rust-basics",
+            "name": "Rust & Memory Safety",
+            "description": "Learn how ownership and borrowing prevent whole classes of bugs.",
+            "outcomes": ["Explain ownership and borrowing", "Write safe, idiomatic Rust", "Use Cargo to build and test"],
+            "estimatedHours": 36,
+            "prerequisites": ["c-basics"],
+            "resources": [{"label": "The Rust Programming Language", "url": "https://doc.rust-lang.org/book/"}, {"label": "Rust by Example", "url": "https://doc.rust-lang.org/rust-by-example/"}, {"label": "YouTube: Low Level – This Is How Rust Stops Memory Leaks (5:53)", "url": "https://www.youtube.com/watch?v=DJdUjjOmyx8"}, {"label": "YouTube: Let's Get Rusty – Rust for Dummies in 12 Minutes (12:30)", "url": "https://www.youtube.com/watch?v=0y6RKiIk6cs"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "processes-io",
+            "name": "Processes, Files & System Calls",
+            "description": "Interact directly with the operating system.",
+            "outcomes": ["Create and manage processes", "Read and write files through system calls", "Handle signals and errors"],
+            "estimatedHours": 20,
+            "prerequisites": ["c-basics"],
+            "resources": [{"label": "Operating Systems: Three Easy Pieces", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"}, {"label": "man7.org: Processes, Files & System Calls", "url": "https://man7.org/linux/man-pages/"}, {"label": "YouTube: NeetCodeIO – Program vs Process (low level concepts) (18:49)", "url": "https://www.youtube.com/watch?v=4vH8fYpkg5I"}, {"label": "YouTube: Neso Academy – System Calls (12:39)", "url": "https://www.youtube.com/watch?v=lhToWeuWWfw"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "socket-programming",
+            "name": "Network Programming",
+            "description": "Send data between programs using sockets.",
+            "outcomes": ["Write a TCP client and server", "Handle partial reads and errors", "Explain blocking versus non-blocking I/O"],
+            "estimatedHours": 18,
+            "prerequisites": ["processes-io"],
+            "resources": [{"label": "Beej's Guide to Network Programming", "url": "https://beej.us/guide/bgnet/"}, {"label": "Linux man-pages: socket(2)", "url": "https://man7.org/linux/man-pages/man2/socket.2.html"}, {"label": "YouTube: Low Level – the TRUTH about numbers and network programming (endianess or ELSE) (5:25)", "url": "https://www.youtube.com/watch?v=_yRW4nQFrB8"}, {"label": "YouTube: CrashCourse – Computer Networks: Crash Course Computer Science #28 (12:20)", "url": "https://www.youtube.com/watch?v=3QhU9jd03a0"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Simple network server",
+          "description": "Build a small chat or file server that handles several clients.",
+          "demonstrates": ["rust-basics", "processes-io", "socket-programming"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Build concurrent, high-performance software and measure it.",
+        "skills": [
+          {
+            "id": "concurrency",
+            "name": "Concurrency & Synchronization",
+            "description": "Write programs that run safely on many threads.",
+            "outcomes": ["Use locks, atomics, and channels", "Recognize races and deadlocks", "Design simple concurrent data structures"],
+            "estimatedHours": 28,
+            "prerequisites": ["rust-basics", "processes-io"],
+            "resources": [{"label": "Rust Book: Fearless Concurrency", "url": "https://doc.rust-lang.org/book/ch16-01-threads.html"}, {"label": "LLNL HPC Tutorials: POSIX Threads Programming", "url": "https://hpc-tutorials.llnl.gov/posix/"}, {"label": "YouTube: ByteByteGo – Concurrency Vs Parallelism! (4:13)", "url": "https://www.youtube.com/watch?v=RlM9AfWf1WU"}, {"label": "YouTube: Engineering Community – Java Concurrency Essentials by Bogdan Komar (51:19)", "url": "https://www.youtube.com/watch?v=BQ2xAd4-VCc"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "performance-profiling",
+            "name": "Performance Profiling",
+            "description": "Measure first, then optimize what matters.",
+            "outcomes": ["Profile CPU and memory use", "Explain cache effects on performance", "Document an optimization with before-and-after numbers"],
+            "estimatedHours": 16,
+            "prerequisites": ["memory-model"],
+            "resources": [{"label": "Operating Systems: Three Easy Pieces", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"}, {"label": "brendangregg.com: Linux Performance", "url": "https://www.brendangregg.com/linuxperf.html"}, {"label": "YouTube: JetBrains – Profiling and Fixing Common Performance Bottlenecks (1:38:48)", "url": "https://www.youtube.com/watch?v=DsFolcdyWhs"}, {"label": "YouTube: freeCodeCamp.org – CUDA Programming Course – High-Performance Computing with GPUs (11:55:11)", "url": "https://www.youtube.com/watch?v=86FAWCzIe_4"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "os-internals",
+            "name": "Operating System Internals",
+            "description": "Study how kernels schedule work and manage memory and storage.",
+            "outcomes": ["Describe scheduling and virtual memory", "Explain how file systems store data", "Read a small teaching kernel"],
+            "estimatedHours": 30,
+            "prerequisites": ["processes-io"],
+            "resources": [{"label": "Operating Systems: Three Easy Pieces", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"}, {"label": "The Linux Kernel documentation: The Linux Kernel documentation", "url": "https://docs.kernel.org/"}, {"label": "YouTube: Fireship – Every operating system concept in one video… (11:31)", "url": "https://www.youtube.com/watch?v=MtxP2pyCvYA"}, {"label": "YouTube: CrashCourse – Operating Systems: Crash Course Computer Science #18 (13:36)", "url": "https://www.youtube.com/watch?v=26QPDBe-NB8"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Concurrent key-value store",
+          "description": "Implement a thread-safe in-memory store with benchmarks.",
+          "demonstrates": ["concurrency", "performance-profiling"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A small systems tool",
+      "description": "Deliver a well-tested, benchmarked systems program, such as a database engine, web server, or allocator."
+    }
+  },
+  "mobile": {
+    "title": "Mobile Development",
+    "description": "Build apps for phones and tablets, from first screen to app store release.",
+    "audience": "For learners who want to ship apps people carry in their pockets.",
+    "goal": "Publish a polished, reliable mobile app.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Build a simple multi-screen app on a device or emulator.",
+        "skills": [
+          {
+            "id": "mobile-js-basics",
+            "name": "Language Fundamentals",
+            "description": "Learn the language for your chosen platform: JavaScript or TypeScript, Kotlin, or Swift.",
+            "outcomes": ["Write functions, classes, and modules", "Work with collections and optional values", "Handle errors"],
+            "estimatedHours": 30,
+            "prerequisites": [],
+            "resources": [{"label": "React Native: Getting Started", "url": "https://reactnative.dev/docs/getting-started"}, {"label": "MDN: JavaScript Guide - JavaScript", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"}, {"label": "YouTube: CrashCourse – Language: Crash Course Psychology #16 (10:02)", "url": "https://www.youtube.com/watch?v=s9shPouRWCs"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "mobile-ui",
+            "name": "Mobile UI & Navigation",
+            "description": "Create screens, lists, forms, and navigation that feel native.",
+            "outcomes": ["Build responsive layouts", "Navigate between screens", "Follow platform design guidelines"],
+            "estimatedHours": 24,
+            "prerequisites": ["mobile-js-basics"],
+            "resources": [{"label": "Apple Human Interface Guidelines", "url": "https://developer.apple.com/design/human-interface-guidelines/"}, {"label": "React Navigation: Getting started", "url": "https://reactnavigation.org/docs/getting-started/"}, {"label": "YouTube: Traversy Media – React Native Crash Course 2026 - Build a Complete Mobile App (1:38:36)", "url": "https://www.youtube.com/watch?v=XCifkDC0yXA"}, {"label": "YouTube: Zero To Flutter – Build Your First Mobile App UI in Flutter | Complete Beginner Tutorial (2026) (59:33)", "url": "https://www.youtube.com/watch?v=-6YIi9UJQkU"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "mobile-tooling",
+            "name": "Emulators & Dev Tooling",
+            "description": "Run, debug, and inspect an app on simulators and real devices.",
+            "outcomes": ["Run on an emulator and a physical device", "Use logs and a debugger", "Hot-reload changes"],
+            "estimatedHours": 6,
+            "prerequisites": [],
+            "resources": [{"label": "Android Basics with Compose", "url": "https://developer.android.com/courses/android-basics-compose/course"}, {"label": "Android Developers: Run apps on the Android Emulator  -  Android Studio", "url": "https://developer.android.com/studio/run/emulator"}, {"label": "YouTube: Codevolution – React Native Tutorial - 6 - Running App on Android Emulator (4:08)", "url": "https://www.youtube.com/watch?v=xKGESzemfdw"}, {"label": "YouTube: Computerphile – Emulation - Computerphile (22:36)", "url": "https://www.youtube.com/watch?v=m6l3Elk7-Hg"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Habit tracker or to-do app",
+          "description": "Build a multi-screen app with local state and a clean interface.",
+          "demonstrates": ["mobile-js-basics", "mobile-ui", "mobile-tooling"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Connect an app to data, devices, and users.",
+        "skills": [
+          {
+            "id": "mobile-state",
+            "name": "State Management & Local Storage",
+            "description": "Keep app data consistent and available offline.",
+            "outcomes": ["Manage app-wide state", "Persist data locally", "Handle offline use and syncing"],
+            "estimatedHours": 20,
+            "prerequisites": ["mobile-ui"],
+            "resources": [{"label": "React Native: State", "url": "https://reactnative.dev/docs/state"}, {"label": "react-native-async-storage.github.io: State Management & Local Storage", "url": "https://github.com/react-native-async-storage/async-storage"}, {"label": "YouTube: Android Developers – Everything about storage on Android (12:17)", "url": "https://www.youtube.com/watch?v=jcO6p5TlcGs"}, {"label": "YouTube: The Coding Train – Local Storage in JavaScript with p5.js (12:04)", "url": "https://www.youtube.com/watch?v=_SRS8b4LcZ8"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "mobile-networking",
+            "name": "APIs & Authentication",
+            "description": "Load remote data and sign users in securely.",
+            "outcomes": ["Fetch and cache API data", "Handle loading and error states", "Store tokens securely"],
+            "estimatedHours": 18,
+            "prerequisites": ["mobile-state"],
+            "resources": [{"label": "React Native: Networking", "url": "https://reactnative.dev/docs/network"}, {"label": "Android Developers: Connect to the network", "url": "https://developer.android.com/develop/connectivity/network-ops/connecting"}, {"label": "YouTube: freeCodeCamp.org – APIs for Beginners - How to use an API (Full Course / Tutorial) (3:07:07)", "url": "https://www.youtube.com/watch?v=WXsD0ZgxjRw"}, {"label": "YouTube: ByteByteGo – APIs Explained in 6 Minutes! (6:41)", "url": "https://www.youtube.com/watch?v=hltLrjabkiY"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "device-features",
+            "name": "Device Features & Permissions",
+            "description": "Use the camera, location, and notifications responsibly.",
+            "outcomes": ["Request permissions at the right moment", "Use at least two device capabilities", "Respect user privacy"],
+            "estimatedHours": 14,
+            "prerequisites": ["mobile-ui"],
+            "resources": [{"label": "Expo SDK Documentation", "url": "https://docs.expo.dev/versions/latest/"}, {"label": "Expo documentation: Permissions", "url": "https://docs.expo.dev/guides/permissions/"}, {"label": "YouTube: Android Developers – Permissions on Android (Android Dev Summit '19) (10:53)", "url": "https://www.youtube.com/watch?v=7zSjDfP_xqg"}, {"label": "YouTube: Google for Developers – Google I/O 2015 - Android M Permissions (32:39)", "url": "https://www.youtube.com/watch?v=f17qe9vZ8RM"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Connected app",
+          "description": "Build an app that signs users in, syncs data from an API, and works offline.",
+          "demonstrates": ["mobile-state", "mobile-networking", "device-features"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Release and maintain a high-quality app.",
+        "skills": [
+          {
+            "id": "mobile-testing",
+            "name": "Mobile Testing & Quality",
+            "description": "Test across devices, screen sizes, and conditions.",
+            "outcomes": ["Write component and end-to-end tests", "Test on slow networks and small screens", "Track crashes and errors"],
+            "estimatedHours": 16,
+            "prerequisites": ["mobile-networking"],
+            "resources": [{"label": "React Native: Testing", "url": "https://reactnative.dev/docs/testing-overview"}, {"label": "Jest: Testing React Native apps", "url": "https://jestjs.io/docs/tutorial-react-native"}, {"label": "YouTube: Android Developers – Android Testing Strategies (8:25)", "url": "https://www.youtube.com/watch?v=qeFWCYc7u3E"}, {"label": "YouTube: freeCodeCamp.org – Build your own Mobile App with Codex GPT-6 Astra - Full iOS and Android Course (2:35:50)", "url": "https://www.youtube.com/watch?v=bGALxRWI10A"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "mobile-performance",
+            "name": "Performance & Battery Use",
+            "description": "Keep apps smooth and efficient.",
+            "outcomes": ["Profile rendering and memory", "Optimize long lists and images", "Reduce background work"],
+            "estimatedHours": 14,
+            "prerequisites": ["mobile-state"],
+            "resources": [{"label": "React Native: Performance", "url": "https://reactnative.dev/docs/performance"}, {"label": "React Native: Optimizing FlatList configuration", "url": "https://reactnative.dev/docs/optimizing-flatlist-configuration"}, {"label": "YouTube: Android Developers – Location & Battery Drain (Android Performance Patterns Season 3 ep7) (4:29)", "url": "https://www.youtube.com/watch?v=81W61JA6YHw"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "app-release",
+            "name": "App Store Release",
+            "description": "Prepare, submit, and update an app on the stores.",
+            "outcomes": ["Prepare signing, icons, and store listings", "Submit a build for review", "Plan updates and versioning"],
+            "estimatedHours": 12,
+            "prerequisites": ["mobile-testing"],
+            "resources": [{"label": "Expo: Submit to app stores", "url": "https://docs.expo.dev/submit/introduction/"}, {"label": "Android Developers: Publish your app", "url": "https://developer.android.com/studio/publish"}, {"label": "YouTube: ByteByteGo – Do You Know How Mobile Apps Are Released? (5:00)", "url": "https://www.youtube.com/watch?v=RIX4ufelA58"}, {"label": "YouTube: Apple Explained – History of the App Store (12:07)", "url": "https://www.youtube.com/watch?v=t_CDefOuAww"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Store-ready app",
+          "description": "Ship a tested app with crash reporting and a documented release process.",
+          "demonstrates": ["mobile-testing", "mobile-performance", "app-release"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A published mobile app",
+      "description": "Release an app, or a store-ready build, with a landing page, a privacy policy, and a source repository."
+    }
+  },
+  "games": {
+    "title": "Game Development",
+    "description": "Learn the loops, physics, graphics, and design that bring interactive worlds to life.",
+    "audience": "For learners who love games and want to build their own.",
+    "goal": "Finish and publish a playable game.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Build a small game that is fun to play.",
+        "skills": [
+          {
+            "id": "game-engine-basics",
+            "name": "Game Engine Basics",
+            "description": "Learn a beginner-friendly engine such as Godot or Unity.",
+            "outcomes": ["Create scenes, sprites, and scripts", "Handle player input", "Export a playable build"],
+            "estimatedHours": 24,
+            "prerequisites": [],
+            "resources": [{"label": "Godot: Getting Started", "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/index.html"}, {"label": "Unity Learn: Junior Programmer pathway", "url": "https://learn.unity.com/pathway/junior-programmer"}, {"label": "YouTube: Game Maker's Toolkit – The Unity Tutorial For Complete Beginners (46:39)", "url": "https://www.youtube.com/watch?v=XtQMytORBmM"}, {"label": "YouTube: Brackeys – How to make a Video Game - Godot Beginner Tutorial (1:17:12)", "url": "https://www.youtube.com/watch?v=LOhfqjmasi0"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "game-loop",
+            "name": "The Game Loop & Timing",
+            "description": "Understand how games update and draw each frame.",
+            "outcomes": ["Explain update and render steps", "Use delta time for smooth motion", "Avoid frame-rate-dependent bugs"],
+            "estimatedHours": 10,
+            "prerequisites": ["game-engine-basics"],
+            "resources": [{"label": "Game Programming Patterns: Game Loop", "url": "https://gameprogrammingpatterns.com/game-loop.html"}, {"label": "Game Programming Patterns: Update Method", "url": "https://gameprogrammingpatterns.com/update-method.html"}, {"label": "YouTube: The Cherno – TIMESTEPS and DELTA TIME | Game Engine series (28:06)", "url": "https://www.youtube.com/watch?v=pctGOMDW-HQ"}, {"label": "YouTube: Game Maker's Toolkit – Clockwork Games and Time Loops (13:35)", "url": "https://www.youtube.com/watch?v=CI-4cumMC-Y"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "game-design-basics",
+            "name": "Game Design Basics",
+            "description": "Design simple rules, goals, and feedback that keep players engaged.",
+            "outcomes": ["Define a core mechanic", "Balance difficulty", "Playtest and iterate"],
+            "estimatedHours": 12,
+            "prerequisites": [],
+            "resources": [{"label": "Unity Learn", "url": "https://learn.unity.com/"}, {"label": "gameprogrammingpatterns.com: Game Design Basics", "url": "https://gameprogrammingpatterns.com/"}, {"label": "YouTube: Game Maker's Toolkit – How To Think Like A Game Designer (13:07)", "url": "https://www.youtube.com/watch?v=iIOIT3dCy5w"}, {"label": "YouTube: Flow Studio – Game Development for Noobs | Beginner Guide (12:01)", "url": "https://www.youtube.com/watch?v=7C92ZCnlmQo"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Arcade-style 2D game",
+          "description": "Build and publish a small game with a clear goal, score, and restart.",
+          "demonstrates": ["game-engine-basics", "game-loop", "game-design-basics"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Add physics, AI, and polish to a larger game.",
+        "skills": [
+          {
+            "id": "game-physics",
+            "name": "Physics & Collision",
+            "description": "Make objects move and interact believably.",
+            "outcomes": ["Detect and respond to collisions", "Use physics bodies and forces", "Tune game feel"],
+            "estimatedHours": 18,
+            "prerequisites": ["game-loop"],
+            "resources": [{"label": "Godot: Physics Introduction", "url": "https://docs.godotengine.org/en/stable/tutorials/physics/physics_introduction.html"}, {"label": "Unity Manual: Physics overview", "url": "https://docs.unity3d.com/Manual/PhysicsOverview.html"}, {"label": "YouTube: CrashCourse – Collisions: Crash Course Physics #10 (9:21)", "url": "https://www.youtube.com/watch?v=Y-QOfc2XqOk"}, {"label": "YouTube: Khan Academy Physics – Elastic and inelastic collisions | Impacts and linear momentum | Physics | Khan… (14:25)", "url": "https://www.youtube.com/watch?v=8OB8eIPgEkQ"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "game-ai",
+            "name": "Game AI & Pathfinding",
+            "description": "Give characters believable behavior.",
+            "outcomes": ["Build state machines for enemy behavior", "Implement A* pathfinding", "Balance challenge and fairness"],
+            "estimatedHours": 18,
+            "prerequisites": ["game-loop"],
+            "resources": [{"label": "Game Programming Patterns: State", "url": "https://gameprogrammingpatterns.com/state.html"}, {"label": "redblobgames.com: Introduction to the A* Algorithm", "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html"}, {"label": "YouTube: Sebastian Lague – A* Pathfinding (E01: algorithm explanation) (11:39)", "url": "https://www.youtube.com/watch?v=-L-WgKMFuhE"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "game-audio-art",
+            "name": "Art, Animation & Audio",
+            "description": "Bring the game to life with polished assets and feedback.",
+            "outcomes": ["Animate characters and effects", "Add sound and music", "Use a consistent visual style"],
+            "estimatedHours": 14,
+            "prerequisites": ["game-engine-basics"],
+            "resources": [{"label": "itch.io: Top game assets", "url": "https://itch.io/game-assets"}, {"label": "kenney.nl: Assets · Kenney", "url": "https://kenney.nl/assets"}, {"label": "YouTube: Flow Studio – Game Development for Noobs | Beginner Guide (12:01)", "url": "https://www.youtube.com/watch?v=7C92ZCnlmQo"}, {"label": "YouTube: Game Maker's Toolkit – The Unity Tutorial For Complete Beginners (46:39)", "url": "https://www.youtube.com/watch?v=XtQMytORBmM"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Complete multi-level game",
+          "description": "Add enemies, levels, saving, and a menu to a game with a clear progression.",
+          "demonstrates": ["game-physics", "game-ai", "game-audio-art"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Understand rendering and ship a high-quality game.",
+        "skills": [
+          {
+            "id": "graphics-programming",
+            "name": "Graphics & Shaders",
+            "description": "Learn how GPUs draw scenes and how to write shaders.",
+            "outcomes": ["Explain the rendering pipeline", "Write simple vertex and fragment shaders", "Apply lighting and textures"],
+            "estimatedHours": 30,
+            "prerequisites": ["game-loop"],
+            "resources": [{"label": "LearnOpenGL", "url": "https://learnopengl.com/"}, {"label": "WebGL Fundamentals", "url": "https://webglfundamentals.org/"}, {"label": "YouTube: NVIDIA Game Developer – Neural Shading Course: Part 5 - How to Make Your Neural Shader Learn (18:59)", "url": "https://www.youtube.com/watch?v=1LaTljisOiM"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "game-optimization",
+            "name": "Optimization & Architecture",
+            "description": "Keep frame rates steady and code organized.",
+            "outcomes": ["Profile frame time", "Use object pooling and efficient data layouts", "Structure code with common game patterns"],
+            "estimatedHours": 20,
+            "prerequisites": ["game-physics"],
+            "resources": [{"label": "Game Programming Patterns", "url": "https://gameprogrammingpatterns.com/"}, {"label": "docs.godotengine.org: Performance", "url": "https://docs.godotengine.org/en/stable/tutorials/performance/index.html"}, {"label": "YouTube: Godot Engine – Enjoyable Game Architecture with Godot & C# – Mark Wilson – GodotCon 2025 (27:49)", "url": "https://www.youtube.com/watch?v=BgrHnJDt2ww"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "game-publishing",
+            "name": "Publishing & Community",
+            "description": "Get your game in front of players and listen to feedback.",
+            "outcomes": ["Publish on a game platform", "Write a clear store page", "Collect and act on player feedback"],
+            "estimatedHours": 10,
+            "prerequisites": ["game-design-basics"],
+            "resources": [{"label": "itch.io: Creator Docs", "url": "https://itch.io/docs/creators/getting-started"}, {"label": "Godot: Exporting projects", "url": "https://docs.godotengine.org/en/stable/tutorials/export/index.html"}, {"label": "YouTube: Game Maker's Toolkit – What it's like to release a game on Steam (39:50)", "url": "https://www.youtube.com/watch?v=5ycSvC0ZM0k"}, {"label": "YouTube: Code Monkey – Steam Marketing EXPERT on how to find SUCCESS in 2026! (38:20)", "url": "https://www.youtube.com/watch?v=NjNbIHHu9Z0"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Polished game jam entry",
+          "description": "Finish a game within a time limit and publish it with a trailer and postmortem.",
+          "demonstrates": ["game-optimization", "game-publishing"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A published game",
+      "description": "Release a finished game with a store page, gameplay footage, and a short development write-up."
+    }
+  },
+  "ux": {
+    "title": "UX & Product Design",
+    "description": "Learn to understand users and design interfaces that are useful, usable, and accessible.",
+    "audience": "For engineers who want to design better products and collaborate with designers.",
+    "goal": "Take an idea from user research to a tested, accessible design.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Evaluate and improve the usability of an existing interface.",
+        "skills": [
+          {
+            "id": "usability-principles",
+            "name": "Usability Principles",
+            "description": "Learn the heuristics that make interfaces easy to use.",
+            "outcomes": ["Apply Nielsen's usability heuristics", "Spot common usability problems", "Explain design choices clearly"],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [{"label": "NN/g: 10 Usability Heuristics", "url": "https://www.nngroup.com/articles/ten-usability-heuristics/"}, {"label": "Digital.gov: Usability", "url": "https://www.usability.gov/what-and-why/user-interface-design.html"}, {"label": "YouTube: Flux Academy – Never ignore these UX design principles (even if you’re MIT) (14:57)", "url": "https://www.youtube.com/watch?v=q-sD7Fk9-Bs"}, {"label": "YouTube: IxDF - Interaction Design Foundation – UX Design Principles: 7 Most Important Factors of UX Design (6:14)", "url": "https://www.youtube.com/watch?v=IPdsFaM7HCs"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "visual-design",
+            "name": "Visual Design Basics",
+            "description": "Use layout, color, and typography to guide attention.",
+            "outcomes": ["Create visual hierarchy", "Choose readable type and accessible colors", "Use spacing consistently"],
+            "estimatedHours": 14,
+            "prerequisites": [],
+            "resources": [{"label": "Material Design 3", "url": "https://m3.material.io/"}, {"label": "Learn the basics of Material: Foundations - Material Design 3", "url": "https://m3.material.io/foundations"}, {"label": "YouTube: DesignCourse – Typographic Visual Hierarchy in UI Design (4 Examples) (16:09)", "url": "https://www.youtube.com/watch?v=u9XSmlZhYq4"}, {"label": "YouTube: Flux Academy – Graphic Design Essentials: Free Course (2:51:41)", "url": "https://www.youtube.com/watch?v=SnxFkHqN1RA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "design-tools",
+            "name": "Design Tools",
+            "description": "Sketch and mock up screens in a tool such as Figma.",
+            "outcomes": ["Build frames, components, and auto layout", "Share a prototype link", "Hand off specs to developers"],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [{"label": "Figma: Get Started", "url": "https://help.figma.com/hc/en-us/categories/360002051613-Get-started"}, {"label": "Figma: Design Basics: UI/UX, Prototyping & Core Principles", "url": "https://www.figma.com/resource-library/design-basics/"}, {"label": "YouTube: Flux Academy – Figma Tutorial for Beginners (13-min crash course!) (13:22)", "url": "https://www.youtube.com/watch?v=jQ1sfKIl50E"}, {"label": "YouTube: Figma – A Guide to Auto Layout: Best Practices, Tips & Tricks | Figma (23:00)", "url": "https://www.youtube.com/watch?v=1odqpkfkDL8"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Usability review",
+          "description": "Audit an existing app, document the problems, and propose redesigns.",
+          "demonstrates": ["usability-principles", "visual-design", "design-tools"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Design a feature based on research and test it with real people.",
+        "skills": [
+          {
+            "id": "user-research",
+            "name": "User Research",
+            "description": "Learn what users need through interviews and observation.",
+            "outcomes": ["Plan and run user interviews", "Create personas and journey maps", "Turn findings into requirements"],
+            "estimatedHours": 16,
+            "prerequisites": ["usability-principles"],
+            "resources": [{"label": "NN/g: User Research", "url": "https://www.nngroup.com/articles/which-ux-research-methods/"}, {"label": "GOV.UK: User research - Service Manual", "url": "https://www.gov.uk/service-manual/user-research"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "prototyping",
+            "name": "Wireframing & Prototyping",
+            "description": "Explore ideas quickly before building them.",
+            "outcomes": ["Sketch low-fidelity wireframes", "Build a clickable prototype", "Iterate based on feedback"],
+            "estimatedHours": 16,
+            "prerequisites": ["design-tools"],
+            "resources": [{"label": "Figma: Prototyping", "url": "https://help.figma.com/hc/en-us/categories/360002051613-Get-started"}, {"label": "Help Center: Figma Design - Figma Learn", "url": "https://help.figma.com/hc/en-us/categories/360002042553-Prototype-and-animate"}, {"label": "YouTube: freeCodeCamp.org – UI / UX Design Tutorial – Wireframe, Mockup & Design in Figma (1:26:21)", "url": "https://www.youtube.com/watch?v=c9Wg6Cb_YlU"}, {"label": "YouTube: Codex Community – How to Wireframe in Figma in 2026 (28:13)", "url": "https://www.youtube.com/watch?v=qWIdforZ9x0"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "usability-testing",
+            "name": "Usability Testing",
+            "description": "Watch people use a prototype and learn from it.",
+            "outcomes": ["Write test tasks and scripts", "Observe sessions without leading", "Summarize and prioritize issues"],
+            "estimatedHours": 12,
+            "prerequisites": ["prototyping"],
+            "resources": [{"label": "NN/g: Usability Testing 101", "url": "https://www.nngroup.com/articles/usability-testing-101/"}, {"label": "Usability.gov: Running usability tests", "url": "https://www.usability.gov/how-to-and-tools/methods/running-usability-tests.html"}, {"label": "YouTube: DesignCourse – You need to know Usability Testing (with Maze) (14:05)", "url": "https://www.youtube.com/watch?v=ID0fwi2q028"}, {"label": "YouTube: DesignX: Design Leadership & Community – Usability Testing 101 (55:09)", "url": "https://www.youtube.com/watch?v=MPKLHDKzHQM"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Researched feature design",
+          "description": "Interview users, prototype a feature, test it, and present what you changed.",
+          "demonstrates": ["user-research", "prototyping", "usability-testing"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Design consistent, inclusive systems at scale.",
+        "skills": [
+          {
+            "id": "design-systems",
+            "name": "Design Systems",
+            "description": "Create reusable components and tokens shared by design and code.",
+            "outcomes": ["Define color, type, and spacing tokens", "Document reusable components", "Keep design and code in sync"],
+            "estimatedHours": 20,
+            "prerequisites": ["prototyping"],
+            "resources": [{"label": "Material Design 3", "url": "https://m3.material.io/"}, {"label": "Shopify Polaris design system", "url": "https://polaris.shopify.com/"}, {"label": "YouTube: Figma – Welcome to design systems - Lesson 1 : Introduction to design systems (15:43)", "url": "https://www.youtube.com/watch?v=YLo6g58vUm0"}, {"label": "YouTube: KodeKloud – System Design for Beginners (2026) (1:25:37)", "url": "https://www.youtube.com/watch?v=SE2KF-vxvS0"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "inclusive-design",
+            "name": "Accessibility & Inclusive Design",
+            "description": "Design for people with different abilities and contexts.",
+            "outcomes": ["Apply WCAG success criteria", "Design for keyboard, screen reader, and low vision use", "Test with assistive technology"],
+            "estimatedHours": 16,
+            "prerequisites": ["visual-design"],
+            "resources": [{"label": "WCAG 2.2 Quick Reference", "url": "https://www.w3.org/WAI/WCAG22/quickref/"}, {"label": "W3C: Tutorials - Web Accessibility Initiative (WAI)", "url": "https://www.w3.org/WAI/tutorials/"}, {"label": "YouTube: IxDF - Interaction Design Foundation – Accessible Design: What Do We Mean by Accessible Design? (4:40)", "url": "https://www.youtube.com/watch?v=nDVjXaNzc_M"}, {"label": "YouTube: Friends of Figma Jos – Accessibility & Inclusive Design in Figma (53:40)", "url": "https://www.youtube.com/watch?v=W7M0V3RH2gY"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "product-thinking",
+            "name": "Product Thinking & Metrics",
+            "description": "Connect design decisions to user and business outcomes.",
+            "outcomes": ["Define success metrics", "Prioritize features by impact", "Run a simple A/B test"],
+            "estimatedHours": 12,
+            "prerequisites": ["user-research"],
+            "resources": [{"label": "NN/g: UX Strategy", "url": "https://www.nngroup.com/topic/strategy/"}, {"label": "Product Best Practices & More: Amplitude Blog", "url": "https://amplitude.com/blog/product-analytics"}, {"label": "YouTube: Stanford Online – Stanford Webinar - Design Thinking: What is it and why should I care? (57:57)", "url": "https://www.youtube.com/watch?v=GeUXQ_L-35M"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Accessible design system",
+          "description": "Publish a small component library with tokens, usage guidance, and accessibility notes.",
+          "demonstrates": ["design-systems", "inclusive-design"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A case study portfolio piece",
+      "description": "Present a project from research through testing, with decisions, trade-offs, and measured results."
+    }
+  },
+  "data": {
+    "title": "Data Engineering & Analytics",
+    "description": "Learn to collect, transform, store, and serve data so teams can trust and use it.",
+    "audience": "For learners who like SQL and Python and want to build the pipelines behind analytics and AI.",
+    "goal": "Build a reliable, tested data pipeline with a dashboard on top.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Query and analyze data confidently.",
+        "skills": [
+          {
+            "id": "data-sql",
+            "name": "SQL for Analysis",
+            "description": "Answer questions with joins, aggregations, and window functions.",
+            "outcomes": ["Write multi-table queries", "Use GROUP BY and window functions", "Explain query results clearly"],
+            "estimatedHours": 24,
+            "prerequisites": [],
+            "resources": [{"label": "Mode: SQL Tutorial", "url": "https://mode.com/sql-tutorial"}, {"label": "sqlbolt.com: SQL for Analysis", "url": "https://sqlbolt.com/"}, {"label": "YouTube: Luke Barousse – SQL for Data Analytics - Learn SQL in 4 Hours (4:08:41)", "url": "https://www.youtube.com/watch?v=7mz73uXD9DA"}, {"label": "YouTube: Alex The Analyst – Learn SQL Beginner to Advanced in Under 4 Hours (4:04:58)", "url": "https://www.youtube.com/watch?v=OT1RErkfLNQ"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "data-python",
+            "name": "Python for Data",
+            "description": "Read, clean, and reshape data with Python.",
+            "outcomes": ["Load files and APIs into DataFrames", "Clean missing and inconsistent values", "Write reusable scripts"],
+            "estimatedHours": 24,
+            "prerequisites": [],
+            "resources": [{"label": "pandas: Getting Started", "url": "https://pandas.pydata.org/docs/getting_started/index.html"}, {"label": "pandas 3.1.0 documentation: Getting started tutorials", "url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/"}, {"label": "YouTube: Luke Barousse – Python for Data Analytics - Full Course for Beginners (11:09:41)", "url": "https://www.youtube.com/watch?v=wUSDVGivd-8"}, {"label": "YouTube: freeCodeCamp.org – Data Engineering with Python and AI/LLMs – Data Loading Tutorial (3:48:41)", "url": "https://www.youtube.com/watch?v=T23Bs75F7ZQ"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "data-viz",
+            "name": "Data Visualization",
+            "description": "Tell clear stories with charts and dashboards.",
+            "outcomes": ["Choose the right chart", "Build a simple dashboard", "Avoid misleading visuals"],
+            "estimatedHours": 12,
+            "prerequisites": ["data-sql"],
+            "resources": [{"label": "From Data to Viz", "url": "https://www.data-to-viz.com/"}, {"label": "observablehq.com: Data Visualization", "url": "https://observablehq.com/plot/what-is-plot"}, {"label": "YouTube: Alex The Analyst – Learn Tableau in Under 2 hours | Dashboards, Relationships, Visualizations + Mini… (1:30:10)", "url": "https://www.youtube.com/watch?v=j8FSP8XuFyk"}, {"label": "YouTube: Computerphile – Foundations of Data Visualisation - Computerphile (11:08)", "url": "https://www.youtube.com/watch?v=qQ9Wu1IxsYw"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Public dataset dashboard",
+          "description": "Clean a public dataset, analyze it, and share a dashboard with insights.",
+          "demonstrates": ["data-sql", "data-python", "data-viz"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Build automated pipelines that load and transform data.",
+        "skills": [
+          {
+            "id": "etl-pipelines",
+            "name": "ETL & ELT Pipelines",
+            "description": "Move data between systems reliably.",
+            "outcomes": ["Extract data from APIs and files", "Load data into a warehouse", "Make jobs safe to rerun"],
+            "estimatedHours": 24,
+            "prerequisites": ["data-python", "data-sql"],
+            "resources": [{"label": "Data Engineering Zoomcamp", "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp"}, {"label": "docs.getdbt.com: ETL & ELT Pipelines", "url": "https://docs.getdbt.com/docs/introduction"}, {"label": "YouTube: IBM Technology – ETL vs ELT: Powering Data Pipelines for AI & Analytics (6:51)", "url": "https://www.youtube.com/watch?v=KIv2Na2-u24"}, {"label": "YouTube: Alex The Analyst – Learn ETL Pipelines in Databricks in Under 1 Hour | Data Engineering in Databricks (1:04:56)", "url": "https://www.youtube.com/watch?v=Vht4hoRHEek"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "data-warehousing",
+            "name": "Data Warehousing & Modeling",
+            "description": "Organize data for analysis using dimensional modeling.",
+            "outcomes": ["Design fact and dimension tables", "Transform data with dbt or SQL models", "Document data definitions"],
+            "estimatedHours": 22,
+            "prerequisites": ["data-sql"],
+            "resources": [{"label": "dbt: Introduction", "url": "https://docs.getdbt.com/docs/introduction"}, {"label": "Google Cloud Documentation: Introduction to optimizing query performance  -  BigQuery", "url": "https://cloud.google.com/bigquery/docs/best-practices-performance-overview"}, {"label": "YouTube: IBM Technology – What is a Data Warehouse? (8:21)", "url": "https://www.youtube.com/watch?v=k4tK2ttdSDg"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "workflow-orchestration",
+            "name": "Workflow Orchestration",
+            "description": "Schedule and monitor multi-step pipelines.",
+            "outcomes": ["Define task dependencies", "Handle retries and failures", "Monitor pipeline runs"],
+            "estimatedHours": 16,
+            "prerequisites": ["etl-pipelines"],
+            "resources": [{"label": "Apache Airflow: Tutorial", "url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial/index.html"}, {"label": "Airflow 3.3.2 Documentation: Tutorials", "url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial/"}, {"label": "YouTube: Alex The Analyst – Job Orchestration in Databricks | Data Engineering in Databricks (12:49)", "url": "https://www.youtube.com/watch?v=p4pdx6iWotU"}, {"label": "YouTube: IBM Technology – Orchestrating Complex AI Workflows with AI Agents & LLMs (19:52)", "url": "https://www.youtube.com/watch?v=OFq_CvRCpA0"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Scheduled ETL pipeline",
+          "description": "Load data daily into a warehouse, transform it, and expose clean tables for analysis.",
+          "demonstrates": ["etl-pipelines", "data-warehousing", "workflow-orchestration"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Process data at scale and keep it trustworthy.",
+        "skills": [
+          {
+            "id": "big-data",
+            "name": "Distributed Processing",
+            "description": "Process large datasets across many machines.",
+            "outcomes": ["Explain distributed processing concepts", "Run jobs with Spark", "Tune partitions and shuffles"],
+            "estimatedHours": 26,
+            "prerequisites": ["etl-pipelines"],
+            "resources": [{"label": "Apache Spark: Quick Start", "url": "https://spark.apache.org/docs/latest/quick-start.html"}, {"label": "Apache Beam: Overview", "url": "https://beam.apache.org/get-started/beam-overview/"}, {"label": "YouTube: HashiCorp, an IBM Company – Explaining Distributed Systems Like I'm 5 (12:40)", "url": "https://www.youtube.com/watch?v=CESKgdNiKJw"}, {"label": "YouTube: Microsoft Developer – Distributed Processing (7:50)", "url": "https://www.youtube.com/watch?v=CoIhbHT2uKQ"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "streaming-data",
+            "name": "Streaming Data",
+            "description": "Handle events as they happen.",
+            "outcomes": ["Explain batch versus streaming", "Consume events from a message broker", "Process events with windows"],
+            "estimatedHours": 22,
+            "prerequisites": ["etl-pipelines"],
+            "resources": [{"label": "Apache Kafka: Introduction", "url": "https://kafka.apache.org/intro"}, {"label": "Confluent Developer: Learn Kafka", "url": "https://developer.confluent.io/learn-kafka/"}, {"label": "YouTube: IBM Technology – What Is Real-Time Data Streaming? AI & Machine Learning Applications (9:24)", "url": "https://www.youtube.com/watch?v=aBIxpJ1_EyY"}, {"label": "YouTube: Google Cloud Tech – How to process stream data on Apache Beam (11:22)", "url": "https://www.youtube.com/watch?v=oJ-LueBvOcM"}],
+            "priority": "optional",
+            "completed": false
+          },
+          {
+            "id": "data-quality",
+            "name": "Data Quality & Governance",
+            "description": "Make data tested, documented, and secure.",
+            "outcomes": ["Add automated data tests", "Track lineage and ownership", "Protect sensitive data"],
+            "estimatedHours": 14,
+            "prerequisites": ["data-warehousing"],
+            "resources": [{"label": "Great Expectations Docs", "url": "https://docs.greatexpectations.io/docs/"}, {"label": "Great Expectations: Introduction to GX Core", "url": "https://docs.greatexpectations.io/docs/core/introduction/"}, {"label": "YouTube: IBM Technology – Data Governance Explained in 5 Minutes (5:22)", "url": "https://www.youtube.com/watch?v=uPsUjKLHLAg"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Tested data platform",
+          "description": "Combine batch and quality checks into a documented pipeline with alerts on failures.",
+          "demonstrates": ["big-data", "data-quality"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "An end-to-end data product",
+      "description": "Ingest, transform, test, and serve data to a dashboard, with architecture and data-quality documentation."
+    }
+  },
+  "databases": {
+    "title": "Databases & Data Modeling",
+    "description": "Go deeper than basic SQL: design schemas, tune queries, and choose the right data store.",
+    "audience": "For developers who want to build fast, correct, and scalable data layers.",
+    "goal": "Design and operate a database that stays correct and fast as it grows.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Design clean relational schemas.",
+        "skills": [
+          {
+            "id": "sql-fundamentals",
+            "name": "SQL Fundamentals",
+            "description": "Create, read, update, and delete data with SQL.",
+            "outcomes": ["Write queries with joins and filters", "Modify data safely", "Use constraints"],
+            "estimatedHours": 20,
+            "prerequisites": [],
+            "resources": [{"label": "PostgreSQL: Tutorial", "url": "https://www.postgresql.org/docs/current/tutorial.html"}, {"label": "SQLBolt: Interactive SQL lessons", "url": "https://sqlbolt.com/"}, {"label": "YouTube: freeCodeCamp.org – SQL Tutorial - Full Database Course for Beginners (4:20:39)", "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY"}, {"label": "YouTube: Programming with Mosh – SQL Course for Beginners [Full Course] (3:10:19)", "url": "https://www.youtube.com/watch?v=7S_tz1z_5bA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "relational-modeling",
+            "name": "Relational Modeling & Normalization",
+            "description": "Turn requirements into well-structured tables.",
+            "outcomes": ["Draw an entity-relationship diagram", "Normalize to third normal form", "Choose keys and relationships"],
+            "estimatedHours": 16,
+            "prerequisites": ["sql-fundamentals"],
+            "resources": [{"label": "PostgreSQL: Data Definition", "url": "https://www.postgresql.org/docs/current/ddl.html"}, {"label": "The BC Open Textbook Project: Database Design - 2nd Edition", "url": "https://opentextbc.ca/dbdesign01/"}, {"label": "YouTube: freeCodeCamp.org – Relational Database Design – Full Course (5:54:44)", "url": "https://www.youtube.com/watch?v=26ls5lNiijk"}, {"label": "YouTube: Neso Academy – Introduction to Relational Data Model (6:53)", "url": "https://www.youtube.com/watch?v=Q45sr5p_NmQ"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "db-tools",
+            "name": "Database Tools & Migrations",
+            "description": "Manage schema changes safely.",
+            "outcomes": ["Use a client and an ORM", "Write and run migrations", "Seed and back up test data"],
+            "estimatedHours": 10,
+            "prerequisites": ["sql-fundamentals"],
+            "resources": [{"label": "PostgreSQL: Backup and Restore", "url": "https://www.postgresql.org/docs/current/backup.html"}, {"label": "docs.liquibase.com: Secure 5.1: What databases are supported by Liquibase?", "url": "https://docs.liquibase.com/start/tutorials/home.html"}, {"label": "YouTube: IBM Technology – Data Migration Examples (5:19)", "url": "https://www.youtube.com/watch?v=S7HTsuWz_2U"}, {"label": "YouTube: Theo - t3․gg – We Don't Need Migrations Anymore (6:21)", "url": "https://www.youtube.com/watch?v=jeWrbAiA1D0"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Normalized schema for an app",
+          "description": "Design a schema for a real app idea with sample data and queries.",
+          "demonstrates": ["sql-fundamentals", "relational-modeling", "db-tools"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Make queries fast and data consistent.",
+        "skills": [
+          {
+            "id": "indexing",
+            "name": "Indexing & Query Optimization",
+            "description": "Find slow queries and speed them up.",
+            "outcomes": ["Read query plans", "Choose appropriate indexes", "Explain index trade-offs"],
+            "estimatedHours": 20,
+            "prerequisites": ["relational-modeling"],
+            "resources": [{"label": "Use The Index, Luke", "url": "https://use-the-index-luke.com/"}, {"label": "postgresql.org: PostgreSQL: Documentation: 18: Chapter 11. Indexes", "url": "https://www.postgresql.org/docs/current/indexes.html"}, {"label": "YouTube: ByteByteGo – Secret To Optimizing SQL Queries - Understand The SQL Execution Order (5:57)", "url": "https://www.youtube.com/watch?v=BHwzDmr6d7s"}, {"label": "YouTube: IBM Technology – Optimize SQL Queries for AI, Performance, & Real-Time Insights (16:04)", "url": "https://www.youtube.com/watch?v=watwW4Hwyyw"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "transactions",
+            "name": "Transactions & Concurrency",
+            "description": "Keep data correct when many users act at once.",
+            "outcomes": ["Explain ACID properties", "Choose isolation levels", "Avoid deadlocks and lost updates"],
+            "estimatedHours": 16,
+            "prerequisites": ["sql-fundamentals"],
+            "resources": [{"label": "PostgreSQL: Transactions", "url": "https://www.postgresql.org/docs/current/tutorial-transactions.html"}, {"label": "postgresql.org: PostgreSQL: Documentation: 18: 13.2. Transaction Isolation", "url": "https://www.postgresql.org/docs/current/transaction-iso.html"}, {"label": "YouTube: Be A Better Dev – What is a Database Transaction? Be ACID compliant! (9:46)", "url": "https://www.youtube.com/watch?v=wHUOeXbZCYA"}, {"label": "YouTube: Theoretical Computer Science – Transactions - Schedules and Serializability | Database Tutorial 7b (33:42)", "url": "https://www.youtube.com/watch?v=WtlbLA0pfCI"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "nosql-models",
+            "name": "NoSQL Data Models",
+            "description": "Understand document, key-value, and graph stores.",
+            "outcomes": ["Model data for a document database", "Use a key-value cache", "Choose between SQL and NoSQL"],
+            "estimatedHours": 16,
+            "prerequisites": ["relational-modeling"],
+            "resources": [{"label": "MongoDB University", "url": "https://learn.mongodb.com/"}, {"label": "MongoDB Docs: Data Modeling in MongoDB - Database Manual", "url": "https://www.mongodb.com/docs/manual/data-modeling/"}, {"label": "YouTube: Simply Explained – How do NoSQL databases work? Simply Explained! (7:38)", "url": "https://www.youtube.com/watch?v=0buKQHokLK8"}, {"label": "YouTube: Neso Academy – Introduction to Data Models (16:24)", "url": "https://www.youtube.com/watch?v=OwQoj3GJfNY"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Query tuning case study",
+          "description": "Load a large dataset, find slow queries, and document measured improvements.",
+          "demonstrates": ["indexing", "transactions", "nosql-models"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Operate databases reliably at scale.",
+        "skills": [
+          {
+            "id": "replication-sharding",
+            "name": "Replication & Sharding",
+            "description": "Scale reads and writes across servers.",
+            "outcomes": ["Set up a replica", "Explain sharding strategies", "Understand consistency trade-offs"],
+            "estimatedHours": 20,
+            "prerequisites": ["transactions"],
+            "resources": [{"label": "Designing Data-Intensive Applications", "url": "https://dataintensive.net/"}, {"label": "postgresql.org: PostgreSQL: Documentation: 18: Chapter 26. High Availability, Load…", "url": "https://www.postgresql.org/docs/current/high-availability.html"}, {"label": "YouTube: KodeKloud – Database Sharding Explained for Beginners (with Hands-On Labs) (48:54)", "url": "https://www.youtube.com/watch?v=WpXmMxIgzdU"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "caching",
+            "name": "Caching Strategies",
+            "description": "Reduce load with caches while keeping data fresh.",
+            "outcomes": ["Use Redis as a cache", "Choose an invalidation strategy", "Prevent cache stampedes"],
+            "estimatedHours": 12,
+            "prerequisites": ["nosql-models"],
+            "resources": [{"label": "Redis Documentation", "url": "https://redis.io/docs/latest/"}, {"label": "Docs: Open Source", "url": "https://redis.io/docs/latest/get-started/"}, {"label": "YouTube: ByteByteGo – 7 Must-know Strategies to Scale Your Database (8:42)", "url": "https://www.youtube.com/watch?v=_1IKwnbscQU"}, {"label": "YouTube: Simply Explained – Caching - Simply Explained (4:55)", "url": "https://www.youtube.com/watch?v=6FyXURRVmR0"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "db-reliability",
+            "name": "Backup, Recovery & Security",
+            "description": "Protect data from loss and misuse.",
+            "outcomes": ["Plan backups and point-in-time recovery", "Apply least-privilege roles", "Test a restore"],
+            "estimatedHours": 12,
+            "prerequisites": ["db-tools"],
+            "resources": [{"label": "PostgreSQL: Backup and Restore", "url": "https://www.postgresql.org/docs/current/backup.html"}, {"label": "PostgreSQL: SQL dump backup", "url": "https://www.postgresql.org/docs/current/backup-dump.html"}, {"label": "YouTube: IBM Technology – Disaster Recovery vs. Backup: What's the difference? (9:32)", "url": "https://www.youtube.com/watch?v=07EHsPuKXc0"}, {"label": "YouTube: Professor Messer – Backups - CompTIA Security+ SY0-701 - 3.4 (12:16)", "url": "https://www.youtube.com/watch?v=8mGSwRScqIM"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Resilient data layer",
+          "description": "Add replication, caching, and a tested recovery plan to an application database.",
+          "demonstrates": ["replication-sharding", "caching", "db-reliability"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A documented, high-performance data layer",
+      "description": "Present the schema, indexing choices, benchmarks, and recovery plan for a realistic application."
+    }
+  },
+  "security": {
+    "title": "Cybersecurity",
+    "description": "Learn how systems are attacked and defended, and how to build secure software.",
+    "audience": "For learners who enjoy puzzles and want to protect applications, networks, and data.",
+    "goal": "Find, fix, and prevent common vulnerabilities.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Understand core security concepts and common threats.",
+        "skills": [
+          {
+            "id": "security-fundamentals",
+            "name": "Security Fundamentals",
+            "description": "Learn the CIA triad, risk, and the attacker mindset.",
+            "outcomes": ["Explain confidentiality, integrity, and availability", "Describe common attack types", "Practice good security hygiene"],
+            "estimatedHours": 12,
+            "prerequisites": [],
+            "resources": [{"label": "picoCTF", "url": "https://picoctf.org/"}, {"label": "owasp.org: Security Fundamentals", "url": "https://owasp.org/www-project-top-ten/"}, {"label": "YouTube: IBM Technology – Cybersecurity Architecture: Five Principles to Follow (and One to Avoid) (17:34)", "url": "https://www.youtube.com/watch?v=jq_LZ1RFPfU"}, {"label": "YouTube: freeCodeCamp.org and CS50 – Harvard CS50’s Intro to Cybersecurity – Full University Course (7:44:27)", "url": "https://www.youtube.com/watch?v=9HOpanT0GRs"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "security-networking",
+            "name": "Networking & Protocol Security",
+            "description": "See how network traffic works and how it is protected.",
+            "outcomes": ["Explain TCP/IP, DNS, and TLS", "Capture and read traffic", "Describe firewalls and segmentation"],
+            "estimatedHours": 20,
+            "prerequisites": [],
+            "resources": [{"label": "Wireshark: User Guide", "url": "https://www.wireshark.org/docs/wsug_html_chunked/"}, {"label": "cloudflare.com: Networking & Protocol Security", "url": "https://www.cloudflare.com/learning/ssl/transport-layer-security-tls/"}, {"label": "YouTube: IBM Technology – Cybersecurity Architecture: Networks (27:31)", "url": "https://www.youtube.com/watch?v=sesacY7Xz3c"}, {"label": "YouTube: CyberFlow – The FUN Way to Learn Networking (8:02)", "url": "https://www.youtube.com/watch?v=saSPsB-Afuw"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "secure-linux",
+            "name": "Linux & Access Control",
+            "description": "Harden systems with users, permissions, and logs.",
+            "outcomes": ["Manage users and permissions", "Read system and authentication logs", "Apply the principle of least privilege"],
+            "estimatedHours": 14,
+            "prerequisites": [],
+            "resources": [{"label": "The Linux Command Line", "url": "https://linuxcommand.org/tlcl.php"}, {"label": "Ubuntu: Ubuntu Security", "url": "https://ubuntu.com/security"}, {"label": "YouTube: Professor Messer – Access Controls - CompTIA Security+ SY0-701 - 4.6 (7:49)", "url": "https://www.youtube.com/watch?v=9ANHcZwJfdQ"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Home lab hardening report",
+          "description": "Secure a virtual machine and document the risks you found and fixed.",
+          "demonstrates": ["security-fundamentals", "security-networking", "secure-linux"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Find and fix vulnerabilities in web applications.",
+        "skills": [
+          {
+            "id": "web-security",
+            "name": "Web Application Security",
+            "description": "Learn the OWASP Top 10 and how to defend against them.",
+            "outcomes": ["Explain injection, XSS, and CSRF", "Exploit and fix them in a safe lab", "Apply secure defaults"],
+            "estimatedHours": 28,
+            "prerequisites": ["security-fundamentals"],
+            "resources": [{"label": "OWASP Top 10", "url": "https://owasp.org/www-project-top-ten/"}, {"label": "OWASP Cheat Sheet Series: Introduction", "url": "https://cheatsheetseries.owasp.org/"}, {"label": "YouTube: IBM Technology – Cybersecurity Architecture: Application Security (16:36)", "url": "https://www.youtube.com/watch?v=nthEXs12nFE"}, {"label": "YouTube: CyberFlow – The Fun Way to Learn Web Security (8:10)", "url": "https://www.youtube.com/watch?v=s9_k43LUVhM"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "applied-crypto",
+            "name": "Applied Cryptography",
+            "description": "Use cryptography correctly instead of inventing it.",
+            "outcomes": ["Distinguish hashing, encryption, and signatures", "Store passwords safely", "Use TLS and key management properly"],
+            "estimatedHours": 20,
+            "prerequisites": ["security-fundamentals"],
+            "resources": [{"label": "Cryptopals Crypto Challenges", "url": "https://cryptopals.com/"}, {"label": "CSRC: Cryptographic Standards and Guidelines", "url": "https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines"}, {"label": "YouTube: CrashCourse – Cryptography: Crash Course Computer Science #33 (12:33)", "url": "https://www.youtube.com/watch?v=jhXCTbFnK8o"}, {"label": "YouTube: freeCodeCamp.org – Cryptography for Beginners - Full Python Course (SHA-256, AES, RSA, Passwords) (49:53)", "url": "https://www.youtube.com/watch?v=kb_scuDUHls"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "threat-modeling",
+            "name": "Threat Modeling",
+            "description": "Find design-level risks before code is written.",
+            "outcomes": ["Draw data flow diagrams", "Identify threats with STRIDE", "Prioritize mitigations"],
+            "estimatedHours": 12,
+            "prerequisites": ["security-fundamentals"],
+            "resources": [{"label": "OWASP: Threat Modeling", "url": "https://owasp.org/www-community/Threat_Modeling"}, {"label": "OWASP Cheat Sheet Series: Threat Modeling", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html"}, {"label": "YouTube: MIT OpenCourseWare – 1. Introduction, Threat Models (1:17:13)", "url": "https://www.youtube.com/watch?v=GqmQg-cszw4"}, {"label": "YouTube: AWS Events – AWS re:Invent 2025 - Threat-Modeling-As-Code - Transforming Your Threat… (53:59)", "url": "https://www.youtube.com/watch?v=F5GU_d6Gfuc"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Vulnerable app write-up",
+          "description": "Find vulnerabilities in a practice app, then patch them and explain the fixes.",
+          "demonstrates": ["web-security", "applied-crypto", "threat-modeling"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Detect, respond to, and prevent attacks across systems.",
+        "skills": [
+          {
+            "id": "pentesting",
+            "name": "Penetration Testing & Ethical Hacking",
+            "description": "Test systems with permission and report findings professionally.",
+            "outcomes": ["Plan an authorized test", "Use common tools responsibly", "Write a clear findings report"],
+            "estimatedHours": 30,
+            "prerequisites": ["web-security", "security-networking"],
+            "resources": [{"label": "PortSwigger Web Security Academy", "url": "https://portswigger.net/web-security"}, {"label": "picoctf.org: picoCTF.org is now CyLab Security Academy", "url": "https://picoctf.org/"}, {"label": "YouTube: freeCodeCamp.org – Hands-On Cybersecurity and Ethical Hacking – Full Course (3:35:45)", "url": "https://www.youtube.com/watch?v=ug8W0sFiVJo"}, {"label": "YouTube: CyberFlow – The Best Way to Learn Python (For Hacking) (8:06)", "url": "https://www.youtube.com/watch?v=Fxh9X3-hO4Y"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "incident-response",
+            "name": "Monitoring & Incident Response",
+            "description": "Detect suspicious activity and respond methodically.",
+            "outcomes": ["Collect and analyze logs", "Follow an incident response process", "Write a postmortem"],
+            "estimatedHours": 20,
+            "prerequisites": ["secure-linux"],
+            "resources": [{"label": "NIST SP 800-61: Incident Response", "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final"}, {"label": "cisa.gov: Monitoring & Incident Response", "url": "https://www.cisa.gov/resources-tools/resources/incident-response-recommendations-and-considerations-cybersecurity-risk-management"}, {"label": "YouTube: Professor Messer – Incident Response - CompTIA Security+ SY0-701 - 4.8 (9:14)", "url": "https://www.youtube.com/watch?v=X2UiMLxRdhE"}, {"label": "YouTube: Mike Chapple – CertMike Explains Incident Response Process (11:54)", "url": "https://www.youtube.com/watch?v=-uwENcQzXj8"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "devsecops",
+            "name": "Secure SDLC & DevSecOps",
+            "description": "Build security checks into the development pipeline.",
+            "outcomes": ["Add dependency and secret scanning", "Run static analysis in CI", "Manage vulnerabilities over time"],
+            "estimatedHours": 16,
+            "prerequisites": ["web-security"],
+            "resources": [{"label": "OWASP DevSecOps Guideline", "url": "https://owasp.org/www-project-devsecops-guideline/"}, {"label": "CSRC: Secure Software Development Framework", "url": "https://csrc.nist.gov/Projects/ssdf"}, {"label": "YouTube: TechWorld with Nana – What is DevSecOps? DevSecOps explained in 8 Mins (8:20)", "url": "https://www.youtube.com/watch?v=nrhxNNH5lt0"}, {"label": "YouTube: freeCodeCamp.org – DevSecOps Course for Beginners – API Security (2:02:47)", "url": "https://www.youtube.com/watch?v=JfiWi8RjN-8"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Security assessment portfolio piece",
+          "description": "Assess a lab environment end to end and deliver a professional report with remediation steps.",
+          "demonstrates": ["pentesting", "incident-response", "devsecops"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A full security assessment",
+      "description": "Deliver a threat model, test results, fixes, and a monitoring plan for a realistic application."
+    }
+  },
+  "embedded": {
+    "title": "Embedded Systems & IoT",
+    "description": "Program microcontrollers and connected devices that sense and act on the physical world.",
+    "audience": "For makers and engineers who want software to control real hardware.",
+    "goal": "Build a reliable connected device from circuit to cloud.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Make hardware respond to code.",
+        "skills": [
+          {
+            "id": "electronics-basics",
+            "name": "Electronics Basics",
+            "description": "Learn voltage, current, resistors, and how to read a circuit.",
+            "outcomes": ["Build circuits on a breadboard", "Use a multimeter", "Read simple schematics"],
+            "estimatedHours": 16,
+            "prerequisites": [],
+            "resources": [{"label": "Arduino: Learn", "url": "https://docs.arduino.cc/learn/"}, {"label": "SparkFun Learn: Learn at SparkFun Electronics", "url": "https://learn.sparkfun.com/"}, {"label": "YouTube: freeCodeCamp.org – Arduino Course for Beginners - Open-Source Electronics Platform (4:04:22)", "url": "https://www.youtube.com/watch?v=zJ-LqeX_fLU"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "microcontroller-programming",
+            "name": "Microcontroller Programming",
+            "description": "Write code that reads inputs and controls outputs.",
+            "outcomes": ["Blink LEDs and read buttons", "Use digital and analog pins", "Debug with serial output"],
+            "estimatedHours": 20,
+            "prerequisites": ["electronics-basics"],
+            "resources": [{"label": "MicroPython Documentation", "url": "https://docs.micropython.org/en/latest/"}, {"label": "docs.arduino.cc: Microcontroller Programming", "url": "https://docs.arduino.cc/learn/"}, {"label": "YouTube: Neso Academy – Introduction to Microcontrollers (6:16)", "url": "https://www.youtube.com/watch?v=xStSCpVTWYQ"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "sensors-actuators",
+            "name": "Sensors & Actuators",
+            "description": "Measure the world and move things.",
+            "outcomes": ["Read temperature, light, or motion sensors", "Drive motors and displays", "Calibrate sensor readings"],
+            "estimatedHours": 14,
+            "prerequisites": ["microcontroller-programming"],
+            "resources": [{"label": "Raspberry Pi Documentation", "url": "https://www.raspberrypi.com/documentation/"}, {"label": "learn.adafruit.com: Adafruit Learning System", "url": "https://learn.adafruit.com/"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Sensor display gadget",
+          "description": "Build a device that reads a sensor and shows the result on a display.",
+          "demonstrates": ["electronics-basics", "microcontroller-programming", "sensors-actuators"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Connect devices and communicate with other hardware.",
+        "skills": [
+          {
+            "id": "communication-protocols",
+            "name": "Hardware Communication Protocols",
+            "description": "Talk to chips and modules over common buses.",
+            "outcomes": ["Use I2C, SPI, and UART", "Read a datasheet", "Debug with a logic analyzer or scope"],
+            "estimatedHours": 20,
+            "prerequisites": ["microcontroller-programming"],
+            "resources": [{"label": "Arduino: Learn", "url": "https://docs.arduino.cc/learn/"}, {"label": "docs.arduino.cc: Hardware Communication Protocols", "url": "https://docs.arduino.cc/learn/communication/wire/"}, {"label": "YouTube: LiveOverflow – What is a Protocol? (Deepdive) (18:14)", "url": "https://www.youtube.com/watch?v=d-zn-wv4Di8"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "iot-networking",
+            "name": "IoT Networking & MQTT",
+            "description": "Send device data over Wi-Fi and lightweight messaging.",
+            "outcomes": ["Connect a device to Wi-Fi", "Publish and subscribe with MQTT", "Handle disconnects"],
+            "estimatedHours": 18,
+            "prerequisites": ["sensors-actuators"],
+            "resources": [{"label": "MQTT: Getting Started", "url": "https://mqtt.org/getting-started/"}, {"label": "OASIS: MQTT Version 5.0 specification", "url": "https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "embedded-c",
+            "name": "Embedded C/C++",
+            "description": "Write efficient code for limited memory and CPU.",
+            "outcomes": ["Manage memory carefully", "Use interrupts and timers", "Avoid blocking code"],
+            "estimatedHours": 26,
+            "prerequisites": ["microcontroller-programming"],
+            "resources": [{"label": "Beej's Guide to C", "url": "https://beej.us/guide/bgc/"}, {"label": "en.cppreference.com: Embedded C/C++", "url": "https://en.cppreference.com/w/c/language"}, {"label": "YouTube: Jacob Sorber – What Actually is Embedded C/C++? Is it different from C/C++? (11:05)", "url": "https://www.youtube.com/watch?v=KQBBWvY-s0o"}, {"label": "YouTube: The Linux Foundation – C++ for Embedded Development (52:28)", "url": "https://www.youtube.com/watch?v=wLq-5lBc7x4"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Connected sensor node",
+          "description": "Send sensor readings from a device to a dashboard using MQTT.",
+          "demonstrates": ["communication-protocols", "iot-networking", "embedded-c"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Build robust, secure, and power-efficient products.",
+        "skills": [
+          {
+            "id": "rtos",
+            "name": "Real-Time Operating Systems",
+            "description": "Run multiple tasks with predictable timing.",
+            "outcomes": ["Create and schedule tasks", "Use queues and semaphores", "Meet timing deadlines"],
+            "estimatedHours": 24,
+            "prerequisites": ["embedded-c"],
+            "resources": [{"label": "FreeRTOS Documentation", "url": "https://www.freertos.org/Documentation/00-Overview"}, {"label": "freertos.org: Real-Time Operating Systems", "url": "https://www.freertos.org/Documentation/RTOS_book.html"}, {"label": "YouTube: DigiKey – Introduction to RTOS Part 1 - What is a Real-Time Operating System (RTOS)? |… (11:34)", "url": "https://www.youtube.com/watch?v=F321087yYy4"}, {"label": "YouTube: Quantum Leaps, LLC – #22 RTOS Part-1: What is a Real-Time Operating System? (23:26)", "url": "https://www.youtube.com/watch?v=TEq3-p0GWGI"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "low-power-design",
+            "name": "Power Management",
+            "description": "Make battery-powered devices last.",
+            "outcomes": ["Use sleep modes", "Measure power consumption", "Budget energy use"],
+            "estimatedHours": 14,
+            "prerequisites": ["embedded-c"],
+            "resources": [{"label": "Raspberry Pi Pico Documentation", "url": "https://www.raspberrypi.com/documentation/microcontrollers/"}, {"label": "developer.nordicsemi.com: Power Management", "url": "https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/ug_power.html"}, {"label": "YouTube: Jacob Sorber – How to Get Started Learning Embedded Systems (11:08)", "url": "https://www.youtube.com/watch?v=aC37UE7edP0"}],
+            "priority": "optional",
+            "completed": false
+          },
+          {
+            "id": "iot-security",
+            "name": "Device Security & Updates",
+            "description": "Secure devices and update them in the field.",
+            "outcomes": ["Protect credentials on devices", "Use signed over-the-air updates", "Plan for vulnerable firmware"],
+            "estimatedHours": 14,
+            "prerequisites": ["iot-networking"],
+            "resources": [{"label": "OWASP IoT Project", "url": "https://owasp.org/www-project-internet-of-things/"}, {"label": "NIST: NIST Cybersecurity for IoT Program", "url": "https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program"}, {"label": "YouTube: IBM Technology – Securing Your IoT Devices (13:55)", "url": "https://www.youtube.com/watch?v=7zWVxrjjIpE"}, {"label": "YouTube: The Linux Foundation – Device Security in IoT - Ashutosh Singh, Arm Ltd (42:49)", "url": "https://www.youtube.com/watch?v=9fFSlpD7NjQ"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Reliable field device",
+          "description": "Build a battery-powered device with scheduled tasks, secure connectivity, and update support.",
+          "demonstrates": ["rtos", "low-power-design", "iot-security"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A connected hardware product",
+      "description": "Deliver a working device with firmware, a cloud dashboard, a wiring diagram, and a build guide."
     }
   }
 }

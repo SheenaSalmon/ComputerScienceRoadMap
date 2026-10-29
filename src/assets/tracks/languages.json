@@ -1,0 +1,1586 @@
+{
+  "lang-c": {
+    "title": "C",
+    "description": "Learn C from procedural fundamentals through memory, systems interfaces, and robust low-level software.",
+    "audience": "For learners interested in how software interacts with memory, operating systems, and hardware.",
+    "goal": "Build a tested command-line or systems program with clear ownership of memory and resources.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Write small C programs and understand how values are represented and used.",
+        "skills": [
+          {
+            "id": "lang-c-syntax",
+            "name": "Syntax, Types, and Control Flow",
+            "description": "Write C programs using primitive types, expressions, functions, and control flow.",
+            "outcomes": ["Declare variables with appropriate types", "Use branches and loops", "Compile and run a multi-function program"],
+            "estimatedHours": 16,
+            "prerequisites": [],
+            "resources": [{"label": "Beej's Guide to C Programming", "url": "https://beej.us/guide/bgc/"}, {"label": "YouTube: CyberFlow – How to Learn C Language (For Hackers) (4:55)", "url": "https://www.youtube.com/watch?v=jNk8TYpyDrA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-c-arrays-strings",
+            "name": "Arrays, Strings, and Pointers",
+            "description": "Work with arrays, null-terminated strings, addresses, and pointer arithmetic safely.",
+            "outcomes": ["Pass arrays and strings to functions", "Explain the relationship between arrays and pointers", "Avoid common bounds and lifetime errors"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-c-syntax"],
+            "resources": [{"label": "cppreference: C language", "url": "https://en.cppreference.com/w/c/language"}, {"label": "YouTube: Bro Code – C arrays (4:33)", "url": "https://www.youtube.com/watch?v=eE9MnoS0lc0"}, {"label": "YouTube: freeCodeCamp.org – Pointers in C / C++ [Full Course] (3:47:23)", "url": "https://www.youtube.com/watch?v=zuegQmMdy8M"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-c-functions-build",
+            "name": "Functions, Headers, and Compilation",
+            "description": "Organize C code into translation units and understand the compile and link process.",
+            "outcomes": ["Declare functions in headers", "Compile and link multiple source files", "Use compiler warnings to find mistakes"],
+            "estimatedHours": 12,
+            "prerequisites": ["lang-c-syntax"],
+            "resources": [{"label": "GCC: Compiling C programs", "url": "https://gcc.gnu.org/onlinedocs/gcc/Invoking-GCC.html"}, {"label": "YouTube: Jacob Sorber – Compiling C programs with Multiple Files (6:09)", "url": "https://www.youtube.com/watch?v=2YfM-HxQd_8"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Text statistics utility",
+          "description": "Build a command-line program that reads text and reports counts using functions, arrays, and strings.",
+          "demonstrates": ["lang-c-syntax", "lang-c-arrays-strings", "lang-c-functions-build"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Model data, manage resources, and debug C programs.",
+        "skills": [
+          {
+            "id": "lang-c-structs-files",
+            "name": "Structures and File I/O",
+            "description": "Represent related data with structs and read and write files using standard I/O.",
+            "outcomes": ["Define and pass structs", "Read files with error checks", "Choose text or binary formats for a small tool"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-c-arrays-strings"],
+            "resources": [{"label": "GNU C Library: Input and Output", "url": "https://www.gnu.org/software/libc/manual/html_node/I_002fO-Overview.html"}, {"label": "YouTube: Bro Code – C reading files (4:33)", "url": "https://www.youtube.com/watch?v=Hzg3kCHJcxI"}, {"label": "YouTube: freeCodeCamp.org – Data Structures - Full Course Using C and C++ (9:46:11)", "url": "https://www.youtube.com/watch?v=B31LgI4Y4DQ"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-c-memory",
+            "name": "Dynamic Memory Management",
+            "description": "Allocate and release memory deliberately and establish clear ownership conventions.",
+            "outcomes": ["Use malloc, calloc, realloc, and free correctly", "Handle allocation failures", "Prevent leaks, double frees, and use-after-free errors"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-c-arrays-strings", "lang-c-structs-files"],
+            "resources": [{"label": "GNU C Library: Memory Allocation", "url": "https://www.gnu.org/software/libc/manual/html_node/Memory-Allocation.html"}, {"label": "YouTube: Low Level – i wrote my own memory allocator in C to prove a point (5:23)", "url": "https://www.youtube.com/watch?v=CulF4YQt6zA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-c-debug-testing",
+            "name": "Debugging and Testing",
+            "description": "Use compiler diagnostics, a debugger, and focused tests to investigate C defects.",
+            "outcomes": ["Debug a program with breakpoints and backtraces", "Test normal and error paths", "Use sanitizers to detect memory errors"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-c-functions-build", "lang-c-memory"],
+            "resources": [{"label": "GNU GDB: Documentation", "url": "https://www.gnu.org/software/gdb/documentation/"}, {"label": "YouTube: Jacob Sorber – Debugging Embedded Systems With GDB? (13:51)", "url": "https://www.youtube.com/watch?v=m4agpY_w2y8"}, {"label": "YouTube: Khan Academy – Unit testing | Intro to CS - Python | Khan Academy (4:45)", "url": "https://www.youtube.com/watch?v=3OmfTIf-SOU"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "In-memory record manager",
+          "description": "Create a file-backed record manager with dynamically allocated records, validation, and tests.",
+          "demonstrates": ["lang-c-structs-files", "lang-c-memory", "lang-c-debug-testing"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Apply C to systems programming with attention to portability and reliability.",
+        "skills": [
+          {
+            "id": "lang-c-data-structures",
+            "name": "Data Structures and Algorithms in C",
+            "description": "Implement reusable data structures and analyze their memory and runtime costs.",
+            "outcomes": ["Implement a linked structure or hash table", "Define clear interfaces and invariants", "Test boundary cases and allocation failures"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-c-memory", "lang-c-debug-testing"],
+            "resources": [{"label": "The Open Data Structures textbook", "url": "https://opendatastructures.org/"}, {"label": "YouTube: freeCodeCamp.org – Data Structures - Full Course Using C and C++ (9:46:11)", "url": "https://www.youtube.com/watch?v=B31LgI4Y4DQ"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-c-systems-apis",
+            "name": "Processes and Operating System APIs",
+            "description": "Use operating-system interfaces for processes, files, and basic inter-process communication.",
+            "outcomes": ["Use system calls and inspect their error results", "Understand process creation and exit status", "Distinguish portable C from platform-specific APIs"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-c-functions-build", "lang-c-debug-testing"],
+            "resources": [{"label": "Linux man-pages project", "url": "https://man7.org/linux/man-pages/"}, {"label": "YouTube: Neso Academy – fork() and exec() System Calls (20:34)", "url": "https://www.youtube.com/watch?v=IFEFVXvjiHY"}, {"label": "YouTube: Jacob Sorber – Understanding the Pipe System Call (popen3 example in C) (20:24)", "url": "https://www.youtube.com/watch?v=8AXEHrQTf3I"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-c-portability-performance",
+            "name": "Portability and Performance",
+            "description": "Make informed choices about the C standard, compiler options, and performance measurement.",
+            "outcomes": ["Enable strict compiler warnings", "Profile before optimizing", "Document platform assumptions and undefined-behavior risks"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-c-data-structures", "lang-c-systems-apis"],
+            "resources": [{"label": "SEI CERT C Coding Standard", "url": "https://wiki.sei.cmu.edu/confluence/display/c"}, {"label": "YouTube: Computerphile – Optimising Code - Computerphile (19:43)", "url": "https://www.youtube.com/watch?v=K62EMzueWwA"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Portable systems utility",
+          "description": "Build a tested systems tool that processes files or processes, documents platform assumptions, and is checked with sanitizers.",
+          "demonstrates": ["lang-c-data-structures", "lang-c-systems-apis", "lang-c-portability-performance"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A reliable C systems project",
+      "description": "Ship a portable, documented C program with tests, clean compiler diagnostics, and deliberate memory management."
+    }
+  },
+  "lang-cpp": {
+    "title": "C++",
+    "description": "Progress from modern C++ fundamentals to generic, concurrent, and performance-conscious applications.",
+    "audience": "For learners building games, desktop software, high-performance services, or systems tools.",
+    "goal": "Deliver a tested C++ application with idiomatic resource management and a maintainable build.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Write modern C++ programs using functions, types, and standard library collections.",
+        "skills": [
+          {
+            "id": "lang-cpp-fundamentals",
+            "name": "Modern C++ Fundamentals",
+            "description": "Use variables, expressions, control flow, functions, and basic input/output.",
+            "outcomes": ["Write and compile a small C++ program", "Use const and references appropriately", "Explain the role of the compiler and linker"],
+            "estimatedHours": 16,
+            "prerequisites": [],
+            "resources": [{"label": "LearnCpp: Introduction to C++", "url": "https://www.learncpp.com/"}, {"label": "YouTube: Programming with Mosh – C++ Tutorial for Beginners - Learn C++ in 1 Hour (1:22:56)", "url": "https://www.youtube.com/watch?v=ZzaPdXTrSb8"}, {"label": "YouTube: Bro Code – C++ Full Course for free ⚡ (6:00:00)", "url": "https://www.youtube.com/watch?v=-TkoO8Z07hI"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-cpp-types-classes",
+            "name": "Types, Classes, and Encapsulation",
+            "description": "Define classes that protect invariants and use constructors, access control, and enums.",
+            "outcomes": ["Design a small class with a clear interface", "Use constructors and member functions", "Prefer scoped enums and const-correct interfaces"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-cpp-fundamentals"],
+            "resources": [{"label": "cppreference: Classes", "url": "https://en.cppreference.com/w/cpp/language/classes"}, {"label": "YouTube: Bro Code – C++ CLASSES & OBJECTS explained easy (10:54)", "url": "https://www.youtube.com/watch?v=_8H2n0nDfd4"}, {"label": "YouTube: Quantum Leaps, LLC – #29 OOP Part-1: Encapsulation (classes) in C and C++ (31:29)", "url": "https://www.youtube.com/watch?v=dSLodtKuung"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-cpp-library",
+            "name": "Strings, Containers, and Algorithms",
+            "description": "Use the standard library instead of rebuilding common collection and algorithm functionality.",
+            "outcomes": ["Choose standard containers for common tasks", "Use iterators and algorithms", "Work with strings and optional values"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-cpp-fundamentals", "lang-cpp-types-classes"],
+            "resources": [{"label": "cppreference: C++ Standard Library", "url": "https://en.cppreference.com/w/cpp/standard_library"}, {"label": "YouTube: Bro Code – Useful string methods in C++ (6:35)", "url": "https://www.youtube.com/watch?v=KTr0SZTW9nI"}, {"label": "YouTube: Tech With Tim – Learn C++ With Me #13 - Strings (5:56)", "url": "https://www.youtube.com/watch?v=QtP0PdLEvFk"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Command-line collection manager",
+          "description": "Build a small program that stores, searches, and summarizes records using standard containers and algorithms.",
+          "demonstrates": ["lang-cpp-fundamentals", "lang-cpp-types-classes", "lang-cpp-library"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Manage resources safely and write reusable, well-tested C++ components.",
+        "skills": [
+          {
+            "id": "lang-cpp-raii",
+            "name": "RAII, Ownership, and Move Semantics",
+            "description": "Use object lifetimes and standard smart pointers to manage resources safely.",
+            "outcomes": ["Apply RAII to file and memory resources", "Choose unique_ptr or shared_ptr deliberately", "Understand copy and move operations"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-cpp-types-classes"],
+            "resources": [{"label": "C++ Core Guidelines: Resource management", "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#S-resource"}, {"label": "YouTube: The Cherno – Move Semantics in C++ (13:10)", "url": "https://www.youtube.com/watch?v=ehMg6zvXuMY"}, {"label": "YouTube: Fred Overflow – C++ Move Semantics: Resource ownership transfer between objects (move… (16:26)", "url": "https://www.youtube.com/watch?v=VIWjZmPAvDg"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-cpp-templates",
+            "name": "Templates and Generic Programming",
+            "description": "Write reusable components with templates, type deduction, and standard concepts.",
+            "outcomes": ["Create function and class templates", "Use type deduction effectively", "Constrain generic code with concepts"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-cpp-library", "lang-cpp-raii"],
+            "resources": [{"label": "cppreference: Templates", "url": "https://en.cppreference.com/w/cpp/language/templates"}, {"label": "YouTube: The Cherno – Templates in C++ (17:58)", "url": "https://www.youtube.com/watch?v=I-hZkUa9mIs"}, {"label": "YouTube: Google TechTalks – Concepts Extending C++ Templates For Generic Programming (58:40)", "url": "https://www.youtube.com/watch?v=Ot4WdHAGSGo"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-cpp-testing-build",
+            "name": "Testing and Build Systems",
+            "description": "Structure multi-file projects and automate repeatable builds and tests.",
+            "outcomes": ["Organize a project into libraries and executables", "Configure a CMake build", "Write unit tests and run them in CI"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-cpp-library"],
+            "resources": [{"label": "CMake Tutorial", "url": "https://cmake.org/cmake/help/latest/guide/tutorial/index.html"}, {"label": "YouTube: JetBrains – C++ Unit Testing with Google Test Tutorial (14:59)", "url": "https://www.youtube.com/watch?v=16FI1-d2P4E"}, {"label": "YouTube: Google TechTalks – CMake/CPack/CTest/CDash Open Source Tools to Build Test and Deploy C++ Software (1:08:04)", "url": "https://www.youtube.com/watch?v=8Ut9o4OdSC0"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Reusable parsing library",
+          "description": "Create a tested C++ library with RAII-based resource handling, generic utilities, and a documented CMake build.",
+          "demonstrates": ["lang-cpp-raii", "lang-cpp-templates", "lang-cpp-testing-build"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Use concurrency and modern C++ design techniques in a reliable application.",
+        "skills": [
+          {
+            "id": "lang-cpp-concurrency",
+            "name": "Concurrency and Parallelism",
+            "description": "Coordinate threads and asynchronous tasks while preventing data races and deadlocks.",
+            "outcomes": ["Use threads, mutexes, and condition variables safely", "Understand futures and asynchronous tasks", "Identify shared-state hazards"],
+            "estimatedHours": 20,
+            "prerequisites": ["lang-cpp-raii", "lang-cpp-testing-build"],
+            "resources": [{"label": "cppreference: Concurrency support library", "url": "https://en.cppreference.com/w/cpp/thread"}, {"label": "YouTube: The Cherno – Threads in C++ (11:35)", "url": "https://www.youtube.com/watch?v=wXBcwHwIt_I"}, {"label": "YouTube: Low Level – how does a Mutex even work? (atoms in the computer??) (4:17)", "url": "https://www.youtube.com/watch?v=1tZhmTnk-vc"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-cpp-design",
+            "name": "API Design and Modern C++ Practices",
+            "description": "Design stable interfaces using value semantics, clear ownership, and appropriate abstractions.",
+            "outcomes": ["Apply the rule of zero", "Use standard library types at API boundaries", "Document invariants and compatibility expectations"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-cpp-templates", "lang-cpp-raii"],
+            "resources": [{"label": "C++ Core Guidelines", "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines"}, {"label": "YouTube: Programming with Mosh – C++ Tutorial for Beginners - Learn C++ in 1 Hour (1:22:56)", "url": "https://www.youtube.com/watch?v=ZzaPdXTrSb8"}, {"label": "YouTube: Bro Code – C++ Full Course for free ⚡ (6:00:00)", "url": "https://www.youtube.com/watch?v=-TkoO8Z07hI"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-cpp-performance",
+            "name": "Profiling and Performance",
+            "description": "Measure runtime and memory behavior before applying targeted optimizations.",
+            "outcomes": ["Profile a representative workload", "Reduce unnecessary allocations and copies", "Use benchmarks to guard performance changes"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-cpp-concurrency", "lang-cpp-testing-build"],
+            "resources": [{"label": "Google Benchmark: User Guide", "url": "https://github.com/google/benchmark/blob/main/docs/user_guide.md"}, {"label": "YouTube: The Cherno – BENCHMARKING in C++ (how to measure performance) (14:52)", "url": "https://www.youtube.com/watch?v=YG4jexlSAjc"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Concurrent data-processing application",
+          "description": "Deliver a benchmarked C++ application with a tested API, parallel processing, and documented performance trade-offs.",
+          "demonstrates": ["lang-cpp-concurrency", "lang-cpp-design", "lang-cpp-performance"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A modern C++ application",
+      "description": "Ship a tested, documented C++ application using the standard library, RAII, and a reproducible build."
+    }
+  },
+  "lang-csharp": {
+    "title": "C#",
+    "description": "Learn C# from language fundamentals through the .NET ecosystem, asynchronous code, and production application design.",
+    "audience": "For learners interested in web services, desktop apps, games, or cross-platform development on .NET.",
+    "goal": "Build, test, and publish a maintainable C# application using modern .NET.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Write C# programs using core language features and object-oriented types.",
+        "skills": [
+          {
+            "id": "lang-csharp-syntax",
+            "name": "Syntax, Types, and Control Flow",
+            "description": "Use C# expressions, built-in types, conditionals, loops, and top-level statements.",
+            "outcomes": ["Write and run a .NET console program", "Choose appropriate value and reference types", "Use control flow and pattern matching basics"],
+            "estimatedHours": 14,
+            "prerequisites": [],
+            "resources": [{"label": "Microsoft Learn: A tour of C#", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/"}, {"label": "YouTube: freeCodeCamp.org – C# Tutorial - Full Course for Beginners (4:31:09)", "url": "https://www.youtube.com/watch?v=GhQdlIFylQ8"}, {"label": "YouTube: Bro Code – C# variables ✖ (8:44)", "url": "https://www.youtube.com/watch?v=IxBMVztdlr4"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-csharp-methods-collections",
+            "name": "Methods, Collections, and Strings",
+            "description": "Organize programs with methods and use common collection and string APIs.",
+            "outcomes": ["Define methods with parameters and return values", "Use arrays, lists, and dictionaries", "Handle nullable values deliberately"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-csharp-syntax"],
+            "resources": [{"label": "Microsoft Learn: C# fundamentals", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/"}, {"label": "YouTube: Bro Code – C# string methods (6:52)", "url": "https://www.youtube.com/watch?v=BKYBiUAWZKM"}, {"label": "YouTube: Derek Banas – C# Tutorial 11 Collections (20:49)", "url": "https://www.youtube.com/watch?v=-vjQ3gW3Dd8"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-csharp-classes",
+            "name": "Classes, Records, and Interfaces",
+            "description": "Model application concepts with encapsulated types, records, and interfaces.",
+            "outcomes": ["Define classes and constructors", "Use properties and access modifiers", "Choose between classes, records, and structs"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-csharp-methods-collections"],
+            "resources": [{"label": "Microsoft Learn: Object-oriented programming", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/oop"}, {"label": "YouTube: Bro Code – C# interfaces (5:38)", "url": "https://www.youtube.com/watch?v=RuhGv81tpoU"}, {"label": "YouTube: Programming with Mosh – C# Interfaces Explained in Simple Terms | Mosh (5:04)", "url": "https://www.youtube.com/watch?v=aQ8YkJrAbzE"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Personal library console app",
+          "description": "Build a console app that records and searches a collection of books using well-defined C# types.",
+          "demonstrates": ["lang-csharp-syntax", "lang-csharp-methods-collections", "lang-csharp-classes"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Build modular applications with asynchronous I/O and automated tests.",
+        "skills": [
+          {
+            "id": "lang-csharp-linq-generics",
+            "name": "Generics, LINQ, and Collections",
+            "description": "Write reusable generic code and transform data with LINQ.",
+            "outcomes": ["Use generic collections and constraints", "Compose filtering and projection queries", "Choose deferred or immediate query execution intentionally"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-csharp-methods-collections", "lang-csharp-classes"],
+            "resources": [{"label": "Microsoft Learn: Query data with LINQ", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/linq/"}, {"label": "YouTube: Bro Code – C# generics ⁉ (5:33)", "url": "https://www.youtube.com/watch?v=aNTDJ9bnRU4"}, {"label": "YouTube: freeCodeCamp.org – Advanced C# – LINQ Tutorial (3:07:24)", "url": "https://www.youtube.com/watch?v=5l2qA3Pc83M"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-csharp-async",
+            "name": "Asynchronous Programming",
+            "description": "Use Task-based async programming for responsive applications and I/O-bound work.",
+            "outcomes": ["Use async and await", "Propagate cancellation and exceptions", "Avoid blocking asynchronous work"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-csharp-methods-collections"],
+            "resources": [{"label": "Microsoft Learn: Asynchronous programming with async and await", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/"}, {"label": "YouTube: Programming with Mosh – C# Tutorial For Beginners - Learn C# Basics in 1 Hour (1:10:32)", "url": "https://www.youtube.com/watch?v=gfkTfcpWqAY"}, {"label": "YouTube: freeCodeCamp.org – Learn C# Programming – Full Course with Mini-Projects (8:17:11)", "url": "https://www.youtube.com/watch?v=YrtFtdTTfv0"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-csharp-errors-testing",
+            "name": "Exceptions and Unit Testing",
+            "description": "Handle exceptional conditions and verify behavior with automated tests.",
+            "outcomes": ["Use exceptions for exceptional failures", "Write unit tests with a .NET test framework", "Test boundary and error cases"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-csharp-classes"],
+            "resources": [{"label": "Microsoft Learn: Unit testing C# with .NET", "url": "https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test"}, {"label": "YouTube: Programming with Mosh – Unit Testing C# Code - Tutorial for Beginners (44:56)", "url": "https://www.youtube.com/watch?v=HYrXogLj7vg"}, {"label": "YouTube: Bro Code – C# exception handling ⚠ (5:01)", "url": "https://www.youtube.com/watch?v=QqWfw_CFR6Q"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Async catalog service",
+          "description": "Create a tested application that loads catalog data asynchronously and supports filtering with LINQ.",
+          "demonstrates": ["lang-csharp-linq-generics", "lang-csharp-async", "lang-csharp-errors-testing"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Structure and operate robust .NET applications.",
+        "skills": [
+          {
+            "id": "lang-csharp-dotnet-architecture",
+            "name": ".NET Application Architecture",
+            "description": "Organize a larger application into clear components with dependency injection and configuration.",
+            "outcomes": ["Separate application concerns into projects or layers", "Use dependency injection and options", "Manage configuration without committing secrets"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-csharp-classes", "lang-csharp-errors-testing"],
+            "resources": [{"label": "Microsoft: .NET architecture guides", "url": "https://learn.microsoft.com/en-us/dotnet/architecture/"}, {"label": "YouTube: JetBrains – Clean Architecture With ASP.NET Core — Steve Smith (58:41)", "url": "https://www.youtube.com/watch?v=qOwB8PxOqC0"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-csharp-performance",
+            "name": "Performance and Diagnostics",
+            "description": "Inspect runtime behavior and improve performance based on measurements.",
+            "outcomes": ["Use .NET diagnostics tools", "Understand allocations and garbage collection", "Benchmark representative code paths"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-csharp-linq-generics", "lang-csharp-async"],
+            "resources": [{"label": "Microsoft Learn: .NET diagnostics", "url": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-csharp-publish",
+            "name": "Packaging and Deployment",
+            "description": "Publish a .NET application for its target runtime and automate validation.",
+            "outcomes": ["Choose framework-dependent or self-contained publishing", "Automate build and test checks", "Document setup and deployment steps"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-csharp-dotnet-architecture", "lang-csharp-errors-testing"],
+            "resources": [{"label": "Microsoft Learn: .NET application publishing", "url": "https://learn.microsoft.com/en-us/dotnet/core/deploying/"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Production-ready .NET application",
+          "description": "Publish a tested application with structured configuration, diagnostics, and documented deployment.",
+          "demonstrates": ["lang-csharp-dotnet-architecture", "lang-csharp-performance", "lang-csharp-publish"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A production-ready C# application",
+      "description": "Build and publish a maintainable .NET application with automated tests, asynchronous workflows, and operational documentation."
+    }
+  },
+  "lang-cobol": {
+    "title": "COBOL",
+    "description": "Learn COBOL fundamentals and progress to batch processing, data access, and integration with modern systems.",
+    "audience": "For learners exploring enterprise systems, financial software, and the long-lived applications that support them.",
+    "goal": "Build a tested COBOL batch application that processes records and produces a reliable report.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Read and write simple COBOL programs using its divisions and data declarations.",
+        "skills": [
+          {
+            "id": "lang-cobol-structure",
+            "name": "Program Structure and Syntax",
+            "description": "Understand COBOL source layout, divisions, paragraphs, and basic statements.",
+            "outcomes": ["Identify the roles of the four divisions", "Write and compile a simple program", "Read free-format and fixed-format source"],
+            "estimatedHours": 16,
+            "prerequisites": [],
+            "resources": [{"label": "GnuCOBOL Programmer's Guide", "url": "https://gnucobol.sourceforge.io/"}, {"label": "YouTube: freeCodeCamp.org – COBOL Course - Programming with VSCode (1:17:04)", "url": "https://www.youtube.com/watch?v=RdMAEdGvtLA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-cobol-data",
+            "name": "Data Division and Numeric Formats",
+            "description": "Define records and fields with level numbers, PIC clauses, and appropriate numeric formats.",
+            "outcomes": ["Declare elementary and group items", "Use numeric and alphanumeric picture clauses", "Explain how record layouts represent business data"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-cobol-structure"],
+            "resources": [{"label": "IBM COBOL: Data Division", "url": "https://www.ibm.com/docs/en/cobol-zos/6.4?topic=division-data"}, {"label": "YouTube: Derek Banas – COBOL Tutorial : Learn COBOL in One Video (2:13:59)", "url": "https://www.youtube.com/watch?v=TBs7HXI76yU"}, {"label": "YouTube: freeCodeCamp.org – COBOL Course - Programming with VSCode (1:17:04)", "url": "https://www.youtube.com/watch?v=RdMAEdGvtLA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-cobol-procedural",
+            "name": "Procedural Logic and Paragraphs",
+            "description": "Control program flow with conditions, loops, paragraphs, and structured sections.",
+            "outcomes": ["Use IF, EVALUATE, and PERFORM", "Organize logic into paragraphs", "Trace a program's control flow"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-cobol-structure", "lang-cobol-data"],
+            "resources": [{"label": "IBM COBOL: Procedure Division", "url": "https://www.ibm.com/docs/en/cobol-zos/6.4?topic=division-procedure"}, {"label": "YouTube: Derek Banas – COBOL Tutorial : Learn COBOL in One Video (2:13:59)", "url": "https://www.youtube.com/watch?v=TBs7HXI76yU"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Simple transaction report",
+          "description": "Write a COBOL program that reads a small set of transactions and prints formatted totals.",
+          "demonstrates": ["lang-cobol-structure", "lang-cobol-data", "lang-cobol-procedural"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Process files and compose maintainable COBOL programs from reusable components.",
+        "skills": [
+          {
+            "id": "lang-cobol-file-processing",
+            "name": "Sequential File Processing",
+            "description": "Read and write record-oriented files and handle file status conditions.",
+            "outcomes": ["Define file-control and file descriptions", "Process records until end-of-file", "Handle file errors and invalid records"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-cobol-data", "lang-cobol-procedural"],
+            "resources": [{"label": "IBM COBOL: File handling", "url": "https://www.ibm.com/docs/en/cobol-zos/6.4?topic=operations-file-control-entry"}, {"label": "YouTube: Derek Banas – COBOL Tutorial : Learn COBOL in One Video (2:13:59)", "url": "https://www.youtube.com/watch?v=TBs7HXI76yU"}, {"label": "YouTube: freeCodeCamp.org – COBOL Course - Programming with VSCode (1:17:04)", "url": "https://www.youtube.com/watch?v=RdMAEdGvtLA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-cobol-copybooks",
+            "name": "Copybooks and Program Interfaces",
+            "description": "Share record definitions and split work across programs with explicit interfaces.",
+            "outcomes": ["Use COPY to reuse declarations", "Pass data between programs", "Keep shared record layouts consistent"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-cobol-data", "lang-cobol-procedural"],
+            "resources": [{"label": "IBM COBOL: COPY statement", "url": "https://www.ibm.com/docs/en/cobol-zos/6.4?topic=statements-copy-statement"}, {"label": "YouTube: freeCodeCamp.org – COBOL Course - Programming with VSCode (1:17:04)", "url": "https://www.youtube.com/watch?v=RdMAEdGvtLA"}, {"label": "YouTube: Derek Banas – COBOL Tutorial : Learn COBOL in One Video (2:13:59)", "url": "https://www.youtube.com/watch?v=TBs7HXI76yU"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-cobol-testing-debugging",
+            "name": "Testing and Debugging",
+            "description": "Validate record processing and diagnose errors with compiler listings and debugging tools.",
+            "outcomes": ["Test valid, invalid, and boundary records", "Compare program output with expected results", "Use compiler diagnostics to investigate defects"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-cobol-file-processing", "lang-cobol-copybooks"],
+            "resources": [{"label": "GnuCOBOL Programmer's Guide", "url": "https://gnucobol.sourceforge.io/guides.html"}, {"label": "YouTube: Theo - t3․gg – The ONLY REASON To Unit Test (8:26)", "url": "https://www.youtube.com/watch?v=FF50H2RWaEY"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Validated batch ledger",
+          "description": "Process transaction records from a file, reject invalid entries, and produce a reconciled summary report.",
+          "demonstrates": ["lang-cobol-file-processing", "lang-cobol-copybooks", "lang-cobol-testing-debugging"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Connect COBOL programs to database and modern application workflows.",
+        "skills": [
+          {
+            "id": "lang-cobol-batch-design",
+            "name": "Batch Design and Operational Reliability",
+            "description": "Design repeatable batch jobs with checkpoints, clear return codes, and restart considerations.",
+            "outcomes": ["Separate job steps and responsibilities", "Design safe reruns for interrupted work", "Report completion and failure status clearly"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-cobol-file-processing", "lang-cobol-testing-debugging"],
+            "resources": [{"label": "IBM z/OS: Batch processing", "url": "https://www.ibm.com/docs/en/zos-basic-skills?topic=zos-batch-processing"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-cobol-database",
+            "name": "SQL and Database Integration",
+            "description": "Understand embedded SQL and the role of host variables in COBOL database programs.",
+            "outcomes": ["Describe how embedded SQL is compiled", "Map host variables to database fields", "Handle SQL status and transaction outcomes"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-cobol-data", "lang-cobol-copybooks"],
+            "resources": [{"label": "IBM Db2: Embedded SQL applications", "url": "https://www.ibm.com/docs/en/db2-for-zos/13.0.0?topic=programs-embedded-sql"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-cobol-modernization",
+            "name": "Interoperability and Modernization",
+            "description": "Explore how COBOL applications integrate with services, language runtimes, and contemporary delivery practices.",
+            "outcomes": ["Identify integration boundaries around a legacy application", "Document data contracts and operational dependencies", "Plan incremental modernization with regression tests"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-cobol-batch-design", "lang-cobol-database"],
+            "resources": [{"label": "IBM: COBOL modernization", "url": "https://www.ibm.com/think/topics/cobol-modernization"}, {"label": "YouTube: IBM Technology – Mainframe modernization explained: COBOL and AI (44:04)", "url": "https://www.youtube.com/watch?v=9mJhBzjugQg"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Integrated account processing system",
+          "description": "Create a documented batch workflow that validates records, updates account data, and supports safe recovery and regression testing.",
+          "demonstrates": ["lang-cobol-batch-design", "lang-cobol-database", "lang-cobol-modernization"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A dependable COBOL batch application",
+      "description": "Deliver a documented, tested record-processing application with clear error handling, operational behavior, and an integration plan."
+    }
+  },
+  "lang-python": {
+    "title": "Python",
+    "description": "Move from Python syntax to idiomatic, tested, production-quality Python code.",
+    "audience": "For learners who want a versatile language for scripting, data, and backend work.",
+    "goal": "Ship a well-tested, typed, installable Python package or service.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Write small Python programs using core syntax and built-in types.",
+        "skills": [
+          {
+            "id": "lang-python-syntax",
+            "name": "Syntax and Control Flow",
+            "description": "Use variables, operators, conditionals, loops, and functions in Python.",
+            "outcomes": ["Write functions with arguments and return values", "Use loops and conditionals correctly", "Run scripts from the command line"],
+            "estimatedHours": 14,
+            "prerequisites": [],
+            "resources": [{"label": "Python Tutorial", "url": "https://docs.python.org/3/tutorial/"}, {"label": "YouTube: Programming with Mosh – Control Flow in Python - If Elif Else Statements (16:08)", "url": "https://www.youtube.com/watch?v=Zp5MuPOtsSY"}, {"label": "YouTube: Net Ninja – Python Crash Course #5 - Control Flow (22:42)", "url": "https://www.youtube.com/watch?v=Mg6B3RsMd54"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-python-builtin-types",
+            "name": "Built-in Data Types",
+            "description": "Work fluently with lists, dicts, sets, tuples, and strings.",
+            "outcomes": ["Choose the right collection for a task", "Use comprehensions", "Format and manipulate strings"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-python-syntax"],
+            "resources": [{"label": "Python Standard Library", "url": "https://docs.python.org/3/library/"}, {"label": "YouTube: Alex The Analyst – Data Types in Python | Python for Beginners (21:58)", "url": "https://www.youtube.com/watch?v=ppsCxnNm-JI"}, {"label": "YouTube: Dave Gray – Python Data Types for Beginners | Python tutorial (37:28)", "url": "https://www.youtube.com/watch?v=INGJh9DEaBM"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-python-files-modules",
+            "name": "Files, Modules, and Packages",
+            "description": "Organize code into modules and read and write files safely.",
+            "outcomes": ["Import and structure modules", "Read and write files with context managers", "Use virtual environments and pip"],
+            "estimatedHours": 10,
+            "prerequisites": ["lang-python-syntax"],
+            "resources": [{"label": "Python Tutorial: Modules", "url": "https://docs.python.org/3/tutorial/modules.html"}, {"label": "YouTube: Bro Code – What are Python modules? (6:36)", "url": "https://www.youtube.com/watch?v=XcfxkHrHTVE"}, {"label": "YouTube: Net Ninja – Python 3 Tutorial for Beginners #19 - Modules & Packages (10:15)", "url": "https://www.youtube.com/watch?v=f26nAmfJggw"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Command-line expense tracker",
+          "description": "Build a CLI that records expenses to a file and summarizes them by category.",
+          "demonstrates": ["lang-python-syntax", "lang-python-builtin-types", "lang-python-files-modules"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Write idiomatic, object-oriented, and tested Python.",
+        "skills": [
+          {
+            "id": "lang-python-oop-datamodel",
+            "name": "Classes and the Data Model",
+            "description": "Design classes and use special methods to make objects behave like built-ins.",
+            "outcomes": ["Define classes, dataclasses, and properties", "Implement dunder methods such as __repr__ and __eq__", "Prefer composition where appropriate"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-python-builtin-types"],
+            "resources": [{"label": "Python Data Model", "url": "https://docs.python.org/3/reference/datamodel.html"}, {"label": "YouTube: Corey Schafer – Python OOP Tutorial 1: Classes and Instances (15:24)", "url": "https://www.youtube.com/watch?v=ZDa-Z5JzLYM"}, {"label": "YouTube: Tech With Tim – Python Data Classes Are AMAZING! Here's Why (16:11)", "url": "https://www.youtube.com/watch?v=5mMpM8zK4pY"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-python-iterators-generators",
+            "name": "Iterators, Generators, and Decorators",
+            "description": "Use lazy iteration and higher-order functions to write concise, efficient code.",
+            "outcomes": ["Write generators and use itertools", "Create simple decorators", "Use context managers"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-python-oop-datamodel"],
+            "resources": [{"label": "Python HOWTOs", "url": "https://docs.python.org/3/howto/"}, {"label": "YouTube: Bro Code – Learn Python generators in 8 minutes! (8:02)", "url": "https://www.youtube.com/watch?v=G1lJeEIl05o"}, {"label": "YouTube: Corey Schafer – Python Tutorial: Generators - How to use them and the benefits you receive (11:14)", "url": "https://www.youtube.com/watch?v=bD05uGo_sVI"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-python-testing-errors",
+            "name": "Exceptions and Testing",
+            "description": "Handle errors deliberately and verify behavior with automated tests.",
+            "outcomes": ["Raise and catch specific exceptions", "Write unit tests with unittest or pytest", "Use logging instead of print"],
+            "estimatedHours": 12,
+            "prerequisites": ["lang-python-files-modules", "unit-testing"],
+            "resources": [{"label": "unittest documentation", "url": "https://docs.python.org/3/library/unittest.html"}, {"label": "YouTube: Corey Schafer – Python Tutorial: Using Try/Except Blocks for Error Handling (10:34)", "url": "https://www.youtube.com/watch?v=NIWwJbo-9_8"}, {"label": "YouTube: Bro Code – Learn Python EXCEPTION HANDLING in 5 minutes! (5:49)", "url": "https://www.youtube.com/watch?v=V_NXT2-QIlE"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Log analyzer library",
+          "description": "Create a tested library that lazily parses large log files and reports statistics.",
+          "demonstrates": ["lang-python-oop-datamodel", "lang-python-iterators-generators", "lang-python-testing-errors"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Build typed, concurrent, and distributable Python software.",
+        "skills": [
+          {
+            "id": "lang-python-typing",
+            "name": "Type Hints and Static Analysis",
+            "description": "Annotate code and use static checkers to catch defects early.",
+            "outcomes": ["Use generics, protocols, and unions", "Run a type checker in CI"],
+            "estimatedHours": 12,
+            "prerequisites": ["lang-python-oop-datamodel"],
+            "resources": [{"label": "typing module", "url": "https://docs.python.org/3/library/typing.html"}, {"label": "YouTube: Corey Schafer – Python Tutorial: Type Hints - From Basic Annotations to Advanced Generics (40:59)", "url": "https://www.youtube.com/watch?v=RwH2UzC2rIo"}, {"label": "YouTube: Tech With Tim – Python Typing - Type Hints & Annotations (24:46)", "url": "https://www.youtube.com/watch?v=QORvB-_mbZ0"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-python-async-concurrency",
+            "name": "Concurrency with asyncio and Threads",
+            "description": "Choose between threads, processes, and asyncio for concurrent workloads.",
+            "outcomes": ["Write async functions and gather tasks", "Understand the GIL and its impact", "Use concurrent.futures"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-python-iterators-generators", "concurrency"],
+            "resources": [{"label": "asyncio documentation", "url": "https://docs.python.org/3/library/asyncio.html"}, {"label": "YouTube: Socratica – AsyncIO, await, and async - Concurrency in Python (9:12)", "url": "https://www.youtube.com/watch?v=K56nNuBEd0c"}, {"label": "YouTube: Tech With Tim – Asyncio in Python - Full Tutorial (24:59)", "url": "https://www.youtube.com/watch?v=Qb9s3UiMSTA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-python-packaging-performance",
+            "name": "Packaging and Performance",
+            "description": "Package code for distribution and profile it to find bottlenecks.",
+            "outcomes": ["Build a package with pyproject.toml", "Profile code with cProfile", "Apply targeted optimizations"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-python-testing-errors"],
+            "resources": [{"label": "Python Packaging User Guide", "url": "https://packaging.python.org/"}, {"label": "YouTube: Real Python – Packaging Your Python Code With pyproject.toml | Complete Code Conversation (51:39)", "url": "https://www.youtube.com/watch?v=v6tALyc4C10"}, {"label": "YouTube: ArjanCodes – How to Package and Publish Python Code the Right Way (20:28)", "url": "https://www.youtube.com/watch?v=5KEObONUkik"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Async web scraper package",
+          "description": "Publish a typed, installable package that fetches pages concurrently and is profiled for speed.",
+          "demonstrates": ["lang-python-typing", "lang-python-async-concurrency", "lang-python-packaging-performance"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Production Python service",
+      "description": "Build and document a typed, tested Python service or package with CI and a published release."
+    }
+  },
+  "lang-typescript": {
+    "title": "JavaScript & TypeScript",
+    "description": "Progress from JavaScript fundamentals to type-safe, scalable TypeScript applications.",
+    "audience": "For learners who want to build web, Node.js, or full-stack applications.",
+    "goal": "Deliver a fully typed application with solid tests and a clean module structure.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Write correct JavaScript using core language features.",
+        "skills": [
+          {
+            "id": "lang-typescript-js-core",
+            "name": "JavaScript Core Language",
+            "description": "Use variables, functions, objects, arrays, and control flow in modern JavaScript.",
+            "outcomes": ["Use let, const, and arrow functions", "Manipulate arrays and objects", "Use destructuring and template literals"],
+            "estimatedHours": 20,
+            "prerequisites": [],
+            "resources": [{"label": "MDN JavaScript", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"}, {"label": "YouTube: Traversy Media – Has TypeScript Become The Default Way To Write JavaScript? (11:54)", "url": "https://www.youtube.com/watch?v=NAIC9sjBgZA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-typescript-scope-closures",
+            "name": "Scope, Closures, and this",
+            "description": "Understand how JavaScript resolves variables and binds this.",
+            "outcomes": ["Explain closures with examples", "Predict the value of this", "Avoid common hoisting pitfalls"],
+            "estimatedHours": 10,
+            "prerequisites": ["lang-typescript-js-core"],
+            "resources": [{"label": "MDN: Closures", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures"}, {"label": "YouTube: Programming with Mosh – TypeScript Tutorial for Beginners (1:04:28)", "url": "https://www.youtube.com/watch?v=d56mG7DezGs"}, {"label": "YouTube: Boot dev – The TypeScript Course for JS Devs (4:24:19)", "url": "https://www.youtube.com/watch?v=K01hLNDdqg4"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-typescript-modules-tooling",
+            "name": "Modules and Tooling",
+            "description": "Organize code with ES modules and manage dependencies with npm.",
+            "outcomes": ["Import and export ES modules", "Manage packages with npm", "Run scripts and a linter"],
+            "estimatedHours": 8,
+            "prerequisites": ["lang-typescript-js-core"],
+            "resources": [{"label": "MDN: JavaScript modules", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"}, {"label": "YouTube: Net Ninja – TypeScript Tutorial #14 - Modules (6:37)", "url": "https://www.youtube.com/watch?v=EpOPR03z4Vw"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Utility library",
+          "description": "Write a small library of array and string helpers organized into modules.",
+          "demonstrates": ["lang-typescript-js-core", "lang-typescript-scope-closures", "lang-typescript-modules-tooling"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Use asynchronous JavaScript and the TypeScript type system confidently.",
+        "skills": [
+          {
+            "id": "lang-typescript-async",
+            "name": "Promises and Async/Await",
+            "description": "Handle asynchronous work using promises, async functions, and the event loop.",
+            "outcomes": ["Use async/await with error handling", "Run tasks in parallel with Promise.all", "Explain the event loop"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-typescript-scope-closures"],
+            "resources": [{"label": "MDN: Using promises", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises"}, {"label": "YouTube: Programming with Mosh – TypeScript Tutorial for Beginners (1:04:28)", "url": "https://www.youtube.com/watch?v=d56mG7DezGs"}, {"label": "YouTube: Fireship – TypeScript - The Basics (12:01)", "url": "https://www.youtube.com/watch?v=ahCwqrYpIuM"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-typescript-type-basics",
+            "name": "TypeScript Types",
+            "description": "Annotate code with interfaces, unions, and generics.",
+            "outcomes": ["Model data with interfaces and type aliases", "Use unions and narrowing", "Write generic functions"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-typescript-modules-tooling"],
+            "resources": [{"label": "TypeScript Handbook", "url": "https://www.typescriptlang.org/docs/handbook/intro.html"}, {"label": "YouTube: freeCodeCamp.org – TypeScript in Express – TypeScript Tutorial (1:14:35)", "url": "https://www.youtube.com/watch?v=bYgphDEWwvs"}, {"label": "YouTube: Web Dev Simplified – Learn TypeScript Generics In 13 Minutes (12:52)", "url": "https://www.youtube.com/watch?v=EcCTIExsqmI"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-typescript-node-testing",
+            "name": "Node.js and Testing",
+            "description": "Build Node.js programs and verify them with automated tests.",
+            "outcomes": ["Write a Node.js script or API", "Write unit tests", "Configure tsconfig for a project"],
+            "estimatedHours": 12,
+            "prerequisites": ["lang-typescript-async", "unit-testing"],
+            "resources": [{"label": "Node.js Documentation", "url": "https://nodejs.org/docs/latest/api/"}, {"label": "YouTube: freeCodeCamp.org – 0-60 with Typescript and Node.js (25:32)", "url": "https://www.youtube.com/watch?v=RjqTo_dfw4w"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Typed REST API client",
+          "description": "Build a typed client for a public API with async error handling and tests.",
+          "demonstrates": ["lang-typescript-async", "lang-typescript-type-basics", "lang-typescript-node-testing"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Design expressive, safe types and maintain large TypeScript codebases.",
+        "skills": [
+          {
+            "id": "lang-typescript-advanced-types",
+            "name": "Advanced Type System",
+            "description": "Use conditional, mapped, and utility types to encode rules in types.",
+            "outcomes": ["Write mapped and conditional types", "Use discriminated unions for state", "Apply utility types"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-typescript-type-basics"],
+            "resources": [{"label": "TypeScript Documentation", "url": "https://www.typescriptlang.org/docs/"}, {"label": "YouTube: Web Dev Simplified – Learn Advanced TypeScript In 25 Minutes (infer, extends, ternaries) (25:55)", "url": "https://www.youtube.com/watch?v=bnTAOB3P6nM"}, {"label": "YouTube: Boot dev – The TypeScript Course for JS Devs (4:24:19)", "url": "https://www.youtube.com/watch?v=K01hLNDdqg4"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-typescript-runtime-validation",
+            "name": "Runtime Validation and Strictness",
+            "description": "Bridge the gap between static types and untrusted runtime data.",
+            "outcomes": ["Enable strict compiler options", "Validate external input with a schema library", "Use type guards"],
+            "estimatedHours": 10,
+            "prerequisites": ["lang-typescript-advanced-types"],
+            "resources": [{"label": "TSConfig Reference", "url": "https://www.typescriptlang.org/tsconfig/"}, {"label": "YouTube: Jack Herrington – Fixing TypeScript's Blindspot: Runtime Typechecking (15:44)", "url": "https://www.youtube.com/watch?v=rY_XqfSHock"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-typescript-architecture",
+            "name": "Project Architecture and Build",
+            "description": "Structure large codebases with project references, bundlers, and clear boundaries.",
+            "outcomes": ["Organize a monorepo or layered project", "Configure a bundler and CI", "Manage library publishing"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-typescript-node-testing", "clean-code"],
+            "resources": [{"label": "TypeScript Project References", "url": "https://www.typescriptlang.org/docs/handbook/project-references.html"}, {"label": "YouTube: Web Dev Simplified – How To Build Your First TypeScript Project - TODO List Application (28:30)", "url": "https://www.youtube.com/watch?v=jBmrduvKl5w"}, {"label": "YouTube: Dave Gray – Typescript Project from Scratch | Complete Tutorial for Beginners (48:14)", "url": "https://www.youtube.com/watch?v=61v23Ce5SXA"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Type-safe schema-driven library",
+          "description": "Publish a library whose public API uses advanced types and validates runtime input.",
+          "demonstrates": ["lang-typescript-advanced-types", "lang-typescript-runtime-validation", "lang-typescript-architecture"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Full-stack TypeScript application",
+      "description": "Build a strictly typed application with shared types, validated inputs, tests, and CI."
+    }
+  },
+  "lang-java": {
+    "title": "Java",
+    "description": "Learn Java from core syntax to modern, concurrent, production-ready applications.",
+    "audience": "For learners targeting enterprise, backend, or Android-adjacent development.",
+    "goal": "Build and test a well-structured Java application using modern language features.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Write and run object-based Java programs.",
+        "skills": [
+          {
+            "id": "lang-java-syntax-types",
+            "name": "Syntax and Type System",
+            "description": "Use Java primitives, strings, control flow, and methods.",
+            "outcomes": ["Compile and run Java programs", "Use primitives, strings, and arrays", "Write methods and control flow"],
+            "estimatedHours": 16,
+            "prerequisites": [],
+            "resources": [{"label": "Dev.java Learn", "url": "https://dev.java/learn/"}, {"label": "YouTube: LinkedIn Learning – Java Tutorial - Explore BASIC SYNTAX (7:04)", "url": "https://www.youtube.com/watch?v=3lOhz1F1zHA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-java-classes-objects",
+            "name": "Classes and Objects",
+            "description": "Model concepts with classes, interfaces, and encapsulation.",
+            "outcomes": ["Define classes and constructors", "Use interfaces and inheritance", "Apply access modifiers"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-java-syntax-types"],
+            "resources": [{"label": "Dev.java: Classes and Objects", "url": "https://dev.java/learn/classes-objects/"}, {"label": "YouTube: Bro Code – Learn Java Object Oriented Programming in 10 minutes! (9:51)", "url": "https://www.youtube.com/watch?v=DYbi93vuSaU"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-java-collections-exceptions",
+            "name": "Collections and Exceptions",
+            "description": "Use the collections framework and handle errors with exceptions.",
+            "outcomes": ["Choose between List, Map, and Set", "Handle checked and unchecked exceptions", "Use generics with collections"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-java-classes-objects"],
+            "resources": [{"label": "Java SE API Documentation", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/"}, {"label": "YouTube: Programming with Mosh – Java Collections Tutorial (32:22)", "url": "https://www.youtube.com/watch?v=rH0winlka8A"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Library management console app",
+          "description": "Build a console application managing books and members with in-memory collections.",
+          "demonstrates": ["lang-java-syntax-types", "lang-java-classes-objects", "lang-java-collections-exceptions"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Write idiomatic modern Java with streams, tooling, and tests.",
+        "skills": [
+          {
+            "id": "lang-java-lambdas-streams",
+            "name": "Lambdas and Streams",
+            "description": "Process data declaratively with lambdas, streams, and Optional.",
+            "outcomes": ["Write lambdas and method references", "Build stream pipelines", "Use Optional safely"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-java-collections-exceptions"],
+            "resources": [{"label": "Dev.java: Streams", "url": "https://dev.java/learn/"}, {"label": "YouTube: Bro Code – Java lambda λ (18:00)", "url": "https://www.youtube.com/watch?v=LEJ1kGHSXdA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-java-build-testing",
+            "name": "Build Tools and Testing",
+            "description": "Manage builds and dependencies with Maven or Gradle and test with JUnit.",
+            "outcomes": ["Configure a Maven or Gradle project", "Write JUnit tests", "Use mocking sparingly"],
+            "estimatedHours": 12,
+            "prerequisites": ["lang-java-classes-objects", "unit-testing"],
+            "resources": [{"label": "JUnit 5 User Guide", "url": "https://junit.org/junit5/docs/current/user-guide/"}, {"label": "YouTube: freeCodeCamp.org – Java Testing with Selenium Course (7:28:51)", "url": "https://www.youtube.com/watch?v=QQliGCtqD2w"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-java-modern-features",
+            "name": "Records, Sealed Types, and Pattern Matching",
+            "description": "Use modern Java features to model data concisely and safely.",
+            "outcomes": ["Define records and enums", "Use sealed interfaces", "Apply pattern matching in switch"],
+            "estimatedHours": 10,
+            "prerequisites": ["lang-java-lambdas-streams"],
+            "resources": [{"label": "Dev.java Learn", "url": "https://dev.java/learn/"}, {"label": "YouTube: Manchester Java Community – The Future of Java: Records, Sealed Classes and Pattern Matching - José Paumard (1:05:46)", "url": "https://www.youtube.com/watch?v=HGjcrheS7BU"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Data-processing pipeline",
+          "description": "Build a tested Maven or Gradle project that reads CSV data and reports aggregates with streams.",
+          "demonstrates": ["lang-java-lambdas-streams", "lang-java-build-testing", "lang-java-modern-features"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Build concurrent, performant, and well-understood JVM applications.",
+        "skills": [
+          {
+            "id": "lang-java-concurrency",
+            "name": "Java Concurrency",
+            "description": "Write thread-safe code using executors, concurrent collections, and virtual threads.",
+            "outcomes": ["Use ExecutorService and CompletableFuture", "Avoid races and deadlocks", "Apply virtual threads appropriately"],
+            "estimatedHours": 20,
+            "prerequisites": ["lang-java-lambdas-streams", "concurrency"],
+            "resources": [{"label": "Dev.java: Concurrency", "url": "https://dev.java/learn/"}, {"label": "YouTube: Bro Code – Learn Java threading in 10 minutes! (10:21)", "url": "https://www.youtube.com/watch?v=SztE5W41on4"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-java-jvm-internals",
+            "name": "JVM Internals and Performance",
+            "description": "Understand memory, garbage collection, and profiling on the JVM.",
+            "outcomes": ["Explain heap, stack, and garbage collection", "Profile an application", "Tune basic JVM options"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-java-build-testing"],
+            "resources": [{"label": "Java SE Documentation", "url": "https://docs.oracle.com/en/java/javase/21/"}, {"label": "YouTube: The Coding Gopher – How the Java Virtual Machine Works (and Why You Should Care) (4:04)", "url": "https://www.youtube.com/watch?v=cAoymPToQdg"}, {"label": "YouTube: Programming with Mosh – Java Full Course for Beginners (2:30:48)", "url": "https://www.youtube.com/watch?v=eIrMbAQSU34"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-java-frameworks",
+            "name": "Application Frameworks",
+            "description": "Build services with a framework such as Spring Boot.",
+            "outcomes": ["Build a REST service", "Use dependency injection", "Persist data with a database"],
+            "estimatedHours": 24,
+            "prerequisites": ["lang-java-build-testing", "lang-java-modern-features"],
+            "resources": [{"label": "Spring Boot Reference", "url": "https://spring.io/projects/spring-boot"}, {"label": "YouTube: freeCodeCamp.org – Spring Boot Tutorial for Beginners (Java Framework) (1:49:29)", "url": "https://www.youtube.com/watch?v=vtPkZShrvXQ"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Concurrent order service",
+          "description": "Build a tested REST service that processes orders concurrently and is profiled under load.",
+          "demonstrates": ["lang-java-concurrency", "lang-java-jvm-internals", "lang-java-frameworks"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Production-grade Java service",
+      "description": "Deliver a documented, tested, containerized Java service with measured performance."
+    }
+  },
+  "lang-go": {
+    "title": "Go",
+    "description": "Learn Go's simple syntax, concurrency model, and tooling for reliable backend software.",
+    "audience": "For learners building cloud services, CLIs, and networked systems.",
+    "goal": "Ship a concurrent, tested Go service following community idioms.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Write Go programs using its core syntax and types.",
+        "skills": [
+          {
+            "id": "lang-go-syntax-tooling",
+            "name": "Syntax and Tooling",
+            "description": "Use Go's basic syntax, modules, and the go command.",
+            "outcomes": ["Create a module and run programs", "Use variables, loops, and functions", "Format code with gofmt"],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [{"label": "A Tour of Go", "url": "https://go.dev/tour/"}, {"label": "YouTube: Ardan Labs – Go Syntax - Function Idioms (9:03)", "url": "https://www.youtube.com/watch?v=sK3eSCdyksM"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-go-data-structures",
+            "name": "Slices, Maps, and Structs",
+            "description": "Model data with Go's composite types and understand slice semantics.",
+            "outcomes": ["Use slices and maps correctly", "Define structs and methods", "Understand pointers"],
+            "estimatedHours": 12,
+            "prerequisites": ["lang-go-syntax-tooling"],
+            "resources": [{"label": "Go Documentation", "url": "https://go.dev/doc/"}, {"label": "YouTube: Net Ninja – Go (Golang) Tutorial #5 - Arrays & Slices (10:57)", "url": "https://www.youtube.com/watch?v=Arb-LjPg7FA"}, {"label": "YouTube: Tech With Tim – Golang Tutorial #15 - Maps (9:57)", "url": "https://www.youtube.com/watch?v=yJE2RC37BF4"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-go-errors-packages",
+            "name": "Error Handling and Packages",
+            "description": "Handle errors as values and organize code into packages.",
+            "outcomes": ["Return and wrap errors", "Structure packages", "Write table-driven tests"],
+            "estimatedHours": 10,
+            "prerequisites": ["lang-go-data-structures"],
+            "resources": [{"label": "Effective Go", "url": "https://go.dev/doc/effective_go"}, {"label": "YouTube: Engineering Community – Error handling with Go 1.13 by Andriana Prudyvus (Eng) (17:22)", "url": "https://www.youtube.com/watch?v=NQ_DUIGgARw"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "CLI todo manager",
+          "description": "Build a command-line tool that stores tasks in a JSON file with tests.",
+          "demonstrates": ["lang-go-syntax-tooling", "lang-go-data-structures", "lang-go-errors-packages"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Use interfaces, generics, and goroutines to build networked programs.",
+        "skills": [
+          {
+            "id": "lang-go-interfaces-generics",
+            "name": "Interfaces and Generics",
+            "description": "Design small interfaces and use generics where they add clarity.",
+            "outcomes": ["Define and satisfy interfaces implicitly", "Write generic functions", "Prefer composition via embedding"],
+            "estimatedHours": 12,
+            "prerequisites": ["lang-go-errors-packages"],
+            "resources": [{"label": "Go Tutorials", "url": "https://go.dev/doc/tutorial/"}, {"label": "YouTube: Net Ninja – Go (Golang) Tutorial #22 - Interfaces (5:37)", "url": "https://www.youtube.com/watch?v=lbW-KVdIXaY"}, {"label": "YouTube: Anthony GG – This Will Make Everyone Understand Golang Interfaces (21:03)", "url": "https://www.youtube.com/watch?v=rH0bpx7I2Dk"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-go-goroutines-channels",
+            "name": "Goroutines and Channels",
+            "description": "Write concurrent programs using goroutines, channels, and sync primitives.",
+            "outcomes": ["Launch goroutines safely", "Use channels and select", "Use WaitGroup and Mutex"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-go-interfaces-generics", "concurrency"],
+            "resources": [{"label": "Effective Go: Concurrency", "url": "https://go.dev/doc/effective_go#concurrency"}, {"label": "YouTube: Anthony GG – Golang Channels Or Wait Groups? Let Me Explain. (18:32)", "url": "https://www.youtube.com/watch?v=2B-VAxCmhgA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-go-http-services",
+            "name": "HTTP Services",
+            "description": "Build HTTP servers and clients with the standard library.",
+            "outcomes": ["Build handlers and routing with net/http", "Encode and decode JSON", "Test handlers with httptest"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-go-interfaces-generics"],
+            "resources": [{"label": "Go Standard Library", "url": "https://pkg.go.dev/std"}, {"label": "YouTube: Tech With Tim – Go API Tutorial - Make An API With Go (38:03)", "url": "https://www.youtube.com/watch?v=bj77B59nkTQ"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "URL shortener service",
+          "description": "Build a tested HTTP service with concurrent-safe storage.",
+          "demonstrates": ["lang-go-interfaces-generics", "lang-go-goroutines-channels", "lang-go-http-services"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Build robust, observable, and performant Go systems.",
+        "skills": [
+          {
+            "id": "lang-go-context-patterns",
+            "name": "Context and Concurrency Patterns",
+            "description": "Manage cancellation and structure concurrent pipelines.",
+            "outcomes": ["Propagate context cancellation and deadlines", "Build worker pools and pipelines", "Prevent goroutine leaks"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-go-goroutines-channels"],
+            "resources": [{"label": "Go Concurrency Patterns: Context", "url": "https://go.dev/blog/context"}, {"label": "YouTube: Google for Developers – Google I/O 2013 - Advanced Go Concurrency Patterns (34:11)", "url": "https://www.youtube.com/watch?v=QDDwwePbDtw"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-go-profiling-performance",
+            "name": "Profiling and Performance",
+            "description": "Measure and improve performance with benchmarks and pprof.",
+            "outcomes": ["Write benchmarks", "Use pprof and the race detector", "Reduce allocations"],
+            "estimatedHours": 12,
+            "prerequisites": ["lang-go-http-services"],
+            "resources": [{"label": "Diagnostics", "url": "https://go.dev/doc/diagnostics"}, {"label": "YouTube: Gopher Academy – GopherCon 2019: Two Go Programs, Three Different Profiling Techniques - Dave Cheney (43:00)", "url": "https://www.youtube.com/watch?v=nok0aYiGiYA"}, {"label": "YouTube: Google Cloud Tech – Boost performance of Go applications with profile guided optimization (35:30)", "url": "https://www.youtube.com/watch?v=FwzE5Sdhhdw"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-go-production-practices",
+            "name": "Production Practices",
+            "description": "Ship Go services with structured logging, configuration, and container builds.",
+            "outcomes": ["Use structured logging", "Handle graceful shutdown", "Build small container images"],
+            "estimatedHours": 12,
+            "prerequisites": ["lang-go-http-services", "clean-code"],
+            "resources": [{"label": "Go Documentation", "url": "https://go.dev/doc/"}, {"label": "YouTube: GopherCon UK – Production Go Service Essentials - Elliot Williams (40:19)", "url": "https://www.youtube.com/watch?v=BVEcbifDrMk"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Concurrent job processor",
+          "description": "Build a worker-pool service with cancellation, benchmarks, and graceful shutdown.",
+          "demonstrates": ["lang-go-context-patterns", "lang-go-profiling-performance", "lang-go-production-practices"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Production Go microservice",
+      "description": "Deliver a documented, tested, observable Go service with benchmarks and container deployment."
+    }
+  },
+  "lang-rust": {
+    "title": "Rust",
+    "description": "Go beyond Rust basics into traits, error handling, async, crates, unsafe, and performance.",
+    "audience": "For learners who know Rust fundamentals and want to write robust systems code.",
+    "goal": "Ship a safe, fast, and well-structured Rust crate or service.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Model data and abstractions with Rust's type and trait system.",
+        "skills": [
+          {
+            "id": "lang-rust-traits-generics",
+            "name": "Traits and Generics",
+            "description": "Define shared behavior with traits and write generic code with bounds.",
+            "outcomes": ["Define and implement traits", "Use generics with trait bounds", "Use derive and standard traits"],
+            "estimatedHours": 14,
+            "prerequisites": ["rust-basics"],
+            "resources": [{"label": "The Rust Book: Generic Types, Traits, and Lifetimes", "url": "https://doc.rust-lang.org/book/ch10-00-generics.html"}, {"label": "YouTube: Let's Get Rusty – Generic Types in Rust (15:18)", "url": "https://www.youtube.com/watch?v=6rcTSxPJ6Bw"}, {"label": "YouTube: Copenhagen Rust Community – Impl Trait aka Look ma’, no generics! by Jon Gjengset (1:09:05)", "url": "https://www.youtube.com/watch?v=CWiz_RtA1Hw"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-rust-error-handling",
+            "name": "Error Handling",
+            "description": "Handle failures with Result, Option, and custom error types.",
+            "outcomes": ["Propagate errors with the ? operator", "Define custom error types", "Choose between panic and Result"],
+            "estimatedHours": 10,
+            "prerequisites": ["rust-basics"],
+            "resources": [{"label": "The Rust Book: Error Handling", "url": "https://doc.rust-lang.org/book/ch09-00-error-handling.html"}, {"label": "YouTube: Let's Get Rusty – Error Handling in Rust (16:20)", "url": "https://www.youtube.com/watch?v=wM6o70NAWUI"}, {"label": "YouTube: Ardan Labs – Mastering Error Handling in Rust: From Panics to thiserror & anyhow | with Nathan… (1:13:46)", "url": "https://www.youtube.com/watch?v=sZV6sz4P6QY"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-rust-collections-iterators",
+            "name": "Collections and Iterators",
+            "description": "Use standard collections and iterator adapters idiomatically.",
+            "outcomes": ["Use Vec, HashMap, and String", "Chain iterator adapters", "Write closures"],
+            "estimatedHours": 12,
+            "prerequisites": ["rust-basics"],
+            "resources": [{"label": "The Rust Book", "url": "https://doc.rust-lang.org/book/"}, {"label": "YouTube: Let's Get Rusty – Iterators in Rust (13:25)", "url": "https://www.youtube.com/watch?v=4GcKrj4By8k"}, {"label": "YouTube: Jon Gjengset – Crust of Rust: std::collections (2:45:04)", "url": "https://www.youtube.com/watch?v=EF3Z4jdD1EQ"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Text search tool",
+          "description": "Build a grep-like CLI with custom errors and iterator-based processing.",
+          "demonstrates": ["lang-rust-traits-generics", "lang-rust-error-handling", "lang-rust-collections-iterators"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Structure larger Rust projects and write concurrent and async code.",
+        "skills": [
+          {
+            "id": "lang-rust-cargo-crates",
+            "name": "Cargo, Crates, and Testing",
+            "description": "Organize workspaces, manage dependencies, and test with Cargo.",
+            "outcomes": ["Use workspaces and features", "Write unit and integration tests", "Publish or document a crate"],
+            "estimatedHours": 10,
+            "prerequisites": ["lang-rust-traits-generics", "unit-testing"],
+            "resources": [{"label": "The Cargo Book", "url": "https://doc.rust-lang.org/cargo/"}, {"label": "YouTube: Jon Gjengset – Setting up CI and property testing for a Rust crate (2:46:41)", "url": "https://www.youtube.com/watch?v=xUH-4y92jPg"}, {"label": "YouTube: Let's Get Rusty – Publishing a Rust Crate! (14:02)", "url": "https://www.youtube.com/watch?v=4TI153PIEDQ"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-rust-smart-pointers-concurrency",
+            "name": "Smart Pointers and Threads",
+            "description": "Share and mutate data safely with Box, Rc, Arc, Mutex, and channels.",
+            "outcomes": ["Choose the right smart pointer", "Share state across threads with Arc and Mutex", "Use message passing"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-rust-collections-iterators", "concurrency"],
+            "resources": [{"label": "The Rust Book: Fearless Concurrency", "url": "https://doc.rust-lang.org/book/ch16-00-concurrency.html"}, {"label": "YouTube: Jon Gjengset – Crust of Rust: Smart Pointers and Interior Mutability (2:03:04)", "url": "https://www.youtube.com/watch?v=8O0Nt9qY_vo"}, {"label": "YouTube: Let's Get Rusty – The Box Smart Pointer in Rust (12:18)", "url": "https://www.youtube.com/watch?v=m76sRj2VgGo"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-rust-async",
+            "name": "Async Rust",
+            "description": "Write asynchronous programs using futures and an async runtime.",
+            "outcomes": ["Use async/await with Tokio", "Understand futures and polling", "Build a simple async network service"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-rust-error-handling", "lang-rust-smart-pointers-concurrency"],
+            "resources": [{"label": "Asynchronous Programming in Rust", "url": "https://rust-lang.github.io/async-book/"}, {"label": "YouTube: Let's Get Rusty – Async Rust explained in 20 minutes (19:15)", "url": "https://www.youtube.com/watch?v=wXtngLBkK4Q"}, {"label": "YouTube: Ardan Labs – 1 Hour Dive into Asynchronous Rust (1:14:12)", "url": "https://www.youtube.com/watch?v=0HwrZp9CBD4"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Async chat server",
+          "description": "Build a tested multi-client chat server in a Cargo workspace using async I/O.",
+          "demonstrates": ["lang-rust-cargo-crates", "lang-rust-smart-pointers-concurrency", "lang-rust-async"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Write unsafe, macro-based, and high-performance Rust responsibly.",
+        "skills": [
+          {
+            "id": "lang-rust-unsafe-ffi",
+            "name": "Unsafe Rust and FFI",
+            "description": "Use unsafe code and foreign interfaces while upholding safety invariants.",
+            "outcomes": ["Explain what unsafe permits", "Wrap unsafe code in safe APIs", "Call C libraries through FFI"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-rust-smart-pointers-concurrency"],
+            "resources": [{"label": "The Rustonomicon", "url": "https://doc.rust-lang.org/nomicon/"}, {"label": "YouTube: Let's Get Rusty – The unsafe Rust survival guide (6:45)", "url": "https://www.youtube.com/watch?v=91uStPBLibc"}, {"label": "YouTube: Low Level – how common is unsafe rust? (15:58)", "url": "https://www.youtube.com/watch?v=z_RekEdKcfk"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-rust-macros-api-design",
+            "name": "Macros and API Design",
+            "description": "Write declarative macros and design ergonomic, idiomatic public APIs.",
+            "outcomes": ["Write macro_rules macros", "Follow the Rust API guidelines", "Use the type state and builder patterns"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-rust-traits-generics", "lang-rust-cargo-crates"],
+            "resources": [{"label": "Rust API Guidelines", "url": "https://rust-lang.github.io/api-guidelines/"}, {"label": "YouTube: Jon Gjengset – Crust of Rust: Declarative Macros (1:36:11)", "url": "https://www.youtube.com/watch?v=q6paRBbLgNw"}, {"label": "YouTube: Let's Get Rusty – Procedural Macros in Rust (11:33)", "url": "https://www.youtube.com/watch?v=crWfcA064is"}],
+            "priority": "optional",
+            "completed": false
+          },
+          {
+            "id": "lang-rust-performance",
+            "name": "Performance Engineering",
+            "description": "Benchmark, profile, and optimize Rust code with attention to memory and allocation.",
+            "outcomes": ["Write benchmarks", "Profile with flamegraphs", "Reduce allocations and copies"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-rust-async"],
+            "resources": [{"label": "The Rust Performance Book", "url": "https://nnethercote.github.io/perf-book/"}, {"label": "YouTube: Let's Get Rusty – The ultimate Rust performance guide (12:11)", "url": "https://www.youtube.com/watch?v=q3VOsGzkM-M"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "High-performance parser crate",
+          "description": "Publish a benchmarked crate with a safe API wrapping a small, audited unsafe core.",
+          "demonstrates": ["lang-rust-unsafe-ffi", "lang-rust-macros-api-design", "lang-rust-performance"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Production Rust service or crate",
+      "description": "Deliver a documented, tested, benchmarked Rust project with async I/O and a clean public API."
+    }
+  },
+  "lang-functional": {
+    "title": "Functional Programming",
+    "description": "Learn immutability, higher-order functions, pattern matching, and effects using Haskell as the vehicle.",
+    "audience": "For learners who want a new way to structure programs that carries over to any language.",
+    "goal": "Build programs from pure functions and compose effects in a principled way.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Think in expressions, immutable data, and functions.",
+        "skills": [
+          {
+            "id": "lang-functional-pure-functions",
+            "name": "Pure Functions and Immutability",
+            "description": "Write functions without side effects and work with immutable values.",
+            "outcomes": ["Distinguish pure from impure code", "Replace mutation with new values", "Define functions in Haskell"],
+            "estimatedHours": 12,
+            "prerequisites": ["programming-fundamentals"],
+            "resources": [{"label": "Learn You a Haskell for Great Good", "url": "https://learnyouahaskell.github.io/"}, {"label": "YouTube: Web Dev Simplified – Learn Pure Functions In 10 Minutes (10:11)", "url": "https://www.youtube.com/watch?v=fYbhD_KMCOg"}, {"label": "YouTube: FullStack Flow – 042 Functional Programming, Pure Functions (9:59)", "url": "https://www.youtube.com/watch?v=54SFmLfO1NA"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-functional-higher-order",
+            "name": "Higher-Order Functions",
+            "description": "Use map, filter, fold, and function composition to transform data.",
+            "outcomes": ["Apply map, filter, and fold", "Compose functions", "Use partial application and currying"],
+            "estimatedHours": 12,
+            "prerequisites": ["lang-functional-pure-functions"],
+            "resources": [{"label": "Learn You a Haskell: Higher Order Functions", "url": "https://learnyouahaskell.github.io/"}, {"label": "YouTube: Bro Code – Python higher order functions (6:28)", "url": "https://www.youtube.com/watch?v=xZtTIm3fpfA"}, {"label": "YouTube: Traversy Media – JavaScript Higher Order Functions & Arrays (34:56)", "url": "https://www.youtube.com/watch?v=rRgD1yVwIvE"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-functional-recursion-lists",
+            "name": "Recursion and Lists",
+            "description": "Solve problems recursively and process lists structurally.",
+            "outcomes": ["Write recursive functions", "Use tail recursion and accumulators", "Process lists with pattern matching"],
+            "estimatedHours": 10,
+            "prerequisites": ["lang-functional-pure-functions"],
+            "resources": [{"label": "Learn You a Haskell: Recursion", "url": "https://learnyouahaskell.github.io/"}, {"label": "YouTube: freeCodeCamp.org – Recursion in Programming - Full Course (1:51:36)", "url": "https://www.youtube.com/watch?v=IJDJ0kBx2LM"}, {"label": "YouTube: Bro Code – Learn RECURSION in 5 minutes! (5:59)", "url": "https://www.youtube.com/watch?v=ivl5-snqul8"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Text statistics toolkit",
+          "description": "Build word-frequency and text analysis functions using only pure functions and folds.",
+          "demonstrates": ["lang-functional-pure-functions", "lang-functional-higher-order", "lang-functional-recursion-lists"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Model domains with algebraic types and abstract over structure.",
+        "skills": [
+          {
+            "id": "lang-functional-algebraic-types",
+            "name": "Algebraic Data Types and Pattern Matching",
+            "description": "Model domains with sum and product types and match exhaustively.",
+            "outcomes": ["Define sum and product types", "Pattern match exhaustively", "Make illegal states unrepresentable"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-functional-recursion-lists"],
+            "resources": [{"label": "Learn You a Haskell: Making Our Own Types", "url": "https://learnyouahaskell.github.io/"}, {"label": "YouTube: Icelandic Centre of Excellence in Theoretical CS – A Mechanized First-Order Theory of Algebraic Data Types with Pattern Matching |… (25:29)", "url": "https://www.youtube.com/watch?v=EIycyzfVb3I"}, {"label": "YouTube: Daedalus Community – Functional programming - A general introduction (11:47)", "url": "https://www.youtube.com/watch?v=8z_bUIl_uPo"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-functional-typeclasses",
+            "name": "Type Classes and Functors",
+            "description": "Abstract over behavior with type classes, Functor, and Foldable.",
+            "outcomes": ["Define and instantiate type classes", "Use fmap over containers", "Explain parametric polymorphism"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-functional-algebraic-types", "lang-functional-higher-order"],
+            "resources": [{"label": "Learn You a Haskell: Functors", "url": "https://learnyouahaskell.github.io/"}, {"label": "YouTube: Daedalus Community – Functional programming - A general introduction (11:47)", "url": "https://www.youtube.com/watch?v=8z_bUIl_uPo"}, {"label": "YouTube: ArjanCodes – Functions vs Classes: When to Use Which and Why? (10:49)", "url": "https://www.youtube.com/watch?v=txRTzljmV0Q"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-functional-error-modeling",
+            "name": "Maybe, Either, and Error Modeling",
+            "description": "Represent absence and failure as values instead of exceptions.",
+            "outcomes": ["Use Maybe and Either", "Chain fallible computations", "Validate input without exceptions"],
+            "estimatedHours": 10,
+            "prerequisites": ["lang-functional-algebraic-types"],
+            "resources": [{"label": "Haskell Documentation", "url": "https://www.haskell.org/documentation/"}, {"label": "YouTube: 3Blue1Brown – But what are Hamming codes? The origin of error correction (20:05)", "url": "https://www.youtube.com/watch?v=X8jsijhllIA"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Expression evaluator",
+          "description": "Parse and evaluate arithmetic expressions with an algebraic data type and error values.",
+          "demonstrates": ["lang-functional-algebraic-types", "lang-functional-typeclasses", "lang-functional-error-modeling"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Use monads and effects to structure real programs.",
+        "skills": [
+          {
+            "id": "lang-functional-monads",
+            "name": "Monads in Practice",
+            "description": "Use monads to sequence computations with context such as failure or state.",
+            "outcomes": ["Use do-notation", "Use Maybe, Either, and State monads", "Explain the monad laws informally"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-functional-typeclasses", "lang-functional-error-modeling"],
+            "resources": [{"label": "Learn You a Haskell: A Fistful of Monads", "url": "https://learnyouahaskell.github.io/"}, {"label": "YouTube: Computerphile – What is a Monad? - Computerphile (21:50)", "url": "https://www.youtube.com/watch?v=t1e8gqXLbsU"}, {"label": "YouTube: ArjanCodes – What the Heck Are Monads?! (21:08)", "url": "https://www.youtube.com/watch?v=Q0aVbqim5pE"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-functional-io-effects",
+            "name": "IO and Effect Management",
+            "description": "Isolate side effects at the edges of a program and test the pure core.",
+            "outcomes": ["Use IO safely", "Separate pure logic from effects", "Test pure code with property tests"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-functional-monads", "unit-testing"],
+            "resources": [{"label": "Learn You a Haskell: Input and Output", "url": "https://learnyouahaskell.github.io/"}, {"label": "YouTube: Kotlin by JetBrains – Kotlin & Functional Programming: pick the best, skip the rest by Urs Peter (43:49)", "url": "https://www.youtube.com/watch?v=Ed3t4WAe0Co"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-functional-in-practice",
+            "name": "Functional Patterns in Other Languages",
+            "description": "Apply functional ideas such as immutability and composition in mainstream languages.",
+            "outcomes": ["Apply immutability and composition in a mainstream language", "Compare functional and object-oriented designs"],
+            "estimatedHours": 10,
+            "prerequisites": ["lang-functional-higher-order", "design-patterns"],
+            "resources": [{"label": "Elixir Documentation", "url": "https://elixir-lang.org/docs.html"}, {"label": "YouTube: freeCodeCamp.org – Functional Programming in Scala (37:45)", "url": "https://www.youtube.com/watch?v=R0jVqeYzs9c"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Stateful command interpreter",
+          "description": "Build an interpreter with a pure core, state monad, and thin IO shell, tested with properties.",
+          "demonstrates": ["lang-functional-monads", "lang-functional-io-effects", "lang-functional-in-practice"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Functional application with a pure core",
+      "description": "Build and test an application whose domain logic is pure and whose effects live at the edges."
+    }
+  },
+  "lang-oop": {
+    "title": "Object-Oriented Design",
+    "description": "Learn to design maintainable object-oriented systems using encapsulation, SOLID, and patterns.",
+    "audience": "For learners who can write classes and want to design software that stays easy to change.",
+    "goal": "Design and implement a well-modeled domain with clear responsibilities and tests.",
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Model simple concepts using classes and encapsulation.",
+        "skills": [
+          {
+            "id": "lang-oop-classes-encapsulation",
+            "name": "Classes and Encapsulation",
+            "description": "Bundle data and behavior in classes and hide internal state.",
+            "outcomes": ["Design classes with clear responsibilities", "Hide state behind methods", "Keep objects in a valid state"],
+            "estimatedHours": 12,
+            "prerequisites": ["programming-fundamentals"],
+            "resources": [{"label": "Refactoring Guru: OOP", "url": "https://refactoring.guru/design-patterns/what-is-pattern"}, {"label": "YouTube: Bro Code – Java encapsulation (8:27)", "url": "https://www.youtube.com/watch?v=eboNNUADeIc"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-oop-inheritance-polymorphism",
+            "name": "Inheritance and Polymorphism",
+            "description": "Use inheritance and interfaces to substitute behavior through a common type.",
+            "outcomes": ["Use interfaces and abstract classes", "Override methods correctly", "Explain subtype polymorphism"],
+            "estimatedHours": 12,
+            "prerequisites": ["lang-oop-classes-encapsulation"],
+            "resources": [{"label": "Refactoring Guru: Basic Concepts", "url": "https://refactoring.guru/design-patterns/what-is-pattern"}, {"label": "YouTube: Dave Gray – Python Classes, Objects, Inheritance & Polymorphism for Beginners (19:32)", "url": "https://www.youtube.com/watch?v=RpBBzci_cBk"}, {"label": "YouTube: Bro Code – Learn Java inheritance in 9 minutes! ‍‍ (9:07)", "url": "https://www.youtube.com/watch?v=GTP5lVEKXaU"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-oop-composition",
+            "name": "Composition over Inheritance",
+            "description": "Build behavior by combining objects instead of deep inheritance hierarchies.",
+            "outcomes": ["Replace inheritance with delegation", "Explain the fragile base class problem"],
+            "estimatedHours": 8,
+            "prerequisites": ["lang-oop-inheritance-polymorphism"],
+            "resources": [{"label": "Refactoring Guru: Design Patterns", "url": "https://refactoring.guru/design-patterns"}, {"label": "YouTube: ArjanCodes – Composition Is Better Than Inheritance in Python (23:29)", "url": "https://www.youtube.com/watch?v=0mcP8ZpUR38"}, {"label": "YouTube: Bro Code – Learn Python COMPOSITION in 7 minutes! (7:22)", "url": "https://www.youtube.com/watch?v=TPUdUkFHD5I"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Shape and drawing model",
+          "description": "Model shapes and a canvas using polymorphism and composition instead of conditionals.",
+          "demonstrates": ["lang-oop-classes-encapsulation", "lang-oop-inheritance-polymorphism", "lang-oop-composition"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Apply SOLID principles and common design patterns.",
+        "skills": [
+          {
+            "id": "lang-oop-solid",
+            "name": "SOLID Principles",
+            "description": "Apply the five SOLID principles to keep classes focused and extensible.",
+            "outcomes": ["Identify violations of each principle", "Refactor to depend on abstractions", "Keep interfaces small"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-oop-composition", "clean-code"],
+            "resources": [{"label": "Refactoring Guru: Principles", "url": "https://refactoring.guru/design-patterns/catalog"}, {"label": "YouTube: freeCodeCamp.org – Master Design Patterns & SOLID Principles in C# - Full OOP Course for Beginners (11:46:54)", "url": "https://www.youtube.com/watch?v=rylaiB2uH2A"}, {"label": "YouTube: Web Dev Simplified – Single Responsibility Principle Explained - SOLID Design Principles (6:17)", "url": "https://www.youtube.com/watch?v=UQqY3_6Epbg"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-oop-creational-structural",
+            "name": "Creational and Structural Patterns",
+            "description": "Use patterns such as Factory, Builder, Adapter, and Decorator appropriately.",
+            "outcomes": ["Implement Factory and Builder", "Implement Adapter and Decorator", "Know when not to use a pattern"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-oop-solid", "design-patterns"],
+            "resources": [{"label": "Refactoring Guru: Design Patterns Catalog", "url": "https://refactoring.guru/design-patterns/catalog"}, {"label": "YouTube: Programming with Mosh – Object-Oriented Programming, Simplified (7:34)", "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8"}, {"label": "YouTube: freeCodeCamp.org – Intro to Object Oriented Programming - Crash Course (30:18)", "url": "https://www.youtube.com/watch?v=SiBw7os-_zI"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-oop-behavioral-patterns",
+            "name": "Behavioral Patterns",
+            "description": "Use Strategy, Observer, Command, and State to manage varying behavior.",
+            "outcomes": ["Implement Strategy and Observer", "Implement Command and State", "Replace conditionals with polymorphism"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-oop-solid"],
+            "resources": [{"label": "Refactoring Guru: Behavioral Patterns", "url": "https://refactoring.guru/design-patterns/behavioral-patterns"}, {"label": "YouTube: Programming with Mosh – Object-Oriented Programming, Simplified (7:34)", "url": "https://www.youtube.com/watch?v=pTB0EiLXUC8"}, {"label": "YouTube: freeCodeCamp.org – Intro to Object Oriented Programming - Crash Course (30:18)", "url": "https://www.youtube.com/watch?v=SiBw7os-_zI"}],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Pluggable notification system",
+          "description": "Design a notification module using Strategy, Observer, and Decorator that follows SOLID.",
+          "demonstrates": ["lang-oop-solid", "lang-oop-creational-structural", "lang-oop-behavioral-patterns"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Model complex domains and evolve designs safely.",
+        "skills": [
+          {
+            "id": "lang-oop-domain-modeling",
+            "name": "Domain Modeling",
+            "description": "Capture business rules with entities, value objects, and aggregates.",
+            "outcomes": ["Distinguish entities from value objects", "Define aggregate boundaries", "Use a ubiquitous language"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-oop-solid", "lang-oop-behavioral-patterns"],
+            "resources": [{"label": "Refactoring Guru: Refactoring", "url": "https://refactoring.guru/refactoring"}, {"label": "YouTube: Google Cloud Tech – What are domain specific language models? (4:11)", "url": "https://www.youtube.com/watch?v=35rRK49HnAQ"}, {"label": "YouTube: Community for F# – Domain Modeling with Types with Ryan Riley (1:27:16)", "url": "https://www.youtube.com/watch?v=970nkg60lHs"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-oop-refactoring-testability",
+            "name": "Refactoring and Testable Design",
+            "description": "Improve existing designs in small steps backed by tests.",
+            "outcomes": ["Recognize code smells", "Refactor under test coverage", "Use dependency injection for testability"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-oop-solid", "unit-testing"],
+            "resources": [{"label": "Refactoring Guru: Code Smells", "url": "https://refactoring.guru/refactoring/smells"}, {"label": "YouTube: Google TechTalks – Design Tech Talk Series Presents: OO Design for Testability (56:02)", "url": "https://www.youtube.com/watch?v=acjvKJiOvXw"}, {"label": "YouTube: Book Overflow – Martin Fowler Reflects on Refactoring: Improving the Design of Existing Code (1:10:56)", "url": "https://www.youtube.com/watch?v=CjCJ76oZXTE"}],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-oop-architecture-boundaries",
+            "name": "Layered and Hexagonal Architecture",
+            "description": "Separate domain logic from infrastructure using clear boundaries and ports.",
+            "outcomes": ["Define ports and adapters", "Keep the domain free of framework code", "Weigh OOP against functional alternatives"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-oop-domain-modeling"],
+            "resources": [{"label": "Refactoring Guru: Design Patterns", "url": "https://refactoring.guru/design-patterns"}, {"label": "YouTube: Master AWS with Yan – Hexagonal architecture: the what, why and when? (7:27)", "url": "https://www.youtube.com/watch?v=qGp66Oc3zTg"}, {"label": "YouTube: JetBrains – Clean Architecture With ASP.NET Core — Steve Smith (58:41)", "url": "https://www.youtube.com/watch?v=qOwB8PxOqC0"}],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Order management domain model",
+          "description": "Model an order domain with aggregates and ports, refactored in small steps under tests.",
+          "demonstrates": ["lang-oop-domain-modeling", "lang-oop-refactoring-testability", "lang-oop-architecture-boundaries"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Extensible domain-driven application",
+      "description": "Design and implement a tested application with a rich domain model, clear boundaries, and documented design decisions."
+    }
+  }
+}
