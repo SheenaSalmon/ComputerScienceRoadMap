@@ -1023,6 +1023,34 @@
             "completed": false
           },
           {
+            "id": "lang-java-21-plus",
+            "name": "Modern Java 21+ (Java 21 to 25 LTS)",
+            "description": "Adopt the features added since Java 21: virtual threads, sequenced collections, record patterns, stream gatherers, scoped values, and simpler launch and source files.",
+            "outcomes": ["Use record patterns and pattern matching for switch to model data", "Use sequenced collections and unnamed variables and patterns", "Write a stream pipeline with a custom gatherer", "Explain scoped values and structured concurrency versus thread locals", "Run single-file and multi-file programs without a build tool", "Read JEPs and release notes to decide when to upgrade the JDK"],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-java-modern-features"],
+            "resources": [
+              {"label": "Dev.java: Java 21 and later - what's new", "url": "https://dev.java/learn/new-features/"},
+              {"label": "JDK 25 (LTS) Release Notes and feature list", "url": "https://jdk.java.net/25/"},
+              {"label": "OpenJDK JEP 444: Virtual Threads", "url": "https://openjdk.org/jeps/444"},
+              {"label": "OpenJDK JEP 431: Sequenced Collections", "url": "https://openjdk.org/jeps/431"},
+              {"label": "OpenJDK JEP 440: Record Patterns", "url": "https://openjdk.org/jeps/440"},
+              {"label": "OpenJDK JEP 441: Pattern Matching for switch", "url": "https://openjdk.org/jeps/441"},
+              {"label": "OpenJDK JEP 456: Unnamed Variables & Patterns", "url": "https://openjdk.org/jeps/456"},
+              {"label": "OpenJDK JEP 485: Stream Gatherers", "url": "https://openjdk.org/jeps/485"},
+              {"label": "OpenJDK JEP 506: Scoped Values", "url": "https://openjdk.org/jeps/506"},
+              {"label": "OpenJDK JEP 512: Compact Source Files and Instance Main Methods", "url": "https://openjdk.org/jeps/512"},
+              {"label": "Oracle Java 21 docs: Language updates", "url": "https://docs.oracle.com/en/java/javase/21/language/java-language-changes.html"},
+              {"label": "Inside Java: News and updates from the JDK team", "url": "https://inside.java/"},
+              {"label": "YouTube: Inside Java channel (JDK team talks)", "url": "https://www.youtube.com/@java"},
+              {"label": "YouTube search: Java 21 new features virtual threads records sequenced collections", "url": "https://www.youtube.com/results?search_query=Java+21+new+features+virtual+threads+record+patterns+sequenced+collections"},
+              {"label": "YouTube search: Java 25 new features explained", "url": "https://www.youtube.com/results?search_query=Java+25+LTS+new+features+explained"},
+              {"label": "YouTube search: Stream Gatherers Java 24 tutorial", "url": "https://www.youtube.com/results?search_query=Java+Stream+Gatherers+tutorial"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
             "id": "lang-java-sql-jdbc",
             "name": "SQL, JDBC, Transactions & Migrations",
             "description": "Connect Java applications to relational databases and evolve their schemas safely.",
@@ -1101,7 +1129,7 @@
         "project": {
           "title": "Tested Java REST API",
           "description": "Build a Spring REST API with SQL persistence, migrations, validation, pagination, authentication and authorization, OpenAPI documentation, JUnit unit tests, and Testcontainers integration tests.",
-          "demonstrates": ["lang-java-lambdas-streams", "lang-java-build-testing", "lang-java-modern-features", "lang-java-sql-jdbc", "lang-java-frameworks", "lang-java-integration-testing"]
+          "demonstrates": ["lang-java-lambdas-streams", "lang-java-build-testing", "lang-java-modern-features", "lang-java-21-plus", "lang-java-sql-jdbc", "lang-java-frameworks", "lang-java-integration-testing"]
         }
       },
       {
@@ -1131,6 +1159,91 @@
             "completed": false
           },
           {
+            "id": "lang-java-spring-advanced",
+            "name": "Spring Boot 3 in Depth: Security, Data, Resilience & Observability",
+            "description": "Go beyond a basic REST API with OAuth2 and JWT security, Spring Data tuning, virtual threads, resilience, messaging, observability, and native images.",
+            "outcomes": ["Secure an API as an OAuth2 resource server with method-level authorization", "Avoid N+1 queries and tune Spring Data JPA with projections and pagination", "Enable virtual threads in Spring Boot and verify their effect under load", "Add timeouts, retries, and circuit breakers with Resilience4j", "Publish and consume events with Spring for Apache Kafka or RabbitMQ", "Export metrics and traces with Micrometer and OpenTelemetry", "Build a GraalVM native image or a layered container image"],
+            "estimatedHours": 30,
+            "prerequisites": ["lang-java-integration-testing", "lang-java-21-plus"],
+            "resources": [
+              {"label": "Spring Boot Reference: Spring Boot features", "url": "https://docs.spring.io/spring-boot/reference/features/index.html"},
+              {"label": "Spring Security: OAuth2 Resource Server (JWT)", "url": "https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/jwt.html"},
+              {"label": "Spring Security: Method security", "url": "https://docs.spring.io/spring-security/reference/servlet/authorization/method-security.html"},
+              {"label": "Spring Data JPA Reference", "url": "https://docs.spring.io/spring-data/jpa/reference/"},
+              {"label": "Spring Boot: Virtual threads (spring.threads.virtual.enabled)", "url": "https://docs.spring.io/spring-boot/reference/features/task-execution-and-scheduling.html"},
+              {"label": "Spring Boot: Observability with Micrometer", "url": "https://docs.spring.io/spring-boot/reference/actuator/observability.html"},
+              {"label": "Spring Boot: GraalVM native images", "url": "https://docs.spring.io/spring-boot/reference/packaging/native-image/index.html"},
+              {"label": "Spring Boot: Efficient container images (layers, buildpacks)", "url": "https://docs.spring.io/spring-boot/reference/packaging/container-images/index.html"},
+              {"label": "Spring for Apache Kafka Reference", "url": "https://docs.spring.io/spring-kafka/reference/"},
+              {"label": "Spring Cloud: Project overview", "url": "https://spring.io/projects/spring-cloud"},
+              {"label": "Resilience4j: Getting started with Spring Boot 3", "url": "https://resilience4j.readme.io/docs/getting-started-3"},
+              {"label": "Spring Initializr", "url": "https://start.spring.io/"},
+              {"label": "Spring Academy: Free Spring courses", "url": "https://spring.academy/courses"},
+              {"label": "Baeldung: Spring Boot tutorials", "url": "https://www.baeldung.com/spring-boot"},
+              {"label": "YouTube: Spring Tips and Spring I/O talks (Spring channel)", "url": "https://www.youtube.com/@SpringSourceDev"},
+              {"label": "YouTube search: Spring Boot 3 OAuth2 JWT resource server tutorial", "url": "https://www.youtube.com/results?search_query=Spring+Boot+3+OAuth2+resource+server+JWT+tutorial"},
+              {"label": "YouTube search: Spring Boot virtual threads performance", "url": "https://www.youtube.com/results?search_query=Spring+Boot+virtual+threads+performance+demo"},
+              {"label": "YouTube search: Spring Data JPA N+1 problem and performance", "url": "https://www.youtube.com/results?search_query=Spring+Data+JPA+N%2B1+problem+performance+tuning"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-java-cloud-native",
+            "name": "Java on Kubernetes & AWS",
+            "description": "Deploy and run a Spring Boot service on Kubernetes and AWS with the right JVM container settings, IAM, managed databases, and rollout practices.",
+            "outcomes": ["Tune the JVM for container CPU and memory limits", "Write Kubernetes Deployment, Service, ConfigMap, Secret, and probe manifests for a Spring Boot app", "Push an image to Amazon ECR and run it on ECS Fargate or EKS", "Use IAM roles instead of static credentials to reach S3, SQS, or Secrets Manager", "Connect to Amazon RDS or Aurora PostgreSQL with pooling and migrations", "Run a rolling update and roll back safely"],
+            "estimatedHours": 28,
+            "prerequisites": ["lang-java-deployment", "kubernetes-fundamentals", "aws-core-services"],
+            "resources": [
+              {"label": "Spring Boot: Kubernetes probes (liveness and readiness)", "url": "https://docs.spring.io/spring-boot/reference/actuator/endpoints.html#actuator.endpoints.kubernetes-probes"},
+              {"label": "Spring Boot: Graceful shutdown", "url": "https://docs.spring.io/spring-boot/reference/web/graceful-shutdown.html"},
+              {"label": "Spring Cloud Kubernetes", "url": "https://docs.spring.io/spring-cloud-kubernetes/reference/index.html"},
+              {"label": "Kubernetes: Configure a pod to use a ConfigMap", "url": "https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/"},
+              {"label": "Kubernetes: Horizontal Pod Autoscaling", "url": "https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/"},
+              {"label": "Oracle: Java in containers - JVM ergonomics (java.base)", "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/man/java.html"},
+              {"label": "Amazon EKS User Guide", "url": "https://docs.aws.amazon.com/eks/latest/userguide/"},
+              {"label": "Amazon EKS: IAM roles for service accounts and Pod Identity", "url": "https://docs.aws.amazon.com/eks/latest/userguide/pod-identities.html"},
+              {"label": "Amazon ECS Developer Guide (Fargate)", "url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/"},
+              {"label": "Amazon ECR User Guide", "url": "https://docs.aws.amazon.com/AmazonECR/latest/userguide/"},
+              {"label": "Amazon RDS User Guide: PostgreSQL", "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html"},
+              {"label": "AWS SDK for Java 2.x Developer Guide", "url": "https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/"},
+              {"label": "Spring Cloud AWS Reference", "url": "https://docs.awspring.io/spring-cloud-aws/docs/current/reference/html/index.html"},
+              {"label": "AWS Prescriptive Guidance: Java containers on AWS", "url": "https://docs.aws.amazon.com/prescriptive-guidance/"},
+              {"label": "YouTube: TechWorld with Nana – Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours] (3:56:00)", "url": "https://www.youtube.com/watch?v=X48VuDVv0do"},
+              {"label": "YouTube search: Deploy Spring Boot to Kubernetes tutorial", "url": "https://www.youtube.com/results?search_query=deploy+Spring+Boot+application+to+Kubernetes+tutorial"},
+              {"label": "YouTube search: Spring Boot on AWS ECS Fargate or EKS", "url": "https://www.youtube.com/results?search_query=Spring+Boot+AWS+ECS+Fargate+EKS+deployment+tutorial"},
+              {"label": "YouTube search: JVM memory settings in Docker and Kubernetes containers", "url": "https://www.youtube.com/results?search_query=JVM+memory+settings+Docker+Kubernetes+container+MaxRAMPercentage"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "lang-java-agentic",
+            "name": "Agentic Coding & AI for Java Developers",
+            "description": "Use coding agents effectively on Java and Spring codebases, and build LLM and agent features with Spring AI or LangChain4j.",
+            "outcomes": ["Give a coding agent a clear task, project context, and tests to verify against", "Write repository instructions (AGENTS.md or copilot-instructions.md) for a Maven or Gradle project", "Review and test agent-generated Java changes before merging", "Add an LLM call, RAG, or tool calling to a Spring Boot service using Spring AI or LangChain4j", "Expose or consume tools through the Model Context Protocol"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-java-frameworks", "ai-assisted-development"],
+            "resources": [
+              {"label": "Spring AI Reference", "url": "https://docs.spring.io/spring-ai/reference/"},
+              {"label": "Spring AI: Model Context Protocol (MCP) support", "url": "https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html"},
+              {"label": "LangChain4j: Java library for LLM applications", "url": "https://docs.langchain4j.dev/"},
+              {"label": "Model Context Protocol: Java SDK", "url": "https://github.com/modelcontextprotocol/java-sdk"},
+              {"label": "GitHub Docs: About GitHub Copilot coding agent", "url": "https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent"},
+              {"label": "GitHub Docs: Adding repository custom instructions for Copilot", "url": "https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions"},
+              {"label": "AGENTS.md: A README for coding agents", "url": "https://agents.md/"},
+              {"label": "Anthropic: Claude Code documentation", "url": "https://docs.claude.com/en/docs/claude-code/overview"},
+              {"label": "Anthropic: Building effective agents", "url": "https://www.anthropic.com/engineering/building-effective-agents"},
+              {"label": "YouTube: Spring AI talks and Spring Tips (Spring channel)", "url": "https://www.youtube.com/@SpringSourceDev"},
+              {"label": "YouTube search: Spring AI tutorial RAG tool calling", "url": "https://www.youtube.com/results?search_query=Spring+AI+tutorial+RAG+tool+calling"},
+              {"label": "YouTube search: LangChain4j tutorial Java LLM", "url": "https://www.youtube.com/results?search_query=LangChain4j+tutorial+Java+LLM+agents"},
+              {"label": "YouTube search: agentic coding Java Spring Boot Copilot agent mode", "url": "https://www.youtube.com/results?search_query=agentic+coding+Java+Spring+Boot+Copilot+agent+mode"}
+            ],
+            "priority": "optional",
+            "completed": false
+          },
+          {
             "id": "lang-java-production-readiness",
             "name": "Service Operations & Observability",
             "description": "Operate a deployed Java service using health signals, logs, metrics, and reliability practices.",
@@ -1151,7 +1264,7 @@
         "project": {
           "title": "Concurrent order service",
           "description": "Extend the tested REST API into a containerized service, deploy through CI, load-test a representative endpoint, and document its health signals and a measured performance improvement.",
-          "demonstrates": ["lang-java-concurrency", "lang-java-jvm-internals", "lang-java-deployment", "lang-java-production-readiness"]
+          "demonstrates": ["lang-java-concurrency", "lang-java-jvm-internals", "lang-java-deployment", "lang-java-spring-advanced", "lang-java-cloud-native", "lang-java-agentic", "lang-java-production-readiness"]
         }
       }
     ],

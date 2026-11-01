@@ -1,0 +1,638 @@
+{
+  "dbinternals": {
+    "title": "Database Internals",
+    "description": "Look inside a database engine: storage, indexes, query optimization, logging and recovery, and concurrency control.",
+    "audience": "For engineers who use databases daily and want to understand how they work and why queries behave as they do.",
+    "goal": "Explain and build the core components of a database storage engine.",
+    "relatedTracks": [
+      {"id": "databases", "reason": "Using SQL, modeling, and operating databases"},
+      {"id": "distributed", "reason": "Replication and consensus across nodes"},
+      {"id": "computer-org", "reason": "Caches and memory behavior that shape storage design"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Understand how data is laid out on disk and in memory.",
+        "skills": [
+          {
+            "id": "dbi-storage-pages",
+            "name": "Storage, Pages & Buffer Pools",
+            "description": "Learn how records are stored in pages and how a buffer pool caches them.",
+            "outcomes": ["Describe heap files, slotted pages, and row versus column layout", "Explain buffer pool replacement policies", "Estimate the I/O cost of a table scan"],
+            "estimatedHours": 14,
+            "prerequisites": ["indexing", "operating-systems"],
+            "resources": [
+              {"label": "CMU 15-445/645: Database Systems course", "url": "https://15445.courses.cs.cmu.edu/"},
+              {"label": "CMU Database Group YouTube channel", "url": "https://www.youtube.com/@CMUDatabaseGroup"},
+              {"label": "Database Internals (Alex Petrov) book site", "url": "https://www.databass.dev/"},
+              {"label": "PostgreSQL Docs: Database physical storage", "url": "https://www.postgresql.org/docs/current/storage.html"},
+              {"label": "The Internals of PostgreSQL", "url": "https://www.interdb.jp/pg/"},
+              {"label": "Wikipedia: Column-oriented DBMS", "url": "https://en.wikipedia.org/wiki/Column-oriented_DBMS"},
+              {"label": "YouTube search: database storage pages and buffer pool", "url": "https://www.youtube.com/results?search_query=CMU+database+systems+storage+pages+buffer+pool"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "dbi-btrees",
+            "name": "B-Trees & B+Trees",
+            "description": "Understand the index structure behind most relational databases.",
+            "outcomes": ["Insert and split nodes in a B+Tree by hand", "Explain why B+Trees suit disk-based storage", "Analyze range-scan and point-lookup cost"],
+            "estimatedHours": 14,
+            "prerequisites": ["dbi-storage-pages", "trees-graphs"],
+            "resources": [
+              {"label": "CMU 15-445: Tree indexes lecture", "url": "https://15445.courses.cs.cmu.edu/"},
+              {"label": "Use The Index, Luke: SQL indexing guide", "url": "https://use-the-index-luke.com/"},
+              {"label": "B-Tree Visualization (USF)", "url": "https://www.cs.usfca.edu/~galles/visualization/BTree.html"},
+              {"label": "B+Tree Visualization (USF)", "url": "https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html"},
+              {"label": "Wikipedia: B+ tree", "url": "https://en.wikipedia.org/wiki/B%2B_tree"},
+              {"label": "PostgreSQL Docs: B-Tree indexes", "url": "https://www.postgresql.org/docs/current/btree.html"},
+              {"label": "YouTube search: B+ tree explained for databases", "url": "https://www.youtube.com/results?search_query=B%2B+tree+explained+database+index+insert+split"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Disk-backed key-value store",
+          "description": "Build a page-based key-value store with a buffer pool and a B+Tree index, and benchmark point and range reads.",
+          "demonstrates": ["dbi-storage-pages", "dbi-btrees"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Compare write-optimized structures and understand how queries are planned.",
+        "skills": [
+          {
+            "id": "dbi-lsm",
+            "name": "LSM Trees & Write-Optimized Storage",
+            "description": "Study memtables, SSTables, compaction, and Bloom filters.",
+            "outcomes": ["Explain the LSM write and read path", "Compare compaction strategies and write amplification", "Choose between B-Tree and LSM engines for a workload"],
+            "estimatedHours": 14,
+            "prerequisites": ["dbi-btrees"],
+            "resources": [
+              {"label": "RocksDB Wiki: Overview and architecture", "url": "https://github.com/facebook/rocksdb/wiki"},
+              {"label": "LevelDB: Implementation notes", "url": "https://github.com/google/leveldb/blob/main/doc/impl.md"},
+              {"label": "Designing Data-Intensive Applications: Storage and retrieval", "url": "https://dataintensive.net/"},
+              {"label": "Wikipedia: Log-structured merge-tree", "url": "https://en.wikipedia.org/wiki/Log-structured_merge-tree"},
+              {"label": "Wikipedia: Bloom filter", "url": "https://en.wikipedia.org/wiki/Bloom_filter"},
+              {"label": "YouTube search: LSM tree explained compaction", "url": "https://www.youtube.com/results?search_query=LSM+tree+explained+memtable+SSTable+compaction"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "dbi-query-optimizer",
+            "name": "Query Processing & Optimization",
+            "description": "See how SQL becomes a plan, and how the optimizer chooses join order and access paths.",
+            "outcomes": ["Read an EXPLAIN ANALYZE plan", "Explain nested-loop, hash, and merge joins", "Describe cost models, statistics, and cardinality estimation"],
+            "estimatedHours": 18,
+            "prerequisites": ["dbi-btrees", "sql-fundamentals"],
+            "resources": [
+              {"label": "CMU 15-445: Query optimization lectures", "url": "https://15445.courses.cs.cmu.edu/"},
+              {"label": "PostgreSQL Docs: Using EXPLAIN", "url": "https://www.postgresql.org/docs/current/using-explain.html"},
+              {"label": "PostgreSQL Docs: Planner statistics", "url": "https://www.postgresql.org/docs/current/planner-stats.html"},
+              {"label": "Use The Index, Luke: Join operations", "url": "https://use-the-index-luke.com/sql/join"},
+              {"label": "Wikipedia: Query optimization", "url": "https://en.wikipedia.org/wiki/Query_optimization"},
+              {"label": "YouTube search: how query optimizers work join ordering", "url": "https://www.youtube.com/results?search_query=how+database+query+optimizer+works+join+ordering+cost+model"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Storage engine comparison",
+          "description": "Add an LSM engine next to your B+Tree store, compare write and read performance, and explain the plans of five queries on a real database.",
+          "demonstrates": ["dbi-lsm", "dbi-query-optimizer"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Provide durability and isolation under concurrency.",
+        "skills": [
+          {
+            "id": "dbi-wal-recovery",
+            "name": "Write-Ahead Logging & Crash Recovery",
+            "description": "Guarantee durability with logging, checkpoints, and the ARIES recovery algorithm.",
+            "outcomes": ["Explain write-ahead logging and group commit", "Describe the analysis, redo, and undo phases of ARIES", "Test recovery by killing a process mid-write"],
+            "estimatedHours": 18,
+            "prerequisites": ["dbi-storage-pages", "transactions"],
+            "resources": [
+              {"label": "CMU 15-445: Logging and recovery lectures", "url": "https://15445.courses.cs.cmu.edu/"},
+              {"label": "PostgreSQL Docs: Write-Ahead Logging", "url": "https://www.postgresql.org/docs/current/wal-intro.html"},
+              {"label": "SQLite: How SQLite implements atomic commit", "url": "https://www.sqlite.org/atomiccommit.html"},
+              {"label": "SQLite: Write-ahead logging", "url": "https://www.sqlite.org/wal.html"},
+              {"label": "Wikipedia: Algorithms for Recovery and Isolation Exploiting Semantics", "url": "https://en.wikipedia.org/wiki/Algorithms_for_Recovery_and_Isolation_Exploiting_Semantics"},
+              {"label": "YouTube search: ARIES recovery algorithm explained", "url": "https://www.youtube.com/results?search_query=ARIES+recovery+algorithm+write+ahead+logging+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "dbi-mvcc",
+            "name": "Concurrency Control & MVCC",
+            "description": "Compare locking, timestamp ordering, and multi-version concurrency control.",
+            "outcomes": ["Explain snapshot isolation and write skew", "Compare two-phase locking and MVCC", "Reproduce an isolation anomaly in a real database"],
+            "estimatedHours": 18,
+            "prerequisites": ["transactions", "dbi-wal-recovery"],
+            "resources": [
+              {"label": "CMU 15-445: Concurrency control lectures", "url": "https://15445.courses.cs.cmu.edu/"},
+              {"label": "PostgreSQL Docs: Concurrency control and MVCC", "url": "https://www.postgresql.org/docs/current/mvcc.html"},
+              {"label": "PostgreSQL Docs: Transaction isolation", "url": "https://www.postgresql.org/docs/current/transaction-iso.html"},
+              {"label": "Jepsen: Consistency models map", "url": "https://jepsen.io/consistency"},
+              {"label": "A Critique of ANSI SQL Isolation Levels (paper)", "url": "https://arxiv.org/abs/cs/0701157"},
+              {"label": "YouTube search: MVCC and snapshot isolation explained", "url": "https://www.youtube.com/results?search_query=MVCC+snapshot+isolation+write+skew+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Crash-safe transactional store",
+          "description": "Add a write-ahead log and snapshot reads to your store, then test crash recovery and concurrent transactions.",
+          "demonstrates": ["dbi-wal-recovery", "dbi-mvcc"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Build a small database engine",
+      "description": "Combine storage, indexes, a query executor, logging, and transactions into a small database and document the design trade-offs."
+    }
+  },
+  "hci": {
+    "title": "Human-Computer Interaction",
+    "description": "Study how people perceive, think, and act when using computers, and how to design and evaluate interactive systems with evidence.",
+    "audience": "For developers and designers who want a scientific basis for interface decisions.",
+    "goal": "Design, run, and analyze a user study that improves an interface.",
+    "relatedTracks": [
+      {"id": "ux", "reason": "Practical design process and tools"},
+      {"id": "datascience", "reason": "Statistics for analyzing studies"},
+      {"id": "genai", "reason": "Designing AI-powered products"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Learn the human capabilities and principles behind good interfaces.",
+        "skills": [
+          {
+            "id": "hci-human-factors",
+            "name": "Human Factors: Perception, Cognition & Motor Skills",
+            "description": "Understand attention, memory, perception, and models like Fitts's law.",
+            "outcomes": ["Apply Fitts's law and Hick's law to a layout", "Explain working memory limits and cognitive load", "Describe Gestalt principles"],
+            "estimatedHours": 10,
+            "prerequisites": ["usability-principles"],
+            "resources": [
+              {"label": "Interaction Design Foundation: Human-computer interaction", "url": "https://www.interaction-design.org/literature/topics/human-computer-interaction"},
+              {"label": "Laws of UX: Collection of design principles", "url": "https://lawsofux.com/"},
+              {"label": "Nielsen Norman Group: Articles", "url": "https://www.nngroup.com/articles/"},
+              {"label": "Wikipedia: Fitts's law", "url": "https://en.wikipedia.org/wiki/Fitts%27s_law"},
+              {"label": "Wikipedia: Cognitive load", "url": "https://en.wikipedia.org/wiki/Cognitive_load"},
+              {"label": "YouTube search: Fitts's law and Hick's law explained", "url": "https://www.youtube.com/results?search_query=Fitts%27s+law+Hick%27s+law+explained+interface+design"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "hci-interaction-principles",
+            "name": "Interaction Design Principles & Mental Models",
+            "description": "Apply affordances, feedback, mapping, and error prevention to real interfaces.",
+            "outcomes": ["Critique an interface with Norman's principles", "Design for error prevention and recovery", "Explain conceptual and mental models"],
+            "estimatedHours": 10,
+            "prerequisites": ["hci-human-factors"],
+            "resources": [
+              {"label": "Nielsen Norman Group: 10 usability heuristics", "url": "https://www.nngroup.com/articles/ten-usability-heuristics/"},
+              {"label": "The Design of Everyday Things (Don Norman)", "url": "https://www.nngroup.com/books/design-everyday-things-revised/"},
+              {"label": "Material Design: Interaction guidelines", "url": "https://m3.material.io/foundations"},
+              {"label": "Apple Human Interface Guidelines", "url": "https://developer.apple.com/design/human-interface-guidelines/"},
+              {"label": "Wikipedia: Affordance", "url": "https://en.wikipedia.org/wiki/Affordance"},
+              {"label": "YouTube search: Don Norman design of everyday things principles", "url": "https://www.youtube.com/results?search_query=Don+Norman+design+of+everyday+things+principles+affordances"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Heuristic evaluation report",
+          "description": "Evaluate a real application against usability heuristics and recommend prioritized fixes.",
+          "demonstrates": ["hci-human-factors", "hci-interaction-principles"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Gather and evaluate evidence about real users.",
+        "skills": [
+          {
+            "id": "hci-research-methods",
+            "name": "HCI Research Methods",
+            "description": "Plan interviews, surveys, contextual inquiry, and diary studies.",
+            "outcomes": ["Write a study plan with research questions", "Run an interview and code the findings", "Recruit participants and handle consent"],
+            "estimatedHours": 14,
+            "prerequisites": ["hci-interaction-principles", "user-research"],
+            "resources": [
+              {"label": "Interaction Design Foundation: User research", "url": "https://www.interaction-design.org/literature/topics/user-research"},
+              {"label": "Nielsen Norman Group: User research methods", "url": "https://www.nngroup.com/articles/which-ux-research-methods/"},
+              {"label": "Research Methods in Human-Computer Interaction (Lazar et al.)", "url": "https://www.sciencedirect.com/book/9780128053904/research-methods-in-human-computer-interaction"},
+              {"label": "18F Methods: User research methods", "url": "https://methods.18f.gov/"},
+              {"label": "Wikipedia: Contextual inquiry", "url": "https://en.wikipedia.org/wiki/Contextual_inquiry"},
+              {"label": "YouTube search: HCI research methods interviews surveys", "url": "https://www.youtube.com/results?search_query=HCI+research+methods+interviews+surveys+contextual+inquiry"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "hci-evaluation",
+            "name": "Usability Evaluation Techniques",
+            "description": "Evaluate designs with cognitive walkthroughs, think-aloud tests, and metrics such as SUS.",
+            "outcomes": ["Run a think-aloud usability test", "Compute SUS and task success scores", "Report findings with severity ratings"],
+            "estimatedHours": 12,
+            "prerequisites": ["hci-research-methods", "usability-testing"],
+            "resources": [
+              {"label": "Usability.gov: System Usability Scale", "url": "https://www.usability.gov/how-to-and-tools/methods/system-usability-scale.html"},
+              {"label": "Nielsen Norman Group: Thinking aloud", "url": "https://www.nngroup.com/articles/thinking-aloud-the-1-usability-tool/"},
+              {"label": "Nielsen Norman Group: Cognitive walkthroughs", "url": "https://www.nngroup.com/articles/cognitive-walkthroughs/"},
+              {"label": "Maze: Usability testing guide", "url": "https://maze.co/guides/usability-testing/"},
+              {"label": "Wikipedia: System usability scale", "url": "https://en.wikipedia.org/wiki/System_usability_scale"},
+              {"label": "YouTube search: how to run a usability test think aloud", "url": "https://www.youtube.com/results?search_query=how+to+run+a+usability+test+think+aloud+protocol"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Usability study",
+          "description": "Plan and run a five-participant usability test of a prototype, compute SUS, and present prioritized recommendations.",
+          "demonstrates": ["hci-research-methods", "hci-evaluation"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Run controlled experiments and design human-AI interaction.",
+        "skills": [
+          {
+            "id": "hci-experiments",
+            "name": "Controlled Experiments & Quantitative Analysis",
+            "description": "Design within- and between-subject experiments and analyze results statistically.",
+            "outcomes": ["Choose an experimental design and counterbalance conditions", "Apply a t-test or ANOVA and report effect sizes", "Recognize threats to validity"],
+            "estimatedHours": 18,
+            "prerequisites": ["hci-evaluation", "datascience-hypothesis-testing"],
+            "resources": [
+              {"label": "Human-Computer Interaction: Experimental design (Interaction Design Foundation)", "url": "https://www.interaction-design.org/literature/topics/hci"},
+              {"label": "Research Methods in HCI: Controlled experiments", "url": "https://www.sciencedirect.com/book/9780128053904/research-methods-in-human-computer-interaction"},
+              {"label": "ACM CHI Conference: Papers and guidelines", "url": "https://chi.acm.org/"},
+              {"label": "SciPy Stats: Statistical tests", "url": "https://docs.scipy.org/doc/scipy/reference/stats.html"},
+              {"label": "Wikipedia: Design of experiments", "url": "https://en.wikipedia.org/wiki/Design_of_experiments"},
+              {"label": "YouTube search: within-subject vs between-subject experiment design", "url": "https://www.youtube.com/results?search_query=within-subject+vs+between-subject+experiment+design+HCI"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "hci-human-ai",
+            "name": "Human-AI Interaction Design",
+            "description": "Design AI features with calibrated trust, transparency, and graceful failure handling.",
+            "outcomes": ["Apply guidelines for human-AI interaction", "Design for uncertainty, explanation, and user control", "Evaluate over-reliance and trust"],
+            "estimatedHours": 12,
+            "prerequisites": ["hci-interaction-principles", "genai-llm-basics"],
+            "resources": [
+              {"label": "Microsoft: Guidelines for Human-AI Interaction", "url": "https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/"},
+              {"label": "Google PAIR: People + AI Guidebook", "url": "https://pair.withgoogle.com/guidebook/"},
+              {"label": "Nielsen Norman Group: AI and UX articles", "url": "https://www.nngroup.com/topic/ai/"},
+              {"label": "Apple HIG: Machine learning", "url": "https://developer.apple.com/design/human-interface-guidelines/machine-learning"},
+              {"label": "Wikipedia: Explainable artificial intelligence", "url": "https://en.wikipedia.org/wiki/Explainable_artificial_intelligence"},
+              {"label": "YouTube search: human-AI interaction design guidelines", "url": "https://www.youtube.com/results?search_query=human-AI+interaction+design+guidelines+trust+transparency"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Controlled experiment with an AI feature",
+          "description": "Compare two designs of an AI-assisted feature in a small experiment and report statistics and design implications.",
+          "demonstrates": ["hci-experiments", "hci-human-ai"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Evidence-based redesign",
+      "description": "Research, redesign, and evaluate an existing interface, and show with data that the redesign improves task success or satisfaction."
+    }
+  },
+  "ir": {
+    "title": "Information Retrieval & Search",
+    "description": "Learn how search systems index, rank, evaluate, and serve results, from inverted indexes to hybrid vector search.",
+    "audience": "For engineers building search, recommendation, or retrieval-augmented applications.",
+    "goal": "Build and evaluate a search system with measurable relevance.",
+    "relatedTracks": [
+      {"id": "genai", "reason": "Embeddings and retrieval-augmented generation"},
+      {"id": "dbinternals", "reason": "Index structures and storage"},
+      {"id": "cvnlp", "reason": "Text processing and language models"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Build an index and rank documents by relevance.",
+        "skills": [
+          {
+            "id": "ir-inverted-index",
+            "name": "Text Processing & Inverted Indexes",
+            "description": "Tokenize, normalize, and index text so queries can be answered quickly.",
+            "outcomes": ["Build an inverted index with postings lists", "Apply tokenization, stemming, and stop-word handling", "Answer boolean and phrase queries"],
+            "estimatedHours": 12,
+            "prerequisites": ["basic-data-structures"],
+            "resources": [
+              {"label": "Introduction to Information Retrieval (Manning, Raghavan, Schütze)", "url": "https://nlp.stanford.edu/IR-book/"},
+              {"label": "Stanford CS276: Information Retrieval and Web Search", "url": "https://web.stanford.edu/class/cs276/"},
+              {"label": "Lucene: Core documentation", "url": "https://lucene.apache.org/core/documentation.html"},
+              {"label": "Wikipedia: Inverted index", "url": "https://en.wikipedia.org/wiki/Inverted_index"},
+              {"label": "NLTK Book: Processing raw text", "url": "https://www.nltk.org/book/ch03.html"},
+              {"label": "YouTube search: inverted index explained search engine", "url": "https://www.youtube.com/results?search_query=inverted+index+explained+search+engine+tokenization"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ir-ranking",
+            "name": "Ranking: TF-IDF & BM25",
+            "description": "Score documents by term importance with TF-IDF and the BM25 model.",
+            "outcomes": ["Compute TF-IDF scores by hand", "Explain BM25 parameters and length normalization", "Implement ranked retrieval over a corpus"],
+            "estimatedHours": 10,
+            "prerequisites": ["ir-inverted-index"],
+            "resources": [
+              {"label": "Introduction to Information Retrieval: Scoring and term weighting", "url": "https://nlp.stanford.edu/IR-book/html/htmledition/scoring-term-weighting-and-the-vector-space-model-1.html"},
+              {"label": "Elasticsearch: Practical BM25 explanation", "url": "https://www.elastic.co/blog/practical-bm25-part-2-the-bm25-algorithm-and-its-variables"},
+              {"label": "Wikipedia: Okapi BM25", "url": "https://en.wikipedia.org/wiki/Okapi_BM25"},
+              {"label": "Wikipedia: tf-idf", "url": "https://en.wikipedia.org/wiki/Tf%E2%80%93idf"},
+              {"label": "rank_bm25: Python BM25 implementation", "url": "https://github.com/dorianbrown/rank_bm25"},
+              {"label": "YouTube search: TF-IDF and BM25 ranking explained", "url": "https://www.youtube.com/results?search_query=TF-IDF+BM25+ranking+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Mini search engine",
+          "description": "Index a document collection and serve ranked BM25 results from a simple web interface.",
+          "demonstrates": ["ir-inverted-index", "ir-ranking"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Measure relevance and use production search engines.",
+        "skills": [
+          {
+            "id": "ir-evaluation",
+            "name": "Search Evaluation & Relevance Judgments",
+            "description": "Measure search quality with precision, recall, MAP, and nDCG.",
+            "outcomes": ["Build a small judged test collection", "Compute precision@k, MAP, and nDCG", "Compare two rankers with a significance test"],
+            "estimatedHours": 10,
+            "prerequisites": ["ir-ranking", "model-evaluation"],
+            "resources": [
+              {"label": "Introduction to Information Retrieval: Evaluation in IR", "url": "https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-in-information-retrieval-1.html"},
+              {"label": "TREC: Text Retrieval Conference", "url": "https://trec.nist.gov/"},
+              {"label": "ir_datasets: Catalog of IR datasets", "url": "https://ir-datasets.com/"},
+              {"label": "ir-measures: Evaluation metrics library", "url": "https://ir-measur.es/"},
+              {"label": "Wikipedia: Discounted cumulative gain", "url": "https://en.wikipedia.org/wiki/Discounted_cumulative_gain"},
+              {"label": "YouTube search: nDCG MAP precision recall search evaluation", "url": "https://www.youtube.com/results?search_query=nDCG+MAP+precision+recall+search+evaluation+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ir-search-engines",
+            "name": "Search Engines in Practice",
+            "description": "Run Elasticsearch, OpenSearch, or Solr with analyzers, mappings, and relevance tuning.",
+            "outcomes": ["Define mappings and custom analyzers", "Tune relevance with boosts and filters", "Operate shards, replicas, and index lifecycle"],
+            "estimatedHours": 18,
+            "prerequisites": ["ir-ranking"],
+            "resources": [
+              {"label": "Elasticsearch Guide", "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html"},
+              {"label": "OpenSearch Documentation", "url": "https://opensearch.org/docs/latest/"},
+              {"label": "Apache Solr Reference Guide", "url": "https://solr.apache.org/guide/"},
+              {"label": "Relevant Search (Turnbull and Berryman)", "url": "https://www.manning.com/books/relevant-search"},
+              {"label": "Meilisearch: Documentation", "url": "https://www.meilisearch.com/docs"},
+              {"label": "YouTube search: Elasticsearch tutorial analyzers relevance tuning", "url": "https://www.youtube.com/results?search_query=Elasticsearch+tutorial+analyzers+relevance+tuning"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Measured search relevance",
+          "description": "Deploy a search engine on a real dataset, build a judged query set, and improve nDCG through documented tuning.",
+          "demonstrates": ["ir-evaluation", "ir-search-engines"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Combine lexical, semantic, and learned ranking at web scale.",
+        "skills": [
+          {
+            "id": "ir-vector-hybrid",
+            "name": "Vector & Hybrid Search",
+            "description": "Combine dense embeddings with lexical search using approximate nearest neighbor indexes.",
+            "outcomes": ["Explain HNSW and IVF indexes and their trade-offs", "Combine BM25 and vector scores with reciprocal rank fusion", "Evaluate recall versus latency"],
+            "estimatedHours": 16,
+            "prerequisites": ["ir-ranking", "genai-embeddings"],
+            "resources": [
+              {"label": "FAISS: Library for similarity search", "url": "https://github.com/facebookresearch/faiss/wiki"},
+              {"label": "Pinecone Learning Center: Vector search", "url": "https://www.pinecone.io/learn/"},
+              {"label": "pgvector: Vector search in PostgreSQL", "url": "https://github.com/pgvector/pgvector"},
+              {"label": "Efficient and robust ANN using HNSW (paper)", "url": "https://arxiv.org/abs/1603.09320"},
+              {"label": "Sentence Transformers: Semantic search", "url": "https://www.sbert.net/examples/applications/semantic-search/README.html"},
+              {"label": "YouTube search: HNSW vector search hybrid search explained", "url": "https://www.youtube.com/results?search_query=HNSW+vector+search+hybrid+search+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ir-web-search",
+            "name": "Web Search, PageRank & Learning to Rank",
+            "description": "Understand link analysis, crawling, and machine-learned ranking.",
+            "outcomes": ["Compute PageRank by power iteration", "Explain crawling, deduplication, and freshness", "Describe pointwise, pairwise, and listwise learning to rank"],
+            "estimatedHours": 16,
+            "prerequisites": ["ir-evaluation", "math-linear-algebra"],
+            "resources": [
+              {"label": "Introduction to Information Retrieval: Web search basics and link analysis", "url": "https://nlp.stanford.edu/IR-book/html/htmledition/web-search-basics-1.html"},
+              {"label": "The Anatomy of a Large-Scale Hypertextual Web Search Engine (Brin and Page)", "url": "http://infolab.stanford.edu/~backrub/google.html"},
+              {"label": "LightGBM: Learning to rank", "url": "https://lightgbm.readthedocs.io/en/latest/Parameters.html#objective"},
+              {"label": "Wikipedia: PageRank", "url": "https://en.wikipedia.org/wiki/PageRank"},
+              {"label": "Wikipedia: Learning to rank", "url": "https://en.wikipedia.org/wiki/Learning_to_rank"},
+              {"label": "YouTube search: PageRank algorithm explained", "url": "https://www.youtube.com/results?search_query=PageRank+algorithm+explained+power+iteration"}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Hybrid retrieval pipeline",
+          "description": "Combine BM25 and vector retrieval with a re-ranker, and report recall, nDCG, and latency for each stage.",
+          "demonstrates": ["ir-vector-hybrid", "ir-web-search"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Production-quality search",
+      "description": "Build a searchable application on a real corpus with hybrid retrieval, an offline evaluation suite, and a report of what improved relevance."
+    }
+  },
+  "ethics": {
+    "title": "Ethics & Research Skills",
+    "description": "Reason about the social impact of computing, understand licensing and sustainability, and read, run, and write research.",
+    "audience": "For every computer scientist, and especially those heading to graduate study or research roles.",
+    "goal": "Make and defend ethical engineering decisions and engage with the research literature.",
+    "relatedTracks": [
+      {"id": "security", "reason": "Privacy and responsible disclosure"},
+      {"id": "opensource", "reason": "Licenses and community norms"},
+      {"id": "techwriting", "reason": "Clear technical communication"},
+      {"id": "datascience", "reason": "Experiment design and statistics"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Recognize ethical and legal issues in everyday engineering decisions.",
+        "skills": [
+          {
+            "id": "ethics-computing",
+            "name": "Ethics in Computing",
+            "description": "Apply professional codes and ethical frameworks to real engineering cases.",
+            "outcomes": ["Apply the ACM Code of Ethics to a case", "Identify harms, stakeholders, and trade-offs in a design", "Describe bias, surveillance, and safety risks"],
+            "estimatedHours": 10,
+            "prerequisites": ["programming-fundamentals"],
+            "resources": [
+              {"label": "ACM Code of Ethics and Professional Conduct", "url": "https://www.acm.org/code-of-ethics"},
+              {"label": "Markkula Center: Technology and engineering practice ethics", "url": "https://www.scu.edu/ethics-in-technology-practice/"},
+              {"label": "Stanford Encyclopedia of Philosophy: Computer and information ethics", "url": "https://plato.stanford.edu/entries/ethics-computer/"},
+              {"label": "Embedded EthiCS at Harvard: Teaching modules", "url": "https://embeddedethics.seas.harvard.edu/"},
+              {"label": "Algorithmic Justice League: Resources", "url": "https://www.ajl.org/"},
+              {"label": "YouTube search: ethics in software engineering case studies", "url": "https://www.youtube.com/results?search_query=ethics+in+software+engineering+case+studies+ACM+code"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ethics-licensing-ip",
+            "name": "Licensing, Copyright & Intellectual Property",
+            "description": "Understand open-source licenses, copyright, patents, and the rules for using third-party code and data.",
+            "outcomes": ["Compare permissive and copyleft licenses", "Check dependency license compatibility", "Explain copyright, patents, and trade secrets at a basic level"],
+            "estimatedHours": 8,
+            "prerequisites": ["ethics-computing"],
+            "resources": [
+              {"label": "Choose a License", "url": "https://choosealicense.com/"},
+              {"label": "SPDX License List", "url": "https://spdx.org/licenses/"},
+              {"label": "Open Source Initiative: Licenses", "url": "https://opensource.org/licenses"},
+              {"label": "TLDRLegal: Software licenses explained", "url": "https://www.tldrlegal.com/"},
+              {"label": "REUSE: License compliance specification", "url": "https://reuse.software/"},
+              {"label": "YouTube search: open source licenses explained MIT GPL Apache", "url": "https://www.youtube.com/results?search_query=open+source+licenses+explained+MIT+GPL+Apache"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Ethics and license review",
+          "description": "Write an ethics assessment and a dependency license audit for one of your own projects.",
+          "demonstrates": ["ethics-computing", "ethics-licensing-ip"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Account for environmental impact and read research critically.",
+        "skills": [
+          {
+            "id": "ethics-green-software",
+            "name": "Sustainable & Green Software",
+            "description": "Measure and reduce the energy and carbon footprint of software and infrastructure.",
+            "outcomes": ["Explain carbon-aware computing and energy proportionality", "Measure the energy of a workload", "Propose efficiency improvements with evidence"],
+            "estimatedHours": 8,
+            "prerequisites": ["ethics-computing"],
+            "resources": [
+              {"label": "Green Software Foundation: Learning hub", "url": "https://learn.greensoftware.foundation/"},
+              {"label": "Green Software Foundation: Software Carbon Intensity specification", "url": "https://sci.greensoftware.foundation/"},
+              {"label": "Cloud Carbon Footprint: Open-source measurement tool", "url": "https://www.cloudcarbonfootprint.org/"},
+              {"label": "Scaphandre: Power consumption metrology agent", "url": "https://github.com/hubblo-org/scaphandre"},
+              {"label": "Website Carbon Calculator", "url": "https://www.websitecarbon.com/"},
+              {"label": "YouTube search: green software engineering carbon aware computing", "url": "https://www.youtube.com/results?search_query=green+software+engineering+carbon+aware+computing"}
+            ],
+            "priority": "optional",
+            "completed": false
+          },
+          {
+            "id": "ethics-reading-papers",
+            "name": "Reading & Evaluating Research Papers",
+            "description": "Read papers efficiently, assess their claims, and find the literature you need.",
+            "outcomes": ["Apply a multi-pass reading method", "Summarize a paper's claims, method, and limitations", "Search the literature with citation tools"],
+            "estimatedHours": 10,
+            "prerequisites": ["discrete-math-basics"],
+            "resources": [
+              {"label": "S. Keshav: How to Read a Paper", "url": "https://blizzard.cs.uwaterloo.ca/keshav/home/Papers/data/07/paper-reading.pdf"},
+              {"label": "arXiv: Computer science preprints", "url": "https://arxiv.org/archive/cs"},
+              {"label": "Semantic Scholar: AI-powered research tool", "url": "https://www.semanticscholar.org/"},
+              {"label": "ACM Digital Library", "url": "https://dl.acm.org/"},
+              {"label": "Papers We Love: Repository and chapters", "url": "https://paperswelove.org/"},
+              {"label": "Connected Papers: Explore related research", "url": "https://www.connectedpapers.com/"},
+              {"label": "YouTube search: how to read a research paper computer science", "url": "https://www.youtube.com/results?search_query=how+to+read+a+research+paper+computer+science"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Paper reproduction summary",
+          "description": "Read three related papers, summarize them in a comparison table, and present the open problems.",
+          "demonstrates": ["ethics-green-software", "ethics-reading-papers"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Run reproducible experiments and communicate findings.",
+        "skills": [
+          {
+            "id": "ethics-experiments-repro",
+            "name": "Experimental Methods & Reproducibility",
+            "description": "Design benchmarks and experiments that others can reproduce.",
+            "outcomes": ["Define hypotheses, baselines, and metrics", "Report results with variance and confidence intervals", "Package code, data, and environments for reproduction"],
+            "estimatedHours": 14,
+            "prerequisites": ["ethics-reading-papers", "datascience-hypothesis-testing"],
+            "resources": [
+              {"label": "ACM: Artifact review and badging", "url": "https://www.acm.org/publications/policies/artifact-review-and-badging-current"},
+              {"label": "The Turing Way: Guide to reproducible research", "url": "https://book.the-turing-way.org/"},
+              {"label": "Software Carpentry: Lessons", "url": "https://software-carpentry.org/lessons/"},
+              {"label": "DVC: Data version control", "url": "https://dvc.org/doc"},
+              {"label": "Zenodo: Open research repository", "url": "https://zenodo.org/"},
+              {"label": "YouTube search: reproducible research computational experiments", "url": "https://www.youtube.com/results?search_query=reproducible+research+computational+experiments+benchmarking"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ethics-research-writing",
+            "name": "Research Writing & Presentation",
+            "description": "Write papers, posters, and talks with a clear structure and honest claims.",
+            "outcomes": ["Structure a paper with abstract, method, results, and limitations", "Prepare a conference-style talk", "Give and respond to peer review"],
+            "estimatedHours": 14,
+            "prerequisites": ["ethics-experiments-repro", "techwriting-plain-language"],
+            "resources": [
+              {"label": "Simon Peyton Jones: How to write a great research paper", "url": "https://www.microsoft.com/en-us/research/academic-program/write-great-research-paper/"},
+              {"label": "Overleaf: Learn LaTeX", "url": "https://www.overleaf.com/learn"},
+              {"label": "ACM: Author guidelines and templates", "url": "https://www.acm.org/publications/authors/submissions"},
+              {"label": "IEEE: Author center", "url": "https://journals.ieeeauthorcenter.ieee.org/"},
+              {"label": "Zotero: Reference manager", "url": "https://www.zotero.org/support/"},
+              {"label": "YouTube search: how to write a computer science research paper", "url": "https://www.youtube.com/results?search_query=how+to+write+a+computer+science+research+paper+Simon+Peyton+Jones"}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Reproducible mini paper",
+          "description": "Run a benchmark study with a public repository and write a short paper-style report with a reproducibility package.",
+          "demonstrates": ["ethics-experiments-repro", "ethics-research-writing"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Responsible research project",
+      "description": "Carry out a small research project with an ethics statement, license choices, a reproducibility package, and a written report."
+    }
+  }
+}

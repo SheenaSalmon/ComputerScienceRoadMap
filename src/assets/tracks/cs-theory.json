@@ -1,0 +1,524 @@
+{
+  "mathcs": {
+    "title": "Mathematics for Computer Science",
+    "description": "Build the proof, counting, probability, and linear algebra skills that sit underneath algorithms, cryptography, graphics, and machine learning.",
+    "audience": "For learners who want the mathematical depth of a university computer science degree.",
+    "goal": "Read and write rigorous arguments and apply discrete math, probability, calculus, and linear algebra to computing problems.",
+    "relatedTracks": [
+      {"id": "foundations", "reason": "Data structures, algorithms, and theory of computation"},
+      {"id": "algorithms-adv", "reason": "Proof and counting skills applied to algorithm analysis"},
+      {"id": "ai", "reason": "Linear algebra, calculus, and probability behind machine learning"},
+      {"id": "security", "reason": "Number theory behind cryptography"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Write correct proofs and count possibilities systematically.",
+        "skills": [
+          {
+            "id": "math-proofs-induction",
+            "name": "Proof Techniques & Induction",
+            "description": "Prove statements using direct proof, contradiction, and mathematical induction.",
+            "outcomes": ["Choose between direct proof, contradiction, and contrapositive", "Prove properties of recursive programs by induction", "Spot gaps and errors in an informal argument"],
+            "estimatedHours": 16,
+            "prerequisites": ["discrete-math-basics"],
+            "resources": [
+              {"label": "MIT OpenCourseWare 6.042J: Mathematics for Computer Science", "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"},
+              {"label": "Book of Proof (Richard Hammack): free textbook", "url": "https://www.people.vcu.edu/~rhammack/BookOfProof/"},
+              {"label": "Stanford CS103: Mathematical Foundations of Computing", "url": "https://web.stanford.edu/class/cs103/"},
+              {"label": "Discrete Mathematics: An Open Introduction", "url": "https://discrete.openmathbooks.org/dmoi3/"},
+              {"label": "Khan Academy: Proof by induction", "url": "https://www.khanacademy.org/math/algebra-home/alg-series-and-induction/alg-induction/v/proof-by-induction"},
+              {"label": "Lean: Natural Number Game - learn proofs interactively", "url": "https://adam.math.hhu.de/#/g/leanprover-community/nng4"},
+              {"label": "YouTube search: MIT 6.042 proofs and induction lecture", "url": "https://www.youtube.com/results?search_query=MIT+6.042+mathematics+for+computer+science+induction+lecture"},
+              {"label": "YouTube search: how to write a proof by contradiction", "url": "https://www.youtube.com/results?search_query=proof+by+contradiction+computer+science+discrete+math"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "math-counting",
+            "name": "Counting & Combinatorics",
+            "description": "Count arrangements and subsets and reason about how many cases an algorithm must handle.",
+            "outcomes": ["Apply the sum and product rules, permutations, and combinations", "Use inclusion-exclusion and the pigeonhole principle", "Solve simple recurrences that describe counting problems"],
+            "estimatedHours": 14,
+            "prerequisites": ["math-proofs-induction"],
+            "resources": [
+              {"label": "Discrete Mathematics: An Open Introduction - counting chapters", "url": "https://discrete.openmathbooks.org/dmoi3/"},
+              {"label": "MIT OpenCourseWare 6.042J: Counting and generating functions", "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"},
+              {"label": "Khan Academy: Counting, permutations, and combinations", "url": "https://www.khanacademy.org/math/statistics-probability/counting-permutations-and-combinations"},
+              {"label": "Art of Problem Solving: Introduction to Counting & Probability", "url": "https://artofproblemsolving.com/"},
+              {"label": "Wikipedia: Pigeonhole principle", "url": "https://en.wikipedia.org/wiki/Pigeonhole_principle"},
+              {"label": "Wikipedia: Inclusion-exclusion principle", "url": "https://en.wikipedia.org/wiki/Inclusion%E2%80%93exclusion_principle"},
+              {"label": "YouTube search: combinatorics for computer science permutations combinations", "url": "https://www.youtube.com/results?search_query=combinatorics+for+computer+science+permutations+combinations"},
+              {"label": "YouTube search: inclusion exclusion principle explained", "url": "https://www.youtube.com/results?search_query=inclusion+exclusion+principle+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Proof and counting portfolio",
+          "description": "Write clear proofs for a set of recursive-program and counting claims, then check each one with a small program.",
+          "demonstrates": ["math-proofs-induction", "math-counting"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Model networks, uncertainty, and change with mathematics.",
+        "skills": [
+          {
+            "id": "math-graph-theory",
+            "name": "Graph Theory",
+            "description": "Study graphs as mathematical objects: connectivity, trees, matchings, coloring, and planarity.",
+            "outcomes": ["Prove basic facts about trees, cycles, and connectivity", "Model scheduling and matching problems as graphs", "Explain bipartite graphs and graph coloring"],
+            "estimatedHours": 18,
+            "prerequisites": ["math-counting", "trees-graphs"],
+            "resources": [
+              {"label": "Reinhard Diestel: Graph Theory - free electronic edition", "url": "https://diestel-graph-theory.com/"},
+              {"label": "Discrete Mathematics: An Open Introduction - graph theory", "url": "https://discrete.openmathbooks.org/dmoi3/"},
+              {"label": "MIT OpenCourseWare 6.042J: Graph theory lectures", "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"},
+              {"label": "Princeton Algorithms: Undirected Graphs", "url": "https://algs4.cs.princeton.edu/41graph/"},
+              {"label": "VisuAlgo: Graph data structures and traversal visualizations", "url": "https://visualgo.net/en"},
+              {"label": "Wikipedia: Glossary of graph theory", "url": "https://en.wikipedia.org/wiki/Glossary_of_graph_theory"},
+              {"label": "NetworkX: Python graph library documentation", "url": "https://networkx.org/documentation/stable/"},
+              {"label": "YouTube search: graph theory full course", "url": "https://www.youtube.com/results?search_query=graph+theory+full+course+trees+matching+coloring"},
+              {"label": "YouTube search: graph coloring and bipartite matching explained", "url": "https://www.youtube.com/results?search_query=graph+coloring+bipartite+matching+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "math-probability-cs",
+            "name": "Probability for Computer Science",
+            "description": "Use random variables, expectation, and concentration bounds to analyze randomized and data-driven systems.",
+            "outcomes": ["Compute expectation and variance with linearity of expectation", "Apply Markov, Chebyshev, and Chernoff-style bounds", "Analyze a randomized algorithm's expected behavior"],
+            "estimatedHours": 20,
+            "prerequisites": ["math-counting"],
+            "resources": [
+              {"label": "Harvard Stat 110: Probability course and lecture videos", "url": "https://stat110.hsites.harvard.edu/"},
+              {"label": "MIT OpenCourseWare 6.042J: Probability lectures", "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"},
+              {"label": "Seeing Theory: Visual introduction to probability and statistics", "url": "https://seeing-theory.brown.edu/"},
+              {"label": "Allen Downey: Think Bayes - Bayesian statistics in Python", "url": "https://allendowney.github.io/ThinkBayes2/"},
+              {"label": "Khan Academy: Probability", "url": "https://www.khanacademy.org/math/statistics-probability/probability-library"},
+              {"label": "Wikipedia: Linearity of expectation", "url": "https://en.wikipedia.org/wiki/Expected_value#Linearity"},
+              {"label": "Wikipedia: Chernoff bound", "url": "https://en.wikipedia.org/wiki/Chernoff_bound"},
+              {"label": "YouTube search: Harvard Stat 110 probability lecture", "url": "https://www.youtube.com/results?search_query=Harvard+Stat+110+probability+lecture+Joe+Blitzstein"},
+              {"label": "YouTube search: linearity of expectation randomized algorithm analysis", "url": "https://www.youtube.com/results?search_query=linearity+of+expectation+randomized+algorithms+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "math-calculus-optimization",
+            "name": "Calculus & Optimization Basics",
+            "description": "Understand derivatives, gradients, and optimization well enough to follow machine learning and graphics code.",
+            "outcomes": ["Compute derivatives and partial derivatives of common functions", "Explain gradient descent and what the learning rate controls", "Recognize convex problems and why they are easier to solve"],
+            "estimatedHours": 20,
+            "prerequisites": ["discrete-math-basics"],
+            "resources": [
+              {"label": "Khan Academy: Calculus 1", "url": "https://www.khanacademy.org/math/calculus-1"},
+              {"label": "MIT OpenCourseWare 18.01SC: Single Variable Calculus", "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/"},
+              {"label": "Paul's Online Math Notes: Calculus", "url": "https://tutorial.math.lamar.edu/"},
+              {"label": "Boyd and Vandenberghe: Convex Optimization - free textbook", "url": "https://web.stanford.edu/~boyd/cvxbook/"},
+              {"label": "Wikipedia: Gradient descent", "url": "https://en.wikipedia.org/wiki/Gradient_descent"},
+              {"label": "YouTube: 3Blue1Brown – The essence of calculus | Chapter 1", "url": "https://www.youtube.com/watch?v=WUvTyaaNkzM"},
+              {"label": "YouTube: 3Blue1Brown – Essence of calculus (full playlist)", "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"},
+              {"label": "YouTube search: gradient descent explained step by step", "url": "https://www.youtube.com/results?search_query=gradient+descent+explained+step+by+step"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Randomized algorithm analysis",
+          "description": "Implement a randomized algorithm and a simple optimizer, then prove or derive their expected behavior and compare it with experiments.",
+          "demonstrates": ["math-graph-theory", "math-probability-cs", "math-calculus-optimization"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Apply linear algebra and number theory to machine learning, graphics, and cryptography.",
+        "skills": [
+          {
+            "id": "math-linear-algebra",
+            "name": "Linear Algebra for Computer Science",
+            "description": "Work with vectors, matrices, transformations, and decompositions that power graphics, data analysis, and machine learning.",
+            "outcomes": ["Explain matrices as linear transformations", "Solve linear systems and interpret eigenvalues and eigenvectors", "Apply SVD or PCA to reduce the dimension of a dataset"],
+            "estimatedHours": 28,
+            "prerequisites": ["math-calculus-optimization"],
+            "resources": [
+              {"label": "MIT OpenCourseWare 18.06: Linear Algebra (Gilbert Strang)", "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/"},
+              {"label": "Immersive Linear Algebra: interactive textbook", "url": "http://immersivemath.com/ila/index.html"},
+              {"label": "Khan Academy: Linear algebra", "url": "https://www.khanacademy.org/math/linear-algebra"},
+              {"label": "NumPy: Linear algebra routines", "url": "https://numpy.org/doc/stable/reference/routines.linalg.html"},
+              {"label": "Mathematics for Machine Learning: free book", "url": "https://mml-book.github.io/"},
+              {"label": "Wikipedia: Singular value decomposition", "url": "https://en.wikipedia.org/wiki/Singular_value_decomposition"},
+              {"label": "YouTube: 3Blue1Brown – Vectors | Chapter 1, Essence of linear algebra", "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs"},
+              {"label": "YouTube: 3Blue1Brown – Essence of linear algebra (full playlist)", "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"},
+              {"label": "YouTube search: MIT 18.06 Gilbert Strang linear algebra lecture", "url": "https://www.youtube.com/results?search_query=MIT+18.06+Gilbert+Strang+linear+algebra+lecture"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "math-number-theory",
+            "name": "Number Theory & Modular Arithmetic",
+            "description": "Use divisibility, modular arithmetic, and primes, the mathematics behind hashing and public-key cryptography.",
+            "outcomes": ["Compute gcds and modular inverses with the extended Euclidean algorithm", "Use Fermat's and Euler's theorems", "Explain how RSA encryption relies on number theory"],
+            "estimatedHours": 18,
+            "prerequisites": ["math-proofs-induction"],
+            "resources": [
+              {"label": "Victor Shoup: A Computational Introduction to Number Theory and Algebra", "url": "https://shoup.net/ntb/"},
+              {"label": "MIT OpenCourseWare 6.042J: Number theory lectures", "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"},
+              {"label": "Khan Academy: Modular arithmetic and cryptography", "url": "https://www.khanacademy.org/computing/computer-science/cryptography"},
+              {"label": "Wikipedia: Euclidean algorithm", "url": "https://en.wikipedia.org/wiki/Euclidean_algorithm"},
+              {"label": "Wikipedia: Modular multiplicative inverse", "url": "https://en.wikipedia.org/wiki/Modular_multiplicative_inverse"},
+              {"label": "Wikipedia: RSA cryptosystem", "url": "https://en.wikipedia.org/wiki/RSA_(cryptosystem)"},
+              {"label": "Cryptopals Crypto Challenges", "url": "https://cryptopals.com/"},
+              {"label": "YouTube search: modular arithmetic and RSA explained", "url": "https://www.youtube.com/results?search_query=modular+arithmetic+RSA+explained+number+theory"},
+              {"label": "YouTube search: extended Euclidean algorithm explained", "url": "https://www.youtube.com/results?search_query=extended+Euclidean+algorithm+explained+modular+inverse"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Toy cryptosystem and PCA demo",
+          "description": "Build a small RSA implementation and a PCA data-compression demo, and explain the mathematics behind each.",
+          "demonstrates": ["math-linear-algebra", "math-number-theory"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Mathematics behind a real system",
+      "description": "Choose a system such as search ranking, encryption, or recommendations and write a short paper deriving the mathematics it depends on, with code that checks your claims."
+    }
+  },
+  "algorithms-adv": {
+    "title": "Advanced Algorithms & Data Structures",
+    "description": "Go beyond sorting and searching with dynamic programming, advanced data structures, graph algorithms, randomization, and intractability.",
+    "audience": "For learners who have finished core data structures and algorithms and want university-level depth.",
+    "goal": "Design, analyze, and implement efficient algorithms and recognize problems that are provably hard.",
+    "relatedTracks": [
+      {"id": "foundations", "reason": "Core data structures, algorithm design, and complexity"},
+      {"id": "mathcs", "reason": "Proofs, counting, and probability used in analysis"},
+      {"id": "interviews", "reason": "Pattern practice for coding interviews"},
+      {"id": "hpc", "reason": "Parallel algorithms and performance"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Solve problems by reusing subproblems and making locally optimal choices.",
+        "skills": [
+          {
+            "id": "algadv-dynamic-programming",
+            "name": "Dynamic Programming",
+            "description": "Solve overlapping subproblems with memoization and tabulation.",
+            "outcomes": ["Define a state and recurrence for a problem", "Convert recursion to memoized and bottom-up solutions", "Analyze time and space cost of a DP solution"],
+            "estimatedHours": 22,
+            "prerequisites": ["complexity-analysis", "algorithm-design"],
+            "resources": [
+              {"label": "MIT OpenCourseWare 6.006: Introduction to Algorithms - dynamic programming lectures", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"},
+              {"label": "Jeff Erickson: Algorithms - free textbook, dynamic programming chapter", "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/"},
+              {"label": "USACO Guide: Introduction to dynamic programming", "url": "https://usaco.guide/gold/intro-dp"},
+              {"label": "LeetCode Explore: Dynamic Programming card", "url": "https://leetcode.com/explore/learn/card/dynamic-programming/"},
+              {"label": "CP-Algorithms: Dynamic programming techniques", "url": "https://cp-algorithms.com/dynamic_programming/intro-to-dp.html"},
+              {"label": "Wikipedia: Dynamic programming", "url": "https://en.wikipedia.org/wiki/Dynamic_programming"},
+              {"label": "YouTube: freeCodeCamp.org – Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges", "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk"},
+              {"label": "YouTube search: MIT 6.006 dynamic programming lecture", "url": "https://www.youtube.com/results?search_query=MIT+6.006+dynamic+programming+lecture"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "algadv-greedy-divide",
+            "name": "Greedy Algorithms & Divide and Conquer",
+            "description": "Know when a locally optimal choice is globally optimal and how to analyze divide-and-conquer recurrences.",
+            "outcomes": ["Prove a greedy strategy correct with an exchange argument", "Solve recurrences with the Master theorem", "Implement merge-based and partition-based divide-and-conquer algorithms"],
+            "estimatedHours": 16,
+            "prerequisites": ["algorithm-design", "math-proofs-induction"],
+            "resources": [
+              {"label": "Jeff Erickson: Algorithms - recursion and greedy chapters", "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/"},
+              {"label": "MIT OpenCourseWare 6.006: Divide and conquer and recurrences", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"},
+              {"label": "USACO Guide: Greedy algorithms", "url": "https://usaco.guide/silver/greedy"},
+              {"label": "Wikipedia: Master theorem for divide-and-conquer recurrences", "url": "https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)"},
+              {"label": "Wikipedia: Greedy algorithm", "url": "https://en.wikipedia.org/wiki/Greedy_algorithm"},
+              {"label": "Princeton Algorithms: Mergesort", "url": "https://algs4.cs.princeton.edu/22mergesort/"},
+              {"label": "YouTube: MIT OpenCourseWare – 1. Algorithms and Computation", "url": "https://www.youtube.com/watch?v=ZA-tUyM_y7s"},
+              {"label": "YouTube search: greedy algorithms exchange argument proof", "url": "https://www.youtube.com/results?search_query=greedy+algorithms+exchange+argument+proof+interval+scheduling"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Algorithm technique workbook",
+          "description": "Solve ten problems with DP, greedy, and divide and conquer, and justify the correctness and running time of each.",
+          "demonstrates": ["algadv-dynamic-programming", "algadv-greedy-divide"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Use specialized structures and graph algorithms for large problems.",
+        "skills": [
+          {
+            "id": "algadv-advanced-data-structures",
+            "name": "Advanced Data Structures",
+            "description": "Use balanced trees, tries, union-find, and segment trees to answer queries efficiently.",
+            "outcomes": ["Explain how balanced search trees preserve O(log n) operations", "Implement a trie, union-find, and a segment tree", "Choose a structure from the required queries and updates"],
+            "estimatedHours": 24,
+            "prerequisites": ["trees-graphs", "algadv-greedy-divide"],
+            "resources": [
+              {"label": "Princeton Algorithms: Balanced Search Trees", "url": "https://algs4.cs.princeton.edu/33balanced/"},
+              {"label": "Princeton Algorithms: Tries", "url": "https://algs4.cs.princeton.edu/52trie/"},
+              {"label": "CP-Algorithms: Segment tree", "url": "https://cp-algorithms.com/data_structures/segment_tree.html"},
+              {"label": "CP-Algorithms: Disjoint set union (union-find)", "url": "https://cp-algorithms.com/data_structures/disjoint_set_union.html"},
+              {"label": "MIT OpenCourseWare 6.851: Advanced Data Structures", "url": "https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012/"},
+              {"label": "VisuAlgo: Data structure visualizations", "url": "https://visualgo.net/en"},
+              {"label": "USFCA: Data structure visualizations", "url": "https://www.cs.usfca.edu/~galles/visualization/Algorithms.html"},
+              {"label": "YouTube search: red-black trees and AVL trees explained", "url": "https://www.youtube.com/results?search_query=red+black+tree+AVL+tree+explained+rotations"},
+              {"label": "YouTube search: segment tree and union find tutorial", "url": "https://www.youtube.com/results?search_query=segment+tree+union+find+data+structures+tutorial"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "algadv-shortest-paths-flow",
+            "name": "Shortest Paths, Spanning Trees & Network Flow",
+            "description": "Solve routing, connection-cost, and capacity problems on weighted graphs.",
+            "outcomes": ["Choose Dijkstra, Bellman-Ford, or Floyd-Warshall for a graph", "Build minimum spanning trees with Prim and Kruskal", "Model matching and capacity problems as maximum flow"],
+            "estimatedHours": 24,
+            "prerequisites": ["trees-graphs", "algadv-dynamic-programming"],
+            "resources": [
+              {"label": "Princeton Algorithms: Minimum Spanning Trees", "url": "https://algs4.cs.princeton.edu/43mst/"},
+              {"label": "Princeton Algorithms: Shortest Paths", "url": "https://algs4.cs.princeton.edu/44sp/"},
+              {"label": "Princeton Algorithms: Maximum Flow", "url": "https://algs4.cs.princeton.edu/64maxflow/"},
+              {"label": "CP-Algorithms: Dijkstra's algorithm", "url": "https://cp-algorithms.com/graph/dijkstra.html"},
+              {"label": "CP-Algorithms: Bellman-Ford algorithm", "url": "https://cp-algorithms.com/graph/bellman_ford.html"},
+              {"label": "CP-Algorithms: Maximum flow - Dinic's algorithm", "url": "https://cp-algorithms.com/graph/dinic.html"},
+              {"label": "VisuAlgo: Single-source shortest paths visualization", "url": "https://visualgo.net/en/sssp"},
+              {"label": "Jeff Erickson: Algorithms - shortest paths and flow chapters", "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/"},
+              {"label": "YouTube search: Dijkstra and Bellman-Ford explained", "url": "https://www.youtube.com/results?search_query=Dijkstra+Bellman-Ford+Floyd-Warshall+explained"},
+              {"label": "YouTube search: maximum flow Ford-Fulkerson explained", "url": "https://www.youtube.com/results?search_query=maximum+flow+Ford-Fulkerson+min+cut+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Route and capacity planner",
+          "description": "Build a tool that finds shortest routes, minimum-cost networks, and maximum flows on a real graph dataset.",
+          "demonstrates": ["algadv-advanced-data-structures", "algadv-shortest-paths-flow"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Use randomness, approximation, and complexity theory when exact solutions are too costly.",
+        "skills": [
+          {
+            "id": "algadv-randomized-approximate",
+            "name": "Randomized, Approximation & Probabilistic Structures",
+            "description": "Trade exactness for speed and memory with randomized algorithms and probabilistic data structures.",
+            "outcomes": ["Analyze expected running time of randomized quicksort and hashing", "Implement a Bloom filter and a skip list", "Explain approximation ratios and when approximation is acceptable"],
+            "estimatedHours": 20,
+            "prerequisites": ["math-probability-cs", "algadv-advanced-data-structures"],
+            "resources": [
+              {"label": "Stanford CS168: The Modern Algorithmic Toolbox", "url": "https://web.stanford.edu/class/cs168/"},
+              {"label": "William Pugh: Skip Lists - a probabilistic alternative to balanced trees", "url": "https://15721.courses.cs.cmu.edu/spring2018/papers/08-oltpindexes1/pugh-skiplists-cacm1990.pdf"},
+              {"label": "Wikipedia: Bloom filter", "url": "https://en.wikipedia.org/wiki/Bloom_filter"},
+              {"label": "Wikipedia: HyperLogLog", "url": "https://en.wikipedia.org/wiki/HyperLogLog"},
+              {"label": "Redis Docs: Probabilistic data structures", "url": "https://redis.io/docs/latest/develop/data-types/probabilistic/"},
+              {"label": "Wikipedia: Approximation algorithm", "url": "https://en.wikipedia.org/wiki/Approximation_algorithm"},
+              {"label": "Jeff Erickson: Algorithms - randomized algorithms chapters", "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/"},
+              {"label": "YouTube search: Bloom filters explained", "url": "https://www.youtube.com/results?search_query=Bloom+filters+explained+probabilistic+data+structures"},
+              {"label": "YouTube search: randomized algorithms and approximation algorithms lecture", "url": "https://www.youtube.com/results?search_query=randomized+algorithms+approximation+algorithms+lecture"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "algadv-np-completeness",
+            "name": "NP-Completeness & Intractability",
+            "description": "Recognize hard problems, prove hardness by reduction, and decide how to cope with them.",
+            "outcomes": ["Define P, NP, NP-hard, and NP-complete", "Prove a problem NP-hard with a polynomial reduction", "Choose heuristics, SAT solvers, or approximation for an intractable problem"],
+            "estimatedHours": 22,
+            "prerequisites": ["theory-of-computation", "algadv-dynamic-programming"],
+            "resources": [
+              {"label": "Jeff Erickson: Algorithms - NP-hardness chapter", "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf"},
+              {"label": "Stanford CS103: Complexity theory", "url": "https://web.stanford.edu/class/cs103/"},
+              {"label": "Wikipedia: NP-completeness", "url": "https://en.wikipedia.org/wiki/NP-completeness"},
+              {"label": "Wikipedia: List of NP-complete problems", "url": "https://en.wikipedia.org/wiki/List_of_NP-complete_problems"},
+              {"label": "Complexity Zoo: catalog of complexity classes", "url": "https://complexityzoo.net/"},
+              {"label": "Google OR-Tools: Constraint programming and optimization solvers", "url": "https://developers.google.com/optimization"},
+              {"label": "Z3 Guide: SAT and SMT solving in practice", "url": "https://microsoft.github.io/z3guide/"},
+              {"label": "YouTube: Quanta Magazine – P vs NP Explained: Computer Science's Biggest Puzzle", "url": "https://www.youtube.com/watch?v=pQsdygaYcE4"},
+              {"label": "YouTube search: NP-completeness reductions 3-SAT lecture", "url": "https://www.youtube.com/results?search_query=NP-completeness+polynomial+reduction+3-SAT+lecture"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Hard problem toolkit",
+          "description": "Prove one problem NP-hard, then solve instances of it with a heuristic, an approximation, and a SAT or constraint solver and compare the results.",
+          "demonstrates": ["algadv-randomized-approximate", "algadv-np-completeness"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Algorithm engineering study",
+      "description": "Implement several algorithms for one hard or large-scale problem, benchmark them on realistic data, and write up correctness arguments and performance trade-offs."
+    }
+  },
+  "infotheory": {
+    "title": "Information Theory & Advanced Theory",
+    "description": "Learn how information is measured, compressed, protected from errors, and secured, and how geometric problems are solved.",
+    "audience": "For learners who want the theory behind compression, error correction, cryptography, and computational geometry.",
+    "goal": "Reason quantitatively about information and apply coding, security, and geometric algorithms.",
+    "relatedTracks": [
+      {"id": "mathcs", "reason": "Probability, linear algebra, and number theory"},
+      {"id": "security", "reason": "Practical cryptography and secure systems"},
+      {"id": "networking", "reason": "Error detection and correction in communication"},
+      {"id": "graphics", "reason": "Geometry for rendering and games"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Measure information and use it to compress data.",
+        "skills": [
+          {
+            "id": "info-entropy",
+            "name": "Information Theory & Entropy",
+            "description": "Measure uncertainty with entropy and understand the limits of communication and compression.",
+            "outcomes": ["Compute the entropy of a source", "Explain mutual information and channel capacity", "Relate entropy to the best possible compression"],
+            "estimatedHours": 14,
+            "prerequisites": ["datascience-probability"],
+            "resources": [
+              {"label": "Claude Shannon: A Mathematical Theory of Communication (1948)", "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"},
+              {"label": "David MacKay: Information Theory, Inference, and Learning Algorithms - free book", "url": "http://www.inference.org.uk/itila/book.html"},
+              {"label": "Khan Academy: Information theory", "url": "https://www.khanacademy.org/computing/computer-science/informationtheory"},
+              {"label": "Wikipedia: Entropy (information theory)", "url": "https://en.wikipedia.org/wiki/Entropy_(information_theory)"},
+              {"label": "Wikipedia: Mutual information", "url": "https://en.wikipedia.org/wiki/Mutual_information"},
+              {"label": "YouTube: 3Blue1Brown – Solving Wordle using information theory", "url": "https://www.youtube.com/watch?v=v68zYyaEmEA"},
+              {"label": "YouTube search: information theory entropy explained", "url": "https://www.youtube.com/results?search_query=information+theory+entropy+explained+Shannon"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "info-compression",
+            "name": "Data Compression",
+            "description": "Compress data losslessly with Huffman coding and dictionary methods, and understand lossy approaches.",
+            "outcomes": ["Build a Huffman code and compute its average length", "Explain LZ77 and how DEFLATE combines methods", "Compare lossless and lossy compression trade-offs"],
+            "estimatedHours": 14,
+            "prerequisites": ["info-entropy", "trees-graphs"],
+            "resources": [
+              {"label": "Princeton Algorithms: Data Compression", "url": "https://algs4.cs.princeton.edu/55compression/"},
+              {"label": "Matt Mahoney: Data Compression Explained", "url": "http://mattmahoney.net/dc/dce.html"},
+              {"label": "RFC 1951: DEFLATE Compressed Data Format Specification", "url": "https://www.rfc-editor.org/rfc/rfc1951"},
+              {"label": "RFC 7932: Brotli Compressed Data Format", "url": "https://www.rfc-editor.org/rfc/rfc7932"},
+              {"label": "Zstandard: Fast real-time compression algorithm", "url": "https://facebook.github.io/zstd/"},
+              {"label": "Wikipedia: Huffman coding", "url": "https://en.wikipedia.org/wiki/Huffman_coding"},
+              {"label": "YouTube search: Huffman coding and LZ77 compression explained", "url": "https://www.youtube.com/results?search_query=Huffman+coding+LZ77+compression+explained"},
+              {"label": "YouTube search: how JPEG compression works", "url": "https://www.youtube.com/results?search_query=how+JPEG+compression+works+DCT"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Compressor from scratch",
+          "description": "Write a Huffman compressor and compare its output size with the entropy bound and with gzip.",
+          "demonstrates": ["info-entropy", "info-compression"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Protect data from noise and attackers.",
+        "skills": [
+          {
+            "id": "info-error-correction",
+            "name": "Error Detection & Correction Codes",
+            "description": "Detect and repair transmission or storage errors with parity, Hamming, CRC, and Reed-Solomon codes.",
+            "outcomes": ["Implement a Hamming code and correct a single-bit error", "Explain CRC checks and where they are used", "Describe how Reed-Solomon codes protect storage and QR codes"],
+            "estimatedHours": 14,
+            "prerequisites": ["info-entropy", "math-linear-algebra"],
+            "resources": [
+              {"label": "David MacKay: Error-correcting codes chapters", "url": "http://www.inference.org.uk/itila/book.html"},
+              {"label": "Wikipedia: Hamming code", "url": "https://en.wikipedia.org/wiki/Hamming_code"},
+              {"label": "Wikipedia: Cyclic redundancy check", "url": "https://en.wikipedia.org/wiki/Cyclic_redundancy_check"},
+              {"label": "Wikipedia: Reed-Solomon error correction", "url": "https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction"},
+              {"label": "Khan Academy: Information theory - error correction", "url": "https://www.khanacademy.org/computing/computer-science/informationtheory"},
+              {"label": "YouTube: 3Blue1Brown – But what are Hamming codes? The origin of error correction", "url": "https://www.youtube.com/watch?v=X8jsijhllIA"},
+              {"label": "YouTube search: how QR codes use Reed-Solomon error correction", "url": "https://www.youtube.com/results?search_query=QR+codes+Reed-Solomon+error+correction+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "info-crypto-theory",
+            "name": "Cryptography Theory & Provable Security",
+            "description": "Understand security definitions, reductions, and the proofs that justify modern cryptographic constructions.",
+            "outcomes": ["State security definitions such as semantic security", "Explain why one-time pads are perfectly secret and impractical", "Describe zero-knowledge proofs and their applications"],
+            "estimatedHours": 24,
+            "prerequisites": ["math-number-theory", "applied-crypto"],
+            "resources": [
+              {"label": "Boneh and Shoup: A Graduate Course in Applied Cryptography - free book", "url": "https://toc.cryptobook.us/"},
+              {"label": "Stanford CS255: Introduction to Cryptography", "url": "https://crypto.stanford.edu/~dabo/cs255/"},
+              {"label": "Coursera: Cryptography I (Dan Boneh)", "url": "https://www.coursera.org/learn/crypto"},
+              {"label": "Cryptopals Crypto Challenges", "url": "https://cryptopals.com/"},
+              {"label": "Wikipedia: Provable security", "url": "https://en.wikipedia.org/wiki/Provable_security"},
+              {"label": "Wikipedia: Zero-knowledge proof", "url": "https://en.wikipedia.org/wiki/Zero-knowledge_proof"},
+              {"label": "NIST: Post-quantum cryptography project", "url": "https://csrc.nist.gov/projects/post-quantum-cryptography"},
+              {"label": "YouTube search: cryptography provable security lecture Dan Boneh", "url": "https://www.youtube.com/results?search_query=Dan+Boneh+cryptography+lecture+provable+security"},
+              {"label": "YouTube search: zero-knowledge proofs explained", "url": "https://www.youtube.com/results?search_query=zero+knowledge+proofs+explained+simply"}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Reliable channel simulator",
+          "description": "Simulate a noisy channel, protect messages with Hamming and CRC codes, and measure the error rates before and after correction.",
+          "demonstrates": ["info-error-correction", "info-crypto-theory"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Solve geometric problems with efficient algorithms.",
+        "skills": [
+          {
+            "id": "info-computational-geometry",
+            "name": "Computational Geometry",
+            "description": "Compute convex hulls, intersections, nearest neighbors, and spatial queries efficiently.",
+            "outcomes": ["Implement a convex hull and line-segment intersection test", "Explain Voronoi diagrams and Delaunay triangulations", "Use k-d trees or spatial indexes for nearest-neighbor queries"],
+            "estimatedHours": 22,
+            "prerequisites": ["algadv-advanced-data-structures", "math-linear-algebra"],
+            "resources": [
+              {"label": "de Berg et al.: Computational Geometry - Algorithms and Applications", "url": "https://www.cs.uu.nl/geobook/"},
+              {"label": "CP-Algorithms: Geometry - basic operations", "url": "https://cp-algorithms.com/geometry/basic-geometry.html"},
+              {"label": "CP-Algorithms: Convex hull construction", "url": "https://cp-algorithms.com/geometry/convex-hull.html"},
+              {"label": "Princeton Algorithms: Geometric Search and k-d trees", "url": "https://algs4.cs.princeton.edu/92kdtree/"},
+              {"label": "CGAL: Computational Geometry Algorithms Library", "url": "https://www.cgal.org/"},
+              {"label": "Shapely: Python geometry library documentation", "url": "https://shapely.readthedocs.io/"},
+              {"label": "Wikipedia: Voronoi diagram", "url": "https://en.wikipedia.org/wiki/Voronoi_diagram"},
+              {"label": "YouTube search: convex hull algorithms Graham scan explained", "url": "https://www.youtube.com/results?search_query=convex+hull+Graham+scan+explained"},
+              {"label": "YouTube search: Voronoi diagram and Delaunay triangulation explained", "url": "https://www.youtube.com/results?search_query=Voronoi+diagram+Delaunay+triangulation+explained"}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Spatial query engine",
+          "description": "Build a small library that answers hull, intersection, and nearest-neighbor queries and benchmark it against a naive approach.",
+          "demonstrates": ["info-computational-geometry"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Information systems study",
+      "description": "Build a pipeline that compresses, protects, and verifies data, and report how close each stage comes to its theoretical limit."
+    }
+  }
+}

@@ -1,0 +1,520 @@
+{
+  "computer-org": {
+    "title": "Digital Logic & Computer Organization",
+    "description": "Build a computer from logic gates up: number representation, assembly language, CPU pipelines, caches, and virtual memory.",
+    "audience": "For learners who want to understand exactly how hardware executes software.",
+    "goal": "Explain and reason about how a program runs on a processor and why memory behavior dominates performance.",
+    "relatedTracks": [
+      {"id": "foundations", "reason": "Computer architecture and operating systems overview"},
+      {"id": "systems", "reason": "C, memory layout, and performance profiling"},
+      {"id": "embedded", "reason": "Firmware that runs directly on hardware"},
+      {"id": "hpc", "reason": "Parallel hardware and performance tuning"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Represent data in binary and build combinational and sequential logic.",
+        "skills": [
+          {
+            "id": "org-digital-logic",
+            "name": "Digital Logic & Boolean Algebra",
+            "description": "Design circuits from gates, multiplexers, adders, latches, and flip-flops.",
+            "outcomes": ["Simplify Boolean expressions and build truth tables", "Design an adder and a multiplexer from gates", "Explain how latches and flip-flops store state"],
+            "estimatedHours": 20,
+            "prerequisites": ["discrete-math-basics"],
+            "resources": [
+              {"label": "Nand2Tetris: Build a computer from NAND gates", "url": "https://www.nand2tetris.org/"},
+              {"label": "Digital: Digital logic designer and circuit simulator", "url": "https://github.com/hneemann/Digital"},
+              {"label": "Logisim-evolution: Logic circuit simulator", "url": "https://github.com/logisim-evolution/logisim-evolution"},
+              {"label": "Wikipedia: Boolean algebra", "url": "https://en.wikipedia.org/wiki/Boolean_algebra"},
+              {"label": "Wikipedia: Karnaugh map", "url": "https://en.wikipedia.org/wiki/Karnaugh_map"},
+              {"label": "Wikipedia: Flip-flop (electronics)", "url": "https://en.wikipedia.org/wiki/Flip-flop_(electronics)"},
+              {"label": "YouTube: CrashCourse – Computer Science (full playlist)", "url": "https://www.youtube.com/playlist?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo"},
+              {"label": "YouTube: Ben Eater – Building an 8-bit breadboard computer! (full playlist)", "url": "https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU"},
+              {"label": "YouTube search: logic gates and Karnaugh maps explained", "url": "https://www.youtube.com/results?search_query=logic+gates+Karnaugh+map+digital+logic+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "org-number-representation",
+            "name": "Number Representation & Machine Arithmetic",
+            "description": "Understand how integers, floating-point numbers, and text are stored and why arithmetic can surprise you.",
+            "outcomes": ["Convert among binary, hexadecimal, and decimal", "Explain two's complement and integer overflow", "Describe IEEE 754 floating point and rounding error"],
+            "estimatedHours": 12,
+            "prerequisites": ["org-digital-logic"],
+            "resources": [
+              {"label": "CMU 15-213: Computer Systems - bits, bytes, and integers", "url": "https://www.cs.cmu.edu/~213/"},
+              {"label": "What Every Computer Scientist Should Know About Floating-Point Arithmetic", "url": "https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html"},
+              {"label": "Float Toy: Interactive IEEE 754 explorer", "url": "https://evanw.github.io/float-toy/"},
+              {"label": "Wikipedia: Two's complement", "url": "https://en.wikipedia.org/wiki/Two%27s_complement"},
+              {"label": "Wikipedia: IEEE 754", "url": "https://en.wikipedia.org/wiki/IEEE_754"},
+              {"label": "Unicode: UTF-8 and character encoding overview", "url": "https://www.unicode.org/standard/WhatIsUnicode.html"},
+              {"label": "YouTube search: two's complement and floating point explained", "url": "https://www.youtube.com/results?search_query=two%27s+complement+IEEE+754+floating+point+explained"},
+              {"label": "YouTube search: CMU 15-213 bits bytes and integers lecture", "url": "https://www.youtube.com/results?search_query=CMU+15-213+bits+bytes+integers+lecture"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Arithmetic logic unit",
+          "description": "Build an ALU in a logic simulator that adds, subtracts, and compares two's complement numbers, and document its truth tables.",
+          "demonstrates": ["org-digital-logic", "org-number-representation"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Program the processor directly and understand how it executes instructions.",
+        "skills": [
+          {
+            "id": "org-assembly-isa",
+            "name": "Assembly Language & Instruction Set Architecture",
+            "description": "Read and write assembly for an instruction set such as RISC-V or x86-64.",
+            "outcomes": ["Translate C control flow and functions into assembly", "Explain calling conventions and the stack frame", "Compare RISC and CISC design choices"],
+            "estimatedHours": 24,
+            "prerequisites": ["org-number-representation", "c-basics"],
+            "resources": [
+              {"label": "UC Berkeley CS61C: Great Ideas in Computer Architecture", "url": "https://cs61c.org/"},
+              {"label": "Venus: Online RISC-V simulator", "url": "https://venus.cs61c.org/"},
+              {"label": "RISC-V International: Specifications", "url": "https://riscv.org/technical/specifications/"},
+              {"label": "Compiler Explorer: See the assembly generated from C, C++, and Rust", "url": "https://godbolt.org/"},
+              {"label": "CMU 15-213: Machine-level programs", "url": "https://www.cs.cmu.edu/~213/"},
+              {"label": "Wikipedia: Calling convention", "url": "https://en.wikipedia.org/wiki/Calling_convention"},
+              {"label": "YouTube search: RISC-V assembly tutorial for beginners", "url": "https://www.youtube.com/results?search_query=RISC-V+assembly+tutorial+for+beginners"},
+              {"label": "YouTube search: x86-64 assembly stack frame and calling convention", "url": "https://www.youtube.com/results?search_query=x86-64+assembly+stack+frame+calling+convention"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "org-cpu-pipeline",
+            "name": "CPU Datapath, Control & Pipelining",
+            "description": "See how a processor fetches, decodes, executes, and overlaps instructions.",
+            "outcomes": ["Trace an instruction through a single-cycle datapath", "Identify data, control, and structural hazards in a pipeline", "Explain branch prediction and forwarding"],
+            "estimatedHours": 22,
+            "prerequisites": ["org-assembly-isa"],
+            "resources": [
+              {"label": "UC Berkeley CS61C: CPU datapath and pipelining", "url": "https://cs61c.org/"},
+              {"label": "Nand2Tetris: Computer architecture project", "url": "https://www.nand2tetris.org/"},
+              {"label": "Wikipedia: Instruction pipelining", "url": "https://en.wikipedia.org/wiki/Instruction_pipelining"},
+              {"label": "Wikipedia: Classic RISC pipeline", "url": "https://en.wikipedia.org/wiki/Classic_RISC_pipeline"},
+              {"label": "Wikipedia: Branch predictor", "url": "https://en.wikipedia.org/wiki/Branch_predictor"},
+              {"label": "Ben Eater: Building an 8-bit breadboard computer", "url": "https://eater.net/8bit"},
+              {"label": "YouTube: Ben Eater – Building an 8-bit breadboard computer! (full playlist)", "url": "https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU"},
+              {"label": "YouTube search: CPU pipeline hazards and branch prediction explained", "url": "https://www.youtube.com/results?search_query=CPU+pipeline+hazards+forwarding+branch+prediction+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Simple CPU emulator",
+          "description": "Write an emulator for a small instruction set and show an instruction trace for a recursive program.",
+          "demonstrates": ["org-assembly-isa", "org-cpu-pipeline"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Explain system performance through memory, virtual memory, I/O, and parallel hardware.",
+        "skills": [
+          {
+            "id": "org-memory-hierarchy",
+            "name": "Caches & the Memory Hierarchy",
+            "description": "Use locality and cache behavior to explain and improve program performance.",
+            "outcomes": ["Compute hit rate and average memory access time", "Explain direct-mapped and set-associative caches", "Rewrite a loop to improve cache locality and measure the change"],
+            "estimatedHours": 20,
+            "prerequisites": ["org-cpu-pipeline"],
+            "resources": [
+              {"label": "Ulrich Drepper: What Every Programmer Should Know About Memory", "url": "https://www.akkadia.org/drepper/cpumemory.pdf"},
+              {"label": "CMU 15-213: The memory hierarchy and cache memories", "url": "https://www.cs.cmu.edu/~213/"},
+              {"label": "UC Berkeley CS61C: Caches", "url": "https://cs61c.org/"},
+              {"label": "Wikipedia: CPU cache", "url": "https://en.wikipedia.org/wiki/CPU_cache"},
+              {"label": "Linux perf: Performance analysis tool", "url": "https://perfwiki.github.io/main/"},
+              {"label": "Valgrind Cachegrind: Cache and branch profiler", "url": "https://valgrind.org/docs/manual/cg-manual.html"},
+              {"label": "YouTube search: CPU cache locality explained", "url": "https://www.youtube.com/results?search_query=CPU+cache+locality+explained+programmers"},
+              {"label": "YouTube search: cache associativity and average memory access time", "url": "https://www.youtube.com/results?search_query=cache+associativity+average+memory+access+time+lecture"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "org-vm-io-multicore",
+            "name": "Virtual Memory, I/O & Multicore Hardware",
+            "description": "Understand address translation, device I/O, and how multiple cores share memory.",
+            "outcomes": ["Trace a virtual address through a page table and TLB", "Explain interrupts, DMA, and memory-mapped I/O", "Describe cache coherence and memory ordering across cores"],
+            "estimatedHours": 22,
+            "prerequisites": ["org-memory-hierarchy", "operating-systems"],
+            "resources": [
+              {"label": "OSTEP: Address translation, TLBs, and paging", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"},
+              {"label": "OSTEP: Virtual memory introduction", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf"},
+              {"label": "CMU 15-213: Virtual memory and exceptional control flow", "url": "https://www.cs.cmu.edu/~213/"},
+              {"label": "Wikipedia: Translation lookaside buffer", "url": "https://en.wikipedia.org/wiki/Translation_lookaside_buffer"},
+              {"label": "Wikipedia: Cache coherence", "url": "https://en.wikipedia.org/wiki/Cache_coherence"},
+              {"label": "Wikipedia: Direct memory access", "url": "https://en.wikipedia.org/wiki/Direct_memory_access"},
+              {"label": "Preshing on Programming: Memory ordering at compile time and run time", "url": "https://preshing.com/20120625/memory-ordering-at-compile-time/"},
+              {"label": "YouTube search: virtual memory page tables and TLB explained", "url": "https://www.youtube.com/results?search_query=virtual+memory+page+tables+TLB+explained"},
+              {"label": "YouTube search: cache coherence MESI protocol explained", "url": "https://www.youtube.com/results?search_query=cache+coherence+MESI+protocol+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Cache-aware performance study",
+          "description": "Benchmark matrix and linked-structure workloads, explain the differences with cache and TLB measurements, and optimize one.",
+          "demonstrates": ["org-memory-hierarchy", "org-vm-io-multicore"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "A working computer, explained",
+      "description": "Build or emulate a small computer end to end, run a compiled program on it, and explain how logic, the instruction set, the pipeline, and memory cooperate."
+    }
+  },
+  "pltheory": {
+    "title": "Programming Language Theory",
+    "description": "Study how languages are defined and reasoned about: paradigms, lambda calculus, type systems, formal semantics, and memory management.",
+    "audience": "For learners who want to understand why languages behave as they do and to design or evaluate them.",
+    "goal": "Specify the meaning of a small language, prove properties about it, and explain trade-offs in language design.",
+    "relatedTracks": [
+      {"id": "compilers", "reason": "Implementing parsers, type checkers, and code generators"},
+      {"id": "lang-functional", "reason": "Practical functional programming"},
+      {"id": "formalmethods", "reason": "Proofs and verification"},
+      {"id": "systems", "reason": "Ownership, memory, and low-level languages"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Compare language paradigms and understand computation as function application.",
+        "skills": [
+          {
+            "id": "pl-paradigms",
+            "name": "Programming Paradigms Compared",
+            "description": "Compare imperative, object-oriented, functional, logic, and concurrent styles and when each fits.",
+            "outcomes": ["Solve the same problem in two or more paradigms", "Explain how each paradigm handles state and abstraction", "Choose a paradigm for a problem and justify the choice"],
+            "estimatedHours": 16,
+            "prerequisites": ["programming-fundamentals"],
+            "resources": [
+              {"label": "Structure and Interpretation of Computer Programs (SICP)", "url": "https://web.mit.edu/6.001/6.037/sicp.pdf"},
+              {"label": "Crafting Interpreters: free online book", "url": "https://craftinginterpreters.com/"},
+              {"label": "Coursera: Programming Languages (Dan Grossman)", "url": "https://www.coursera.org/learn/programming-languages"},
+              {"label": "Wikipedia: Comparison of programming paradigms", "url": "https://en.wikipedia.org/wiki/Programming_paradigm"},
+              {"label": "Learn Prolog Now: logic programming introduction", "url": "https://lpn.swi-prolog.org/"},
+              {"label": "Rust Book: Object-oriented features and patterns", "url": "https://doc.rust-lang.org/book/ch18-00-oop.html"},
+              {"label": "YouTube search: programming paradigms explained", "url": "https://www.youtube.com/results?search_query=programming+paradigms+explained+imperative+functional+logic"},
+              {"label": "YouTube search: SICP lectures MIT", "url": "https://www.youtube.com/results?search_query=SICP+lectures+MIT+structure+and+interpretation+of+computer+programs"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "pl-lambda-calculus",
+            "name": "Lambda Calculus",
+            "description": "Learn the minimal model of computation behind functional languages.",
+            "outcomes": ["Reduce lambda expressions using beta reduction", "Encode booleans, numbers, and recursion with Church encodings", "Explain how lambda calculus relates to Turing machines"],
+            "estimatedHours": 16,
+            "prerequisites": ["math-proofs-induction", "pl-paradigms"],
+            "resources": [
+              {"label": "Programming Languages: Application and Interpretation (PLAI)", "url": "https://www.plai.org/"},
+              {"label": "Software Foundations: Logical Foundations and Programming Language Foundations", "url": "https://softwarefoundations.cis.upenn.edu/"},
+              {"label": "Wikipedia: Lambda calculus", "url": "https://en.wikipedia.org/wiki/Lambda_calculus"},
+              {"label": "Wikipedia: Church encoding", "url": "https://en.wikipedia.org/wiki/Church_encoding"},
+              {"label": "Lambda Calculus Interpreter: Interactive playground", "url": "https://lambdacalc.io/"},
+              {"label": "Stanford Encyclopedia of Philosophy: The Lambda Calculus", "url": "https://plato.stanford.edu/entries/lambda-calculus/"},
+              {"label": "YouTube: Computerphile – Lambda Calculus", "url": "https://www.youtube.com/watch?v=eis11j_iGMs"},
+              {"label": "YouTube: PapersWeLove – William Byrd on The Most Beautiful Program Ever Written", "url": "https://www.youtube.com/watch?v=OyfBQmvr2Hc"},
+              {"label": "YouTube search: Church encoding and Y combinator explained", "url": "https://www.youtube.com/results?search_query=Church+encoding+Y+combinator+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Lambda calculus evaluator",
+          "description": "Write an evaluator for lambda calculus, then use Church encodings to compute factorial.",
+          "demonstrates": ["pl-paradigms", "pl-lambda-calculus"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Define precisely what programs mean and which programs are safe.",
+        "skills": [
+          {
+            "id": "pl-type-systems",
+            "name": "Type Systems & Type Safety",
+            "description": "Study static types, inference, and the proof that well-typed programs do not go wrong.",
+            "outcomes": ["Write typing rules for a small language", "Explain progress and preservation", "Compare static and dynamic, strong and weak typing"],
+            "estimatedHours": 24,
+            "prerequisites": ["pl-lambda-calculus", "compilers-types-analysis"],
+            "resources": [
+              {"label": "Software Foundations: Programming Language Foundations - types", "url": "https://softwarefoundations.cis.upenn.edu/plf-current/index.html"},
+              {"label": "Programming Language Foundations in Agda (PLFA)", "url": "https://plfa.github.io/"},
+              {"label": "Robert Harper: Practical Foundations for Programming Languages", "url": "https://www.cs.cmu.edu/~rwh/pfpl.html"},
+              {"label": "Wikipedia: Type system", "url": "https://en.wikipedia.org/wiki/Type_system"},
+              {"label": "Wikipedia: Hindley-Milner type system", "url": "https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system"},
+              {"label": "TypeScript Handbook: Type system fundamentals", "url": "https://www.typescriptlang.org/docs/handbook/2/types-from-types.html"},
+              {"label": "YouTube search: type systems progress and preservation explained", "url": "https://www.youtube.com/results?search_query=type+systems+progress+preservation+type+safety+lecture"},
+              {"label": "YouTube search: Hindley-Milner type inference explained", "url": "https://www.youtube.com/results?search_query=Hindley-Milner+type+inference+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "pl-semantics",
+            "name": "Formal Semantics",
+            "description": "Define the meaning of a language with operational semantics and reason about program behavior.",
+            "outcomes": ["Write small-step and big-step operational semantics", "Prove a property of a language by induction on derivations", "Explain denotational and axiomatic semantics at a high level"],
+            "estimatedHours": 22,
+            "prerequisites": ["pl-lambda-calculus", "math-proofs-induction"],
+            "resources": [
+              {"label": "Software Foundations: Programming Language Foundations - semantics", "url": "https://softwarefoundations.cis.upenn.edu/plf-current/index.html"},
+              {"label": "Programming Language Foundations in Agda (PLFA)", "url": "https://plfa.github.io/"},
+              {"label": "Robert Harper: Practical Foundations for Programming Languages", "url": "https://www.cs.cmu.edu/~rwh/pfpl.html"},
+              {"label": "Crafting Interpreters: Evaluating expressions", "url": "https://craftinginterpreters.com/evaluating-expressions.html"},
+              {"label": "Wikipedia: Operational semantics", "url": "https://en.wikipedia.org/wiki/Operational_semantics"},
+              {"label": "Wikipedia: Hoare logic", "url": "https://en.wikipedia.org/wiki/Hoare_logic"},
+              {"label": "YouTube search: operational semantics small-step big-step lecture", "url": "https://www.youtube.com/results?search_query=operational+semantics+small-step+big-step+lecture"},
+              {"label": "YouTube search: Oregon Programming Languages Summer School lectures", "url": "https://www.youtube.com/results?search_query=Oregon+Programming+Languages+Summer+School+lectures"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Typed mini language",
+          "description": "Define a small typed language with its typing rules and operational semantics, implement its type checker and interpreter, and test progress and preservation.",
+          "demonstrates": ["pl-type-systems", "pl-semantics"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Understand runtime memory management and expressive type features.",
+        "skills": [
+          {
+            "id": "pl-memory-gc",
+            "name": "Memory Management & Garbage Collection",
+            "description": "Compare manual management, ownership, reference counting, and tracing garbage collection.",
+            "outcomes": ["Explain mark-sweep, copying, and generational collection", "Compare reference counting, ownership, and tracing in real languages", "Diagnose GC pauses and tune a runtime"],
+            "estimatedHours": 20,
+            "prerequisites": ["memory-model", "org-memory-hierarchy"],
+            "resources": [
+              {"label": "The Garbage Collection Handbook", "url": "https://gchandbook.org/"},
+              {"label": "A Guide to the Go Garbage Collector", "url": "https://go.dev/doc/gc-guide"},
+              {"label": "Java Platform: Garbage Collection Tuning Guide (JDK 21)", "url": "https://docs.oracle.com/en/java/javase/21/gctuning/"},
+              {"label": "The Rust Book: Understanding ownership", "url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html"},
+              {"label": "Python Docs: gc - garbage collector interface", "url": "https://docs.python.org/3/library/gc.html"},
+              {"label": "Wikipedia: Tracing garbage collection", "url": "https://en.wikipedia.org/wiki/Tracing_garbage_collection"},
+              {"label": "YouTube search: how garbage collection works mark sweep generational", "url": "https://www.youtube.com/results?search_query=how+garbage+collection+works+mark+sweep+generational"},
+              {"label": "YouTube search: Rust ownership vs garbage collection", "url": "https://www.youtube.com/results?search_query=Rust+ownership+vs+garbage+collection+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "pl-advanced-types",
+            "name": "Polymorphism & Advanced Type Features",
+            "description": "Study parametric and ad hoc polymorphism, algebraic data types, subtyping, and dependent types.",
+            "outcomes": ["Explain parametric polymorphism, type classes, and subtyping", "Model data with algebraic data types and pattern matching", "Describe how dependent types express program specifications"],
+            "estimatedHours": 22,
+            "prerequisites": ["pl-type-systems", "lang-functional-algebraic-types"],
+            "resources": [
+              {"label": "Programming Language Foundations in Agda (PLFA)", "url": "https://plfa.github.io/"},
+              {"label": "Software Foundations: Programming Language Foundations - subtyping and polymorphism", "url": "https://softwarefoundations.cis.upenn.edu/plf-current/index.html"},
+              {"label": "Theorem Proving in Lean 4: Dependent type theory", "url": "https://lean-lang.org/theorem_proving_in_lean4/dependent_type_theory.html"},
+              {"label": "Haskell Wiki: Typeclassopedia", "url": "https://wiki.haskell.org/Typeclassopedia"},
+              {"label": "Rust Book: Traits and generics", "url": "https://doc.rust-lang.org/book/ch10-00-generics.html"},
+              {"label": "Wikipedia: Dependent type", "url": "https://en.wikipedia.org/wiki/Dependent_type"},
+              {"label": "YouTube search: parametric polymorphism type classes subtyping explained", "url": "https://www.youtube.com/results?search_query=parametric+polymorphism+type+classes+subtyping+explained"},
+              {"label": "YouTube search: dependent types introduction Idris Agda Lean", "url": "https://www.youtube.com/results?search_query=dependent+types+introduction+Idris+Agda+Lean"}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Language runtime comparison",
+          "description": "Compare memory behavior and type-system guarantees across three languages with a written analysis and benchmarks.",
+          "demonstrates": ["pl-memory-gc", "pl-advanced-types"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Design and specify a small language",
+      "description": "Design a small language with a type system, formal semantics, and a reference implementation, and prove at least one safety property."
+    }
+  },
+  "formalmethods": {
+    "title": "Formal Methods & Verification",
+    "description": "Specify systems precisely and use logic, model checking, and proof tools to show that designs and code behave as intended.",
+    "audience": "For engineers working on correctness-critical software and for learners who want rigorous reasoning about programs.",
+    "goal": "Specify a design, find its flaws with tools, and verify key properties.",
+    "relatedTracks": [
+      {"id": "mathcs", "reason": "Proof and logic foundations"},
+      {"id": "pltheory", "reason": "Semantics and type systems"},
+      {"id": "testing", "reason": "Testing techniques that complement verification"},
+      {"id": "distributed", "reason": "Verifying protocols and consensus"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Express program properties in logic and use automated solvers.",
+        "skills": [
+          {
+            "id": "fm-logic-sat-smt",
+            "name": "Logic, SAT & SMT Solvers",
+            "description": "Encode problems in propositional and first-order logic and solve them automatically.",
+            "outcomes": ["Translate requirements into logical formulas", "Use a SAT or SMT solver to find a counterexample or a solution", "Explain satisfiability, validity, and decidability"],
+            "estimatedHours": 16,
+            "prerequisites": ["discrete-math-basics"],
+            "resources": [
+              {"label": "Z3 Guide: Programming and SMT introduction", "url": "https://microsoft.github.io/z3guide/"},
+              {"label": "Z3 Guide: Interactive programming Z3 tutorial", "url": "https://microsoft.github.io/z3guide/programming/Z3%20Python%20-%20Readonly/Introduction"},
+              {"label": "Stanford CS103: Propositional and predicate logic", "url": "https://web.stanford.edu/class/cs103/"},
+              {"label": "Logic and Proof (Avigad, Lewis, van Doorn): free textbook", "url": "https://leanprover.github.io/logic_and_proof/"},
+              {"label": "Wikipedia: Boolean satisfiability problem", "url": "https://en.wikipedia.org/wiki/Boolean_satisfiability_problem"},
+              {"label": "Wikipedia: Satisfiability modulo theories", "url": "https://en.wikipedia.org/wiki/Satisfiability_modulo_theories"},
+              {"label": "YouTube search: SAT and SMT solvers explained", "url": "https://www.youtube.com/results?search_query=SAT+SMT+solvers+Z3+explained+for+programmers"},
+              {"label": "YouTube search: propositional and predicate logic for computer science", "url": "https://www.youtube.com/results?search_query=propositional+predicate+logic+for+computer+science+lecture"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "fm-specs-invariants",
+            "name": "Specifications, Invariants & Contracts",
+            "description": "State what code must do with preconditions, postconditions, loop invariants, and contracts.",
+            "outcomes": ["Write pre- and postconditions for a function", "Find a loop invariant that proves a loop correct", "Add runtime contracts or assertions that enforce a specification"],
+            "estimatedHours": 14,
+            "prerequisites": ["fm-logic-sat-smt"],
+            "resources": [
+              {"label": "Wikipedia: Design by contract", "url": "https://en.wikipedia.org/wiki/Design_by_contract"},
+              {"label": "Wikipedia: Loop invariant", "url": "https://en.wikipedia.org/wiki/Loop_invariant"},
+              {"label": "Wikipedia: Hoare logic", "url": "https://en.wikipedia.org/wiki/Hoare_logic"},
+              {"label": "Dafny Docs: Specifications and verification", "url": "https://dafny.org/latest/DafnyRef/DafnyRef"},
+              {"label": "Python icontract: Design by contract library", "url": "https://icontract.readthedocs.io/"},
+              {"label": "Java JML: Java Modeling Language", "url": "https://www.openjml.org/"},
+              {"label": "Hillel Wayne: Blog on formal methods and specification", "url": "https://www.hillelwayne.com/"},
+              {"label": "YouTube search: loop invariants and Hoare logic explained", "url": "https://www.youtube.com/results?search_query=loop+invariants+Hoare+logic+explained"},
+              {"label": "YouTube search: design by contract preconditions postconditions", "url": "https://www.youtube.com/results?search_query=design+by+contract+preconditions+postconditions+invariants"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Specified and solver-checked algorithm",
+          "description": "Write contracts and loop invariants for a sorting or search routine and use a solver to find a counterexample for a deliberately buggy version.",
+          "demonstrates": ["fm-logic-sat-smt", "fm-specs-invariants"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Find design flaws with generated tests and model checking.",
+        "skills": [
+          {
+            "id": "fm-property-testing",
+            "name": "Property-Based Testing",
+            "description": "Test properties over many generated inputs instead of hand-picked examples.",
+            "outcomes": ["Write properties such as round-trip, idempotence, and invariants", "Use shrinking to find minimal failing inputs", "Test stateful systems with model-based tests"],
+            "estimatedHours": 14,
+            "prerequisites": ["fm-specs-invariants", "unit-testing"],
+            "resources": [
+              {"label": "Hypothesis: Property-based testing for Python", "url": "https://hypothesis.readthedocs.io/"},
+              {"label": "fast-check: Property-based testing for JavaScript and TypeScript", "url": "https://fast-check.dev/"},
+              {"label": "jqwik: Property-based testing for the JVM", "url": "https://jqwik.net/"},
+              {"label": "QuickCheck: Original Haskell property testing library", "url": "https://hackage.haskell.org/package/QuickCheck"},
+              {"label": "proptest: Property testing for Rust", "url": "https://proptest-rs.github.io/proptest/"},
+              {"label": "Hypothesis: What is property-based testing?", "url": "https://hypothesis.works/articles/what-is-hypothesis/"},
+              {"label": "YouTube search: property-based testing introduction", "url": "https://www.youtube.com/results?search_query=property-based+testing+introduction+Hypothesis+QuickCheck"},
+              {"label": "YouTube search: stateful property testing model-based", "url": "https://www.youtube.com/results?search_query=stateful+property+based+testing+model+based+shrinking"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "fm-model-checking",
+            "name": "Model Checking with TLA+ & Alloy",
+            "description": "Model concurrent and distributed designs and exhaustively check them before writing code.",
+            "outcomes": ["Specify a protocol in TLA+ or Alloy", "State safety and liveness properties", "Read a counterexample trace and fix the design"],
+            "estimatedHours": 24,
+            "prerequisites": ["fm-specs-invariants", "distributed-failures"],
+            "resources": [
+              {"label": "Learn TLA+: Practical introduction", "url": "https://learntla.com/"},
+              {"label": "TLA+ Home Page (Leslie Lamport)", "url": "https://lamport.azurewebsites.net/tla/tla.html"},
+              {"label": "Lamport: The TLA+ Video Course", "url": "https://lamport.azurewebsites.net/video/videos.html"},
+              {"label": "Alloy: Lightweight formal specification language", "url": "https://alloytools.org/"},
+              {"label": "Formal Software Design with Alloy 6", "url": "https://haslab.github.io/formal-software-design/"},
+              {"label": "AWS: Use of Formal Methods at Amazon Web Services", "url": "https://lamport.azurewebsites.net/tla/formal-methods-amazon.pdf"},
+              {"label": "TLA+ Examples: Specifications for known algorithms", "url": "https://github.com/tlaplus/Examples"},
+              {"label": "YouTube: TLA+ Video Course – Lamport TLA+ Course Lecture 1: Introduction to TLA+", "url": "https://www.youtube.com/watch?v=p54W-XOIEF8"},
+              {"label": "YouTube search: TLA+ model checking tutorial", "url": "https://www.youtube.com/results?search_query=TLA%2B+model+checking+tutorial+distributed+systems"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Model-checked protocol",
+          "description": "Specify a small protocol such as a lock service or two-phase commit, check its properties, and write property-based tests for the implementation.",
+          "demonstrates": ["fm-property-testing", "fm-model-checking"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Prove that real code satisfies its specification.",
+        "skills": [
+          {
+            "id": "fm-dafny-verification",
+            "name": "Deductive Verification with Dafny",
+            "description": "Write code and proofs together so that the verifier checks them automatically.",
+            "outcomes": ["Verify a data structure with pre/postconditions and invariants", "Use ghost code, lemmas, and termination measures", "Interpret and fix verifier failures"],
+            "estimatedHours": 24,
+            "prerequisites": ["fm-specs-invariants", "fm-logic-sat-smt"],
+            "resources": [
+              {"label": "Dafny: Documentation and reference manual", "url": "https://dafny.org/latest/"},
+              {"label": "Dafny: Online tutorial guide", "url": "https://dafny.org/latest/OnlineTutorial/guide"},
+              {"label": "Dafny: Verification of programs - getting started", "url": "https://dafny.org/latest/DafnyRef/DafnyRef"},
+              {"label": "Why3: Platform for deductive program verification", "url": "https://www.why3.org/"},
+              {"label": "Verus: Verified Rust code", "url": "https://verus-lang.github.io/verus/guide/"},
+              {"label": "seL4: Formally verified operating system kernel", "url": "https://sel4.systems/"},
+              {"label": "YouTube search: Dafny verification tutorial", "url": "https://www.youtube.com/results?search_query=Dafny+verification+tutorial+loop+invariants"},
+              {"label": "YouTube search: formally verified software seL4 CompCert", "url": "https://www.youtube.com/results?search_query=formally+verified+software+seL4+CompCert+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "fm-proof-assistants",
+            "name": "Proof Assistants: Lean & Coq",
+            "description": "Construct machine-checked proofs about programs and mathematics.",
+            "outcomes": ["Prove properties of lists and recursive functions by induction", "Use tactics to structure a proof", "Explain the Curry-Howard correspondence"],
+            "estimatedHours": 30,
+            "prerequisites": ["math-proofs-induction", "pl-lambda-calculus"],
+            "resources": [
+              {"label": "Theorem Proving in Lean 4", "url": "https://lean-lang.org/theorem_proving_in_lean4/"},
+              {"label": "Lean: Natural Number Game", "url": "https://adam.math.hhu.de/#/g/leanprover-community/nng4"},
+              {"label": "Software Foundations: Logical Foundations (Coq/Rocq)", "url": "https://softwarefoundations.cis.upenn.edu/lf-current/index.html"},
+              {"label": "Lean: Functional Programming in Lean", "url": "https://lean-lang.org/functional_programming_in_lean/"},
+              {"label": "Mathematics in Lean: Interactive textbook", "url": "https://leanprover-community.github.io/mathematics_in_lean/"},
+              {"label": "CompCert: Formally verified C compiler", "url": "https://compcert.org/"},
+              {"label": "YouTube search: Lean 4 theorem proving tutorial", "url": "https://www.youtube.com/results?search_query=Lean+4+theorem+proving+tutorial+for+beginners"},
+              {"label": "YouTube search: Curry-Howard correspondence explained", "url": "https://www.youtube.com/results?search_query=Curry-Howard+correspondence+explained"}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Verified data structure",
+          "description": "Verify a data structure such as a priority queue or sorted list, and write up the specification, proof effort, and bugs the verifier found.",
+          "demonstrates": ["fm-dafny-verification", "fm-proof-assistants"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Specify, check, and verify a critical component",
+      "description": "Model a critical algorithm or protocol, model-check the design, then verify or property-test its implementation, and report what each technique caught."
+    }
+  }
+}

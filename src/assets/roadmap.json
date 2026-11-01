@@ -585,6 +585,40 @@
             "completed": false
           },
           {
+            "id": "aws-core-services",
+            "name": "AWS Core Services & Well-Architected Design",
+            "description": "Build and secure applications on the core AWS services: identity, networking, compute, storage, databases, and messaging.",
+            "outcomes": ["Create IAM users, roles, and least-privilege policies and use roles instead of long-lived keys", "Design a VPC with public and private subnets, security groups, and a load balancer", "Choose among EC2, ECS/Fargate, Lambda, and EKS for a workload", "Use S3, RDS/Aurora, DynamoDB, SQS, and SNS appropriately", "Provision an environment with CloudFormation, CDK, or Terraform", "Apply the Well-Architected pillars to review a design", "Prepare for the AWS Certified Cloud Practitioner or Solutions Architect Associate exam"],
+            "estimatedHours": 40,
+            "prerequisites": ["cloud-fundamentals", "cloud-security"],
+            "resources": [
+              {"label": "AWS Skill Builder: Free digital courses and learning plans", "url": "https://skillbuilder.aws/"},
+              {"label": "AWS Documentation: Getting started resource center", "url": "https://aws.amazon.com/getting-started/"},
+              {"label": "AWS IAM User Guide: Security best practices", "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html"},
+              {"label": "Amazon VPC User Guide", "url": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"},
+              {"label": "Amazon EC2 User Guide", "url": "https://docs.aws.amazon.com/ec2/latest/userguide/concepts.html"},
+              {"label": "Amazon S3 User Guide", "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html"},
+              {"label": "AWS Lambda Developer Guide", "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"},
+              {"label": "Amazon RDS User Guide", "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html"},
+              {"label": "Amazon DynamoDB Developer Guide", "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html"},
+              {"label": "Amazon SQS Developer Guide", "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html"},
+              {"label": "Amazon CloudWatch User Guide", "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html"},
+              {"label": "AWS CDK Developer Guide", "url": "https://docs.aws.amazon.com/cdk/v2/guide/home.html"},
+              {"label": "AWS Well-Architected Framework", "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html"},
+              {"label": "AWS Architecture Center: Reference architectures", "url": "https://aws.amazon.com/architecture/"},
+              {"label": "AWS Certified Cloud Practitioner: Exam guide", "url": "https://aws.amazon.com/certification/certified-cloud-practitioner/"},
+              {"label": "AWS Certified Solutions Architect - Associate: Exam guide", "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"},
+              {"label": "AWS Free Tier", "url": "https://aws.amazon.com/free/"},
+              {"label": "YouTube: AWS Events channel (re:Invent sessions)", "url": "https://www.youtube.com/@AWSEventsChannel"},
+              {"label": "YouTube search: freeCodeCamp AWS Certified Cloud Practitioner CLF-C02 course", "url": "https://www.youtube.com/results?search_query=freeCodeCamp+AWS+Certified+Cloud+Practitioner+CLF-C02+full+course"},
+              {"label": "YouTube search: AWS Solutions Architect Associate full course", "url": "https://www.youtube.com/results?search_query=AWS+Solutions+Architect+Associate+SAA-C03+full+course"},
+              {"label": "YouTube search: AWS IAM roles and policies explained", "url": "https://www.youtube.com/results?search_query=AWS+IAM+roles+policies+explained+least+privilege"},
+              {"label": "YouTube search: AWS VPC networking explained subnets security groups", "url": "https://www.youtube.com/results?search_query=AWS+VPC+explained+subnets+security+groups+NAT+gateway"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
             "id": "kubernetes-fundamentals",
             "name": "Kubernetes Fundamentals",
             "description": "Run and operate containerized applications on a Kubernetes cluster.",
@@ -599,7 +633,7 @@
         "project": {
           "title": "Observable cloud application",
           "description": "Deploy a containerized service with infrastructure configuration, a monitoring view, a recovery runbook, and a cost estimate with budget alerts. Run it on Kubernetes with probes, resource limits, and a rollback test.",
-          "demonstrates": ["infrastructure-as-code", "monitoring", "reliability", "cloud-cost-finops", "kubernetes-fundamentals"]
+          "demonstrates": ["infrastructure-as-code", "monitoring", "reliability", "cloud-cost-finops", "aws-core-services", "kubernetes-fundamentals"]
         }
       }
     ],
@@ -620,18 +654,56 @@
         "skills": [
           {
             "id": "programming-fundamentals",
-            "name": "Programming Fundamentals",
+            "name": "Levels and skills",
             "description": "Learn variables, control flow, functions, and debugging in one general-purpose language.",
-            "outcomes": ["Write programs using loops, conditionals, and functions", "Read error messages and debug systematically", "Break a problem into smaller steps"],
+            "outcomes": [
+              "Write programs using loops, conditionals, and functions",
+              "Read error messages and debug systematically",
+              "Break a problem into smaller steps"
+            ],
             "estimatedHours": 40,
             "prerequisites": [],
             "resources": [
-              {"label": "Harvard CS50x: full introductory computer science course", "url": "https://cs50.harvard.edu/x/"},
-              {"label": "CS50x Week 0: computational thinking, algorithms, pseudocode, functions, and loops", "url": "https://cs50.harvard.edu/x/weeks/0/"},
-              {"label": "CS50x Week 1: variables, types, conditions, loops, and functions in C", "url": "https://cs50.harvard.edu/x/weeks/1/"},
-              {"label": "CS50x Problem Set 0: practice sequencing, events, conditions, and loops in Scratch", "url": "https://cs50.harvard.edu/x/psets/0/"},
-              { "label": "YouTube: CS50x 2025 Lecture 0 ? Scratch", "url": "https://www.youtube.com/watch?v=2WtPyqwTLKM "},
-              { "label": "YouTube: CS50x 2025 Lecture 1 ? C", "url": "https://www.youtube.com/watch?v=89cbCbWrM4U "}
+              {
+                "label": "Harvard CS50x: full introductory computer science course",
+                "url": "https://cs50.harvard.edu/x/"
+              },
+              {
+                "label": "CS50x Week 0: computational thinking, algorithms, pseudocode, functions, and loops",
+                "url": "https://cs50.harvard.edu/x/weeks/0/"
+              },
+              {
+                "label": "CS50x Week 1: variables, types, conditions, loops, and functions in C",
+                "url": "https://cs50.harvard.edu/x/weeks/1/"
+              },
+              {
+                "label": "CS50x Problem Set 0: practice sequencing, events, conditions, and loops in Scratch",
+                "url": "https://cs50.harvard.edu/x/psets/0/"
+              },
+              {
+                "label": "YouTube: CS50x 2025 Lecture 0  Scratch",
+                "url": "https://www.youtube.com/watch?v=2WtPyqwTLKM"
+              },
+              {
+                "label": "YouTube: CS50x 2025 Lecture 1  C",
+                "url": "https://www.youtube.com/watch?v=89cbCbWrM4U"
+              },
+              {
+                "label": "Exercism",
+                "url": "https://exercism.org/"
+              },
+              {
+                "label": "MDN JavaScript Guide",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+              },
+              {
+                "label": "The Odin Project - Foundations",
+                "url": "https://www.theodinproject.com/paths/foundations/courses/foundations"
+              },
+              {
+                "label": "freeCodeCamp",
+                "url": "https://www.freecodecamp.org/learn/"
+              }
             ],
             "priority": "core",
             "completed": false
@@ -640,18 +712,48 @@
             "id": "basic-data-structures",
             "name": "Arrays, Lists & Hash Tables",
             "description": "Understand the most common ways to store and look up data.",
-            "outcomes": ["Choose between arrays, linked lists, and hash tables", "Implement a simple hash table", "Explain lookup and insertion costs"],
+            "outcomes": [
+              "Choose between arrays, linked lists, and hash tables",
+              "Implement a simple hash table",
+              "Explain lookup and insertion costs"
+            ],
             "estimatedHours": 20,
-            "prerequisites": ["programming-fundamentals"],
+            "prerequisites": [
+              "programming-fundamentals"
+            ],
             "resources": [
-              {"label": "OpenDSA: interactive data structures and algorithms modules", "url": "https://opendsa-server.cs.vt.edu/"},
-              {"label": "VisuAlgo: linked lists, stacks, queues, and deques (animated operations)", "url": "https://visualgo.net/en/list"},
-              {"label": "VisuAlgo: hash tables, hash functions, and collision resolution", "url": "https://visualgo.net/en/hashtable"},
-              {"label": "Princeton Algorithms 1.3: bags, queues, stacks, and collection interfaces", "url": "https://algs4.cs.princeton.edu/13stacks/"},
-              {"label": "Princeton Algorithms 3.4: hash functions and collision resolution", "url": "https://algs4.cs.princeton.edu/34hash/"},
-              { "label": "YouTube: freeCodeCamp ? Data Structures Easy to Advanced (William Fiset)", "url": "https://www.youtube.com/watch?v=RBSGKlAvoiM "},
-              { "label": "YouTube: freeCodeCamp ? Algorithms and Data Structures for Beginners", "url": "https://www.youtube.com/watch?v=8hly31xKli0 "},
-              { "label": "YouTube: Hash Tables and Hash Functions", "url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q "}
+              {
+                "label": "OpenDSA: interactive data structures and algorithms modules",
+                "url": "https://opendsa-server.cs.vt.edu/"
+              },
+              {
+                "label": "VisuAlgo: linked lists, stacks, queues, and deques (animated operations)",
+                "url": "https://visualgo.net/en/list"
+              },
+              {
+                "label": "VisuAlgo: hash tables, hash functions, and collision resolution",
+                "url": "https://visualgo.net/en/hashtable"
+              },
+              {
+                "label": "Princeton Algorithms 1.3: bags, queues, stacks, and collection interfaces",
+                "url": "https://algs4.cs.princeton.edu/13stacks/"
+              },
+              {
+                "label": "Princeton Algorithms 3.4: hash functions and collision resolution",
+                "url": "https://algs4.cs.princeton.edu/34hash/"
+              },
+              {
+                "label": "YouTube: freeCodeCamp  Data Structures Easy to Advanced (William Fiset)",
+                "url": "https://www.youtube.com/watch?v=RBSGKlAvoiM"
+              },
+              {
+                "label": "YouTube: freeCodeCamp  Algorithms and Data Structures for Beginners",
+                "url": "https://www.youtube.com/watch?v=8hly31xKli0"
+              },
+              {
+                "label": "YouTube: Hash Tables and Hash Functions",
+                "url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+              }
             ],
             "priority": "core",
             "completed": false
@@ -660,15 +762,34 @@
             "id": "discrete-math-basics",
             "name": "Logic & Discrete Math Basics",
             "description": "Build the reasoning skills behind proofs, sets, and counting.",
-            "outcomes": ["Use propositional logic and set notation", "Count possibilities with basic combinatorics", "Write a simple proof by induction"],
+            "outcomes": [
+              "Use propositional logic and set notation",
+              "Count possibilities with basic combinatorics",
+              "Write a simple proof by induction"
+            ],
             "estimatedHours": 24,
             "prerequisites": [],
             "resources": [
-              {"label": "MIT 6.042J: definitions, proofs, sets, relations, counting, and discrete probability", "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"},
-              {"label": "Discrete Mathematics: An Open Introduction, 4th edition (interactive textbook and exercises)", "url": "https://discrete.openmathbooks.org/dmoi4/"},
-              {"label": "Stanford CS103: mathematical logic, proof writing, sets, graphs, and computability", "url": "https://web.stanford.edu/class/cs103/"},
-              { "label": "YouTube: Dr. Trefor Bazett ? Discrete Math full course", "url": "https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS "},
-              { "label": "YouTube: MIT 6.042J Mathematics for Computer Science (2010)", "url": "https://www.youtube.com/playlist?list=PLB7540DEDD482705B "}
+              {
+                "label": "MIT 6.042J: definitions, proofs, sets, relations, counting, and discrete probability",
+                "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"
+              },
+              {
+                "label": "Discrete Mathematics: An Open Introduction, 4th edition (interactive textbook and exercises)",
+                "url": "https://discrete.openmathbooks.org/dmoi4/"
+              },
+              {
+                "label": "Stanford CS103: mathematical logic, proof writing, sets, graphs, and computability",
+                "url": "https://web.stanford.edu/class/cs103/"
+              },
+              {
+                "label": "YouTube: Dr. Trefor Bazett ? Discrete Math full course",
+                "url": "https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS"
+              },
+              {
+                "label": "YouTube: MIT 6.042J Mathematics for Computer Science (2010)",
+                "url": "https://www.youtube.com/playlist?list=PLB7540DEDD482705B"
+              }
             ],
             "priority": "core",
             "completed": false
@@ -677,7 +798,10 @@
         "project": {
           "title": "Text-based puzzle game",
           "description": "Build a small game that uses functions, collections, and tested logic.",
-          "demonstrates": ["programming-fundamentals", "basic-data-structures"]
+          "demonstrates": [
+            "programming-fundamentals",
+            "basic-data-structures"
+          ]
         }
       },
       {
@@ -688,20 +812,56 @@
             "id": "trees-graphs",
             "name": "Trees, Heaps & Graphs",
             "description": "Model hierarchical and networked data and traverse it.",
-            "outcomes": ["Implement binary search trees and heaps", "Traverse graphs with BFS and DFS", "Model a real problem as a graph"],
+            "outcomes": [
+              "Implement binary search trees and heaps",
+              "Traverse graphs with BFS and DFS",
+              "Model a real problem as a graph"
+            ],
             "estimatedHours": 30,
-            "prerequisites": ["basic-data-structures"],
+            "prerequisites": [
+              "basic-data-structures"
+            ],
             "resources": [
-              {"label": "MIT 6.006 Lecture 6: binary search trees, operations, and runtime", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec6/"},
-              {"label": "MIT 6.006 Lecture 7: balanced trees and AVL rotations", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec7/"},
-              {"label": "MIT 6.006 Lecture 8: binary heaps and priority queues", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec8/"},
-              {"label": "MIT 6.006 Lecture 9: breadth-first search", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec9/"},
-              {"label": "MIT 6.006 Lecture 10: depth-first search", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec10/"},
-              {"label": "VisuAlgo: binary search tree operations and balancing", "url": "https://visualgo.net/en/bst"},
-              {"label": "VisuAlgo: heap insertion, extraction, and priority queues", "url": "https://visualgo.net/en/heap"},
-              {"label": "Princeton Algorithms 4.1: graph representation and traversal foundations", "url": "https://algs4.cs.princeton.edu/41graph/"},
-              {"label": "Coursera: Algorithms, Part I (structured lectures and exercises)", "url": "https://www.coursera.org/learn/algorithms-part1"},
-              { "label": "YouTube: freeCodeCamp ? Graph Algorithms for Technical Interviews", "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU "}
+              {
+                "label": "MIT 6.006 Lecture 6: binary search trees, operations, and runtime",
+                "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec6/"
+              },
+              {
+                "label": "MIT 6.006 Lecture 7: balanced trees and AVL rotations",
+                "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec7/"
+              },
+              {
+                "label": "MIT 6.006 Lecture 8: binary heaps and priority queues",
+                "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec8/"
+              },
+              {
+                "label": "MIT 6.006 Lecture 9: breadth-first search",
+                "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec9/"
+              },
+              {
+                "label": "MIT 6.006 Lecture 10: depth-first search",
+                "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec10/"
+              },
+              {
+                "label": "VisuAlgo: binary search tree operations and balancing",
+                "url": "https://visualgo.net/en/bst"
+              },
+              {
+                "label": "VisuAlgo: heap insertion, extraction, and priority queues",
+                "url": "https://visualgo.net/en/heap"
+              },
+              {
+                "label": "Princeton Algorithms 4.1: graph representation and traversal foundations",
+                "url": "https://algs4.cs.princeton.edu/41graph/"
+              },
+              {
+                "label": "Coursera: Algorithms, Part I (structured lectures and exercises)",
+                "url": "https://www.coursera.org/learn/algorithms-part1"
+              },
+              {
+                "label": "YouTube: freeCodeCamp ? Graph Algorithms for Technical Interviews",
+                "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU"
+              }
             ],
             "priority": "core",
             "completed": false
@@ -710,21 +870,60 @@
             "id": "algorithm-design",
             "name": "Sorting, Searching & Algorithm Design",
             "description": "Learn core techniques such as divide and conquer, greedy methods, and dynamic programming.",
-            "outcomes": ["Implement common sorting and searching algorithms", "Recognize when to use recursion or dynamic programming", "Compare approaches by trade-offs"],
+            "outcomes": [
+              "Implement common sorting and searching algorithms",
+              "Recognize when to use recursion or dynamic programming",
+              "Compare approaches by trade-offs"
+            ],
             "estimatedHours": 36,
-            "prerequisites": ["basic-data-structures"],
+            "prerequisites": [
+              "basic-data-structures"
+            ],
             "resources": [
-              {"label": "MIT 6.006 Lecture 3: sorting algorithms and correctness", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec3/"},
-              {"label": "MIT 6.006 Lecture 15: dynamic programming, recurrences, and DAGs", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec15/"},
-              {"label": "MIT 6.006 Lecture 16: dynamic programming for LCS, LIS, and coin problems", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec16/"},
-              {"label": "Princeton Algorithms 2.1: selection sort, insertion sort, and shellsort", "url": "https://algs4.cs.princeton.edu/21elementary/"},
-              {"label": "Princeton Algorithms 2.2: mergesort and divide-and-conquer analysis", "url": "https://algs4.cs.princeton.edu/22mergesort/"},
-              {"label": "Princeton Algorithms 2.3: quicksort and partitioning", "url": "https://algs4.cs.princeton.edu/23quicksort/"},
-              {"label": "CS50x Week 3: linear and binary search, sorting, recursion, and asymptotic notation", "url": "https://cs50.harvard.edu/x/weeks/3/"},
-              {"label": "Princeton: Algorithms, 4th edition (textbook, code, and exercises)", "url": "https://algs4.cs.princeton.edu/home/"},
-              { "label": "YouTube: MIT 6.006 Introduction to Algorithms (Spring 2020)", "url": "https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY "},
-              { "label": "YouTube: freeCodeCamp ? Dynamic Programming", "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk "},
-              { "label": "YouTube: CS50x 2025 Lecture 3 ? Algorithms", "url": "https://www.youtube.com/watch?v=iCx3zwK8Ms8 "}
+              {
+                "label": "MIT 6.006 Lecture 3: sorting algorithms and correctness",
+                "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec3/"
+              },
+              {
+                "label": "MIT 6.006 Lecture 15: dynamic programming, recurrences, and DAGs",
+                "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec15/"
+              },
+              {
+                "label": "MIT 6.006 Lecture 16: dynamic programming for LCS, LIS, and coin problems",
+                "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec16/"
+              },
+              {
+                "label": "Princeton Algorithms 2.1: selection sort, insertion sort, and shellsort",
+                "url": "https://algs4.cs.princeton.edu/21elementary/"
+              },
+              {
+                "label": "Princeton Algorithms 2.2: mergesort and divide-and-conquer analysis",
+                "url": "https://algs4.cs.princeton.edu/22mergesort/"
+              },
+              {
+                "label": "Princeton Algorithms 2.3: quicksort and partitioning",
+                "url": "https://algs4.cs.princeton.edu/23quicksort/"
+              },
+              {
+                "label": "CS50x Week 3: linear and binary search, sorting, recursion, and asymptotic notation",
+                "url": "https://cs50.harvard.edu/x/weeks/3/"
+              },
+              {
+                "label": "Princeton: Algorithms, 4th edition (textbook, code, and exercises)",
+                "url": "https://algs4.cs.princeton.edu/home/"
+              },
+              {
+                "label": "YouTube: MIT 6.006 Introduction to Algorithms (Spring 2020)",
+                "url": "https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY"
+              },
+              {
+                "label": "YouTube: freeCodeCamp ? Dynamic Programming",
+                "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk"
+              },
+              {
+                "label": "YouTube: CS50x 2025 Lecture 3 ? Algorithms",
+                "url": "https://www.youtube.com/watch?v=iCx3zwK8Ms8"
+              }
             ],
             "priority": "core",
             "completed": false
@@ -733,15 +932,37 @@
             "id": "complexity-analysis",
             "name": "Complexity Analysis",
             "description": "Describe how running time and memory grow with input size.",
-            "outcomes": ["Use Big-O notation correctly", "Analyze loops and recursive calls", "Explain best, average, and worst cases"],
+            "outcomes": [
+              "Use Big-O notation correctly",
+              "Analyze loops and recursive calls",
+              "Explain best, average, and worst cases"
+            ],
             "estimatedHours": 14,
-            "prerequisites": ["discrete-math-basics", "basic-data-structures"],
+            "prerequisites": [
+              "discrete-math-basics",
+              "basic-data-structures"
+            ],
             "resources": [
-              {"label": "MIT 6.006 Lecture 19: asymptotic bounds and algorithmic complexity", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec19/"},
-              {"label": "Princeton Algorithms 1.4: mathematical models, growth rates, and empirical analysis", "url": "https://algs4.cs.princeton.edu/14analysis/"},
-              {"label": "CS50x Week 3: Big-O, Big-Omega, Big-Theta, and running-time comparisons", "url": "https://cs50.harvard.edu/x/weeks/3/"},
-              {"label": "Big-O Cheat Sheet: common data-structure and algorithm operation costs", "url": "https://www.bigocheatsheet.com/"},
-              { "label": "YouTube: Fireship ? Big-O Notation in 100 Seconds", "url": "https://www.youtube.com/watch?v=g2o22C3CRfU "}
+              {
+                "label": "MIT 6.006 Lecture 19: asymptotic bounds and algorithmic complexity",
+                "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec19/"
+              },
+              {
+                "label": "Princeton Algorithms 1.4: mathematical models, growth rates, and empirical analysis",
+                "url": "https://algs4.cs.princeton.edu/14analysis/"
+              },
+              {
+                "label": "CS50x Week 3: Big-O, Big-Omega, Big-Theta, and running-time comparisons",
+                "url": "https://cs50.harvard.edu/x/weeks/3/"
+              },
+              {
+                "label": "Big-O Cheat Sheet: common data-structure and algorithm operation costs",
+                "url": "https://www.bigocheatsheet.com/"
+              },
+              {
+                "label": "YouTube: Fireship ? Big-O Notation in 100 Seconds",
+                "url": "https://www.youtube.com/watch?v=g2o22C3CRfU"
+              }
             ],
             "priority": "core",
             "completed": false
@@ -750,7 +971,11 @@
         "project": {
           "title": "Algorithm visualizer",
           "description": "Build an app that animates sorting and graph algorithms and reports their running time.",
-          "demonstrates": ["trees-graphs", "algorithm-design", "complexity-analysis"]
+          "demonstrates": [
+            "trees-graphs",
+            "algorithm-design",
+            "complexity-analysis"
+          ]
         }
       },
       {
@@ -761,17 +986,44 @@
             "id": "computer-architecture",
             "name": "Computer Architecture",
             "description": "See how hardware executes instructions and stores data.",
-            "outcomes": ["Explain the CPU, memory, and cache hierarchy", "Describe how instructions are fetched and executed", "Build simple logic circuits in a simulator"],
+            "outcomes": [
+              "Explain the CPU, memory, and cache hierarchy",
+              "Describe how instructions are fetched and executed",
+              "Build simple logic circuits in a simulator"
+            ],
             "estimatedHours": 30,
-            "prerequisites": ["programming-fundamentals"],
+            "prerequisites": [
+              "programming-fundamentals"
+            ],
             "resources": [
-              {"label": "Nand2Tetris Project 1: implement Boolean logic gates", "url": "https://www.nand2tetris.org/project01"},
-              {"label": "Nand2Tetris Project 2: build the ALU from logic gates", "url": "https://www.nand2tetris.org/project02"},
-              {"label": "Nand2Tetris Project 3: build registers and RAM", "url": "https://www.nand2tetris.org/project03"},
-              {"label": "Nand2Tetris Project 5: assemble memory, CPU, and the complete computer", "url": "https://www.nand2tetris.org/project05"},
-              {"label": "Coursera: Build a Modern Computer from First Principles (Nand2Tetris)", "url": "https://www.coursera.org/learn/build-a-computer"},
-              { "label": "YouTube: Ben Eater ? Building an 8-bit breadboard computer", "url": "https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU "},
-              { "label": "YouTube: Crash Course Computer Science", "url": "https://www.youtube.com/playlist?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo "}
+              {
+                "label": "Nand2Tetris Project 1: implement Boolean logic gates",
+                "url": "https://www.nand2tetris.org/project01"
+              },
+              {
+                "label": "Nand2Tetris Project 2: build the ALU from logic gates",
+                "url": "https://www.nand2tetris.org/project02"
+              },
+              {
+                "label": "Nand2Tetris Project 3: build registers and RAM",
+                "url": "https://www.nand2tetris.org/project03"
+              },
+              {
+                "label": "Nand2Tetris Project 5: assemble memory, CPU, and the complete computer",
+                "url": "https://www.nand2tetris.org/project05"
+              },
+              {
+                "label": "Coursera: Build a Modern Computer from First Principles (Nand2Tetris)",
+                "url": "https://www.coursera.org/learn/build-a-computer"
+              },
+              {
+                "label": "YouTube: Ben Eater ? Building an 8-bit breadboard computer",
+                "url": "https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU"
+              },
+              {
+                "label": "YouTube: Crash Course Computer Science",
+                "url": "https://www.youtube.com/playlist?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo"
+              }
             ],
             "priority": "core",
             "completed": false
@@ -780,16 +1032,40 @@
             "id": "operating-systems",
             "name": "Operating Systems",
             "description": "Learn how processes, memory, and files are managed.",
-            "outcomes": ["Explain processes, threads, and scheduling", "Describe virtual memory", "Identify common concurrency problems"],
+            "outcomes": [
+              "Explain processes, threads, and scheduling",
+              "Describe virtual memory",
+              "Identify common concurrency problems"
+            ],
             "estimatedHours": 36,
-            "prerequisites": ["computer-architecture"],
+            "prerequisites": [
+              "computer-architecture"
+            ],
             "resources": [
-              {"label": "OSTEP: processes, CPU virtualization, and process execution", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf"},
-              {"label": "OSTEP: virtual memory, address spaces, and translation", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf"},
-              {"label": "OSTEP: threads, shared state, and concurrency problems", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf"},
-              {"label": "OSTEP: complete free textbook with chapters on scheduling, files, and persistence", "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"},
-              {"label": "MIT 6.S081: Operating System Engineering (lectures, labs, and xv6 projects)", "url": "https://pdos.csail.mit.edu/6.S081/2020/"},
-              { "label": "YouTube: Neso Academy ? Operating Systems", "url": "https://www.youtube.com/playlist?list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O "}
+              {
+                "label": "OSTEP: processes, CPU virtualization, and process execution",
+                "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf"
+              },
+              {
+                "label": "OSTEP: virtual memory, address spaces, and translation",
+                "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf"
+              },
+              {
+                "label": "OSTEP: threads, shared state, and concurrency problems",
+                "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf"
+              },
+              {
+                "label": "OSTEP: complete free textbook with chapters on scheduling, files, and persistence",
+                "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+              },
+              {
+                "label": "MIT 6.S081: Operating System Engineering (lectures, labs, and xv6 projects)",
+                "url": "https://pdos.csail.mit.edu/6.S081/2020/"
+              },
+              {
+                "label": "YouTube: Neso Academy ? Operating Systems",
+                "url": "https://www.youtube.com/playlist?list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O"
+              }
             ],
             "priority": "core",
             "completed": false
@@ -798,17 +1074,45 @@
             "id": "theory-of-computation",
             "name": "Theory of Computation",
             "description": "Study what can and cannot be computed efficiently.",
-            "outcomes": ["Use finite automata and regular expressions", "Explain P versus NP at a high level", "Recognize undecidable problems"],
+            "outcomes": [
+              "Use finite automata and regular expressions",
+              "Explain P versus NP at a high level",
+              "Recognize undecidable problems"
+            ],
             "estimatedHours": 28,
-            "prerequisites": ["discrete-math-basics", "complexity-analysis"],
+            "prerequisites": [
+              "discrete-math-basics",
+              "complexity-analysis"
+            ],
             "resources": [
-              {"label": "MIT 18.404J Lecture 1: finite automata and regular expressions", "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/resources/lecture-1-introduction-finite-automata-regular-expressions/"},
-              {"label": "MIT 18.404J Lecture 8: undecidability and limits of computation", "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/resources/mit18_404f20_lec8-1/"},
-              {"label": "MIT 18.404J Lecture 12: time complexity", "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/resources/mit18_404f20_lec12-1/"},
-              {"label": "MIT 18.404J Lecture 14: P, NP, SAT, and polynomial-time reductions", "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/resources/mit18_404f20_lec14-1/"},
-              {"label": "MIT 6.042J: discrete mathematics for computer science (logic, proof, counting, and graphs)", "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"},
-              {"label": "Stanford CS103: mathematical foundations, proof techniques, and computability", "url": "https://web.stanford.edu/class/cs103/"},
-              { "label": "YouTube: Neso Academy ? Theory of Computation & Automata", "url": "https://www.youtube.com/playlist?list=PLBlnK6fEyqRgp46KUv4ZY69yXmpwKOIev "}
+              {
+                "label": "MIT 18.404J Lecture 1: finite automata and regular expressions",
+                "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/resources/lecture-1-introduction-finite-automata-regular-expressions/"
+              },
+              {
+                "label": "MIT 18.404J Lecture 8: undecidability and limits of computation",
+                "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/resources/mit18_404f20_lec8-1/"
+              },
+              {
+                "label": "MIT 18.404J Lecture 12: time complexity",
+                "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/resources/mit18_404f20_lec12-1/"
+              },
+              {
+                "label": "MIT 18.404J Lecture 14: P, NP, SAT, and polynomial-time reductions",
+                "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/resources/mit18_404f20_lec14-1/"
+              },
+              {
+                "label": "MIT 6.042J: discrete mathematics for computer science (logic, proof, counting, and graphs)",
+                "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"
+              },
+              {
+                "label": "Stanford CS103: mathematical foundations, proof techniques, and computability",
+                "url": "https://web.stanford.edu/class/cs103/"
+              },
+              {
+                "label": "YouTube: Neso Academy ? Theory of Computation & Automata",
+                "url": "https://www.youtube.com/playlist?list=PLBlnK6fEyqRgp46KUv4ZY69yXmpwKOIev"
+              }
             ],
             "priority": "optional",
             "completed": false
@@ -817,7 +1121,10 @@
         "project": {
           "title": "Tiny interpreter or virtual machine",
           "description": "Implement a small language or instruction set and document how it executes code.",
-          "demonstrates": ["computer-architecture", "operating-systems"]
+          "demonstrates": [
+            "computer-architecture",
+            "operating-systems"
+          ]
         }
       }
     ],
@@ -925,6 +1232,39 @@
             "completed": false
           },
           {
+            "id": "agentic-coding",
+            "name": "Agentic Coding: Working with Autonomous Coding Agents",
+            "description": "Delegate multi-step engineering tasks to coding agents safely: context, tools, plans, guardrails, review, and evaluation.",
+            "outcomes": ["Write repository instructions (AGENTS.md, copilot-instructions.md, CLAUDE.md) that give an agent build, test, and style context", "Break work into agent-sized tasks with acceptance tests and review each diff", "Connect agents to tools and data using Model Context Protocol servers", "Set permissions, sandboxing, and approval gates to limit blast radius", "Explain the agent loop (plan, act, observe) and common failure modes such as context drift and hallucinated APIs", "Build a small tool-using agent and evaluate it on a fixed task set"],
+            "estimatedHours": 20,
+            "prerequisites": ["ai-assisted-development", "testing-strategy"],
+            "resources": [
+              {"label": "Anthropic: Building effective agents", "url": "https://www.anthropic.com/engineering/building-effective-agents"},
+              {"label": "Anthropic: Claude Code documentation", "url": "https://docs.claude.com/en/docs/claude-code/overview"},
+              {"label": "Anthropic: Writing effective tools for agents", "url": "https://www.anthropic.com/engineering/writing-tools-for-agents"},
+              {"label": "GitHub Docs: About GitHub Copilot coding agent", "url": "https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent"},
+              {"label": "GitHub Docs: Best practices for using Copilot to work on tasks", "url": "https://docs.github.com/en/copilot/tutorials/coding-agent/get-the-best-results"},
+              {"label": "VS Code Docs: Use agent mode in VS Code", "url": "https://code.visualstudio.com/docs/copilot/agents/overview"},
+              {"label": "VS Code Docs: Custom instructions for Copilot", "url": "https://code.visualstudio.com/docs/copilot/customization/custom-instructions"},
+              {"label": "AGENTS.md: A README for coding agents", "url": "https://agents.md/"},
+              {"label": "Model Context Protocol: Introduction", "url": "https://modelcontextprotocol.io/introduction"},
+              {"label": "Model Context Protocol: Build a server", "url": "https://modelcontextprotocol.io/docs/develop/build-server"},
+              {"label": "OpenAI Agents SDK documentation", "url": "https://openai.github.io/openai-agents-python/"},
+              {"label": "LangGraph: Build stateful agents", "url": "https://langchain-ai.github.io/langgraph/"},
+              {"label": "Hugging Face: AI Agents Course (free)", "url": "https://huggingface.co/learn/agents-course/"},
+              {"label": "DeepLearning.AI: AI Agentic Design Patterns short courses", "url": "https://www.deeplearning.ai/short-courses/"},
+              {"label": "OWASP: Top 10 for LLM Applications (prompt injection, excessive agency)", "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"},
+              {"label": "SWE-bench: Benchmark for agents on real GitHub issues", "url": "https://www.swebench.com/"},
+              {"label": "YouTube: Andrej Karpathy – How I use LLMs (2:11:12)", "url": "https://www.youtube.com/watch?v=EWvNQjAaOHw"},
+              {"label": "YouTube search: agentic coding workflow Claude Code Copilot agent", "url": "https://www.youtube.com/results?search_query=agentic+coding+workflow+Claude+Code+Copilot+agent+mode"},
+              {"label": "YouTube search: build an AI agent from scratch tool calling", "url": "https://www.youtube.com/results?search_query=build+an+AI+agent+from+scratch+tool+calling+loop"},
+              {"label": "YouTube search: Model Context Protocol MCP server tutorial", "url": "https://www.youtube.com/results?search_query=Model+Context+Protocol+MCP+server+tutorial"},
+              {"label": "YouTube search: prompt injection and agent security", "url": "https://www.youtube.com/results?search_query=prompt+injection+AI+agent+security+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
             "id": "team-collaboration-async",
             "name": "Distributed Team Collaboration",
             "description": "Work effectively with engineers, designers, and product partners across time zones using clear written communication.",
@@ -939,7 +1279,7 @@
         "project": {
           "title": "Team-style feature delivery",
           "description": "Plan and ship a feature through issues, pull requests, reviews, and a release note. Record where AI assistance helped and how you verified its output. Include a short design proposal and async progress updates.",
-          "demonstrates": ["design-patterns", "code-review", "agile-delivery", "ai-assisted-development", "team-collaboration-async"]
+          "demonstrates": ["design-patterns", "code-review", "agile-delivery", "ai-assisted-development", "agentic-coding", "team-collaboration-async"]
         }
       },
       {
@@ -1800,6 +2140,33 @@
             "completed": false
           },
           {
+            "id": "rdbms-advanced-sql",
+            "name": "Advanced SQL & Query Tuning (PostgreSQL & MySQL)",
+            "description": "Write analytical SQL with CTEs and window functions and tune queries by reading execution plans.",
+            "outcomes": ["Use CTEs, recursive queries, window functions, and lateral joins", "Read EXPLAIN (ANALYZE, BUFFERS) output and spot sequential scans, bad joins, and misestimates", "Choose B-tree, GIN, partial, covering, and composite indexes", "Compare PostgreSQL and MySQL/InnoDB behavior for locking and indexes", "Avoid N+1 queries from an ORM and use batching"],
+            "estimatedHours": 24,
+            "prerequisites": ["sql-fundamentals", "indexing"],
+            "resources": [
+              {"label": "PostgreSQL Docs: Window functions tutorial", "url": "https://www.postgresql.org/docs/current/tutorial-window.html"},
+              {"label": "PostgreSQL Docs: WITH queries (CTEs)", "url": "https://www.postgresql.org/docs/current/queries-with.html"},
+              {"label": "PostgreSQL Docs: Using EXPLAIN", "url": "https://www.postgresql.org/docs/current/using-explain.html"},
+              {"label": "PostgreSQL Docs: Index types", "url": "https://www.postgresql.org/docs/current/indexes-types.html"},
+              {"label": "PostgreSQL Docs: Performance tips", "url": "https://www.postgresql.org/docs/current/performance-tips.html"},
+              {"label": "MySQL 8.4 Reference: Optimization", "url": "https://dev.mysql.com/doc/refman/8.4/en/optimization.html"},
+              {"label": "MySQL 8.4 Reference: The InnoDB storage engine", "url": "https://dev.mysql.com/doc/refman/8.4/en/innodb-storage-engine.html"},
+              {"label": "Use The Index, Luke: SQL indexing and tuning guide", "url": "https://use-the-index-luke.com/"},
+              {"label": "Mode: SQL Tutorial (intermediate and advanced)", "url": "https://mode.com/sql-tutorial/"},
+              {"label": "pgexercises.com: PostgreSQL practice exercises", "url": "https://pgexercises.com/"},
+              {"label": "explain.dalibo.com: PostgreSQL plan visualizer", "url": "https://explain.dalibo.com/"},
+              {"label": "YouTube search: freeCodeCamp SQL full database course", "url": "https://www.youtube.com/results?search_query=freeCodeCamp+SQL+full+database+course"},
+              {"label": "YouTube search: PostgreSQL window functions tutorial", "url": "https://www.youtube.com/results?search_query=PostgreSQL+window+functions+tutorial"},
+              {"label": "YouTube search: PostgreSQL EXPLAIN ANALYZE query plans explained", "url": "https://www.youtube.com/results?search_query=PostgreSQL+EXPLAIN+ANALYZE+query+plan+explained"},
+              {"label": "YouTube search: MySQL InnoDB indexing and query optimization", "url": "https://www.youtube.com/results?search_query=MySQL+InnoDB+indexing+query+optimization+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
             "id": "nosql-models",
             "name": "NoSQL Data Models",
             "description": "Understand document, key-value, and graph stores.",
@@ -1814,13 +2181,41 @@
         "project": {
           "title": "Query tuning case study",
           "description": "Load a large dataset, find slow queries, and document measured improvements.",
-          "demonstrates": ["indexing", "transactions", "nosql-models"]
+          "demonstrates": ["indexing", "transactions", "rdbms-advanced-sql", "nosql-models"]
         }
       },
       {
         "level": "Advanced",
         "goal": "Operate databases reliably at scale.",
         "skills": [
+          {
+            "id": "rdbms-postgres-operations",
+            "name": "Operating a Relational Database: Pooling, Migrations, HA & Managed Services",
+            "description": "Run PostgreSQL or MySQL in production: connection pooling, schema migrations, monitoring, vacuum and maintenance, high availability, and managed options such as Amazon RDS and Aurora.",
+            "outcomes": ["Size connection pools and use PgBouncer or HikariCP correctly", "Run zero-downtime schema migrations with Flyway or Liquibase", "Monitor with pg_stat_statements, slow-query logs, and lock views", "Explain autovacuum, bloat, and table statistics", "Configure streaming replication and failover, and compare with RDS Multi-AZ and Aurora", "Restore from backup and point-in-time recovery on a managed service"],
+            "estimatedHours": 22,
+            "prerequisites": ["rdbms-advanced-sql", "transactions", "db-reliability"],
+            "resources": [
+              {"label": "PostgreSQL Docs: Routine database maintenance (vacuum, analyze)", "url": "https://www.postgresql.org/docs/current/maintenance.html"},
+              {"label": "PostgreSQL Docs: pg_stat_statements", "url": "https://www.postgresql.org/docs/current/pgstatstatements.html"},
+              {"label": "PostgreSQL Docs: Monitoring database activity", "url": "https://www.postgresql.org/docs/current/monitoring.html"},
+              {"label": "PostgreSQL Docs: Server configuration and tuning", "url": "https://www.postgresql.org/docs/current/runtime-config.html"},
+              {"label": "PgBouncer: Lightweight connection pooler", "url": "https://www.pgbouncer.org/usage.html"},
+              {"label": "HikariCP: About pool sizing", "url": "https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing"},
+              {"label": "Flyway Documentation: Concepts", "url": "https://documentation.red-gate.com/flyway"},
+              {"label": "Liquibase Documentation", "url": "https://docs.liquibase.com/home.html"},
+              {"label": "Amazon RDS User Guide: Multi-AZ deployments", "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html"},
+              {"label": "Amazon Aurora User Guide", "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"},
+              {"label": "Amazon RDS: Backing up and restoring (point-in-time recovery)", "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html"},
+              {"label": "Strong Migrations: Safe schema change patterns", "url": "https://github.com/ankane/strong_migrations"},
+              {"label": "YouTube search: PostgreSQL production tuning and monitoring", "url": "https://www.youtube.com/results?search_query=PostgreSQL+production+tuning+monitoring+pg_stat_statements"},
+              {"label": "YouTube search: PostgreSQL autovacuum explained", "url": "https://www.youtube.com/results?search_query=PostgreSQL+autovacuum+explained+bloat"},
+              {"label": "YouTube search: zero downtime database migrations", "url": "https://www.youtube.com/results?search_query=zero+downtime+database+schema+migrations+Flyway"},
+              {"label": "YouTube search: Amazon RDS vs Aurora explained", "url": "https://www.youtube.com/results?search_query=Amazon+RDS+vs+Aurora+PostgreSQL+explained+Multi-AZ"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
           {
             "id": "replication-sharding",
             "name": "Replication & Sharding",
@@ -1858,7 +2253,7 @@
         "project": {
           "title": "Resilient data layer",
           "description": "Add replication, caching, and a tested recovery plan to an application database.",
-          "demonstrates": ["replication-sharding", "caching", "db-reliability"]
+          "demonstrates": ["rdbms-postgres-operations", "replication-sharding", "caching", "db-reliability"]
         }
       }
     ],
