@@ -1,5 +1,22 @@
 [
   {
+    "id": "enterprise",
+    "label": "Enterprise Java & Platforms",
+    "tracks": [
+      { "id": "ent-jee", "label": "Java/J2EE, Patterns & Microservices" },
+      { "id": "ent-spring", "label": "Spring, Hibernate & JPA" },
+      { "id": "ent-messaging", "label": "Messaging: IBM MQ & Kafka" },
+      { "id": "ent-cloud", "label": "Cloud: AWS & Azure" },
+      { "id": "ent-containers", "label": "Docker, Kubernetes & OpenShift" },
+      { "id": "ent-frontend", "label": "Front-End: React, Angular & TypeScript" },
+      { "id": "ent-databases", "label": "PostgreSQL & Oracle" },
+      { "id": "ent-api", "label": "REST & SOAP APIs, JSON & XML" },
+      { "id": "ent-devops", "label": "DevOps & CI/CD" },
+      { "id": "ent-ai-dev", "label": "AI-Assisted Dev: Kiro & Copilot" },
+      { "id": "ent-appservers", "label": "Tomcat, Liberty & WebSphere" }
+    ]
+  },
+  {
     "id": "foundations",
     "label": "Foundations & Practice",
     "tracks": [

@@ -1,0 +1,735 @@
+{
+  "ent-frontend": {
+    "title": "Front-End: HTML5, CSS3, Bootstrap, JavaScript, TypeScript, React & Angular",
+    "description": "Build enterprise web front ends with HTML5, CSS3, Bootstrap, JavaScript, TypeScript, React, and Angular.",
+    "audience": "For Java and full-stack developers who build or integrate with browser-based user interfaces.",
+    "goal": "Build accessible, tested single-page applications in both React and Angular that consume a REST API.",
+    "relatedTracks": [
+      {"id": "frontend", "reason": "Broader frontend path"},
+      {"id": "lang-typescript", "reason": "JavaScript and TypeScript language path"},
+      {"id": "ent-api", "reason": "REST APIs the front end consumes"},
+      {"id": "ux", "reason": "Design and usability"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Build responsive, accessible pages with HTML5, CSS3, Bootstrap, and JavaScript.",
+        "skills": [
+          {
+            "id": "ent-fe-html-css",
+            "name": "HTML5 & CSS3",
+            "description": "Write semantic, accessible markup and modern CSS layouts.",
+            "outcomes": ["Use semantic elements, forms, and media", "Lay out pages with Flexbox and Grid", "Write responsive CSS with media queries and custom properties", "Meet basic WCAG accessibility requirements"],
+            "estimatedHours": 20,
+            "prerequisites": [],
+            "resources": [
+              {"label": "MDN: Learn web development", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development"},
+              {"label": "MDN: HTML reference", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"},
+              {"label": "MDN: CSS layout", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout"},
+              {"label": "web.dev: Learn HTML", "url": "https://web.dev/learn/html"},
+              {"label": "web.dev: Learn CSS", "url": "https://web.dev/learn/css"},
+              {"label": "W3C: Web Accessibility Initiative", "url": "https://www.w3.org/WAI/fundamentals/accessibility-intro/"},
+              {"label": "freeCodeCamp: Responsive Web Design", "url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-fe-bootstrap",
+            "name": "Bootstrap",
+            "description": "Build responsive UIs quickly with Bootstrap's grid, components, and utilities.",
+            "outcomes": ["Use the 12-column grid and breakpoints", "Use forms, navbars, modals, and cards", "Customize themes with Sass variables", "Use Bootstrap accessibly and with React or Angular wrappers"],
+            "estimatedHours": 10,
+            "prerequisites": ["ent-fe-html-css"],
+            "resources": [
+              {"label": "Bootstrap documentation", "url": "https://getbootstrap.com/docs/5.3/getting-started/introduction/"},
+              {"label": "Bootstrap: Grid system", "url": "https://getbootstrap.com/docs/5.3/layout/grid/"},
+              {"label": "Bootstrap: Sass customization", "url": "https://getbootstrap.com/docs/5.3/customize/sass/"},
+              {"label": "React-Bootstrap", "url": "https://react-bootstrap.netlify.app/"},
+              {"label": "ng-bootstrap (Angular)", "url": "https://ng-bootstrap.github.io/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-fe-javascript",
+            "name": "JavaScript Fundamentals",
+            "description": "Learn the language that powers the browser.",
+            "outcomes": ["Use variables, functions, closures, and modules", "Manipulate the DOM and handle events", "Use promises, async/await, and fetch", "Use arrays and objects with modern ES6+ syntax"],
+            "estimatedHours": 26,
+            "prerequisites": ["ent-fe-html-css"],
+            "resources": [
+              {"label": "javascript.info: The Modern JavaScript Tutorial", "url": "https://javascript.info/"},
+              {"label": "MDN: JavaScript Guide", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"},
+              {"label": "Eloquent JavaScript", "url": "https://eloquentjavascript.net/"},
+              {"label": "You Don't Know JS Yet", "url": "https://github.com/getify/You-Dont-Know-JS"},
+              {"label": "freeCodeCamp: JavaScript Algorithms and Data Structures", "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Responsive Bootstrap site",
+          "description": "Build a responsive, accessible multi-page site with Bootstrap and JavaScript that calls a public API.",
+          "demonstrates": ["ent-fe-html-css", "ent-fe-bootstrap", "ent-fe-javascript"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Build typed single-page applications with React and Angular.",
+        "skills": [
+          {
+            "id": "ent-fe-typescript",
+            "name": "TypeScript",
+            "description": "Add static types to JavaScript.",
+            "outcomes": ["Use types, interfaces, unions, generics, and narrowing", "Configure tsconfig strict mode", "Type API responses and share types with the back end", "Use type-safe tooling such as Zod or OpenAPI generators"],
+            "estimatedHours": 18,
+            "prerequisites": ["ent-fe-javascript"],
+            "resources": [
+              {"label": "TypeScript Handbook", "url": "https://www.typescriptlang.org/docs/handbook/intro.html"},
+              {"label": "TypeScript: tsconfig reference", "url": "https://www.typescriptlang.org/tsconfig/"},
+              {"label": "Total TypeScript tutorials", "url": "https://www.totaltypescript.com/tutorials"},
+              {"label": "Zod: schema validation", "url": "https://zod.dev/"},
+              {"label": "OpenAPI Generator", "url": "https://openapi-generator.tech/docs/generators/typescript-fetch/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-fe-react",
+            "name": "React",
+            "description": "Build component-based UIs with React and hooks.",
+            "outcomes": ["Write components, props, state, and effects with hooks", "Handle forms and controlled inputs", "Fetch data with TanStack Query", "Route with React Router and manage global state", "Test with Vitest or Jest and React Testing Library"],
+            "estimatedHours": 30,
+            "prerequisites": ["ent-fe-typescript"],
+            "resources": [
+              {"label": "React: Learn", "url": "https://react.dev/learn"},
+              {"label": "React: Reference", "url": "https://react.dev/reference/react"},
+              {"label": "React Router", "url": "https://reactrouter.com/home"},
+              {"label": "TanStack Query", "url": "https://tanstack.com/query/latest/docs/framework/react/overview"},
+              {"label": "React Testing Library", "url": "https://testing-library.com/docs/react-testing-library/intro/"},
+              {"label": "Vite: Getting started", "url": "https://vite.dev/guide/"},
+              {"label": "React TypeScript Cheatsheet", "url": "https://react-typescript-cheatsheet.netlify.app/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-fe-angular",
+            "name": "Angular",
+            "description": "Build enterprise single-page applications with Angular and TypeScript.",
+            "outcomes": ["Use components, templates, directives, and signals", "Use dependency injection and services", "Build reactive forms with validation", "Route with guards and lazy loading", "Call APIs with HttpClient and interceptors", "Use RxJS operators", "Test with Jasmine/Karma or Jest and Angular Testing"],
+            "estimatedHours": 34,
+            "prerequisites": ["ent-fe-typescript"],
+            "resources": [
+              {"label": "Angular documentation", "url": "https://angular.dev/overview"},
+              {"label": "Angular: Tutorials", "url": "https://angular.dev/tutorials"},
+              {"label": "Angular: Dependency injection", "url": "https://angular.dev/guide/di"},
+              {"label": "Angular: HTTP client", "url": "https://angular.dev/guide/http"},
+              {"label": "Angular: Routing", "url": "https://angular.dev/guide/routing"},
+              {"label": "RxJS documentation", "url": "https://rxjs.dev/guide/overview"},
+              {"label": "Angular Material", "url": "https://material.angular.io/"},
+              {"label": "YouTube: Angular channel", "url": "https://www.youtube.com/@Angular"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Same app in React and Angular",
+          "description": "Build one CRUD application twice, with React and Angular, against the same REST API and compare them.",
+          "demonstrates": ["ent-fe-typescript", "ent-fe-react", "ent-fe-angular"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Deliver secure, performant, tested front ends in an enterprise setting.",
+        "skills": [
+          {
+            "id": "ent-fe-auth-security",
+            "name": "Front-End Authentication & Security",
+            "description": "Integrate with enterprise identity and avoid common browser vulnerabilities.",
+            "outcomes": ["Use OAuth2 Authorization Code with PKCE and OIDC", "Handle tokens safely and avoid storing secrets in the browser", "Prevent XSS, CSRF, and clickjacking; configure CSP and CORS", "Integrate with a Spring Security back end"],
+            "estimatedHours": 16,
+            "prerequisites": ["ent-fe-react", "ent-fe-angular"],
+            "resources": [
+              {"label": "OWASP: XSS Prevention Cheat Sheet", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html"},
+              {"label": "OAuth 2.0 for Browser-Based Apps (IETF)", "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-browser-based-apps"},
+              {"label": "MDN: Content Security Policy", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"},
+              {"label": "MDN: CORS", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS"},
+              {"label": "Angular: Security", "url": "https://angular.dev/best-practices/security"},
+              {"label": "Spring Security: OAuth2 login", "url": "https://docs.spring.io/spring-security/reference/servlet/oauth2/login/index.html"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-fe-quality-performance",
+            "name": "Testing, Performance & Build Pipelines for Front Ends",
+            "description": "Ship fast, regression-resistant front ends.",
+            "outcomes": ["Write unit, component, and end-to-end tests with Playwright or Cypress", "Measure and improve Core Web Vitals", "Apply code splitting, lazy loading, and caching", "Build and serve front ends in Maven or Jenkins pipelines and containers", "Use micro front-end patterns where justified"],
+            "estimatedHours": 20,
+            "prerequisites": ["ent-fe-auth-security"],
+            "resources": [
+              {"label": "Playwright documentation", "url": "https://playwright.dev/docs/intro"},
+              {"label": "Cypress documentation", "url": "https://docs.cypress.io/"},
+              {"label": "web.dev: Core Web Vitals", "url": "https://web.dev/articles/vitals"},
+              {"label": "Lighthouse", "url": "https://developer.chrome.com/docs/lighthouse/overview"},
+              {"label": "frontend-maven-plugin", "url": "https://github.com/eirslett/frontend-maven-plugin"},
+              {"label": "micro-frontends.org", "url": "https://micro-frontends.org/"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Secure enterprise front end",
+          "description": "Add OIDC login, end-to-end tests, performance budgets, and a CI build to the application.",
+          "demonstrates": ["ent-fe-auth-security", "ent-fe-quality-performance"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Full-stack enterprise application UI",
+      "description": "Deliver a React or Angular front end for a Spring Boot API with OIDC login, tests, accessibility checks, and a CI pipeline."
+    }
+  },
+  "ent-databases": {
+    "title": "Databases: PostgreSQL & Oracle",
+    "description": "Design, query, administer, and tune relational databases using PostgreSQL and Oracle Database, including PL/pgSQL and PL/SQL.",
+    "audience": "For developers and engineers who work with enterprise relational databases.",
+    "goal": "Design a normalized schema, write efficient SQL and stored procedures, and tune queries on both PostgreSQL and Oracle.",
+    "relatedTracks": [
+      {"id": "databases", "reason": "Broader databases path"},
+      {"id": "dbinternals", "reason": "Storage engines and query processing"},
+      {"id": "ent-spring", "reason": "JPA and Spring Data on these databases"},
+      {"id": "ent-cloud", "reason": "Managed databases in the cloud"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Write SQL and design relational schemas.",
+        "skills": [
+          {
+            "id": "ent-db-sql",
+            "name": "SQL Fundamentals & Relational Design",
+            "description": "Query data and model it relationally.",
+            "outcomes": ["Write SELECT, JOIN, GROUP BY, subqueries, and window functions", "Use INSERT, UPDATE, DELETE, and transactions", "Normalize to third normal form and define keys and constraints", "Draw entity-relationship diagrams"],
+            "estimatedHours": 24,
+            "prerequisites": [],
+            "resources": [
+              {"label": "PostgreSQL Tutorial", "url": "https://www.postgresql.org/docs/current/tutorial.html"},
+              {"label": "Mode: SQL Tutorial", "url": "https://mode.com/sql-tutorial/"},
+              {"label": "SQLBolt interactive lessons", "url": "https://sqlbolt.com/"},
+              {"label": "Use The Index, Luke", "url": "https://use-the-index-luke.com/"},
+              {"label": "Oracle Live SQL", "url": "https://livesql.oracle.com/"},
+              {"label": "Database Design (Stanford CS145 and CS346 resources)", "url": "https://web.stanford.edu/class/cs145/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-db-postgres",
+            "name": "PostgreSQL Fundamentals",
+            "description": "Install, connect to, and use PostgreSQL.",
+            "outcomes": ["Use psql, roles, schemas, and privileges", "Use data types such as JSONB, arrays, UUID, and timestamptz", "Create indexes (B-tree, GIN, GiST)", "Use views, CTEs, and sequences"],
+            "estimatedHours": 18,
+            "prerequisites": ["ent-db-sql"],
+            "resources": [
+              {"label": "PostgreSQL documentation", "url": "https://www.postgresql.org/docs/current/index.html"},
+              {"label": "PostgreSQL: Data types", "url": "https://www.postgresql.org/docs/current/datatype.html"},
+              {"label": "PostgreSQL: Indexes", "url": "https://www.postgresql.org/docs/current/indexes.html"},
+              {"label": "PostgreSQL Exercises", "url": "https://pgexercises.com/"},
+              {"label": "The Art of PostgreSQL", "url": "https://theartofpostgresql.com/"},
+              {"label": "YouTube search: PostgreSQL tutorial for beginners", "url": "https://www.youtube.com/results?search_query=PostgreSQL+tutorial+for+beginners"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Normalized order database",
+          "description": "Design and load a normalized order-management schema in PostgreSQL with constraints, indexes, and reporting queries.",
+          "demonstrates": ["ent-db-sql", "ent-db-postgres"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Program and administer PostgreSQL and Oracle.",
+        "skills": [
+          {
+            "id": "ent-db-oracle",
+            "name": "Oracle Database & PL/SQL",
+            "description": "Work with Oracle's architecture, SQL dialect, and PL/SQL.",
+            "outcomes": ["Explain Oracle instances, tablespaces, schemas, and the data dictionary", "Use Oracle data types, sequences and identity columns, and ROWNUM versus FETCH FIRST", "Write PL/SQL procedures, functions, packages, cursors, and exception handlers", "Use SQL Developer and SQL*Plus", "Connect from Java with the Oracle JDBC driver and UCP"],
+            "estimatedHours": 30,
+            "prerequisites": ["ent-db-sql"],
+            "resources": [
+              {"label": "Oracle Database documentation", "url": "https://docs.oracle.com/en/database/oracle/oracle-database/index.html"},
+              {"label": "Oracle: SQL Language Reference", "url": "https://docs.oracle.com/en/database/oracle/oracle-database/23/sqlrf/index.html"},
+              {"label": "Oracle: PL/SQL Language Reference", "url": "https://docs.oracle.com/en/database/oracle/oracle-database/23/lnpls/index.html"},
+              {"label": "Oracle Live SQL", "url": "https://livesql.oracle.com/"},
+              {"label": "Oracle JDBC developer guide", "url": "https://docs.oracle.com/en/database/oracle/oracle-database/23/jjdbc/index.html"},
+              {"label": "Oracle Dev Gym", "url": "https://devgym.oracle.com/"},
+              {"label": "Oracle Free container image", "url": "https://container-registry.oracle.com/ords/f?p=113:4:::::P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:1863,1863,Oracle%20Database%20Free,Oracle%20Database%20Free,1,0&cs=3"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-db-postgres-programming",
+            "name": "PL/pgSQL, Functions & Migrations",
+            "description": "Move logic into the database where appropriate and evolve schemas safely.",
+            "outcomes": ["Write PL/pgSQL functions, procedures, and triggers", "Use transactions, isolation levels, and locking", "Apply versioned migrations with Flyway or Liquibase", "Compare PostgreSQL and Oracle SQL dialect differences"],
+            "estimatedHours": 20,
+            "prerequisites": ["ent-db-postgres"],
+            "resources": [
+              {"label": "PostgreSQL: PL/pgSQL", "url": "https://www.postgresql.org/docs/current/plpgsql.html"},
+              {"label": "PostgreSQL: Concurrency control", "url": "https://www.postgresql.org/docs/current/mvcc.html"},
+              {"label": "PostgreSQL: Triggers", "url": "https://www.postgresql.org/docs/current/triggers.html"},
+              {"label": "Flyway documentation", "url": "https://documentation.red-gate.com/flyway"},
+              {"label": "Liquibase documentation", "url": "https://docs.liquibase.com/"},
+              {"label": "Oracle to PostgreSQL migration (ora2pg)", "url": "https://ora2pg.darold.net/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-db-java-access",
+            "name": "Java Data Access on PostgreSQL & Oracle",
+            "description": "Connect Java applications to both databases correctly.",
+            "outcomes": ["Configure JDBC drivers and HikariCP or UCP pools", "Call stored procedures and map Oracle and PostgreSQL types", "Use JPA with dialect-specific features and batching", "Test against real databases using Testcontainers"],
+            "estimatedHours": 16,
+            "prerequisites": ["ent-db-oracle", "ent-db-postgres-programming", "ent-jee-jdbc"],
+            "resources": [
+              {"label": "PostgreSQL JDBC Driver documentation", "url": "https://jdbc.postgresql.org/documentation/"},
+              {"label": "Oracle Universal Connection Pool guide", "url": "https://docs.oracle.com/en/database/oracle/oracle-database/23/jjucp/index.html"},
+              {"label": "Hibernate dialects", "url": "https://docs.jboss.org/hibernate/orm/6.6/userguide/html_single/Hibernate_User_Guide.html#database-dialect"},
+              {"label": "Testcontainers: PostgreSQL module", "url": "https://java.testcontainers.org/modules/databases/postgres/"},
+              {"label": "Testcontainers: Oracle Free module", "url": "https://java.testcontainers.org/modules/databases/oraclefree/"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Dual-database Java application",
+          "description": "Run the same Java application against PostgreSQL and Oracle with migrations, stored procedures, and integration tests.",
+          "demonstrates": ["ent-db-oracle", "ent-db-postgres-programming", "ent-db-java-access"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Tune, secure, and operate production databases.",
+        "skills": [
+          {
+            "id": "ent-db-tuning",
+            "name": "Query Tuning & Execution Plans",
+            "description": "Diagnose and fix slow queries on both platforms.",
+            "outcomes": ["Read EXPLAIN ANALYZE output in PostgreSQL and execution plans in Oracle", "Use pg_stat_statements, AWR, and ASH reports", "Design indexes and use partitioning", "Manage optimizer statistics and VACUUM", "Fix N+1 and locking problems"],
+            "estimatedHours": 26,
+            "prerequisites": ["ent-db-java-access"],
+            "resources": [
+              {"label": "PostgreSQL: Using EXPLAIN", "url": "https://www.postgresql.org/docs/current/using-explain.html"},
+              {"label": "PostgreSQL: pg_stat_statements", "url": "https://www.postgresql.org/docs/current/pgstatstatements.html"},
+              {"label": "PostgreSQL: Routine vacuuming", "url": "https://www.postgresql.org/docs/current/routine-vacuuming.html"},
+              {"label": "Oracle: SQL Tuning Guide", "url": "https://docs.oracle.com/en/database/oracle/oracle-database/23/tgsql/index.html"},
+              {"label": "Oracle: Database Performance Tuning Guide", "url": "https://docs.oracle.com/en/database/oracle/oracle-database/23/tgdba/index.html"},
+              {"label": "explain.depesz.com", "url": "https://explain.depesz.com/"},
+              {"label": "SQL Performance Explained", "url": "https://sql-performance-explained.com/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-db-admin-ha",
+            "name": "Administration, Backup, Security & High Availability",
+            "description": "Keep databases secure, recoverable, and available.",
+            "outcomes": ["Back up and restore with pg_dump, pgBackRest, and RMAN", "Configure point-in-time recovery", "Set up PostgreSQL streaming replication or Patroni and explain Oracle Data Guard and RAC", "Apply roles, row-level security, encryption, and auditing", "Monitor with pgMonitor, Prometheus, and Oracle Enterprise Manager"],
+            "estimatedHours": 28,
+            "prerequisites": ["ent-db-tuning"],
+            "resources": [
+              {"label": "PostgreSQL: Backup and restore", "url": "https://www.postgresql.org/docs/current/backup.html"},
+              {"label": "PostgreSQL: High availability and replication", "url": "https://www.postgresql.org/docs/current/high-availability.html"},
+              {"label": "pgBackRest documentation", "url": "https://pgbackrest.org/"},
+              {"label": "Patroni documentation", "url": "https://patroni.readthedocs.io/"},
+              {"label": "Oracle: Backup and Recovery User's Guide (RMAN)", "url": "https://docs.oracle.com/en/database/oracle/oracle-database/23/bradv/index.html"},
+              {"label": "Oracle Data Guard concepts", "url": "https://docs.oracle.com/en/database/oracle/oracle-database/23/sbydb/index.html"},
+              {"label": "Oracle: Database Security Guide", "url": "https://docs.oracle.com/en/database/oracle/oracle-database/23/dbseg/index.html"},
+              {"label": "PostgreSQL: Row security policies", "url": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Database performance and recovery drill",
+          "description": "Tune three slow queries, document the plans before and after, and rehearse a point-in-time restore.",
+          "demonstrates": ["ent-db-tuning", "ent-db-admin-ha"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Production database design",
+      "description": "Deliver a documented schema on PostgreSQL and Oracle with migrations, tuned queries, backup and recovery procedures, and security controls."
+    }
+  },
+  "ent-api": {
+    "title": "API Development: REST, SOAP, JSON & XML",
+    "description": "Design and build RESTful and SOAP web services and work fluently with JSON and XML data formats in Java.",
+    "audience": "For developers building and integrating enterprise services, including legacy SOAP systems.",
+    "goal": "Build, document, secure, and test both REST and SOAP services and translate between JSON and XML.",
+    "relatedTracks": [
+      {"id": "api", "reason": "Broader API and integration path"},
+      {"id": "ent-spring", "reason": "Spring implementations"},
+      {"id": "ent-messaging", "reason": "Asynchronous alternatives"},
+      {"id": "security", "reason": "API security"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Work with HTTP, JSON, and XML and build simple REST endpoints.",
+        "skills": [
+          {
+            "id": "ent-api-http-formats",
+            "name": "HTTP, JSON & XML Data Formats",
+            "description": "Understand the protocol and data formats that services exchange.",
+            "outcomes": ["Use HTTP methods, status codes, headers, and content negotiation", "Read and write JSON with Jackson", "Read and write XML with JAXB (Jakarta XML Binding) and Jackson XML", "Validate with JSON Schema and XSD", "Transform XML with XPath and XSLT"],
+            "estimatedHours": 18,
+            "prerequisites": ["lang-java-file-io"],
+            "resources": [
+              {"label": "MDN: HTTP", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP"},
+              {"label": "JSON.org", "url": "https://www.json.org/"},
+              {"label": "JSON Schema: Understanding JSON Schema", "url": "https://json-schema.org/understanding-json-schema/"},
+              {"label": "Jackson databind", "url": "https://github.com/FasterXML/jackson-databind"},
+              {"label": "Jakarta XML Binding", "url": "https://jakarta.ee/specifications/xml-binding/"},
+              {"label": "W3Schools: XML tutorial", "url": "https://www.w3schools.com/xml/"},
+              {"label": "W3C: XML Schema", "url": "https://www.w3.org/TR/xmlschema11-1/"},
+              {"label": "MDN: XSLT", "url": "https://developer.mozilla.org/en-US/docs/Web/XML/XSLT"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-api-rest-basics",
+            "name": "RESTful Service Design",
+            "description": "Design resource-oriented APIs and build them with Spring or Jakarta REST.",
+            "outcomes": ["Model resources and URIs and choose methods and status codes", "Apply idempotency, pagination, filtering, and error formats (RFC 9457 problem details)", "Version APIs and manage backward compatibility", "Build services with Spring MVC and JAX-RS", "Explain the Richardson Maturity Model and HATEOAS"],
+            "estimatedHours": 22,
+            "prerequisites": ["ent-api-http-formats"],
+            "resources": [
+              {"label": "Microsoft: REST API design best practices", "url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design"},
+              {"label": "Martin Fowler: Richardson Maturity Model", "url": "https://martinfowler.com/articles/richardsonMaturityModel.html"},
+              {"label": "RFC 9457: Problem Details for HTTP APIs", "url": "https://www.rfc-editor.org/rfc/rfc9457.html"},
+              {"label": "Spring: Building a RESTful Web Service", "url": "https://spring.io/guides/gs/rest-service/"},
+              {"label": "Jakarta REST specification", "url": "https://jakarta.ee/specifications/restful-ws/"},
+              {"label": "Roy Fielding: REST dissertation chapter 5", "url": "https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"},
+              {"label": "YouTube search: REST API design best practices", "url": "https://www.youtube.com/results?search_query=REST+API+design+best+practices"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Order REST API with JSON and XML",
+          "description": "Build a REST API that serves JSON and XML representations with validation and consistent errors.",
+          "demonstrates": ["ent-api-http-formats", "ent-api-rest-basics"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Build and consume SOAP services and document and secure REST APIs.",
+        "skills": [
+          {
+            "id": "ent-api-soap",
+            "name": "SOAP Web Services, WSDL & WS-*",
+            "description": "Build and consume contract-first SOAP services, common in enterprise integration.",
+            "outcomes": ["Read WSDL and XSD contracts and explain bindings, ports, and operations", "Build contract-first services with Spring Web Services, JAX-WS, or Apache CXF", "Generate clients with wsimport and CXF tools", "Apply WS-Security (UsernameToken, signatures, encryption) and handle SOAP faults", "Test with SoapUI"],
+            "estimatedHours": 28,
+            "prerequisites": ["ent-api-http-formats"],
+            "resources": [
+              {"label": "W3C: SOAP 1.2 Primer", "url": "https://www.w3.org/TR/soap12-part0/"},
+              {"label": "W3C: WSDL 2.0 Primer", "url": "https://www.w3.org/TR/wsdl20-primer/"},
+              {"label": "Spring Web Services reference", "url": "https://docs.spring.io/spring-ws/docs/current/reference/html/"},
+              {"label": "Spring Guide: Producing a SOAP web service", "url": "https://spring.io/guides/gs/producing-web-service/"},
+              {"label": "Apache CXF documentation", "url": "https://cxf.apache.org/docs/index.html"},
+              {"label": "Jakarta XML Web Services", "url": "https://jakarta.ee/specifications/xml-web-services/"},
+              {"label": "OASIS WS-Security", "url": "https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wss"},
+              {"label": "SoapUI documentation", "url": "https://www.soapui.org/docs/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-api-openapi",
+            "name": "OpenAPI, Documentation & Contract Testing",
+            "description": "Describe REST APIs with contracts and keep implementations honest.",
+            "outcomes": ["Write an OpenAPI 3 specification", "Generate server stubs and client SDKs", "Publish docs with Swagger UI or Redoc", "Apply consumer-driven contract tests with Pact or Spring Cloud Contract", "Test APIs with REST Assured and Postman"],
+            "estimatedHours": 16,
+            "prerequisites": ["ent-api-rest-basics"],
+            "resources": [
+              {"label": "OpenAPI: Learn", "url": "https://learn.openapis.org/"},
+              {"label": "Swagger Editor", "url": "https://editor.swagger.io/"},
+              {"label": "springdoc-openapi", "url": "https://springdoc.org/"},
+              {"label": "Pact documentation", "url": "https://docs.pact.io/"},
+              {"label": "REST Assured", "url": "https://rest-assured.io/"},
+              {"label": "Postman Learning Center", "url": "https://learning.postman.com/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-api-security",
+            "name": "API Security: OAuth2, JWT & mTLS",
+            "description": "Protect REST and SOAP services.",
+            "outcomes": ["Use OAuth2 flows and JWT validation", "Apply rate limiting, input validation, and the OWASP API Security Top 10", "Use TLS and mutual TLS between services", "Compare WS-Security with OAuth2 for service authentication"],
+            "estimatedHours": 16,
+            "prerequisites": ["ent-api-rest-basics"],
+            "resources": [
+              {"label": "OWASP API Security Top 10", "url": "https://owasp.org/API-Security/"},
+              {"label": "OAuth 2.0 Simplified", "url": "https://www.oauth.com/"},
+              {"label": "RFC 7519: JSON Web Token", "url": "https://www.rfc-editor.org/rfc/rfc7519"},
+              {"label": "Spring Security: OAuth2 Resource Server", "url": "https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/index.html"},
+              {"label": "Bucket4j rate limiting", "url": "https://bucket4j.com/"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "REST and SOAP façade",
+          "description": "Expose the same order capability as a documented, secured REST API and a contract-first SOAP service.",
+          "demonstrates": ["ent-api-soap", "ent-api-openapi", "ent-api-security"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Integrate heterogeneous systems and operate APIs at scale.",
+        "skills": [
+          {
+            "id": "ent-api-gateway-integration",
+            "name": "API Gateways, ESB & Legacy Integration",
+            "description": "Mediate between REST, SOAP, and messaging systems and manage API lifecycles.",
+            "outcomes": ["Use an API gateway for routing, auth, throttling, and analytics", "Bridge SOAP and REST with transformation (XSLT, Camel)", "Compare ESB and microservice integration", "Handle versioning, deprecation, and consumer communication"],
+            "estimatedHours": 20,
+            "prerequisites": ["ent-api-soap", "ent-api-security"],
+            "resources": [
+              {"label": "Spring Cloud Gateway", "url": "https://docs.spring.io/spring-cloud-gateway/reference/"},
+              {"label": "Kong Gateway documentation", "url": "https://docs.konghq.com/gateway/latest/"},
+              {"label": "Apache Camel: SOAP and CXF components", "url": "https://camel.apache.org/components/latest/cxf-component.html"},
+              {"label": "Apache APISIX", "url": "https://apisix.apache.org/docs/"},
+              {"label": "IBM API Connect documentation", "url": "https://www.ibm.com/docs/en/api-connect"},
+              {"label": "Strangler Fig Application", "url": "https://martinfowler.com/bliki/StranglerFigApplication.html"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-api-performance-alternatives",
+            "name": "API Performance, Observability & Alternatives (gRPC, GraphQL)",
+            "description": "Measure and scale APIs and know when other styles fit better.",
+            "outcomes": ["Add caching, compression, and conditional requests", "Trace and monitor API latency and errors", "Load test APIs", "Compare REST with gRPC, GraphQL, and messaging"],
+            "estimatedHours": 18,
+            "prerequisites": ["ent-api-openapi"],
+            "resources": [
+              {"label": "gRPC Java basics", "url": "https://grpc.io/docs/languages/java/basics/"},
+              {"label": "GraphQL learn", "url": "https://graphql.org/learn/"},
+              {"label": "Spring for GraphQL", "url": "https://docs.spring.io/spring-graphql/reference/"},
+              {"label": "MDN: HTTP caching", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching"},
+              {"label": "OpenTelemetry Java", "url": "https://opentelemetry.io/docs/languages/java/"},
+              {"label": "k6 load testing", "url": "https://grafana.com/docs/k6/latest/"}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Integrated API platform",
+          "description": "Place an API gateway in front of REST and SOAP services with transformation, throttling, tracing, and a load-test report.",
+          "demonstrates": ["ent-api-gateway-integration", "ent-api-performance-alternatives"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Enterprise integration APIs",
+      "description": "Deliver a documented, secured REST API and SOAP service over a shared domain, with contract tests, JSON/XML handling, gateway policies, and observability."
+    }
+  },
+  "ent-ai-dev": {
+    "title": "AI-Assisted Development: Kiro, GitHub Copilot & Similar Tools",
+    "description": "Use AI coding assistants such as Kiro and GitHub Copilot responsibly to speed up design, coding, testing, and review of enterprise software.",
+    "audience": "For developers who want to adopt AI-assisted workflows without lowering quality or security.",
+    "goal": "Deliver a tested feature using spec-driven AI workflows while reviewing every change as if a colleague wrote it.",
+    "relatedTracks": [
+      {"id": "genai", "reason": "How LLMs work and how to build with them"},
+      {"id": "lang-java", "reason": "Java language path including agentic coding"},
+      {"id": "testing", "reason": "Verification of generated code"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Use AI assistants for completion, chat, and explanation while verifying output.",
+        "skills": [
+          {
+            "id": "ent-ai-copilot",
+            "name": "GitHub Copilot Fundamentals",
+            "description": "Use Copilot completions, chat, and inline edits effectively in an IDE.",
+            "outcomes": ["Install and configure Copilot in VS Code, IntelliJ, or Eclipse", "Write prompts and comments that produce useful completions", "Use chat to explain, refactor, and generate tests", "Use context variables and file references", "Recognize hallucinated APIs and verify against documentation"],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [
+              {"label": "GitHub Copilot documentation", "url": "https://docs.github.com/en/copilot"},
+              {"label": "GitHub Copilot: Prompt engineering", "url": "https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat"},
+              {"label": "GitHub Skills: Getting started with GitHub Copilot", "url": "https://github.com/skills/getting-started-with-github-copilot"},
+              {"label": "VS Code: GitHub Copilot", "url": "https://code.visualstudio.com/docs/copilot/overview"},
+              {"label": "JetBrains: GitHub Copilot plugin", "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot"},
+              {"label": "YouTube: GitHub channel", "url": "https://www.youtube.com/@GitHub"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-ai-responsible",
+            "name": "Responsible AI-Assisted Development",
+            "description": "Apply security, privacy, licensing, and quality discipline to AI-generated code.",
+            "outcomes": ["Avoid sending secrets, customer data, or proprietary code to unapproved tools", "Review generated code for security flaws and licensing issues", "Understand organization policies, content exclusion, and audit logs", "Keep humans accountable for every merged change"],
+            "estimatedHours": 6,
+            "prerequisites": ["ent-ai-copilot"],
+            "resources": [
+              {"label": "GitHub Copilot Trust Center", "url": "https://resources.github.com/copilot-trust-center/"},
+              {"label": "GitHub Docs: Copilot content exclusion", "url": "https://docs.github.com/en/copilot/concepts/context/content-exclusion"},
+              {"label": "OWASP Top 10 for LLM Applications", "url": "https://genai.owasp.org/llm-top-10/"},
+              {"label": "NIST AI Risk Management Framework", "url": "https://www.nist.gov/itl/ai-risk-management-framework"},
+              {"label": "Kiro: Privacy and security", "url": "https://kiro.dev/docs/privacy-and-security/"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "AI-assisted bug fix and tests",
+          "description": "Fix a bug and add unit tests with Copilot, recording each prompt, review finding, and correction.",
+          "demonstrates": ["ent-ai-copilot", "ent-ai-responsible"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Use spec-driven and agentic workflows with Kiro and Copilot agent mode.",
+        "skills": [
+          {
+            "id": "ent-ai-kiro",
+            "name": "Kiro: Spec-Driven Development",
+            "description": "Use Kiro's specs, steering files, and hooks to turn requirements into designs, tasks, and code.",
+            "outcomes": ["Create specs with requirements, design, and task documents", "Write steering files to give persistent project context", "Use agent hooks to automate checks on file events", "Use vibe mode versus spec mode appropriately", "Connect MCP servers for tools and data"],
+            "estimatedHours": 14,
+            "prerequisites": ["ent-ai-responsible"],
+            "resources": [
+              {"label": "Kiro documentation", "url": "https://kiro.dev/docs/"},
+              {"label": "Kiro: Specs", "url": "https://kiro.dev/docs/specs/"},
+              {"label": "Kiro: Steering", "url": "https://kiro.dev/docs/steering/"},
+              {"label": "Kiro: Hooks", "url": "https://kiro.dev/docs/hooks/"},
+              {"label": "Kiro: MCP", "url": "https://kiro.dev/docs/mcp/"},
+              {"label": "Kiro: Getting started", "url": "https://kiro.dev/docs/getting-started/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-ai-agents",
+            "name": "Agent Mode, Custom Instructions & MCP",
+            "description": "Delegate multi-step tasks to coding agents with clear context and verifiable outcomes.",
+            "outcomes": ["Use Copilot agent mode and the Copilot coding agent", "Write repository instructions and AGENTS.md for a Java project", "Connect Model Context Protocol servers", "Give agents tests, linters, and build commands to verify their work", "Compare Copilot, Kiro, Claude Code, Cursor, and Amazon Q Developer"],
+            "estimatedHours": 14,
+            "prerequisites": ["ent-ai-copilot"],
+            "resources": [
+              {"label": "GitHub Docs: About Copilot coding agent", "url": "https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent"},
+              {"label": "GitHub Docs: Repository custom instructions", "url": "https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions"},
+              {"label": "VS Code: Copilot agent mode", "url": "https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode"},
+              {"label": "AGENTS.md", "url": "https://agents.md/"},
+              {"label": "Model Context Protocol", "url": "https://modelcontextprotocol.io/introduction"},
+              {"label": "Amazon Q Developer documentation", "url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html"},
+              {"label": "Anthropic: Claude Code overview", "url": "https://docs.claude.com/en/docs/claude-code/overview"},
+              {"label": "Anthropic: Building effective agents", "url": "https://www.anthropic.com/engineering/building-effective-agents"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-ai-testing-review",
+            "name": "AI for Testing, Code Review & Refactoring",
+            "description": "Use AI to raise quality, not just speed.",
+            "outcomes": ["Generate unit and property-based tests and check their value with mutation testing", "Use AI-assisted code review alongside human review", "Plan and verify large refactors and framework upgrades", "Measure the real effect on defects, cycle time, and review load"],
+            "estimatedHours": 12,
+            "prerequisites": ["ent-ai-agents"],
+            "resources": [
+              {"label": "GitHub Docs: Copilot code review", "url": "https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review"},
+              {"label": "PIT mutation testing", "url": "https://pitest.org/"},
+              {"label": "OpenRewrite", "url": "https://docs.openrewrite.org/"},
+              {"label": "Amazon Q Developer: Code transformation for Java", "url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/transform.html"},
+              {"label": "DORA: AI-assisted software development report", "url": "https://dora.dev/ai/"},
+              {"label": "Martin Fowler: Exploring Generative AI", "url": "https://martinfowler.com/articles/exploring-gen-ai.html"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Spec-driven feature with Kiro",
+          "description": "Deliver a Spring Boot feature from a Kiro spec with steering files, hook-based checks, tests, and a written review log.",
+          "demonstrates": ["ent-ai-kiro", "ent-ai-agents", "ent-ai-testing-review"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Lead team-level adoption and build AI features into applications.",
+        "skills": [
+          {
+            "id": "ent-ai-team-adoption",
+            "name": "Team Adoption, Governance & Measurement",
+            "description": "Roll out AI tools across a team or organization safely.",
+            "outcomes": ["Write an AI usage policy covering data, licensing, and review", "Configure organization-level controls and audit logging", "Train developers and share prompt and instruction libraries", "Define and track productivity and quality metrics"],
+            "estimatedHours": 10,
+            "prerequisites": ["ent-ai-testing-review"],
+            "resources": [
+              {"label": "GitHub Docs: Managing Copilot for your organization", "url": "https://docs.github.com/en/copilot/managing-copilot"},
+              {"label": "Kiro: Enterprise", "url": "https://kiro.dev/enterprise/"},
+              {"label": "DORA AI capabilities model", "url": "https://dora.dev/capabilities/"},
+              {"label": "NIST AI RMF Playbook", "url": "https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook"},
+              {"label": "ISO/IEC 42001 AI management systems", "url": "https://www.iso.org/standard/81230.html"}
+            ],
+            "priority": "optional",
+            "completed": false
+          },
+          {
+            "id": "ent-ai-build-features",
+            "name": "Building AI Features into Java Services",
+            "description": "Add LLM calls, retrieval, and tool calling to enterprise applications.",
+            "outcomes": ["Call an LLM from Spring Boot with Spring AI or LangChain4j", "Build retrieval-augmented generation over enterprise documents with pgvector", "Expose tools through MCP", "Evaluate, log, and guardrail model outputs"],
+            "estimatedHours": 18,
+            "prerequisites": ["ent-ai-agents", "ent-spring-boot"],
+            "resources": [
+              {"label": "Spring AI reference", "url": "https://docs.spring.io/spring-ai/reference/"},
+              {"label": "LangChain4j documentation", "url": "https://docs.langchain4j.dev/"},
+              {"label": "pgvector", "url": "https://github.com/pgvector/pgvector"},
+              {"label": "MCP Java SDK", "url": "https://github.com/modelcontextprotocol/java-sdk"},
+              {"label": "Amazon Bedrock User Guide", "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html"},
+              {"label": "Azure OpenAI documentation", "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/"}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Team AI workflow and RAG service",
+          "description": "Publish an AI usage guide and instruction files for a repository, and add a retrieval-augmented feature to a Spring Boot service.",
+          "demonstrates": ["ent-ai-team-adoption", "ent-ai-build-features"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "AI-assisted enterprise delivery",
+      "description": "Deliver a feature end to end with Kiro and Copilot, with specs, steering and instruction files, tests, security review, and metrics on what the tools did and did not help with."
+    }
+  }
+}

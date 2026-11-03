@@ -867,7 +867,7 @@
     "title": "Java",
     "description": "Learn Java from core syntax to modern, concurrent, production-ready applications using JDK 21 as the path baseline. This path focuses on backend and enterprise development; Android is a separate, Kotlin-first route.",
     "audience": "For learners targeting Java backend and enterprise roles. For Android app development, start with Kotlin and the Mobile Development path.",
-    "goal": "Build and test a well-structured Java application using modern language features. Examples target JDK 21 LTS; check later-JDK documentation when using newer features.",
+    "goal": "Progress from first program to expert Java engineer: build, test, deploy, and operate modern services, then master the memory model, JVM internals, performance engineering, API design, and secure distributed systems. Examples target JDK 21 LTS; check later-JDK documentation when using newer features.",
     "relatedTracks": [
       {"id": "backend", "reason": "Backend service architecture"},
       {"id": "databases", "reason": "SQL, schema design, and migrations"},
@@ -889,7 +889,7 @@
             "outcomes": ["Compile and run Java programs", "Use primitives, strings, and arrays", "Write methods and control flow"],
             "estimatedHours": 16,
             "prerequisites": [],
-            "resources": [{"label": "Dev.java Learn", "url": "https://dev.java/learn/"}, {"label": "Oracle Java Tutorials: Primitive data types", "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html"}, {"label": "Oracle Java Tutorials: Control flow statements", "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html"}, {"label": "Oracle Java Tutorials: Strings", "url": "https://docs.oracle.com/javase/tutorial/java/data/strings.html"}, {"label": "Oracle Java Tutorials: Defining methods", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html"}, {"label": "YouTube: LinkedIn Learning – Java Tutorial - Explore BASIC SYNTAX (7:04)", "url": "https://www.youtube.com/watch?v=3lOhz1F1zHA"}],
+            "resources": [{"label": "Dev.java Learn", "url": "https://dev.java/learn/"}, {"label": "Oracle Java Tutorials: Primitive data types", "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html"}, {"label": "Oracle Java Tutorials: Control flow statements", "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html"}, {"label": "Oracle Java Tutorials: Strings", "url": "https://docs.oracle.com/javase/tutorial/java/data/strings.html"}, {"label": "Oracle Java Tutorials: Defining methods", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html"}, {"label": "YouTube: LinkedIn Learning – Java Tutorial - Explore BASIC SYNTAX (7:04)", "url": "https://www.youtube.com/watch?v=3lOhz1F1zHA"}, {"label": "MOOC.fi: Java Programming I (free university course)", "url": "https://java-programming.mooc.fi/"}, {"label": "Exercism: Java track (practice with mentoring)", "url": "https://exercism.org/tracks/java"}, {"label": "JetBrains Academy: Java learning path", "url": "https://hyperskill.org/tracks/8"}, {"label": "Java Language Specification SE 21: Types, Values, and Variables", "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html"}, {"label": "Install a JDK: Adoptium Temurin", "url": "https://adoptium.net/"}, {"label": "SDKMAN!: Manage multiple JDK versions", "url": "https://sdkman.io/"}],
             "priority": "core",
             "completed": false
           },
@@ -918,7 +918,7 @@
             "outcomes": ["Define classes and constructors", "Use interfaces and inheritance", "Apply access modifiers"],
             "estimatedHours": 16,
             "prerequisites": ["lang-java-syntax-types"],
-            "resources": [{"label": "Dev.java: Classes and Objects", "url": "https://dev.java/learn/classes-objects/"}, {"label": "Oracle Java Tutorials: Classes and objects", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/index.html"}, {"label": "Oracle Java Tutorials: Interfaces and inheritance", "url": "https://docs.oracle.com/javase/tutorial/java/IandI/index.html"}, {"label": "Oracle Java Tutorials: Controlling access to members of a class", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html"}, {"label": "Oracle Java Tutorials: Nested classes", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html"}, {"label": "YouTube: Bro Code – Learn Java Object Oriented Programming in 10 minutes! (9:51)", "url": "https://www.youtube.com/watch?v=DYbi93vuSaU"}],
+            "resources": [{"label": "Dev.java: Classes and Objects", "url": "https://dev.java/learn/classes-objects/"}, {"label": "Oracle Java Tutorials: Classes and objects", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/index.html"}, {"label": "Oracle Java Tutorials: Interfaces and inheritance", "url": "https://docs.oracle.com/javase/tutorial/java/IandI/index.html"}, {"label": "Oracle Java Tutorials: Controlling access to members of a class", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html"}, {"label": "Oracle Java Tutorials: Nested classes", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html"}, {"label": "YouTube: Bro Code – Learn Java Object Oriented Programming in 10 minutes! (9:51)", "url": "https://www.youtube.com/watch?v=DYbi93vuSaU"}, {"label": "Head First Java, 3rd Edition", "url": "https://www.oreilly.com/library/view/head-first-java/9781491910771/"}, {"label": "Dev.java: Inheritance and interfaces", "url": "https://dev.java/learn/inheritance/"}, {"label": "Baeldung: SOLID principles in Java", "url": "https://www.baeldung.com/solid-principles"}, {"label": "Refactoring Guru: Design patterns", "url": "https://refactoring.guru/design-patterns/java"}],
             "priority": "core",
             "completed": false
           },
@@ -987,7 +987,7 @@
             "outcomes": ["Write lambdas and method references", "Build stream pipelines", "Use Optional safely"],
             "estimatedHours": 14,
             "prerequisites": ["lang-java-collections-exceptions"],
-            "resources": [{"label": "Dev.java: Streams", "url": "https://dev.java/learn/"}, {"label": "Oracle Java Tutorials: Lambda expressions", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html"}, {"label": "Oracle Java Tutorials: Aggregate operations - streams", "url": "https://docs.oracle.com/javase/tutorial/collections/streams/index.html"}, {"label": "Oracle Java Tutorials: Reduction - collect and reduce", "url": "https://docs.oracle.com/javase/tutorial/collections/streams/reduction.html"}, {"label": "Oracle Java Tutorials: Method references", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html"}, {"label": "YouTube: Bro Code – Java lambda λ (18:00)", "url": "https://www.youtube.com/watch?v=LEJ1kGHSXdA"}],
+            "resources": [{"label": "Dev.java: Streams", "url": "https://dev.java/learn/"}, {"label": "Oracle Java Tutorials: Lambda expressions", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html"}, {"label": "Oracle Java Tutorials: Aggregate operations - streams", "url": "https://docs.oracle.com/javase/tutorial/collections/streams/index.html"}, {"label": "Oracle Java Tutorials: Reduction - collect and reduce", "url": "https://docs.oracle.com/javase/tutorial/collections/streams/reduction.html"}, {"label": "Oracle Java Tutorials: Method references", "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html"}, {"label": "YouTube: Bro Code – Java lambda λ (18:00)", "url": "https://www.youtube.com/watch?v=LEJ1kGHSXdA"}, {"label": "Modern Java in Action (Urma, Fusco, Mycroft)", "url": "https://www.manning.com/books/modern-java-in-action"}, {"label": "Java SE 21 API: java.util.stream", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html"}, {"label": "Java SE 21 API: Optional", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html"}, {"label": "Dev.java: Functional programming", "url": "https://dev.java/learn/language/fp/"}],
             "priority": "core",
             "completed": false
           },
@@ -1018,7 +1018,7 @@
             "outcomes": ["Define records and enums", "Use sealed interfaces", "Apply pattern matching in switch"],
             "estimatedHours": 10,
             "prerequisites": ["lang-java-lambdas-streams"],
-            "resources": [{"label": "Dev.java Learn", "url": "https://dev.java/learn/"}, {"label": "Oracle Java docs: Record classes", "url": "https://docs.oracle.com/en/java/javase/21/language/records.html"}, {"label": "Oracle Java docs: Sealed classes", "url": "https://docs.oracle.com/en/java/javase/21/language/sealed-classes-and-interfaces.html"}, {"label": "Oracle Java docs: Pattern matching", "url": "https://docs.oracle.com/en/java/javase/21/language/pattern-matching.html"}, {"label": "Oracle Java docs: Pattern matching for switch", "url": "https://docs.oracle.com/en/java/javase/21/language/pattern-matching-switch-expressions-and-statements.html"}, {"label": "YouTube: Manchester Java Community – The Future of Java: Records, Sealed Classes and Pattern Matching - José Paumard (1:05:46)", "url": "https://www.youtube.com/watch?v=HGjcrheS7BU"}],
+            "resources": [{"label": "Dev.java Learn", "url": "https://dev.java/learn/"}, {"label": "Oracle Java docs: Record classes", "url": "https://docs.oracle.com/en/java/javase/21/language/records.html"}, {"label": "Oracle Java docs: Sealed classes", "url": "https://docs.oracle.com/en/java/javase/21/language/sealed-classes-and-interfaces.html"}, {"label": "Oracle Java docs: Pattern matching", "url": "https://docs.oracle.com/en/java/javase/21/language/pattern-matching.html"}, {"label": "Oracle Java docs: Pattern matching for switch", "url": "https://docs.oracle.com/en/java/javase/21/language/pattern-matching-switch-expressions-and-statements.html"}, {"label": "YouTube: Manchester Java Community – The Future of Java: Records, Sealed Classes and Pattern Matching - José Paumard (1:05:46)", "url": "https://www.youtube.com/watch?v=HGjcrheS7BU"}, {"label": "OpenJDK JEP 395: Records", "url": "https://openjdk.org/jeps/395"}, {"label": "OpenJDK JEP 409: Sealed Classes", "url": "https://openjdk.org/jeps/409"}, {"label": "Brian Goetz: Data-Oriented Programming in Java", "url": "https://www.infoq.com/articles/data-oriented-programming-java/"}, {"label": "Dev.java: Pattern matching", "url": "https://dev.java/learn/language-basics/pattern-matching/"}],
             "priority": "optional",
             "completed": false
           },
@@ -1143,7 +1143,7 @@
             "outcomes": ["Use ExecutorService and CompletableFuture", "Avoid races and deadlocks", "Apply virtual threads appropriately"],
             "estimatedHours": 20,
             "prerequisites": ["lang-java-lambdas-streams", "concurrency"],
-            "resources": [{"label": "Dev.java: Concurrency", "url": "https://dev.java/learn/"}, {"label": "Oracle Java Tutorials: Concurrency lesson", "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html"}, {"label": "Oracle Java Tutorials: Executors", "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/executors.html"}, {"label": "Oracle Java Tutorials: Concurrent collections", "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/collections.html"}, {"label": "Oracle Java docs: Virtual threads", "url": "https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html"}, {"label": "YouTube: Bro Code – Learn Java threading in 10 minutes! (10:21)", "url": "https://www.youtube.com/watch?v=SztE5W41on4"}],
+            "resources": [{"label": "Dev.java: Concurrency", "url": "https://dev.java/learn/"}, {"label": "Oracle Java Tutorials: Concurrency lesson", "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html"}, {"label": "Oracle Java Tutorials: Executors", "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/executors.html"}, {"label": "Oracle Java Tutorials: Concurrent collections", "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/collections.html"}, {"label": "Oracle Java docs: Virtual threads", "url": "https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html"}, {"label": "YouTube: Bro Code – Learn Java threading in 10 minutes! (10:21)", "url": "https://www.youtube.com/watch?v=SztE5W41on4"}, {"label": "Java Concurrency in Practice", "url": "https://jcip.net/"}, {"label": "Java SE 21 API: CompletableFuture", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html"}, {"label": "Dev.java: Virtual threads", "url": "https://dev.java/learn/new-features/virtual-threads/"}, {"label": "OpenJDK JEP 444: Virtual Threads", "url": "https://openjdk.org/jeps/444"}],
             "priority": "core",
             "completed": false
           },
@@ -1154,7 +1154,7 @@
             "outcomes": ["Explain heap, stack, and garbage collection", "Profile an application", "Tune basic JVM options"],
             "estimatedHours": 16,
             "prerequisites": ["lang-java-build-testing"],
-            "resources": [{"label": "Java SE Documentation", "url": "https://docs.oracle.com/en/java/javase/21/"}, {"label": "Oracle Java docs: HotSpot Virtual Machine Garbage Collection Tuning Guide", "url": "https://docs.oracle.com/en/java/javase/21/gctuning/index.html"}, {"label": "Oracle: The Java Virtual Machine Specification - run-time data areas", "url": "https://docs.oracle.com/javase/specs/jvms/se21/html/jvms-2.html"}, {"label": "Oracle Java docs: Java Flight Recorder runtime guide", "url": "https://docs.oracle.com/en/java/javase/21/jfapi/why-use-java-flight-recorder.html"}, {"label": "YouTube: The Coding Gopher – How the Java Virtual Machine Works (and Why You Should Care) (4:04)", "url": "https://www.youtube.com/watch?v=cAoymPToQdg"}, {"label": "YouTube: Programming with Mosh – Java Full Course for Beginners (2:30:48)", "url": "https://www.youtube.com/watch?v=eIrMbAQSU34"}],
+            "resources": [{"label": "Java SE Documentation", "url": "https://docs.oracle.com/en/java/javase/21/"}, {"label": "Oracle Java docs: HotSpot Virtual Machine Garbage Collection Tuning Guide", "url": "https://docs.oracle.com/en/java/javase/21/gctuning/index.html"}, {"label": "Oracle: The Java Virtual Machine Specification - run-time data areas", "url": "https://docs.oracle.com/javase/specs/jvms/se21/html/jvms-2.html"}, {"label": "Oracle Java docs: Java Flight Recorder runtime guide", "url": "https://docs.oracle.com/en/java/javase/21/jfapi/why-use-java-flight-recorder.html"}, {"label": "YouTube: The Coding Gopher – How the Java Virtual Machine Works (and Why You Should Care) (4:04)", "url": "https://www.youtube.com/watch?v=cAoymPToQdg"}, {"label": "YouTube: Programming with Mosh – Java Full Course for Beginners (2:30:48)", "url": "https://www.youtube.com/watch?v=eIrMbAQSU34"}, {"label": "Dev.java: JVM tools (jcmd, jstack, jfr)", "url": "https://dev.java/learn/jvm/tool/"}, {"label": "Aleksey Shipilev: JVM Anatomy Quarks", "url": "https://shipilev.net/jvm/anatomy-quarks/"}, {"label": "Baeldung: Guide to the JVM", "url": "https://www.baeldung.com/java-jvm"}],
             "priority": "core",
             "completed": false
           },
@@ -1255,7 +1255,7 @@
               {"label": "Spring Boot Actuator: Endpoints", "url": "https://docs.spring.io/spring-boot/reference/actuator/endpoints.html"},
               {"label": "OpenTelemetry: Observability concepts", "url": "https://opentelemetry.io/docs/concepts/observability-primer/"},
               {"label": "Docker Docs: Healthcheck instruction", "url": "https://docs.docker.com/reference/dockerfile/#healthcheck"},
-              {"label": "YouTube videos: Spring Boot Actuator, metrics, and health checks", "url": "https://www.youtube.com/results?search_query=Spring+Boot+Actuator+metrics+health+checks+observability"}
+              {"label": "Micrometer: Documentation", "url": "https://docs.micrometer.io/micrometer/reference/"}, {"label": "Prometheus: Getting started", "url": "https://prometheus.io/docs/introduction/first_steps/"}, {"label": "Grafana: Dashboards documentation", "url": "https://grafana.com/docs/grafana/latest/dashboards/"}, {"label": "Logback manual", "url": "https://logback.qos.ch/manual/index.html"}, {"label": "Google SRE Book: Monitoring distributed systems", "url": "https://sre.google/sre-book/monitoring-distributed-systems/"}, {"label": "YouTube videos: Spring Boot Actuator, metrics, and health checks", "url": "https://www.youtube.com/results?search_query=Spring+Boot+Actuator+metrics+health+checks+observability"}
             ],
             "priority": "core",
             "completed": false
@@ -1266,10 +1266,294 @@
           "description": "Extend the tested REST API into a containerized service, deploy through CI, load-test a representative endpoint, and document its health signals and a measured performance improvement.",
           "demonstrates": ["lang-java-concurrency", "lang-java-jvm-internals", "lang-java-deployment", "lang-java-spring-advanced", "lang-java-cloud-native", "lang-java-agentic", "lang-java-production-readiness"]
         }
-      }
-    ],
-    "capstone": {
-      "title": "Production-grade Java service",
+                },
+                {
+                  "level": "Expert",
+                  "goal": "Reason rigorously about the language, memory model, and JVM; design durable libraries and distributed systems; and contribute to the Java ecosystem.",
+                  "skills": [
+                    {
+                      "id": "lang-java-effective-design",
+                      "name": "Effective Java, API & Library Design",
+                      "description": "Apply the idioms and trade-offs that distinguish expert Java code, and design public APIs that stay compatible for years.",
+                      "outcomes": ["Apply Effective Java items on object creation, immutability, generics, enums, lambdas, and exceptions", "Design immutable, thread-safe value types and fluent, hard-to-misuse APIs", "Version a library with semantic versioning and keep binary and source compatibility", "Use JPMS modules, multi-release JARs, and a deprecation policy", "Detect API breaks automatically in CI"],
+                      "estimatedHours": 24,
+                      "prerequisites": ["lang-java-21-plus", "lang-java-build-testing"],
+                      "resources": [
+                        {"label": "Effective Java, 3rd Edition (Joshua Bloch)", "url": "https://www.oreilly.com/library/view/effective-java-3rd/9780134686097/"},
+                        {"label": "Joshua Bloch: How to Design a Good API and Why it Matters (video)", "url": "https://www.youtube.com/watch?v=aAb7hSCtvGw"},
+                        {"label": "Dev.java: Modules (JPMS)", "url": "https://dev.java/learn/modules/"},
+                        {"label": "OpenJDK JEP 261: Module System", "url": "https://openjdk.org/jeps/261"},
+                        {"label": "OpenJDK JEP 238: Multi-Release JAR Files", "url": "https://openjdk.org/jeps/238"},
+                        {"label": "Semantic Versioning 2.0.0", "url": "https://semver.org/"},
+                        {"label": "Java Language Specification, SE 21", "url": "https://docs.oracle.com/javase/specs/jls/se21/html/index.html"},
+                        {"label": "Java Generics FAQ (Angelika Langer)", "url": "https://www.angelikalanger.com/GenericsFAQ/JavaGenericsFAQ.html"},
+                        {"label": "japicmp: Compare JAR files for API compatibility", "url": "https://siom79.github.io/japicmp/"},
+                        {"label": "Google Java Style Guide", "url": "https://google.github.io/styleguide/javaguide.html"},
+                        {"label": "Error Prone: Static analysis for Java", "url": "https://errorprone.info/"},
+                        {"label": "YouTube search: Effective Java Joshua Bloch talk", "url": "https://www.youtube.com/results?search_query=Effective+Java+Joshua+Bloch+talk"}
+                      ],
+                      "priority": "core",
+                      "completed": false
+                    },
+                    {
+                      "id": "lang-java-memory-model",
+                      "name": "Java Memory Model & Lock-Free Concurrency",
+                      "description": "Reason precisely about visibility, ordering, and atomicity, and build or evaluate lock-free and structured concurrent code.",
+                      "outcomes": ["Explain happens-before, volatile, final field semantics, and safe publication", "Choose between synchronized, ReentrantLock, StampedLock, atomics, and VarHandles", "Use LongAdder, ConcurrentHashMap, and Phaser appropriately", "Explain why a data race occurs and prove a fix with jcstress", "Use structured concurrency and virtual threads while avoiding pinning", "Diagnose deadlocks, livelocks, and contention from thread dumps"],
+                      "estimatedHours": 28,
+                      "prerequisites": ["lang-java-concurrency", "lang-java-jvm-internals"],
+                      "resources": [
+                        {"label": "Java Concurrency in Practice (Brian Goetz et al.)", "url": "https://jcip.net/"},
+                        {"label": "JLS 17.4: Java Memory Model", "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-17.html#jls-17.4"},
+                        {"label": "Aleksey Shipilev: Java Memory Model Pragmatics", "url": "https://shipilev.net/blog/2014/jmm-pragmatics/"},
+                        {"label": "Doug Lea: The java.util.concurrent Synchronizer Framework", "url": "http://gee.cs.oswego.edu/dl/papers/aqs.pdf"},
+                        {"label": "OpenJDK jcstress: Concurrency stress tests", "url": "https://github.com/openjdk/jcstress"},
+                        {"label": "Java SE 21 API: VarHandle", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/invoke/VarHandle.html"},
+                        {"label": "Java SE 21 API: java.util.concurrent", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/package-summary.html"},
+                        {"label": "OpenJDK JEP 453: Structured Concurrency (preview)", "url": "https://openjdk.org/jeps/453"},
+                        {"label": "Dev.java: Virtual threads", "url": "https://dev.java/learn/new-features/virtual-threads/"},
+                        {"label": "The Art of Multiprocessor Programming", "url": "https://shop.elsevier.com/books/the-art-of-multiprocessor-programming/herlihy/978-0-12-415950-1"},
+                        {"label": "YouTube: Inside Java – Java Memory Model talks", "url": "https://www.youtube.com/results?search_query=Java+Memory+Model+happens-before+talk+Shipilev"}
+                      ],
+                      "priority": "core",
+                      "completed": false
+                    },
+                    {
+                      "id": "lang-java-jvm-deep-dive",
+                      "name": "JIT, Garbage Collectors & JVM Diagnostics",
+                      "description": "Understand how HotSpot compiles and manages memory, and diagnose production problems with evidence.",
+                      "outcomes": ["Explain tiered compilation, inlining, escape analysis, and deoptimization", "Choose and tune G1, ZGC, or Shenandoah against latency and throughput goals", "Read GC logs and heap dumps to find leaks and allocation hot spots", "Record and analyze Java Flight Recorder and async-profiler flame graphs", "Use jcmd, jstack, jmap, and JMX for live diagnosis", "Explain class loading, bytecode verification, and CDS/AppCDS"],
+                      "estimatedHours": 30,
+                      "prerequisites": ["lang-java-jvm-internals"],
+                      "resources": [
+                        {"label": "Optimizing Java (Evans, Gough, Newland)", "url": "https://www.oreilly.com/library/view/optimizing-java/9781492039259/"},
+                        {"label": "Java Performance, 2nd Edition (Scott Oaks)", "url": "https://www.oreilly.com/library/view/java-performance-2nd/9781492056102/"},
+                        {"label": "The Java Virtual Machine Specification, SE 21", "url": "https://docs.oracle.com/javase/specs/jvms/se21/html/index.html"},
+                        {"label": "HotSpot Virtual Machine Garbage Collection Tuning Guide", "url": "https://docs.oracle.com/en/java/javase/21/gctuning/index.html"},
+                        {"label": "OpenJDK: ZGC wiki", "url": "https://wiki.openjdk.org/display/zgc"},
+                        {"label": "OpenJDK: Shenandoah wiki", "url": "https://wiki.openjdk.org/display/shenandoah"},
+                        {"label": "JDK Mission Control and Flight Recorder", "url": "https://www.oracle.com/java/technologies/jdk-mission-control.html"},
+                        {"label": "async-profiler", "url": "https://github.com/async-profiler/async-profiler"},
+                        {"label": "Eclipse Memory Analyzer (MAT)", "url": "https://eclipse.dev/mat/"},
+                        {"label": "jcmd reference", "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/man/jcmd.html"},
+                        {"label": "Aleksey Shipilev: JVM Anatomy Quarks", "url": "https://shipilev.net/jvm/anatomy-quarks/"},
+                        {"label": "Chris Newland: JITWatch", "url": "https://github.com/AdoptOpenJDK/jitwatch"},
+                        {"label": "Dev.java: Java Platform and JVM tools", "url": "https://dev.java/learn/jvm/tool/"},
+                        {"label": "YouTube search: JVM garbage collection ZGC G1 deep dive", "url": "https://www.youtube.com/results?search_query=JVM+garbage+collection+ZGC+G1+deep+dive+talk"}
+                      ],
+                      "priority": "core",
+                      "completed": false
+                    },
+                    {
+                      "id": "lang-java-benchmarking",
+                      "name": "Benchmarking & Performance Engineering",
+                      "description": "Measure Java performance correctly with JMH, avoid benchmark pitfalls, and make evidence-based optimizations.",
+                      "outcomes": ["Write JMH benchmarks that avoid dead-code elimination, constant folding, and warm-up errors", "Interpret throughput, average-time, and percentile results with error bars", "Measure allocation and CPU cost with profilers", "Load-test a service and report latency percentiles without coordinated omission", "Reduce allocation and lock contention and verify the improvement"],
+                      "estimatedHours": 18,
+                      "prerequisites": ["lang-java-jvm-deep-dive"],
+                      "resources": [
+                        {"label": "OpenJDK JMH: Java Microbenchmark Harness", "url": "https://github.com/openjdk/jmh"},
+                        {"label": "JMH samples", "url": "https://github.com/openjdk/jmh/tree/master/jmh-samples/src/main/java/org/openjdk/jmh/samples"},
+                        {"label": "Aleksey Shipilev: Nanotrusting the Nanotime", "url": "https://shipilev.net/blog/2014/nanotrusting-nanotime/"},
+                        {"label": "Gil Tene: How NOT to Measure Latency (video)", "url": "https://www.youtube.com/watch?v=lJ8ydIuPFeU"},
+                        {"label": "HdrHistogram", "url": "https://github.com/HdrHistogram/HdrHistogram"},
+                        {"label": "Gatling: Load testing", "url": "https://docs.gatling.io/"},
+                        {"label": "k6: Load testing documentation", "url": "https://grafana.com/docs/k6/latest/"},
+                        {"label": "YouTube search: JMH Java microbenchmark tutorial", "url": "https://www.youtube.com/results?search_query=JMH+Java+microbenchmark+tutorial"}
+                      ],
+                      "priority": "core",
+                      "completed": false
+                    },
+                    {
+                      "id": "lang-java-bytecode-native",
+                      "name": "Bytecode, Reflection, Annotation Processing & Native Interop",
+                      "description": "Work below the language surface: inspect and generate bytecode, build annotation processors, and call native code safely.",
+                      "outcomes": ["Read bytecode with javap and explain invokedynamic and string concatenation", "Use reflection, MethodHandles, and dynamic proxies and explain their costs", "Write an annotation processor that generates code at compile time", "Transform classes with the ASM or ByteBuddy library or the Class-File API", "Call native libraries with the Foreign Function & Memory API", "Explain how GraalVM native image changes reflection and class-loading assumptions"],
+                      "estimatedHours": 26,
+                      "prerequisites": ["lang-java-jvm-deep-dive", "lang-java-effective-design"],
+                      "resources": [
+                        {"label": "javap reference", "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/man/javap.html"},
+                        {"label": "JVMS: Instruction set summary", "url": "https://docs.oracle.com/javase/specs/jvms/se21/html/jvms-6.html"},
+                        {"label": "Java SE 21 API: java.lang.invoke", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/invoke/package-summary.html"},
+                        {"label": "Java SE 21 API: Annotation processing (javax.annotation.processing)", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.compiler/javax/annotation/processing/package-summary.html"},
+                        {"label": "OpenJDK JEP 454: Foreign Function & Memory API", "url": "https://openjdk.org/jeps/454"},
+                        {"label": "OpenJDK JEP 484: Class-File API", "url": "https://openjdk.org/jeps/484"},
+                        {"label": "ASM bytecode framework", "url": "https://asm.ow2.io/"},
+                        {"label": "Byte Buddy", "url": "https://bytebuddy.net/"},
+                        {"label": "GraalVM Native Image documentation", "url": "https://www.graalvm.org/latest/reference-manual/native-image/"},
+                        {"label": "Dev.java: Foreign Function & Memory API", "url": "https://dev.java/learn/ffm/"},
+                        {"label": "YouTube search: Java bytecode invokedynamic explained", "url": "https://www.youtube.com/results?search_query=Java+bytecode+invokedynamic+explained+talk"}
+                      ],
+                      "priority": "optional",
+                      "completed": false
+                    },
+                    {
+                      "id": "lang-java-distributed-systems",
+                      "name": "Distributed Systems & Event-Driven Architecture on the JVM",
+                      "description": "Design services that stay correct under partial failure, using messaging, consistency patterns, and rigorous testing.",
+                      "outcomes": ["Apply idempotency, outbox, saga, and retry patterns to cross-service workflows", "Choose consistency and delivery guarantees for Kafka-based pipelines", "Design for failure with timeouts, backpressure, bulkheads, and load shedding", "Test resilience with fault injection and contract tests", "Decide between a modular monolith and microservices with explicit trade-offs"],
+                      "estimatedHours": 32,
+                      "prerequisites": ["lang-java-spring-advanced", "lang-java-cloud-native"],
+                      "resources": [
+                        {"label": "Designing Data-Intensive Applications (Martin Kleppmann)", "url": "https://dataintensive.net/"},
+                        {"label": "Apache Kafka: Documentation", "url": "https://kafka.apache.org/documentation/"},
+                        {"label": "Confluent: Kafka exactly-once semantics", "url": "https://www.confluent.io/blog/exactly-once-semantics-are-possible-heres-how-apache-kafka-does-it/"},
+                        {"label": "microservices.io: Transactional outbox", "url": "https://microservices.io/patterns/data/transactional-outbox.html"},
+                        {"label": "microservices.io: Saga pattern", "url": "https://microservices.io/patterns/data/saga.html"},
+                        {"label": "Resilience4j documentation", "url": "https://resilience4j.readme.io/docs"},
+                        {"label": "Spring Cloud Contract", "url": "https://spring.io/projects/spring-cloud-contract"},
+                        {"label": "Pact: Consumer-driven contract testing", "url": "https://docs.pact.io/"},
+                        {"label": "Debezium: Change data capture", "url": "https://debezium.io/documentation/"},
+                        {"label": "Eclipse Vert.x and Project Reactor: Reactive toolkits", "url": "https://projectreactor.io/docs/core/release/reference/"},
+                        {"label": "Google SRE Book: Handling overload", "url": "https://sre.google/sre-book/handling-overload/"},
+                        {"label": "YouTube search: Kafka outbox pattern Spring Boot", "url": "https://www.youtube.com/results?search_query=Kafka+transactional+outbox+pattern+Spring+Boot"}
+                      ],
+                      "priority": "core",
+                      "completed": false
+                    },
+                    {
+                      "id": "lang-java-secure-coding",
+                      "name": "Secure Java & Supply Chain Security",
+                      "description": "Write and ship Java that resists common attacks and keep its dependencies trustworthy.",
+                      "outcomes": ["Avoid injection, unsafe deserialization, XXE, SSRF, and path traversal in Java code", "Use the JCA/JCE correctly for hashing, encryption, and TLS", "Scan dependencies and generate an SBOM in the build", "Pin and verify dependencies and sign release artifacts", "Run SAST and dependency checks in CI"],
+                      "estimatedHours": 18,
+                      "prerequisites": ["lang-java-frameworks", "lang-java-deployment"],
+                      "resources": [
+                        {"label": "Oracle: Secure Coding Guidelines for Java SE", "url": "https://www.oracle.com/java/technologies/javase/seccodeguide.html"},
+                        {"label": "OWASP Top 10", "url": "https://owasp.org/www-project-top-ten/"},
+                        {"label": "OWASP Cheat Sheet: Deserialization", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html"},
+                        {"label": "OWASP Cheat Sheet: Java Security", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Java_Security_Cheat_Sheet.html"},
+                        {"label": "Java Cryptography Architecture (JCA) Reference Guide", "url": "https://docs.oracle.com/en/java/javase/21/security/java-cryptography-architecture-jca-reference-guide.html"},
+                        {"label": "OWASP Dependency-Check", "url": "https://owasp.org/www-project-dependency-check/"},
+                        {"label": "CycloneDX Maven Plugin (SBOM)", "url": "https://github.com/CycloneDX/cyclonedx-maven-plugin"},
+                        {"label": "SLSA: Supply-chain Levels for Software Artifacts", "url": "https://slsa.dev/"},
+                        {"label": "SpotBugs with Find Security Bugs", "url": "https://find-sec-bugs.github.io/"},
+                        {"label": "YouTube search: Java deserialization vulnerabilities explained", "url": "https://www.youtube.com/results?search_query=Java+deserialization+vulnerabilities+explained"}
+                      ],
+                      "priority": "core",
+                      "completed": false
+                    },
+                    {
+                      "id": "lang-java-community-leadership",
+                      "name": "OpenJDK, Open Source & Technical Leadership",
+                      "description": "Follow and influence the Java platform, contribute upstream, and lead design decisions on a team.",
+                      "outcomes": ["Read JEPs and mailing-list discussions to anticipate platform direction", "Build the JDK from source and run its tests", "Submit a documentation or bug-fix contribution to an open-source Java project", "Write an architecture decision record and lead a design review", "Mentor others and present a technical talk"],
+                      "estimatedHours": 20,
+                      "prerequisites": ["lang-java-effective-design", "lang-java-jvm-deep-dive"],
+                      "resources": [
+                        {"label": "OpenJDK: How to contribute", "url": "https://openjdk.org/guide/"},
+                        {"label": "OpenJDK: JEP Index", "url": "https://openjdk.org/jeps/0"},
+                        {"label": "OpenJDK: Building the JDK", "url": "https://github.com/openjdk/jdk/blob/master/doc/building.md"},
+                        {"label": "OpenJDK mailing lists", "url": "https://mail.openjdk.org/mailman/listinfo"},
+                        {"label": "Inside Java: Podcast and newscasts", "url": "https://inside.java/podcast/"},
+                        {"label": "Brian Goetz: Project Valhalla and Amber design notes", "url": "https://openjdk.org/projects/valhalla/"},
+                        {"label": "OpenJDK Project Loom", "url": "https://openjdk.org/projects/loom/"},
+                        {"label": "ADR: Architecture Decision Records", "url": "https://adr.github.io/"},
+                        {"label": "Java Community Process (JCP)", "url": "https://jcp.org/"},
+                        {"label": "JavaOne and Devoxx talks (YouTube)", "url": "https://www.youtube.com/@Devoxx"},
+                        {"label": "Foojay: The place for friends of OpenJDK", "url": "https://foojay.io/"},
+                        {"label": "Oracle Java Certification: Java SE 21 Developer Professional (1Z0-830)", "url": "https://education.oracle.com/oracle-certified-professional-java-se-21-developer/pexam_1Z0-830"}
+                      ],
+                      "priority": "optional",
+                      "completed": false
+                    },
+                    {
+                      "id": "lang-java-data-persistence-advanced",
+                      "name": "Advanced Persistence, SQL Tuning & Caching",
+                      "description": "Design data access that performs and scales: query plans, Hibernate internals, locking, and caching.",
+                      "outcomes": ["Read EXPLAIN plans and design indexes for real queries", "Explain Hibernate's persistence context, flushing, and lazy loading", "Choose optimistic or pessimistic locking and isolation levels", "Tune connection pools such as HikariCP", "Add caching with Caffeine or Redis and handle invalidation", "Use jOOQ or JDBI where an ORM is the wrong tool"],
+                      "estimatedHours": 24,
+                      "prerequisites": ["lang-java-spring-advanced"],
+                      "resources": [
+                        {"label": "Vlad Mihalcea: High-Performance Java Persistence", "url": "https://vladmihalcea.com/books/high-performance-java-persistence/"},
+                        {"label": "Hibernate ORM User Guide", "url": "https://docs.jboss.org/hibernate/orm/6.6/userguide/html_single/Hibernate_User_Guide.html"},
+                        {"label": "Use The Index, Luke: SQL indexing", "url": "https://use-the-index-luke.com/"},
+                        {"label": "PostgreSQL: Using EXPLAIN", "url": "https://www.postgresql.org/docs/current/using-explain.html"},
+                        {"label": "PostgreSQL: Transaction isolation", "url": "https://www.postgresql.org/docs/current/transaction-iso.html"},
+                        {"label": "HikariCP: About pool sizing", "url": "https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing"},
+                        {"label": "Caffeine: High performance caching library", "url": "https://github.com/ben-manes/caffeine"},
+                        {"label": "Spring Boot: Caching", "url": "https://docs.spring.io/spring-boot/reference/io/caching.html"},
+                        {"label": "jOOQ documentation", "url": "https://www.jooq.org/doc/latest/manual/"},
+                        {"label": "YouTube search: Hibernate performance N+1 locking tutorial", "url": "https://www.youtube.com/results?search_query=Hibernate+performance+tuning+locking+tutorial"}
+                      ],
+                      "priority": "core",
+                      "completed": false
+                    },
+                    {
+                      "id": "lang-java-reactive-networking",
+                      "name": "Reactive, Async & Network Programming",
+                      "description": "Build high-throughput networked services and understand when reactive, virtual-thread, or event-loop designs fit.",
+                      "outcomes": ["Use java.net.http.HttpClient and NIO channels", "Explain event loops, backpressure, and the Reactive Streams contract", "Build services with Project Reactor or Vert.x", "Compare blocking virtual threads with reactive stacks on a workload", "Use gRPC and Protocol Buffers for service-to-service calls"],
+                      "estimatedHours": 22,
+                      "prerequisites": ["lang-java-memory-model"],
+                      "resources": [
+                        {"label": "Java SE 21 API: java.net.http", "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.net.http/java/net/http/package-summary.html"},
+                        {"label": "Reactive Streams specification", "url": "https://www.reactive-streams.org/"},
+                        {"label": "Project Reactor reference", "url": "https://projectreactor.io/docs/core/release/reference/"},
+                        {"label": "Spring WebFlux reference", "url": "https://docs.spring.io/spring-framework/reference/web/webflux.html"},
+                        {"label": "Eclipse Vert.x documentation", "url": "https://vertx.io/docs/"},
+                        {"label": "Netty user guide", "url": "https://netty.io/wiki/user-guide-for-4.x.html"},
+                        {"label": "gRPC Java: Basics tutorial", "url": "https://grpc.io/docs/languages/java/basics/"},
+                        {"label": "Quarkus guides", "url": "https://quarkus.io/guides/"},
+                        {"label": "Micronaut documentation", "url": "https://docs.micronaut.io/latest/guide/"},
+                        {"label": "YouTube search: Reactive programming Java Project Reactor tutorial", "url": "https://www.youtube.com/results?search_query=Project+Reactor+reactive+programming+Java+tutorial"}
+                      ],
+                      "priority": "optional",
+                      "completed": false
+                    },
+                    {
+                      "id": "lang-java-architecture",
+                      "name": "Software Architecture, DDD & Clean Code",
+                      "description": "Structure large Java systems for change using domain modeling, boundaries, and enforced architecture rules.",
+                      "outcomes": ["Model a domain with entities, value objects, aggregates, and bounded contexts", "Apply hexagonal or clean architecture with clear dependency direction", "Enforce architecture rules with ArchUnit or Spring Modulith", "Refactor legacy code safely using characterization tests", "Document decisions with C4 diagrams and ADRs"],
+                      "estimatedHours": 24,
+                      "prerequisites": ["lang-java-effective-design", "lang-java-integration-testing"],
+                      "resources": [
+                        {"label": "Domain-Driven Design Distilled (Vaughn Vernon)", "url": "https://www.oreilly.com/library/view/domain-driven-design-distilled/9780134434964/"},
+                        {"label": "Clean Code (Robert C. Martin)", "url": "https://www.oreilly.com/library/view/clean-code-a/9780136083238/"},
+                        {"label": "Refactoring, 2nd Edition (Martin Fowler)", "url": "https://martinfowler.com/books/refactoring.html"},
+                        {"label": "Working Effectively with Legacy Code", "url": "https://www.oreilly.com/library/view/working-effectively-with/0131177052/"},
+                        {"label": "Alistair Cockburn: Hexagonal architecture", "url": "https://alistair.cockburn.us/hexagonal-architecture/"},
+                        {"label": "ArchUnit user guide", "url": "https://www.archunit.org/userguide/html/000_Index.html"},
+                        {"label": "Spring Modulith reference", "url": "https://docs.spring.io/spring-modulith/reference/"},
+                        {"label": "C4 model for software architecture", "url": "https://c4model.com/"},
+                        {"label": "Martin Fowler: Microservices guide", "url": "https://martinfowler.com/microservices/"},
+                        {"label": "YouTube search: Domain-driven design in Java Spring Boot", "url": "https://www.youtube.com/results?search_query=domain+driven+design+Java+Spring+Boot+hexagonal+architecture"}
+                      ],
+                      "priority": "core",
+                      "completed": false
+                    },
+                    {
+                      "id": "lang-java-career-interviews",
+                      "name": "Staff-level Interviews, Algorithms & System Design",
+                      "description": "Prepare for senior and staff Java roles with algorithms, system design, and JVM deep-dive questions.",
+                      "outcomes": ["Solve data-structure and algorithm problems fluently in Java", "Walk through a system design with capacity estimates and trade-offs", "Answer JVM, concurrency, and Spring internals questions with depth", "Communicate design decisions in writing"],
+                      "estimatedHours": 30,
+                      "prerequisites": ["lang-java-memory-model", "lang-java-jvm-deep-dive"],
+                      "resources": [
+                        {"label": "LeetCode", "url": "https://leetcode.com/"},
+                        {"label": "NeetCode roadmap", "url": "https://neetcode.io/roadmap"},
+                        {"label": "Algorithms, 4th Edition (Sedgewick and Wayne)", "url": "https://algs4.cs.princeton.edu/home/"},
+                        {"label": "System Design Primer", "url": "https://github.com/donnemartin/system-design-primer"},
+                        {"label": "ByteByteGo: System design resources", "url": "https://bytebytego.com/"},
+                        {"label": "Cracking the Coding Interview", "url": "https://www.crackingthecodinginterview.com/"},
+                        {"label": "Baeldung: Java interview questions", "url": "https://www.baeldung.com/java-interview-questions"},
+                        {"label": "The Staff Engineer's Path (Tanya Reilly)", "url": "https://www.oreilly.com/library/view/the-staff-engineers/9781098118723/"},
+                        {"label": "YouTube search: Java senior interview JVM concurrency questions", "url": "https://www.youtube.com/results?search_query=senior+Java+interview+JVM+concurrency+questions"}
+                      ],
+                      "priority": "optional",
+                      "completed": false
+                    }
+                  ],
+                  "project": {
+                    "title": "Expert-grade Java library and performance study",
+                    "description": "Design and publish a small, well-documented Java library with a stable API, JMH benchmarks, a concurrency stress test, a secure release pipeline with SBOM, and a written performance and GC analysis using JFR.",
+                    "demonstrates": ["lang-java-effective-design", "lang-java-memory-model", "lang-java-jvm-deep-dive", "lang-java-benchmarking", "lang-java-secure-coding"]
+                  }
+                }
+              ],
+              "capstone": {
+                "title": "Production-grade Java service",
       "description": "Deliver a documented Java backend service with SQL persistence and versioned migrations, unit and Testcontainers integration tests, OpenAPI documentation, containerized CI/CD, externalized configuration, health and metrics endpoints, and measured performance results. Use JDK 21 as the baseline and clearly label any features requiring a newer JDK."
     }
   },

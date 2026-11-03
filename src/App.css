@@ -1,4 +1,4 @@
-/* Shared design tokens; category wrappers override the accent pair below. */
+﻿/* Shared design tokens; category wrappers override the accent pair below. */
 :root {
   --ink: #1d2925;
   --muted: #68746c;
@@ -20,6 +20,7 @@
 [data-category="specialized"] { --accent: #0f766e; --accent-soft: #ccfbf1; }
 [data-category="career"] { --accent: #4d7c0f; --accent-soft: #ecfccb; }
 [data-category="leadership"] { --accent: #7c3aed; --accent-soft: #ede9fe; }
+[data-category="enterprise"] { --accent: #c2410c; --accent-soft: #ffedd5; }
 
 /* Page shell and brand banner */
 body {
@@ -546,6 +547,62 @@ body {
 
 .muted { color: var(--muted); }
 
+/* Inline SVG icons (see Icon.jsx) sit on the text baseline and take the text colour. */
+.icon {
+  flex-shrink: 0;
+  margin-right: 0.2em;
+  vertical-align: -0.14em;
+}
+
+.eyebrow .icon,
+.intro-meta h3 .icon,
+.skill-card h5 .icon,
+.pill .icon {
+  color: var(--accent);
+}
+
+.capstone .eyebrow .icon { color: #e7b27c; }
+.skill-card h5 .icon { margin-right: 0.35em; }
+.resource-icon { color: var(--accent); }
+
+/* Custom bullets: replace the default dot with an accent-coloured marker. */
+.bullet-list {
+  margin: 0 0 0.9rem;
+  padding: 0;
+  list-style: none;
+}
+
+.bullet-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.bullet-list li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.5em;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* Outcomes get a check mark drawn with borders so no font or image is needed. */
+.bullet-check li::before {
+  top: 0.32em;
+  width: 0.28rem;
+  height: 0.6rem;
+  border: solid var(--accent);
+  border-width: 0 2px 2px 0;
+  border-radius: 0;
+  background: none;
+  transform: rotate(45deg);
+}
+
+.bullet-link li { margin-bottom: 0.45rem; }
+
 .capstone {
   padding: clamp(1.5rem, 4vw, 2.5rem);
   border-radius: 6px;
@@ -868,3 +925,4 @@ body {
   .search-tip { display: none; }
   .search-hint { display: none; }
 }
+

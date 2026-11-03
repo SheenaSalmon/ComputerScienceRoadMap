@@ -1,0 +1,1191 @@
+{
+  "ent-jee": {
+    "title": "Java/J2EE, Design Patterns & Microservices",
+    "description": "Master enterprise Java on Java 17+ and Jakarta EE (formerly J2EE): servlets, JDBC, JMS, multithreading, design patterns, distributed systems, and microservices architecture.",
+    "audience": "For Java developers moving into enterprise application development, or maintaining and modernizing J2EE systems.",
+    "goal": "Design, build, and explain a layered enterprise Java application and decompose it into well-bounded microservices.",
+    "relatedTracks": [
+      {
+        "id": "lang-java",
+        "reason": "Java language path from beginner to expert"
+      },
+      {
+        "id": "ent-spring",
+        "reason": "Spring implementations of enterprise patterns"
+      },
+      { "id": "ent-messaging", "reason": "JMS, IBM MQ, and Kafka in depth" },
+      { "id": "distributed", "reason": "Distributed systems theory" }
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Write Java 17+ code and understand how Java EE / Jakarta EE web applications are structured.",
+        "skills": [
+          {
+            "id": "ent-jee-java17",
+            "name": "Java 17+ Language Essentials",
+            "description": "Use the features of the Java 17 LTS baseline that enterprise codebases now expect.",
+            "outcomes": [
+              "Use records, sealed classes, switch expressions, and text blocks",
+              "Use var, Optional, and streams idiomatically",
+              "Explain the Java release cadence and LTS versions",
+              "Migrate a project from Java 8 or 11 to 17"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": ["lang-java-syntax-types"],
+            "resources": [
+              {
+                "label": "Dev.java: Learn Java",
+                "url": "https://dev.java/learn/"
+              },
+              {
+                "label": "Oracle: Java 17 language updates",
+                "url": "https://docs.oracle.com/en/java/javase/17/language/java-language-changes.html"
+              },
+              {
+                "label": "OpenJDK JEP 409: Sealed Classes",
+                "url": "https://openjdk.org/jeps/409"
+              },
+              {
+                "label": "OpenJDK JEP 395: Records",
+                "url": "https://openjdk.org/jeps/395"
+              },
+              {
+                "label": "Oracle: Java migration guide",
+                "url": "https://docs.oracle.com/en/java/javase/17/migrate/getting-started.html"
+              },
+              {
+                "label": "YouTube search: Java 17 new features tutorial",
+                "url": "https://www.youtube.com/results?search_query=Java+17+new+features+tutorial"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-jee-servlets",
+            "name": "J2EE to Jakarta EE: Servlets, JSP & Web Containers",
+            "description": "Understand the Java EE platform history and build web applications with servlets, filters, and sessions.",
+            "outcomes": [
+              "Explain J2EE, Java EE, and the move to Jakarta EE (javax to jakarta namespace)",
+              "Write servlets, filters, and listeners",
+              "Manage sessions, cookies, and the request lifecycle",
+              "Package and deploy a WAR file to a servlet container"
+            ],
+            "estimatedHours": 16,
+            "prerequisites": ["ent-jee-java17"],
+            "resources": [
+              {
+                "label": "Jakarta EE Tutorial",
+                "url": "https://jakarta.ee/learn/docs/jakartaee-tutorial/current/index.html"
+              },
+              {
+                "label": "Jakarta Servlet specification",
+                "url": "https://jakarta.ee/specifications/servlet/"
+              },
+              {
+                "label": "Jakarta EE: Platform overview",
+                "url": "https://jakarta.ee/about/"
+              },
+              {
+                "label": "Eclipse Transformer and javax to jakarta migration",
+                "url": "https://github.com/eclipse/transformer"
+              },
+              {
+                "label": "Apache Tomcat: Servlet and JSP documentation",
+                "url": "https://tomcat.apache.org/tomcat-10.1-doc/index.html"
+              },
+              {
+                "label": "YouTube search: Java servlets and JSP tutorial",
+                "url": "https://www.youtube.com/results?search_query=Java+servlets+JSP+tutorial+Jakarta+EE"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-jee-jdbc",
+            "name": "JDBC & Data Access Objects",
+            "description": "Access relational data with JDBC and isolate it behind the DAO pattern.",
+            "outcomes": [
+              "Use connections, prepared statements, and result sets safely",
+              "Manage transactions and use connection pools",
+              "Implement the DAO and repository patterns",
+              "Prevent SQL injection"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": ["ent-jee-java17"],
+            "resources": [
+              {
+                "label": "Oracle JDBC Basics tutorial",
+                "url": "https://docs.oracle.com/javase/tutorial/jdbc/basics/index.html"
+              },
+              {
+                "label": "Java SE 17 API: java.sql",
+                "url": "https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/module-summary.html"
+              },
+              {
+                "label": "HikariCP connection pool",
+                "url": "https://github.com/brettwooldridge/HikariCP"
+              },
+              {
+                "label": "OWASP: SQL Injection Prevention Cheat Sheet",
+                "url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html"
+              },
+              {
+                "label": "Core J2EE Patterns: Data Access Object",
+                "url": "https://www.oracle.com/java/technologies/dataaccessobject.html"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Servlet and JDBC web application",
+          "description": "Build a WAR-packaged web application with servlets, a DAO layer on JDBC, and deploy it to Tomcat.",
+          "demonstrates": ["ent-jee-java17", "ent-jee-servlets", "ent-jee-jdbc"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Apply Jakarta EE services, design patterns, and multithreading to build maintainable enterprise applications.",
+        "skills": [
+          {
+            "id": "ent-jee-platform",
+            "name": "Jakarta EE Services: CDI, EJB, JPA & JAX-RS",
+            "description": "Use the container-managed services of the Jakarta EE platform.",
+            "outcomes": [
+              "Use CDI for dependency injection and scopes",
+              "Explain EJB session beans and container-managed transactions (JTA)",
+              "Expose REST endpoints with Jakarta REST (JAX-RS)",
+              "Use Bean Validation and JNDI resources"
+            ],
+            "estimatedHours": 22,
+            "prerequisites": ["ent-jee-servlets", "ent-jee-jdbc"],
+            "resources": [
+              {
+                "label": "Jakarta EE Tutorial: CDI",
+                "url": "https://jakarta.ee/learn/docs/jakartaee-tutorial/current/cdi/cdi-basic/cdi-basic.html"
+              },
+              {
+                "label": "Jakarta Enterprise Beans specification",
+                "url": "https://jakarta.ee/specifications/enterprise-beans/"
+              },
+              {
+                "label": "Jakarta REST specification",
+                "url": "https://jakarta.ee/specifications/restful-ws/"
+              },
+              {
+                "label": "Jakarta Transactions specification",
+                "url": "https://jakarta.ee/specifications/transactions/"
+              },
+              {
+                "label": "Jakarta Bean Validation",
+                "url": "https://jakarta.ee/specifications/bean-validation/"
+              },
+              {
+                "label": "Open Liberty guides: Jakarta EE",
+                "url": "https://openliberty.io/guides/"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-jee-patterns",
+            "name": "Design Patterns: GoF & Enterprise Patterns",
+            "description": "Recognize and apply classic object-oriented and enterprise application patterns.",
+            "outcomes": [
+              "Apply creational, structural, and behavioral GoF patterns in Java",
+              "Use enterprise patterns: MVC, Front Controller, Service Layer, DTO, Repository, Unit of Work",
+              "Choose a pattern for a design problem and justify it",
+              "Refactor code smells toward patterns"
+            ],
+            "estimatedHours": 24,
+            "prerequisites": ["ent-jee-java17"],
+            "resources": [
+              {
+                "label": "Refactoring Guru: Design patterns in Java",
+                "url": "https://refactoring.guru/design-patterns/java"
+              },
+              {
+                "label": "Design Patterns: Elements of Reusable Object-Oriented Software (GoF)",
+                "url": "https://www.oreilly.com/library/view/design-patterns-elements/0201633612/"
+              },
+              {
+                "label": "Martin Fowler: Patterns of Enterprise Application Architecture catalog",
+                "url": "https://martinfowler.com/eaaCatalog/"
+              },
+              {
+                "label": "Head First Design Patterns",
+                "url": "https://www.oreilly.com/library/view/head-first-design/9781492077992/"
+              },
+              {
+                "label": "Core J2EE Patterns catalog",
+                "url": "https://www.oracle.com/java/technologies/core-j2ee-patterns.html"
+              },
+              {
+                "label": "YouTube search: Design patterns in Java explained",
+                "url": "https://www.youtube.com/results?search_query=design+patterns+in+Java+explained+examples"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-jee-multithreading",
+            "name": "Multithreading & Concurrency for Enterprise Apps",
+            "description": "Write correct concurrent code with executors, concurrent collections, and virtual threads, and manage threads inside containers.",
+            "outcomes": [
+              "Use ExecutorService, CompletableFuture, and thread pools safely",
+              "Avoid race conditions, deadlocks, and visibility bugs",
+              "Use managed executors inside Jakarta EE containers",
+              "Explain when to use virtual threads"
+            ],
+            "estimatedHours": 20,
+            "prerequisites": ["ent-jee-java17"],
+            "resources": [
+              {
+                "label": "Oracle Java Tutorials: Concurrency",
+                "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html"
+              },
+              {
+                "label": "Java Concurrency in Practice",
+                "url": "https://jcip.net/"
+              },
+              {
+                "label": "Jakarta Concurrency specification",
+                "url": "https://jakarta.ee/specifications/concurrency/"
+              },
+              {
+                "label": "Dev.java: Virtual threads",
+                "url": "https://dev.java/learn/new-features/virtual-threads/"
+              },
+              {
+                "label": "Java SE 17 API: java.util.concurrent",
+                "url": "https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/package-summary.html"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-jee-jms",
+            "name": "JMS & Jakarta Messaging Basics",
+            "description": "Send and receive asynchronous messages using the JMS API.",
+            "outcomes": [
+              "Explain queues versus topics and point-to-point versus publish/subscribe",
+              "Produce and consume messages with JMS 2.0 and Jakarta Messaging",
+              "Use message-driven beans and acknowledge or transact messages",
+              "Handle redelivery and poison messages"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": ["ent-jee-platform"],
+            "resources": [
+              {
+                "label": "Jakarta Messaging specification",
+                "url": "https://jakarta.ee/specifications/messaging/"
+              },
+              {
+                "label": "Jakarta EE Tutorial: Jakarta Messaging",
+                "url": "https://jakarta.ee/learn/docs/jakartaee-tutorial/current/messaging/jms-concepts/jms-concepts.html"
+              },
+              {
+                "label": "Apache ActiveMQ Artemis documentation",
+                "url": "https://activemq.apache.org/components/artemis/documentation/"
+              },
+              {
+                "label": "Open Liberty guide: Sending and receiving messages with JMS",
+                "url": "https://openliberty.io/guides/jms-intro.html"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Jakarta EE order processing application",
+          "description": "Build an order application with CDI, JPA, JAX-RS, a JMS queue and message-driven consumer, and at least three documented design patterns.",
+          "demonstrates": [
+            "ent-jee-platform",
+            "ent-jee-patterns",
+            "ent-jee-multithreading",
+            "ent-jee-jms"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Design distributed systems and decompose monoliths into resilient microservices.",
+        "skills": [
+          {
+            "id": "ent-jee-distributed",
+            "name": "Distributed Systems Fundamentals for Java Engineers",
+            "description": "Reason about consistency, failure, and scale in systems spread across machines.",
+            "outcomes": [
+              "Explain the CAP theorem, consistency models, and eventual consistency",
+              "Design for partial failure with timeouts, retries, idempotency, and circuit breakers",
+              "Explain distributed transactions, two-phase commit, and sagas",
+              "Use distributed tracing and correlation IDs"
+            ],
+            "estimatedHours": 26,
+            "prerequisites": ["ent-jee-multithreading", "ent-jee-jms"],
+            "resources": [
+              {
+                "label": "Designing Data-Intensive Applications",
+                "url": "https://dataintensive.net/"
+              },
+              {
+                "label": "Fallacies of distributed computing",
+                "url": "https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing"
+              },
+              {
+                "label": "microservices.io: Saga pattern",
+                "url": "https://microservices.io/patterns/data/saga.html"
+              },
+              {
+                "label": "Resilience4j documentation",
+                "url": "https://resilience4j.readme.io/docs"
+              },
+              {
+                "label": "Google SRE Book: Addressing cascading failures",
+                "url": "https://sre.google/sre-book/addressing-cascading-failures/"
+              },
+              {
+                "label": "MIT 6.824 Distributed Systems course",
+                "url": "https://pdos.csail.mit.edu/6.824/"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-jee-microservices",
+            "name": "Microservices Architecture",
+            "description": "Decompose systems into independently deployable services with clear boundaries.",
+            "outcomes": [
+              "Identify service boundaries with domain-driven design",
+              "Apply API gateway, service discovery, and configuration patterns",
+              "Manage data ownership and avoid shared databases",
+              "Compare microservices with a modular monolith and justify the choice",
+              "Apply Eclipse MicroProfile for config, health, and fault tolerance"
+            ],
+            "estimatedHours": 28,
+            "prerequisites": ["ent-jee-distributed"],
+            "resources": [
+              {
+                "label": "microservices.io pattern language",
+                "url": "https://microservices.io/patterns/index.html"
+              },
+              {
+                "label": "Martin Fowler: Microservices",
+                "url": "https://martinfowler.com/articles/microservices.html"
+              },
+              {
+                "label": "Building Microservices (Sam Newman)",
+                "url": "https://samnewman.io/books/building_microservices_2nd_edition/"
+              },
+              {
+                "label": "Eclipse MicroProfile",
+                "url": "https://microprofile.io/"
+              },
+              {
+                "label": "Spring Cloud documentation",
+                "url": "https://spring.io/projects/spring-cloud"
+              },
+              {
+                "label": "Spring Modulith (modular monolith)",
+                "url": "https://docs.spring.io/spring-modulith/reference/"
+              },
+              {
+                "label": "YouTube search: Microservices architecture patterns Java",
+                "url": "https://www.youtube.com/results?search_query=microservices+architecture+patterns+Java+Spring+Boot"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-jee-modernization",
+            "name": "Legacy J2EE Modernization",
+            "description": "Assess and incrementally modernize legacy J2EE applications.",
+            "outcomes": [
+              "Inventory legacy dependencies and application server coupling",
+              "Upgrade from javax to jakarta and from Java 8 to 17+",
+              "Apply the strangler fig pattern to extract services",
+              "Add characterization tests before changing legacy code"
+            ],
+            "estimatedHours": 18,
+            "prerequisites": ["ent-jee-microservices"],
+            "resources": [
+              {
+                "label": "Martin Fowler: Strangler Fig",
+                "url": "https://martinfowler.com/bliki/StranglerFigApplication.html"
+              },
+              {
+                "label": "Working Effectively with Legacy Code",
+                "url": "https://www.oreilly.com/library/view/working-effectively-with/0131177052/"
+              },
+              {
+                "label": "OpenRewrite: Automated refactoring for Java",
+                "url": "https://docs.openrewrite.org/"
+              },
+              {
+                "label": "Red Hat Migration Toolkit for Applications",
+                "url": "https://developers.redhat.com/products/mta/overview"
+              },
+              {
+                "label": "IBM Transformation Advisor",
+                "url": "https://www.ibm.com/docs/en/cloud-paks/cp-management/2.3.x?topic=capabilities-transformation-advisor"
+              }
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Monolith to microservices migration",
+          "description": "Take a layered application and extract two services behind an API gateway, with resilience patterns, tracing, and a written decision record.",
+          "demonstrates": [
+            "ent-jee-distributed",
+            "ent-jee-microservices",
+            "ent-jee-modernization"
+          ]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Enterprise microservices platform",
+      "description": "Deliver a small set of cooperating Java microservices with messaging, a relational database, documented patterns, resilience testing, and an architecture decision log."
+    }
+  },
+  "ent-spring": {
+    "title": "Spring Ecosystem: Boot, Security, Data, Hibernate & JPA",
+    "description": "Build production Java applications with Spring Framework, Spring Boot, Spring Security, Spring Data, Hibernate, and JPA.",
+    "audience": "For Java developers who want to be productive in the framework most enterprise teams use.",
+    "goal": "Build a secured, persistent, tested Spring Boot service and tune its data access.",
+    "relatedTracks": [
+      {
+        "id": "ent-jee",
+        "reason": "Jakarta EE concepts that Spring builds on"
+      },
+      { "id": "ent-databases", "reason": "PostgreSQL and Oracle behind JPA" },
+      { "id": "ent-api", "reason": "REST and SOAP service design" },
+      { "id": "lang-java", "reason": "Java language path" }
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Understand inversion of control and build a basic Spring Boot web application.",
+        "skills": [
+          {
+            "id": "ent-spring-core",
+            "name": "Spring Framework Core: IoC, DI & AOP",
+            "description": "Understand the container, bean lifecycle, configuration, and aspect-oriented programming.",
+            "outcomes": [
+              "Explain inversion of control and dependency injection",
+              "Configure beans with annotations and Java configuration",
+              "Use profiles, properties, and the bean lifecycle",
+              "Apply AOP for cross-cutting concerns such as logging and transactions"
+            ],
+            "estimatedHours": 20,
+            "prerequisites": ["lang-java-classes-objects"],
+            "resources": [
+              {
+                "label": "Spring Framework Reference: Core",
+                "url": "https://docs.spring.io/spring-framework/reference/core.html"
+              },
+              {
+                "label": "Spring Framework Reference: AOP",
+                "url": "https://docs.spring.io/spring-framework/reference/core/aop.html"
+              },
+              {
+                "label": "Spring Academy: Core Spring course",
+                "url": "https://spring.academy/courses"
+              },
+              { "label": "Spring Guides", "url": "https://spring.io/guides" },
+              {
+                "label": "Baeldung: Spring tutorial",
+                "url": "https://www.baeldung.com/spring-tutorial"
+              },
+              {
+                "label": "YouTube search: Spring Framework dependency injection IoC tutorial",
+                "url": "https://www.youtube.com/results?search_query=Spring+Framework+IoC+dependency+injection+tutorial"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-spring-boot",
+            "name": "Spring Boot Fundamentals",
+            "description": "Create, configure, and run Spring Boot applications with auto-configuration and starters.",
+            "outcomes": [
+              "Generate a project with Spring Initializr",
+              "Explain auto-configuration and starters",
+              "Externalize configuration with application.yml and profiles",
+              "Build a REST controller and run tests with Spring Boot Test",
+              "Package an executable JAR"
+            ],
+            "estimatedHours": 20,
+            "prerequisites": ["ent-spring-core"],
+            "resources": [
+              {
+                "label": "Spring Boot Reference Documentation",
+                "url": "https://docs.spring.io/spring-boot/reference/"
+              },
+              {
+                "label": "Spring Initializr",
+                "url": "https://start.spring.io/"
+              },
+              {
+                "label": "Spring Guide: Building an Application with Spring Boot",
+                "url": "https://spring.io/guides/gs/spring-boot/"
+              },
+              {
+                "label": "Spring Guide: Building a RESTful Web Service",
+                "url": "https://spring.io/guides/gs/rest-service/"
+              },
+              {
+                "label": "Spring Boot: Externalized configuration",
+                "url": "https://docs.spring.io/spring-boot/reference/features/external-config.html"
+              },
+              {
+                "label": "YouTube search: Spring Boot full course",
+                "url": "https://www.youtube.com/results?search_query=Spring+Boot+3+full+course+REST+API"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Spring Boot REST service",
+          "description": "Build a configurable REST service with layered beans, profiles, and automated tests.",
+          "demonstrates": ["ent-spring-core", "ent-spring-boot"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Persist data with JPA and Spring Data, and secure applications with Spring Security.",
+        "skills": [
+          {
+            "id": "ent-spring-jpa",
+            "name": "JPA & Hibernate",
+            "description": "Map objects to relational tables and understand how Hibernate manages persistence.",
+            "outcomes": [
+              "Map entities, relationships, inheritance, and embeddables",
+              "Explain the persistence context, entity states, flushing, and dirty checking",
+              "Choose lazy versus eager fetching and avoid the N+1 problem",
+              "Use JPQL, criteria queries, and entity graphs",
+              "Use optimistic locking with @Version"
+            ],
+            "estimatedHours": 26,
+            "prerequisites": ["ent-spring-boot", "lang-java-sql-jdbc"],
+            "resources": [
+              {
+                "label": "Hibernate ORM documentation",
+                "url": "https://hibernate.org/orm/documentation/"
+              },
+              {
+                "label": "Jakarta Persistence specification",
+                "url": "https://jakarta.ee/specifications/persistence/"
+              },
+              {
+                "label": "Hibernate ORM User Guide",
+                "url": "https://docs.jboss.org/hibernate/orm/6.6/userguide/html_single/Hibernate_User_Guide.html"
+              },
+              {
+                "label": "Vlad Mihalcea: High-Performance Java Persistence",
+                "url": "https://vladmihalcea.com/books/high-performance-java-persistence/"
+              },
+              {
+                "label": "Baeldung: Hibernate and JPA tutorials",
+                "url": "https://www.baeldung.com/learn-jpa-hibernate"
+              },
+              {
+                "label": "YouTube search: JPA Hibernate relationships and N+1 problem",
+                "url": "https://www.youtube.com/results?search_query=JPA+Hibernate+relationships+N%2B1+problem+tutorial"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-spring-data",
+            "name": "Spring Data JPA & Transactions",
+            "description": "Use repositories, derived queries, projections, pagination, and declarative transactions.",
+            "outcomes": [
+              "Write Spring Data repositories and derived and @Query methods",
+              "Use projections, Specifications, and pagination",
+              "Apply @Transactional with correct propagation and isolation",
+              "Manage schema changes with Flyway or Liquibase",
+              "Test repositories against a real database with Testcontainers"
+            ],
+            "estimatedHours": 20,
+            "prerequisites": ["ent-spring-jpa"],
+            "resources": [
+              {
+                "label": "Spring Data JPA Reference",
+                "url": "https://docs.spring.io/spring-data/jpa/reference/"
+              },
+              {
+                "label": "Spring Framework: Transaction management",
+                "url": "https://docs.spring.io/spring-framework/reference/data-access/transaction.html"
+              },
+              {
+                "label": "Spring Guide: Accessing Data with JPA",
+                "url": "https://spring.io/guides/gs/accessing-data-jpa/"
+              },
+              {
+                "label": "Flyway documentation",
+                "url": "https://documentation.red-gate.com/flyway"
+              },
+              {
+                "label": "Liquibase documentation",
+                "url": "https://docs.liquibase.com/"
+              },
+              {
+                "label": "Testcontainers for Java",
+                "url": "https://java.testcontainers.org/"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-spring-security",
+            "name": "Spring Security: Authentication & Authorization",
+            "description": "Secure web applications and APIs with the Spring Security filter chain.",
+            "outcomes": [
+              "Explain the security filter chain, authentication, and authorization",
+              "Configure form login, HTTP Basic, and password encoding",
+              "Secure APIs with OAuth2/OIDC and JWT as a resource server",
+              "Apply method security and role- or scope-based access control",
+              "Protect against CSRF, CORS misconfiguration, and common web attacks"
+            ],
+            "estimatedHours": 26,
+            "prerequisites": ["ent-spring-boot"],
+            "resources": [
+              {
+                "label": "Spring Security Reference",
+                "url": "https://docs.spring.io/spring-security/reference/"
+              },
+              {
+                "label": "Spring Security: OAuth2 Resource Server",
+                "url": "https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/index.html"
+              },
+              {
+                "label": "Spring Security: Method security",
+                "url": "https://docs.spring.io/spring-security/reference/servlet/authorization/method-security.html"
+              },
+              {
+                "label": "OWASP Top 10",
+                "url": "https://owasp.org/www-project-top-ten/"
+              },
+              {
+                "label": "Keycloak documentation",
+                "url": "https://www.keycloak.org/documentation"
+              },
+              {
+                "label": "YouTube search: Spring Security 6 OAuth2 JWT tutorial",
+                "url": "https://www.youtube.com/results?search_query=Spring+Security+6+OAuth2+JWT+tutorial"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Secured Spring Data application",
+          "description": "Build an API with JPA entities, migrations, role-based access with JWT, and repository and security tests.",
+          "demonstrates": [
+            "ent-spring-jpa",
+            "ent-spring-data",
+            "ent-spring-security"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Operate and scale Spring applications with tuned persistence, messaging, and observability.",
+        "skills": [
+          {
+            "id": "ent-spring-performance",
+            "name": "Spring Performance, Caching & Persistence Tuning",
+            "description": "Find and fix performance problems in Spring and Hibernate applications.",
+            "outcomes": [
+              "Detect N+1 queries with SQL logging and statistics",
+              "Tune batch inserts, fetch sizes, and connection pools",
+              "Add caching with Spring Cache and Caffeine or Redis",
+              "Profile and load test a Spring Boot service"
+            ],
+            "estimatedHours": 20,
+            "prerequisites": ["ent-spring-data"],
+            "resources": [
+              {
+                "label": "Spring Boot: Caching",
+                "url": "https://docs.spring.io/spring-boot/reference/io/caching.html"
+              },
+              {
+                "label": "HikariCP: About pool sizing",
+                "url": "https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing"
+              },
+              {
+                "label": "Hibernate: Batching and fetching",
+                "url": "https://docs.jboss.org/hibernate/orm/6.6/userguide/html_single/Hibernate_User_Guide.html#batch"
+              },
+              {
+                "label": "Caffeine cache",
+                "url": "https://github.com/ben-manes/caffeine"
+              },
+              {
+                "label": "Gatling documentation",
+                "url": "https://docs.gatling.io/"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-spring-cloud",
+            "name": "Spring Cloud, Messaging & Observability",
+            "description": "Build cooperating Spring services with configuration, gateways, messaging, resilience, and telemetry.",
+            "outcomes": [
+              "Use Spring Cloud Gateway, Config, and service discovery",
+              "Publish and consume events with Spring for Kafka, RabbitMQ, or JMS",
+              "Add Resilience4j timeouts, retries, and circuit breakers",
+              "Export metrics and traces with Micrometer and OpenTelemetry"
+            ],
+            "estimatedHours": 26,
+            "prerequisites": ["ent-spring-security", "ent-spring-data"],
+            "resources": [
+              {
+                "label": "Spring Cloud documentation",
+                "url": "https://spring.io/projects/spring-cloud"
+              },
+              {
+                "label": "Spring Cloud Gateway",
+                "url": "https://docs.spring.io/spring-cloud-gateway/reference/"
+              },
+              {
+                "label": "Spring for Apache Kafka",
+                "url": "https://docs.spring.io/spring-kafka/reference/"
+              },
+              {
+                "label": "Spring JMS",
+                "url": "https://docs.spring.io/spring-framework/reference/integration/jms.html"
+              },
+              {
+                "label": "Spring Boot: Observability",
+                "url": "https://docs.spring.io/spring-boot/reference/actuator/observability.html"
+              },
+              {
+                "label": "Resilience4j with Spring Boot",
+                "url": "https://resilience4j.readme.io/docs/getting-started-3"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Observable Spring microservices",
+          "description": "Connect two Spring Boot services with events, a gateway, resilience policies, and dashboards that show tuned query behavior.",
+          "demonstrates": ["ent-spring-performance", "ent-spring-cloud"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Production Spring Boot platform service",
+      "description": "Deliver a Spring Boot service with Spring Security, Spring Data and Hibernate on a relational database, versioned migrations, integration tests, observability, and documented performance results."
+    }
+  },
+  "ent-messaging": {
+    "title": "Messaging: IBM MQ, Kafka & Event-Driven Architecture",
+    "description": "Learn enterprise messaging with IBM MQ and Apache Kafka, enterprise integration patterns, and event-driven architectures.",
+    "audience": "For developers and integrators building asynchronous, decoupled systems in enterprises.",
+    "goal": "Design a reliable messaging solution and choose between queue-based and log-based brokers with confidence.",
+    "relatedTracks": [
+      { "id": "ent-jee", "reason": "JMS and Jakarta Messaging" },
+      { "id": "ent-spring", "reason": "Spring messaging support" },
+      {
+        "id": "distributed",
+        "reason": "Consistency and failure in distributed systems"
+      },
+      { "id": "api", "reason": "Synchronous API integration" }
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Understand messaging concepts and exchange messages with a broker.",
+        "skills": [
+          {
+            "id": "ent-msg-concepts",
+            "name": "Messaging Concepts & Enterprise Integration Patterns",
+            "description": "Learn why systems exchange messages asynchronously and the standard vocabulary for doing it.",
+            "outcomes": [
+              "Compare synchronous calls and asynchronous messaging",
+              "Explain queues, topics, delivery guarantees, ordering, and idempotent consumers",
+              "Apply patterns such as Message Channel, Router, Translator, Aggregator, and Dead Letter Channel",
+              "Explain at-most-once, at-least-once, and exactly-once semantics"
+            ],
+            "estimatedHours": 14,
+            "prerequisites": [],
+            "resources": [
+              {
+                "label": "Enterprise Integration Patterns (Hohpe and Woolf)",
+                "url": "https://www.enterpriseintegrationpatterns.com/"
+              },
+              {
+                "label": "EIP: Messaging patterns catalog",
+                "url": "https://www.enterpriseintegrationpatterns.com/patterns/messaging/"
+              },
+              {
+                "label": "Apache Camel: Enterprise Integration Patterns",
+                "url": "https://camel.apache.org/components/latest/eips/enterprise-integration-patterns.html"
+              },
+              {
+                "label": "Spring Integration reference",
+                "url": "https://docs.spring.io/spring-integration/reference/"
+              },
+              {
+                "label": "YouTube search: Enterprise integration patterns explained",
+                "url": "https://www.youtube.com/results?search_query=enterprise+integration+patterns+explained+messaging"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-msg-ibmmq-basics",
+            "name": "IBM MQ Fundamentals",
+            "description": "Create queue managers and queues and exchange messages with IBM MQ.",
+            "outcomes": [
+              "Explain queue managers, local, alias, remote, and transmission queues",
+              "Create objects with MQSC commands and the web console",
+              "Put and get messages with the JMS and MQI APIs",
+              "Configure channels and listeners and use dead-letter and backout queues"
+            ],
+            "estimatedHours": 20,
+            "prerequisites": ["ent-msg-concepts"],
+            "resources": [
+              {
+                "label": "IBM MQ documentation",
+                "url": "https://www.ibm.com/docs/en/ibm-mq"
+              },
+              {
+                "label": "IBM MQ Developer Essentials tutorials",
+                "url": "https://developer.ibm.com/series/mq-dev-essentials/"
+              },
+              {
+                "label": "IBM MQ Developer Edition container image",
+                "url": "https://github.com/ibm-messaging/mq-container"
+              },
+              {
+                "label": "IBM MQ classes for JMS",
+                "url": "https://www.ibm.com/docs/en/ibm-mq/9.4?topic=applications-mq-classes-jms"
+              },
+              {
+                "label": "IBM MQ: MQSC command reference",
+                "url": "https://www.ibm.com/docs/en/ibm-mq/9.4?topic=reference-mqsc-commands"
+              },
+              {
+                "label": "YouTube: IBM Technology channel",
+                "url": "https://www.youtube.com/@IBMTechnology"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Queue-based order flow",
+          "description": "Send and receive order messages through IBM MQ with a dead-letter queue and idempotent consumer.",
+          "demonstrates": ["ent-msg-concepts", "ent-msg-ibmmq-basics"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Build reliable producers and consumers on Kafka and MQ.",
+        "skills": [
+          {
+            "id": "ent-msg-kafka-core",
+            "name": "Apache Kafka Fundamentals",
+            "description": "Understand Kafka's log-based model and write producers and consumers.",
+            "outcomes": [
+              "Explain topics, partitions, offsets, brokers, and replication",
+              "Write producers and consumer groups with the Java client",
+              "Choose keys, partitioning, and acks settings",
+              "Manage offsets and rebalancing",
+              "Run Kafka locally with KRaft"
+            ],
+            "estimatedHours": 24,
+            "prerequisites": ["ent-msg-concepts"],
+            "resources": [
+              {
+                "label": "YouTube search: Apache Kafka fundamentals for beginners",
+                "url": "https://www.youtube.com/results?search_query=Apache+Kafka+fundamentals+for+beginners"
+              },
+              {
+                "label": "YouTube search: Kafka topics, partitions, brokers, and offsets explained",
+                "url": "https://www.youtube.com/results?search_query=Kafka+topics+partitions+brokers+offsets+explained"
+              },
+              {
+                "label": "YouTube search: Kafka consumer groups and rebalancing explained",
+                "url": "https://www.youtube.com/results?search_query=Kafka+consumer+groups+rebalancing+explained"
+              },
+              {
+                "label": "YouTube search: Run Kafka locally with Docker Compose and KRaft",
+                "url": "https://www.youtube.com/results?search_query=Kafka+Docker+Compose+KRaft+tutorial"
+              },
+              {
+                "label": "YouTube search: Kafka producer and consumer tutorial with Java",
+                "url": "https://www.youtube.com/results?search_query=Kafka+producer+consumer+Java+tutorial"
+              },
+              {
+                "label": "YouTube search: Spring Boot Kafka tutorial with KafkaTemplate and KafkaListener",
+                "url": "https://www.youtube.com/results?search_query=Spring+Boot+Kafka+KafkaTemplate+KafkaListener+tutorial"
+              },
+              {
+                "label": "YouTube search: Spring Boot Kafka JSON serialization and deserialization",
+                "url": "https://www.youtube.com/results?search_query=Spring+Boot+Kafka+JSON+serialization+deserialization+tutorial"
+              },
+              {
+                "label": "YouTube search: Spring Boot Kafka error handling, retries, and dead letter topics",
+                "url": "https://www.youtube.com/results?search_query=Spring+Boot+Kafka+error+handling+retries+dead+letter+topics"
+              },
+              {
+                "label": "YouTube search: Kafka delivery guarantees, acknowledgments, and idempotence",
+                "url": "https://www.youtube.com/results?search_query=Kafka+delivery+guarantees+acknowledgments+idempotent+producer"
+              },
+              {
+                "label": "YouTube search: Testing Spring Boot Kafka with Testcontainers",
+                "url": "https://www.youtube.com/results?search_query=Spring+Boot+Kafka+Testcontainers+testing+tutorial"
+              },
+              {
+                "label": "YouTube search: Kafka interview questions for Java developers",
+                "url": "https://www.youtube.com/results?search_query=Kafka+interview+questions+Java+developers"
+              },
+
+              {
+                "label": "Apache Kafka documentation",
+                "url": "https://kafka.apache.org/documentation/"
+              },
+              {
+                "label": "Kafka quickstart",
+                "url": "https://kafka.apache.org/quickstart"
+              },
+              {
+                "label": "Confluent Developer: Kafka 101",
+                "url": "https://developer.confluent.io/courses/apache-kafka/events/"
+              },
+              {
+                "label": "Kafka: The Definitive Guide",
+                "url": "https://www.confluent.io/resources/kafka-the-definitive-guide-v2/"
+              },
+              {
+                "label": "Spring for Apache Kafka",
+                "url": "https://docs.spring.io/spring-kafka/reference/"
+              },
+              {
+                "label": "YouTube search: Apache Kafka tutorial for beginners",
+                "url": "https://www.youtube.com/results?search_query=Apache+Kafka+tutorial+for+beginners+Java"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-msg-reliability",
+            "name": "Reliable Messaging: Transactions, Idempotency & Error Handling",
+            "description": "Deliver messages reliably and handle failure on both IBM MQ and Kafka.",
+            "outcomes": [
+              "Use persistent messages, syncpoint, and XA or local transactions in MQ",
+              "Use Kafka idempotent producers and transactions",
+              "Implement retry, backoff, and dead-letter topics or queues",
+              "Apply the transactional outbox and idempotent receiver patterns",
+              "Handle schema evolution with Avro or JSON Schema and a schema registry"
+            ],
+            "estimatedHours": 22,
+            "prerequisites": ["ent-msg-kafka-core", "ent-msg-ibmmq-basics"],
+            "resources": [
+              {
+                "label": "microservices.io: Transactional outbox",
+                "url": "https://microservices.io/patterns/data/transactional-outbox.html"
+              },
+              {
+                "label": "Confluent: Exactly-once semantics in Kafka",
+                "url": "https://www.confluent.io/blog/exactly-once-semantics-are-possible-heres-how-apache-kafka-does-it/"
+              },
+              {
+                "label": "Confluent Schema Registry documentation",
+                "url": "https://docs.confluent.io/platform/current/schema-registry/index.html"
+              },
+              {
+                "label": "IBM MQ: Transactional messaging",
+                "url": "https://www.ibm.com/docs/en/ibm-mq/9.4?topic=applications-transactions"
+              },
+              {
+                "label": "EIP: Idempotent Receiver",
+                "url": "https://www.enterpriseintegrationpatterns.com/patterns/messaging/IdempotentReceiver.html"
+              },
+              {
+                "label": "Debezium documentation",
+                "url": "https://debezium.io/documentation/"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-msg-integration",
+            "name": "Integration with Spring Integration & Apache Camel",
+            "description": "Wire systems together with integration frameworks rather than hand-written plumbing.",
+            "outcomes": [
+              "Build routes with Apache Camel or Spring Integration flows",
+              "Transform and enrich messages between XML, JSON, and other formats",
+              "Connect IBM MQ, Kafka, files, and HTTP endpoints",
+              "Test integration flows"
+            ],
+            "estimatedHours": 18,
+            "prerequisites": ["ent-msg-reliability"],
+            "resources": [
+              {
+                "label": "Apache Camel documentation",
+                "url": "https://camel.apache.org/manual/"
+              },
+              {
+                "label": "Spring Integration reference",
+                "url": "https://docs.spring.io/spring-integration/reference/"
+              },
+              {
+                "label": "Camel in Action",
+                "url": "https://www.manning.com/books/camel-in-action-second-edition"
+              },
+              {
+                "label": "Camel Kafka component",
+                "url": "https://camel.apache.org/components/latest/kafka-component.html"
+              },
+              {
+                "label": "Camel JMS component",
+                "url": "https://camel.apache.org/components/latest/jms-component.html"
+              }
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "MQ-to-Kafka bridge",
+          "description": "Consume messages from IBM MQ, transform them, and publish them to Kafka with retries, a dead-letter path, and tests.",
+          "demonstrates": [
+            "ent-msg-kafka-core",
+            "ent-msg-reliability",
+            "ent-msg-integration"
+          ]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Design and operate event-driven architectures.",
+        "skills": [
+          {
+            "id": "ent-msg-eda",
+            "name": "Event-Driven Architecture, Event Sourcing & CQRS",
+            "description": "Design systems around events and choose when event sourcing and CQRS are justified.",
+            "outcomes": [
+              "Distinguish events, commands, and queries",
+              "Design event contracts and evolve them compatibly",
+              "Apply choreography and orchestration with sagas",
+              "Explain event sourcing and CQRS trade-offs",
+              "Document events with AsyncAPI"
+            ],
+            "estimatedHours": 26,
+            "prerequisites": ["ent-msg-reliability"],
+            "resources": [
+              {
+                "label": "Martin Fowler: What do you mean by Event-Driven?",
+                "url": "https://martinfowler.com/articles/201701-event-driven.html"
+              },
+              {
+                "label": "Martin Fowler: Event Sourcing",
+                "url": "https://martinfowler.com/eaaDev/EventSourcing.html"
+              },
+              {
+                "label": "Martin Fowler: CQRS",
+                "url": "https://martinfowler.com/bliki/CQRS.html"
+              },
+              {
+                "label": "AsyncAPI documentation",
+                "url": "https://www.asyncapi.com/docs"
+              },
+              {
+                "label": "Axon Framework reference",
+                "url": "https://docs.axoniq.io/reference-guide/"
+              },
+              {
+                "label": "microservices.io: Event sourcing",
+                "url": "https://microservices.io/patterns/data/event-sourcing.html"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-msg-operations",
+            "name": "Operating Kafka and IBM MQ",
+            "description": "Run, secure, monitor, and scale messaging infrastructure.",
+            "outcomes": [
+              "Size Kafka partitions, replication, and retention",
+              "Monitor consumer lag and broker health",
+              "Secure brokers with TLS, authentication, and ACLs or channel authentication",
+              "Configure IBM MQ high availability and clustering",
+              "Run Kafka and MQ on Kubernetes with operators"
+            ],
+            "estimatedHours": 24,
+            "prerequisites": ["ent-msg-reliability"],
+            "resources": [
+              {
+                "label": "Apache Kafka: Operations",
+                "url": "https://kafka.apache.org/documentation/#operations"
+              },
+              {
+                "label": "Strimzi: Kafka on Kubernetes",
+                "url": "https://strimzi.io/documentation/"
+              },
+              {
+                "label": "Kafka security documentation",
+                "url": "https://kafka.apache.org/documentation/#security"
+              },
+              {
+                "label": "IBM MQ: High availability configurations",
+                "url": "https://www.ibm.com/docs/en/ibm-mq/9.4?topic=availability-high-configurations"
+              },
+              {
+                "label": "IBM MQ Operator for Kubernetes and OpenShift",
+                "url": "https://www.ibm.com/docs/en/ibm-mq/9.4?topic=containers-mq-operator"
+              },
+              {
+                "label": "Confluent: Monitoring Kafka",
+                "url": "https://docs.confluent.io/platform/current/kafka/monitoring.html"
+              }
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Event-driven order platform",
+          "description": "Build an event-driven order flow with a saga, documented AsyncAPI events, monitored consumer lag, and a secured broker.",
+          "demonstrates": ["ent-msg-eda", "ent-msg-operations"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Enterprise messaging backbone",
+      "description": "Deliver an integrated flow across IBM MQ and Kafka with idempotent consumers, dead-letter handling, schema governance, monitoring, and a written comparison of queue-based and log-based designs."
+    }
+  }
+}

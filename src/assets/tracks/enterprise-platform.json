@@ -1,0 +1,699 @@
+{
+  "ent-cloud": {
+    "title": "Cloud Platforms: AWS & Microsoft Azure",
+    "description": "Learn AWS (EC2, S3, IAM, VPC, RDS and related services) and Microsoft Azure equivalents to deploy and secure enterprise Java and web workloads.",
+    "audience": "For developers and engineers deploying applications to AWS and/or Azure.",
+    "goal": "Deploy a secured, highly available application to AWS or Azure using infrastructure as code.",
+    "relatedTracks": [
+      {"id": "cloud", "reason": "Broader cloud and DevOps path"},
+      {"id": "ent-containers", "reason": "Docker, Kubernetes, and OpenShift on cloud"},
+      {"id": "ent-devops", "reason": "CI/CD pipelines to cloud"},
+      {"id": "security", "reason": "Cloud security"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Understand cloud fundamentals and use core compute, storage, and identity services.",
+        "skills": [
+          {
+            "id": "ent-cloud-concepts",
+            "name": "Cloud Concepts & Shared Responsibility",
+            "description": "Learn cloud service models, regions, pricing, and the shared responsibility model.",
+            "outcomes": ["Compare IaaS, PaaS, and SaaS", "Explain regions, availability zones, and the shared responsibility model", "Estimate cost and set billing alerts", "Choose AWS or Azure for a workload with stated criteria"],
+            "estimatedHours": 10,
+            "prerequisites": [],
+            "resources": [
+              {"label": "AWS Cloud Practitioner Essentials", "url": "https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/"},
+              {"label": "Microsoft Learn: Azure Fundamentals (AZ-900)", "url": "https://learn.microsoft.com/en-us/training/courses/az-900t00"},
+              {"label": "AWS Well-Architected Framework", "url": "https://aws.amazon.com/architecture/well-architected/"},
+              {"label": "Azure Well-Architected Framework", "url": "https://learn.microsoft.com/en-us/azure/well-architected/"},
+              {"label": "AWS Pricing Calculator", "url": "https://calculator.aws/"},
+              {"label": "Azure Pricing Calculator", "url": "https://azure.microsoft.com/en-us/pricing/calculator/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-cloud-iam",
+            "name": "Identity & Access: AWS IAM and Microsoft Entra ID",
+            "description": "Control who and what can do what in the cloud with least privilege.",
+            "outcomes": ["Create users, groups, roles, and policies in AWS IAM", "Explain role assumption, trust policies, and temporary credentials", "Use Azure RBAC, managed identities, and Microsoft Entra ID", "Enable MFA and avoid long-lived keys"],
+            "estimatedHours": 14,
+            "prerequisites": ["ent-cloud-concepts"],
+            "resources": [
+              {"label": "AWS IAM User Guide", "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"},
+              {"label": "AWS IAM: Security best practices", "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html"},
+              {"label": "Microsoft Learn: Azure RBAC", "url": "https://learn.microsoft.com/en-us/azure/role-based-access-control/overview"},
+              {"label": "Microsoft Learn: Managed identities", "url": "https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/overview"},
+              {"label": "Microsoft Entra ID documentation", "url": "https://learn.microsoft.com/en-us/entra/identity/"},
+              {"label": "YouTube search: AWS IAM roles and policies explained", "url": "https://www.youtube.com/results?search_query=AWS+IAM+roles+policies+explained"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-cloud-compute-storage",
+            "name": "Compute & Storage: EC2, S3, Azure VMs and Blob Storage",
+            "description": "Launch virtual machines and store objects in the cloud.",
+            "outcomes": ["Launch and connect to an EC2 instance with a key pair and security group", "Choose instance types, AMIs, EBS volumes, and Auto Scaling groups", "Create S3 buckets with versioning, lifecycle rules, encryption, and policies", "Deploy a VM and Blob Storage account on Azure"],
+            "estimatedHours": 18,
+            "prerequisites": ["ent-cloud-iam"],
+            "resources": [
+              {"label": "Amazon EC2 User Guide", "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"},
+              {"label": "Amazon S3 User Guide", "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html"},
+              {"label": "Amazon EC2 Auto Scaling", "url": "https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html"},
+              {"label": "Microsoft Learn: Azure Virtual Machines", "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/overview"},
+              {"label": "Microsoft Learn: Azure Blob Storage", "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction"},
+              {"label": "AWS Free Tier", "url": "https://aws.amazon.com/free/"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Secure static site and VM",
+          "description": "Host a site from S3 or Blob Storage and run a small app on a VM using least-privilege roles.",
+          "demonstrates": ["ent-cloud-concepts", "ent-cloud-iam", "ent-cloud-compute-storage"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Design networks, databases, and managed services for production applications.",
+        "skills": [
+          {
+            "id": "ent-cloud-networking",
+            "name": "Networking: VPC, Load Balancing & DNS",
+            "description": "Build isolated, routable, and load-balanced networks.",
+            "outcomes": ["Design a VPC with public and private subnets, route tables, NAT, and security groups", "Use Application Load Balancers and Route 53", "Build an Azure VNet with NSGs and Application Gateway", "Use VPC endpoints and private connectivity"],
+            "estimatedHours": 20,
+            "prerequisites": ["ent-cloud-compute-storage"],
+            "resources": [
+              {"label": "Amazon VPC User Guide", "url": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"},
+              {"label": "Elastic Load Balancing User Guide", "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html"},
+              {"label": "Amazon Route 53 Developer Guide", "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"},
+              {"label": "Microsoft Learn: Azure Virtual Network", "url": "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview"},
+              {"label": "Microsoft Learn: Azure Application Gateway", "url": "https://learn.microsoft.com/en-us/azure/application-gateway/overview"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-cloud-data",
+            "name": "Managed Data Services: RDS, DynamoDB & Azure Databases",
+            "description": "Run relational and NoSQL databases as managed services.",
+            "outcomes": ["Run PostgreSQL and Oracle on Amazon RDS with backups, Multi-AZ, and read replicas", "Choose between RDS, Aurora, and DynamoDB", "Use Azure Database for PostgreSQL and Azure SQL", "Rotate credentials with Secrets Manager or Key Vault"],
+            "estimatedHours": 18,
+            "prerequisites": ["ent-cloud-networking"],
+            "resources": [
+              {"label": "Amazon RDS User Guide", "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html"},
+              {"label": "Amazon Aurora User Guide", "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"},
+              {"label": "Amazon DynamoDB Developer Guide", "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html"},
+              {"label": "AWS Secrets Manager User Guide", "url": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"},
+              {"label": "Microsoft Learn: Azure Database for PostgreSQL", "url": "https://learn.microsoft.com/en-us/azure/postgresql/"},
+              {"label": "Microsoft Learn: Azure Key Vault", "url": "https://learn.microsoft.com/en-us/azure/key-vault/general/overview"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-cloud-iac",
+            "name": "Infrastructure as Code: CloudFormation, Terraform & Bicep",
+            "description": "Define cloud infrastructure in version-controlled code.",
+            "outcomes": ["Write Terraform for networks, compute, and databases", "Use CloudFormation or CDK on AWS and Bicep on Azure", "Manage state and environments safely", "Run IaC plans in a CI pipeline"],
+            "estimatedHours": 18,
+            "prerequisites": ["ent-cloud-networking"],
+            "resources": [
+              {"label": "Terraform documentation", "url": "https://developer.hashicorp.com/terraform/docs"},
+              {"label": "Terraform AWS provider", "url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs"},
+              {"label": "AWS CloudFormation User Guide", "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html"},
+              {"label": "AWS CDK Developer Guide", "url": "https://docs.aws.amazon.com/cdk/v2/guide/home.html"},
+              {"label": "Microsoft Learn: Bicep", "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Three-tier application on cloud",
+          "description": "Provision a VPC, load balancer, application tier, and managed PostgreSQL database with infrastructure as code.",
+          "demonstrates": ["ent-cloud-networking", "ent-cloud-data", "ent-cloud-iac"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Operate secure, resilient, cost-aware cloud applications.",
+        "skills": [
+          {
+            "id": "ent-cloud-serverless-integration",
+            "name": "Serverless & Integration Services: Lambda, SQS, SNS, Azure Functions",
+            "description": "Use managed event and messaging services to decouple workloads.",
+            "outcomes": ["Write and deploy Lambda functions and Azure Functions", "Use SQS, SNS, EventBridge, API Gateway, and Azure Service Bus", "Handle retries, dead-letter queues, and idempotency", "Evaluate serverless against containers"],
+            "estimatedHours": 20,
+            "prerequisites": ["ent-cloud-data"],
+            "resources": [
+              {"label": "AWS Lambda Developer Guide", "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"},
+              {"label": "Amazon SQS Developer Guide", "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html"},
+              {"label": "Amazon EventBridge User Guide", "url": "https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html"},
+              {"label": "Microsoft Learn: Azure Functions", "url": "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview"},
+              {"label": "Microsoft Learn: Azure Service Bus", "url": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview"}
+            ],
+            "priority": "optional",
+            "completed": false
+          },
+          {
+            "id": "ent-cloud-security-ops",
+            "name": "Cloud Security, Monitoring & Cost Governance",
+            "description": "Harden, observe, and control the cost of cloud environments.",
+            "outcomes": ["Encrypt data with KMS or Key Vault and enforce TLS", "Enable CloudTrail, GuardDuty, Config, and Microsoft Defender for Cloud", "Build dashboards and alarms in CloudWatch or Azure Monitor", "Apply tagging, budgets, and rightsizing", "Design backup, disaster recovery, and multi-AZ resilience"],
+            "estimatedHours": 22,
+            "prerequisites": ["ent-cloud-iac"],
+            "resources": [
+              {"label": "AWS Security Best Practices", "url": "https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html"},
+              {"label": "Amazon CloudWatch User Guide", "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html"},
+              {"label": "AWS CloudTrail User Guide", "url": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html"},
+              {"label": "Microsoft Learn: Azure Monitor", "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/overview"},
+              {"label": "Microsoft Defender for Cloud", "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction"},
+              {"label": "AWS Disaster Recovery whitepaper", "url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-workloads-on-aws.html"},
+              {"label": "FinOps Foundation", "url": "https://www.finops.org/introduction/what-is-finops/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-cloud-certification",
+            "name": "Cloud Architect Certification Path",
+            "description": "Validate skills with associate-level cloud certifications.",
+            "outcomes": ["Map the roadmap skills to the exam objectives", "Complete practice exams and hands-on labs", "Pass AWS Solutions Architect Associate, Azure Administrator, or Azure Developer"],
+            "estimatedHours": 30,
+            "prerequisites": ["ent-cloud-security-ops"],
+            "resources": [
+              {"label": "AWS Certified Solutions Architect - Associate", "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"},
+              {"label": "AWS Certified Developer - Associate", "url": "https://aws.amazon.com/certification/certified-developer-associate/"},
+              {"label": "Microsoft Certified: Azure Administrator Associate (AZ-104)", "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/"},
+              {"label": "Microsoft Certified: Azure Developer Associate (AZ-204)", "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/"},
+              {"label": "AWS Skill Builder", "url": "https://skillbuilder.aws/"}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Resilient, observable cloud workload",
+          "description": "Add monitoring, alarms, encryption, backups, and a documented failover test to the three-tier application.",
+          "demonstrates": ["ent-cloud-serverless-integration", "ent-cloud-security-ops"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Production cloud deployment",
+      "description": "Deploy a Java application to AWS or Azure using infrastructure as code, least-privilege identity, a managed database, monitoring, and a cost report."
+    }
+  },
+  "ent-containers": {
+    "title": "Containers: Docker, Kubernetes & OpenShift (OCP4)",
+    "description": "Package applications with Docker, orchestrate them with Kubernetes, and operate them on Red Hat OpenShift Container Platform 4.",
+    "audience": "For developers and platform engineers running enterprise workloads in containers.",
+    "goal": "Build, deploy, secure, and troubleshoot a containerized application on Kubernetes and OpenShift.",
+    "relatedTracks": [
+      {"id": "ent-cloud", "reason": "Managed Kubernetes on AWS and Azure"},
+      {"id": "ent-devops", "reason": "Pipelines that build and deploy images"},
+      {"id": "platform", "reason": "Platform engineering"},
+      {"id": "sre", "reason": "Operating production workloads"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Build and run containers with Docker.",
+        "skills": [
+          {
+            "id": "ent-cont-docker",
+            "name": "Docker Fundamentals",
+            "description": "Build, run, and share container images.",
+            "outcomes": ["Explain images, containers, layers, and registries", "Write Dockerfiles with multi-stage builds for Java and Node.js", "Use volumes, networks, and Docker Compose", "Scan images and run as a non-root user"],
+            "estimatedHours": 16,
+            "prerequisites": [],
+            "resources": [
+              {"label": "Docker Docs: Get started", "url": "https://docs.docker.com/get-started/"},
+              {"label": "Docker Docs: Dockerfile best practices", "url": "https://docs.docker.com/build/building/best-practices/"},
+              {"label": "Docker Docs: Compose", "url": "https://docs.docker.com/compose/"},
+              {"label": "Docker Docs: Java language guide", "url": "https://docs.docker.com/guides/java/"},
+              {"label": "Docker Docs: Multi-stage builds", "url": "https://docs.docker.com/build/building/multi-stage/"},
+              {"label": "YouTube: TechWorld with Nana Docker tutorial", "url": "https://www.youtube.com/results?search_query=TechWorld+with+Nana+Docker+tutorial"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-cont-java-images",
+            "name": "Containerizing Java Applications",
+            "description": "Build small, secure, well-behaved Java images.",
+            "outcomes": ["Build images with Jib, Spring Boot buildpacks, or layered JARs", "Set JVM memory options for container limits", "Use distroless or minimal base images", "Handle graceful shutdown and health endpoints"],
+            "estimatedHours": 10,
+            "prerequisites": ["ent-cont-docker"],
+            "resources": [
+              {"label": "Spring Boot: Container images", "url": "https://docs.spring.io/spring-boot/reference/packaging/container-images/index.html"},
+              {"label": "Jib: Containerize Java applications", "url": "https://github.com/GoogleContainerTools/jib"},
+              {"label": "Eclipse Temurin images", "url": "https://hub.docker.com/_/eclipse-temurin"},
+              {"label": "Paketo Buildpacks for Java", "url": "https://paketo.io/docs/howto/java/"},
+              {"label": "Oracle: java command JVM container support", "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/man/java.html"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Containerized multi-service app",
+          "description": "Package a Java API, a front end, and PostgreSQL with Docker Compose and optimized images.",
+          "demonstrates": ["ent-cont-docker", "ent-cont-java-images"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Deploy and manage applications on Kubernetes.",
+        "skills": [
+          {
+            "id": "ent-cont-k8s-core",
+            "name": "Kubernetes Core Concepts & Workloads",
+            "description": "Run applications with pods, deployments, services, and ingress.",
+            "outcomes": ["Explain the control plane, nodes, pods, and controllers", "Write Deployments, Services, ConfigMaps, Secrets, and Ingress", "Configure probes, resource requests and limits, and rollouts", "Debug with kubectl logs, describe, exec, and events", "Run a local cluster with kind or minikube"],
+            "estimatedHours": 26,
+            "prerequisites": ["ent-cont-docker"],
+            "resources": [
+              {"label": "Kubernetes documentation: Concepts", "url": "https://kubernetes.io/docs/concepts/"},
+              {"label": "Kubernetes: Tutorials", "url": "https://kubernetes.io/docs/tutorials/"},
+              {"label": "Kubernetes: kubectl cheat sheet", "url": "https://kubernetes.io/docs/reference/kubectl/quick-reference/"},
+              {"label": "kind: Kubernetes in Docker", "url": "https://kind.sigs.k8s.io/"},
+              {"label": "Kubernetes the Hard Way", "url": "https://github.com/kelseyhightower/kubernetes-the-hard-way"},
+              {"label": "YouTube: TechWorld with Nana Kubernetes tutorial", "url": "https://www.youtube.com/watch?v=X48VuDVv0do"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-cont-k8s-config",
+            "name": "Kubernetes Packaging, Storage & Autoscaling",
+            "description": "Manage configuration, state, and scale.",
+            "outcomes": ["Package applications with Helm and Kustomize", "Use PersistentVolumes, PersistentVolumeClaims, and StatefulSets", "Configure the Horizontal Pod Autoscaler", "Use namespaces, resource quotas, and network policies"],
+            "estimatedHours": 20,
+            "prerequisites": ["ent-cont-k8s-core"],
+            "resources": [
+              {"label": "Helm documentation", "url": "https://helm.sh/docs/"},
+              {"label": "Kustomize documentation", "url": "https://kubectl.docs.kubernetes.io/guides/introduction/kustomize/"},
+              {"label": "Kubernetes: Persistent Volumes", "url": "https://kubernetes.io/docs/concepts/storage/persistent-volumes/"},
+              {"label": "Kubernetes: Horizontal Pod Autoscaling", "url": "https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/"},
+              {"label": "Kubernetes: Network Policies", "url": "https://kubernetes.io/docs/concepts/services-networking/network-policies/"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Kubernetes deployment with Helm",
+          "description": "Deploy the multi-service app with a Helm chart, probes, autoscaling, and persistent storage.",
+          "demonstrates": ["ent-cont-k8s-core", "ent-cont-k8s-config"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Operate enterprise workloads on OpenShift Container Platform 4.",
+        "skills": [
+          {
+            "id": "ent-cont-openshift-dev",
+            "name": "OpenShift (OCP4) for Developers",
+            "description": "Build and deploy applications using OpenShift's developer tooling.",
+            "outcomes": ["Use the oc CLI and web console projects", "Deploy with Deployments, Routes, ImageStreams, and BuildConfigs", "Use Source-to-Image and OpenShift Pipelines (Tekton)", "Use OpenShift GitOps (Argo CD) for deployments", "Run a local cluster with OpenShift Local (CRC) or the Developer Sandbox"],
+            "estimatedHours": 26,
+            "prerequisites": ["ent-cont-k8s-config"],
+            "resources": [
+              {"label": "OpenShift Container Platform documentation", "url": "https://docs.redhat.com/en/documentation/openshift_container_platform"},
+              {"label": "Red Hat Developer Sandbox for OpenShift", "url": "https://developers.redhat.com/developer-sandbox"},
+              {"label": "OpenShift Local (CRC)", "url": "https://developers.redhat.com/products/openshift-local/overview"},
+              {"label": "OpenShift Pipelines (Tekton)", "url": "https://docs.redhat.com/en/documentation/red_hat_openshift_pipelines"},
+              {"label": "OpenShift GitOps", "url": "https://docs.redhat.com/en/documentation/red_hat_openshift_gitops"},
+              {"label": "Red Hat: Learn OpenShift interactive scenarios", "url": "https://developers.redhat.com/learn/openshift"},
+              {"label": "Argo CD documentation", "url": "https://argo-cd.readthedocs.io/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-cont-openshift-ops",
+            "name": "OpenShift Security, Operators & Administration",
+            "description": "Secure and administer an OCP4 cluster.",
+            "outcomes": ["Apply Security Context Constraints, RBAC, and network policies", "Install and use Operators with Operator Lifecycle Manager", "Monitor with OpenShift monitoring and logging", "Manage cluster updates and node capacity", "Explain the architecture of OCP4 and how it differs from upstream Kubernetes"],
+            "estimatedHours": 28,
+            "prerequisites": ["ent-cont-openshift-dev"],
+            "resources": [
+              {"label": "OpenShift: Authentication and authorization", "url": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.16/html/authentication_and_authorization/index"},
+              {"label": "OpenShift: Operators", "url": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.16/html/operators/index"},
+              {"label": "OpenShift: Security and compliance", "url": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.16/html/security_and_compliance/index"},
+              {"label": "OpenShift: Monitoring", "url": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.16/html/monitoring/index"},
+              {"label": "Red Hat Training: DO180 OpenShift Administration", "url": "https://www.redhat.com/en/services/training/do180-red-hat-openshift-administration-i-containers-kubernetes"},
+              {"label": "Red Hat Certified Specialist in OpenShift Administration", "url": "https://www.redhat.com/en/services/certification/rhcs-openshift-administration"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-cont-k8s-cert",
+            "name": "Kubernetes Certification: CKAD & CKA",
+            "description": "Prove Kubernetes competence with hands-on certification exams.",
+            "outcomes": ["Complete timed kubectl practice for CKAD and CKA", "Troubleshoot clusters, workloads, and networking", "Pass CKAD or CKA"],
+            "estimatedHours": 30,
+            "prerequisites": ["ent-cont-k8s-config"],
+            "resources": [
+              {"label": "CNCF: CKAD certification", "url": "https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/"},
+              {"label": "CNCF: CKA certification", "url": "https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/"},
+              {"label": "killer.sh exam simulator", "url": "https://killer.sh/"},
+              {"label": "Kubernetes: Troubleshooting", "url": "https://kubernetes.io/docs/tasks/debug/"}
+            ],
+            "priority": "optional",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "OpenShift delivery pipeline",
+          "description": "Deploy the application to OpenShift with a Tekton pipeline, GitOps, SCC-compliant images, and monitoring.",
+          "demonstrates": ["ent-cont-openshift-dev", "ent-cont-openshift-ops"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Containerized enterprise platform",
+      "description": "Run a multi-service Java application on OpenShift with a CI/CD pipeline, GitOps, autoscaling, secrets management, and runbooks."
+    }
+  },
+  "ent-appservers": {
+    "title": "Application Servers: WebSphere Liberty, WebSphere (WAS) & Tomcat",
+    "description": "Deploy, configure, secure, and tune Java applications on Apache Tomcat, WebSphere Liberty, and traditional WebSphere Application Server.",
+    "audience": "For developers and administrators supporting enterprise Java runtimes.",
+    "goal": "Deploy and tune an application on Tomcat and WebSphere Liberty, and migrate it from traditional WebSphere.",
+    "relatedTracks": [
+      {"id": "ent-jee", "reason": "Jakarta EE specifications these servers implement"},
+      {"id": "ent-containers", "reason": "Liberty and Tomcat in containers and OpenShift"},
+      {"id": "ent-devops", "reason": "Automated deployment"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Run and deploy applications on Apache Tomcat.",
+        "skills": [
+          {
+            "id": "ent-as-tomcat",
+            "name": "Apache Tomcat Administration",
+            "description": "Install, configure, and deploy to Tomcat.",
+            "outcomes": ["Describe the Tomcat directory layout and Catalina architecture", "Configure connectors, TLS, and server.xml and context.xml", "Deploy WAR files and configure data sources", "Read logs and set JVM options", "Secure Tomcat and remove default applications"],
+            "estimatedHours": 14,
+            "prerequisites": ["ent-jee-servlets"],
+            "resources": [
+              {"label": "Apache Tomcat 10.1 documentation", "url": "https://tomcat.apache.org/tomcat-10.1-doc/index.html"},
+              {"label": "Tomcat: Configuration reference", "url": "https://tomcat.apache.org/tomcat-10.1-doc/config/index.html"},
+              {"label": "Tomcat: Security considerations", "url": "https://tomcat.apache.org/tomcat-10.1-doc/security-howto.html"},
+              {"label": "Tomcat: JDBC connection pool", "url": "https://tomcat.apache.org/tomcat-10.1-doc/jdbc-pool.html"},
+              {"label": "OWASP: Securing Tomcat", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Java_Security_Cheat_Sheet.html"},
+              {"label": "YouTube search: Apache Tomcat tutorial deploy WAR", "url": "https://www.youtube.com/results?search_query=Apache+Tomcat+tutorial+deploy+WAR+configuration"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Tomcat deployment",
+          "description": "Deploy a WAR with a JNDI data source, TLS, and tuned JVM options.",
+          "demonstrates": ["ent-as-tomcat"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Develop and deploy on WebSphere Liberty.",
+        "skills": [
+          {
+            "id": "ent-as-liberty",
+            "name": "WebSphere Liberty & Open Liberty",
+            "description": "Configure the composable, lightweight Liberty runtime.",
+            "outcomes": ["Describe the Liberty feature model and server.xml", "Enable Jakarta EE and MicroProfile features", "Configure data sources, security, SSL, and logging", "Use dev mode with the Liberty Maven plugin", "Build Liberty container images"],
+            "estimatedHours": 22,
+            "prerequisites": ["ent-as-tomcat", "ent-jee-platform"],
+            "resources": [
+              {"label": "Open Liberty documentation", "url": "https://openliberty.io/docs/latest/documentation.html"},
+              {"label": "Open Liberty guides", "url": "https://openliberty.io/guides/"},
+              {"label": "IBM WebSphere Liberty documentation", "url": "https://www.ibm.com/docs/en/was-liberty"},
+              {"label": "Liberty Maven plugin", "url": "https://github.com/OpenLiberty/ci.maven"},
+              {"label": "Open Liberty: server configuration overview", "url": "https://openliberty.io/docs/latest/reference/config/server-configuration-overview.html"},
+              {"label": "YouTube: Open Liberty channel", "url": "https://www.youtube.com/@OpenLiberty"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-as-security-tuning",
+            "name": "Application Server Security & Performance Tuning",
+            "description": "Secure and tune servers for production.",
+            "outcomes": ["Configure LDAP, SAML, and OpenID Connect authentication", "Tune thread pools, connection pools, and JVM heap and GC", "Diagnose with thread dumps, heap dumps, and verbose GC logs", "Enable health, metrics, and tracing endpoints"],
+            "estimatedHours": 18,
+            "prerequisites": ["ent-as-liberty"],
+            "resources": [
+              {"label": "Liberty: Securing applications", "url": "https://openliberty.io/docs/latest/security-overview.html"},
+              {"label": "Liberty: Performance tuning", "url": "https://openliberty.io/docs/latest/performance-tuning.html"},
+              {"label": "Eclipse MicroProfile Health and Metrics", "url": "https://microprofile.io/specifications/"},
+              {"label": "IBM Support Assistant and Thread Analyzer tools", "url": "https://www.ibm.com/support/pages/ibm-support-assistant-data-collector"},
+              {"label": "Eclipse Memory Analyzer", "url": "https://eclipse.dev/mat/"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Liberty microservice",
+          "description": "Run a Jakarta EE and MicroProfile service on Liberty with OIDC security, health checks, and a container image.",
+          "demonstrates": ["ent-as-liberty", "ent-as-security-tuning"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Administer traditional WebSphere Application Server and plan migrations.",
+        "skills": [
+          {
+            "id": "ent-as-was",
+            "name": "Traditional WebSphere Application Server (WAS)",
+            "description": "Administer WAS cells, nodes, clusters, and applications.",
+            "outcomes": ["Explain cells, nodes, deployment manager, and node agents", "Use the administrative console, wsadmin, and Jython scripting", "Configure clusters, session persistence, and data sources", "Manage JMS resources, including the service integration bus and IBM MQ messaging provider", "Apply fix packs and manage security"],
+            "estimatedHours": 28,
+            "prerequisites": ["ent-as-security-tuning"],
+            "resources": [
+              {"label": "IBM WebSphere Application Server documentation", "url": "https://www.ibm.com/docs/en/was"},
+              {"label": "IBM WebSphere Application Server 9.0 library", "url": "https://www.ibm.com/docs/en/was/9.0.5"},
+              {"label": "IBM: wsadmin scripting guide", "url": "https://www.ibm.com/docs/en/was/9.0.5?topic=scripting-using-wsadmin"},
+              {"label": "IBM: WebSphere performance tuning", "url": "https://www.ibm.com/docs/en/was/9.0.5?topic=tuning-performance"},
+              {"label": "IBM WebSphere Application Server developer resources", "url": "https://developer.ibm.com/components/websphere-application-server/"},
+              {"label": "IBM MQ messaging provider for WebSphere", "url": "https://www.ibm.com/docs/en/ibm-mq/9.4?topic=websphere-using-mq-messaging-provider"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-as-migration",
+            "name": "Migrating WAS to Liberty & Containers",
+            "description": "Move traditional WebSphere workloads to Liberty, containers, and OpenShift.",
+            "outcomes": ["Assess applications with the WebSphere Application Migration Toolkit", "Convert server configuration to Liberty server.xml", "Handle javax to jakarta changes and unsupported APIs", "Containerize on Liberty and deploy to OpenShift with the Liberty Operator"],
+            "estimatedHours": 20,
+            "prerequisites": ["ent-as-was", "ent-cont-docker"],
+            "resources": [
+              {"label": "IBM Transformation Advisor", "url": "https://www.ibm.com/docs/en/cloud-paks/cp-management/2.3.x?topic=capabilities-transformation-advisor"},
+              {"label": "WebSphere Application Migration Toolkit", "url": "https://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit"},
+              {"label": "IBM: Migrating to Liberty", "url": "https://www.ibm.com/docs/en/was-liberty/base?topic=migrating-liberty"},
+              {"label": "Open Liberty Operator", "url": "https://github.com/OpenLiberty/open-liberty-operator"},
+              {"label": "OpenRewrite: Jakarta EE migration recipes", "url": "https://docs.openrewrite.org/recipes/java/migrate/jakarta"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "WAS to Liberty migration",
+          "description": "Assess a traditional WAS application, migrate it to Liberty in a container, and document differences and risks.",
+          "demonstrates": ["ent-as-was", "ent-as-migration"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Runtime modernization plan",
+      "description": "Deliver a working Liberty deployment of a legacy application with performance tuning, security configuration, and a runbook comparing Tomcat, Liberty, and WAS."
+    }
+  },
+  "ent-devops": {
+    "title": "DevOps & CI/CD: Git, Bitbucket, Jenkins, Maven, Ant & SonarQube",
+    "description": "Automate builds, tests, quality gates, and delivery with Git, Bitbucket, Jenkins, Maven, Ant, SonarQube, and continuous integration and delivery practices.",
+    "audience": "For developers and build engineers responsible for delivery pipelines.",
+    "goal": "Operate a complete CI/CD pipeline with quality gates from commit to deployment.",
+    "relatedTracks": [
+      {"id": "cloud", "reason": "Cloud and DevOps path"},
+      {"id": "ent-containers", "reason": "Container build and deploy targets"},
+      {"id": "swe", "reason": "Software engineering practices"},
+      {"id": "testing", "reason": "Test strategy for pipelines"}
+    ],
+    "levels": [
+      {
+        "level": "Beginner",
+        "goal": "Use Git and Bitbucket for collaboration and build Java projects with Maven and Ant.",
+        "skills": [
+          {
+            "id": "ent-devops-git",
+            "name": "Git & Bitbucket Workflows",
+            "description": "Collaborate with branches, pull requests, and review in Git and Bitbucket.",
+            "outcomes": ["Use branch, merge, rebase, cherry-pick, and stash", "Resolve merge conflicts", "Compare Gitflow, GitHub flow, and trunk-based development", "Use Bitbucket pull requests, branch permissions, and merge checks", "Use Bitbucket Pipelines and webhooks"],
+            "estimatedHours": 14,
+            "prerequisites": [],
+            "resources": [
+              {"label": "Pro Git book", "url": "https://git-scm.com/book/en/v2"},
+              {"label": "Atlassian Git tutorials", "url": "https://www.atlassian.com/git/tutorials"},
+              {"label": "Bitbucket Cloud documentation", "url": "https://support.atlassian.com/bitbucket-cloud/"},
+              {"label": "Bitbucket Data Center documentation", "url": "https://confluence.atlassian.com/bitbucketserver/"},
+              {"label": "Trunk Based Development", "url": "https://trunkbaseddevelopment.com/"},
+              {"label": "Learn Git Branching (interactive)", "url": "https://learngitbranching.js.org/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-devops-maven",
+            "name": "Maven & Ant Build Tools",
+            "description": "Build, test, and package Java projects with Maven and maintain legacy Ant builds.",
+            "outcomes": ["Explain the Maven lifecycle, POM, repositories, and dependency scopes", "Manage multi-module builds, BOMs, and plugins", "Resolve dependency conflicts", "Read and modify Ant build.xml targets and tasks", "Migrate an Ant build to Maven", "Publish artifacts to Nexus or Artifactory"],
+            "estimatedHours": 16,
+            "prerequisites": ["lang-java-syntax-types"],
+            "resources": [
+              {"label": "Maven: Getting Started Guide", "url": "https://maven.apache.org/guides/getting-started/index.html"},
+              {"label": "Maven: Build lifecycle", "url": "https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html"},
+              {"label": "Maven: Dependency mechanism", "url": "https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html"},
+              {"label": "Apache Ant manual", "url": "https://ant.apache.org/manual/"},
+              {"label": "Sonatype Nexus Repository documentation", "url": "https://help.sonatype.com/en/sonatype-nexus-repository.html"},
+              {"label": "JFrog Artifactory documentation", "url": "https://jfrog.com/help/r/jfrog-artifactory-documentation"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Multi-module Maven project",
+          "description": "Build a multi-module Java project with a Git branching workflow, pull request checks, and an artifact repository.",
+          "demonstrates": ["ent-devops-git", "ent-devops-maven"]
+        }
+      },
+      {
+        "level": "Intermediate",
+        "goal": "Build Jenkins pipelines with automated tests and static analysis gates.",
+        "skills": [
+          {
+            "id": "ent-devops-jenkins",
+            "name": "Jenkins Pipelines",
+            "description": "Automate builds and deployments with Jenkins declarative pipelines.",
+            "outcomes": ["Install and secure Jenkins and manage plugins", "Write declarative Jenkinsfiles with stages, parallel steps, and post actions", "Use agents, credentials, and shared libraries", "Trigger builds from Bitbucket webhooks and multibranch pipelines", "Publish test reports and archive artifacts"],
+            "estimatedHours": 22,
+            "prerequisites": ["ent-devops-git", "ent-devops-maven"],
+            "resources": [
+              {"label": "Jenkins documentation", "url": "https://www.jenkins.io/doc/"},
+              {"label": "Jenkins: Pipeline syntax", "url": "https://www.jenkins.io/doc/book/pipeline/syntax/"},
+              {"label": "Jenkins: Shared libraries", "url": "https://www.jenkins.io/doc/book/pipeline/shared-libraries/"},
+              {"label": "Jenkins: Using credentials", "url": "https://www.jenkins.io/doc/book/using/using-credentials/"},
+              {"label": "Jenkins: Pipeline tutorial", "url": "https://www.jenkins.io/doc/pipeline/tour/getting-started/"},
+              {"label": "YouTube search: Jenkins pipeline tutorial Maven Bitbucket", "url": "https://www.youtube.com/results?search_query=Jenkins+declarative+pipeline+Maven+tutorial"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-devops-sonarqube",
+            "name": "Code Quality with SonarQube",
+            "description": "Measure and enforce code quality, coverage, and security.",
+            "outcomes": ["Run SonarQube analysis from Maven and Jenkins", "Interpret bugs, vulnerabilities, code smells, and security hotspots", "Define quality profiles and quality gates", "Import JaCoCo coverage", "Fail a pipeline on a failed quality gate"],
+            "estimatedHours": 12,
+            "prerequisites": ["ent-devops-jenkins"],
+            "resources": [
+              {"label": "SonarQube documentation", "url": "https://docs.sonarsource.com/sonarqube/latest/"},
+              {"label": "SonarScanner for Maven", "url": "https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/scanners/sonarscanner-for-maven/"},
+              {"label": "SonarQube: Quality gates", "url": "https://docs.sonarsource.com/sonarqube/latest/user-guide/quality-gates/"},
+              {"label": "JaCoCo documentation", "url": "https://www.jacoco.org/jacoco/trunk/doc/"},
+              {"label": "SpotBugs", "url": "https://spotbugs.github.io/"},
+              {"label": "Checkstyle", "url": "https://checkstyle.sourceforge.io/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-devops-ci-practices",
+            "name": "Continuous Integration & Delivery Practices",
+            "description": "Apply the practices that make CI/CD effective rather than only installing tools.",
+            "outcomes": ["Keep builds fast, deterministic, and always releasable", "Design a pipeline with commit, test, staging, and production stages", "Compare continuous delivery and continuous deployment", "Apply blue-green, canary, and feature-flag releases", "Track DORA metrics"],
+            "estimatedHours": 16,
+            "prerequisites": ["ent-devops-jenkins"],
+            "resources": [
+              {"label": "Continuous Delivery (Humble and Farley)", "url": "https://continuousdelivery.com/"},
+              {"label": "Martin Fowler: Continuous Integration", "url": "https://martinfowler.com/articles/continuousIntegration.html"},
+              {"label": "DORA: Software delivery metrics", "url": "https://dora.dev/guides/dora-metrics-four-keys/"},
+              {"label": "Martin Fowler: Blue Green Deployment", "url": "https://martinfowler.com/bliki/BlueGreenDeployment.html"},
+              {"label": "Accelerate (Forsgren, Humble, Kim)", "url": "https://itrevolution.com/product/accelerate/"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "Jenkins pipeline with quality gate",
+          "description": "Build a Jenkinsfile that compiles, tests, analyzes with SonarQube, publishes an artifact, and fails on a quality gate.",
+          "demonstrates": ["ent-devops-jenkins", "ent-devops-sonarqube", "ent-devops-ci-practices"]
+        }
+      },
+      {
+        "level": "Advanced",
+        "goal": "Deliver to containers and clouds safely with security, scale, and governance.",
+        "skills": [
+          {
+            "id": "ent-devops-delivery",
+            "name": "Deployment Automation & GitOps",
+            "description": "Automate deployments to containers and cloud with repeatable, auditable delivery.",
+            "outcomes": ["Build and push images from Jenkins", "Deploy to Kubernetes or OpenShift with Helm and Argo CD", "Promote artifacts through environments with approvals", "Automate rollback", "Use Ansible for configuration management"],
+            "estimatedHours": 22,
+            "prerequisites": ["ent-devops-ci-practices", "ent-cont-docker"],
+            "resources": [
+              {"label": "Argo CD documentation", "url": "https://argo-cd.readthedocs.io/"},
+              {"label": "Helm documentation", "url": "https://helm.sh/docs/"},
+              {"label": "Ansible documentation", "url": "https://docs.ansible.com/"},
+              {"label": "Jenkins: Docker pipeline", "url": "https://www.jenkins.io/doc/book/pipeline/docker/"},
+              {"label": "OpenGitOps principles", "url": "https://opengitops.dev/"}
+            ],
+            "priority": "core",
+            "completed": false
+          },
+          {
+            "id": "ent-devops-secure-pipeline",
+            "name": "Secure & Scalable Pipelines (DevSecOps)",
+            "description": "Add security scanning and scale the build platform.",
+            "outcomes": ["Scan dependencies and images and generate SBOMs", "Manage secrets with Vault or cloud secret stores", "Scale Jenkins with ephemeral Kubernetes agents", "Apply least privilege and audit logging to pipelines", "Compare Jenkins with Bitbucket Pipelines and GitHub Actions"],
+            "estimatedHours": 20,
+            "prerequisites": ["ent-devops-delivery", "ent-devops-sonarqube"],
+            "resources": [
+              {"label": "OWASP Dependency-Check", "url": "https://owasp.org/www-project-dependency-check/"},
+              {"label": "Trivy: Container and dependency scanner", "url": "https://trivy.dev/latest/docs/"},
+              {"label": "HashiCorp Vault documentation", "url": "https://developer.hashicorp.com/vault/docs"},
+              {"label": "Jenkins Kubernetes plugin", "url": "https://plugins.jenkins.io/kubernetes/"},
+              {"label": "SLSA framework", "url": "https://slsa.dev/"},
+              {"label": "Bitbucket Pipelines", "url": "https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/"}
+            ],
+            "priority": "core",
+            "completed": false
+          }
+        ],
+        "project": {
+          "title": "End-to-end delivery pipeline",
+          "description": "Deliver a Java service from a Bitbucket commit through Jenkins, SonarQube, security scans, and a GitOps deployment with rollback.",
+          "demonstrates": ["ent-devops-delivery", "ent-devops-secure-pipeline"]
+        }
+      }
+    ],
+    "capstone": {
+      "title": "Enterprise CI/CD platform",
+      "description": "Operate a complete pipeline for a multi-module Java application with quality gates, security scanning, artifact management, automated deployment, and DORA metrics."
+    }
+  }
+}
